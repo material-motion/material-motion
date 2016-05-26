@@ -29,9 +29,7 @@ Consider this pseudo-code:
 
 Here, `CustomBehavior` also represents the concept of Intention. The `animate` function provided here can now be executed by a separate system.
 
-A system operating close to the compositing system is responsible for executing Intentions using **Actors**.
-
-Intentions can be associated with a **target**. This is the object or value to which the Intention is expected to be applied.
+Intentions can be associated with a single **target**. This is the object or value to which the Intention is expected to be applied.
 
 > We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 
