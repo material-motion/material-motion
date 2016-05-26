@@ -2,53 +2,17 @@ Want to contribute? Great! First, read this page (including the small print at t
 
 ### Before you contribute
 
-Before we can use your code, you must sign the
-[Google Individual Contributor License Agreement](https://developers.google.com/open-source/cla/individual?csw=1)
-(CLA), which you can do online. The CLA is necessary mainly because you own the
-copyright to your changes, even after your contribution becomes part of our
-codebase, so we need your permission to use and distribute your code. We also
-need to be sure of various other things—for instance that you'll tell us if you
-know that your code infringes on other people's patents. You don't have to sign
-the CLA until after you've submitted your code for review and a member has
-approved it, but you must do it before we can put your code into our codebase.
-Before you start working on a larger contribution, you should get in touch with
-us first through the issue tracker with your idea so that we can help out and
-possibly guide you. Coordinating up front makes it much easier to avoid
-frustration later on.
+Before we can use your code, you must sign the [Google Individual Contributor License Agreement](https://developers.google.com/open-source/cla/individual?csw=1) (CLA), which you can do online. The CLA is necessary mainly because you own the copyright to your changes, even after your contribution becomes part of our codebase, so we need your permission to use and distribute your code. We also need to be sure of various other things—for instance that you'll tell us if you know that your code infringes on other people's patents. You don't have to sign the CLA until after you've submitted your code for review and a member has approved it, but you must do it before we can put your code into our codebase.
+
+Before you start working on a larger contribution, you should get in touch with us first through the issue tracker with your idea so that we can help out and possibly guide you. Coordinating up front makes it much easier to avoid frustration later on.
 
 ### Proposing changes to the Starmap
 
 #### Proposing new concepts
 
-Note: the concepts described in the Starmap are opinionated topics that
-specifically apply to the creation of interactive software interfaces. The
-Starmap is not an exhaustive list of topics and ideas for motion and interaction
-in general.
+Note: the concepts described in the Starmap are opinionated topics that specifically apply to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
-If you feel that the Starmap is missing a particular concept please draft the
-concept and propose it as a Pull Request.
-
-#### Proposing a new repo for github.com/material-motion
-
-Repositories in the material-motion organization must be created by a member of
-the core material-motion team. To request the creation of a new one, please file
-a pull request with the following template:
-
-    Title: [proposal] New repo: material-motion-<concept>-<language|platform>
-    
-    I’d like to create a new repository named:
-    
-        material-motion-<concept>-<language|platform>
-        
-    Why I think it’s best for the material-motion project to create and own this
-    repository:
-    
-    <Your answer here>
-    
-    Here’s a list of similar implementations:
-    
-    -
-    -
+If you feel that the Starmap is missing a particular concept please draft the concept and propose it as a Pull Request.
 
 #### Proposing terminology changes
 
