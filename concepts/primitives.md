@@ -2,7 +2,7 @@
 
 This section defines what the Material Motion Primitives are and how they relate to one another.
 
-Throughout the Starmap we use the term **element** to mean “an individual node in a hierarchical layout/compositing engine”. This term is synonymous with a View or a DOM Element.
+> We use the term **element** to mean “an individual node in a hierarchical layout/compositing engine”. This term is synonymous with a View or a DOM Element.
 
 This section’s topics:
 
