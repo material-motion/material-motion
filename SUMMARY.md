@@ -5,6 +5,6 @@
    * [Runtimes](concepts/runtimes.md)
    * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
-* [Expressions](expressions.md)
+* [Expressions](expressions/README.md)
 * [Glossary](GLOSSARY.md)
 
