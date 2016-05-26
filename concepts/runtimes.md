@@ -82,3 +82,29 @@ TODO: The following content is an outline and needs to be folded into the above 
     - Core Animation 
     - Android’s animation system 
     - Web animations
+
+## Plugins
+
+### Transition
+
+Coordinates events with the operating system’s existing transition system.
+
+Required events:
+
+- Did start 
+- Did idle 
+
+
+### View duplication
+
+Required events:
+
+- First-time registration of Intention to element 
+
+## Other systems
+
+### Transition coordination
+
+This system allows you to define which Directors to use for a transition between two “Screens” in an application.
+
+- Discuss the “Narrator” concept.
