@@ -7,5 +7,5 @@
    * [Patterns](concepts/patterns.md)
 * [Expressions](expressions/README.md)
 * [Glossary](GLOSSARY.md)
-* Languages
+* [Languages](languages/README.md)
 
