@@ -8,6 +8,10 @@ Synonyms:
 
 - Behavior (Unity)
 
+## application
+
+Tools for expressing and building rich, interactive motion.
+
 ## element
 
 An individual node in a hierarchical layout/compositing engine. Synonymous with a View (iOS) or a DOM Element (web).
