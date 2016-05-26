@@ -1,4 +1,4 @@
 # Runtimes
 
-This Specification for building declarative motion engines.
+This section describes one specification for a **declarative motion engine**.
 
