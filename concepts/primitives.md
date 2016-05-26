@@ -1,6 +1,6 @@
 # Primitives
 
-This section defines essential tools applicable to interactive motion.
+This section explores essential building blocks of interactive motion.
 
 This section’s topics:
   
