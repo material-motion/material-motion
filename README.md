@@ -1,32 +1,20 @@
 # Material Motion Starmap
 
-The Material Motion Starmap is a high level outline of long term plans for
-Material Motion over multiple years.
+The Material Motion Starmap is a high level outline of long term plans for Material Motion over multiple years.
 
-This document is expected to change over time. Please initiate discussions about
-this Starmap by [filing an issue
-](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
+This document is expected to change over time. Please initiate discussions about this Starmap by [filing an issue](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
-This repository is neither a schedule nor a list of relative priorities. This
-repository is the goal state we want to get to and will help us measure success.
-We will publish Roadmaps for individual projects as they spin up.
+This repository is neither a schedule nor a list of relative priorities. This repository is the goal state we want to get to and will help us measure success. We will publish Roadmaps for individual projects as they spin up.
 
 ## Motivation
 
-Interactivity and motion play an important role in software interfaces, yet
-there is often a gap between what a software creator can imagine and what can be
-built in production code.
+Interactivity and motion play an important role in software interfaces, yet there is often a gap between what a software creator can imagine and what can be built in production code.
 
-Material Motion aspires to empower creators with the language and tools to
-describe and implement rich, interactive motion.
+Material Motion aspires to empower creators with the language and tools to describe and implement rich, interactive motion.
 
-This Starmap is the first step toward achieving this aspiration. Within, you
-will find concepts that cover software design patterns, essential primitives,
-specifications for motion runtimes, and much more; all of which are based
-heavily upon the experience of shipping production software interfaces.
+This Starmap is the first step toward achieving this aspiration. Within, you will find concepts that cover software design patterns, essential primitives, specifications for motion runtimes, and much more; all of which are based heavily upon the experience of shipping production software interfaces.
 
-Each concept in the Starmap represents a concrete **goal** — a guiding star — to
-guide development.
+Each concept in the Starmap represents a concrete **goal** — a guiding star — to guide development.
 
 ## Table of contents
 
@@ -43,8 +31,6 @@ This repository is organized by the following high-level concepts:
 
 ## License
 
-[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)
-](http://creativecommons.org/licenses/by/4.0/)
+[![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
-This work is licensed under a [Creative Commons Attribution 4.0 International
-License](http://creativecommons.org/licenses/by/4.0/).
+This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
