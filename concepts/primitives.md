@@ -1,6 +1,6 @@
 # Primitives
 
-This section explores **essential building blocks** of interactive motion.
+This section explores **essential building blocks** of rich, interactive motion.
 
 This section’s topics:
   
