@@ -1,7 +1,7 @@
 /* CSS for website */
 
 .markdown-section a.glossary-term {
-  color: #333;
+  color: inherit;
   border-bottom: 1px dotted #333;
   text-decoration: none;
 }
