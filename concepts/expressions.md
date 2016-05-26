@@ -16,6 +16,8 @@ Through the following examples we will explore the essential aspects of an Expre
 
 Expressions begin with a Language. A Language is an instance of an object.
 
+> Read our [Motion Language recommendations](../languages/).
+
 Languages have **terms**.
 
 For example, the Tween Language definition might look like:
@@ -36,14 +38,14 @@ For example, the Tween Language definition might look like:
 
     expression = Tween().fadeIn()
 
-A **term** function is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
+A **term function** is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
 
-The purpose of a term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
 
 Pseudo-code example implementation:
 
     fn Tween.fadeIn() -> TweenTerm {
-      return TweenTerm(prev: self, work: function() {
+      return TweenTerm(previousTerm: self, work: function() {
         let animation = TweenAnimation("opacity")
         animation.from = 0
         animation.to = 1
@@ -69,8 +71,9 @@ A modifier class is a type of Language.
 
 **Example modifier method implementation:**
 
-    function TweenModifier.withEasingCurve(curve) -> Term {
-      return self.chain(function(intentions) {
+    function TweenModifier.withEasingCurve(curve) -> TweenTerm {
+      return TweenTerm(previousTerm: self.previousTerm, work: function() {
+        let intentions = self.work()
         for intention in intentions {
           intention.easingCurve = curve
         }
@@ -78,7 +81,9 @@ A modifier class is a type of Language.
       })
     }
 
-Note the use of the self.chain method. This internal method creates a new immutable Modifier instance with a reference to the current instance and the provided anonymous function. This pattern allows the Language user to **chain** modifications of the same term together without actually executing them. Expressions can then be stored, reused, and combined.
+Note the use of the self.chain method. This internal method creates a new immutable TweenTerm instance with a reference to the current instance and the provided function.
+
+The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
 
     let fadeIn = Tween().fadeIn()
     elementA.addIntentions(fadeIn.intentions())
@@ -90,15 +95,32 @@ Note the use of the self.chain method. This internal method creates a new immuta
 
 **Prefix**: Modifiers begin with a lower-case preposition (e.g. with/to/after).
 
-#### 4. Chaining
+## 4. Chaining terms
 
     expression = Gesture().pinchable().and.rotatable().and.draggable()
 
-Terms within a Language can be chained together by using the special `and` object. `and` is simply an instance of the Language object.
+Terms within a Language can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the Language object.
+
+In order for the next term's `intentions()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
+
+    TweenTerm {
+      and = function() -> Tween {
+        return TweenAndTerm(previousTerm: self)
+      }
+    }
+    
+    TweenAndTerm: Tween, Term {
+      let previousTerm
+      
+      intentions = function() -> [Intentions] {
+        return self.previousTerm.intentions()
+      }
+    }
+
 
 #### 5. Generating intentions
 
-    expression.intentions() -&gt; [Intentions]
+    expression.intentions() -> [Intentions]
 
 Every expression must be resolvable into an array of Intentions.
 

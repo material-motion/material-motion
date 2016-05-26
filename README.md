@@ -6,9 +6,18 @@ This book aspires to empower creators with the language and tools needed to desc
 
 ## Evolution
 
-This book is expected to evolve over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
+This book is expected to evolve over time. Please feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in line.
 
 Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book.
+
+## Who should read this?
+
+[Concepts](concepts/) and [Applications](applications/) are both written for software engineers. We assume a certain level of background including:
+
+- Familiarity with at least one programming language.
+- Familiarity with animation systems.
+
+[Languages](languages/) and [Hypotheticals](hypotheticals/) are both written for anyone interested in interactive motion.
 
 ## Implementations
 

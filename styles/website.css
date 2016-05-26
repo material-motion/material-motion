@@ -1,0 +1,8 @@
+/* CSS for website */
+
+.markdown-section a.glossary-term {
+  color: inherit;
+  border-bottom: 1px dotted #666;
+  text-decoration: none;
+}
+

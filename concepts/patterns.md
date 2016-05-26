@@ -2,50 +2,93 @@
 
 This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
-The chapter on [Runtimes](runtimes.md) explores the application of these ideas.
+We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
 ## The Intention/Actor pattern
 
-The Intention/Actor pattern separates the **what (Intention)** from the **how (Actor)** in a motion system. This separation of concerns allows Runtimes to run at high frames-per-second (FPS) even if the thread responsible for describing Intention is busy.
+The Intention/Actor pattern separates **what** from **how** in a motion system.
+
+Intentions are the what. Actors are the how.
+
+> This separation enables [Runtimes](runtimes.md) to offload expensive work to separate threads or processes.
 
 ### What (Intention)
 
-An intention is **what you want a thing to do**.
+Intention is **what you want something to do**.
 
-Consider the following snippet of pseudo-code:
-
-```
-tween = FadeInTween()
-element.addIntention(tween)
-```
-
-The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
-
-A system operating close to the compositing system is responsible for executing Intentions using **Actors**.
-
-Intentions can be associated with a **target**. This is the object or value to which the Intention is expected to be applied.
-
-> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
+> We’ve been careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention are more capable of coordinating rich, interactive motion.
+> 
+> ![](../_assets/Intention-Tree.svg)
+> 
+> Strongly-typed programming languages can define Intention as an empty protocol or interface. This allows existing entities to be described as Intentions.
+> 
+>     protocol Intention {}
+>     extension Animation: Intention {
+>     }
+> 
+> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Intention class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Intention types.
+> 
+>     class Intention {}
+>     class AnimationIntention: Intention {
+>       var animation
+>     }
+> 
+> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Intention.
 
 Consider the following pseudo-code:
 
-```
-draggable = DraggableGesture()
-pinchable = PinchableGesture()
-rotatable = RotatableGesture()
-anchoredSpring = AnchoredSpringAtLocation(x, y)
-element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
-```
+    tween = FadeInTween()
+    target.addIntention(tween)
 
-This element can now be directly manipulated. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**. The Intention has been handed off to some system via `addIntention`. That system will soon execute the Intention.
+
+Also consider this pseudo-code:
+
+    behavior = CustomBehavior()
+    behavior.animate = function() {
+      // A custom animation.
+    }
+    target.addIntention(behavior)
+
+In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
+
+The **Intention/target relationship is many-to-many**. This means that many Intentions can be attached to a single target. A single Intention can also be attached to many targets.
+
+Consider this pseudo-code:
+
+    draggable = DraggableGesture()
+    pinchable = PinchableGesture()
+    rotatable = RotatableGesture()
+    anchoredSpring = AnchoredSpringAtLocation(x, y)
+    
+    # Many Intentions to one element
+    target.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
+    
+    # Many targets for one Intention
+    target2.addIntention(draggable)
+
+`target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+
+`target2` can simply be dragged.
 
 ### How (Actor)
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
-> How an Actor is implemented — be it an anonymous function or a class instance with state — is less important than that the Actor fulfills its contract. We leave it as a challenge to the reader to evaluate the merits of purely functional systems vs object-oriented systems.
+> How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors often interact with existing Actor-like systems in order to fulfill their contract.
+>
+> For example, a FadeIn intention might be fulfilled by a FadeInActor. FadeInActor might create a TweenAnimation primitive and register it with an auxiliary animation system.
+> 
+> This demonstrates an Intention contract being fulfilled by an opaque system via another Intention.
+>
+> In an alternate universe, FadeInActor might directly implement the necessary interpolation.
+>
+> Good Actors will consider the runtime performance of their execution. The former Actor may be more performant if the opaque system is more closely built into the platform. The latter Actor may be less performant if it means the Actor must be executed on the main thread.
 
-**Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
+**Events**: Actors can ask to receive the following events:
+
+- Animation events.
+- Gesture recognition events.
 
 **Activity**: An Actor is either active or dormant. An **active** Actor will generate change in response to input. Conversely, a **dormant** actor will not generate change in response to input.
 

@@ -2,9 +2,9 @@
 
 This section explores one specification for a **declarative motion engine**.
 
-TODO: Emphasize that this runtime is mostly a software design pattern and event pipeline. This Runtime can be used to coordinate a variety of other existing systems in an application.
+The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns.
 
-The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns. The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
+The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
 ![Runtime](../_assets/RuntimeDiagram.png)
 A Runtime requires at least one instance of a Director. Each Director must be asked to register its initial set of Intentions.
@@ -15,18 +15,22 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 > TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in https://github.com/material-motion/material-motion-starmap/issues/13.
 
-The Runtime now has a collection of Actors and a Director. At this point the Runtime will identify the kinds of inputs each Actor requires. Input types include:
+The Runtime now has a collection of Actors and a Director. At this point the Runtime will identify the events each Actor expects to receive. Events include:
 
-- Next frame render event.
-- Gestural input.
+- Animation events.
+- Gesture recognition events.
 
-If any Actor requires a render frame event then the Runtime will now hook the Display link. Each time the event fires, the Runtime will ask each Actor to execute its simulation. The Actor is expected to return a Boolean indicating whether it will require additional simulation events.
+### Animation events
 
-    function simulate(timestamp) -> Boolean
+The animate event allows an Actor to execute any manner of time-based change to its target.
 
-Actors that require gesture events will receive them as they happen.
+    function animate(timestamp) -> Boolean
 
-    function gestureDidChange(gesture) -> Void
+### Gesture recognition events
+
+When a gesture recognizer's state changes it should inform the necessary actors.
+
+    function gestureStateDidChange(gesture) -> Void
 
 **On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
 
