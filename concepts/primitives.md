@@ -1,6 +1,6 @@
 # Primitives
 
-This section defines Primitives of interactive motion and their relations to one another.
+This section defines essential tools applicable to interactive motion.
 
 This section’s topics:
 
