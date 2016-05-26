@@ -1,6 +1,6 @@
 # Material Motion Starmap
 
-The Material Motion Starmap is a high level outline of long term plans for Material Motion over multiple years.
+This book is a high level outline of long term plans for Material Motion over multiple years. We call it the Starmap.
 
 This document is expected to change over time. Please initiate discussions about this Starmap by [filing an issue](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
