@@ -2,7 +2,7 @@
 
 An index of **existing or in-development implementations** of the ideas expressed in this book.
 
-### Naming convention for implementation repositories
+## Repo naming convention
 
 The naming convention we use for repositories is:
 
