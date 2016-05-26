@@ -33,7 +33,7 @@ Intentions can be associated with any number of **targets**. A target is the obj
 
 > We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 
-Consider the following pseudo-code:
+Consider this pseudo-code:
 
     draggable = DraggableGesture()
     pinchable = PinchableGesture()
