@@ -20,7 +20,7 @@ We explore the following Delta Primitives below:
 - [Gesture recognition](#gesture-recognition)
 - [Physical simulation](#physical-simulation)
 
-Please note that these Primitives can apply to an arbitrary number of dimensions and types of input. testing out edits here ignore me.
+Please note that these Primitives can apply to an arbitrary number of dimensions and types of input.
 
 ### Tweens
 
