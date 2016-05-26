@@ -12,12 +12,22 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 
 Intention is **what you want something to do**.
 
-Consider the following snippet of pseudo-code:
+Consider the following pseudo-code:
 
     tween = FadeInTween()
     element.addIntention(tween)
 
 Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**.
+
+Consider this pseudo-code:
+
+    behavior = CustomBehavior()
+    behavior.animate = function() {
+      // A custom animation.
+    }
+    element.addIntention(behavior)
+
+Here, `CustomBehavior` also represents the concept of Intention. The `animate` function provided here can now be executed by a separate system.
 
 A system operating close to the compositing system is responsible for executing Intentions using **Actors**.
 
