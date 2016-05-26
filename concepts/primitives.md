@@ -2,12 +2,12 @@
 
 This section defines Primitives of interactive motion and how they relate to one another.
 
-> We use the term **element** to mean “an individual node in a hierarchical layout/compositing engine”. This term is synonymous with a View or a DOM Element.
-
 This section’s topics:
 
 - [Delta Primitives](#delta-primitives),
 - the [Timeline](#timeline).
+
+> We use the term **element** to mean “an individual node in a hierarchical layout/compositing engine”. This term is synonymous with a View or a DOM Element.
 
 ## Delta Primitives
 
