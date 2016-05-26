@@ -9,17 +9,17 @@ This section’s topics:
 
 ## Delta Primitives
 
-Delta Primitives are built on the idea of change over time.
+Delta Primitives represent change over time.
 
-Time in a computer is not limited to “wall-clock” time - it can be slowed down, stopped, or reversed. It can jump to arbitrary moments or it can be driven by arbitrary systems. When time is mentioned throughout this document it means “computer time”.
+Time in a computer is not limited to wall-clock time - it can slow down, stop, or reverse. It can jump to arbitrary moments and external systems can control it. When we use the word time we mean this understanding of "computer time".
 
-The following Delta Primitives are explored below:
+We explore the following Delta Primitives below:
 
 - [Tweens](#tweens)
 - [Gesture recognition](#gesture-recognition)
 - [Physical simulation](#physical-simulation)
 
-Please note that these Primitives can be applied to an arbitrary number of dimensions and types of input.
+Please note that these Primitives can apply to an arbitrary number of dimensions and types of input.
 
 ### Tweens
 
