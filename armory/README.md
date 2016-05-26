@@ -26,4 +26,24 @@ The following names do not match the convention:
 - TweenLanguage
 - material-motionRuntime
 
+### Proposing a new repo for github.com/material-motion
+
+Repositories in the material-motion organization must be created by a member of the core material-motion team. To request the creation of a new one, please file a pull request with the following template:
+
+    Title: [proposal] New repo: material-motion-<concept>-<language|platform>
+    
+    I’d like to create a new repository named:
+    
+        material-motion-<concept>-<language|platform>
+        
+    Why I think it’s best for the material-motion project to create and own this
+    repository:
+    
+    <Your answer here>
+    
+    Here’s a list of similar implementations:
+    
+    -
+    -
+
 
