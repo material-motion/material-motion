@@ -110,3 +110,32 @@ The **progress** can be driven by the following Delta Primitives if they have be
 The progress can drive Tween Primitives. For example: a FadeIn tween animation could occur during the first 50% of a timeline.
 
 There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
+
+## State Machine
+
+**What it is**: *a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) consisting of multiple States (nodes) with Transitions (edges) between those states*.
+
+Typical phone applications have a concept of full-screen transitions between views. Each view is a distinct application state:
+
+```A → B → C → D```
+
+Each arrow in the above diagram is a Transition, each letter is a State.
+
+It is generally possible to move in the other direction:
+
+```A ← B ← C ← D```
+
+**Transitions** always consist of exactly **two** States and a **Direction**.
+
+```
+A → B is a Transition from State A to State B.
+
+A ← B is a Transition to State A from State B.
+```
+Physical Simulations can be associated with States.
+
+> For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+
+Tweens and Timelines can be associated with Transitions.
+
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
