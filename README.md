@@ -1,4 +1,4 @@
-# Material Motion Starmap
+# Motion Starmap
 
 This book is a high level outline of long term plans for Material Motion over multiple years. We call it the Starmap.
 
