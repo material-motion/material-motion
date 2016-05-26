@@ -55,7 +55,7 @@ Pseudo-code example implementation:
 
     expression = Tween().fadeIn().withEasingCurve(easeOut)
 
-A term may return an instance of a modifier that can be used to further configure the expression.
+A term may return an instance of a **modifier** that can be used to further configure the expression.
 
 A modifier class is a type of Language.
 
@@ -78,14 +78,14 @@ Example modifier method implementation:
       })
     }
 
-Note the use of the self.chain method. This internal method creates a new immutable Modifier instance with a reference to the current instance and the provided anonymous function. This pattern allows the Language user to chain modifications of the same term together without actually executing them. Expressions can then be stored, reused, and combined.
+Note the use of the self.chain method. This internal method creates a new immutable Modifier instance with a reference to the current instance and the provided anonymous function. This pattern allows the Language user to **chain** modifications of the same term together without actually executing them. Expressions can then be stored, reused, and combined.
 
     let fadeIn = Tween().fadeIn()
     elementA.addIntentions(fadeIn.intentions())
     elementB.addIntentions(fadeIn.withEasingCurve(easeOut).intentions())
 
-Immutability: modifiers are immutable.
+**Immutability**: modifiers are immutable.
 
-Order: Modifications must be applied to the term in the order in which they were specified.
+**Order**: Modifications must be applied to the term in the order in which they were specified.
 
-Prefix: Modifiers begin with a lower-case preposition (e.g. with/to/after).
+**Prefix**: Modifiers begin with a lower-case preposition (e.g. with/to/after).
