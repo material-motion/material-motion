@@ -2,11 +2,7 @@
 
 Interactivity and motion play an increasingly important role in software interfaces. Yet there is often a gap between what a software creator can imagine and what can be built in production code.
 
-This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we'll explore software design patterns, essential primitives, motion runtimes, and more.
-
-The initial authors have a background in software interface design for a variety of platforms. Many of these initial authors are software engineers and motion designers.
-
-Each concept in this book represents a concrete **goal** — a guiding star — to guide development.
+This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore software design patterns, essential primitives, motion runtimes, and more.
 
 ## Evolution
 
