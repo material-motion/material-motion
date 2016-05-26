@@ -3,7 +3,7 @@
 This section defines essential tools applicable to interactive motion.
 
 This section’s topics:
-
+  
 - [Delta Primitives](#delta-primitives),
 - the [Timeline](#timeline).
 
