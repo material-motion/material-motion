@@ -6,7 +6,7 @@ This book aspires to empower creators with the language and tools needed to desc
 
 ## Evolution
 
-This book will evolve over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
+This book is designed to evolve over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
 Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book.
 
