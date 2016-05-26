@@ -7,7 +7,7 @@
    * [Patterns](concepts/patterns.md)
 * [Expressions](expressions/README.md)
 * [Languages](languages/README.md)
-* [Glossary](GLOSSARY.md)
 * [Hypotheticals](hypotheticals/README.md)
+* [Glossary](GLOSSARY.md)
 * [Applications](applications/README.md)
 
