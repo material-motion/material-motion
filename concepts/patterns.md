@@ -19,7 +19,7 @@ Consider the following pseudo-code:
 
 Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**.
 
-Consider this pseudo-code:
+Also consider this pseudo-code:
 
     behavior = CustomBehavior()
     behavior.animate = function() {
@@ -27,7 +27,7 @@ Consider this pseudo-code:
     }
     element.addIntention(behavior)
 
-Here, `CustomBehavior` also represents the concept of Intention. The `animate` function provided here can now be executed by a separate system.
+In this example, `CustomBehavior` represents the concept of Intention. The `animate` function provided here can now be executed by a separate system.
 
 Intentions can be associated with any number of **targets**. This is the object or value to which the Intention is expected to be applied.
 
