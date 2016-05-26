@@ -1,6 +1,6 @@
 # Community
 
-Working on an implementation to an idea explored in this book? We'd love to list it here.
+Working on or found an implementation to an idea explored in this book? We'd love to list it here.
 
 This is an index of **existing or in-development implementations** of the ideas expressed in this book.
 
