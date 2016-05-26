@@ -61,15 +61,28 @@ A modifier class is a type of Language.
 
 Example modifier definition:
 
-TweenTerm {  fn withEasingCurve(curve) -&gt; Term  fn withDuration(seconds) -&gt; Term  ...}
+    TweenTerm {
+      fn withEasingCurve(curve) -> Term
+      fn withDuration(seconds) -> Term
+      ...
+    }
 
 Example modifier method implementation:
 
-function TweenModifier.withEasingCurve(curve) -&gt; Term {  return self.chain(function(intentions) {    for intention in intentions {      intention.easingCurve = curve    }    return intentions  })}
+    function TweenModifier.withEasingCurve(curve) -> Term {
+      return self.chain(function(intentions) {
+        for intention in intentions {
+          intention.easingCurve = curve
+        }
+        return intentions
+      })
+    }
 
 Note the use of the self.chain method. This internal method creates a new immutable Modifier instance with a reference to the current instance and the provided anonymous function. This pattern allows the Language user to chain modifications of the same term together without actually executing them. Expressions can then be stored, reused, and combined.
 
-let fadeIn = Tween().fadeIn()elementA.addIntentions(fadeIn.intentions())elementB.addIntentions(fadeIn.withEasingCurve(easeOut).intentions())
+    let fadeIn = Tween().fadeIn()
+    elementA.addIntentions(fadeIn.intentions())
+    elementB.addIntentions(fadeIn.withEasingCurve(easeOut).intentions())
 
 Immutability: modifiers are immutable.
 
