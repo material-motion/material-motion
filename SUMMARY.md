@@ -9,5 +9,5 @@
 * [Languages](languages/README.md)
 * [Glossary](GLOSSARY.md)
 * [Hypotheticals](hypotheticals/README.md)
-* Applications
+* [Applications](applications/README.md)
 
