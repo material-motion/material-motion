@@ -2,4 +2,4 @@
 
 Roadmaps are how our team plans out work. We update our roadmaps once a week on Wednesdays.
 
-We've split our Roadmaps up by specific platforms and languages. This allows us to prioritize work on a given platform/language without compromise.
+We've split our Roadmaps up by specific platforms and languages. This allows us to prioritize work for a given platform/language without compromise.
