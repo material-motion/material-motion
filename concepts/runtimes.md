@@ -2,7 +2,9 @@
 
 This section explores one specification for a **declarative motion engine**.
 
-The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns. The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
+The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns.
+
+The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
 ![Runtime](../_assets/RuntimeDiagram.png)
 A Runtime requires at least one instance of a Director. Each Director must be asked to register its initial set of Intentions.
