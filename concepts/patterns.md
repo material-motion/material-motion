@@ -19,13 +19,13 @@ element.addIntention(tween)
 
 An intention is **what you want a thing to do**.
 
-The logic that fulfills an Intention **is not executed here** though it could be **described** here.
+The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
 
-A separate system (a Motion Runtime) that is tightly coupled with the compositing engine is responsible for executing Intentions using Actors.
+A system operating close to the compositing system is responsible for executing Intentions using **Actors**.
 
-Intentions can be associated with a target. This is the object or value to which the Intention is expected to be applied.
+Intentions can be associated with a **target**. This is the object or value to which the Intention is expected to be applied.
 
-Note that we’ve been careful to use the word Intention rather than animation. This is because the word Intention can also be used to describe Gestures, Physical Simulation, and other concepts built with the Primitives. This proves to be valuable both when building a Motion Runtime and when expressing relatively complex interactive experiences.
+> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Motion Runtimes that consider all types of Intention allow the coordinated expression of relatively complex interactive experiences.
 
 Consider the following pseudo-code:
 
