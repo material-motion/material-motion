@@ -47,7 +47,7 @@ An Actor’s sole responsibility is to fulfill the contract defined by a corresp
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
-Activity: An Actor is either active or dormant. An active Actor will generate change in response to input. Conversely, a dormant actor will not generate change in response to input.
+**Activity**: An Actor is either active or dormant. An active Actor will generate change in response to input. Conversely, a dormant actor will not generate change in response to input.
 
 Examples of active Actors:
 
