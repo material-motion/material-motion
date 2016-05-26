@@ -19,6 +19,8 @@ tween = FadeInTween()
 element.addIntention(tween)
 ```
 
+`FadeInTween` in this case represents the concept of Intention.
+
 The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
 
 A system operating close to the compositing system is responsible for executing Intentions using **Actors**.
