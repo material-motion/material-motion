@@ -1,14 +1,6 @@
 # Interactive Motion Starmap
 
-This book is a high level outline of long term plans over many years. We call it the Starmap.
-
-Expect this book to change over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
-
-This book is neither a schedule nor a list of relative priorities. This book is the goal state we want to get to and will help us measure success. We will publish roadmaps for individual projects as they spin up.
-
-## Motivation
-
-Interactivity and motion play an important role in software interfaces. Even so, there is often a gap between what a software creator can imagine and what can be built in production code.
+Interactivity and motion play an important role in software interfaces. And yet, there is often a gap between what a software creator can imagine and what can be built in production code.
 
 Material Motion aspires to empower creators with the language and tools to describe and implement rich, interactive motion.
 
