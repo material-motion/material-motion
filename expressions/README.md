@@ -12,7 +12,7 @@ Through the following examples we will explore the essential aspects of an Expre
 
 ## 1. Languages
 
-```expression = Tween()```
+    expression = Tween()
 
 Expressions begin with a Language. A Language is an instance of an object.
 
@@ -34,7 +34,7 @@ For example, the Tween Language definition might look like:
 
 ## 2. Terms
 
-```expression = Tween().fadeIn()```
+    expression = Tween().fadeIn()
 
 A **term** function is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
 
@@ -42,13 +42,11 @@ The purpose of a term is to initiate the creation of one or more Intentions. The
 
 Pseudo-code example implementation:
 
-```
-fn Tween.fadeIn() -> TweenTerm {
-  return TweenTerm(prev: self, work: function() {
-    let animation = TweenAnimation("opacity")
-    animation.from = 0
-    animation.to = 1
-    return [animation]
-  })
-}
-```
+    fn Tween.fadeIn() -> TweenTerm {
+      return TweenTerm(prev: self, work: function() {
+        let animation = TweenAnimation("opacity")
+        animation.from = 0
+        animation.to = 1
+        return [animation]
+      })
+    }
