@@ -1,6 +1,6 @@
 # Interactive Motion Starmap
 
-Interactivity and motion play an increasingly important role in software interfaces. Yet there is often a gap between what a software creator can imagine and what can be built in production code.
+Interactivity and motion play an important role in software interfaces. Yet there is often a gap between what a software creator can imagine and what can be built in production applications.
 
 This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore software design patterns, essential primitives, coordinated motion runtimes, and more.
 
