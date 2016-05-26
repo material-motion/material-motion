@@ -1,27 +1,18 @@
 # Interactive Motion Starmap
 
-Interactivity and motion play an important role in software interfaces. And yet, there is often a gap between what a software creator can imagine and what can be built in production code.
+Interactivity and motion play an increasingly important role in software interfaces. And yet, there is often a gap between what a software creator can imagine and what can be built in production code.
 
-Material Motion aspires to empower creators with the language and tools to describe and implement rich, interactive motion.
-
-This book is the first step toward achieving this aspiration. Within, we explore software design patterns, essential primitives, motion runtimes, and more.
+This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we'll explore software design patterns, essential primitives, motion runtimes, and more.
 
 The initial authors have a history of shipping production software interfaces for a variety of platforms. Many of these initial authors are software engineers and motion designers.
 
 Each concept in the Starmap represents a concrete **goal** — a guiding star — to guide development.
 
-## Table of contents
+## Evolution
 
-This repository is organized by the following high-level concepts:
+This book will evolve over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
-1. [Primitives](concepts/primitives.md): Essential building blocks of motion.
-1. [Patterns](concepts/patterns.md): Essential software design patterns.
-1. [Runtimes](concepts/runtimes.md): Specification for building declarative motion engines.
-1. [Expressions](concepts/expressions.md): Specification for concise expression of motion.
-1. [Languages](concepts/languages.md): Terms in languages of interactive motion.
-1. [Hypotheticals](concepts/hypotheticals.md): Goal experiences.
-1. [Applications](concepts/applications.md): Tools for expressing and exploring interactive motion.
-1. [Glossary](concepts/glossary.md): Definitions of terminology within the Starmap.
+This book is the goal state we want to get to and will help us measure success. It is neither a schedule, nor is it a list of relative priorities.
 
 ## License
 
