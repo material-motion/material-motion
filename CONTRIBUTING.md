@@ -10,35 +10,26 @@ Before you start working on a larger contribution, you should get in touch with 
 
 #### Proposing new concepts
 
-Note: this book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
+This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
-If you feel that the Starmap is missing a particular concept please draft the concept and propose it as a Pull Request.
+If you feel that the Starmap is missing a concept please draft the concept and [start a discussion](https://www.gitbook.com/book/featherless/material-motion-starmap/discussions).
 
 #### Proposing terminology changes
 
-Throughout the Starmap we will associate specific terminology with concepts.
-Such associations are rarely perfect, nor do we expect them to be. The
-following process is an effort to minimize the subjective nature of the
-expected naming discussions.
+Throughout the Starmap we will associate specific terminology with concepts. Such associations are rarely perfect, nor do we expect them to be. The following process is an effort to minimize the subjective nature of the expected naming discussions.
 
-If you feel that a chosen term does not effectively communicate the intended
-meaning, please do the following:
+If you feel that a chosen term does not effectively communicate the intended meaning, please do the following:
 
 1. Make a copy of the starmap. 
-2. Perform a global find-and-replace of the term. Ensure that the new term
-   applies to all existing contexts. 
-3. Write an explanation for why you feel the new term should supplant the
-   existing term including answers to each of the following questions: 
+2. Perform a global find-and-replace of the term. Ensure that the new term applies to all existing contexts. 
+3. Write an explanation for why you feel the new term should supplant the existing term including answers to each of the following questions: 
   1. What do you feel the current term describes? 
   2. What do you feel the new term describes that the current term does not? 
-  3. Are there existing uses of your proposed term in the software industry?
-     If so, please provide links to references. 
+  3. Are there existing uses of your proposed term in the software industry? If so, please provide links to references. 
 4. Propose the change as a pull request. 
 
-If no consensus is able to be reached then the pull request will be closed and
-the terminology will not be changed.
+If no consensus is able to be reached then the pull request will be closed and the terminology will not be changed.
 
 ### The small print
 
-Contributions made by corporations are covered by a different agreement than
-the one above, the [Software Grant and Corporate Contributor License Agreement](https://cla.developers.google.com/about/google-corporate).
+Contributions made by corporations are covered by a different agreement than the one above, the [Software Grant and Corporate Contributor License Agreement](https://cla.developers.google.com/about/google-corporate).
