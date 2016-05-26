@@ -6,4 +6,5 @@
    * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
 * [Glossary](GLOSSARY.md)
+* Expressions
 
