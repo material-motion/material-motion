@@ -14,5 +14,5 @@
 * [Contributing](CONTRIBUTING.md)
 * [Community](community/README.md)
    * [Android](community/android.md)
-   * iOS
+   * [iOS](community/ios.md)
 
