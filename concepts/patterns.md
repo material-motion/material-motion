@@ -6,7 +6,7 @@ We'll explore an application of these patterns in the section on [Runtimes](runt
 
 ## The Intention/Actor pattern
 
-The Intention/Actor pattern separates the **what (Intention)** from the **how (Actor)** in a motion system. This separation of concerns allows Runtimes to run at high frames-per-second (FPS) even if the thread responsible for describing Intention is busy.
+The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** in a motion system. This separation of concerns allows Runtimes to run at high frames-per-second (FPS) even if the thread responsible for describing Intention is busy.
 
 ### What (Intention)
 
