@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Concepts](chapter1.md)
-   * Primitives
+   * [Primitives](primitives.md)
 
