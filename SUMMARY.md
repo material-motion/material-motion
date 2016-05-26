@@ -4,5 +4,6 @@
 * [Concepts](concepts/README.md)
    * [Runtimes](concepts/runtimes.md)
    * [Primitives](concepts/primitives.md)
+   * Patterns
 * [Glossary](GLOSSARY.md)
 
