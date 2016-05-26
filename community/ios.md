@@ -2,9 +2,9 @@
 
 ## Primitives
 
-### Tweens
+### [Tweens](../concepts/primitives.html#tweens)
 
-### Gestures
+### Gesture recognition
 
 - [UIPanGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPanGestureRecognizer_Class/)
 - [UIPinchGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPinchGestureRecognizer_Class/)
