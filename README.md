@@ -12,7 +12,7 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Implementations
 
-This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Armory](armory/).
+This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Community](community/) chapter.
 
 ## License
 
