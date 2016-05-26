@@ -14,10 +14,8 @@ Intention is **what you want something to do**.
 
 Consider the following snippet of pseudo-code:
 
-```
-tween = FadeInTween()
-element.addIntention(tween)
-```
+    tween = FadeInTween()
+    element.addIntention(tween)
 
 Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**.
 
