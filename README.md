@@ -14,6 +14,8 @@ This book will evolve over time. Please start discussions by leaving comments in
 
 This book is the goal state we want to get to and will help us measure success. It is neither a schedule, nor is it a list of relative priorities.
 
+We are writing this book in the open because we believe that sharing these ideas will lead to innovations we can't yet imagine.
+
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
