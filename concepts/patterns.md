@@ -25,15 +25,13 @@ A system operating close to the compositing system is responsible for executing 
 
 Intentions can be associated with a **target**. This is the object or value to which the Intention is expected to be applied.
 
-> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate interactive experiences.
+> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 
 Consider the following pseudo-code:
 
 draggable = DraggableGesture()pinchable = PinchableGesture()rotatable = RotatableGesture()anchoredSpring = AnchoredSpringAtLocation(x, y)element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
 
 This element can now be directly manipulated. When the user lets go of the element, it will be pulled back to the x,y coordinate using a physical simulation of a dampened spring.
-
-**
 
 ### How (Actor)
 
