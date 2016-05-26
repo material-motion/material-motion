@@ -1,6 +1,6 @@
 # Interactive Motion Starmap
 
-This book is a high level outline of long term plans over many years for the. We call it the Starmap.
+This book is a high level outline of long term plans over many years. We call it the Starmap.
 
 Expect this book to change over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
