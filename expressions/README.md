@@ -89,3 +89,17 @@ Note the use of the self.chain method. This internal method creates a new immuta
 **Order**: Modifications must be applied to the term in the order in which they were specified.
 
 **Prefix**: Modifiers begin with a lower-case preposition (e.g. with/to/after).
+
+#### 4. Chaining
+
+    expression = Gesture().pinchable().and.rotatable().and.draggable()
+
+Terms within a Language can be chained together by using the special and object. “and” is simply an instance of the Language object.
+
+#### 5. Generating intentions
+
+    expression.intentions() -&gt; [Intentions]
+
+Every expression must be resolvable into an array of Intentions.
+
+Successive invocations of this method should generate new Intentions.
