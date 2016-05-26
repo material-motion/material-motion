@@ -61,4 +61,4 @@ Examples of *dormant* Actors:
 
 The process or thread on which an Actor executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
 
-Consider a platform where user input is handled on the main thread of the application, while Tween animations are executed on a separate process altogether. A Gesture Actor would likely execute on the main thread. A Tween Actor would likely execute in the separate process.
+> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Actor would likely execute on the main thread. A Tween Actor would likely execute some or all of its logic on the separate process.
