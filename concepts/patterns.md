@@ -19,7 +19,7 @@ element.addIntention(tween)
 
 An intention is **what you want a thing to do**.
 
-The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
+The logic that fulfills an Intention **is not executed here** though it could be **described** here.
 
 A separate system (a Motion Runtime) that is tightly coupled with the compositing engine is responsible for executing Intentions using Actors.
 
