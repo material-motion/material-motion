@@ -2,7 +2,7 @@
 
 This book is a high level outline of long term plans over multiple years. We call it the Starmap.
 
-This document is expected to change over time. Please initiate discussions about this Starmap by [filing an issue](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
+This book will change over time. Please initiate discussions by [filing an issue](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository or by leaving comments in-line.
 
 This repository is neither a schedule nor a list of relative priorities. This repository is the goal state we want to get to and will help us measure success. We will publish Roadmaps for individual projects as they spin up.
 
