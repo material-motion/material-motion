@@ -15,14 +15,18 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 > TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in https://github.com/material-motion/material-motion-starmap/issues/13.
 
-The Runtime now has a collection of Actors and a Director. At this point the Runtime will identify the kinds of inputs each Actor requires. Input types include:
+The Runtime now has a collection of Actors and a Director. At this point the Runtime will identify the events each Actor expects to receive. Events include:
 
-- Next frame render event.
-- Gestural input.
+- Animation events.
+- Gesture recognition events.
 
-If any Actor requires a render frame event then the Runtime will now hook the Display link. Each time the event fires, the Runtime will ask each Actor to execute its simulation. The Actor is expected to return a Boolean indicating whether it will require additional simulation events.
+### Animation events
 
-    function simulate(timestamp) -> Boolean
+The Actor is expected to return a Boolean indicating whether it will require additional simulation events.
+
+    function animate(timestamp) -> Boolean
+
+### Gesture recognition events
 
 Actors that require gesture events will receive them as they happen.
 
