@@ -4,9 +4,10 @@
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
-Synonyms:
+Close synonyms:
 
 - [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
+- [UIDynamicBehavior (iOS' UIKit)](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/)
 
 ## application
 
@@ -27,6 +28,5 @@ An intention is **what you want a thing to do**.
 Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
-
 
 
