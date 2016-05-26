@@ -6,7 +6,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 
 Synonyms:
 
-- Behavior (Unity)
+- [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
 
 ## application
 
@@ -23,5 +23,10 @@ An individual node in a hierarchical layout/compositing engine. Synonymous with 
 ## intention
 
 An intention is **what you want a thing to do**.
+
+Synonyms:
+
+- [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
+
 
 
