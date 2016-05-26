@@ -8,7 +8,7 @@ This is an index of **existing or in-development implementations** of the ideas 
 
 The naming convention we suggest for repositories is:
 
-    <organization>-<concept>-<language|platform>
+    <organization>-<starmap concept>-<language|platform>
 
 Note that everything is lower-case. We recommend using hyphens to separate words.
 
