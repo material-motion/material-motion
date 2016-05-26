@@ -59,7 +59,7 @@ A term may return an instance of a **modifier** that can be used to further conf
 
 A modifier class is a type of Language.
 
-Example modifier definition:
+**Example modifier definition:**
 
     TweenTerm {
       fn withEasingCurve(curve) -> Term
@@ -67,7 +67,7 @@ Example modifier definition:
       ...
     }
 
-Example modifier method implementation:
+**Example modifier method implementation:**
 
     function TweenModifier.withEasingCurve(curve) -> Term {
       return self.chain(function(intentions) {
