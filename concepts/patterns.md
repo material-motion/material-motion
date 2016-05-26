@@ -45,7 +45,7 @@ An Actor’s sole responsibility is to fulfill the contract defined by a corresp
 
 > How an Actor is implemented — be it an anonymous function or a class instance with state — is less important than that the Actor fulfills its contract. We leave it as a challenge to the reader to evaluate the merits of purely functional systems vs object-oriented systems.
 
-Input: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
+**Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
 Activity: An Actor is either active or dormant. An active Actor will generate change in response to input. Conversely, a dormant actor will not generate change in response to input.
 
