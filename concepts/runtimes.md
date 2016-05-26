@@ -28,7 +28,7 @@ The Actor is expected to return a Boolean indicating whether it will require add
 
 ### Gesture recognition events
 
-Actors that require gesture events will receive them as they happen.
+When a gesture is recognized it should inform the necessary actors.
 
     function gestureDidChange(gesture) -> Void
 
