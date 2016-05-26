@@ -62,3 +62,19 @@ Examples of *dormant* Actors:
 The process or thread on which an Actor executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
 
 > Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Actor would likely execute on the main thread. A Tween Actor would likely execute some or all of its logic on the separate process.
+
+## The Director/Intention pattern
+
+A **Director** is a coordinating entity that describes an interactive experience by creating Intentions and associating them with specific elements.
+
+Imagine a transition between two states. A Director might create a Timeline and associate a variety of Tweens to various elements in the scene.
+
+Directors may use Intentions that build upon any of the available Primitives. This enables the expression of coordinated interactions.
+
+Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Director might associate a Draggable intention with a given avatar. The Director might also associate a Spring Attachment intention to the avatar once the user has released it.
+
+Multiple Directors can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
+
+Imagine a horizontal carousel that can be expanded full screen. One Director might govern the horizontal movement of the carousel. Another Director might govern the expansion/collapse of the carousel to/from full screen.
+
+It is important that the Director not have direct access to the Actors that implement the system. This separation of concerns allows Directors to live in the application space, while Actors are free to live anywhere else.
