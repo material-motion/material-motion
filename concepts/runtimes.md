@@ -30,7 +30,7 @@ The Actor is expected to return a Boolean indicating whether it will require add
 
 When a gesture is recognized it should inform the necessary actors.
 
-    function gestureDidChange(gesture) -> Void
+    function gestureStateDidChange(gesture) -> Void
 
 **On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
 
