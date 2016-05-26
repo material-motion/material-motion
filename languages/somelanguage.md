@@ -1,3 +1,3 @@
 # SomeLanguage
 
-This is where a language could be specified.
+This is where a language's dictionary could be defined.
