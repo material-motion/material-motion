@@ -1,4 +1,4 @@
-# Interactive Motion Star-map
+# Interactive Motion Starmap
 
 Interactivity and motion play an important role in software interfaces. Yet there is often a gap between what a software creator can imagine and what can be built in production applications.
 
