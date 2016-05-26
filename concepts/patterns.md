@@ -29,9 +29,9 @@ Also consider this pseudo-code:
 
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
-Intentions can be associated with any number of **targets**. A target is the object or value to which an Intention must be applied.
+Intentions can be associated with any number of **targets**. A target is the object or value to which an Intention is applied.
 
-> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
+> We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 
 Consider the following pseudo-code:
 
