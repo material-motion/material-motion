@@ -94,7 +94,7 @@ Note the use of the self.chain method. This internal method creates a new immuta
 
     expression = Gesture().pinchable().and.rotatable().and.draggable()
 
-Terms within a Language can be chained together by using the special `and` object. “and” is simply an instance of the Language object.
+Terms within a Language can be chained together by using the special `and` object. `and` is simply an instance of the Language object.
 
 #### 5. Generating intentions
 
