@@ -98,7 +98,7 @@ Terms within a Language can be chained together by using the special `and` objec
 
 #### 5. Generating intentions
 
-    expression.intentions() -&gt; [Intentions]
+    expression.intentions() -> [Intentions]
 
 Every expression must be resolvable into an array of Intentions.
 
