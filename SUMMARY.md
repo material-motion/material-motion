@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
-   * Runtimes
+   * [Runtimes](concepts/runtimes.md)
    * [Primitives](concepts/primitives.md)
 * [Glossary](GLOSSARY.md)
 
