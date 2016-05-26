@@ -10,7 +10,7 @@ Before you start working on a larger contribution, you should get in touch with 
 
 #### Proposing new concepts
 
-Note: the concepts described in the Starmap are opinionated topics that specifically apply to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
+Note: this book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
 If you feel that the Starmap is missing a particular concept please draft the concept and propose it as a Pull Request.
 
