@@ -8,6 +8,6 @@
 * [Expressions](expressions/README.md)
 * [Languages](languages/README.md)
 * [Hypotheticals](hypotheticals/README.md)
-* [Glossary](GLOSSARY.md)
 * [Applications](applications/README.md)
+* [Glossary](GLOSSARY.md)
 
