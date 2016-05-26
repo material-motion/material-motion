@@ -41,7 +41,7 @@ This element can now be directly manipulated. When the user lets go of the eleme
 
 ### How (Actor)
 
-An Actor’s sole responsibility is to fulfill the contract defined by a corresponding Intention.
+An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
 > How an Actor is implemented — be it an anonymous function or a class instance with state — is less important than that the Actor fulfills its contract. We leave it as a challenge to the reader to evaluate the merits of purely functional systems vs object-oriented systems.
 
