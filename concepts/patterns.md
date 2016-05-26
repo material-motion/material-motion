@@ -10,14 +10,14 @@ The Intention/Actor pattern separates the **what (Intention)** from the **how (A
 
 ### What (Intention)
 
+An intention is **what you want a thing to do**.
+
 Consider the following snippet of pseudo-code:
 
 ```
 tween = FadeInTween()
 element.addIntention(tween)
 ```
-
-An intention is **what you want a thing to do**.
 
 The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
 
