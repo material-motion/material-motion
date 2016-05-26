@@ -6,17 +6,17 @@ Before we can use your code, you must sign the [Google Individual Contributor Li
 
 Before you start working on a larger contribution, you should get in touch with us first through the issue tracker with your idea so that we can help out and possibly guide you. Coordinating up front makes it much easier to avoid frustration later on.
 
-### Proposing changes to the Starmap
+# How to contribute to the Starmap
 
 TODO: Discuss GitBook. How we use branches. How we review changes. When do we publish releases?
 
-#### Proposing new concepts
+## Proposing new concepts
 
 This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
 If you feel that the Starmap is missing a concept please draft the concept and [start a discussion](https://www.gitbook.com/book/featherless/material-motion-starmap/discussions).
 
-#### Proposing terminology changes
+## Proposing terminology changes
 
 Throughout the Starmap we will associate specific terminology with concepts. Such associations are rarely perfect, nor do we expect them to be. The goal of the following process is to minimize the subjective nature of these discussions.
 
@@ -30,6 +30,10 @@ If you feel that a chosen term does not effectively communicate the intended mea
 1. [Propose the change as a discussion](https://www.gitbook.com/book/featherless/material-motion-starmap/discussions).
 
 If no consensus is able to be reached then the pull request will be closed and the terminology will not be changed.
+
+# How to contribute to implementations
+
+The Starmap defines the goals we all hope to strive for.
 
 ### The small print
 
