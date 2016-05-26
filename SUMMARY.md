@@ -8,5 +8,5 @@
 * [Expressions](expressions/README.md)
 * [Languages](languages/README.md)
 * [Glossary](GLOSSARY.md)
-* Hypotheticals
+* [Hypotheticals](hypotheticals/README.md)
 
