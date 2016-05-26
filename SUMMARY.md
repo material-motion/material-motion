@@ -7,7 +7,7 @@
    * [Runtimes](concepts/runtimes.md)
 * [Expressions](expressions/README.md)
 * [Languages](languages/README.md)
-   * SomeLanguage
+   * [SomeLanguage](languages/somelanguage.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Applications](applications/README.md)
 * [Glossary](GLOSSARY.md)
