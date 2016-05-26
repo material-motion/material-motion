@@ -11,4 +11,5 @@
 * [Applications](applications/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
+* Armory
 
