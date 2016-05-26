@@ -16,7 +16,7 @@ If you feel that the Starmap is missing a concept please draft the concept and [
 
 #### Proposing terminology changes
 
-Throughout the Starmap we will associate specific terminology with concepts. Such associations are rarely perfect, nor do we expect them to be. The following process is an effort to minimize the subjective nature of the expected naming discussions.
+Throughout the Starmap we will associate specific terminology with concepts. Such associations are rarely perfect, nor do we expect them to be. The goal of the following process is to minimize the subjective nature of these discussions.
 
 If you feel that a chosen term does not effectively communicate the intended meaning, please do the following:
 
