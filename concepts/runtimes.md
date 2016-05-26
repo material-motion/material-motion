@@ -28,3 +28,57 @@ Actors that require gesture events will receive them as they happen.
 
 **On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
 
+## Outline (notes, not final copy)
+
+TODO: The following content is an outline and needs to be folded into the above content.
+
+- Runtime can have many Directors. Allow multiple Directors to share Actors. 
+- Directors receive following events: 
+    - Registration - expected to register intentions in this phase 
+    - Input handling - may register new intentions 
+- Actors receive following events from Runtime: 
+    - Initialization 
+    - Display link pump -&gt; returns Bool indicating “isActive?” 
+    - Gesture events 
+- Actor types include: 
+    - Gestural actors 
+    - Simulation actors 
+    - Event actors 
+        - Must have way to communicate to Runtime when the Actor becomes inactive (emphasis: this supports “external” animation systems like Core Animation) 
+
+- Intention registration mechanism 
+    - Associates intentions with elements 
+    - Intentions can be added to elements permanently 
+    - An array of intentions can be added to an element with a name 
+        - Named intentions allow for “state” changes 
+        - Adding named intentions will remove all previous intentions for that element with the same name 
+
+- Runtime receives all Intention requests from the Director, then creates all the necessary Actors to execute those requests 
+- Runtime may hook in to the refresh rate for a screen and use this as a simulation pump. This pump will only be provided to actors (emphasis: not the director) 
+- Support the following states: 
+    - Initializing 
+    - Idle - no actors are currently causing changes to the system (emphasis: includes no “active” gesture recognizers) 
+    - Active 
+
+- Support the following state changes: 
+    - Initializing -&gt; Idle|Active 
+    - Idle -&gt; Active 
+    - Active -&gt; Idle 
+
+- Support Pausing the runtime 
+- Support enumerating all registered intentions, elements, and actors 
+    - Can be used to generate a console dump 
+    - Can be used to build inspectors 
+
+- Plugin system should enable listening to key events in a Runtime: 
+    - When a new element has received intention, allow returning a new element that should be used instead (emphasis: this is for view duplication support) 
+    - When a runtime’s current state has changed 
+
+- Runtime should always be evaluating current “energy level” of the system. If Runtime reaches a steady state, this should be an event. (emphasis: allows other systems to react to runtime completion such as transitions) 
+- Runtime should support some semblance of Actor priority. 
+    - Unclear what this looks like, but order of Actor execution could potentially matter. Assumption presently is that Actors execute Intention in order that they were registered. 
+
+- Existing Runtimes: 
+    - Core Animation 
+    - Android’s animation system 
+    - Web animations
