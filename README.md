@@ -14,8 +14,6 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the Armory.
 
-This book is neither a schedule nor is it a list of relative priorities.
-
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
