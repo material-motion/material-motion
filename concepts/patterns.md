@@ -19,7 +19,7 @@ tween = FadeInTween()
 element.addIntention(tween)
 ```
 
-`FadeInTween` here represents the concept of Intention.
+Here, `FadeInTween` represents the concept of Intention.
 
 The logic that fulfills an Intention **is not executed here**, though it could be **described** here.
 
