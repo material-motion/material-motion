@@ -4,7 +4,7 @@ This book is a high level outline of long term plans over many years. We call it
 
 This book will change over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
-This book is neither a schedule nor a list of relative priorities. This book is the aspirational goal state we want to get to and will help us measure success. We will publish Roadmaps for individual projects as they spin up.
+This book is neither a schedule nor a list of relative priorities. This book is the goal state we want to get to and will help us measure success. We will publish roadmaps for individual projects as they spin up.
 
 ## Motivation
 
