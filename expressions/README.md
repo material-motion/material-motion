@@ -34,3 +34,23 @@ Tween {
 
 **Capitalization**: Language names start with a capital letter. Terms start with a lowercase letter.
 
+#### 2. Terms
+
+```expression = Tween().fadeIn()```
+
+A **term** function is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
+
+The purpose of a term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+
+Pseudo-code example implementation:
+
+```
+fn Tween.fadeIn() -> TweenTerm {
+  return TweenTerm(prev: self, work: function() {
+    let animation = TweenAnimation("opacity")
+    animation.from = 0
+    animation.to = 1
+    return [animation]
+  })
+}
+```
