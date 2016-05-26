@@ -25,7 +25,7 @@ A system operating close to the compositing system is responsible for executing 
 
 Intentions can be associated with a **target**. This is the object or value to which the Intention is expected to be applied.
 
-> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Motion Runtimes that consider all types of Intention allow the coordinated expression of relatively complex interactive experiences.
+> We’re careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate relatively complex interactive experiences.
 
 Consider the following pseudo-code:
 
