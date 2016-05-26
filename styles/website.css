@@ -2,6 +2,7 @@
 
 .markdown-section a.glossary-term {
   color: #333;
-  text-decoration-style: dotted;
+  border-bottom: 1px dotted #333;
+  text-decoration: none;
 }
 
