@@ -1,6 +1,6 @@
 # Primitives
 
-This section defines what the Material Motion Primitives are and how they relate to one another.
+This section defines Primitives of interactive motion and how they relate to one another.
 
 > We use the term **element** to mean “an individual node in a hierarchical layout/compositing engine”. This term is synonymous with a View or a DOM Element.
 
