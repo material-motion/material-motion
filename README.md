@@ -12,7 +12,7 @@ Interactivity and motion play an important role in software interfaces. Even so,
 
 Material Motion aspires to empower creators with the language and tools to describe and implement rich, interactive motion.
 
-This Starmap is the first step toward achieving this aspiration. Within, you will find concepts that cover software design patterns, essential primitives, specifications for motion runtimes, and much more; all of which are based heavily upon the experience of shipping production software interfaces.
+This Starmap is the first step toward achieving this aspiration. Within, you will find concepts that cover software design patterns, essential primitives, specifications for motion runtimes, and much more. The content of this book is based upon the experience of shipping production software interfaces.
 
 Each concept in the Starmap represents a concrete **goal** — a guiding star — to guide development.
 
