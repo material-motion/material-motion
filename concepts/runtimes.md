@@ -22,7 +22,7 @@ The Runtime now has a collection of Actors and a Director. At this point the Run
 
 ### Animation events
 
-The Actor is expected to return a Boolean indicating whether it will require additional simulation events.
+The animate event allows an Actor to execute any manner of time-based change to its target.
 
     function animate(timestamp) -> Boolean
 
