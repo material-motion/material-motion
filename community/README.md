@@ -4,7 +4,7 @@ Working on or found an implementation to an idea explored in this book? We'd lov
 
 This is an index of **existing or in-development implementations** of the ideas expressed in this book.
 
-The [Material Motion team](https://material-motion.gitbooks.io/material-motion-team/content/) is dedicated to finding and building solutions to ideas explored in this book.
+> Note: The [Material Motion team](https://material-motion.gitbooks.io/material-motion-team/content/) is dedicated to finding and building solutions to ideas explored in this book.
 
 ## Suggested repository naming convention
 
