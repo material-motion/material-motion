@@ -6,7 +6,7 @@ We'll explore an application of these patterns in the section on [Runtimes](runt
 
 ## The Intention/Actor pattern
 
-The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** in a motion system. This separation makes it possible for Runtimes to offload work to separate threads or processes.
+The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** in a motion system. This separation enables Runtimes to offload work to separate threads or processes.
 
 ### What (Intention)
 
