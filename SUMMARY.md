@@ -3,6 +3,6 @@
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
-   * Patterns
+   * [Patterns](concepts/patterns.md)
 * [Glossary](GLOSSARY.md)
 
