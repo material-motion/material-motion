@@ -49,12 +49,12 @@ An Actor’s sole responsibility is to fulfill the contract defined by a corresp
 
 **Activity**: An Actor is either active or dormant. An active Actor will generate change in response to input. Conversely, a dormant actor will not generate change in response to input.
 
-Examples of active Actors:
+Examples of *active* Actors:
 
 - Fulfilling a Pan Intention while pan gesture events are being generated. 
 - Fulfilling a Spring Attachment Intention and the body has not yet reached its final resting state. 
 
-Examples of dormant Actors:
+Examples of *dormant* Actors:
 
 - Fulfilling a Pan Intention for which there are no pan gesture events. 
 - Fulfilling a Spring Attachment Intention and the body has reached its final resting state. 
