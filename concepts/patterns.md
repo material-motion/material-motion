@@ -10,7 +10,7 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 
 ### What (Intention)
 
-Intention is **what you want something to do**.
+Intention is **what you want something to do**. This intentionally broad description is meant to capture everything from gestural interactions to physical simulations.
 
 Consider the following pseudo-code:
 
