@@ -8,7 +8,7 @@ This book is neither a schedule nor a list of relative priorities. This book is 
 
 ## Motivation
 
-Interactivity and motion play an important role in software interfaces, yet there is often a gap between what a software creator can imagine and what can be built in production code.
+Interactivity and motion play an important role in software interfaces. Even so, there is often a gap between what a software creator can imagine and what can be built in production code.
 
 Material Motion aspires to empower creators with the language and tools to describe and implement rich, interactive motion.
 
