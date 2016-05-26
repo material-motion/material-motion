@@ -5,7 +5,7 @@
    * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
    * [Runtimes](concepts/runtimes.md)
-   * [Expressions](expressions/README.md)
+   * [Expressions](concepts/expressions.md)
 * [Languages](languages/README.md)
    * [SomeLanguage](languages/somelanguage.md)
 * [Hypotheticals](hypotheticals/README.md)
