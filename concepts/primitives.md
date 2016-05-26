@@ -6,7 +6,7 @@ This section’s topics:
   
 - [Delta Primitives](#delta-primitives)
 - [Timeline](#timeline)
-- [State Machine](#state-machine) sdf
+- [State Machine](#state-machine)
 
 ## Delta Primitives
 
