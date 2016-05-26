@@ -13,6 +13,6 @@
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
 * [Community](community/README.md)
-   * Android
+   * [Android](community/android.md)
    * iOS
 
