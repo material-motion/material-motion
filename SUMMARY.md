@@ -10,5 +10,5 @@
 * [Hypotheticals](hypotheticals/README.md)
 * [Applications](applications/README.md)
 * [Glossary](GLOSSARY.md)
-* Contributing
+* [Contributing](CONTRIBUTING.md)
 
