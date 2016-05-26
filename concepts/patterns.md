@@ -1,4 +1,4 @@
 # Patterns
 
-This section explores **software design patterns** that enable the creation of modular, declarative motion systems.
+This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
