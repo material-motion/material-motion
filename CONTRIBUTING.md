@@ -8,6 +8,8 @@ Before you start working on a larger contribution, you should get in touch with 
 
 ### Proposing changes to the Starmap
 
+TODO: Discuss GitBook. How we use branches. How we review changes. When do we publish releases?
+
 #### Proposing new concepts
 
 This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
