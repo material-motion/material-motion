@@ -8,7 +8,7 @@ This book aspires to empower creators with the language and tools needed to desc
 
 This book will evolve over time. Please start discussions by leaving comments in-line or by [filing issues](https://github.com/material-motion/material-motion-starmap/issues/) on the GitHub repository.
 
-Please read the chapter on Contributing to learn how to contribute to this book.
+Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book.
 
 ## Implementations
 
