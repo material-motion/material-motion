@@ -4,9 +4,9 @@ This section explores **essential building blocks** of rich, interactive motion.
 
 This section’s topics:
   
-- [Delta Primitives](#delta-primitives),
-- the [Timeline](#timeline), and
-- the [State Machine](#state-machine).
+- [Delta Primitives](#delta-primitives)
+- [Timeline](#timeline)
+- [State Machine](#state-machine)
 
 ## Delta Primitives
 
