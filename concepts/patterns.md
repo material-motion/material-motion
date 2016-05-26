@@ -27,13 +27,11 @@ Intentions can be associated with a **target**. This is the object or value to w
 
 Consider the following pseudo-code:
 
-```
-draggable = DraggableGesture()
-pinchable = PinchableGesture()
-rotatable = RotatableGesture()
-anchoredSpring = AnchoredSpringAtLocation(x, y)
-element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
-```
+    draggable = DraggableGesture()
+    pinchable = PinchableGesture()
+    rotatable = RotatableGesture()
+    anchoredSpring = AnchoredSpringAtLocation(x, y)
+    element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
 
 This element can now be directly manipulated. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
