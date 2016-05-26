@@ -11,3 +11,7 @@ Synonyms:
 ## element
 
 An individual node in a hierarchical layout/compositing engine. Synonymous with a View (iOS) or a DOM Element (web).
+
+## intention
+
+An intention is **what you want a thing to do**.
