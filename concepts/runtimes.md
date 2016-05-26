@@ -2,6 +2,8 @@
 
 This section explores one specification for a **declarative motion engine**.
 
+TODO: Emphasize that this runtime is mostly a software design pattern and event pipeline. This Runtime can be used to coordinate a variety of other existing systems in an application.
+
 The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns. The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
 ![Runtime](../_assets/RuntimeDiagram.png)
