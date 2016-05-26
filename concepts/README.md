@@ -1,3 +1,3 @@
 # Concepts
 
-The concepts described in this chapter describe a foundation upon which rich interactive experiences can be defined.
+The topics explored in this chapter describe a conceptual foundation. The purpose of this foundation is to enable the expression of rich, interactive experiences.
