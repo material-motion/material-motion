@@ -20,7 +20,7 @@ Intention is **what you want something to do**.
 > 
 >     protocol Intention {}
 > 
-> Strongly-typed programming-languages lacking protocols or interfaces can create wrapper subclasses of an Intention class.
+> Strongly-typed programming-languages lacking protocols or interfaces can create "container" objects. These container objects are part of an Intention tree.
 > 
 >     abstract class Intention {}
 >     // C++
