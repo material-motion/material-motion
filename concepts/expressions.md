@@ -8,7 +8,7 @@ Through the following examples we will explore the essential aspects of an Expre
 2. `expression = Tween().fadeIn()`
 3. `expression = Tween().fadeIn().withEasingCurve(easeOut)`
 4. `expression = Gesture().pinchable().rotatable().draggable()`
-5. `expression.intentions()`
+5. `intentions = expression.intentions()`
 
 ## 1. Languages
 
@@ -85,9 +85,11 @@ Note the use of the self.chain method. This internal method creates a new immuta
 
 The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
 
-    let fadeIn = Tween().fadeIn()
+    fadeIn = Tween().fadeIn()
     elementA.addIntentions(fadeIn.intentions())
-    elementB.addIntentions(fadeIn.withEasingCurve(easeOut).intentions())
+
+    fadeInEaseOut = fadeIn.withEasingCurve(easeOut)
+    elementB.addIntentions(fadeInEaseOut.intentions())
 
 **Immutability**: modifiers are immutable.
 
@@ -98,6 +100,14 @@ The above implementation allows the engineer to **chain** modifications. Express
 ## 4. Chaining terms
 
     expression = Gesture().pinchable().and.rotatable().and.draggable()
+
+Additional examples:
+
+    draggable = Gesture().draggable()
+    target.addIntentions(draggable.intentions())
+    
+    # Reusing the draggable expression
+    target.addIntentions(draggable.and.rotatable().intentions())
 
 Terms within a Language can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the Language object.
 
@@ -119,7 +129,7 @@ In order for the next term's `intentions()` function to resolve a chain of multi
 
 #### 5. Generating intentions
 
-    expression.intentions() -> [Intentions]
+    intentions = expression.intentions()
 
 Every expression must be resolvable into an array of Intentions.
 
