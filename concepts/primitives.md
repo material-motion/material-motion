@@ -54,12 +54,6 @@ recognizers have failed. For instance:
 
 **Velocity**: Continuous gesture recognizers emit a velocity each time the gesture generates a new interpreted value. Once a gesture has ended, its velocity may be fed into a Physical Simulation.
 
-| Platform | Pan | Pinch | Rotate | Tap |
-|:--------:|:---:|:-----:|:------:|:---:|
-| Android | [ViewDragHelper](https://developer.android.com/reference/android/support/v4/widget/ViewDragHelper.html) / [custom](http://developer.android.com/training/gestures/scale.html#drag) | [ScaleGestureDetector](http://developer.android.com/training/gestures/scale.html#scale) / custom | custom | [OnClickListener](http://developer.android.com/reference/android/view/View.OnClickListener.html) / [GestureDetector](http://developer.android.com/training/gestures/detector.html#detect) |
-| iOS | [UIPanGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPanGestureRecognizer_Class/) | [UIPinchGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIPinchGestureRecognizer_Class/) | [UIRotateGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIRotateGestureRecognizer_Class/) | [UITapGestureRecognizer](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITapGestureRecognizer_Class/) |
-| Web | [hammer.js](http://hammerjs.github.io/) | | | |
-
 ### Physical simulation
 
 **What it is**: *the application of physical forces to a simulated body consisting of both a position and velocity*.
