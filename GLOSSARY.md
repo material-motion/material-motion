@@ -19,7 +19,7 @@ A Language's list of terms and modifiers.
 
 ## element
 
-An individual node in a hierarchical layout/compositing engine. Synonymous with a View (iOS) or a DOM Element (web).
+A node in a hierarchical layout/compositing system. Synonymous with a View (iOS) or a DOM Element (web).
 
 ## intention
 
@@ -31,5 +31,5 @@ Synonyms:
 
 ## target
 
-A target is the object to which an Intention is meant to be applied.
+A target is the entity to which an Intention is meant to be applied.
 
