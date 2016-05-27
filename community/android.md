@@ -18,6 +18,6 @@ Built in to Android:
 
 ### Physical simulation
 
-Community:
+Community implementations:
 
 - [Rebound](https://github.com/facebook/rebound)
