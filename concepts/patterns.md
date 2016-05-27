@@ -75,7 +75,7 @@ Consider this pseudo-code:
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
-> How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors may even interact with other Actor-like systems in order to fulfill their contract.
+> How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors often interact with existing Actor-like systems in order to fulfill their contract.
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
