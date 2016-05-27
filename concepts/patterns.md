@@ -50,7 +50,7 @@ Also consider this pseudo-code:
     }
     element.addIntention(behavior)
 
-In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
+In this example, `CustomBehavior` represents the concept of Intention. The `animate` function is likely executed by a separate system.
 
 Many Intentions can be attached to a given target.
 
