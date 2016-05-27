@@ -15,5 +15,5 @@
 * [Community](community/README.md)
    * [Android](community/android.md)
    * [iOS](community/ios.md)
-   * [Web](community/web_javascript.md)
+   * [Web](community/web.md)
 
