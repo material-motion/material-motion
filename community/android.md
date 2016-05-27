@@ -8,7 +8,7 @@ Built in to Android:
 
 - [Property Animation](http://developer.android.com/guide/topics/graphics/prop-animation.html)
 
-### Gestures
+### [Gesture recognition](../concepts/primitives.html#gesture-recognition)
 
 Built in to Android:
 
