@@ -31,9 +31,9 @@ If you feel that a chosen term does not effectively communicate the intended mea
 
 If no consensus is able to be reached then the discussion will be closed and the terminology will not be changed.
 
-# Updating the list of implementations
+# Contributing to the community index
 
-View the [Community](community/) docs for a list of Starmap concept implementations.
+View the [Community index](community/) for a community-curated list of Starmap concept implementations.
 
 ### The small print
 
