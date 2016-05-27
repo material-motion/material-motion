@@ -83,7 +83,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 >
 > In an alternate universe, FadeInActor might directly implement the necessary interpolation.
 >
-> Good Actors will consider the runtime performance of their execution.
+> Good Actors will consider the runtime performance of their execution. The latter Actor may be less performant if it means the Actor must be executed on the main thread.
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
