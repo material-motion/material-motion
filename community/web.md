@@ -19,7 +19,7 @@ Community implementations:
 
 - [hammer.js](http://hammerjs.github.io/)
 
-### Physical simulation
+### [Physical simulation](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/primitives.html#physical-simulation)
 
 Community implementations:
 
