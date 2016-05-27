@@ -36,6 +36,6 @@ Built in to iOS:
 - [UICollisionBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollisionBehavior_Class/)
 - [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/)
 
-Community:
+Community implementations:
 
 - [POP](https://github.com/facebook/pop)
