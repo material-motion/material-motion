@@ -13,7 +13,7 @@
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
-   * [Android](community/android.md)
+   * [Android](community_index/android.md)
    * [iOS](community/ios.md)
    * [Web](community/web.md)
 
