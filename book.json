@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "edit-link"
+        "edit-link",
+        "anchors"
     ],
     "pluginsConfig": {
         "edit-link": {
