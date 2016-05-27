@@ -6,7 +6,8 @@
 
 System implementations:
 
-- [CAAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CABasicAnimation_class/)
+- [CABasicAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CABasicAnimation_class/)
+- [CAKeyframeAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CAKeyframeAnimation_class/)
 
 Resources:
 
