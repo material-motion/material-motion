@@ -19,7 +19,12 @@ A Language's list of terms and modifiers.
 
 ## element
 
-A node in a hierarchical layout/compositing system. Synonymous with a View (iOS) or a DOM Element (web).
+A node in a hierarchical layout/compositing system.
+
+Synonyms:
+
+- [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
+- DOM element (web)
 
 ## intention
 
