@@ -10,7 +10,7 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 
 ### What (Intention)
 
-Intention is **what you want something to do**. This intentionally broad description is meant to be the root node of a tree of motion.
+Intention is **what you want something to do**. This intentionally broad concept is the root node of a tree of expressible motion.
 
 Consider the following pseudo-code:
 
