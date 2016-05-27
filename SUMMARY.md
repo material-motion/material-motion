@@ -12,7 +12,7 @@
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
-* [Community index](community/README.md)
+* [Community index](community_index/README.md)
    * [Android](community/android.md)
    * [iOS](community/ios.md)
    * [Web](community/web.md)
