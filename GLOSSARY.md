@@ -29,4 +29,7 @@ Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
 
+## target
+
+A target is the object or value to which an Intention is meant to be applied.
 
