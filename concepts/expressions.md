@@ -81,7 +81,7 @@ A modifier class is a type of Language.
 
 Note the use of the self.chain method. This internal method creates a new immutable TweenTerm instance with a reference to the current instance and the provided function.
 
-The above implementation allows the engineer to **chain** modifications of the same term together without actually executing them. This allows Expressions to be stored, reused, and combined.
+The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and reused without affecting previous instances.
 
     let fadeIn = Tween().fadeIn()
     elementA.addIntentions(fadeIn.intentions())
