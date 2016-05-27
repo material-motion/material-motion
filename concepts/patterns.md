@@ -68,8 +68,6 @@ Consider this pseudo-code:
 
 This element can now be directly manipulated. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
-Intentions can be associated with any number of targets.
-
 ### How (Actor)
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
