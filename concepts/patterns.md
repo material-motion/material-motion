@@ -26,7 +26,7 @@ Intention is **what you want something to do**.
 >     extension Animation: Intention {
 >     }
 > 
-> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. These container objects are part of an Intention class hierarchy.
+> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Intention class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Intention types.
 > 
 >     class Intention {}
 >     class AnimationIntention: Intention {
