@@ -16,9 +16,11 @@ Intention is **what you want something to do**.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
-> We recommend that strongly-typed programming languages define Intention as empty protocols or interfaces. This allows existing entities to be described as Intentions.
+> Strongly-typed programming languages can define Intention as an empty protocol or interface. This allows existing entities to be described as Intentions.
 > 
 >     protocol Intention {}
+>     extension Animation: Intention {
+>     }
 > 
 > Strongly-typed programming-languages that lack protocols or interfaces can create "container" objects. These container objects are part of an Intention class hierarchy.
 > 
