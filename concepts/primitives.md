@@ -68,13 +68,6 @@ Forces can be applied to the physical body’s velocity over time using a numeri
 
 **Custom forces**: A physical simulation system should also allow for the expression of arbitrary forces.
 
-| Platform | Springs | Friction | Collisions | Custom |
-|:--------:|:-------:|:--------:|:----------:|:------:|
-| Android | [Rebound](https://github.com/facebook/rebound) | | | |
-| iOS | [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAttachmentBehavior_Class/) · [POP](https://github.com/facebook/pop) | [UIFieldBehavior.dragField](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFieldBehavior_class/) | [UICollisionBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollisionBehavior_Class/) | [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) · [POP](https://github.com/facebook/pop) |
-| Web JavaScript | [Rebound.js](https://github.com/facebook/rebound-js/) | | | |
-| Web React | [React Motion](https://github.com/chenglou/react-motion/) | | | |
-
 ## Timeline
 
 **What it is**: *an entity that has a floating point value ranging from 0 to 1 inclusively that can be driven by a Delta Primitive and to which Tweens may be associated*.
