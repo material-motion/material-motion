@@ -20,10 +20,12 @@ Intention is **what you want something to do**.
 > 
 >     protocol Intention {}
 > 
-> Strongly-typed programming-languages lacking protocols or interfaces can create "container" objects. These container objects are part of an Intention tree.
+> Strongly-typed programming-languages that lack protocols or interfaces can create "container" objects. These container objects are part of an Intention class hierarchy.
 > 
->     abstract class Intention {}
->     // C++
+>     class Intention {}
+>     class AnimationIntention: Intention {
+>       var animation
+>     }
 > 
 > [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as potentially-an-Intention.
 
