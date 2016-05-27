@@ -4,15 +4,14 @@
 
 ### [Tweens](../concepts/primitives.html#tweens)
 
-System implementations:
+Standard CSS:
 
-- [CABasicAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CABasicAnimation_class/)
-- [CAKeyframeAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CAKeyframeAnimation_class/)
+- [transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)
+- [@keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes)
 
-Resources:
+Standard JavaScript:
 
-- [Core Animation (Apple docs)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html)
-- [Animations Explained (objc.io)](https://www.objc.io/issues/12-animations/animations-explained/)
+- [element.animate](https://github.com/web-animations/web-animations-js/)
 
 ### [Gesture recognition](../concepts/primitives.html#gesture-recognition)
 
