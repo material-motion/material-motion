@@ -16,7 +16,7 @@ Intention is **what you want something to do**.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
-> We recommend that programming languages with protocols define Intention as an empty protocol:
+> We recommend that strongly-typed programming languages define Intention as empty protocols or interfaces:
 > 
 >     protocol Intention {}
 >     // Objective-C, Swift, Java
