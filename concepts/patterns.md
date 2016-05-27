@@ -16,11 +16,11 @@ Intention is **what you want something to do**.
 
 ![](../_assets/Intention-Tree.svg)
 
-Object-oriented languages may choose to define Intention as an empty abstract base class.
+Object-oriented languages may choose to define Intention as an empty abstract base class. Pseudo-code:
 
     abstract class Intention {}
 
-Protocol languages may choose to define Intention as an empty protocol.
+Protocol languages may choose to define Intention as an empty protocol.  Pseudo-code:
 
     protocol Intention {}
 
