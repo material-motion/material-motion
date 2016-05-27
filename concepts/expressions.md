@@ -43,7 +43,7 @@ The purpose of a Term is to initiate the creation of one or more Intentions. The
 Pseudo-code example implementation:
 
     fn Tween.fadeIn() -> TweenTerm {
-      return TweenTerm(prev: self, work: function() {
+      return TweenTerm(previousTerm: self, work: function() {
         let animation = TweenAnimation("opacity")
         animation.from = 0
         animation.to = 1
@@ -69,8 +69,9 @@ A modifier class is a type of Language.
 
 **Example modifier method implementation:**
 
-    function TweenModifier.withEasingCurve(curve) -> Term {
-      return self.chain(function(intentions) {
+    function TweenModifier.withEasingCurve(curve) -> TweenTerm {
+      return TweenTerm(previousTerm: self.previousTerm, work: function() {
+        let intentions = self.work()
         for intention in intentions {
           intention.easingCurve = curve
         }
