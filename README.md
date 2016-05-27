@@ -12,7 +12,10 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-This book is targeted towards software engineers interested in building and understanding systems of describing interactive motion.
+This book is written for software engineers. We assume a certain level of background including:
+
+- Familiarity with at least one programming language.
+- Familiarity with animation systems.
 
 ## Implementations
 
