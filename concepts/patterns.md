@@ -20,11 +20,11 @@ Intention is **what you want something to do**.
 > 
 >     protocol Intention {}
 > 
-> For programming languages without protocols, we recommend defining Intention as an empty base class:
+> For programming languages without protocols, we recommend defining Intention as an empty class:
 > 
 >     abstract class Intention {}
 > 
-> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as a potential intention.
+> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as potential-an-intention.
 
 Consider the following pseudo-code:
 
