@@ -19,7 +19,6 @@ Intention is **what you want something to do**.
 > We recommend that strongly-typed programming languages define Intention as empty protocols or interfaces:
 > 
 >     protocol Intention {}
->     // Objective-C, Swift, Java
 > 
 > For programming languages without protocols, we recommend defining Intention as an empty class:
 > 
