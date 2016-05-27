@@ -20,7 +20,7 @@ Intention is **what you want something to do**.
 > 
 >     protocol Intention {}
 > 
-> Strongly-typed programming-languages lacking protocols or interfaces can create wrapper objects that subclass Intention.
+> Strongly-typed programming-languages lacking protocols or interfaces can create new objects that subclass Intention.
 > 
 >     abstract class Intention {}
 >     // C++
