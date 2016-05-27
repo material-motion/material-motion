@@ -2,7 +2,7 @@
 
 This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
-We'll explore the application of these patterns in the section on [Runtimes](runtimes.md).
+We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
 ## The Intention/Actor pattern
 
