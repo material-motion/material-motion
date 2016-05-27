@@ -87,8 +87,8 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 
 **Events**: Actors can ask to receive the following events:
 
-- Gesture recognition.
-- Animation frames.
+- Animation events.
+- Gesture recognition events.
 
 **Activity**: An Actor is either active or dormant. An **active** Actor will generate change in response to input. Conversely, a **dormant** actor will not generate change in response to input.
 
