@@ -20,7 +20,7 @@ Intention is **what you want something to do**.
 > 
 >     protocol Intention {}
 > 
-> For languages without protocols, we recommend defining Intention as an empty abstract base class:
+> For programming languages without protocols, we recommend defining Intention as an empty base class:
 > 
 >     abstract class Intention {}
 > 
