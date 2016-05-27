@@ -100,7 +100,6 @@ Required events:
 - Did start 
 - Did idle 
 
-
 ### View duplication
 
 Required events:
