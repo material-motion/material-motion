@@ -17,7 +17,7 @@ Consider the following pseudo-code:
     tween = FadeInTween()
     element.addIntention(tween)
 
-Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**.
+Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**. The intention was handed off to some system via `addIntention`. At some point in the near future that system will execute the Intention.
 
 Also consider this pseudo-code:
 
