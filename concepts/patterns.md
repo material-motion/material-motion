@@ -61,8 +61,10 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Many intentions to one element
+    # Many Intentions to one element
     target.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
+    
+    # Many targets for one Intention
     target2.addIntention(draggable)
 
 `target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
