@@ -16,4 +16,8 @@ Built in to Android:
 - [ScaleGestureDetector](http://developer.android.com/training/gestures/scale.html#scale) / custom
 - [OnClickListener](http://developer.android.com/reference/android/view/View.OnClickListener.html) / [GestureDetector](http://developer.android.com/training/gestures/detector.html#detect)
 
+### Physical simulation
 
+Community:
+
+- [Rebound](https://github.com/facebook/rebound)
