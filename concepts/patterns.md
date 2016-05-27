@@ -38,7 +38,7 @@ Intention is **what you want something to do**.
 Consider the following pseudo-code:
 
     tween = FadeInTween()
-    element.addIntention(tween)
+    target.addIntention(tween)
 
 Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**. The Intention has been handed off to some system via `addIntention`. That system will soon execute the Intention.
 
@@ -48,7 +48,7 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    element.addIntention(behavior)
+    target.addIntention(behavior)
 
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
@@ -64,12 +64,14 @@ Consider this pseudo-code:
     pinchable = PinchableGesture()
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
-    element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
-    element2.addIntention(draggable)
+    
+    # Many intentions to one element
+    target.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
+    target2.addIntention(draggable)
 
-`element` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+`target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
-`element2` can simply be dragged.
+`target2` can simply be dragged.
 
 ### How (Actor)
 
