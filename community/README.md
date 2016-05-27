@@ -1,4 +1,4 @@
-# Community
+# Community index
 
 Working on or found an implementation to an idea explored in this book? We'd love to list it here.
 
