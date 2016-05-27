@@ -75,7 +75,7 @@ Consider this pseudo-code:
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
-> How an Actor is implemented — be it an anonymous function or a class instance with state — is less important than that the Actor fulfills its contract. We leave it as a challenge to the reader to evaluate the merits of purely functional systems vs object-oriented systems.
+> How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention.
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
