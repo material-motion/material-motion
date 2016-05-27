@@ -34,6 +34,17 @@ Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
 
+## platform
+
+Either an operating system or a cross-platform abstraction layer.
+
+Synonyms:
+
+- iOS
+- Android
+- Unity
+- Web
+
 ## target
 
 A target is the entity to which an Intention is meant to be applied.
