@@ -2,5 +2,10 @@
     "plugins": [
         "edit-link"
     ],
-    "pluginsConfig": {}
+    "pluginsConfig": {
+        "edit-link": {
+            "base": "",
+            "label": "Edit This Page"
+        }
+    }
 }
