@@ -50,7 +50,7 @@ Also consider this pseudo-code:
 
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
-Many Intentions can be associated to a given **target**.
+Many Intentions can be associated to a given target.
 
 Consider this pseudo-code:
 
