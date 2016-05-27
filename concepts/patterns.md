@@ -16,7 +16,11 @@ Intention is **what you want something to do**.
 
 ![](../_assets/Intention-Tree.svg)
 
-In an object-oriented language, an Intention might be represented as an empty abstract base class or as an empty protocol.
+Object-oriented languages may choose to define Intention as an empty abstract base class.
+
+    abstract class Intention {}
+
+Protocol languages may choose to define Intention as an empty protocol.
 
     protocol Intention {}
 
