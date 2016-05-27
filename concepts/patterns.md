@@ -52,7 +52,7 @@ Also consider this pseudo-code:
 
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
-### Many-to-Many
+The **Intention/target relationship is many-to-many**.
 
 Many Intentions can be attached to a single target.
 
