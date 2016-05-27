@@ -79,7 +79,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 >
 > For example, a FadeIn intention might be fulfilled by a FadeInActor. FadeInActor might create a TweenAnimation primitive and register it with an auxiliary animation system.
 > 
-> This example demonstrates an Intention &rarr; Actor contract being fulfilled by an opaque system via another Intention.
+> This demonstrates an Intention contract being fulfilled by an opaque system via another Intention.
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
