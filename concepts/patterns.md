@@ -16,11 +16,11 @@ Intention is **what you want something to do**.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
-> We recommend that strongly-typed programming languages define Intention as empty protocols or interfaces:
+> We recommend that strongly-typed programming languages define Intention as empty protocols or interfaces. This allows existing entities to be described as Intentions.
 > 
 >     protocol Intention {}
 > 
-> For programming languages without protocols, we recommend defining Intention as an empty class:
+> Strongly-typed programming-languages lacking protocols or interfaces can create wrapper objects that subclass Intention.
 > 
 >     abstract class Intention {}
 >     // C++
