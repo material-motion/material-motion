@@ -40,8 +40,6 @@ A **term function** is the entry point for creating Intention. An instance of a 
 
 The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
 
-> Terms are not sub-types of Languages.
-
 Pseudo-code example implementation:
 
     fn Tween.fadeIn() -> TweenTerm {
