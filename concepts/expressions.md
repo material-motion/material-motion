@@ -127,10 +127,16 @@ In order for the next term's `intentions()` function to resolve a chain of multi
       }
     }
 
-#### 5. Generating intentions
+## 5. Generating intentions
 
     intentions = expression.intentions()
 
 Every expression must be resolvable into an array of Intentions.
 
 Successive invocations of this method should generate new Intentions.
+
+## Follow-up considerations
+
+APIs that accept intentions could also accept Expressions. This reduces the need to resolve the expression at the call site.
+
+    target.addExpression(Gesture().draggable())
