@@ -24,6 +24,8 @@ Protocol languages may choose to define Intention as an empty protocol.
 
     protocol Intention {}
 
+Duck-typing languages can treat any object as a potential intention.
+
 Consider the following pseudo-code:
 
     tween = FadeInTween()
