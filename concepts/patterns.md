@@ -50,7 +50,7 @@ Also consider this pseudo-code:
 
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
-Intentions can be associated with any number of **targets**. A target is the object or value to which an Intention is meant to be applied.
+Many Intentions can be associated to a given **target**.
 
 Consider this pseudo-code:
 
@@ -61,6 +61,8 @@ Consider this pseudo-code:
     element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
 
 This element can now be directly manipulated. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+
+Intentions can be associated with any number of **targets**.
 
 ### How (Actor)
 
