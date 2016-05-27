@@ -19,12 +19,14 @@ Intention is **what you want something to do**.
 > We recommend that programming languages with protocols define Intention as an empty protocol:
 > 
 >     protocol Intention {}
+>     // Objective-C, Swift, Java
 > 
 > For programming languages without protocols, we recommend defining Intention as an empty class:
 > 
 >     abstract class Intention {}
+>     // C++
 > 
-> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as potential-an-intention.
+> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as potentially-an-Intention.
 
 Consider the following pseudo-code:
 
