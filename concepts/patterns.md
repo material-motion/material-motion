@@ -65,8 +65,11 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     element.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
+    element2.addIntentioin(draggable)
 
-This element can now be directly manipulated. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+`element` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+
+`element2` can simply be dragged.
 
 ### How (Actor)
 
