@@ -16,15 +16,15 @@ Intention is **what you want something to do**.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
-> Languages with protocols may choose to define Intention as an empty protocol:
+> We recommend that languages with protocols define Intention as an empty protocol:
 > 
 >     protocol Intention {}
 > 
-> Languages without protocols may define Intention as an empty abstract base class:
+> For languages without protocols, we recommend defining Intention as an empty abstract base class:
 > 
 >     abstract class Intention {}
 > 
-> Duck-type languages can treat any object as a potential intention.
+> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages can treat any object as a potential intention.
 
 Consider the following pseudo-code:
 
