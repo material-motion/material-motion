@@ -104,8 +104,16 @@ Terms within a Language can be chained together by using the special `and` objec
 In order for the `intentions()` function to resolve a chain of multiple terms, the returned Language object needs to store a reference to the previous term.
 
     TweenTerm {
-      and: Language {
-        return LanguageAndTerm(previousTerm: self)
+      and = function() -> Tween {
+        return TweenAndTerm(previousTerm: self)
+      }
+    }
+    
+    TweenAndTerm: Tween, Term {
+      let previousTerm
+      
+      intentions = function() -> [Intentions] {
+        return self.previousTerm.intentions()
       }
     }
 
