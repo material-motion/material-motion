@@ -32,13 +32,6 @@ Tweens use an **interpolation function**. This is generally a cubic-bezier.
 
 A **keyframe animation** is a Tween that animates between two or more values.
 
-| Platform | Keyframe |
-|:--------:|:--------:|
-| Android | [Property Animation](http://developer.android.com/guide/topics/graphics/prop-animation.html) |
-| iOS | [CAKeyframeAnimation](https://developer.apple.com/library/mac/documentation/GraphicsImaging/Reference/CAKeyframeAnimation_class/) |
-| Web CSS | [transition](https://developer.mozilla.org/en-US/docs/Web/CSS/transition)[@keyframes](https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes) |
-| Web JavaScript | [element.animate](https://github.com/web-animations/web-animations-js/) |
-
 ### Gesture recognition
 
 **What it is**: *recognition of continuous or discrete actions*.
