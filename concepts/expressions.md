@@ -95,7 +95,7 @@ The above implementation allows the engineer to **chain** modifications. Express
 
 **Prefix**: Modifiers begin with a lower-case preposition (e.g. with/to/after).
 
-#### 4. Chaining
+## 4. Chaining terms
 
     expression = Gesture().pinchable().and.rotatable().and.draggable()
 
