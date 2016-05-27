@@ -31,9 +31,9 @@ If you feel that a chosen term does not effectively communicate the intended mea
 
 If no consensus is able to be reached then the pull request will be closed and the terminology will not be changed.
 
-# How to contribute to implementations
+# Updating the list of implementations
 
-The Starmap defines the goals we all hope to strive for.
+View the [Community](community/) docs for a list of Starmap concept implementations.
 
 ### The small print
 
