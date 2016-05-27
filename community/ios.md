@@ -26,3 +26,16 @@ Built in to iOS:
 Resources:
 
 - [Gesture recognizers (Apple docs)](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizer_basics/GestureRecognizer_basics.html)
+
+### Physical simulation
+
+Built in to iOS:
+
+- [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAttachmentBehavior_Class/)
+- [UIFieldBehavior.dragField](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIFieldBehavior_class/)
+- [UICollisionBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollisionBehavior_Class/)
+- [UIAttachmentBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/)
+
+Community:
+
+- [POP](https://github.com/facebook/pop)
