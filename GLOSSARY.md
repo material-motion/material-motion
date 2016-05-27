@@ -31,5 +31,5 @@ Synonyms:
 
 ## target
 
-A target is the object or value to which an Intention is meant to be applied.
+A target is the object to which an Intention is meant to be applied.
 
