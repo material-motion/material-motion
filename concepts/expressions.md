@@ -101,7 +101,7 @@ The above implementation allows the engineer to **chain** modifications. Express
 
 Terms within a Language can be chained together by using the special `and` object. `and` is a function or dynamic property that returns a new instance of the Language object.
 
-In order for the next term's `intentions()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term.
+In order for the next term's `intentions()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
 
     TweenTerm {
       and = function() -> Tween {
