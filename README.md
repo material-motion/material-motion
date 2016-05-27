@@ -12,10 +12,12 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-This book is written for software engineers. We assume a certain level of background including:
+[Concepts](concepts/) and [Applications](applications/) are both written for software engineers. We assume a certain level of background including:
 
 - Familiarity with at least one programming language.
 - Familiarity with animation systems.
+
+[Languages](languages/) and [Hypotheticals](hypotheticals/) are both written for anyone interested in interactive motion.
 
 ## Implementations
 
