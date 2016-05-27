@@ -36,9 +36,11 @@ For example, the Tween Language definition might look like:
 
     expression = Tween().fadeIn()
 
-A **term** function is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
+A **term function** is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
 
-The purpose of a term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+
+> Terms are not sub-types of Languages.
 
 Pseudo-code example implementation:
 
