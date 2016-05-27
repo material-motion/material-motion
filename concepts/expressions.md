@@ -99,7 +99,16 @@ The above implementation allows the engineer to **chain** modifications. Express
 
     expression = Gesture().pinchable().and.rotatable().and.draggable()
 
-Terms within a Language can be chained together by using the special `and` object. `and` is simply an instance of the Language object.
+Terms within a Language can be chained together by using the special `and` object. `and` is a function or dynamic property that returns a new instance of the Language object.
+
+In order for the `intentions()` function to resolve a chain of multiple terms, the returned Language object needs to store a reference to the previous term.
+
+    TweenTerm {
+      and: Language {
+        return LanguageAndTerm(previousTerm: self)
+      }
+    }
+
 
 #### 5. Generating intentions
 
