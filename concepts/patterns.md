@@ -13,18 +13,18 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 Intention is **what you want something to do**.
 
 > We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
-
-![](../_assets/Intention-Tree.svg)
-
-Object-oriented languages may choose to define Intention as an empty abstract base class:
-
-    abstract class Intention {}
-
-Protocol-oriented languages may choose to define Intention as an empty protocol:
-
-    protocol Intention {}
-
-Duck-typing languages can treat any object as a potential intention.
+> 
+> ![](../_assets/Intention-Tree.svg)
+> 
+> Languages with protocols may choose to define Intention as an empty protocol:
+> 
+>     protocol Intention {}
+> 
+> Languages without protocols may define Intention as an empty abstract base class:
+> 
+>     abstract class Intention {}
+> 
+> Duck-type languages can treat any object as a potential intention.
 
 Consider the following pseudo-code:
 
