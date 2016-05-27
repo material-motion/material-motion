@@ -16,6 +16,10 @@ Intention is **what you want something to do**.
 
 ![](../_assets/Intention-Tree.svg)
 
+In an object-oriented language, an Intention might be represented as an empty abstract base class or as an empty protocol.
+
+    protocol Intention {}
+
 Consider the following pseudo-code:
 
     tween = FadeInTween()
