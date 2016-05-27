@@ -76,6 +76,8 @@ Consider this pseudo-code:
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
 > How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors often interact with existing Actor-like systems in order to fulfill their contract.
+>
+> For example, a FadeIn intention might be fulfilled by a FadeInActor. FadeInActor might create a TweenAnimation primitive and register it with an auxiliary animation system. This demonstrates an Intention handing off to an Actor, which in turn generates a new Intention to hand off to an opaque system (essentially an Actor).
 
 **Input**: Actors can be asked to recalculate either in response to user input or whenever the platform is ready to draw another frame.
 
