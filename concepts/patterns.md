@@ -10,7 +10,11 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 
 ### What (Intention)
 
-Intention is **what you want something to do**. This intentionally broad concept is the root node of a tree of expressible motion.
+Intention is **what you want something to do**.
+
+> We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
+
+![](../_assets/Intention-Tree.svg)
 
 Consider the following pseudo-code:
 
@@ -30,8 +34,6 @@ Also consider this pseudo-code:
 In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
 
 Intentions can be associated with any number of **targets**. A target is the object or value to which an Intention is applied.
-
-> We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 
 Consider this pseudo-code:
 
