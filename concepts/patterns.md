@@ -2,7 +2,7 @@
 
 This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
-We'll explore an application of these patterns in the section on [Runtimes](runtimes.md).
+We'll explore the application of these patterns in the section on [Runtimes](runtimes.md).
 
 ## The Intention/Actor pattern
 
@@ -12,7 +12,7 @@ The Intention/Actor pattern separates **what (Intention)** from **how (Actor)** 
 
 Intention is **what you want something to do**.
 
-> We’re careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
+> We’ve been careful to use the word Intention rather than animation in this pattern. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention can more easily coordinate rich, interactive motion.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
