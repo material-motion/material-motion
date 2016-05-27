@@ -18,3 +18,10 @@ Standard JavaScript:
 Community implementations:
 
 - [hammer.js](http://hammerjs.github.io/)
+
+### Physical simulation
+
+Community implementations:
+
+- [Rebound.js](https://github.com/facebook/rebound-js/) (JavaScript)
+- [React Motion](https://github.com/chenglou/react-motion/) (React)
