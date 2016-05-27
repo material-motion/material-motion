@@ -29,7 +29,7 @@ If you feel that a chosen term does not effectively communicate the intended mea
   1. Are there existing uses of your proposed term in the software industry? If so, please provide links to references. 
 1. [Propose the change as a discussion](https://www.gitbook.com/book/featherless/material-motion-starmap/discussions).
 
-If no consensus is able to be reached then the pull request will be closed and the terminology will not be changed.
+If no consensus is able to be reached then the discussion will be closed and the terminology will not be changed.
 
 # Updating the list of implementations
 
