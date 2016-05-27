@@ -43,7 +43,8 @@ Synonyms:
 - iOS
 - Android
 - Unity
-- Web
+- Web (Chrome)
+- Web (Safari)
 
 ## target
 
