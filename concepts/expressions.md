@@ -16,6 +16,8 @@ Through the following examples we will explore the essential aspects of an Expre
 
 Expressions begin with a Language. A Language is an instance of an object.
 
+> Read our [Motion Language](../languages/) recommendations.
+
 Languages have **terms**.
 
 For example, the Tween Language definition might look like:
