@@ -151,6 +151,7 @@ Expressions should be serializable.
         "terms": [
           ["draggable"]
         ]
+      }
     ]
 
     Tween().fadeIn().withDuration(5).toJson()
@@ -161,4 +162,13 @@ Expressions should be serializable.
         "terms": [
           ["fadeIn", ["withDuration", 5]]
         ]
+      }
     ]
+
+Basic JSON structure:
+
+    Expression = [Language]
+    Language = {"language": String, "terms": [Term]}
+    Term = [String, [Modifier]...]
+    Modifier = [String, Arg...]
+    Arg = AnyType
