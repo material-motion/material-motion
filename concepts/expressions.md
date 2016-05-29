@@ -145,7 +145,7 @@ APIs that accept intentions could also accept Expressions. This reduces the need
 
 ### Serialization
 
-Expressions should be serializable.
+Expressions should be able to be serialized.
 
     Gesture().draggable().toJson()
 
