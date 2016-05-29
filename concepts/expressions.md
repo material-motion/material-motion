@@ -140,3 +140,17 @@ Successive invocations of this method should generate new Intentions.
 APIs that accept intentions could also accept Expressions. This reduces the need to resolve the expression at the call site.
 
     target.addExpression(Gesture().draggable())
+
+Expressions should be serializable.
+
+    Gesture().draggable().toJson()
+
+Would generate:
+
+    [
+      {
+        "language": "Gesture",
+        "terms": [
+          "draggable"
+        ]
+    ]
