@@ -143,7 +143,7 @@ APIs that accept intentions could also accept Expressions. This reduces the need
 
     target.addExpression(Gesture().draggable())
 
-### Serializing
+### Serialization
 
 Expressions should be serializable.
 
