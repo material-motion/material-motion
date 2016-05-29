@@ -145,12 +145,20 @@ Expressions should be serializable.
 
     Gesture().draggable().toJson()
 
-Would generate:
-
     [
       {
         "language": "Gesture",
         "terms": [
-          "draggable"
+          ["draggable"]
+        ]
+    ]
+
+    Tween().fadeIn().withDuration(5).toJson()
+    
+    [
+      {
+        "language": "Tween",
+        "terms": [
+          ["fadeIn", ["withDuration", 5]]
         ]
     ]
