@@ -70,9 +70,9 @@ Forces can be applied to the physical body’s velocity over time using a numeri
 
 ## Timeline
 
-**What it is**: *an entity that has a floating point value ranging from 0 to 1 inclusively that can be driven by a Delta Primitive and to which Tweens may be associated*.
+**What it is**: *an entity that contains a floating-point value, which can be driven by a Delta Primitive, and to which Tweens may be associated*.
 
-A Timeline has a **progress** that is a floating point number. The Timeline bounds the progress between 0 and 1.
+A Timeline limits its value, **progress**, between 0 and 1.
 
 We use “**to drive**” to refer to the idea of *an output from one Primitive being fed into the input of another*. This enables the expression of novel interactions such as a Gesture driving a Timeline that is driving a collection of Tweens.
 
@@ -88,7 +88,7 @@ The **progress** can be driven by the following Delta Primitives if they have be
 
 #### Progress driving Primitives
 
-The progress can drive Tween Primitives. For example: a FadeIn tween animation could occur during the first 50% of a timeline.
+The progress can drive Tween Primitives. For example: a fade-in tween animation could occur during the first 50% of a timeline.
 
 There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
 
@@ -96,7 +96,7 @@ There is no known benefit to driving Gestural or Physical Simulation Primitives 
 
 **What it is**: *a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) consisting of multiple States (nodes) with Transitions (edges) between those states*.
 
-Typical phone applications have a concept of full-screen transitions between views. Each view is a distinct application state:
+Typical phone applications utilize full-screen transitions between views. Each view is a distinct application state:
 
 ```A → B → C → D```
 
