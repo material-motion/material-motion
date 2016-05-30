@@ -16,7 +16,7 @@ Intentions are the what. Actors are the how.
 
 Intention is **what you want something to do**.
 
-> We’ve been careful to use the word Intention rather than animation. The word Intention can describe Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in. Runtimes that think in terms of Intention are more capable of coordinating rich, interactive motion.
+> We’ve been careful to use the word Intention rather than animation. That's because Intention describes not only animation; but also Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in - these are both Intentions. Runtimes that think in terms of Intention are more capable of coordinating rich, interactive motion.
 > 
 > ![](../_assets/Intention-Tree.svg)
 > 
