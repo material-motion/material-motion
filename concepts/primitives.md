@@ -42,7 +42,7 @@ A **keyframe animation** is a Tween that animates between two or more values.
 
 > Two pan gestures are registered to a carousel:
 > 
-> - horizontal pans move between items in the carousel
+> - horizontal pans move between items in the carousel, and
 > - vertical pans collapse or expand the carousel.
 > 
 > Both gestures can occur simultaneously.
@@ -58,12 +58,12 @@ recognizers have failed. For instance:
 
 **What it is**: *the application of physical forces to a simulated body consisting of both a position and velocity*.
 
-Forces can be applied to the physical body’s velocity over time using a numerical integrator ([RK4](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) is one such integrator).
+Forces can be applied to the physical body’s velocity over time using a numerical integrator. ([RK4](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) is one such integrator).
 
 **Common forces**: The most common types of forces for software interfaces are:
 
 - [Damped harmonic oscillators](https://en.wikipedia.org/wiki/Harmonic_oscillator#Damped_harmonic_oscillator) (Springs)
-- Laminar [drag](https://en.wikipedia.org/wiki/Drag_(physics)) (Friction)
+- Laminar [drag](https://en.wikipedia.org/wiki/Drag_(physics) (Friction)
 - [Collisions](https://en.wikipedia.org/wiki/Collision_detection)
 
 **Custom forces**: A physical simulation system should also allow for the expression of arbitrary forces.
