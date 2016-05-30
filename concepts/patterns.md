@@ -33,7 +33,7 @@ Intention is **what you want something to do**.
 >       var animation
 >     }
 > 
-> [Duck-type](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Intention.
+> [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Intention.
 
 Consider the following pseudo-code:
 
