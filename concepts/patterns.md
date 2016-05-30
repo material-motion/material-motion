@@ -81,7 +81,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 > 
 > This demonstrates an Intention contract being fulfilled by an opaque system via another Intention.
 >
-> In an alternate universe, FadeInActor might directly implement the necessary interpolation.
+> In an alternate universe, FadeInActor might directly implement the necessary interpolation.  The Intention doesn't know or care how it's fulfilled - that's the Actor's discretion.
 >
 > Good Actors will consider the runtime performance of their execution. The former Actor may be more performant if the opaque system is more closely built into the platform. The latter Actor may be less performant if it means the Actor must be executed on the main thread.
 
