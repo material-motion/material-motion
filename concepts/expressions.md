@@ -16,7 +16,7 @@ Through the following examples we will explore the essential aspects of an Expre
 
 Expressions begin with a Language. A Language is an instance of an object.
 
-> Read our [Motion Language recommendations](../languages/).
+> Read our [Motion Language recommendations](../languages/README.md).
 
 Languages have **terms**.
 
