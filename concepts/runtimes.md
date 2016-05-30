@@ -6,14 +6,14 @@ The purpose of a Runtime is to **coordinate** the expression of Intention in an 
 
 The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
-![Runtime](../_assets/RuntimeDiagram.png)
+![Runtime](../_assets/RuntimeDiagram.png)  
 A Runtime requires at least one instance of a Director. Each Director must be asked to register its initial set of Intentions.
 
 > Directors are often provided with some subset of the application’s elements. This allows the Director to associate Intentions with specific elements. How these elements are provided to the Director is left as an exercise to the reader.
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
-> TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in https://github.com/material-motion/material-motion-starmap/issues/13.
+> TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in [#8](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions/8).
 
 The Runtime now has a collection of Actors and a Director. At this point the Runtime will identify the events each Actor expects to receive. Events include:
 
