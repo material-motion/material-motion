@@ -26,7 +26,7 @@ Please note that these Primitives can apply to an arbitrary number of dimensions
 
 **What it is**: *an interpolation through each value in a list of values*.
 
-Tweens have a **starting time** and a **duration**. The start and duration properties allow tweens to be sequenced in relation to other tweens.
+Tweens have a **starting time** and a **duration**. The starting time and duration properties allow tweens to be sequenced in relation to other tweens.
 
 Tweens use an **interpolation function**. This is generally a cubic-bezier.
 
