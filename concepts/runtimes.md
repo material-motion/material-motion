@@ -7,7 +7,9 @@ The purpose of a Runtime is to **coordinate** the expression of Intention in an 
 The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
-A Runtime requires at least one instance of a Director. Each Director may register an initial set of Intentions in a setup method.
+A Runtime requires at least one instance of a Director.
+
+Each Director may register an initial set of Intentions in a setup method.
 
     func setup()
 
