@@ -45,9 +45,10 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 
 ## Actor state
 
-- The direct target.
+- The direct target (what the Actor was initially registered to).
 - The dynamic target (may not be the target).
-- 
+- Permanently-registered Intentions.
+- Intentions registered by name.
 
 ## Actor events
 
