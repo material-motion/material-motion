@@ -65,7 +65,7 @@ recognizers have failed. For instance:
 
 The body consists of both a position and a velocity.  Forces can be applied to its velocity over time using a numerical integrator. ([RK4](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) is one such integrator).
 
-**Common forces**: The most common types of forces for software interfaces are:
+**Common forces**: The most common forces for software interfaces are:
 
 - [Damped harmonic oscillators](https://en.wikipedia.org/wiki/Harmonic_oscillator#Damped_harmonic_oscillator) (Springs)
 - Laminar [drag](https://en.wikipedia.org/wiki/Drag_(physics) (Friction)
@@ -75,11 +75,9 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 
 ## Timeline
 
-**What it is**: *an entity that contains a floating-point value, which can be driven by a Delta Primitive, and to which Tweens may be associated*.
+**What it is**: *an object that contains a floating-point value, which can be driven by a Delta Primitive, and to which Tweens may be associated*.
 
 A Timeline limits its value, **progress**, between 0 and 1.
-
-**Scrubbing**: This term is used to refer to the act of directly manipulating the progress of a Timeline.
 
 ## State Machine
 
