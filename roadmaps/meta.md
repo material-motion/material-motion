@@ -49,3 +49,9 @@ How does someone share thoughts to a designer and vice/versa?
 
 - When do we bake a language?
 - When do we define higher level exit/entry language?
+
+Measurements of success:
+
+- Lines of code reduction
+- Time investment
+- 
