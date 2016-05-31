@@ -21,7 +21,7 @@ The Runtime now has a collection of Actors.
 
 ## Intention registration
 
-TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication. 
+TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication.
 
 ## Director events
 
@@ -56,6 +56,34 @@ Each Actor is responsible for calculating time deltas. Take care to respect plat
 ### Gesture recognition
 
 The gesture event is invoked when a gesture recognizer's state has changed.
+
+## Plugins
+
+TODO: Write an intro.
+
+### Transition
+
+Coordinates events with the operating system’s existing transition system.
+
+Required events:
+
+- Did start 
+- Did idle 
+
+### View duplication
+
+Required events:
+
+- First-time registration of Intention to element 
+
+## Other systems
+
+### Transition coordination
+
+This system allows you to define which Directors to use for a transition between two “Screens” in an application.
+
+- Discuss the “Narrator” concept.
+
 
 ## Outline (notes, not final copy)
 
@@ -111,29 +139,3 @@ TODO: The following content is an outline and needs to be folded into the above 
     - Core Animation 
     - Android’s animation system 
     - Web animations
-
-## Plugins
-
-### Transition
-
-Coordinates events with the operating system’s existing transition system.
-
-Required events:
-
-- Did start 
-- Did idle 
-
-### View duplication
-
-Required events:
-
-- First-time registration of Intention to element 
-
-## Other systems
-
-### Transition coordination
-
-This system allows you to define which Directors to use for a transition between two “Screens” in an application.
-
-- Discuss the “Narrator” concept.
-
