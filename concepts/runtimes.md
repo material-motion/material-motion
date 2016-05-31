@@ -34,8 +34,6 @@ Each Actor is responsible for calculating time deltas. Take care to respect plat
 
 The gesture event is invoked when a gesture recognizer's state has changed.
 
-**On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
-
 ## Outline (notes, not final copy)
 
 TODO: The following content is an outline and needs to be folded into the above content.
