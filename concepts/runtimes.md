@@ -21,6 +21,8 @@ The Runtime now has a collection of Actors.
 
 ## Intention registration
 
+TODO: Discuss how Intentions are registered with the system.
+
 ## Events
 
 The Runtime identifies which events each Actor expects to receive. Events include:
