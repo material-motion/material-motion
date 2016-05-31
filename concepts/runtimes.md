@@ -79,6 +79,8 @@ TODO: Write an intro. Emphasize that plugins are one of the most platform-specif
 
 #### Actor created for target
 
+- Useful for view duplication.
+
 ### Specific plugins
 
 #### View duplication
