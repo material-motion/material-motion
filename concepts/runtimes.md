@@ -28,6 +28,8 @@ The Runtime identifies which events each Actor expects to receive. Events includ
 
 The animate event is invoked when the system is about to render a new frame. This event will be called many times per second.
 
+Each Actor is responsible for calculating time deltas. Where possible, the Actor should consume any animation scalars that may be used to affect the speed of animations.
+
 ### Gesture recognition events
 
 The gesture event is invoked when a gesture recognizer's state has changed.
