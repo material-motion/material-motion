@@ -61,6 +61,12 @@ The gesture event is invoked when a gesture recognizer's state has changed.
 
 TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
 
+### View duplication
+
+Required events:
+
+- First-time registration of Intention to element 
+
 ### Transition
 
 Coordinate events with the operating system’s existing transition system.
@@ -69,12 +75,6 @@ Required events:
 
 - Did start 
 - Did idle 
-
-### View duplication
-
-Required events:
-
-- First-time registration of Intention to element 
 
 ## Other systems
 
