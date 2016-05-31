@@ -11,7 +11,7 @@ A Runtime requires at least one instance of a Director. A Runtime may have many 
 
 Each Director may register an initial set of Intentions in a setup method.
 
-    func setup()
+    func Director::setup()
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
@@ -24,15 +24,15 @@ The Runtime now has a collection of Actors and a Director. At this point the Run
 
 ### Animation events
 
-The animate event allows an Actor to execute any manner of time-based change to its target.
+The animate event is invoked on Actors each time the system is about to render a new frame.
 
-    function animate(timestamp) -> Boolean
+    function Actor::animate(timestamp) -> Boolean
 
 ### Gesture recognition events
 
 When a gesture recognizer's state changes it should inform the necessary actors.
 
-    function gestureStateDidChange(gesture) -> Void
+    function Actor::gestureStateDidChange(gesture) -> Void
 
 **On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
 
