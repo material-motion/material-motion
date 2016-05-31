@@ -121,7 +121,7 @@ The **progress** can be driven by the following Delta Primitives if they have be
   using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
 - **Tweens** can drive the progress.
 
-#### Progress driving Primitives
+#### Timelines can drive these primitives
 
 The progress can drive Tween Primitives. For example: a fade-in tween animation could occur during the first 50% of a timeline.
 
