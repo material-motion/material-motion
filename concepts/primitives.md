@@ -119,7 +119,7 @@ A timeline's **progress** can be driven by the following Delta Primitives if the
 - **Gestures** can scrub the progress directly.
 - **Physical simulation**: The progress can be physically anchored to a position, usually 1 or 0,
   using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
-- **Tweens** can drive the progress.
+- **Tweens**.
 
 #### Timelines can drive these primitives
 
