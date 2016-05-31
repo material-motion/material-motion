@@ -61,7 +61,7 @@ recognizers have failed. For instance:
 
 ### Physical simulation
 
-**What it is**: *the application of physical forces to a simulated body consisting of both a position and velocity*.
+**What it is**: *the application of physical forces to a simulated body, which consists of both a position and velocity*.
 
 Forces can be applied to the physical body’s velocity over time using a numerical integrator. ([RK4](https://en.wikipedia.org/wiki/Runge%E2%80%93Kutta_methods) is one such integrator).
 
