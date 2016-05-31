@@ -19,15 +19,9 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 The Runtime now has a collection of Actors.
 
-The Runtime is now responsible for forwarding events to Actors.
+The Runtime is now responsible for forwarding events to Actors. (Link to Actor events).
 
-A Runtime is constantly measuring the amount of energy in the system. If all Actors are dormant then the Runtime should enter an idle state.
-
-## Runtime states
-
-- Initializing
-- Idle
-- Active
+A Runtime is constantly measuring the amount of energy in the system. If all Actors are dormant then the Runtime should enter an idle state. (Link to Runtime states).
 
 ## Intention registration
 
@@ -42,6 +36,12 @@ TODO: Discuss how Intentions are registered with the system. Specifically, discu
 ### Gesture recognition
 
 Directors may listen to Gesture Recognizer events in order to facilitate high-level coordination of Intentions.
+
+## Runtime states
+
+- Initializing
+- Idle
+- Active
 
 ## Actor events
 
