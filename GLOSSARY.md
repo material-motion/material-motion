@@ -49,3 +49,5 @@ Synonyms:
 ## target
 
 A target is the entity to which an Intention is meant to be applied.
+
+Elements are targets.
