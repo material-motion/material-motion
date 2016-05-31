@@ -120,6 +120,12 @@ This system allows you to define which Directors to use for a transition between
 
 - Discuss the “Narrator” concept.
 
+# Diagrams
+
+Runtimes in relation to the overall Starmap ecosystem.
+
+![](../_assets/overview.svg)
+
 
 ## Outline (notes, not final copy)
 
