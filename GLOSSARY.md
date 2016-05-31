@@ -34,6 +34,11 @@ Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
 
+## scrubbing
+
+The act of directly manipulating a Timeline's `progress` value.
+
+
 ## platform
 
 Either an operating system or a cross-platform abstraction layer.
