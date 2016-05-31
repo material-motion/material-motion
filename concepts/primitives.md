@@ -78,6 +78,8 @@ Forces can be applied to the physical body’s velocity over time using a numeri
 
 A Timeline limits its value, **progress**, between 0 and 1.
 
+**Scrubbing**: This term is used to refer to the act of directly manipulating the progress of a Timeline.
+
 ## State Machine
 
 **What it is**: *a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) consisting of multiple States (nodes) with Transitions (edges) between those states*.
