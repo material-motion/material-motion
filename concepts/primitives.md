@@ -123,6 +123,6 @@ A timeline's **progress** can be driven by the following Delta Primitives if the
 
 #### Timelines can drive these primitives
 
-The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline.
+The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
 There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
