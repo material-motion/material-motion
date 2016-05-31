@@ -50,4 +50,4 @@ Synonyms:
 
 A target is the entity to which an Intention is meant to be applied.
 
-Elements are targets.
+An element is a target.
