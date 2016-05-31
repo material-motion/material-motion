@@ -75,6 +75,8 @@ TODO: Write an intro. Emphasize that plugins are one of the most platform-specif
 
 #### Runtime state changed
 
+- Useful for transition system handoff.
+
 #### Actor created for target
 
 ### Specific plugins
