@@ -27,7 +27,7 @@ The sections "[Languages](languages/)" and "[Hypotheticals](hypotheticals/)" are
 
 ## Implementations
 
-This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Community](community/) chapter.
+This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Community index](community_index/).
 
 ## License
 
