@@ -43,9 +43,9 @@ The Runtime identifies which events each Actor expects to receive. Events includ
 
 ### Intention registration
 
-TODO: Adding permanent intentions.
+TODO: Discuss adding permanent intentions.
 
-TODO: Adding named intentions.
+TODO: Discuss adding named intentions.
 
 ### Animation
 
