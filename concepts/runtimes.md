@@ -27,11 +27,11 @@ TODO: Discuss how Intentions are registered with the system.
 
 ### Setup
 
-    func Director::setup()
-
 ### Teardown
 
-    func Director::teardown()
+### Gesture recognition
+
+Directors may listen to Gesture Recognizer events in order to facilitate high-level coordination of Intentions.
 
 ## Actor events
 
@@ -40,13 +40,13 @@ The Runtime identifies which events each Actor expects to receive. Events includ
 - animation events, and
 - gesture recognition events.
 
-### Animation events
+### Animation
 
 The animate event is invoked when the system is about to render a new frame. This event will be called many times per second.
 
 Each Actor is responsible for calculating time deltas. Take care to respect platform animation speed scalars.
 
-### Gesture recognition events
+### Gesture recognition
 
 The gesture event is invoked when a gesture recognizer's state has changed.
 
