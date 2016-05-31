@@ -84,7 +84,7 @@ Required events:
 
 ## Companions to a Runtime
 
-TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events.
+TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events. The most simple example is that of a "Transition" coordinator.
 
 ### Transition coordination
 
