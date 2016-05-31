@@ -119,3 +119,7 @@ Directors may use Intentions that build upon any of the available Primitives. Th
 > Imagine a horizontal carousel that can be expanded full screen. One Director might govern the horizontal movement of the carousel. Another Director might govern the expansion/collapse of the carousel to/from full screen.
 
 It is important that the Director not have direct access to the Actors that implement the system. This separation of concerns allows Directors to live in the application space, while Actors are free to live anywhere else.
+
+## Next up: Runtimes
+
+The system that coordinates Directors, Intentions, and Actors is the [Runtime](runtimes.md).
