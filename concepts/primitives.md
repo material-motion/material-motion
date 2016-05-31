@@ -78,24 +78,6 @@ Forces can be applied to the physical body’s velocity over time using a numeri
 
 A Timeline limits its value, **progress**, between 0 and 1.
 
-We use “**to drive**” to refer to the idea of *an output from one Primitive being fed into the input of another*. This enables the expression of novel interactions such as a Gesture driving a Timeline that is driving a collection of Tweens.
-
-#### Primitives driving the progress
-
-The **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
-
-- **Time** can move the progress forward or backward.
-- **Gestures** can scrub the progress directly.
-- **Physical simulation**: The progress can be physically anchored to a position, usually 1 or 0,
-  using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
-- **Tweens** can drive the progress.
-
-#### Progress driving Primitives
-
-The progress can drive Tween Primitives. For example: a fade-in tween animation could occur during the first 50% of a timeline.
-
-There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
-
 ## State Machine
 
 **What it is**: *a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) consisting of multiple States (nodes) with Transitions (edges) between those states*.
@@ -124,3 +106,23 @@ Physical Simulations can be associated with States.
 Tweens and Timelines can be associated with Transitions.
 
 > For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
+
+## Connecting primitives
+
+We use “**to drive**” to refer to the idea of *an output from one Primitive being fed into the input of another*. This enables the expression of novel interactions such as a Gesture driving a Timeline that is driving a collection of Tweens.
+
+#### Primitives that can drive Timelines
+
+The **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
+
+- **Time** can move the progress forward or backward.
+- **Gestures** can scrub the progress directly.
+- **Physical simulation**: The progress can be physically anchored to a position, usually 1 or 0,
+  using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
+- **Tweens** can drive the progress.
+
+#### Progress driving Primitives
+
+The progress can drive Tween Primitives. For example: a fade-in tween animation could occur during the first 50% of a timeline.
+
+There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
