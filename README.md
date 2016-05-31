@@ -18,12 +18,12 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-[Concepts](concepts/) and [Applications](applications/) are both written for software engineers. We assume a certain level of background including:
+The sections "[Concepts](concepts/)" and "[Applications](applications/)" are both written for software engineers. We assume a certain level of background including:
 
 - familiarity with at least one programming language, and
 - familiarity with animation systems.
 
-[Languages](languages/) and [Hypotheticals](hypotheticals/) are both written for anyone interested in interactive motion.
+The sections "[Languages](languages/)" and "[Hypotheticals](hypotheticals/)" are both written for anyone interested in interactive motion.
 
 ## Implementations
 
