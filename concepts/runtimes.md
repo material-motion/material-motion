@@ -21,7 +21,7 @@ The Runtime now has a collection of Actors.
 
 ## Intention registration
 
-TODO: Discuss how Intentions are registered with the system.
+TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication. 
 
 ## Director events
 
