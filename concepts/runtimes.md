@@ -13,8 +13,6 @@ A Runtime requires at least one instance of a Director. A Runtime may have many 
 
 Each Director may register an initial set of Intentions in a setup method.
 
-    func Director::setup()
-
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
 > TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in [#8](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions/8).
