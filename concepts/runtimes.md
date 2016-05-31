@@ -37,8 +37,15 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 
 The Runtime identifies which events each Actor expects to receive. Events include:
 
+- intention registration,
 - animation events, and
 - gesture recognition events.
+
+### Intention registration
+
+TODO: Adding permanent intentions.
+
+TODO: Adding named intentions.
 
 ### Animation
 
