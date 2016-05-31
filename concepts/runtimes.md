@@ -32,7 +32,7 @@ The animate event is invoked when the system is about to render a new frame. Thi
 
 ### Gesture recognition events
 
-When a gesture recognizer's state changes it should inform the necessary actors.
+The gesture event is invoked when a gesture recognizer's state has changed.
 
     function Actor::gestureStateDidChange(gesture) -> Void
 
