@@ -79,7 +79,7 @@ TODO: Write an intro. Emphasize that plugins are one of the most platform-specif
 
 #### Actor created for target
 
-- Useful for view duplication.
+- Useful for view duplication. This event must allow the plugin to change the "associated target" for all Actors referencing a given target.
 
 ### Specific plugins
 
