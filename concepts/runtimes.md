@@ -59,7 +59,7 @@ The gesture event is invoked when a gesture recognizer's state has changed.
 
 ## Plugins
 
-TODO: Write an intro.
+TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
 
 ### Transition
 
