@@ -63,6 +63,10 @@ TODO: Write an intro. Emphasize that plugins are one of the most platform-specif
 
 ### Plugin events
 
+#### Actor created for target
+
+#### 
+
 ### Specific plugins
 
 #### View duplication
