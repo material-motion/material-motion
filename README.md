@@ -4,7 +4,11 @@ Interactivity and motion play an important role in software interfaces. Yet ther
 
 This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [software design patterns](concepts/patterns.md), [essential primitives](concepts/primitives.md), [motion runtimes](concepts/runtimes.md), and more.
 
-> We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. We're planning out work on the Starmap in the [Roadmap](ROADMAP.md).
+---
+
+We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. We're planning out work on the Starmap in the [Roadmap](ROADMAP.md).
+
+---
 
 ## Evolution
 
