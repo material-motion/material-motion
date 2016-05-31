@@ -61,13 +61,19 @@ The gesture event is invoked when a gesture recognizer's state has changed.
 
 TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
 
-### View duplication
+### Plugin events
+
+### Specific plugins
+
+#### View duplication
+
+TODO: Discuss when view duplication hooks into the system. Emphasize the need to hook in to intention registration events with new elements in the system.
 
 Required events:
 
 - First-time registration of Intention to element 
 
-### Transition
+#### Transition
 
 Coordinate events with the operating system’s existing transition system.
 
@@ -76,7 +82,9 @@ Required events:
 - Did start 
 - Did idle 
 
-## Other systems
+## Companions to a Runtime
+
+TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events.
 
 ### Transition coordination
 
