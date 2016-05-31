@@ -46,7 +46,7 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 ## Actor state
 
 - The direct target.
-- The runtime target (may not be the target).
+- The dynamic target (may not be the target).
 - 
 
 ## Actor events
