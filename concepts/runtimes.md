@@ -43,6 +43,11 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 - Idle
 - Active
 
+## Actor state
+
+- The target.
+- The associated target.
+
 ## Actor events
 
 The Runtime identifies which events each Actor expects to receive. Events include:
