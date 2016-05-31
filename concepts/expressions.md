@@ -147,7 +147,7 @@ APIs that accept intentions could also accept Expressions. This reduces the need
 
 **Proposal (status: new)**: Expressions should be able to be serialized.
 
-    Gesture().draggable().toJson()
+    Gesture().draggable().toJSON()
 
     [
       {
@@ -158,7 +158,7 @@ APIs that accept intentions could also accept Expressions. This reduces the need
       }
     ]
 
-    Tween().fadeIn().withDuration(5).toJson()
+    Tween().fadeIn().withDuration(5).toJSON()
     
     [
       {
