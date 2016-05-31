@@ -1,3 +1,4 @@
+
 # Runtimes
 
 This section explores one specification for a **declarative motion engine**.
@@ -49,6 +50,8 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 - The dynamic target (may not be the target).
 - Permanently-registered Intentions.
 - Intentions registered by name.
+
+TODO: There is likely value in maintaining this state outside of the Actor instances themselves. Provide the actors with a variable that enables easy access of the above state.
 
 ## Actor events
 
