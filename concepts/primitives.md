@@ -113,7 +113,7 @@ We use “**to drive**” to refer to the idea of *an output from one Primitive 
 
 #### Primitives that can drive Timelines
 
-The **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
+A timeline's **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
 
 - **Time** can move the progress forward or backward.
 - **Gestures** can scrub the progress directly.
