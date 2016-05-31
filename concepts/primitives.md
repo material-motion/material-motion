@@ -34,7 +34,7 @@ A **keyframe animation** is a Tween that animates between two or more values.
 
 ### Gesture recognition
 
-**What it is**: *recognition of continuous or discrete actions from a stream of pointer events*.
+**What it is**: *recognition of continuous or discrete actions from a stream of device input events*.
 
 **Registration**: Gesture recognizers can be associated with a specific element. Once associated, interactions with the given element will be interpreted by the gesture recognizer. Interpreted values will be generated when the gesture is recognized. Gestures may be recognized continuously (many times) or discretely (once).
 
