@@ -120,9 +120,9 @@ We use “**to drive**” to refer to the idea of *an output from one Primitive 
 
 A timeline's **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
 
-- **Time** can move the progress forward or backward.
-- **Gestures** can scrub the progress directly.
-- **Physical simulation**: The progress can be physically anchored to a position, usually 1 or 0,
+- **Time** can move `progress` forward or backward.
+- **Gestures** can scrub `progress` directly.
+- **Physical simulation**: `progress` can be physically anchored to a position, usually 1 or 0,
   using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
 - **Tweens**.
 
