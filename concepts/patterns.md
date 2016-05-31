@@ -77,7 +77,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 
 > How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors often interact with existing Actor-like systems in order to fulfill their contract.
 >
-> For example, a FadeIn intention might be fulfilled by a FadeInActor. FadeInActor might create a native Tween primitive and register it with an auxiliary animation system.
+> For example, a FadeIn Intention might be fulfilled by a FadeInActor. FadeInActor might create a native Tween primitive and register it with an auxiliary animation system.
 > 
 > In an alternate universe, FadeInActor might directly implement the necessary interpolation.  The Intention doesn't know or care how it's fulfilled - that's the Actor's discretion.
 >
