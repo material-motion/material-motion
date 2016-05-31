@@ -21,7 +21,7 @@ The Runtime now has a collection of Actors.
 
 The Runtime is now responsible for forwarding events to Actors. (Link to Actor events).
 
-A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. (Link to Runtime states). This is an important part of minimizing battery consumption on mobile devices.
+A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
 
 ## Intention registration
 
