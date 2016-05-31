@@ -51,7 +51,7 @@ Directors may listen to Gesture Recognizer events in order to facilitate high-le
 - Permanently-registered Intentions.
 - Intentions registered by name.
 
-TODO: There is likely value in maintaining this state outside of the Actor instances themselves. Provide the actors with a variable that enables easy access of the above state (perhaps nicely scoped to the Actor).
+TODO: There is likely value in maintaining this state outside of the Actor instances themselves. Provide the actors with a variable that enables easy access of the above state (perhaps nicely scoped to the Actor). E.g. state.intentions or state.intentionForName("name").
 
 ## Actor events
 
