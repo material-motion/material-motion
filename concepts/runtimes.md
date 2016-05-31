@@ -19,6 +19,10 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 The Runtime now has a collection of Actors.
 
+## Intention registration
+
+## Events
+
 The Runtime identifies which events each Actor expects to receive. Events include:
 
 - animation events, and
