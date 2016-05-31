@@ -49,7 +49,7 @@ TODO: Discuss adding named intentions.
 
 ### Animation
 
-The animate event is invoked when the system is about to render a new frame. This event will be called many times per second.
+The animate event is invoked when the system is about to render a new frame. This event may be called many times per second.
 
 Each Actor is responsible for calculating time deltas. Take care to respect platform animation speed scalars.
 
