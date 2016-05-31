@@ -28,7 +28,7 @@ The Runtime identifies which events each Actor expects to receive. Events includ
 
 The animate event is invoked when the system is about to render a new frame. This event will be called many times per second.
 
-    function Actor::animate(timestamp) -> Boolean
+    function Actor::animate(timestamp) -> Void
 
 ### Gesture recognition events
 
