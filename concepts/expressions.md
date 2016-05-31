@@ -40,7 +40,7 @@ For example, the Tween Language definition might look like:
 
 A **term function** is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
 
-**Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. We explicitly discourage this. Ensuring that every term is a function provides consistency to the engineer.
+**Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow expressioins like `Tween().fadeIn`. We explicitly discourage this. Ensuring that every term is a function provides consistency to the engineer.
 
 The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
 
