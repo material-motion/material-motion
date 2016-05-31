@@ -28,13 +28,9 @@ The Runtime identifies which events each Actor expects to receive. Events includ
 
 The animate event is invoked when the system is about to render a new frame. This event will be called many times per second.
 
-    function Actor::animate(timestamp) -> Void
-
 ### Gesture recognition events
 
 The gesture event is invoked when a gesture recognizer's state has changed.
-
-    function Actor::gestureStateDidChange(gesture) -> Void
 
 **On bespoke Actors vs Actors using external systems**: a Runtime’s primary value is in its ability to coordinate a variety of Intentions. While a Runtime does enable the creation of bespoke Intentions and Actors, we encourage the reader to identify and build abstractions that can stand alone from a Runtime.
 
