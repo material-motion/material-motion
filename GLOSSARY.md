@@ -7,7 +7,7 @@ An **Actor**'s sole responsibility is to fulfill the contract defined by a corre
 Close synonyms:
 
 - [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
-- [UIDynamicBehavior (iOS' UIKit)](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/)
+- [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
 
 ## application
 
