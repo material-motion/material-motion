@@ -23,7 +23,17 @@ The Runtime now has a collection of Actors.
 
 TODO: Discuss how Intentions are registered with the system.
 
-## Events
+## Director events
+
+### Setup
+
+    func Director::setup()
+
+### Teardown
+
+    func Director::teardown()
+
+## Actor events
 
 The Runtime identifies which events each Actor expects to receive. Events include:
 
