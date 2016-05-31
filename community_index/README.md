@@ -23,6 +23,7 @@ The following names match the convention:
 - material-motion-runtime-objc
 - material-motion-runtime-android
 - material-motion-runtime-web
+- acme-corp-language-tween-swift
 
 The following names do not match the convention:
 
