@@ -57,7 +57,7 @@ recognizers have failed. For instance:
 
 > An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
 
-**Velocity**: Continuous gesture recognizers emit a velocity each time the gesture generates a new interpreted value. Once a gesture has ended, its velocity may be fed into a Physical Simulation.
+**Velocity**: Continuous gesture recognizers include a velocity in each event. Once a gesture has ended, its velocity may be fed into a Physical Simulation.
 
 ### Physical simulation
 
