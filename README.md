@@ -6,7 +6,7 @@ This book aspires to empower creators with the language and tools needed to desc
 
 ---
 
-We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. The material-motion team is planning out work in the [Roadmap](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/meta.html).
+We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. The material-motion team plans its work in the [Roadmap](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/meta.html).
 
 ---
 
