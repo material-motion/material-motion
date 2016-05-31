@@ -38,7 +38,7 @@ A **keyframe animation** is a Tween that animates between a series of values.
 
 **Registration**: Gesture recognizers can be associated with elements.
 
-**Interpreting events**: Input events received by gesture recognizers are transformed into meaningful outputs. These outputs are often some form of a transformation.
+**Interpreting events**: Input events received by gesture recognizers are transformed into meaningful outputs. The output is often some form of a transformation: translation, rotation, or scale being the most common.
 
 **Frequency of recognition**: Gestures may be recognized continuously (many times) or discretely (once).
 
