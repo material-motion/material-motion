@@ -19,6 +19,16 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 The Runtime now has a collection of Actors.
 
+The Runtime is now responsible for forwarding events to Actors.
+
+A Runtime is constantly measuring the amount of energy in the system. If all Actors are dormant then the Runtime should enter an idle state.
+
+## Runtime states
+
+- Initializing
+- Idle
+- Active
+
 ## Intention registration
 
 TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication.
