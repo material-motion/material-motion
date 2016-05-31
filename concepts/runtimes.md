@@ -17,7 +17,7 @@ After the Director registers its Intentions, the Runtime creates a collection of
 
 > TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in [#8](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions/8).
 
-The Runtime now has a collection of Actors and a Director.
+The Runtime now has a collection of Actors.
 
 The Runtime identifies which events each Actor expects to receive. Events include:
 
