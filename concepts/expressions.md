@@ -149,6 +149,8 @@ APIs that accept intentions could also accept Expressions. This reduces the need
 
 **Proposal (status: new)**: Expressions should be able to be serialized.
 
+TODO: Discuss value of serializing Expressions vs serializing Intentions. Expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an Expression then it doesn't matter which Intentions are used. If Intentions were serialized then we'd be somewhat more implementation-dependant.
+
     Gesture().draggable().toJSON()
 
     [
