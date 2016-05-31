@@ -63,7 +63,7 @@ TODO: Write an intro. Emphasize that plugins are one of the most platform-specif
 
 ### Transition
 
-Coordinates events with the operating system’s existing transition system.
+Coordinate events with the operating system’s existing transition system.
 
 Required events:
 
