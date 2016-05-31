@@ -38,7 +38,7 @@ A **keyframe animation** is a Tween that animates between a series of values.
 
 **Registration**: Gesture recognizers can be associated with elements.
 
-Once associated, interactions with the given element will be interpreted by the gesture recognizer. Interpreted values will be generated when the gesture is recognized. Gestures may be recognized continuously (many times) or discretely (once).
+**Interpreting events**: Once associated, interactions with the given element will be interpreted by the gesture recognizer. Interpreted values will be generated when the gesture is recognized. Gestures may be recognized continuously (many times) or discretely (once).
 
 **Simultaneous gesture recognition**: Multiple gesture recognizers can be associated with a single element. All associated gesture recognizers should be capable of generating values simultaneously. For instance:
 
