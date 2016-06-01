@@ -1,52 +1,50 @@
-# Patterns
+## Patterns
 
 This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
 We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
-## The Intention/Actor pattern
+## The Description/Execution pattern
 
-The Intention/Actor pattern separates the **description** of motion from its **execution**.
-
-Intentions represent the description. Actors represents the execution.
+This pattern separates the **description** of motion from its **execution**.
 
 This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 
 ### Notation
 
-We use the following notation to describe an Intention/Actor relationship: `<Intention>(<Actor>)`.
+We use the following notation to describe an Description/Execution relationship: `<Description>(<Execution>)`.
 
-For example, `CAAnimation(Core Animation)` describes the Intention/Actor relationship of iOS' animation system.
+For example, `CAAnimation(Core Animation)` describes the Description/Execution relationship of iOS' animation system.
 
-### What (Intention)
+### What (Description)
 
-Intention is **what you want something to do**.
+Description is **what you want something to do**.
 
-> We’ve been careful to use the word Intention rather than animation. That's because Intention describes not only animation; but also Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in - these are both Intentions. Runtimes that think in terms of Intention are more capable of coordinating rich, interactive motion.
+> We’ve been careful to use the word Description rather than animation. That's because Description describes not only animation; but also Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in - these are both Descriptions. Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
 > 
-> ![](../_assets/Intention-Tree.svg)
+> ![](../_assets/Description-Tree.svg)
 > 
-> Strongly-typed programming languages can define Intention as an empty protocol or interface. This allows existing entities to be described as Intentions.
+> Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
 > 
->     protocol Intention {}
->     extension Animation: Intention {
+>     protocol Description {}
+>     extension Animation: Description {
 >     }
 > 
-> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Intention class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Intention types.
+> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
 > 
->     class Intention {}
->     class AnimationIntention: Intention {
+>     class Description {}
+>     class AnimationDescription: Description {
 >       var animation
 >     }
 > 
-> [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Intention.
+> [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
 
 Consider the following pseudo-code:
 
     tween = FadeInTween()
-    target.addIntention(tween)
+    target.addDescription(tween)
 
-Here, `FadeInTween` represents the concept of Intention. The logic that fulfills FadeInTween **is not executed here**. The Intention has been handed off to some system via `addIntention`. That system will soon execute the Intention.
+Here, `FadeInTween` represents the concept of Description. The logic that fulfills FadeInTween **is not executed here**. The Description has been handed off to some system via `addDescription`. That system will soon execute the Description.
 
 Also consider this pseudo-code:
 
@@ -54,11 +52,11 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.addIntention(behavior)
+    target.addDescription(behavior)
 
-In this example, `CustomBehavior` represents the concept of Intention. The `animate` function can be executed by a separate system.
+In this example, `CustomBehavior` represents the concept of Description. The `animate` function can be executed by a separate system.
 
-The **Intention/target relationship is many-to-many**. This means that many Intentions can be attached to a single target. A single Intention can also be attached to many targets.
+The **Description/target relationship is many-to-many**. This means that many Descriptions can be attached to a single target. A single Description can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -67,65 +65,65 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Many Intentions to one element
-    target.addIntentions(draggable, pinchable, rotatable, anchoredSpring)
+    # Many Descriptions to one element
+    target.addDescriptions(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Many targets for one Intention
-    target2.addIntention(draggable)
+    # Many targets for one Description
+    target2.addDescription(draggable)
 
 `target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
 `target2` can simply be dragged.
 
-### How (Actor)
+### How (Execution)
 
-An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
+An **Execution**'s sole responsibility is to fulfill the contract defined by a corresponding Description.
 
-> How an Actor is implemented is less important than that the Actor fulfills its contract. Different types of Actors may be employed to fulfill different types of Intention. Actors often interact with existing Actor-like systems in order to fulfill their contract.
+> How an Execution is implemented is less important than that the Execution fulfills its contract. Different types of Executions may be employed to fulfill different types of Description. Executions often interact with existing Execution-like systems in order to fulfill their contract.
 >
-> For example, a FadeIn Intention might be fulfilled by a FadeInActor. FadeInActor might create a native Tween primitive and register it with an auxiliary animation system.
+> For example, a FadeIn Description might be fulfilled by a FadeInExecution. FadeInExecution might create a native Tween primitive and register it with an auxiliary animation system.
 > 
-> In an alternate universe, FadeInActor might directly implement the necessary interpolation.  The Intention doesn't know or care how it's fulfilled - that's the Actor's discretion.
+> In an alternate universe, FadeInExecution might directly implement the necessary interpolation.  The Description doesn't know or care how it's fulfilled - that's the Execution's discretion.
 >
-> Good Actors will consider the runtime performance of their execution. The former Actor may be more performant if the opaque system is more closely built into the platform. The latter Actor may be less performant if it means the Actor must be executed on the main thread.
+> Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
-**Events**: Actors can ask to receive the following events:
+**Events**: Executions can ask to receive the following events:
 
 - Animation events.
 - Gesture recognition events.
 
-**Activity**: An Actor is either active or dormant. An **active** Actor will generate change in response to input. Conversely, a **dormant** actor will not generate change in response to input.
+**Activity**: An Execution is either active or dormant. An **active** Execution will generate change in response to input. Conversely, a **dormant** Execution will not generate change in response to input.
 
-Examples of *active* Actors:
+Examples of *active* Executions:
 
-- Fulfilling a Pan Intention while pan gesture events are being generated. 
-- Fulfilling a Spring Attachment Intention and the body has not yet reached its final resting state. 
+- Fulfilling a Pan Description while pan gesture events are being generated. 
+- Fulfilling a Spring Attachment Description and the body has not yet reached its final resting state. 
 
-Examples of *dormant* Actors:
+Examples of *dormant* Executions:
 
-- Fulfilling a Pan Intention for which there are no pan gesture events. 
-- Fulfilling a Spring Attachment Intention and the body has reached its final resting state. 
+- Fulfilling a Pan Description for which there are no pan gesture events. 
+- Fulfilling a Spring Attachment Description and the body has reached its final resting state. 
 
-The process or thread on which an Actor executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
+The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
 
-> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Actor would likely execute on the main thread. A Tween Actor would likely execute some or all of its logic on the separate process.
+> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
-## The Director/Intention pattern
+## The Director/Description pattern
 
-A **Director** is a coordinating entity that describes an interactive experience by creating Intentions and associating them with specific elements.
+A **Director** is a coordinating entity that describes an interactive experience by creating Descriptions and associating them with specific elements.
 
 > Imagine a transition between two states. A Director might create a Timeline and associate a variety of Tweens to various elements in the scene.
 
-Directors may use Intentions that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
+Directors may use Descriptions that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Director might associate a Draggable intention with a given avatar. The Director might also associate a Spring Attachment intention to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Director might associate a Draggable Description with a given avatar. The Director might also associate a Spring Attachment Description to the avatar once the user has released it.
 
 **Multiple Directors** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
 
 > Imagine a horizontal carousel that can be expanded full screen. One Director might govern the horizontal movement of the carousel. Another Director might govern the expansion/collapse of the carousel to/from full screen.
 
-It is important that the Director not have direct access to the Actors that implement the system. This separation of concerns allows Directors to live in the application space, while Actors are free to live anywhere else.
+It is important that the Director not have direct access to the Executions that implement the system. This separation of concerns allows Directors to live in the application space, while Executions are free to live anywhere else.
 
 ## Next up: Runtimes
 
-The system that coordinates Directors, Intentions, and Actors is the [Runtime](runtimes.md).
+The system that coordinates Directors, Descriptions, and Executions is the [Runtime](runtimes.md).
