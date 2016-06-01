@@ -13,19 +13,19 @@ This pattern is important because:
 - It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 - Tools can more easily affect the description of motion than its execution. This enables the creation of rich design-focused tools.
 
-### Notation
+#### Notation we use
 
 We use the following notation to describe a Description/Execution relationship: `<Description>(<Execution>)`.
 
 For example, `CAAnimation(Core Animation)` describes the Description/Execution relationship of iOS' animation system.
 
-### What (Description)
+### The role of Description
 
 Description is **what you want something to do**.
 
 Description can mean many things. Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form.
 
-For example, an element could be both draggable and asked to fade in - these are both Descriptions. Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
+For example, we can describe an element as both "draggable" and "fading in". Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
 
 ![](../_assets/Intention-Tree.svg)
 
@@ -80,7 +80,7 @@ Consider this pseudo-code:
 
 `target2` can simply be dragged.
 
-### How (Execution)
+### The role of Execution
 
 An **Execution**'s sole responsibility is to fulfill the contract defined by a corresponding Description.
 
