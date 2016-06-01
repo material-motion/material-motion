@@ -23,7 +23,7 @@ For example, `CAAnimation(Core Animation)` describes the Description/Execution r
 
 Description is simply **what you want something to do**.
 
-Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as both "draggable" and "fading in".
+Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as being both "draggable" and "fading in".
 
 ![](../_assets/Intention-Tree.svg)
 
