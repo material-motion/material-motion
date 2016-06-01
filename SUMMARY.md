@@ -15,7 +15,7 @@
    * [Easing](languages/easing.md)
    * [Input](languages/input.md)
    * [Values](languages/values.md)
-   * Properties
+   * [Properties](languages/properties.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
