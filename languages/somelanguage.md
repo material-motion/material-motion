@@ -4,7 +4,7 @@ Motion design comes with a large set of unique language and terminology. The lan
 
 ---
 
-## Interaction Types
+# Interaction Types
 
 ### Triggered
 
@@ -16,7 +16,7 @@ Motion that is directly correlated to a user's continuous input. There can be tr
 
 ---
 
-## Connectors
+# Connectors
 
 
 Connectors are conjunctions used to connect a motion type and a value.
@@ -55,7 +55,7 @@ The easing curve applied to an animation.
 
 ---
 
-## Motion Types
+# Motion Types
 
 
 Motion types are verbs used to define a specific movement and must be used with a connector and a value.
@@ -120,7 +120,7 @@ To change the color of an object by fading in a solid color surface
 
 ---
 
-## Easing
+# Easing
 
 Easing affects the velocity of an animating property.
 
@@ -142,7 +142,7 @@ Easing is not applied, and the velocity is constant throughout the tween.
 
 ---
 
-## Values
+# Values
 
 Values are the units in which a specific movement is measured.
 
@@ -169,7 +169,7 @@ Used define the duration of an animation.
 
 ---
 
-## Input Types
+# Input
 
 The types of input that can produce movement.
 
@@ -216,7 +216,7 @@ Changing the orientation of the device.
 
 ---
 
-## Simulation
+# Simulation
 
 Simulated physics.
 
@@ -248,7 +248,12 @@ Describes the relationship between objects that are magnetically repelled by one
 
 ---
 
-## Behavior Types
+# Goals
+
+Common tasks to assign to objects.
+
+
+### Entrances
 
 Enter
 Move In
