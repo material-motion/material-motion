@@ -1,10 +1,10 @@
 # Types of Motion
 
---
 
 ### Triggered
 
 Motion that is driven by an event, like tapping a button or dragging beyond a threshold. The motion is predetermined.
+
 
 ### Gestural
 
