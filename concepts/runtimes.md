@@ -24,6 +24,25 @@ The Runtime is now responsible for forwarding events to Actors. (Link to Actor e
 
 A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
 
+## Intentions
+
+Intentions are a concrete implementation of the **Description** part of the [Description/Execution](patterns.md) pattern.
+
+Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
+
+    protocol Description {}
+    extension Animation: Description {
+    }
+
+Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
+
+     class Description {}
+     class AnimationDescription: Description {
+       var animation
+     }
+ 
+[Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
+
 ## Intention registration
 
 TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication.
