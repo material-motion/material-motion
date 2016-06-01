@@ -6,9 +6,13 @@ Motion design comes with a large set of unique language and terminology. The lan
 
 ## Interaction Types
 
-**Triggered** – Motion that is driven by an event, like tapping a button or dragging beyond a threshold. The motion is predetermined.
+### Triggered
 
-**Gestured** – Motion that is directly correlated to a user's continuous input. There can be triggered events during gestural motion.
+Motion that is driven by an event, like tapping a button or dragging beyond a threshold. The motion is predetermined.
+
+### Gestural
+
+Motion that is directly correlated to a user's continuous input. There can be triggered events during gestural motion.
 
 ---
 
@@ -116,6 +120,28 @@ To change the color of an object by fading in a solid color surface
 
 ---
 
+## Easing
+
+Easing affects the velocity of an animating property.
+
+
+### Acceleration
+
+Easing is applied to the beginning of the animation to make it speed up from a stop.
+
+
+### Deceleration
+
+Easing is applied to the end of the animation to make it slow down to a stop.
+
+
+### Constant
+
+Easing is not applied, and the velocity is constant throughout the tween.
+
+
+---
+
 ## Values
 
 Values are the units in which a specific movement is measured.
@@ -136,6 +162,11 @@ Used to scale and fade objects.
 Used to rotate objects.
 
 
+### Time (ms)
+
+Used define the duration of an animation.
+
+
 ---
 
 ## Input Types
@@ -148,7 +179,7 @@ The types of input that can produce movement.
 Tapping on an object.
 
 
-### Tap & Hold
+### Hold
 
 Tapping and holding on an object.
 
@@ -181,6 +212,38 @@ Multi-directional, free-roam.
 ### Orient
 
 Changing the orientation of the device.
+
+
+---
+
+## Simulation
+
+Simulated physics.
+
+
+### Friction
+
+Affects how long it takes and how far an object travels while decelerating.
+
+
+### Resistance
+
+Affects how far an object moves in relation to the actual drag distance.
+
+
+### Overshoot
+
+Affects how many times an object overshoots its target location before coming to a rest.
+
+
+### Attraction
+
+Describes the relationship between objects that are magnetically attracted to one another.
+
+
+### Repulsion
+
+Describes the relationship between objects that are magnetically repelled by one another.
 
 
 ---
