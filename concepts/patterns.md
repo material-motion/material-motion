@@ -30,7 +30,7 @@ Consider the following pseudo-code:
     tween = FadeInTween()
     target.addDescription(tween)
 
-Here, `FadeInTween` represents the concept of Description. The logic that fulfills FadeInTween **is not executed here**. The Description has been handed off to some system via `addDescription`. That system will soon execute the Description.
+Here, `FadeInTween` is the Description. The logic that fulfills FadeInTween **is not executed here**. The Description has been handed off to some system via `addDescription`. That system will soon execute the Description.
 
 Also consider this pseudo-code:
 
