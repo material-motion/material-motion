@@ -14,7 +14,7 @@
    * [Actions](languages/actions.md)
    * [Easing](languages/easing.md)
    * [Input](languages/input.md)
-   * Values
+   * [Values](languages/values.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
