@@ -31,8 +31,6 @@ Tweens have a **starting time** and a **duration**. The starting time and durati
 
 Tweens use an **interpolation function**. This is generally a cubic-bezier.
 
-A **keyframe animation** is a Tween that animates between a series of values.
-
 ### Gesture recognition
 
 **What it is**: *recognition of continuous or discrete actions from a stream of device input events*.
