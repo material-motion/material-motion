@@ -114,6 +114,29 @@ To change the color of an object by fading in a solid color surface
 
 > Value: RGBA
 
+
+---
+
+## Values
+
+Values are the units in which a specific movement is measured.
+
+
+### Density Pixels (dp)
+
+Used to move and resize objects.
+
+
+### Percentages (%)
+
+Used to scale and fade objects.
+
+
+### Degrees (º)
+
+Used to rotate objects.
+
+
 ---
 
 ## Behavior Types
