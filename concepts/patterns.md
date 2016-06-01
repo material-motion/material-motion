@@ -52,10 +52,10 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Many Expectations to one element
+    # Adding many Expectations to one target
     target.addExpectations(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Many targets for one Expectation
+    # Reusing an Expectation
     target2.addExpectation(draggable)
 
 `target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
