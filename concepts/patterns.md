@@ -66,13 +66,13 @@ Consider this pseudo-code:
 
 **Execution** is the fulfillment of an Expectation.
 
-> How an Execution is implemented is less important than that the Execution fulfills its contract. Different types of Executions may be employed to fulfill different types of Expectation. Executions often interact with existing Execution-like systems in order to fulfill their contract.
->
-> For example, a FadeIn Expectation might be fulfilled by a FadeInExecution. FadeInExecution might create a native Tween primitive and register it with an auxiliary animation system.
-> 
-> In an alternate universe, FadeInExecution might directly implement the necessary interpolation.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
->
-> Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
+How Execution occurs is less important than that it fulfills its Expectations. Different systems may be employed to fulfill different Expectations.
+
+For example, a FadeIn Expectation might be fulfilled by a FadeInExecution. FadeInExecution might create a native Tween primitive and register it with an auxiliary animation system.
+
+In an alternate universe, FadeInExecution might directly implement the necessary interpolation.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
+
+Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
 **Events**: Executions can ask to receive the following events:
 
