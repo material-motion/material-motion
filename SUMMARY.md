@@ -9,7 +9,6 @@
 * [Applications](applications/README.md)
 * [Languages](languages/README.md)
    * [SomeLanguage](languages/somelanguage.md)
-       * [Connectors](languages/connectors.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
