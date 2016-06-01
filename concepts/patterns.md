@@ -19,7 +19,7 @@ We use the following notation to describe a Description/Execution relationship: 
 
 For example, `CAAnimation(Core Animation)` describes the Description/Execution relationship of iOS' animation system.
 
-### The role of Description
+### The Description of Motion
 
 Description is simply **what you want something to do**.
 
@@ -27,10 +27,13 @@ Animations, Gestures, Physical Simulations, and other Primitives can all be desc
 
 Consider the following pseudo-code:
 
-    tween = FadeInTween()
-    target.addDescription(tween)
+    fadeIn = Animation()
+    fadeIn.property = "opacity"
+    fadeIn.from = 0
+    fadeIn.to = 1
+    target.addDescription(fadeIn)
 
-Here, `FadeInTween` is the Description. The fading in of the target **is not executed here**. `addDescription` has simply registered the description of the desired change to some system. That system is expected to fulfill the Description at some later point in the program's execution.
+Here, `fadeIn` is the Description. The fading in of the target **is not executed here**. `addDescription` has simply registered the description of the desired change to some system. That system is expected to fulfill the Description's expectation at some later point in the program's execution.
 
 Also consider this pseudo-code:
 
@@ -42,7 +45,7 @@ Also consider this pseudo-code:
 
 In this example, `CustomBehavior` is the Description. The `animate` function will be executed at a later point in the program's execution by a separate system.
 
-The **Description/target relationship is many-to-many**. This means that many Descriptions can be attached to a single target. A single Description can also be attached to many targets.
+Many Descriptions can be attached to a single target. A single Description can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -61,7 +64,7 @@ Consider this pseudo-code:
 
 `target2` can simply be dragged.
 
-### The role of Execution
+### The Execution of Motion
 
 An **Execution**'s sole responsibility is to fulfill the contract defined by a corresponding Description.
 
