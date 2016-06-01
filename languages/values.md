@@ -25,6 +25,4 @@ The **RGBA** value is used by the **Tint** action.
 
 ### Time (ms)
 
-Used define the duration of an animation.
-
-The **Time** value is used by the **Rotate** action.
+The **Time** value is used by various **Connectors** to determine the duration of an animation.
