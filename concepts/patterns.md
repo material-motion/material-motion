@@ -30,7 +30,7 @@ Consider the following pseudo-code:
     tween = FadeInTween()
     target.addDescription(tween)
 
-Here, `FadeInTween` is the Description. The logic that fulfills FadeInTween **is not executed here**. The Description has been handed off to some system via `addDescription`. That system will soon execute the Description.
+Here, `FadeInTween` is the Description. The fading in of the target **is not executed here**. `addDescription` has simply registered the description of the desired change to some system. That system is expected to fulfill the Description at some later point in the program's execution.
 
 Also consider this pseudo-code:
 
@@ -40,7 +40,7 @@ Also consider this pseudo-code:
     }
     target.addDescription(behavior)
 
-In this example, `CustomBehavior` represents the concept of Description. The `animate` function can be executed by a separate system.
+In this example, `CustomBehavior` is the Description. The `animate` function will be executed at a later point in the program's execution by a separate system.
 
 The **Description/target relationship is many-to-many**. This means that many Descriptions can be attached to a single target. A single Description can also be attached to many targets.
 
