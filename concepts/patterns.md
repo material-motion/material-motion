@@ -21,11 +21,9 @@ For example, `CAAnimation(Core Animation)` describes the Description/Execution r
 
 ### The role of Description
 
-Description is **what you want something to do**.
+Description is simply **what you want something to do**.
 
-Description can mean many things. Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form.
-
-For example, we can describe an element as both "draggable" and "fading in". Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
+Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as both "draggable" and "fading in".
 
 ![](../_assets/Intention-Tree.svg)
 
