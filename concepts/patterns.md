@@ -29,7 +29,9 @@ Consider the following pseudo-code:
 
 Here, `fadeIn` is an Expectation.
 
-The fading in of the target **is not executed here**. `addExpectation` has simply registered the Expectation of the desired change to some system. That system is expected to fulfill the Expectation at some later point in the program's execution.
+The fading in of the target **is not executed here**.
+
+`addExpectation` has registered the Expectation to a system. It does not matter which system, so long as the system fulfills the Expectation at some later point in the program's execution.
 
 Also consider this pseudo-code:
 
