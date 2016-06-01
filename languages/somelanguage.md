@@ -29,7 +29,15 @@ The absolute beginning value of a property change.
 
 The relative delta of a property change.
 
-> If an element moves along the X axis **by** 10dp, its destinated is calculated by adding 10dp to its current X-value.
+> If an element moves along the X axis **by** 10dp, its destination is calculated by adding 10dp to its current X-value.
+
+
+### Over
+
+The duration of a tween.
+
+> If an element moves along the X axis **by** 10dp **over** 300ms, it completes this movement over a duration of 300ms.
+
 
 ---
 
