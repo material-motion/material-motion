@@ -10,6 +10,7 @@
 * [Languages](languages/README.md)
    * [SomeLanguage](languages/somelanguage.md)
    * Types of Motion
+   * Connectors
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
