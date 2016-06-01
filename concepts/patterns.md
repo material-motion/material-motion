@@ -68,7 +68,7 @@ Consider this pseudo-code:
 
 How Execution occurs is less important than that it fulfills its Expectations. Different systems may be employed to fulfill different Expectations.
 
-For example, a FadeIn Expectation might be fulfilled by a FadeInExecution. FadeInExecution might create a native Tween primitive and register it with an auxiliary animation system.
+For example, an Expectation of "fade in" could reasonably be fulfilled by a system animation system.
 
 In an alternate universe, FadeInExecution might directly implement the necessary interpolation.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
 
