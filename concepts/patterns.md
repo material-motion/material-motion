@@ -17,7 +17,7 @@ This pattern is important because:
 
 Expectation is simply **what you want something to do**.
 
-Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as being both "draggable" and "fading in". These descriptions form an **expectation** of change over time.
+Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as being both "draggable" and "fading in". These descriptions form an **expectation**.
 
 Consider the following pseudo-code:
 
