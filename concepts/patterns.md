@@ -6,9 +6,9 @@ We'll explore the use of these patterns in the section on [Runtimes](runtimes.md
 
 ## The Intention/Actor pattern
 
-The Intention/Actor pattern separates **what** from **how** in a motion system.
+The Intention/Actor pattern separates the **description** of motion from its **execution**.
 
-Intentions are the what in a system while Actors are the how.
+Intentions represent the description. Actors represents the execution.
 
 This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 
