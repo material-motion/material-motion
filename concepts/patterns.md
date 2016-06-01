@@ -10,7 +10,7 @@ The Intention/Actor pattern separates **what** from **how** in a motion system.
 
 Intentions are the what. Actors are the how.
 
-Why is this pattern important? It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
+This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 
 ### What (Intention)
 
