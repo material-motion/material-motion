@@ -58,7 +58,7 @@ Consider this pseudo-code:
     # Reusing an Expectation on a second target
     target2.addExpectation(draggable)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given x,y coordinate.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given x,y coordinate. Whether this happens on release or whether the target is constantly being pulled back is up to the system.
 
 `target2` is simply expected to be draggable.
 
