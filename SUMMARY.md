@@ -11,6 +11,7 @@
    * [SomeLanguage](languages/somelanguage.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
+   * Actions
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
