@@ -12,7 +12,7 @@
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
    * [Actions](languages/actions.md)
-   * Easing
+   * [Easing](languages/easing.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
