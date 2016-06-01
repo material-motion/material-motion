@@ -8,7 +8,6 @@
    * [Expressions](concepts/expressions.md)
 * [Applications](applications/README.md)
 * [Languages](languages/README.md)
-   * [SomeLanguage](languages/somelanguage.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
    * [Actions](languages/actions.md)
