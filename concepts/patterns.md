@@ -8,7 +8,7 @@ We'll explore the use of these patterns in the section on [Runtimes](runtimes.md
 
 The Intention/Actor pattern separates **what** from **how** in a motion system.
 
-Intentions are the what. Actors are the how.
+Intentions are the what in a system while Actors are the how.
 
 This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 
