@@ -25,23 +25,6 @@ Description is simply **what you want something to do**.
 
 Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as being both "draggable" and "fading in".
 
-![](../_assets/Intention-Tree.svg)
-
-Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
-
-    protocol Description {}
-    extension Animation: Description {
-    }
-
-Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
-
-     class Description {}
-     class AnimationDescription: Description {
-       var animation
-     }
- 
- [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
-
 Consider the following pseudo-code:
 
     tween = FadeInTween()
