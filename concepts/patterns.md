@@ -58,7 +58,7 @@ Consider this pseudo-code:
     # Reusing an Expectation on a second target
     target2.addExpectation(draggable)
 
-`target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
+`target` is now expected to be directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
 `target2` can simply be dragged.
 
