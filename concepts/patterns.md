@@ -8,7 +8,7 @@ We'll explore the use of these patterns in the section on [Runtimes](runtimes.md
 
 This pattern separates the **description** of motion from its **execution**.
 
-This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
+This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers. It also makes it possible to build tools that affect the description of motion without needing to be aware of how it's executed.
 
 ### Notation
 
@@ -22,7 +22,7 @@ Description is **what you want something to do**.
 
 > We’ve been careful to use the word Description rather than animation. That's because Description describes not only animation; but also Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in - these are both Descriptions. Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
 > 
-> ![](../_assets/Description-Tree.svg)
+> ![](../_assets/Intention-Tree.svg)
 > 
 > Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
 > 
@@ -108,22 +108,22 @@ The process or thread on which an Execution executes its contract depends on a c
 
 > Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
-## The Director/Description pattern
+## The Coordination/Description pattern
 
-A **Director** is a coordinating entity that describes an interactive experience by creating Descriptions and associating them with specific elements.
+A **Coordination** is a coordinating entity that describes an interactive experience by creating Descriptions and associating them with specific elements.
 
-> Imagine a transition between two states. A Director might create a Timeline and associate a variety of Tweens to various elements in the scene.
+> Imagine a transition between two states. A Coordination might create a Timeline and associate a variety of Tweens to various elements in the scene.
 
-Directors may use Descriptions that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
+Coordinations may use Descriptions that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Director might associate a Draggable Description with a given avatar. The Director might also associate a Spring Attachment Description to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Description with a given avatar. The Coordination might also associate a Spring Attachment Description to the avatar once the user has released it.
 
-**Multiple Directors** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
+**Multiple Coordinations** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
 
-> Imagine a horizontal carousel that can be expanded full screen. One Director might govern the horizontal movement of the carousel. Another Director might govern the expansion/collapse of the carousel to/from full screen.
+> Imagine a horizontal carousel that can be expanded full screen. One Coordination might govern the horizontal movement of the carousel. Another Coordination might govern the expansion/collapse of the carousel to/from full screen.
 
-It is important that the Director not have direct access to the Executions that implement the system. This separation of concerns allows Directors to live in the application space, while Executions are free to live anywhere else.
+It is important that the Coordination not have direct access to the Executions that implement the system. This separation of concerns allows Coordinations to live in the application space, while Executions are free to live anywhere else.
 
 ## Next up: Runtimes
 
-The system that coordinates Directors, Descriptions, and Executions is the [Runtime](runtimes.md).
+The system that coordinates Coordinations, Descriptions, and Executions is the [Runtime](runtimes.md).
