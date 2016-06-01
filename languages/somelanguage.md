@@ -15,6 +15,9 @@ Motion design comes with a large set of unique language and terminology. The lan
 ## Conjunctions
 
 
+Conjunctions are used to connect a motion type and a value.
+
+
 ### To
 
 The absolute end value of a property change.
@@ -34,14 +37,24 @@ The relative delta of a property change.
 
 ### Over
 
-The duration of a tween.
+The duration of an animation.
 
 > If an element moves along the X axis **by** 10dp **over** 300ms, it completes this movement over a duration of 300ms.
+
+
+### With
+
+The easing curve applied to an animation.
+
+> If an element moves along the X axis **by** 10dp **over** 300ms **with** a specific easing curve, it completes this movement using the defined easing curve's acceleration and deceleration.
 
 
 ---
 
 ## Motion Types
+
+
+Motion types are verbs used to define a specific movement.
 
 
 ### Move
@@ -52,15 +65,16 @@ To change the positional value of an object along the X, Y or Z axis by a linear
 
 * **Arc** – To change the positional value of an object along the X, Y or Z axis by an arced path.
 
-> Value: dp
+> Value: Density Pixels (X, Y, Z)
 
 ### Scale
 
 To stretch the material surface and its content as one whole unit from its anchor point.
 
-> Value: %
+> Value: Percentage (width + height)
 
-### Resize
+
+### Resize (aka Transform)
 
 To change the size of the material surface from its anchor point without stretching its content. Content inside will adapt according to the parameter set.
 
@@ -70,7 +84,7 @@ To change the size of the material surface from its anchor point without stretch
 
 * **Wrap** - resizes surface and wraps the content inside the surface. Content within surface constantly adapts to the new surface size.
 
-> Value: dp
+> Value: Density Pixels (width + height)
 
 
 ### Rotate
@@ -84,19 +98,14 @@ To change an object’s orientation by rotating it around its anchor point.
 * **Counterclockwise** – Rotates the object in a counterclockwise motion.
 
 
-> Value: º
+> Value: Degrees
 
 
 ### Fade
 
 To change the opacity / transparency of an object.
 
-*Additional parameters:*
-
-Fade Out - fades the object to 0% opacity from its initial value.
-Fade In - fade the object to 100% opacity from its initial value.
-
-> Value: %
+> Value: Percentage
 
 
 ### Tint
