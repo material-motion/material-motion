@@ -12,10 +12,10 @@ Motion design comes with a large set of unique language and terminology. The lan
 
 ---
 
-## Conjunctions
+## Connectors
 
 
-Conjunctions are used to connect a motion type and a value.
+Connectors are conjunctions used to connect a motion type and a value.
 
 
 ### To
@@ -42,7 +42,7 @@ The duration of an animation.
 > If an element moves along the X axis **by** 10dp **over** 300ms, it completes this movement over a duration of 300ms.
 
 
-### With
+### With (TBD)
 
 The easing curve applied to an animation.
 
@@ -54,7 +54,7 @@ The easing curve applied to an animation.
 ## Motion Types
 
 
-Motion types are verbs used to define a specific movement.
+Motion types are verbs used to define a specific movement and must be used with a connector and a value.
 
 
 ### Move
