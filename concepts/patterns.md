@@ -12,7 +12,7 @@ This pattern is important because it allows [Runtimes](runtimes.md) to offload e
 
 ### Notation
 
-We use the following notation to describe an Description/Execution relationship: `<Description>(<Execution>)`.
+We use the following notation to describe a Description/Execution relationship: `<Description>(<Execution>)`.
 
 For example, `CAAnimation(Core Animation)` describes the Description/Execution relationship of iOS' animation system.
 
