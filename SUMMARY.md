@@ -9,7 +9,7 @@
 * [Applications](applications/README.md)
 * [Languages](languages/README.md)
    * [SomeLanguage](languages/somelanguage.md)
-   * Types of Motion
+   * [Types of Motion](languages/types_of_motion.md)
    * Connectors
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
