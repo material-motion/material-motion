@@ -64,7 +64,7 @@ Consider this pseudo-code:
 
 ### The Execution of Motion
 
-An **Execution**'s sole responsibility is to fulfill the contract defined by a corresponding Expectation.
+**Execution** is the fulfillment of an Expectation.
 
 > How an Execution is implemented is less important than that the Execution fulfills its contract. Different types of Executions may be employed to fulfill different types of Expectation. Executions often interact with existing Execution-like systems in order to fulfill their contract.
 >
