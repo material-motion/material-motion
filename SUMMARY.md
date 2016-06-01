@@ -16,6 +16,7 @@
    * [Input](languages/input.md)
    * [Values](languages/values.md)
    * [Properties](languages/properties.md)
+   * Simulation
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
