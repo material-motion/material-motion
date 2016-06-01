@@ -18,7 +18,7 @@
    * [Properties](languages/properties.md)
    * [Simulation](languages/simulation.md)
    * [Patterns](languages/patterns.md)
-   * Other Vocabulary
+   * [Other Vocabulary](languages/other_vocabulary.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
