@@ -12,6 +12,12 @@ Intentions represent the description. Actors represents the execution.
 
 This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 
+### Notation
+
+We use the following notation to describe an Intention/Actor relationship: `<Intention>(<Actor>)`.
+
+For example, `CAAnimation(Core Animation)` describes the Intention/Actor relationship of iOS' animation system.
+
 ### What (Intention)
 
 Intention is **what you want something to do**.
