@@ -140,7 +140,7 @@ Used to rotate objects.
 
 ## Input Types
 
-The types of input that can produce an animation.
+The types of input that can produce movement.
 
 
 ### Tap
