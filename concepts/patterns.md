@@ -41,7 +41,7 @@ Also consider this pseudo-code:
     }
     target.addExpectation(behavior)
 
-In this example, `CustomBehavior` is the Expectation. The `animate` function will be executed at a later point in the program's execution by a separate system.
+In this example, the logic of the `animate` function is the Expectation. The `animate` function is not executed here.
 
 Many Expectations can be attached to a single target. A single Expectation can also be attached to many targets.
 
