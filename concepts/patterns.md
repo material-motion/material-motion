@@ -60,7 +60,7 @@ Consider this pseudo-code:
 
 `target` is now expected to be directly manipulable. When the user lets go of the element, it is expected to be pulled back to the x,y coordinate using a physical simulation of a dampened spring.
 
-`target2` can simply be dragged.
+`target2` is simply expected to be draggable.
 
 ### The Execution of Motion
 
