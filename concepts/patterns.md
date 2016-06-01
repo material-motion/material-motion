@@ -27,7 +27,9 @@ Consider the following pseudo-code:
     fadeIn.to = 1
     target.addExpectation(fadeIn)
 
-Here, `fadeIn` is an Expectation. The fading in of the target **is not executed here**. `addExpectation` has simply registered the Expectation of the desired change to some system. That system is expected to fulfill the Expectation at some later point in the program's execution.
+Here, `fadeIn` is an Expectation.
+
+The fading in of the target **is not executed here**. `addExpectation` has simply registered the Expectation of the desired change to some system. That system is expected to fulfill the Expectation at some later point in the program's execution.
 
 Also consider this pseudo-code:
 
