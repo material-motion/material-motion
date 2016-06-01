@@ -5,24 +5,26 @@ Values are the units in which a specific movement is measured.
 
 ### Density Pixels (dp)
 
-Used to move and resize objects.
+The **Density Pixels** value is used by the **Move** and **Resize** actions.
 
 
 ### Percentages (%)
 
-Used to scale and fade objects.
+The **Percentages** value is used by the **Scale** and **Fade** actions.
 
 
 ### Degrees (º)
 
-Used to rotate objects.
+The **Degrees** value is used by the **Rotate** action.
 
 
-### RGB (0,0,0)
+### RGBA (0,0,0,0.0)
 
-Used to determine color tint of objects.
+The **RGBA** value is used by the **Tint** action.
 
 
 ### Time (ms)
 
 Used define the duration of an animation.
+
+The **Time** value is used by the **Rotate** action.
