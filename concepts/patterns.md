@@ -31,7 +31,7 @@ Here, `fadeIn` is an Expectation.
 
 The fading in of the target **is not executed here**.
 
-`addExpectation` has registered the Expectation to a system. It does not matter which system, so long as the system fulfills the Expectation at some later point in the program's execution.
+`addExpectation` has registered the Expectation to a system. It does not matter which system, so long as the system fulfills the Expectation at some point in the program's execution.
 
 Also consider this pseudo-code:
 
