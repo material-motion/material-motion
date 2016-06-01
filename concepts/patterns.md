@@ -55,7 +55,7 @@ Consider this pseudo-code:
     # Adding many Expectations to one target
     target.addExpectations(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Reusing an Expectation
+    # Reusing an Expectation on a second target
     target2.addExpectation(draggable)
 
 `target` is now directly manipulable. When the user lets go of the element, it is pulled back to the x,y coordinate using a physical simulation of a dampened spring.
