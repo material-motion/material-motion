@@ -23,24 +23,26 @@ For example, `CAAnimation(Core Animation)` describes the Description/Execution r
 
 Description is **what you want something to do**.
 
-> We’ve been careful to use the word Description rather than animation. That's because Description describes not only animation; but also Gestures, Physical Simulation, and other Primitives. For example, an element could be both draggable and asked to fade in - these are both Descriptions. Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
-> 
-> ![](../_assets/Intention-Tree.svg)
-> 
-> Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
-> 
->     protocol Description {}
->     extension Animation: Description {
->     }
-> 
-> Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
-> 
->     class Description {}
->     class AnimationDescription: Description {
->       var animation
->     }
-> 
-> [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
+Description can mean many things. Animations, Gestures, Physical Simulation, and other Primitives can all essentially be described.
+
+For example, an element could be both draggable and asked to fade in - these are both Descriptions. Runtimes that think in terms of Description are more capable of coordinating rich, interactive motion.
+
+![](../_assets/Intention-Tree.svg)
+
+Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
+
+    protocol Description {}
+    extension Animation: Description {
+    }
+
+Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
+
+     class Description {}
+     class AnimationDescription: Description {
+       var animation
+     }
+ 
+ [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
 
 Consider the following pseudo-code:
 
