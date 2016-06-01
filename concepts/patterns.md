@@ -41,7 +41,7 @@ Also consider this pseudo-code:
     }
     target.addExpectation(behavior)
 
-In this example, the logic of the `animate` function is the Expectation. The `animate` function is not executed here.
+In this example, the logic of the `animate` function is the Expectation. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Expectation.
 
 Many Expectations can be attached to a single target. A single Expectation can also be attached to many targets.
 
