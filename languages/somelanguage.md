@@ -139,6 +139,28 @@ Used to rotate objects.
 
 ---
 
+## Input Types
+
+The types of input that can produce an animation.
+
+
+### Tap
+
+Description.
+
+
+### Tap & Hold
+
+Description.
+
+
+### Pressure Tap
+
+Description.
+
+
+---
+
 ## Behavior Types
 
 Enter
