@@ -8,7 +8,10 @@ We'll explore the use of these patterns in the section on [Runtimes](runtimes.md
 
 This pattern separates the **description** of motion from its **execution**.
 
-This pattern is important because it allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers. It also makes it possible to build tools that affect the description of motion without needing to be aware of how it's executed.
+This pattern is important because:
+
+- It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
+- Tools can more easily affect the description of motion than its execution. This enables the creation of rich design-focused tools.
 
 ### Notation
 
