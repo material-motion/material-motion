@@ -13,6 +13,7 @@
    * [Connectors](languages/connectors.md)
    * [Actions](languages/actions.md)
    * [Easing](languages/easing.md)
+   * Input
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
