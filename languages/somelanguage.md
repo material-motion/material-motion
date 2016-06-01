@@ -97,7 +97,6 @@ To change an object’s orientation by rotating it around its anchor point.
 
 * **Counterclockwise** – Rotates the object in a counterclockwise motion.
 
-
 > Value: Degrees
 
 
@@ -146,17 +145,42 @@ The types of input that can produce an animation.
 
 ### Tap
 
-Description.
+Tapping on an object.
 
 
 ### Tap & Hold
 
-Description.
+Tapping and holding on an object.
 
 
 ### Pressure Tap
 
-Description.
+Force touch.
+
+
+### Pinch
+
+Pinch to zoom, can enable rotation?
+
+
+### Swipe
+
+Horizontally or vertically.
+
+
+### Scroll
+
+Horizontally or vertically.
+
+
+### Drag
+
+Multi-directional, free-roam.
+
+
+### Orient
+
+Changing the orientation of the device.
 
 
 ---
