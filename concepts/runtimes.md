@@ -121,10 +121,6 @@ Each Actor is responsible for calculating time deltas. Take care to respect plat
 
 The gesture event is invoked when a gesture recognizer's state has changed.
 
-## Scripting
-
-TODO: Discuss how one might integrate a scripting language with a Runtime.
-
 ## Plugins
 
 TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
