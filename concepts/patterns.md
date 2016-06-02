@@ -74,13 +74,13 @@ We'll explore one particular implementation of an Execution system in the [Runti
 
 ## The Coordinator/Plan pattern
 
-A **Coordinator** describes an interactive experience by creating Plans and associating them with specific targets.
+A **Coordinator** describes an interactive experience by creating Plans and associating them with targets.
 
-> Imagine a transition between two states. A Coordination might create a Timeline and associate a variety of Tweens to various elements in the scene.
+> Imagine a transition between two states. A Coordinator might create a [Timeline](primitives.md) and associate many Tweens with elements in the scene.
 
-Coordinations may use Plans that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
+Coordinators use Plans that may be executed by any of the available [Primitives](primitives.md). This enables the expression of **coordinated interactions**.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordinator might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
 
 **Multiple Coordinations** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
 
