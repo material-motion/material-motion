@@ -70,6 +70,8 @@ For example, a Plan of "fade in" could reasonably be fulfilled by a system anima
 
 Good systems of Execution will carefully balance runtime performance, power consumption, and event coordination.
 
+We'll explore one particular implementation of an Execution system in the [Runtimes](runtimes.md).
+
 ## The Coordination/Plan pattern
 
 A **Coordination** is a coordinating entity that describes an interactive experience by creating Plans and associating them with specific elements.
