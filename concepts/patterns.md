@@ -62,7 +62,7 @@ Consider this pseudo-code:
 
 ### The Execution of Motion
 
-**Execution** is the fulfillment of an Plan.
+**Execution** is the fulfillment of a Plan.
 
 How Execution occurs is less important than that it fulfills its Plans.
 
