@@ -11,7 +11,7 @@ This pattern separates the **goal** of motion from its **execution**.
 This pattern is important because:
 
 - It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
-- Tools can more easily affect the Expectation of motion than its execution. This enables the creation of rich design-focused tools.
+- Tools can more easily affect the Goal of motion than its execution. This enables the creation of rich design-focused tools.
 
 ### The Goal of Motion
 
@@ -37,11 +37,11 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.addExpectation(behavior)
+    target.addGoal(behavior)
 
-In this example, the logic of the `animate` function is the Expectation. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Expectation.
+In this example, the logic of the `animate` function is the Goal. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Goal.
 
-Many Expectations can be attached to a single target. A single Expectation can also be attached to many targets.
+Many Goals can be attached to a single target. A single Goal can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -50,11 +50,11 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Adding many Expectations to one target
-    target.addExpectations(draggable, pinchable, rotatable, anchoredSpring)
+    # Adding many Goals to one target
+    target.addGoals(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Reusing an Expectation on a second target
-    target2.addExpectation(draggable)
+    # Reusing an Goal on a second target
+    target2.addGoal(draggable)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given x,y coordinate. Whether this happens on release or whether the target is constantly being pulled back is up to the system.
 
@@ -62,11 +62,11 @@ Consider this pseudo-code:
 
 ### The Execution of Motion
 
-**Execution** is the fulfillment of an Expectation.
+**Execution** is the fulfillment of an Goal.
 
-How Execution occurs is less important than that it fulfills its Expectations.
+How Execution occurs is less important than that it fulfills its Goals.
 
-For example, an Expectation of "fade in" could reasonably be fulfilled by a system animation system. The same Expectation could also be fulfilled by a custom interpolation function.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
+For example, an Goal of "fade in" could reasonably be fulfilled by a system animation system. The same Goal could also be fulfilled by a custom interpolation function.  The Goal doesn't know or care how it's fulfilled - that's the Execution's discretion.
 
 Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
@@ -79,27 +79,27 @@ Good Executions will consider the runtime performance of their execution. The fo
 
 Examples of *active* Executions:
 
-- Fulfilling a Pan Expectation while pan gesture events are being generated. 
-- Fulfilling a Spring Attachment Expectation and the body has not yet reached its final resting state. 
+- Fulfilling a Pan Goal while pan gesture events are being generated. 
+- Fulfilling a Spring Attachment Goal and the body has not yet reached its final resting state. 
 
 Examples of *dormant* Executions:
 
-- Fulfilling a Pan Expectation for which there are no pan gesture events. 
-- Fulfilling a Spring Attachment Expectation and the body has reached its final resting state. 
+- Fulfilling a Pan Goal for which there are no pan gesture events. 
+- Fulfilling a Spring Attachment Goal and the body has reached its final resting state. 
 
 The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
 
 > Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
-## The Coordination/Expectation pattern
+## The Coordination/Goal pattern
 
-A **Coordination** is a coordinating entity that describes an interactive experience by creating Expectations and associating them with specific elements.
+A **Coordination** is a coordinating entity that describes an interactive experience by creating Goals and associating them with specific elements.
 
 > Imagine a transition between two states. A Coordination might create a Timeline and associate a variety of Tweens to various elements in the scene.
 
-Coordinations may use Expectations that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
+Coordinations may use Goals that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Expectation with a given avatar. The Coordination might also associate a Spring Attachment Expectation to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Goal with a given avatar. The Coordination might also associate a Spring Attachment Goal to the avatar once the user has released it.
 
 **Multiple Coordinations** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
 
@@ -109,4 +109,4 @@ It is important that the Coordination not have direct access to the Executions t
 
 ## Next up: Runtimes
 
-The system that coordinates Coordinations, Expectations, and Executions is the [Runtime](runtimes.md).
+The system that coordinates Coordinations, Goals, and Executions is the [Runtime](runtimes.md).
