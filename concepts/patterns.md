@@ -68,7 +68,7 @@ How Execution occurs is less important than that it fulfills its Plans.
 
 For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled - that's the Execution's discretion.
 
-Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
+Good systems of Execution will strongly consider runtime performance, battery life when applicable, and event coordination. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
 **Events**: Executions can ask to receive the following events:
 
