@@ -4,4 +4,4 @@ Motion design comes with a large set of unique language and terminology. The lan
 
 When thinking about language, being able to naturally produce a sentence that accurately describes the animation is important to its success.
 
-Move upward 10dp 
+Move from (0,0) to (0,100) over 300ms with Easing
