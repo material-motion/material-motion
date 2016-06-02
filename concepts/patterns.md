@@ -72,9 +72,9 @@ Good systems of Execution will carefully balance runtime performance, power cons
 
 We'll explore one particular implementation of an Execution system in the [Runtimes](runtimes.md).
 
-## The Coordination/Plan pattern
+## The Coordinator/Plan pattern
 
-A **Coordination** is a coordinating entity that describes an interactive experience by creating Plans and associating them with specific elements.
+A **Coordinator** describes an interactive experience by creating Plans and associating them with specific targets.
 
 > Imagine a transition between two states. A Coordination might create a Timeline and associate a variety of Tweens to various elements in the scene.
 
