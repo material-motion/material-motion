@@ -24,7 +24,7 @@ The Runtime is now responsible for forwarding events to Actors. (Link to Actor e
 
 A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
 
-## Intentions
+## Plans
 
 Intentions are a concrete implementation of the **Description** part of the [Description/Execution](patterns.md) pattern.
 
@@ -42,6 +42,31 @@ Strongly-typed programming-languages that **lack** protocols or interfaces can c
      }
  
 [Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
+
+## Execution
+
+TODO: Define Actors.
+
+**Events**: Executions can ask to receive the following events:
+
+- Animation events.
+- Gesture recognition events.
+
+**Activity**: An Execution is either active or dormant. An **active** Execution will generate change in response to input. Conversely, a **dormant** Execution will not generate change in response to input.
+
+Examples of *active* Executions:
+
+- Fulfilling a Pan Plan while pan gesture events are being generated. 
+- Fulfilling a Spring Attachment Plan and the body has not yet reached its final resting state. 
+
+Examples of *dormant* Executions:
+
+- Fulfilling a Pan Plan for which there are no pan gesture events. 
+- Fulfilling a Spring Attachment Plan and the body has reached its final resting state. 
+
+The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
+
+> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
 ## Intention registration
 
