@@ -25,3 +25,7 @@ Community implementations:
 
 - [Rebound.js](https://github.com/facebook/rebound-js/) (JavaScript)
 - [React Motion](https://github.com/chenglou/react-motion/) (React)
+
+
+## [Expressions](../concepts/expressions.md)
+
