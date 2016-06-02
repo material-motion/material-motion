@@ -27,7 +27,7 @@ Consider the following pseudo-code:
     fadeIn.to = 1
     target.addGoal(fadeIn)
 
-Here, `fadeIn` is an Expectation. Note that the fading in of the target **is not executed here**.
+Here, `fadeIn` is the Goal. Note that the fading in of the target **is not executed here**.
 
 `addExpectation` has registered the Expectation to a system. It does not matter which system, so long as the system fulfills the Expectation.
 
