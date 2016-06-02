@@ -10,7 +10,7 @@ This pattern separates the **plan** of motion from its **execution**.
 
 This pattern is important because:
 
-- It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
+- It allows expensive work to execute on separate threads, processes, or workers.
 - Tools can more easily affect the Plan of motion than its execution. This enables the creation of rich design-focused tools.
 
 ### The Plan of Motion
