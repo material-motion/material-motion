@@ -6,7 +6,7 @@ We'll explore the use of these patterns in the section on [Runtimes](runtimes.md
 
 ## The Plan/Execution pattern
 
-This pattern separates the **Plan** of motion from its **execution**.
+This pattern separates the **plan** of motion from its **execution**.
 
 This pattern is important because:
 
