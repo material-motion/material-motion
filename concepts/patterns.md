@@ -66,7 +66,7 @@ Consider this pseudo-code:
 
 **Execution** is the fulfillment of an Expectation.
 
-How Execution occurs is less important than that it fulfills its Expectations. Different systems may be employed to fulfill different Expectations.
+How Execution occurs is less important than that it fulfills its Expectations. For example, many different systems may be employed to fulfill different Expectations.
 
 For example, an Expectation of "fade in" could reasonably be fulfilled by a system animation system.
 
