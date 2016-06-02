@@ -1,18 +1,141 @@
-
 # Runtimes
 
 This section explores one specification for a **declarative motion engine**.
 
 ## Overview
 
-The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns.
+The purpose of a Runtime is to **coordinate** the expression of Plans in an application. We will apply the [Plan/Fulfillment](patterns/plan-fulfillment.md) and [Coordinator/Plan](patterns/coordinator-plan.md) patterns to the design of this system.
 
-The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
+Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor primarily consists of **Directors**, **Actors**, and **Intentions**.
+
+- A Director is a **coordinating** entity.
+- An Intention is a **plan**.
+- An Actor is expected to **fulfill** Intentions.
+
+Directors register Intention with a Runtime. The Runtime creates Actors and pumps a variety of events to them. These events allow Actors to fulfill their Intentions.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
-A Runtime requires at least one instance of a Director. A Runtime may have many Director instances.
 
-Each Director may register an initial set of Intentions in a setup method.
+### How to read this chapter
+
+The API examples are not prescriptive. Please use good judgment on a given platform.
+
+### The Runtime
+
+A Runtime must be able to initialize with zero arguments.
+
+    class Runtime
+      function init()
+
+#### Essential state
+
+A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
+
+    class Runtime
+      var paused: Boolean = true
+
+A Runtime can be in two states: Active or Idle. The `state` property is readonly. A Runtime is Active so long as any of the following conditions are met:
+
+- Any Actor are active. (TODO: Flesh this out in the Actor section).
+- Any Gestures are active.
+
+    RuntimeState {
+      Idle
+      Active
+    }
+
+    class Runtime
+      readonly var state: RuntimeState
+
+#### Event delegation
+
+A Runtime exposes certain events to a delegate.
+
+    class Runtime
+      var delegate: RuntimeDelegate
+
+Whenever the Runtime's state changes it must notify its delegate. This i
+
+    protocol RuntimeDelegate
+      function runtime(runtime, stateDidChangeFrom: oldState)
+
+#### Gesture handling
+
+A Runtime is responsible for forwarding gesture recognition events to the relevant Actor instances. Gesture recognizers also affect the Runtime's `state` value.
+
+    class Runtime
+      function addGestureRecognizer(gestureRecognizer)
+
+#### Starting a transaction
+
+Intentions must be registered to a Runtime with a Transaction. A Transaction defines a scope within which a set of operations may be bulked together.
+
+    class Runtime
+      function beginTransaction() -> Transaction
+      function endTransaction(Transaction)
+
+For example:
+
+    transaction = runtime.beginTransaction()
+    // Register intentions
+    runtime.endTransaction(transaction)
+
+If a Transaction instance goes out of scope before endTransaction is called, the Transaction's deallocation should invoke endTransaction.
+
+### Transactions
+
+A Transaction instance provides methods for:
+
+- registering Intention to a Runtime, and
+- creating Transient views.
+
+#### Intention
+
+Intentions can be added to a target. Intentions will be associated with the Target indefinitely. (TODO: Explore Intentions that can be "removed" upon fulfillment).
+
+    class Transaction
+      function addIntention(Intention, to: Target)
+
+    transaction.addIntention(intention, to: target)
+
+Named Intentions can be added to a target. If an Intention with the same name already exists for a target, the old Intention is first removed and the new Intention is set.
+
+    class Transaction
+      function setIntention(Intention, withName: String, to: Target)
+
+    transaction.setIntention(intention, withName: name, to: target)
+
+Named Intentions can be removed from a target.
+
+    class Transaction
+      function removeIntention(withName: String, from: Target)
+
+    transaction.setIntention(intention, withName: name, to: target)
+
+#### Transient Views
+
+TODO: Can transient views be modeled outside of the Runtime?
+
+A transient view is one whose lifetime is bound to a condition. `condition` is evaluated at the end of an animation event and at the end of each gesture recognition event. When `condition` returns `true`, the view — and all associated Actors — is removed.
+
+All transient views are removed when a Runtime is terminated.
+
+    class Transaction
+      function addTransientView(View, untilCondition: Function)
+
+Pre-fabricated conditions:
+
+- Is idle: The Runtime has entered an idle state.
+- Is offscreen: The view has moved "off-screen".
+
+For example:
+
+    class Transaction
+      function addTransientView(View, untilCondition: Runtime.isIdleCondition)
+
+---
+
+EVERYTHING BELOW THIS LINE IS AN UNORGANIZED SET OF NOTES.
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
@@ -23,6 +146,50 @@ The Runtime now has a collection of Actors.
 The Runtime is now responsible for forwarding events to Actors. (Link to Actor events).
 
 A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
+
+## Plans
+
+Intentions are a concrete implementation of the **Description** part of the [Description/Execution](patterns.md) pattern.
+
+Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
+
+    protocol Description {}
+    extension Animation: Description {
+    }
+
+Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
+
+     class Description {}
+     class AnimationDescription: Description {
+       var animation
+     }
+ 
+[Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
+
+## Execution
+
+TODO: Define Actors.
+
+**Events**: Executions can ask to receive the following events:
+
+- Animation events.
+- Gesture recognition events.
+
+**Activity**: An Execution is either active or dormant. An **active** Execution will generate change in response to input. Conversely, a **dormant** Execution will not generate change in response to input.
+
+Examples of *active* Executions:
+
+- Fulfilling a Pan Plan while pan gesture events are being generated. 
+- Fulfilling a Spring Attachment Plan and the body has not yet reached its final resting state. 
+
+Examples of *dormant* Executions:
+
+- Fulfilling a Pan Plan for which there are no pan gesture events. 
+- Fulfilling a Spring Attachment Plan and the body has reached its final resting state. 
+
+The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
+
+> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
 ## Intention registration
 

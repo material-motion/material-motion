@@ -35,9 +35,9 @@ Tweens use an **interpolation function**. This is generally a cubic-bezier.
 
 **What it is**: *recognition of continuous or discrete actions from a stream of device input events*.
 
-**Registration**: Gesture recognizers can be associated with elements.
+**Registration**: A gesture recognizer can be attached to an element.
 
-**Interpreting events**: Gesture recognizers transform input events into meaningful outputs. The output is often some form of a transformation: the most common are translation, rotation, and scale.
+**Interpreting events**: Gesture recognizers transform input events into meaningful outputs. The output is often a linear transformation of translation, rotation, and/or scale.
 
 **Frequency of recognition**: Gestures may be recognized continuously (many times) or discretely (once).
 
