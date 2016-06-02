@@ -11,7 +11,7 @@ This pattern separates the **plan** of motion from its **execution**.
 This pattern is important because:
 
 - It allows expensive work to execute on separate threads, processes, or workers.
-- Tools can more easily affect the Plan of motion than its execution. This enables the creation of rich design-focused tools.
+- Tools can more easily affect the Plan than its Execution. This enables the creation of rich design-focused tools.
 
 ### The Plan of Motion
 
@@ -39,7 +39,7 @@ Also consider this pseudo-code:
     }
     target.addPlan(behavior)
 
-In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Plan.
+In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Plan.
 
 Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
 
