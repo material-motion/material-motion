@@ -29,7 +29,7 @@ Consider the following pseudo-code:
 
 Here, `fadeIn` is the Goal. Note that the fading in of the target **is not executed here**.
 
-`addExpectation` has registered the Expectation to a system. It does not matter which system, so long as the system fulfills the Expectation.
+`addGoal` has registered the Goal to a system. It does not matter which system, so long as the system fulfills the Expectation.
 
 Also consider this pseudo-code:
 
