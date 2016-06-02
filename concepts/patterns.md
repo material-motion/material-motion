@@ -70,27 +70,6 @@ For example, a Plan of "fade in" could reasonably be fulfilled by a system anima
 
 Good systems of Execution will carefully balance runtime performance, power consumption, and event coordination.
 
-**Events**: Executions can ask to receive the following events:
-
-- Animation events.
-- Gesture recognition events.
-
-**Activity**: An Execution is either active or dormant. An **active** Execution will generate change in response to input. Conversely, a **dormant** Execution will not generate change in response to input.
-
-Examples of *active* Executions:
-
-- Fulfilling a Pan Plan while pan gesture events are being generated. 
-- Fulfilling a Spring Attachment Plan and the body has not yet reached its final resting state. 
-
-Examples of *dormant* Executions:
-
-- Fulfilling a Pan Plan for which there are no pan gesture events. 
-- Fulfilling a Spring Attachment Plan and the body has reached its final resting state. 
-
-The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
-
-> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
-
 ## The Coordination/Plan pattern
 
 A **Coordination** is a coordinating entity that describes an interactive experience by creating Plans and associating them with specific elements.
