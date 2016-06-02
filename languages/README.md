@@ -8,7 +8,7 @@ Each sentence begins with an **action** and is followed by a string of **connect
 
 **Thought** example:
 
-> Move by (0,100) over 300ms with Easing
+> Move by (0,100) over 300ms
 
 | Action | Connector | Value | Connector | Value |
 | -- | -- | -- | -- | -- |
