@@ -4,20 +4,20 @@ This section explores **software design patterns** that can be used to build mod
 
 We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
-## The Goal/Execution pattern
+## The Plan/Execution pattern
 
-This pattern separates the **goal** of motion from its **execution**.
+This pattern separates the **Plan** of motion from its **execution**.
 
 This pattern is important because:
 
 - It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
-- Tools can more easily affect the Goal of motion than its execution. This enables the creation of rich design-focused tools.
+- Tools can more easily affect the Plan of motion than its execution. This enables the creation of rich design-focused tools.
 
-### The Goal of Motion
+### The Plan of Motion
 
-A Goal is simply **what you want something to do**.
+A Plan is simply **what you want something to do**.
 
-Each of the Primitives we explored in [the previous section](primitives.md) can be described as a Goal in some form. For example, "draggable" and "fade in" are two distinct goals.
+Each of the Primitives we explored in [the previous section](primitives.md) can be described as a Plan in some form. For example, "draggable" and "fade in" are two distinct Plans.
 
 Consider the following pseudo-code:
 
@@ -25,11 +25,11 @@ Consider the following pseudo-code:
     fadeIn.property = "opacity"
     fadeIn.from = 0
     fadeIn.to = 1
-    target.addGoal(fadeIn)
+    target.addPlan(fadeIn)
 
-Here, `fadeIn` is the Goal. Note that the fading in of the target **is not executed here**.
+Here, `fadeIn` is the Plan. Note that the fading in of the target **is not executed here**.
 
-`addGoal` has registered the Goal to a system. It does not matter which system, so long as the Goal is eventually fulfilled.
+`addPlan` has registered the Plan to a system. It does not matter which system, so long as the Plan is eventually fulfilled.
 
 Also consider this pseudo-code:
 
@@ -37,11 +37,11 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.addGoal(behavior)
+    target.addPlan(behavior)
 
-In this example, the logic of the `animate` function is the Goal. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Goal.
+In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The behavior has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Plan.
 
-Many Goals can be attached to a single target. A single Goal can also be attached to many targets.
+Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -50,11 +50,11 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Adding many Goals to one target
-    target.addGoals(draggable, pinchable, rotatable, anchoredSpring)
+    # Adding many Plans to one target
+    target.addPlans(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Reusing an Goal on a second target
-    target2.addGoal(draggable)
+    # Reusing an Plan on a second target
+    target2.addPlan(draggable)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given x,y coordinate. Whether this happens on release or whether the target is constantly being pulled back is up to the system.
 
@@ -62,11 +62,11 @@ Consider this pseudo-code:
 
 ### The Execution of Motion
 
-**Execution** is the fulfillment of an Goal.
+**Execution** is the fulfillment of an Plan.
 
-How Execution occurs is less important than that it fulfills its Goals.
+How Execution occurs is less important than that it fulfills its Plans.
 
-For example, an Goal of "fade in" could reasonably be fulfilled by a system animation system. The same Goal could also be fulfilled by a custom interpolation function.  The Goal doesn't know or care how it's fulfilled - that's the Execution's discretion.
+For example, an Plan of "fade in" could reasonably be fulfilled by a system animation system. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled - that's the Execution's discretion.
 
 Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
@@ -79,27 +79,27 @@ Good Executions will consider the runtime performance of their execution. The fo
 
 Examples of *active* Executions:
 
-- Fulfilling a Pan Goal while pan gesture events are being generated. 
-- Fulfilling a Spring Attachment Goal and the body has not yet reached its final resting state. 
+- Fulfilling a Pan Plan while pan gesture events are being generated. 
+- Fulfilling a Spring Attachment Plan and the body has not yet reached its final resting state. 
 
 Examples of *dormant* Executions:
 
-- Fulfilling a Pan Goal for which there are no pan gesture events. 
-- Fulfilling a Spring Attachment Goal and the body has reached its final resting state. 
+- Fulfilling a Pan Plan for which there are no pan gesture events. 
+- Fulfilling a Spring Attachment Plan and the body has reached its final resting state. 
 
 The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
 
 > Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
 
-## The Coordination/Goal pattern
+## The Coordination/Plan pattern
 
-A **Coordination** is a coordinating entity that describes an interactive experience by creating Goals and associating them with specific elements.
+A **Coordination** is a coordinating entity that describes an interactive experience by creating Plans and associating them with specific elements.
 
 > Imagine a transition between two states. A Coordination might create a Timeline and associate a variety of Tweens to various elements in the scene.
 
-Coordinations may use Goals that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
+Coordinations may use Plans that build upon any of the available Primitives. This enables the expression of **coordinated interactions**.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Goal with a given avatar. The Coordination might also associate a Spring Attachment Goal to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordination might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
 
 **Multiple Coordinations** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
 
@@ -109,4 +109,4 @@ It is important that the Coordination not have direct access to the Executions t
 
 ## Next up: Runtimes
 
-The system that coordinates Coordinations, Goals, and Executions is the [Runtime](runtimes.md).
+The system that coordinates Coordinations, Plans, and Executions is the [Runtime](runtimes.md).
