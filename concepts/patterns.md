@@ -82,11 +82,13 @@ Coordinators use Plans that may be executed by any of the available [Primitives]
 
 > Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordinator might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
 
-**Multiple Coordinations** can affect a given set of elements. The software designer is able to choose reasonable lines of responsibility.
+**Multiple Coordinators** can affect a given set of elements. The software designer must choose reasonable lines of overlapping responsibility.
 
-> Imagine a horizontal carousel that can be expanded full screen. One Coordination might govern the horizontal movement of the carousel. Another Coordination might govern the expansion/collapse of the carousel to/from full screen.
+> Imagine a horizontal carousel that can be expanded full screen. One Coordinator might govern the horizontal movement of the carousel. Another Coordinator might govern the expansion/collapse of the carousel to/from full screen.
 
-It is important that the Coordination not have direct access to the Executions that implement the system. This separation of concerns allows Coordinations to live in the application space, while Executions are free to live anywhere else.
+It is important that the Coordinator not be involved in the Execution of any Plans. Coordinators generally live in the "application" space, while Executions may occur anywhere else.
+
+This pattern allows Coordinators to be written in a separate language from the application code. It allows Coordinators to communicate over the wire between devices.
 
 ## Next up: Runtimes
 
