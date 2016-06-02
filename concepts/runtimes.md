@@ -158,6 +158,10 @@ Required events:
 
 TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events. The most simple example is that of a "Transition" coordinator.
 
+### Scripting
+
+TODO: Discuss how one might integrate a scripting language with a Runtime.
+
 ### Transition coordination
 
 This system allows you to define which Directors to use for a transition between two “Screens” in an application.
