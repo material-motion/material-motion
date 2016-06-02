@@ -39,7 +39,7 @@ Also consider this pseudo-code:
     }
     target.addPlan(behavior)
 
-In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the system fulfills the Plan.
+In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the Plan is eventually fulfilled.
 
 Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
 
