@@ -4,20 +4,20 @@ This section explores **software design patterns** that can be used to build mod
 
 We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
-## The Expectation/Execution pattern
+## The Goal/Execution pattern
 
-This pattern separates the **expectation** of motion from its **execution**.
+This pattern separates the **goal** of motion from its **execution**.
 
 This pattern is important because:
 
 - It allows [Runtimes](runtimes.md) to offload expensive work to separate threads, processes, or workers.
 - Tools can more easily affect the Expectation of motion than its execution. This enables the creation of rich design-focused tools.
 
-### The Expectation of Motion
+### The Goal of Motion
 
-Expectation is simply **what you want something to do**.
+A Goal is simply **what you want something to do**.
 
-Animations, Gestures, Physical Simulations, and other Primitives can all be described in some form. For example, we can describe an element as being both "draggable" and "fading in". These descriptions form an **expectation**.
+Each of the Primitives we explored in [the previous section](primitives.md) can be described as a Goal in some form. For example, "draggable" and "fade in" are two distinct goals.
 
 Consider the following pseudo-code:
 
@@ -66,11 +66,9 @@ Consider this pseudo-code:
 
 **Execution** is the fulfillment of an Expectation.
 
-How Execution occurs is less important than that it fulfills its Expectations. For example, many different systems may be employed to fulfill different Expectations.
+How Execution occurs is less important than that it fulfills its Expectations.
 
-For example, an Expectation of "fade in" could reasonably be fulfilled by a system animation system.
-
-In an alternate universe, FadeInExecution might directly implement the necessary interpolation.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
+For example, an Expectation of "fade in" could reasonably be fulfilled by a system animation system. The same Expectation could also be fulfilled by a custom interpolation function.  The Expectation doesn't know or care how it's fulfilled - that's the Execution's discretion.
 
 Good Executions will consider the runtime performance of their execution. The former Execution may be more performant if the opaque system is more closely built into the platform. The latter Execution may be less performant if it means the Execution must be executed on the main thread.
 
