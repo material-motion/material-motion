@@ -11,7 +11,7 @@ This pattern emphasizes a **separation** of the *plan* of motion from its *execu
 This pattern is important because:
 
 - It allows expensive work to execute on separate threads, processes, or workers.
-- Tools can more easily affect the Plan than its Execution. This enables the creation of rich design-focused tools.
+- It is easier to define the Plan than the Execution. This enables the creation of rich design-focused tools.
 
 ### The Plan of Motion
 
