@@ -4,7 +4,7 @@
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
-       * Plan/Fulfillment
+       * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
    * [Runtimes](concepts/runtimes.md)
    * [Expressions](concepts/expressions.md)
 * [Applications](applications/README.md)
