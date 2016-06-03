@@ -5,6 +5,7 @@
    * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
        * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
+       * Coordinator/Plan
    * [Runtimes](concepts/runtimes.md)
    * [Expressions](concepts/expressions.md)
 * [Applications](applications/README.md)
