@@ -2,6 +2,8 @@
 
 Easing affects the velocity of an animating property.
 
+TODO: Figure out the values for acceleration and deceleration amounts. Maybe these aren't the right terms to use here, and we need to define easing more mathematically.
+
 
 ### Acceleration
 
