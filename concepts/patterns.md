@@ -4,16 +4,16 @@ This section explores **software design patterns** that can be used to build mod
 
 We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
 
-## The Plan/Execution pattern
+## The Plan/Fulfillment pattern
 
-This pattern emphasizes a **separation** of the *plan* of motion from its *execution*.
+This pattern emphasizes a **separation** of the *plan* of motion from its *fulfillment*.
 
 This pattern is important because:
 
 - It allows expensive work to execute on separate threads, processes, or workers.
-- Execution is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent over a wire.
+- Fulfillment is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent over a wire.
 
-### The Plan of Motion
+### A Plan of Motion
 
 A Plan is simply **what you want something to do**.
 
@@ -60,17 +60,15 @@ Consider this pseudo-code:
 
 `target2` is simply expected to be draggable.
 
-### The Execution of Motion
+### Fulfillment of a Plan
 
-**Execution** is the fulfillment of a Plan.
+Exactly how a Plan is fulfilled is less important than that it is fulfilled.
 
-How Execution occurs is less important than that it fulfills its Plans.
+For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
 
-For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled - that's the Execution's discretion.
+Good systems of fulfillment will carefully balance runtime performance, power consumption, and event coordination.
 
-Good systems of Execution will carefully balance runtime performance, power consumption, and event coordination.
-
-We'll explore one particular implementation of an Execution system in the [Runtimes](runtimes.md).
+We'll explore one particular implementation of an fulfillment system in the chapter on [Runtimes](runtimes.md).
 
 ## The Coordinator/Plan pattern
 
@@ -86,10 +84,10 @@ Coordinators use Plans that may be executed by any of the available [Primitives]
 
 > Imagine a horizontal carousel that can be expanded full screen. One Coordinator might govern the horizontal movement of the carousel. Another Coordinator might govern the expansion/collapse of the carousel to/from full screen.
 
-It is important that the Coordinator not be involved in the Execution of any Plans. Coordinators generally live in the "application" space, while Executions may occur anywhere else.
+It is important that the Coordinator not be involved in the Fulfillment of any Plans. Coordinators generally live in the "application" space, while Fulfillments may occur anywhere else.
 
 This pattern allows Coordinators to be written in a separate language from the application code (see: [Runtime](runtime.md)). It allows Coordinators to communicate over the wire between devices (see: [Applications](../applications/).
 
 ## Next up: Runtimes
 
-The system that coordinates Coordinations, Plans, and Executions is the [Runtime](runtimes.md).
+The system that coordinates Coordinations, Plans, and Fulfillments is the [Runtime](runtimes.md).
