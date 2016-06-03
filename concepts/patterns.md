@@ -2,9 +2,8 @@
 
 This section explores **software design patterns** that can be used to build modular, declarative motion systems.
 
-We'll explore the use of these patterns in the section on [Runtimes](runtimes.md).
-
-
+- [Plan/Fulfillment](patterns/plan-fulfillment.md)
+- [Coordinator/Plan](patterns/coordinator-plan.md)
 
 ## Next up: Runtimes
 
