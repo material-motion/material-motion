@@ -62,7 +62,7 @@ Consider this pseudo-code:
 
 ### Fulfillment of a Plan
 
-Exactly how a Plan is fulfilled is less important than that it is fulfilled.
+Exactly how a Plan is fulfilled is less important than that it **is** fulfilled.
 
 For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
 
