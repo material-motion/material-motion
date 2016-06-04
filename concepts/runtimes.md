@@ -110,6 +110,8 @@ Named Intentions can be removed from a target.
 
 #### Transient Views
 
+TODO: Can transient views be modeled outside of the Runtime?
+
 A transient view is one whose lifetime is bound to a condition. `condition` is evaluated at the end of an animation event and at the end of each gesture recognition event. When `condition` returns `true`, the view — and all associated Actors — is removed.
 
 All transient views are removed when a Runtime is terminated.
@@ -119,8 +121,10 @@ All transient views are removed when a Runtime is terminated.
 
 Pre-fabricated conditions:
 
-- Is Idle: The Runtime has entered an idle state.
+- Is idle: The Runtime has entered an idle state.
 - Is offscreen: The view has moved "off-screen".
+
+For example:
 
     class Transaction
       function addTransientView(View, untilCondition: Runtime.isIdleCondition)
