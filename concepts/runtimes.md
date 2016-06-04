@@ -120,6 +120,7 @@ All transient views are removed when a Runtime is terminated.
 Pre-fabricated conditions:
 
 - Is Idle: The Runtime has entered an idle state.
+- Is offscreen: The view has moved "off-screen".
 
     class Transaction
       function addTransientView(View, untilCondition: Runtime.isIdleCondition)
