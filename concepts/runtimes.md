@@ -54,12 +54,16 @@ For example:
     // Register intentions
     runtime.endTransaction(transaction)
 
+If a Transaction instance goes out of scope before endTransaction is called, the Transaction's deallocation should invoke endTransaction.
+
 ### Transactions
 
 A Transaction instance provides methods for:
 
 - registering Intention to a Runtime, and
 - creating Transient views.
+
+#### Intention
 
 Intentions can be added to a target. Intentions will be associated with the Target indefinitely. (TODO: Explore Intentions that can be "removed" upon fulfillment).
 
@@ -81,6 +85,10 @@ Named Intentions can be removed from a target.
       function removeIntention(withName: String, from: Target)
 
     transaction.setIntention(intention, withName: name, to: target)
+
+#### Transient Views
+
+A transient view is one whose lifetime is controlled by the 
 
 ---
 
