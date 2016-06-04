@@ -25,7 +25,7 @@ A Runtime must be able to initialize with zero arguments.
 
 #### Essential state
 
-A Runtime can be paused. A new Runtime is initially playing (not paused). A paused Runtime will not forward events to its Actors.
+A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
 
     class Runtime
       var paused: Boolean
