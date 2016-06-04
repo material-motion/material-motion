@@ -28,7 +28,7 @@ A Runtime must be able to initialize with zero arguments.
 A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
 
     class Runtime
-      var paused: Boolean
+      var paused: Boolean = true
 
 A Runtime can be in two states: Active or Idle. The `state` property is readonly.
 
