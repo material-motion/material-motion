@@ -72,6 +72,13 @@ Named Intentions can be added to a target. If an Intention with the same name al
 
     transaction.setIntention(intention, withName: name, to: target)
 
+Named Intentions can be removed from a target.
+
+    class Transaction
+      function removeIntention(withName: String, from: Target)
+
+    transaction.setIntention(intention, withName: name, to: target)
+
 
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
