@@ -79,7 +79,9 @@ Named Intentions can be removed from a target.
 
     transaction.setIntention(intention, withName: name, to: target)
 
+---
 
+EVERYTHING BELOW THIS LINE IS AN UNORGANIZED SET OF NOTES.
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
