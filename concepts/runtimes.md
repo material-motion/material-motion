@@ -19,11 +19,13 @@ Directors register Intention with a Runtime. The Runtime creates Actors and pump
 
 ### The Runtime
 
-A Runtime can be initialized with zero arguments.
+A Runtime must be able to initialize with zero arguments.
 
     class Runtime {
       function init()
     }
+
+A Runtime must
 
 A Runtime may be provided with a new Director at any time in the Runtime's existence.
 
