@@ -62,8 +62,6 @@ For example, a Plan of "fade in" could reasonably be fulfilled by a system anima
 
 Good systems of fulfillment will carefully balance runtime performance, power consumption, and event coordination.
 
-We'll explore one particular implementation of a fulfillment system in the chapter on [Runtimes](runtimes.md).
-
 ## Examples of this pattern
 
 Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other Primitives types.
