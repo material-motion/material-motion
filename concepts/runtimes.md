@@ -30,10 +30,10 @@ A Runtime can be in the following states:
 - Active
 - Idle
 
-bo
+The state is read-only.
 
     class Runtime
-      var state: RuntimeState
+      readonly var state: RuntimeState
 
 A Runtime must be able to store multiple Director instances.
 
