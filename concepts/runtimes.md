@@ -1,4 +1,3 @@
-
 # Runtimes
 
 This section explores one specification for a **declarative motion engine**.
@@ -43,17 +42,15 @@ A Runtime can be in two states: Active or Idle. The `state` property is readonly
 
 #### Director registration
 
-A Runtime must be able to store multiple Director instances.
+A Runtime can store multiple Director instances.
 
     class Runtime
       var directors: [Director]
 
-A Runtime must be able to register new Director instances at any time.
+A Runtime can register new Director instances at any time.
 
     class Runtime
       function addDirector(Director)
-
-
 
 Each Director may register an initial set of Intentions in a setup method.
 
