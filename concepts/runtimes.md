@@ -88,7 +88,13 @@ Named Intentions can be removed from a target.
 
 #### Transient Views
 
-A transient view is one whose lifetime is controlled by the 
+A transient view is one whose lifetime is controlled by some condition.
+
+    class Transaction
+      function addTransientView(view, withCondition)
+
+    transaction.setIntention(intention, withName: name, to: target)
+
 
 ---
 
