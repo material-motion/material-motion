@@ -25,7 +25,7 @@ A Runtime must be able to initialize with zero arguments.
 
 #### Essential state
 
-A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
+A Runtime can be paused. A new Runtime is initially playing. A paused Runtime will not forward events to its Actors.
 
     class Runtime
       var paused: Boolean
@@ -51,6 +51,8 @@ A Runtime can register new Director instances at any time.
 
     class Runtime
       function addDirector(Director)
+
+When a Director is registered with 
 
 Each Director may register an initial set of Intentions in a setup method.
 
