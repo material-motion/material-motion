@@ -5,7 +5,7 @@ This section explores one specification for a **declarative motion engine**.
 
 ## Overview
 
-The purpose of a Runtime is to **coordinate** the expression of Plans in an application. Coordination is possible because of a combination of the [Plan/Fulfillment](patterns/plan-fulfillment.md) + [Coordinator/Plan](patterns/coordinator-plan.md) Patterns.
+The purpose of a Runtime is to **coordinate** the expression of Plans in an application. Coordination is possible because of the [Plan/Fulfillment](patterns/plan-fulfillment.md) and [Coordinator/Plan](patterns/coordinator-plan.md) patterns.
 
 For the purposes of this runtime we will use a metaphor oriented around theater terminology.
 
