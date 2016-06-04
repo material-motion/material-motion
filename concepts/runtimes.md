@@ -13,7 +13,7 @@ Throughout this chapter we will apply a metaphor oriented around theater termino
 - An Intention is a **plan**.
 - An Actor is expected to **fulfill** Intentions.
 
-A Director registers Intention with a Runtime; the Runtime creates Actors and gives them life.
+Directors register Intention with a Runtime. The Runtime creates Actors and pumps a variety of events to them. These events allow Actors to fulfill their Intentions.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
 A Runtime requires at least one instance of a Director. A Runtime may have many Director instances.
