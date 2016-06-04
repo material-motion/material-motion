@@ -58,12 +58,21 @@ For example:
 
 A Transaction instance provides methods for registering Intention to a Runtime.
 
-Intentions can be added to a target.
+Intentions can be added to a target. Intentions will be associated with the Target indefinitely. (TODO: Explore Intentions that can be "removed" upon fulfillment).
 
     class Transaction
       function addIntention(Intention, to: Target)
 
     transaction.addIntention(intention, to: target)
+
+Named Intentions can be added to a target. If an Intention with the same name already exists for a target, the old Intention is first removed and the new Intention is set.
+
+    class Transaction
+      function setIntention(Intention, withName: String, to: Target)
+
+    transaction.setIntention(intention, withName: name, to: target)
+
+
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
