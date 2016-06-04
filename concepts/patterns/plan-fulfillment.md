@@ -60,7 +60,7 @@ Exactly how a Plan is fulfilled is less important than that it **is** fulfilled 
 
 For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
 
-Good systems of fulfillment will carefully balance runtime performance, power consumption, and event coordination.
+Good systems of fulfillment will carefully balance the needs of runtime performance, power consumption, and event coordination.
 
 ## Examples of this pattern
 
