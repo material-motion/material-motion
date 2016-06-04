@@ -9,6 +9,10 @@ The purpose of a Runtime is to **coordinate** the expression of Plans in an appl
 
 For the purposes of this runtime we will use a metaphor oriented around theater terminology.
 
+- An **Intention** is a Plan.
+- An **Actor** is expected to **fulfill** Intentions.
+- A **Director** is the coordinating entity.
+
 The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
