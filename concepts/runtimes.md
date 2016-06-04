@@ -40,21 +40,30 @@ A Runtime can be in two states: Active or Idle. The `state` property is readonly
     class Runtime
       readonly var state: RuntimeState
 
-#### Director registration
+#### Starting Transactions
 
-A Runtime can store multiple Director instances.
-
-    class Runtime
-      var directors: [Director]
-
-A Runtime can register new Director instances at any time.
+Intentions must be registered to a Runtime with a Transaction. A Transaction defines a scope within which a set of operations may be bulked together.
 
     class Runtime
-      function addDirector(Director)
+      function beginTransaction() -> Transaction
+      function endTransaction(Transaction)
 
-When a Director is registered with 
+For example:
 
-Each Director may register an initial set of Intentions in a setup method.
+    transaction = runtime.beginTransaction()
+    // Register intentions
+    runtime.endTransaction(transaction)
+
+### A Transaction
+
+A Transaction instance provides methods for registering Intention to a Runtime.
+
+Intentions can be added to a target.
+
+    class Transaction
+      function addIntention(Intention, to: Target)
+
+    transaction.addIntention(intention, to: target)
 
 After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
 
