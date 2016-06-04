@@ -24,13 +24,17 @@ A Runtime must be able to initialize with zero arguments.
     class Runtime
       function init()
 
-A Runtime can be in the following states:
+A Runtime can be paused. A new Runtime is initially paused.
 
-- Initializing
-- Active
-- Idle
+    class Runtime
+      var paused: Boolean
 
-The state is read-only.
+A Runtime can be in two states: Active or Idle. The state is readonly.
+
+    RuntimeState {
+      Idle
+      Active
+    }
 
     class Runtime
       readonly var state: RuntimeState
