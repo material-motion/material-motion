@@ -41,6 +41,8 @@ A Runtime can be in two states: Active or Idle. The state is readonly.
     class Runtime
       readonly var state: RuntimeState
 
+#### Director registration
+
 A Runtime must be able to store multiple Director instances.
 
     class Runtime
