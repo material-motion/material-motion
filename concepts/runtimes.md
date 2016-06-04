@@ -25,7 +25,7 @@ A Runtime must be able to initialize with zero arguments.
       function init()
     }
 
-A Runtime must
+A Runtime must be able to store multiple Director instances.
 
 A Runtime may be provided with a new Director at any time in the Runtime's existence.
 
