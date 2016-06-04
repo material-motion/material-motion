@@ -19,7 +19,13 @@ Directors register Intention with a Runtime. The Runtime creates Actors and pump
 
 ### The Runtime
 
-A Runtime may be provided with multiple Directors at any time in the Runtime's existence.
+A Runtime can be initialized with zero arguments.
+
+    class Runtime {
+      function init()
+    }
+
+A Runtime may be provided with a new Director at any time in the Runtime's existence.
 
 Each Director may register an initial set of Intentions in a setup method.
 
