@@ -26,12 +26,12 @@ A Runtime must be able to initialize with zero arguments.
 
 #### Essential state
 
-A Runtime can be paused. A new Runtime is initially paused.
+A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
 
     class Runtime
       var paused: Boolean
 
-A Runtime can be in two states: Active or Idle. The state is readonly.
+A Runtime can be in two states: Active or Idle. The `state` property is readonly.
 
     RuntimeState {
       Idle
@@ -48,7 +48,7 @@ A Runtime must be able to store multiple Director instances.
     class Runtime
       var directors: [Director]
 
-A Runtime must allow new Directors to be registered at any time in the Runtime's existence.
+A Runtime must be able to register new Director instances at any time.
 
     class Runtime
       function addDirector(Director)
