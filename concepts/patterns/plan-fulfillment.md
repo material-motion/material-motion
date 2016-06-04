@@ -66,6 +66,6 @@ We'll explore one particular implementation of an fulfillment system in the chap
 
 ## Examples of this pattern
 
-Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other types of Primitives.
+Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other Primitives types.
 
 ![](../../_assets/PatternMatches.svg)
