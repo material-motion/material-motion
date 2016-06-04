@@ -54,7 +54,7 @@ For example:
     // Register intentions
     runtime.endTransaction(transaction)
 
-### A Transaction
+### Transactions
 
 A Transaction instance provides methods for registering Intention to a Runtime.
 
