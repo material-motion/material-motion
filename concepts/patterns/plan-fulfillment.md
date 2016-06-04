@@ -66,3 +66,4 @@ We'll explore one particular implementation of an fulfillment system in the chap
 
 ## Examples of this pattern
 
+![](../../_assets/PatternMatches.svg)
