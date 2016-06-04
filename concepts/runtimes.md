@@ -55,7 +55,14 @@ Whenever the Runtime's state changes it must notify its delegate. This i
     protocol RuntimeDelegate
       function runtime(runtime, stateDidChangeFrom: oldState)
 
-#### Starting Transactions
+#### Gesture handling
+
+A Runtime is responsible for forwarding gesture recognition events to the relevant Actor instances. Gesture recognizers also affect the Runtime's `state` value.
+
+    class Runtime
+      function addGestureRecognizer(gestureRecognizer)
+
+#### Starting a transaction
 
 Intentions must be registered to a Runtime with a Transaction. A Transaction defines a scope within which a set of operations may be bulked together.
 
