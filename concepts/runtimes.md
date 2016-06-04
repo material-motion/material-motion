@@ -24,6 +24,8 @@ A Runtime must be able to initialize with zero arguments.
     class Runtime
       function init()
 
+#### Essential state
+
 A Runtime can be paused. A new Runtime is initially paused.
 
     class Runtime
