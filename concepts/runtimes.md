@@ -16,7 +16,10 @@ Throughout this chapter we will apply a metaphor oriented around theater termino
 Directors register Intention with a Runtime. The Runtime creates Actors and pumps a variety of events to them. These events allow Actors to fulfill their Intentions.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
-A Runtime requires at least one instance of a Director. A Runtime may have many Director instances.
+
+### The Runtime
+
+A Runtime may be provided with multiple Directors at any time in the Runtime's existence.
 
 Each Director may register an initial set of Intentions in a setup method.
 
