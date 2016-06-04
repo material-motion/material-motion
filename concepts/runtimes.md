@@ -32,7 +32,7 @@ A Runtime can be paused. A new Runtime is initially paused. A paused Runtime wil
 
 A Runtime can be in two states: Active or Idle. The `state` property is readonly. A Runtime is Active so long as any of the following conditions are met:
 
-- Any Actor are active.
+- Any Actor are active. (TODO: Flesh this out in the Actor section).
 - Any Gestures are active.
 
     RuntimeState {
