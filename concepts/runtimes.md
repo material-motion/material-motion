@@ -30,7 +30,10 @@ A Runtime can be paused. A new Runtime is initially paused. A paused Runtime wil
     class Runtime
       var paused: Boolean = true
 
-A Runtime can be in two states: Active or Idle. The `state` property is readonly.
+A Runtime can be in two states: Active or Idle. The `state` property is readonly. A Runtime is Active so long as any of the following conditions are met:
+
+- Any Actor are active.
+- Any Gestures are active.
 
     RuntimeState {
       Idle
@@ -39,6 +42,18 @@ A Runtime can be in two states: Active or Idle. The `state` property is readonly
 
     class Runtime
       readonly var state: RuntimeState
+
+#### Event delegation
+
+A Runtime exposes certain events to a delegate.
+
+    class Runtime
+      var delegate: RuntimeDelegate
+
+Whenever the Runtime's state changes it must notify its delegate. This i
+
+    protocol RuntimeDelegate
+      function runtime(runtime, stateDidChangeFrom: oldState)
 
 #### Starting Transactions
 
@@ -88,12 +103,13 @@ Named Intentions can be removed from a target.
 
 #### Transient Views
 
-A transient view is one whose lifetime is bound to some condition.
+A transient view is one whose lifetime is bound to a condition.
 
     class Transaction
       function addTransientView(view, withCondition)
 
     transaction.setIntention(intention, withName: name, to: target)
+
 
 
 ---
