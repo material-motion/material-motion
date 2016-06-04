@@ -56,7 +56,10 @@ For example:
 
 ### Transactions
 
-A Transaction instance provides methods for registering Intention to a Runtime.
+A Transaction instance provides methods for:
+
+- registering Intention to a Runtime, and
+- creating Transient views.
 
 Intentions can be added to a target. Intentions will be associated with the Target indefinitely. (TODO: Explore Intentions that can be "removed" upon fulfillment).
 
