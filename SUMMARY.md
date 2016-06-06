@@ -7,7 +7,7 @@
    * [Patterns](concepts/patterns.md)
        * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
-   * [Runtimes](concepts/runtimes.md)
+   * [Runtime](concepts/runtimes.md)
 * [Specifications](specifications/README.md)
    * [Expression](concepts/expressions.md)
    * [Odeon Runtime](specifications/runtime.md)
