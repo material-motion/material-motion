@@ -6,7 +6,7 @@ Throughout this chapter we will apply a metaphor oriented around theater termino
 
 A Runtime object is capable of doing the following:
 
-- Associate Intention instances with target objects.
+- Associate Intention instances with target instances.
 - Create Actor instances that are able to fulfill the provided Intentions.
 - Feed events to Actor instances.
 - Delegate events to external systems.
