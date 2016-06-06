@@ -33,7 +33,10 @@ The operation log might resemble the following pseudo-object:
 
     > transaction.log
     [
-      add<FadeIn, circleView>,
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: FadeIn, target: circleView},
       add<Draggable, squareView>
       addNamed<"name1", Pinchable, squareView>
       addNamed<"name2", Rotatable, squareView>
