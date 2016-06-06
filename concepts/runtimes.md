@@ -13,18 +13,25 @@ A Runtime object is capable of doing the following:
 
 ## Associating Intentions
 
-Intentions are registered to Runtimes via Transactions. Transactions can be started and committed at will.
+Intentions are registered to Runtimes via Transactions. Transactions allow Runtimes to commit a group of Intentions together.
 
-You start a Transaction to begin registering Intentions with a Runtime.
+A Transaction should provide the following operations:
 
-    transaction = runtime.createTransaction()
-    
-    transaction.commit()
+- Add Intention to a target.
+- Add named Intention to a target.
+- Remove named Intention from a target.
 
+Each operation should be stored in an ordered list of operations.
 
-![Runtime](../_assets/RuntimeDiagram.png)  
+A Transaction can be committed to a Runtime. Example pseudo-code:
+
+    runtime.commit(transaction)
+
+The Runtime is expected to create the necessary Actors required to fulfill the Intentions.
 
 ## Creating Actors
+
+
 
 ## Events
 
