@@ -66,6 +66,6 @@ Good systems of fulfillment will carefully balance the needs of runtime performa
 
 ## Examples of this pattern
 
-Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other Primitives types.
+Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other types of [Primitives](../primitives.md).
 
 ![](../../_assets/PatternMatches.svg)
