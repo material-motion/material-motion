@@ -8,7 +8,7 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 Director pseudo-code:
 
-    setup() {
+    function setup() {
       dotView = View()
       dotView.position = runtime.stage.center
       dotView.size = {80, 80}
@@ -22,7 +22,7 @@ Director pseudo-code:
       runtime.commit(transaction)
     }
     
-    onTouchesGesture {
+    function onTouchesGesture() {
       position = gesture.locationInView(runtime.stage)
 
       var expression = Forces()
@@ -38,6 +38,43 @@ Director pseudo-code:
       runtime.commit(transaction)
     }
 
-## Photo Album
+What's required to build the above:
+
+- Squishable Intention
+- Runtime
+- Gesture recognizers
+- Transient views
+
+## Photo Album transition
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/photo-album.mp4"></video>
+
+    function setup() {
+      imageView = self.contextView # Always from the left side
+
+      rightView = rightViewController.view
+      rightImageView = rightViewController.imageViewForTransition
+
+      fitScale = min(rightView.width / imageView.width, rightView.height / imageView.height)
+      fitSize = Size(fitScale * imageView.width, fitScale * imageView.height)
+
+      var transaction = Transaction()
+      
+      transaction.addExpression(TimelineTween().fadeIn(), toView: rightView)
+      transaction.addExpression(Visibility().hidden(), toView: rightImageView)
+
+      rightFrame = Rect(rightView.x - fitSize.width / 2, rightView.y - fitSize.height / 2,
+                        fitSize.width, fitSize.height)
+
+      expression = Gesturable().draggable().and.rotatable().and.pinchable()
+      transaction.addExpression(expression, toView: imageView)
+      
+      expression = Springs().attachFrameTo(rightFrame).from(imageView.bounds)
+      expression = expression.and.attachZRotationTo(0).from(0)
+      expression = expression.and.attachScaleTo(1).from(0)
+      transaction.addExpression(expression, toView: imageView)
+      
+      transaction.addGesture(TapGesture(target: self))
+      
+      runtime.commit(transaction)
+    }
