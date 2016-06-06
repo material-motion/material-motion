@@ -10,6 +10,8 @@ Actively being worked on: Runtimes and Languages.
 
 ## Starmap implementation milestones
 
+Next goal: Tween Expression implementation on Android, Web, and iOS (either Objective-C or Swift).
+
 1. Tween Language available on Android, Web, and iOS.
 1. Gesture Language available on Android, Web, and iOS.
 1. Physical Simulation Language available on Android, Web, and iOS.
