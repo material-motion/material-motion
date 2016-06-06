@@ -2,7 +2,7 @@
 
 The following Directors represent increasingly complex levels of expression we'd like to achieve.
 
-## Fade In
+## Fade in
 
 What it does: fades in a view.
 
@@ -20,7 +20,7 @@ Director pseudo-code:
       self.view.addExpression(Tween().fadeIn())
     }
 
-## Fade In (with runtime)
+## Fade in (with runtime)
 
 What it does: fades in a view via a Runtime.
 
@@ -86,7 +86,7 @@ Director pseudo-code:
       runtime.commit(transaction)
     }
 
-## Photo Album transition
+## Photo album transition
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/photo-album.mp4"></video>
 
