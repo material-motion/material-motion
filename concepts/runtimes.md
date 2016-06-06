@@ -31,7 +31,7 @@ Consider the following transaction pseudo-code:
 
 The operation log might resemble the following pseudo-object:
 
-    transaction.log
+    > transaction.log
     [
       add<FadeIn, circleView>,
       add<Draggable, squareView>
