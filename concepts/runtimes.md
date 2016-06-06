@@ -18,7 +18,9 @@ A Transaction's public API should support the following operations:
 - Remove any Plan associated with a given name from a target.
 - Enumerate the log of operations.
 
-Internally, a Transaction must maintain an ordered list of operations. This ordered list of operations must be explicitly committed to a Runtime instance.
+Internally, a Transaction must maintain an ordered list of operations.
+
+A Transaction must be explicitly committed to a Runtime; e.g. `runtime.commit(transaction)`.
 
 Consider the following transaction pseudo-code:
 
