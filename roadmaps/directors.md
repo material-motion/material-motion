@@ -1,6 +1,6 @@
 # Directors
 
-The following Directors represent minimum levels of expression we'd like to achieve.
+The following Directors represent increasing levels of expression we'd like to achieve.
 
 ## Fade In
 
