@@ -9,8 +9,8 @@
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
    * [Runtimes](concepts/runtimes.md)
    * [Expressions](concepts/expressions.md)
-* Specifications
 * [Applications](applications/README.md)
+* Specifications
 * [Languages](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
