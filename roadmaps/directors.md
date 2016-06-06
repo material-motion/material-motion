@@ -37,3 +37,7 @@ Director pseudo-code:
       transaction.setExpression(expression, withName: "attachment", toView: dotView)
       runtime.commit(transaction)
     }
+
+## Photo Album
+
+<video width="200" muted="" autoplay="yes" loop="" src="../_assets/photo-album.mp4"></video>
