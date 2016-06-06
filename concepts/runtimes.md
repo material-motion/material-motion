@@ -40,7 +40,7 @@ After committing the above transaction, our Runtime's internal state might resem
 
 Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
 
-The Runtime is now expected to fulfill the Plans.
+The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
 
