@@ -4,7 +4,7 @@ The purpose of a Runtime is to enable the **coordination** of interactive motion
 
 A Runtime object is expected to be capable of doing the following:
 
-- Commit Plans.
+- Commit to Plans.
 - Fulfill Plans.
 
 ## Commit Plans
