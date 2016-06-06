@@ -38,7 +38,7 @@ After committing the above transaction, our Runtime's internal state might resem
 - circleView: [FadeIn]
 - squareView: [Draggable], {"name1": Pinchable}
 
-Note that `Rotatable` is not listed. This is because we removed the named intention for "name2" in this Transaction.
+Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
 
 The Runtime is now expected to fulfill the Plans.
 
