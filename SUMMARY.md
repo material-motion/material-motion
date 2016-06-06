@@ -12,7 +12,6 @@
 * [Specifications](specifications/README.md)
    * [Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
-* [Applications](applications/README.md)
 * [Languages](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
