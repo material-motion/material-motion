@@ -2,21 +2,52 @@
 
 The purpose of a Runtime is to enable the **coordination** of interactive motion in an application. A Runtime applies the Plan/Fulfillment and Coordinator/Plan patterns.
 
-Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor consists primarily of **Intentions** and **Actors**. Actors fulfill Intention (the plan).
+A Runtime object is expected to be capable of doing the following:
 
-A Runtime must be able to do the following, at a minimum:
+- Commit Plans.
+- Fulfill Plans.
 
-- Associate Intentions with target objects.
-- Create Actor instances that are able to fulfill the provided Intentions.
-- Feed events to Actor instances.
+## Commit Plans
 
-## Associating Intentions
+Plans are committed to Runtimes via Transactions.
 
+A Transaction should support the following operations:
 
+- Add Plan to a target.
+- Add named Plan to a target.
+- Remove named Plan from a target.
 
-![Runtime](../_assets/RuntimeDiagram.png)  
+A Transaction must maintain an ordered list of operations. This ordered list of operations will be committed to a Runtime.
 
-## Creating Actors
+Consider the following transaction pseudo-code:
 
-## Events
+    transaction = Transaction()
+    transaction.add(FadeIn, circleView)
+    transaction.add(Draggable, squareView)
+    transaction.addNamed("name", Pinchable, squareView)
+    transaction.addNamed("name", Rotatable, squareView)
+    transaction.removeNamed("name", squareView)
+    runtime.commit(transaction)
+
+The operation log might resemble the following pseudo-object:
+
+    > transaction.log
+    [
+      add<FadeIn, circleView>,
+      add<Draggable, squareView>
+      addNamed<"name1", Pinchable, squareView>
+      addNamed<"name2", Rotatable, squareView>
+      removeNamed<"name2", squareView>
+    ]
+
+After committing the above transaction, our Runtime's internal state might resemble the following:
+
+- circleView: [FadeIn]
+- squareView: [Draggable], {"name1": Pinchable}
+
+Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
+
+The Runtime is now expected to fulfill its Plans.
+
+## Fulfill Plans
 
