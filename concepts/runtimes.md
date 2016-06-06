@@ -6,7 +6,6 @@ A Runtime object is expected to be capable of doing the following:
 
 - Associate Plans with target instances.
 - Fulfill Intentions.
-- Feed events to Actor instances.
 - Delegate events to external systems.
 
 ## Associating Intentions
