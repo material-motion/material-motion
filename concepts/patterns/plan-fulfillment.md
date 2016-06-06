@@ -5,7 +5,7 @@ This pattern emphasizes a **separation** of the *plan* of motion from its *fulfi
 This pattern is important because:
 
 - It allows expensive work to execute on separate threads, processes, or workers.
-- Fulfillment is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent over a wire.
+- Fulfillment is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent from one device to another.
 
 ### A Plan of Motion
 
@@ -50,7 +50,7 @@ Consider this pseudo-code:
     # Reusing an Plan on a second target
     target2.addPlan(draggable)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given x,y coordinate. Whether this happens on release or whether the target is constantly being pulled back is up to the system.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or whether the target is constantly being pulled back is up to the system.
 
 `target2` is simply expected to be draggable.
 
@@ -60,7 +60,7 @@ Exactly how a Plan is fulfilled is less important than that it **is** fulfilled 
 
 For example, a Plan of "fade in" could reasonably be fulfilled by a system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
 
-Good systems of fulfillment will carefully balance the needs of runtime performance, power consumption, and event coordination.
+Good systems of fulfillment will carefully balance the needs of runtime performance, power consumption, event coordination, and user interaction.
 
 ## Examples of this pattern
 
