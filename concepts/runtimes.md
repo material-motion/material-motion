@@ -17,7 +17,7 @@ A Transaction's public API should support the following operations:
 - Associate a named Plan with a target.
 - Remove any Plan associated with a given name from a target.
 
-A Transaction must maintain an ordered list of operations. This ordered list of operations must be explicitly committed to a Runtime instance.
+Internally, a Transaction must maintain an ordered list of operations. This ordered list of operations must be explicitly committed to a Runtime instance.
 
 Consider the following transaction pseudo-code:
 
