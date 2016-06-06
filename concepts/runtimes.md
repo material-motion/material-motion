@@ -11,7 +11,7 @@ A Runtime instance must be capable of doing the following:
 
 Plans are committed to Runtimes via Transactions.
 
-A Transaction should support the following operations:
+A Transaction's public API should support the following operations:
 
 - Add Plan to a target.
 - Add named Plan to a target.
