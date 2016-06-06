@@ -6,9 +6,8 @@ This section explores one specification for a **declarative motion engine**.
 
 The purpose of a Runtime is to **coordinate** the expression of [Plans](patterns/plan-fulfillment.md) in an application.
 
-Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor primarily consists of **Directors**, **Actors**, and **Intentions**.
+Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor primarily consists of **Actors** and **Intentions**.
 
-- A Director is a **coordinator**.
 - An Intention is a **plan**.
 - An Actor is expected to **fulfill** Intentions.
 
