@@ -13,8 +13,8 @@ Plans are committed to Runtimes via Transactions.
 
 A Transaction's public API should support the following operations:
 
-- Add Plan to a target.
-- Add named Plan to a target.
+- Associate Plan with a target.
+- Associate named Plan with a target.
 - Remove named Plan from a target.
 
 A Transaction must maintain an ordered list of operations. This ordered list of operations must be explicitly committed to a Runtime instance.
