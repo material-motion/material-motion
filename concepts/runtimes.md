@@ -59,6 +59,6 @@ A Runtime must translate Plans into executable logic.
 
 We'll assume that a function exists that returns an object capable of executing the Plan. The method signature for this method might look like so:
 
-    function executorForPlan(plan) -> Object
+    function objectForPlan(plan) -> Object
 
 When a Transaction is committed, the Runtime must generate a fulfillment 
