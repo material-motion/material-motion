@@ -1,6 +1,6 @@
 # Runtimes
 
-The purpose of a Runtime is to enable the **coordination** of interactive motion in an application. A Runtime applies the Plan/Fulfillment and Coordinator/Plan patterns.
+The purpose of a Runtime is to enable the **coordination** of interactive motion in an application. A Runtime is an implementation of the Plan/Fulfillment pattern.
 
 A Runtime instance must be capable of doing the following:
 
