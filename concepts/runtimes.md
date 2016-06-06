@@ -43,14 +43,6 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"remove", name: "name2", target: squareView}
     ]
 
-After committing the above transaction, our Runtime's internal state might resemble the following:
-
-    circleView's intentions = [FadeIn]
-    squareView's intentions = [Draggable]
-    squareView's namedIntentions = {"name1": Pinchable}
-
-Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
-
 The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
@@ -61,4 +53,20 @@ We'll assume that a function exists that returns an object capable of executing 
 
     function objectForPlan(plan) -> Object
 
-When a Transaction is committed, the Runtime must generate a fulfillment 
+When a Transaction is committed, the Runtime must generate an object for each Plan in the Transaction. Consider the Transaction log we'd explored above:
+
+    > transaction.log
+    [
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
+      {action:"remove", name: "name2", target: squareView}
+    ]
+
+The Runtime's internal state after enumerating this log might look like so:
+
+
+    circleView's intentions = [FadeIn]
+    squareView's intentions = [Draggable]
+    squareView's namedIntentions = {"name1": Pinchable}
