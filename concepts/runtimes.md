@@ -8,9 +8,15 @@ A Runtime must be able to do the following, at a minimum:
 
 - Associate Intentions with target objects.
 - Create Actor instances that are able to fulfill the provided Intentions.
+- Feed events to Actor instances.
 
-## Intentions and Actors
+## Associating Intentions
 
 The Runtime creates Actors and passes a variety of events to them. These events allow Actors to fulfill their Intentions.
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
+
+## Creating Actors
+
+## Events
+
