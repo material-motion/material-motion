@@ -9,10 +9,6 @@ Close synonyms:
 - [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
 - [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
 
-## application
-
-Tools for expressing and building rich, interactive motion.
-
 ## dictionary
 
 A Language's list of terms and modifiers.
