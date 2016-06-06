@@ -16,6 +16,10 @@ Directors register Intention with a Runtime. The Runtime creates Actors and pump
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
 
+### How to read this chapter
+
+The API examples are not prescriptive. Please use good judgment on a given platform.
+
 ### The Runtime
 
 A Runtime must be able to initialize with zero arguments.
