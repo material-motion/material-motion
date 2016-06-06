@@ -9,6 +9,7 @@
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
    * [Runtimes](concepts/runtimes.md)
    * [Expressions](concepts/expressions.md)
+* Specifications
 * [Applications](applications/README.md)
 * [Languages](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
@@ -28,5 +29,4 @@
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
-* Specifications
 
