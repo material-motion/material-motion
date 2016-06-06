@@ -13,7 +13,9 @@ A Runtime object is capable of doing the following:
 
 ## Associating Intentions
 
-A Runtime is provided with new Intentions via a Transaction. Transactions are recursive and 
+Runtime Intention registration is transactional.
+
+You start a transaction to begin registering Intentions with a Runtime.
 
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
