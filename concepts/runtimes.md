@@ -55,5 +55,9 @@ The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
 
-A Runtime must translate Plans into executable logic. We'll assume that some function exists — `objectForPlan(plan)` — and that this function returns an object capable of executing the Plan.
+A Runtime must translate Plans into executable logic.
+
+We'll assume that a function exists that returns an object capable of executing the Plan. The method signature for this method might look like so:
+
+    function objectForPlan(plan) -> Object
 
