@@ -9,6 +9,7 @@ A Runtime object is expected to be capable of doing the following:
 
 ## Commit Plans
 
+
 Plans are committed to Runtimes via Transactions.
 
 A Transaction should support the following operations:
