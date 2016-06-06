@@ -2,7 +2,16 @@
 
 This roadmap defines the set of milestones we want to achieve together as a team. Consider this as an entry-point to the other roadmaps. We'll provide links where applicable.
 
-## Concept milestones
+## Starmap milestones
+
+1. Primitives.
+3. Expressions.
+2. Patterns.
+3. Runtimes.
+4. Applications.
+5. Languages.
+
+## Starmap implementation milestones
 
 1. Tween Language available on Android, Web, and iOS.
 1. Gesture Language available on Android, Web, and iOS.
