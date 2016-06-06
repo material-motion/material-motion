@@ -15,7 +15,7 @@ A Runtime is an object that is able to do the following, at a minimum:
 
 A Runtime may be provided with new Intentions at any time.
 
-Provide new Intentions with a Transaction.
+Provide new Intentions to a Runtime with a Transaction.
 
 
 ![Runtime](../_assets/RuntimeDiagram.png)  
