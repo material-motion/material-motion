@@ -9,7 +9,7 @@
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
    * [Runtimes](concepts/runtimes.md)
 * [Specifications](specifications/README.md)
-   * [Expressions](concepts/expressions.md)
+   * [Expression](concepts/expressions.md)
    * [Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
 * [Languages](languages/README.md)
