@@ -7,6 +7,8 @@ This pattern is important because:
 - It allows expensive work to execute on separate threads, processes, or workers.
 - Fulfillment is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent from one device to another.
 
+Another way to think of this pattern as Declaration/Execution.
+
 ### A Plan of Motion
 
 A Plan is simply **what you want something to do**.
