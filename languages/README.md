@@ -1,6 +1,6 @@
 # The Language of Motion
 
-Sadly, the terminology used in motion design is fragmented.  What some platforms refer to as "incoming easing" is called "ease out" on others.
+Motion design terminology is fragmented.  What some platforms refer to as "incoming easing" is called "ease out" on others.
 
 To ensure we're all speaking the same language, the terminology we use throughout the Material Motion framework is defined here.
 
