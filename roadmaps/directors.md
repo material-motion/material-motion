@@ -2,6 +2,16 @@
 
 The following Directors represent minimum levels of expression we'd like to achieve.
 
+## Fade In
+
+Director pseudo-code:
+
+    function setup() {
+      var transaction = Transaction()
+      transaction.addExpression(Tween().fadeIn(), toView: view)
+      runtime.commit(transaction)
+    }
+
 ## Squishable
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/squash-and-stretch.mp4"></video>
