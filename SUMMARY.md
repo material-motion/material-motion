@@ -10,7 +10,7 @@
    * [Runtimes](concepts/runtimes.md)
 * [Specifications](specifications/README.md)
    * [Expression](concepts/expressions.md)
-   * [Runtime](specifications/runtime.md)
+   * [Odeon Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
 * [Languages](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
