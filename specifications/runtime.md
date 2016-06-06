@@ -1,6 +1,6 @@
-# Runtimes
+# Odeon Runtime
 
-This section explores one specification for a **declarative motion engine**.
+This section explores one specification for a Runtime that follows a theatrical metaphor.
 
 ## Overview
 
