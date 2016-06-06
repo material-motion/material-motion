@@ -6,7 +6,7 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/squash-and-stretch.mp4"></video>
 
-Pseudo-code:
+Director pseudo-code:
 
     setup() {
       dotView = View()
