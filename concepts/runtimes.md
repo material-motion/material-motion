@@ -1,9 +1,5 @@
 # Runtimes
 
-This section explores one specification for a **declarative motion engine**.
-
-## Overview
-
 The purpose of a Runtime is to enable the **coordination** of interactive motion in an application. A Runtime applies the Plan/Fulfillment and Coordinator/Plan patterns.
 
 Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor primarily consists of **Actors** and **Intentions**.
