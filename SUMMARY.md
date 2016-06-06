@@ -12,7 +12,7 @@
    * [Expression](concepts/expressions.md)
    * [Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
-* [Languages](languages/README.md)
+* [The Language of Motion](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
    * [Actions](languages/actions.md)
