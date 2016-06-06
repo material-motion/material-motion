@@ -6,6 +6,29 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 What it does: fades in a view.
 
+What's required to build it:
+
+- Tween Language with fadeIn term
+
+Director pseudo-code:
+
+    Director(view) {
+      self.view = view
+    }
+
+    function setup() {
+      self.view.addExpression(Tween().fadeIn())
+    }
+
+## Fade In (with runtime)
+
+What it does: fades in a view via a Runtime.
+
+What's required to build it:
+
+- Tween Language with fadeIn term
+- A Runtime
+
 Director pseudo-code:
 
     Director(view) {
@@ -23,6 +46,13 @@ Director pseudo-code:
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/squash-and-stretch.mp4"></video>
 
 What it does: a circle follows the user's finger around while squashing/stretching in the direction of movement.
+
+What's required to build it:
+
+- Squishable Intention
+- Runtime
+- Gesture recognizers
+- Transient views
 
 Director pseudo-code:
 
@@ -55,13 +85,6 @@ Director pseudo-code:
       transaction.setExpression(expression, withName: "attachment", toView: dotView)
       runtime.commit(transaction)
     }
-
-What's required to build the above:
-
-- Squishable Intention
-- Runtime
-- Gesture recognizers
-- Transient views
 
 ## Photo Album transition
 
