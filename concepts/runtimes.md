@@ -17,10 +17,16 @@ A Transaction should support the following operations:
 - Add named Plan to a target.
 - Remove named Plan from a target.
 
-Each operation should be stored in an ordered list of operations.
+A Transaction must maintain an ordered list of operations. This ordered list of operations will be committed to a Runtime.
 
-A Transaction can be committed to a Runtime. Example pseudo-code:
+Consider the following transaction pseudo-code:
 
+    transaction = Transaction()
+    transaction.add(FadeIn, circleView)
+    transaction.add(Draggable, squareView)
+    transaction.addNamed("name", Pinchable, squareView)
+    transaction.addNamed("name", Rotatable, squareView)
+    transaction.removeNamed("name", squareView)
     runtime.commit(transaction)
 
 An example of a transaction log that might be committed, in pseudo-code:
