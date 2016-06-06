@@ -14,4 +14,4 @@ Coordinators use Plans that may be executed by any of the available [Primitives]
 
 It is important that the Coordinator not be involved in the Fulfillment of any Plans. Coordinators generally live in the "application" space, while Fulfillments may occur anywhere else.
 
-This pattern allows Coordinators to be written in a separate language from the application code (see: [Runtime](runtime.md)). It allows Coordinators to communicate over the wire between devices (see: [Applications](../applications/).
+This pattern allows Coordinators to be written in a separate language from the application code (see: [Runtime](runtime.md)). It allows Coordinators to communicate over the wire between devices (see: [Applications](../applications/)).
