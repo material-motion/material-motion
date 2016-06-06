@@ -27,7 +27,7 @@ A Transaction can be committed to a Runtime. Example pseudo-code:
 
     runtime.commit(transaction)
 
-The Runtime is expected to create the necessary Actors required to fulfill the Intentions.
+The Runtime is now expected to create the necessary Actors required to fulfill the Intentions.
 
 ## Creating Actors
 
