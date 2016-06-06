@@ -22,6 +22,8 @@ Director pseudo-code:
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/squash-and-stretch.mp4"></video>
 
+What it does: a circle follows the user's finger around while squashing/stretching in the direction of movement.
+
 Director pseudo-code:
 
     function setup() {
