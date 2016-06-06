@@ -4,12 +4,12 @@ The purpose of a Runtime is to enable the **coordination** of interactive motion
 
 A Runtime object is expected to be capable of doing the following:
 
-- Associate Plans with target instances.
+- Commit Plans.
 - Fulfill Plans.
 
-## Associating Plans
+## Commit Plans
 
-Plans are registered to Runtimes via Transactions. Transactions allow Runtimes to commit a group of Plans together.
+Plans are committed to Runtimes via Transactions.
 
 A Transaction should provide the following operations:
 
