@@ -45,8 +45,8 @@ The operation log might resemble the following pseudo-object:
 
 After committing the above transaction, our Runtime's internal state might resemble the following:
 
-- circleView: [FadeIn]
-- squareView: [Draggable], {"name1": Pinchable}
+    circleView: [FadeIn]
+    squareView: [Draggable], {"name1": Pinchable}
 
 Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
 
