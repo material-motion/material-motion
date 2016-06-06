@@ -45,9 +45,9 @@ The operation log might resemble the following pseudo-object:
 
 After committing the above transaction, our Runtime's internal state might resemble the following:
 
-    circleView.intentions = [FadeIn]
-    squareView.intentions = [Draggable]
-    squareView.namedIntention = {"name1": Pinchable}
+    circleView's intentions = [FadeIn]
+    squareView's intentions = [Draggable]
+    squareView's namedIntentions = {"name1": Pinchable}
 
 Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
 
