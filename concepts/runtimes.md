@@ -4,7 +4,7 @@ This section explores one specification for a **declarative motion engine**.
 
 ## Overview
 
-The purpose of a Runtime is enable the **coordination** interactive motion in an application.
+The purpose of a Runtime is enable the **coordination** of interactive motion in an application.
 
 Applications are entirely capable of defining motion without a Runtime
 
