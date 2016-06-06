@@ -55,3 +55,6 @@ The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
 
+A Runtime must translate Plans into executable logic. We'll assume that some function exists — `objectForPlan(plan)` — and that this function returns an object capable of executing the Plan.
+
+1. Create Actors, if needed.
