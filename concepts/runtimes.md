@@ -38,8 +38,8 @@ The operation log might resemble the following pseudo-object:
     [
       {action:"add", plan: FadeIn, target: circleView},
       {action:"add", plan: Draggable, target: squareView},
-      {action:"add", plan: Pinchable, name: "name1", target: squareView},
-      {action:"add", plan: Rotatable, name: "name2", target: squareView},
+      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
       {action:"remove", name: "name2", target: squareView}
     ]
 
