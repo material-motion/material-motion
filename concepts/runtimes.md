@@ -85,3 +85,6 @@ Let's map `objectForPlan` to each of our Plans:
     squareView's named Fulfillment entities = {"name1": objectForPlan(Pinchable)}
 
 We now have a set of instances that are able to fulfill the provided Plans.
+
+TODO: Discuss how to store these Plans.
+TODO: Discuss how to send events to these Plans.
