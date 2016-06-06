@@ -27,6 +27,23 @@ A Transaction can be committed to a Runtime. Example pseudo-code:
 
     runtime.commit(transaction)
 
+An example of a transaction log that might be committed, in pseudo-code:
+
+    [
+      add<FadeIn, circleView>,
+      add<Draggable, squareView>
+      addNamed<"name1", Pinchable, squareView>
+      addNamed<"name2", Rotatable, squareView>
+      removeNamed<"name2", squareView>
+    ]
+
+After committing the above transaction, our Runtime's internal state might resemble the following:
+
+- circleView: [FadeIn]
+- squareView: [Draggable], {"name1": Pinchable}
+
+Note that `Rotatable` is not listed. This is because we removed the named intention for "name2" in this Transaction.
+
 The Runtime is now expected to create the necessary Actors required to fulfill the Intentions.
 
 ## Creating Actors
