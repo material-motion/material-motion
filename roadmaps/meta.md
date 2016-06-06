@@ -4,12 +4,9 @@ This Roadmap defines the milestones we broadly want to achieve together as a tea
 
 ## Starmap milestones
 
-1. Primitives.
-3. Expressions.
-2. Patterns.
-3. Runtimes.
-4. Applications.
-5. Languages.
+Next goal: Lock down Primitives and Expressions chapters.
+
+Actively being worked on: Runtimes and Languages.
 
 ## Starmap implementation milestones
 
