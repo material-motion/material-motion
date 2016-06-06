@@ -8,14 +8,13 @@ Next goal: Lock down Primitives and Expressions chapters.
 
 Actively being worked on: Runtimes and Languages.
 
-## Starmap implementation milestones
+## Director milestones
 
-Next goal: Tween Expression implementation on Android, Web, and iOS (either Objective-C or Swift).
+Being able to express the following experiences as Directors means we've satisfied some minimum level of functionality.
 
-1. Tween Language available on Android, Web, and iOS.
-1. Gesture Language available on Android, Web, and iOS.
-1. Physical Simulation Language available on Android, Web, and iOS.
-1. Motion Runtime available on Android, Web, and iOS.
+### Squishable
+
+
 
 ## Platform-specific milestones
 
