@@ -16,7 +16,6 @@ A Transaction should support the following operations:
 - Add Plan to a target.
 - Add named Plan to a target.
 - Remove named Plan from a target.
-- List Plans for target.
 
 A Transaction must maintain an ordered list of operations. This ordered list of operations must be explicitly committed to a Runtime instance.
 
