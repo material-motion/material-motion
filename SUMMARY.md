@@ -10,7 +10,7 @@
    * [Runtimes](concepts/runtimes.md)
    * [Expressions](concepts/expressions.md)
 * [Specifications](specifications/README.md)
-   * [Runtimes](specifications/runtime.md)
+   * [Runtime](specifications/runtime.md)
 * [Applications](applications/README.md)
 * [Languages](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
