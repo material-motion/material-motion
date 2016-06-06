@@ -14,7 +14,7 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 ### Squishable
 
-[](../_assets/squash-and-stretch.mp4)
+<video width="200" muted="" loop="" src="../_assets/squash-and-stretch.mp4"></video>
 
 ## Platform-specific milestones
 
