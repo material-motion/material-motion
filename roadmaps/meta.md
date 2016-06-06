@@ -10,7 +10,7 @@ Actively being worked on: Runtimes and Languages.
 
 ## Director milestones
 
-Being able to express the following experiences as Directors means we've satisfied some minimum level of functionality.
+The following Directors represent minimum levels of expression we'd like to achieve.
 
 ### Squishable
 
