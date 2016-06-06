@@ -40,7 +40,7 @@ The operation log might resemble the following pseudo-object:
       {action:"add", plan: Draggable, target: squareView},
       {action:"add", plan: Pinchable, name: "name1", target: squareView},
       {action:"add", plan: Rotatable, name: "name2", target: squareView},
-      {action:"remove", name: "name2", target: squareView},
+      {action:"remove", name: "name2", target: squareView}
     ]
 
 After committing the above transaction, our Runtime's internal state might resemble the following:
