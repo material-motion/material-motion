@@ -32,7 +32,7 @@ Consider the following transaction pseudo-code:
     transaction.removeNamed("name2", squareView)
     runtime.commit(transaction)
 
-The operation log might resemble the following pseudo-object:
+The Transaction's log might resemble the following pseudo-object:
 
     > transaction.log
     [
