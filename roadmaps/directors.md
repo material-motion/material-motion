@@ -4,11 +4,17 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 ## Fade In
 
+What it does: fades in a view.
+
 Director pseudo-code:
+
+    Director(view) {
+      self.view = view
+    }
 
     function setup() {
       var transaction = Transaction()
-      transaction.addExpression(Tween().fadeIn(), toView: view)
+      transaction.addExpression(Tween().fadeIn(), toView: self.view)
       runtime.commit(transaction)
     }
 
