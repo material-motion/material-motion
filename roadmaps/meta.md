@@ -1,8 +1,4 @@
-# Meta Roadmap
-
-This Roadmap defines the milestones we broadly want to achieve together as a team.
-
-## Starmap milestones
+# Starmap planning
 
 Next goal: Lock down Primitives and Expressions chapters.
 
