@@ -43,6 +43,14 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"remove", name: "name2", target: squareView}
     ]
 
+After committing the above transaction, our Runtime's internal state might resemble the following:
+
+    circleView's Plans = [FadeIn]
+    squareView's Plans = [Draggable]
+    squareView's named Plans = {"name1": Pinchable}
+
+Note that `Rotatable` is not listed. This is because we also removed the named intention for "name2" in this Transaction.
+
 The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
@@ -64,9 +72,16 @@ When a Transaction is committed, the Runtime must generate an object for each Pl
       {action:"remove", name: "name2", target: squareView}
     ]
 
-The Runtime's internal state after enumerating this log might look like so:
+Recall that the above log translated to the following set of Plans:
 
+    circleView's Plans = [FadeIn]
+    squareView's Plans = [Draggable]
+    squareView's named Plans = {"name1": Pinchable}
 
-    circleView's intentions = [FadeIn]
-    squareView's intentions = [Draggable]
-    squareView's namedIntentions = {"name1": Pinchable}
+Let's map `objectForPlan` to each of our Plans:
+
+    circleView's Fulfillment entities = [objectForPlan(FadeIn)]
+    squareView's Fulfillment entities = [objectForPlan(Draggable)]
+    squareView's named Fulfillment entities = {"name1": objectForPlan(Pinchable)}
+
+We now have a set of instances that are able to fulfill the provided Plans.
