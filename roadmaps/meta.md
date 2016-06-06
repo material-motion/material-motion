@@ -1,6 +1,6 @@
 # Meta Roadmap
 
-This roadmap defines the set of milestones we want to achieve together as a team. Consider this as an entry-point to the other roadmaps. We'll provide links where applicable.
+This Roadmap defines the milestones we broadly want to achieve together as a team.
 
 ## Starmap milestones
 
