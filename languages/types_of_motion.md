@@ -1,6 +1,6 @@
 # Types of Motion
 
-Motion can be controlled either byan immediate trigger, or gradually with a gesture.
+Motion can be controlled either by an immediate trigger, or gradually with a gesture.
 
 
 ### Triggered
