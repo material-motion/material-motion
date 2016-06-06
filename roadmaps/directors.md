@@ -6,6 +6,8 @@ The following Directors represent minimum levels of expression we'd like to achi
 
 <video width="200" muted="" autoplay="yes" loop="" src="../_assets/squash-and-stretch.mp4"></video>
 
+Pseudo-code:
+
     setup() {
       dotView = View()
       dotView.position = runtime.stage.center
