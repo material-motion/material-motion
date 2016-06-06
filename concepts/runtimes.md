@@ -13,6 +13,7 @@ A Runtime must be able to do the following, at a minimum:
 ## Associating Intentions
 
 
+
 ![Runtime](../_assets/RuntimeDiagram.png)  
 
 ## Creating Actors
