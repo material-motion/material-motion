@@ -14,7 +14,7 @@ Being able to express the following experiences as Directors means we've satisfi
 
 ### Squishable
 
-
+[](../_assets/squash-and-stretch.mp4)
 
 ## Platform-specific milestones
 
