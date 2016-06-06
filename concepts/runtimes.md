@@ -5,17 +5,17 @@ The purpose of a Runtime is to enable the **coordination** of interactive motion
 A Runtime object is expected to be capable of doing the following:
 
 - Associate Plans with target instances.
-- Fulfill Intentions.
+- Fulfill Plans.
 
-## Associating Intentions
+## Associating Plans
 
-Intentions are registered to Runtimes via Transactions. Transactions allow Runtimes to commit a group of Intentions together.
+Plans are registered to Runtimes via Transactions. Transactions allow Runtimes to commit a group of Plans together.
 
 A Transaction should provide the following operations:
 
-- Add Intention to a target.
-- Add named Intention to a target.
-- Remove named Intention from a target.
+- Add Plan to a target.
+- Add named Plan to a target.
+- Remove named Plan from a target.
 
 Each operation should be stored in an ordered list of operations.
 
@@ -40,12 +40,6 @@ After committing the above transaction, our Runtime's internal state might resem
 
 Note that `Rotatable` is not listed. This is because we removed the named intention for "name2" in this Transaction.
 
-The Runtime is now expected to create the necessary Actors required to fulfill the Intentions.
+The Runtime is now expected to fulfill the Plans.
 
-## Creating Actors
-
-
-
-## Events
-
-## Delegating events
+## Fulfill Plans
