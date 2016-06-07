@@ -59,9 +59,15 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
+### Plan to Executor association
+
 We'll assume a function exists that returns an object capable of fulfilling a Plan. We'll call such an object an **executor**. The method signature for this method might look like this:
 
     function executorForPlan(plan, target) -> Executor
+
+This function must use a `Plan type → Executor type` lookup table to identify what type of Executor it needs to instantiate.
+
+Our recommendation is to allow Executors to register, at runtime, which Plans they expect to be able to fulfill. This enforces a healthy separation of Plan/Fulfillment.
 
 ### On commit: generate executors
 
@@ -90,7 +96,7 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 Executors can either be **unique** or **common**.
 
-A unique executor has **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target. Relevant being defined as "a Plan that the executor is able to fulfill".
+A unique executor requires **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target. Relevant being defined as "a Plan that the executor is able to fulfill".
 
 A common executor can have at **most** one instance for a given target.
 
