@@ -4,7 +4,7 @@
 
 An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
 
-Close synonyms:
+Similar concepts:
 
 - [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
 - [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
@@ -17,7 +17,7 @@ A Language's list of terms and modifiers.
 
 A node in a hierarchical layout/compositing system.
 
-Synonyms:
+Examples:
 
 - [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
 - DOM element (web)
@@ -30,7 +30,7 @@ An Intention is a type of Plan.
 
 A Plan is **what you want something to do**.
 
-Synonyms:
+Examples:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
 
@@ -38,7 +38,7 @@ Synonyms:
 
 Either an operating system or a cross-platform abstraction layer.
 
-Synonyms:
+Examples:
 
 - iOS
 - Android
