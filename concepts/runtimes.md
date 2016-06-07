@@ -151,7 +151,7 @@ For example: if an executor does not care about the animation event then the Run
 
 ### Energy in a Runtime
 
-At any given point in time a Runtime can either be Idle or Active.
+At any given point in time a Runtime can either be **idle** or **active**.
 
 A Runtime is Active when there is at least one active executor.
 
@@ -159,4 +159,4 @@ An executor can be active for any of the following reasons:
 
 - An associated gesture recognizer is active.
 - The animate event returned a Boolean value of false.
-- The executor
+- The executor has informed the Runtime of an ongoing callback and the callback has not completed.
