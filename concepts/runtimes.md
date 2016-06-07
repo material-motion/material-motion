@@ -57,13 +57,13 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
-We'll assume that a function exists that returns an object capable of fulfilling a Plan. We'll call these objects: **runtime children**. The method signature for this method might look like this:
+We'll assume that a function exists that returns an object capable of fulfilling a Plan. We'll call these objects: **executors**. The method signature for this method might look like this:
 
-    function runtimeChildForPlan(plan) -> Object
+    function executorForPlan(plan) -> Object
 
 ### On commit: generate runtime children
 
-When a Transaction is committed, the Runtime must generate a runtime child for each Plan in the Transaction. Consider the Transaction log we'd explored above:
+When a Transaction is committed, the Runtime must generate an executor for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
     [
@@ -80,13 +80,13 @@ Recall that the above log translated to the following set of Plans:
     squareView's Plans = [Draggable]
     squareView's named Plans = {"name1": Pinchable}
 
-Let's map `runtimeChildForPlan` to each of our Plans:
+Let's map `executorForPlan` to each of our Plans:
 
-    circleView's runtime objects = [runtimeChildForPlan(FadeIn)]
-    squareView's runtime objects = [runtimeChildForPlan(Draggable)]
-    squareView's named runtime objects = {"name1": runtimeChildForPlan(Pinchable)}
+    circleView's runtime objects = [executorForPlan(FadeIn)]
+    squareView's runtime objects = [executorForPlan(Draggable)]
+    squareView's named runtime objects = {"name1": executorForPlan(Pinchable)}
 
-We now have a collection of runtime children that are able to fulfill the provided Plans.
+We now have a collection of executors that are able to fulfill the provided Plans.
 
 ### Storage and retrieval of runtime children
 
