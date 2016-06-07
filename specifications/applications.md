@@ -1,3 +1,5 @@
+Status of this document: **Sourcing ideas**
+
 # Applications
 
 What types of applications can be used to express and explore interactivity?
