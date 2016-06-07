@@ -96,7 +96,7 @@ Constraints:
 - Certain Plans may desire having one executor per target per Plan. Other Plans may desire having only one executor per target, for any number of Plans.
 - Targets can be marked as "dependent" on other targets. This affects order of executors for events.
 
-### Forwarding events to runtime children
+### Forwarding events to executors
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
