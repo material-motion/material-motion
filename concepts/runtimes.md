@@ -128,7 +128,7 @@ on every animation cycle.
 
 Alternatively, consider how this situation would have played out if we had one executor per plan. There would now be two representations of `velocity` for the same `position`. On each animation step one executor would "lose". The result would be a confusing animation.
 
-Note that one executor per type of Plan does not resolve the problem of state across different types of Plans. This is an open problem.
+Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
 ### Forwarding events to executors
 
