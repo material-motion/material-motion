@@ -4,8 +4,8 @@ This is a definition of the Terms used by the Material Motion team in their Expr
 
     Term: fadeIn()
     Modifiers:
-    - .from(float)
-    - .to(float)
+    - .from(float) Default: 0
+    - .to(float)   Default: 1
 
 Fade an element's opacity in.
 
