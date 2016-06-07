@@ -34,6 +34,17 @@ Required target properties:
 
 ---
 
+Term: moveFrom(point)
+
+Moves the target to the provided position.
+
+Modifiers:
+
+- .from(position) Default: point
+- .to(position)   Default: <null>
+
+---
+
 Term: moveTo(point)
 
 Moves the target to the provided position.
