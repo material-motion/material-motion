@@ -40,11 +40,11 @@ E.g. MaterialDesignTween().fadeIn()
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
-## Runtime
+## Odeon Runtime
 
-Opinionated Tween Expressions.
+An implementation of the Runtime concept applying the Odeon metaphor of Director/Intention/Actor.
 
-[Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
+[Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime.html).
 
 E.g. MaterialDesignTween().fadeIn()
 
