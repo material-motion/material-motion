@@ -22,6 +22,10 @@ Examples:
 - [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
 - DOM element (web)
 
+## executor
+
+An executor fulfills one or more Plans of a given type.
+
 ## intention
 
 An Intention is a type of Plan.
