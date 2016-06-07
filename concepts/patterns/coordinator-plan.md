@@ -1,3 +1,5 @@
+This document's current status: Stable
+
 ## The Coordinator/Plan pattern
 
 A **Coordinator** describes an interactive experience by creating Plans and associating them with targets.
