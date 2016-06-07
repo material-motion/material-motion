@@ -4,7 +4,7 @@ Motion design terminology is fragmented.  What some platforms refer to as "incom
 
 The Material Motion team uses this guide to discuss motion across platforms and languages.
 
-For our language to be effective, it must enable people to naturally express a complete **thought** that accurately describes an interactive motion.  Each **thought** begins with an **action** and is followed by a string of **connectors** and **values**.
+For our language to be effective, it must enable the expression of a complete **thought** that accurately describes a piece of interactive motion.  Each **thought** begins with an **action** and is followed by a string of **connectors** and **values**.
 
 ## Examples
 
