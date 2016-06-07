@@ -142,7 +142,7 @@ Executors are informed of events via the following pseudo-algorithm:
 
 A Runtime should make reasonable efforts to send relevant events to executors.
 
-For example: if an executor does not care about the animation event then the Runtime should not inform the executor. If an executor cares about a gesture recognizer, it should only receive events from that specific recognizer.
+For example: if an executor does not care about the animation event then the Runtime should not inform the executor. If an executor cares about a gesture recognizer, only send events from that specific recognizer.
 
 #### Types of external event
 
