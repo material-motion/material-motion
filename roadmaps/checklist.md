@@ -42,9 +42,39 @@ E.g. MaterialDesignTween().fadeIn()
 
 ## Odeon Runtime
 
-An implementation of the [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/runtimes.html) concept applying the Odeon metaphor of Director/Intention/Actor.
+An implementation of the [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/runtimes.html) concept applying the Odeon metaphor of Director/Intention/Actor. The Runtime can be built in stages.
 
 [Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime.html).
+
+### Minimum-viable runtime
+
+Transactions for registering Intentions.
+
+| Platform | Implementation | Estimated # eng days |
+|:--------:|:--------------:|:--------------------:|
+| Android  | Not started | Unknown |
+| iOS      | Not started | Unknown |
+| Web      | Not started | Unknown |
+
+Actor creation and storage mechanisms.
+
+| Platform | Implementation | Estimated # eng days |
+|:--------:|:--------------:|:--------------------:|
+| Android  | Not started | Unknown |
+| iOS      | Not started | Unknown |
+| Web      | Not started | Unknown |
+
+Support for Actors driven by external systems. E.g. Core Animation on iOS.
+
+| Platform | Implementation | Estimated # eng days |
+|:--------:|:--------------:|:--------------------:|
+| Android  | Not started | Unknown |
+| iOS      | Not started | Unknown |
+| Web      | Not started | Unknown |
+
+Actor event forwarding for:
+
+- Animation pumps.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
