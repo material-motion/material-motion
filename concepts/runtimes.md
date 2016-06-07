@@ -80,24 +80,11 @@ Recall that the above log translated to the following internal state:
 
 Let's ask each TargetManager to create its executors by calling our hypothetical `executorForPlan` on each Plan.
 
+![](../_assets/Executors.svg)
+
+Note that we've created two executors: one for Tweens, another for Gestures. These executors are stored in the "TargetManager" entity.
 
 
-We now have a collection of executors that are able to fulfill the provided Plans. The object graph of a Runtime implementation might now look like this:
-
-### Storage and retrieval of executors
-
-
-
-
-
-Constraints:
-
-For a given target, must be able to:
-
-- enumerate all executors in a stable order,
-
-- Certain Plans may desire having one executor per target per Plan. Other Plans may desire having only one executor per target, for any number of Plans.
-- Targets can be marked as "dependent" on other targets. This affects order of executors for events.
 
 ### Forwarding events to executors
 
