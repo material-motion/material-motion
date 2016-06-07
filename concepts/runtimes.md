@@ -88,11 +88,11 @@ Let's map `runtimeChildForPlan` to each of our Plans:
 
 We now have a collection of runtime children that are able to fulfill the provided Plans.
 
-### Storage of runtime objects
+### Storage of runtime children
 
 
 
-### Forwarding events to runtime objects
+### Forwarding events to runtime children
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
