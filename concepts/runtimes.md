@@ -84,7 +84,7 @@ Let's ask each TargetManager to create its executors by calling our hypothetical
 
 ![](../_assets/Executors.svg)
 
-We've created three executors in total. `circleView` has two executors while `squareView` only has one. These executors are stored in the "TargetManager" entity.
+We've created three executors in total. `circleView` has two executors while `squareView` only has one.
 
 ### Unique vs common executors
 
