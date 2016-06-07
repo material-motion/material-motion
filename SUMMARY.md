@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
+   * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
        * [Primitives](concepts/primitives.md)
        * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
