@@ -98,7 +98,7 @@ Let's create executors by calling our hypothetical `executorForPlan` on each tar
 
 We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
 
-### Unique vs common executors
+### Shared vs unique executors
 
 Executors can either be **unique** or **common**.
 
