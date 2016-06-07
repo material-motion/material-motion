@@ -6,7 +6,7 @@ This is a definition of the Terms used by the Material Motion team in their Expr
 
 Term: fadeIn()
 
-Fade an element's opacity in.
+Fade the target's opacity in.
 
 Modifiers:
 
@@ -17,7 +17,18 @@ Modifiers:
 
 Term: fadeOut()
 
-Fade an element's opacity out.
+Fade the target's opacity out.
+
+Modifiers:
+
+- .from(float) Default: 1
+- .to(float)   Default: 0
+
+---
+
+Term: moveTo()
+
+Moves 
 
 Modifiers:
 
@@ -28,6 +39,6 @@ Modifiers:
 
 Term: squashAndStretch()
 
-The element squashes and stretches in the direction of its movement.
+The target squashes and stretches in the direction of its movement.
 
 ---
