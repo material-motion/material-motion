@@ -16,7 +16,7 @@ This is a list of implementations we hope to make available on every platform.
 
 [Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
 
-E.g. Tween().fadeIn()
+E.g. CoreAnimation().fadeIn()
 
 | Platform | Implementation |
 |:--------:|:----------:|
