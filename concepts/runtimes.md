@@ -151,7 +151,7 @@ For example: if an executor does not care about the animation event then the Run
 
 ### Runtime active vs idle state
 
-At any given point in time a Runtime can either be **idle** or **active**.
+At any given time a Runtime can either be **idle** or **active**.
 
 A Runtime is Active when there is at least one active executor.
 
