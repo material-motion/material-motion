@@ -26,13 +26,13 @@ Synonyms:
 
 An Intention is a type of Plan.
 
-Synonyms:
-
-- [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
-
 ## plan
 
 A Plan is **what you want something to do**.
+
+Synonyms:
+
+- [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
 
 ## platform
 
