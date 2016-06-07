@@ -104,7 +104,7 @@ Executors are expected to fulfill specific types of Plans. On a given target, on
 
 One practical benefit of this approach is for physical simulation. Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
 
-If each instance of a Plan has its own executor, each executor would end up creating its own interpretation of the velocity. The net result would be a confusing physical simulation.
+If every instance of a Plan has its own executor, each executor would end up creating its own interpretation of the velocity. The net result would be a confusing physical simulation.
 
 What if each Plan is provided to a single executor? The executor can now know to only create one representation of velocity. It can also sum the two forces and apply them to the velocity in one step.
 
