@@ -130,9 +130,9 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Repeated: forward animate events to executors
+### Repeated: forward animation events to executors
 
-The Runtime is now expected to forward relevant external events to the executors.
+The Runtime is now expected to forward animation events to the executors.
 
 Executors are informed of events via the following pseudo-algorithm:
 
