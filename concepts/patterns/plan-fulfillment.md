@@ -1,4 +1,4 @@
-This document's current status: Stable
+This document's current status: **Stable**
 
 ## The Plan/Fulfillment pattern
 
