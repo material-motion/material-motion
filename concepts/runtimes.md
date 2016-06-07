@@ -88,7 +88,7 @@ Note that we've created two executors: one for Tweens, another for Gestures. The
 
 Executors can either be **unique** or **common**.
 
-A unique executor has at **most** one instance for a given target. Every Plan registered to the target that can be fulfilled by this executor type will be provided to the unique instance.
+A unique executor has **at most** one instance for a given target. Every Plan registered to the target that can be fulfilled by this executor type will be provided to the unique instance.
 
 A common executor can have at **most** one instance for a given target.
 
