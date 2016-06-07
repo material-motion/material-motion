@@ -63,7 +63,7 @@ A Runtime must translate Plans into executable logic.
 
 We'll assume a function exists that returns an object capable of fulfilling a Plan. We'll call such an object an **executor**. The method signature for this method might look like this:
 
-    function executorForPlan(plan, target) -> Executor
+    function executorForPlan(plan, target, existingExecutors) -> Executor
 
 This function must use a `Plan type → Executor type` lookup table to identify what type of Executor it needs to instantiate.
 
