@@ -35,6 +35,8 @@ Also consider this pseudo-code:
 
 In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the Plan is eventually fulfilled.
 
+Note that the above example poses interesting technical challenges that should be carefully considered. If the `animate` function refers to objects out of its scope it may cause more problems than it's worth.
+
 Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
 
 Consider this pseudo-code:
