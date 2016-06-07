@@ -4,7 +4,7 @@ A **Coordinator** describes an interactive experience by creating Plans and asso
 
 > Imagine a transition between two states. A Coordinator might create a [Timeline](primitives.md) and associate many Tweens with elements in the scene.
 
-Coordinators use Plans that may be executed by any of the available [Primitives](primitives.md). This enables the expression of **coordinated interactions** involving gestures, animations, and physical simulation.
+Coordinators use Plans that may be fulfilled by any of the available [Primitives](primitives.md). This enables the expression of **coordinated interactions** involving gestures, animations, and physical simulation.
 
 > Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordinator might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
 
