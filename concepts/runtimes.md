@@ -88,7 +88,7 @@ Let's map `runtimeChildForPlan` to each of our Plans:
 
 We now have a collection of runtime children that are able to fulfill the provided Plans.
 
-### Storage of runtime children
+### Storage and retrieval of runtime children
 
 Constraints:
 
