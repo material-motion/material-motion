@@ -22,6 +22,7 @@
    * [Patterns](languages/patterns.md)
    * [Simulation](languages/simulation.md)
    * [Other Vocabulary](languages/other_vocabulary.md)
+* [Dictionary](dictionary.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
@@ -29,5 +30,4 @@
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
-* [Dictionary](dictionary.md)
 
