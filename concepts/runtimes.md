@@ -51,6 +51,8 @@ After committing the above transaction, our Runtime's internal state might resem
 
 Note that `Rotatable` is not listed. This is because we *also* removed the named intention for "name2" in this Transaction.
 
+![](../_assets/ExecutorManager.svg)
+
 The Runtime is now expected to fulfill its Plans.
 
 ## Fulfill Plans
@@ -87,8 +89,6 @@ Let's map `executorForPlan` to each of our Plans:
     squareView's named runtime objects = {"name1": executorForPlan(Pinchable)}
 
 We now have a collection of executors that are able to fulfill the provided Plans. The object graph of a Runtime implementation might now look like this:
-
-![](../_assets/ExecutorManager.svg)
 
 ### Storage and retrieval of executors
 
