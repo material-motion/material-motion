@@ -86,16 +86,21 @@ Let's map `executorForPlan` to each of our Plans:
     squareView's runtime objects = [executorForPlan(Draggable)]
     squareView's named runtime objects = {"name1": executorForPlan(Pinchable)}
 
-We now have a collection of executors that are able to fulfill the provided Plans.
+We now have a collection of executors that are able to fulfill the provided Plans. The object graph of a Runtime implementation might now look like this:
+
+![](../_assets/ExecutorManager.svg)
 
 ### Storage and retrieval of executors
+
+
+
+
 
 Constraints:
 
 For a given target, must be able to:
 
-- enumerate all executors in a stable order.
-
+- enumerate all executors in a stable order,
 
 - Certain Plans may desire having one executor per target per Plan. Other Plans may desire having only one executor per target, for any number of Plans.
 - Targets can be marked as "dependent" on other targets. This affects order of executors for events.
