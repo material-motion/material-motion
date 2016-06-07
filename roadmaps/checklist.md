@@ -42,7 +42,7 @@ E.g. MaterialDesignTween().fadeIn()
 
 ## Odeon Runtime
 
-An implementation of the Runtime concept applying the Odeon metaphor of Director/Intention/Actor.
+An implementation of the [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/runtimes.html) concept applying the Odeon metaphor of Director/Intention/Actor.
 
 [Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime.html).
 
