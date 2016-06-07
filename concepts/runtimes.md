@@ -80,9 +80,9 @@ Recall that the above log translated to the following set of Plans:
 
 Let's map `objectForPlan` to each of our Plans:
 
-    circleView's Fulfillment entities = [objectForPlan(FadeIn)]
-    squareView's Fulfillment entities = [objectForPlan(Draggable)]
-    squareView's named Fulfillment entities = {"name1": objectForPlan(Pinchable)}
+    circleView's objects = [objectForPlan(FadeIn)]
+    squareView's objects = [objectForPlan(Draggable)]
+    squareView's named objects = {"name1": objectForPlan(Pinchable)}
 
 We now have a set of instances that are able to fulfill the provided Plans.
 
