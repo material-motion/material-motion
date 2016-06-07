@@ -25,9 +25,9 @@
        * [Simulation](languages/simulation.md)
        * [Other Vocabulary](languages/other_vocabulary.md)
 * [Contributing](CONTRIBUTING.md)
-* [Glossary](GLOSSARY.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
+* [Glossary](GLOSSARY.md)
 
