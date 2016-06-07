@@ -69,7 +69,7 @@ This function will use a `Plan type → Executor type` lookup table. The lookup 
 
 **Plan → Executor**
 
-The simplest way to generate the lookup table is to allow Plans to define which Executor they require. This does not provide the cleanest separation of concerns. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+Plans define the Executor they require. This requires Plans to be aware of their Executors. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
 **Executor → Plan**
 
