@@ -13,6 +13,10 @@ Modifiers:
 - .from(float) Default: 0
 - .to(float)   Default: 1
 
+Required target properties:
+
+- opacity
+
 ---
 
 Term: fadeOut()
@@ -23,6 +27,10 @@ Modifiers:
 
 - .from(float) Default: 1
 - .to(float)   Default: 0
+
+Required target properties:
+
+- opacity
 
 ---
 
@@ -41,6 +49,8 @@ Term: squashAndStretch()
 
 The target squashes and stretches in the direction of its movement.
 
-Requires that the target have a position.
+Required target properties:
+
+- position
 
 ---
