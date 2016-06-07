@@ -65,7 +65,7 @@ We'll assume a function exists that returns an object capable of fulfilling a Pl
 
     function executorForPlan(plan, target, existingExecutors) -> Executor
 
-This function will use a `Plan type → Executor type` lookup table. The lookup can be implemented in many ways:
+This function will use a `Plan type ↔ Executor type` lookup table. The lookup can be implemented in many ways:
 
 **Plan → Executor**
 
