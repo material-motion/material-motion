@@ -195,3 +195,7 @@ Encourage functions that accept expressions for the purposes of styling:
 
     expression = Language().term()
     expression = someStyler(expression)
+
+Discussion
+
+Is more likely that we'll allow clients to stylize Intentions than we will allow styling of Expressions/Languages.
