@@ -14,6 +14,8 @@ This is a list of implementations we hope to make available on every platform.
 
 ## System Tween Expression
 
+Expressions for built-in tween animation types.
+
 [Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
 
 E.g. CoreAnimation().fadeIn()
