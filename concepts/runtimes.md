@@ -98,17 +98,15 @@ Let's create executors by calling our hypothetical `executorForPlan` on each tar
 
 We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
 
-### Shared vs unique executors
+### Executor state
 
-Executors can either be **shared** or **unique**.
+Executors are expected to fulfill specific types of Plans. On a given target, only one instance of an executor is created per type of Plan. This allows executors to share state across many Plans.
 
-A shared executor requires **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target. Relevant is defined as "a Plan that the executor is able to fulfill".
+One practical benefit of this approach is for physical simulation. Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
 
-A common executor can have at **most** one instance for a given target.
+If each Plan had its own executor, each executor would end up creating its own interpretation of the velocity. The net result would be a confusing physical simulation.
 
-When an executor is common
-
-Many Plans can be executed by a single executor entity. For example, the Gesture executor can now change the anchor point of the view exactly once.
+What if each Plan is provided to a single executor? The executor can now know to only create one representation of velocity. It can also sum the two forces and apply them to the velocity in one step.
 
 ### Forwarding events to executors
 
