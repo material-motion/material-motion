@@ -24,7 +24,7 @@ Synonyms:
 
 ## intention
 
-Intention is **what you want a thing to do**. It is the Plan.
+An Intention is a type of Plan.
 
 Synonyms:
 
@@ -33,7 +33,7 @@ Synonyms:
 
 ## plan
 
-A Plan is what 
+A Plan is **what you want something to do**.
 
 ## platform
 
