@@ -80,6 +80,8 @@ Recall that the above log translated to the following internal state:
 
 Let's ask each TargetManager to create its executors by calling our hypothetical `executorForPlan` on each Plan.
 
+
+
 We now have a collection of executors that are able to fulfill the provided Plans. The object graph of a Runtime implementation might now look like this:
 
 ### Storage and retrieval of executors
