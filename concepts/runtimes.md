@@ -130,10 +130,11 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-
 ### Repeated: forward events to executors
 
 The Runtime is now expected to forward relevant events to the executors.
+
+The order in which events are executed depends on the order in which the Transaction operations occurred.
 
 #### Initialization
 
