@@ -59,7 +59,7 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
-We'll assume a function exists that returns an object capable of fulfilling a Plan. We'll call these objects: **executors**. The method signature for this method might look like this:
+We'll assume a function exists that returns an object capable of fulfilling a Plan. We'll call such an object an **executor**. The method signature for this method might look like this:
 
     function executorForPlan(plan, target) -> Object
 
