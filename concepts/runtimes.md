@@ -98,7 +98,7 @@ Let's create executors by calling our hypothetical `executorForPlan` on each tar
 
 We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
 
-### Executor state
+### One executor per type of Plan
 
 One instance of an executor is created per type of Plan, for a given target. This allows many Plans to be executed by a single executor.
 
