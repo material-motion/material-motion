@@ -130,7 +130,7 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Repeated: forward events to executors
+### Repeated: forward external events to executors
 
 The Runtime is now expected to forward relevant events to the executors.
 
@@ -144,7 +144,11 @@ A Runtime should make reasonable efforts to send relevant events to executors.
 
 For example: if an executor does not care about the animation event then the Runtime should not inform the executor.
 
-#### Types of events
+#### Types of external event
 
 - **Animation**. Called each time the platform is ready to draw a new frame.
 - **Gesture**. Called each time a gesture recognizer's state is changed.
+
+### Energy in a Runtime
+
+A Runtime can be 
