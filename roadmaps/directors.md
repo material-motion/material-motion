@@ -8,7 +8,8 @@ What it does: fades in a view.
 
 What's required to build it:
 
-- Tween Language with fadeIn term
+- Expression Foundation
+- Tween Expression with fadeIn term
 
 Director pseudo-code:
 
