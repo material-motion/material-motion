@@ -29,4 +29,4 @@ The following names do not match the convention:
 
 - SwiftTweenLanguage
 - TweenLanguage
-- material-motionRuntime
+- material-motion-Runtime
