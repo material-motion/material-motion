@@ -41,4 +41,6 @@ Term: squashAndStretch()
 
 The target squashes and stretches in the direction of its movement.
 
+Requires that the target have a position.
+
 ---
