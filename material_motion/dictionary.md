@@ -1,3 +1,5 @@
+Status of this document: **Structure is stable, content needs expansion**
+
 # Material Motion Dictionary
 
 This is a definition of the Terms used by the Material Motion team in their Expressions. All Material Motion Term implementations are expected to adhere to this guide.
