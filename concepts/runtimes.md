@@ -134,7 +134,19 @@ Note that "one executor per type of Plan" does not resolve the problem of sharin
 
 The Runtime is now expected to forward relevant events to the executors.
 
-The order in which events are executed depends on the order in which the Transaction operations occurred.
+Executors are informed of events via the following pseudo-algorithm:
+
+    for every target
+      for every executor
+        executor.event()
+
+A Runtime should make reasonable efforts to send relevant events to executors. For example, if an executor does not care about the animation event, the Runtime should not inform the executor of such an event.
+
+#### Types of events
+
+- **Animation**. Called each time the platform is ready to draw a new frame.
+- **Gesture**. Called each time a gesture recognizer's state is changed.
+
 
 #### Initialization
 
