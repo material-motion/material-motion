@@ -25,3 +25,9 @@ Modifiers:
 - .to(float)   Default: 0
 
 ---
+
+Term: squashAndStretch()
+
+The element squashes and stretches in the direction of its movement.
+
+---
