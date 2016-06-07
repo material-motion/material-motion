@@ -1,187 +1,103 @@
-
 # Runtimes
 
-This section explores one specification for a **declarative motion engine**.
+The purpose of a Runtime is to enable the **coordination** of interactive motion in an application. A Runtime is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern. An instance of a Runtime is a delightful companion to a [Coordinator](patterns/coordinator-plan.md).
 
-## Overview
+A Runtime instance must be able to do the following:
 
-The purpose of a Runtime is to **coordinate** the expression of Intention in an application. Coordination is made possible because of a combination of the Director/Intention + Intention/Actor Patterns.
+- Commit to Plans.
+- Fulfill those Plans.
 
-The Director **registers** Intentions with a Runtime; the Runtime creates Actors and gives them life.
+## Commit Plans
 
-![Runtime](../_assets/RuntimeDiagram.png)  
-A Runtime requires at least one instance of a Director. A Runtime may have many Director instances.
+Plans are committed to Runtimes via Transactions.
 
-Each Director may register an initial set of Intentions in a setup method.
+A Transaction's public API should support the following operations:
 
-After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
+- Associate a Plan with a target.
+- Associate a named Plan with a target.
+- Remove any Plan associated with a given name from a target.
+- Enumerate the log of operations.
 
-> TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in [#8](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions/8).
+The log's order must match the order of the requested operations.
 
-The Runtime now has a collection of Actors.
+A Transaction must be explicitly committed to a Runtime; e.g. `runtime.commit(transaction)`.
 
-The Runtime is now responsible for forwarding events to Actors. (Link to Actor events).
+Consider the following transaction pseudo-code:
 
-A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
+    transaction = Transaction()
+    transaction.add(FadeIn, circleView)
+    transaction.add(Draggable, squareView)
+    transaction.addNamed("name1", Pinchable, squareView)
+    transaction.addNamed("name2", Rotatable, squareView)
+    transaction.removeNamed("name2", squareView)
+    runtime.commit(transaction)
 
-## Intention registration
+The Transaction's log might resemble the following pseudo-object:
 
-TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication.
+    > transaction.log
+    [
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
+      {action:"remove", name: "name2", target: squareView}
+    ]
 
-## Director events
+After committing the above transaction, our Runtime's internal state might resemble the following:
 
-### Setup
+    circleView's Plans = [FadeIn]
+    squareView's Plans = [Draggable]
+    squareView's named Plans = {"name1": Pinchable}
 
-### Teardown
+Note that `Rotatable` is not listed. This is because we *also* removed the named intention for "name2" in this Transaction.
 
-### Gesture recognition
+The Runtime is now expected to fulfill its Plans.
 
-Directors may listen to Gesture Recognizer events in order to facilitate high-level coordination of Intentions.
+## Fulfill Plans
 
-## Runtime states
+A Runtime must translate Plans into executable logic.
 
-- Initializing
-- Idle
-- Active
+We'll assume that a function exists that returns an object capable of fulfilling a Plan. We'll call these objects: **executors**. The method signature for this method might look like this:
 
-## Actor state
+    function executorForPlan(plan) -> Object
 
-- The direct target (what the Actor was initially registered to).
-- The dynamic target (may not be the target).
-- Permanently-registered Intentions.
-- Intentions registered by name.
+### On commit: generate runtime children
 
-TODO: There is likely value in maintaining this state outside of the Actor instances themselves. Provide the actors with a variable that enables easy access of the above state (perhaps nicely scoped to the Actor). E.g. state.intentions or state.intentionForName("name").
+When a Transaction is committed, the Runtime must generate an executor for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
-## Actor events
+    > transaction.log
+    [
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
+      {action:"remove", name: "name2", target: squareView}
+    ]
 
-The Runtime identifies which events each Actor expects to receive. Events include:
+Recall that the above log translated to the following set of Plans:
 
-- intention registration,
-- animation events, and
-- gesture recognition events.
+    circleView's Plans = [FadeIn]
+    squareView's Plans = [Draggable]
+    squareView's named Plans = {"name1": Pinchable}
 
-### Intention registration
+Let's map `executorForPlan` to each of our Plans:
 
-TODO: Discuss adding permanent intentions.
+    circleView's runtime objects = [executorForPlan(FadeIn)]
+    squareView's runtime objects = [executorForPlan(Draggable)]
+    squareView's named runtime objects = {"name1": executorForPlan(Pinchable)}
 
-TODO: Discuss adding named intentions.
+We now have a collection of executors that are able to fulfill the provided Plans.
 
-### Animation
+### Storage and retrieval of executors
 
-The animate event is invoked when the system is about to render a new frame. This event is often called many times per second.
+Constraints:
 
-Each Actor is responsible for calculating time deltas. Take care to respect platform animation speed scalars.
+- O(n) enumeration of all executors in a consistent order.
+- Certain Plans may desire having one executor per target per Plan. Other Plans may desire having only one executor per target, for any number of Plans.
+- Targets can be marked as "dependent" on other targets. This affects order of executors for events.
 
-### Gesture recognition
+### Forwarding events to executors
 
-The gesture event is invoked when a gesture recognizer's state has changed.
-
-## Plugins
-
-TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
-
-### Plugin events
-
-#### Runtime state changed
-
-- Useful for transition system handoff.
-
-#### Actor created for target
-
-- Useful for view duplication. This event must allow the plugin to change the "associated target" for all Actors referencing a given target.
-
-### Specific plugins
-
-#### View duplication
-
-TODO: Discuss when view duplication hooks into the system. Emphasize the need to hook in to intention registration events with new elements in the system.
-
-Required events:
-
-- First-time registration of Intention to element 
-
-#### Transition
-
-Coordinate events with the operating system’s existing transition system.
-
-Required events:
-
-- Did start 
-- Did idle 
-
-## Companions to a Runtime
-
-TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events. The most simple example is that of a "Transition" coordinator.
-
-### Scripting
-
-TODO: Discuss how one might integrate a scripting language with a Runtime.
-
-### Transition coordination
-
-This system allows you to define which Directors to use for a transition between two “Screens” in an application.
-
-- Discuss the “Narrator” concept.
-
-# Diagrams
-
-Runtimes in relation to the overall Starmap ecosystem.
-
-![](../_assets/overview.svg)
-
-
-## Outline (notes, not final copy)
-
-TODO: The following content is an outline and needs to be folded into the above content.
-
-- Runtime can have many Directors. Allow multiple Directors to share Actors. 
-- Directors receive following events: 
-    - Registration - expected to register intentions in this phase 
-    - Input handling - may register new intentions 
-- Actors receive following events from Runtime: 
-    - Initialization 
-    - Display link pump -&gt; returns Bool indicating “isActive?” 
-    - Gesture events 
-- Actor types include: 
-    - Gestural actors 
-    - Simulation actors 
-    - Event actors 
-        - Must have way to communicate to Runtime when the Actor becomes inactive (emphasis: this supports “external” animation systems like Core Animation) 
-
-- Intention registration mechanism 
-    - Associates intentions with elements 
-    - Intentions can be added to elements permanently 
-    - An array of intentions can be added to an element with a name 
-        - Named intentions allow for “state” changes 
-        - Adding named intentions will remove all previous intentions for that element with the same name 
-
-- Runtime receives all Intention requests from the Director, then creates all the necessary Actors to execute those requests 
-- Runtime may hook in to the refresh rate for a screen and use this as a simulation pump. This pump will only be provided to actors (emphasis: not the director) 
-- Support the following states: 
-    - Initializing 
-    - Idle - no actors are currently causing changes to the system (emphasis: includes no “active” gesture recognizers) 
-    - Active 
-
-- Support the following state changes: 
-    - Initializing -&gt; Idle|Active 
-    - Idle -&gt; Active 
-    - Active -&gt; Idle 
-
-- Support Pausing the runtime 
-- Support enumerating all registered intentions, elements, and actors 
-    - Can be used to generate a console dump 
-    - Can be used to build inspectors 
-
-- Plugin system should enable listening to key events in a Runtime: 
-    - When a new element has received intention, allow returning a new element that should be used instead (emphasis: this is for view duplication support) 
-    - When a runtime’s current state has changed 
-
-- Runtime should always be evaluating current “energy level” of the system. If Runtime reaches a steady state, this should be an event. (emphasis: allows other systems to react to runtime completion such as transitions) 
-- Runtime should support some semblance of Actor priority. 
-    - Unclear what this looks like, but order of Actor execution could potentially matter. Assumption presently is that Actors execute Intention in order that they were registered. 
-
-- Existing Runtimes: 
-    - Core Animation 
-    - Android’s animation system 
-    - Web animations
+TODO: Discuss how to store these Plans.
+TODO: Discuss how to send events to these Plans.
+TODO: Discuss marking some targets as dependent on others and how this affects ordering of event forwarding.

@@ -1,12 +1,14 @@
-# Motion Language
+# Material Motion Grammar
 
-Motion design comes with a large set of unique language and terminology. The language defined here is used as the base of the Material Motion framework.
+Motion design terminology is fragmented.  What some platforms refer to as "incoming easing" is called "ease out" on others.
 
-When thinking about language, being able to naturally produce a sentence in a complete **thought** that accurately describes the animation is important to its success.
+The Material Motion team uses this guide to discuss motion across platforms and languages.
 
-Each sentence begins with an **action** and is followed by a string of **connectors** and **values** to form a complete **thought**.
+For our language to be effective, it must enable the expression of a complete **thought** that accurately describes a piece of interactive motion.  Each **thought** begins with an **action** and is followed by a string of **connectors** and **values**.
 
-**Thought** example:
+## Examples
+
+A simple thought:
 
 > Move by (0,100) over 300ms
 
@@ -14,7 +16,7 @@ Each sentence begins with an **action** and is followed by a string of **connect
 | -- | -- | -- | -- | -- |
 | Move | by | (0,100) | over | 300ms |
 
-or a more complex **thought** example:
+or a more complex one:
 
 > Move from (0,0) to (0,100) over 300ms with Easing
 

@@ -3,26 +3,26 @@
 Values are the units in which a specific movement is measured.
 
 
-### Density Pixels (dp)
+### Density-independent Pixels (dp)
 
-The **Density Pixels** value is used by the **Move** and **Resize** actions.
+**[Density-independent Pixels](https://material.google.com/layout/units-measurements.html#units-measurements-density-independent-pixels-dp-)** are used by the **Move** and **Resize** actions.
 
 
 ### Percentages (%)
 
-The **Percentages** value is used by the **Scale** and **Fade** actions.
+**Percentages** are used by the **Scale** and **Fade** actions.
 
 
 ### Degrees (º)
 
-The **Degrees** value is used by the **Rotate** action.
+**Degrees** are used by the **Rotate** action.
 
 
 ### RGBA (0,0,0,0.0)
 
-The **RGBA** value is used by the **Tint** action.
+**RGBA** is used by the **Tint** action.
 
 
 ### Time (ms)
 
-The **Time** value is used by various **Connectors** to determine the duration of an animation.
+**Time** is used by various **Connectors** to determine the duration of an animation.
