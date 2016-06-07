@@ -67,7 +67,7 @@ We'll assume a function exists that returns an object capable of fulfilling a Pl
 
 This function must use a `Plan type → Executor type` lookup table to identify what type of Executor it needs to instantiate.
 
-Our recommendation is to allow Executors to register, at runtime, which Plans they expect to be able to fulfill. This enforces a healthy separation of Plan/Fulfillment.
+Our recommendation is to make Executors register at runtime the Plans they expect to be able to fulfill. This enforces a healthy separation of Plan/Fulfillment.
 
 ### On commit: generate executors
 
