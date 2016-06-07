@@ -84,9 +84,11 @@ Let's ask each TargetManager to create its executors by calling our hypothetical
 
 Note that we've created two executors: one for Tweens, another for Gestures. These executors are stored in the "TargetManager" entity.
 
-#### Why is there only one executor for Draggable and Pinchable?
+### Executors and uniqueness
 
-Many Plans can be executed by a single executor entity. For example, the Gesture executor can now change the anchor point of the view exactly once. This is a minor benefit, but the principle applies to other executor types equally well.
+Executors can choose whether or not to be **unique** for a given Target.
+
+Many Plans can be executed by a single executor entity. For example, the Gesture executor can now change the anchor point of the view exactly once.
 
 ### Forwarding events to executors
 
