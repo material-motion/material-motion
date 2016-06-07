@@ -57,7 +57,7 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
-We'll assume that a function exists that returns an object capable of executing the Plan. We'll call these objects: **runtime children**. The method signature for this method might look like this:
+We'll assume that a function exists that returns an object capable of fulfilling the Plan. We'll call these objects: **runtime children**. The method signature for this method might look like this:
 
     function runtimeChildForPlan(plan) -> Object
 
