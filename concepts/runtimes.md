@@ -102,7 +102,7 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 A single executor is created for every type of Plan registered to a target. This allows executors to maintain coherent state even when multiple Plans are concerned.
 
-Consider the following hypothetical Transaction:
+Consider the following pseudo-Transaction:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
