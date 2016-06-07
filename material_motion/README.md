@@ -7,5 +7,3 @@ There are two parts to the definition of the Language of Motion: the Grammar and
 The Grammar defines the structure of the language and the relevant "parts of speech".
 
 The Dictionary is an exhaustive alphabetical list of terms and their definitions.
-
-The Grammar may reference the Dictionary.
