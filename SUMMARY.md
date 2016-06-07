@@ -2,8 +2,8 @@
 
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
-   * [Primitives](concepts/primitives.md)
    * [Patterns](concepts/patterns.md)
+       * [Primitives](concepts/primitives.md)
        * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
    * [Runtime](concepts/runtimes.md)
