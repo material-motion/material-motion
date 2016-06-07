@@ -26,6 +26,10 @@ Examples:
 
 An executor fulfills one or more Plans of a given type.
 
+Discussed in:
+
+- [Concepts → Runtime](concepts/runtime.md)
+
 ## intention
 
 An Intention is a type of Plan.
