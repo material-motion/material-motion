@@ -1,3 +1,5 @@
+Status of this document: **Stable**
+
 # Expression
 
 An Expression is functional syntactic sugar for the creation and configuration of Intentions.
