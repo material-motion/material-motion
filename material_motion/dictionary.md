@@ -1,4 +1,4 @@
-# Material Motion Dictionary
+# Material Motion Specification
 
 This is a definition of the Terms used by the Material Motion team in their Expressions. All Material Motion Terms are expected to adhere to this guide.
 
