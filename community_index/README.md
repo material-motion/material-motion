@@ -16,10 +16,10 @@ Note that everything is lower-case. We recommend using hyphens to separate words
 
 The following names match the convention:
 
-- material-motion-language-tween-objc
-- material-motion-language-tween-swift
-- material-motion-language-tween-android
-- material-motion-language-tween-web
+- material-motion-expression-tween-objc
+- material-motion-expression-tween-swift
+- material-motion-expression-tween-android
+- material-motion-expression-tween-web
 - material-motion-runtime-objc
 - material-motion-runtime-android
 - material-motion-runtime-web
