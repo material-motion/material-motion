@@ -61,7 +61,7 @@ We'll assume that a function exists that returns an object capable of fulfilling
 
     function executorForPlan(plan) -> Object
 
-### On commit: generate runtime children
+### On commit: generate executors
 
 When a Transaction is committed, the Runtime must generate an executor for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
