@@ -100,7 +100,7 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 ### Shared vs unique executors
 
-Executors can either be **unique** or **common**.
+Executors can either be **shared** or **unique**.
 
 A unique executor requires **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target. Relevant is defined as "a Plan that the executor is able to fulfill".
 
