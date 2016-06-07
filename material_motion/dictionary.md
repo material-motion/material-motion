@@ -1,4 +1,4 @@
-Status of this document: **Structure is stable, content needs expansion**
+Status of this document: **Draft**
 
 # Material Motion Dictionary
 
