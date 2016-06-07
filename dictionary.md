@@ -1,9 +1,9 @@
 # Motion Dictionary
 
-This is a definition of the terms used by the Material Motion team in their Expressions.
+This is a definition of the Terms used by the Material Motion team in their Expressions.
 
-    fadeIn
+    fadeIn()[.from(float)][.to(float)][.from(float)][.to(float)]
 
+Fade an element in.
 
-
-    fadeOut
+    fadeOut()[.from(float)][.to(float)]
