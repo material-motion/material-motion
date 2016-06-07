@@ -32,6 +32,7 @@ Consider the following transaction pseudo-code:
     transaction.addNamed("name1", Pinchable, squareView)
     transaction.addNamed("name2", Rotatable, squareView)
     transaction.removeNamed("name2", squareView)
+    transaction.add(Draggable, circleView)
     runtime.commit(transaction)
 
 The Transaction's log might resemble the following pseudo-object:
@@ -43,6 +44,7 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
       {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
       {action:"remove", name: "name2", target: squareView}
+      {action:"add", plan: Draggable, target: circleView},
     ]
 
 After committing the above transaction, our Runtime's internal state might resemble the following:
