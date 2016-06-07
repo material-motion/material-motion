@@ -61,9 +61,9 @@ We'll assume that a function exists that returns an object capable of executing 
 
     function runtimeChildForPlan(plan) -> Object
 
-### On commit: generate runtime objects
+### On commit: generate runtime children
 
-When a Transaction is committed, the Runtime must generate a runtimeObject for each Plan in the Transaction. Consider the Transaction log we'd explored above:
+When a Transaction is committed, the Runtime must generate a runtime child for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
     [
