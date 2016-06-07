@@ -82,3 +82,12 @@ Actor animation pump event forwarding. Enables custom Intentions like Squishable
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
+### Runtime with gesture handling
+
+Gesture event forwarding. Enables Pinchable, Rotatable, Draggable, etc...
+
+| Platform | Implementation | Estimated # eng days |
+|:--------:|:--------------:|:--------------------:|
+| Android  | Not started | Unknown |
+| iOS      | Not started | Unknown |
+| Web      | Not started | Unknown |
