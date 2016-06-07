@@ -46,8 +46,6 @@ An implementation of the [Runtime](https://material-motion.gitbooks.io/material-
 
 [Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime.html).
 
-E.g. MaterialDesignTween().fadeIn()
-
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
 | Android  | Not started | Unknown |
