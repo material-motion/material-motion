@@ -35,7 +35,7 @@ Also consider this pseudo-code:
 
 In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the Plan is eventually fulfilled.
 
-Note that the above example introduces interesting technical considerations. A behavior such as the above can reduce the portability of fulfillment if working in a multi-threaded environment.
+> **Note:** This is only an example to emphasize the separation between declaration and execution.  Take care to author code that suits your platform.  Function definitions may not be portable across thread/worker boundaries on some platforms.
 
 Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
 
