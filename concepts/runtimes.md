@@ -130,9 +130,9 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Forward events to executors
+### Repeated: forward events to executors
 
-The Runtime is now expected to 
+The Runtime is now expected to forward relevant events to the executors.
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
