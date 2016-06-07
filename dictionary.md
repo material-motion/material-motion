@@ -13,7 +13,7 @@ Types used here:
 
 ---
 
-Term: fadeIn()
+Term: `fadeIn()`
 
 Fade the target's opacity in.
 
@@ -28,7 +28,7 @@ Required target properties:
 
 ---
 
-Term: fadeOut()
+Term: `fadeOut()`
 
 Fade the target's opacity out.
 
@@ -43,7 +43,7 @@ Required target properties:
 
 ---
 
-Term: moveFrom(point)
+Term: `moveFrom(point)`
 
 Moves the target from the provided position.
 
@@ -54,7 +54,7 @@ Modifiers:
 
 ---
 
-Term: moveTo(point)
+Term: `moveTo(point)`
 
 Moves the target to the provided position.
 
@@ -65,7 +65,7 @@ Modifiers:
 
 ---
 
-Term: squashAndStretch()
+Term: `squashAndStretch()`
 
 The target squashes and stretches in the direction of its movement.
 
