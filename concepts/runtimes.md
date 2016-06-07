@@ -147,7 +147,6 @@ A Runtime should make reasonable efforts to send relevant events to executors. F
 - **Animation**. Called each time the platform is ready to draw a new frame.
 - **Gesture**. Called each time a gesture recognizer's state is changed.
 
-
 #### Initialization
 
 An 
