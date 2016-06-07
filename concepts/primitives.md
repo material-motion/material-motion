@@ -1,4 +1,4 @@
-Status: Stable
+This document's current status: Stable
 
 # Primitives
 
