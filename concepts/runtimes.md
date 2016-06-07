@@ -88,7 +88,7 @@ Note that we've created two executors: one for Tweens, another for Gestures. The
 
 Executors can either be **unique** or **common**.
 
-A unique executor has **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target.
+A unique executor has **at most** one instance for a given target. This instance will be provided with every relevant Plan for the associated target. Relevant being defined as "a Plan that the executor is able to fulfill".
 
 A common executor can have at **most** one instance for a given target.
 
