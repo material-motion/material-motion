@@ -102,22 +102,31 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 A single executor is created for every type of Plan registered to a target. This allows executors to maintain coherent state even when multiple Plans are concerned.
 
-Consider the following pseudo-Transaction:
+Consider the following pseudo-Transaction involving physical simulation Plans:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-Our circleView now has two Plans and one executor, a PhysicalSimulationExecutor.
+Our circleView now has two Plans and one executor, a PhysicalSimulationExecutor. Both Plans are provided to the executor instance.
 
-Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
+The executor now knows the following:
 
-If every instance of a Plan has its own executor, then velocity state would be created multiple times. Forces would be applied regardless of other Plans. The net result is a confusing physical simulation.
+- It has two Forces, both affecting position.
+- It needs to model `velocity` for the `position`.
 
-What if each Plan is provided to a single executor? The executor now knows to create a single representation of velocity. It can sum both forces and apply them to the velocity in one step.
+The executor now creates some state that will track the position's velocity.
 
-Note that the latter approach solves the problem within a single type of executor. It does not, however, address shared state across different types of executors. This is intentional.
+The executor can now:
+
+1. convert each Plan into a physics force,
+2. apply the force to the velocity, and
+3. apply the velocity to the position
+
+on every animation cycle.
+
+
 
 ### Forwarding events to executors
 
