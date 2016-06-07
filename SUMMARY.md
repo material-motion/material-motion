@@ -23,7 +23,6 @@
    * [Simulation](languages/simulation.md)
    * [Other Vocabulary](languages/other_vocabulary.md)
 * [Motion Languages](motion_languages/README.md)
-   * [Tween](motion_languages/tween.md)
 * [Hypotheticals](hypotheticals/README.md)
 * [Glossary](GLOSSARY.md)
 * [Contributing](CONTRIBUTING.md)
