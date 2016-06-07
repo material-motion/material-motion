@@ -34,8 +34,8 @@ Fade the target's opacity out.
 
 Modifiers:
 
-- .from(float) Default: 1
-- .to(float)   Default: 0
+- .from(float) Default: `1`
+- .to(float)   Default: `0`
 
 Required target properties:
 
@@ -49,8 +49,8 @@ Moves the target from the provided position.
 
 Modifiers:
 
-- .from(position) Default: point
-- .to(position)   Default: <null>
+- .from(position) Default: `point`
+- .to(position)   Default: `<null>`
 
 ---
 
@@ -60,8 +60,8 @@ Moves the target to the provided position.
 
 Modifiers:
 
-- .from(position) Default: <null>
-- .to(position)   Default: point
+- .from(position) Default: `<null>`
+- .to(position)   Default: `point`
 
 ---
 
