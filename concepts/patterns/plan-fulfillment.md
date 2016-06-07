@@ -56,7 +56,7 @@ Consider this pseudo-code:
 
 Exactly how a Plan is fulfilled is less important than that it **is** fulfilled and that the execution is able to occur elsewhere.
 
-For example, a Plan of "fade in" could reasonably be fulfilled by an operating system animation. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
+For example, a Plan of "fade in" could reasonably be fulfilled by an built-in animation system. The same Plan could also be fulfilled by a custom interpolation function.  The Plan doesn't know or care how it's fulfilled.
 
 Good systems of fulfillment will carefully balance the needs of runtime performance, power consumption, event coordination, and user interaction.
 
