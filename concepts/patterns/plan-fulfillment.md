@@ -9,7 +9,7 @@ This pattern is important because:
 
 ### A Plan of Motion
 
-A Plan is simply **what you want something to do**.
+A Plan is **what you want something to do**.
 
 Every [Primitive](../primitives.md) can be described as a Plan in some form. For example, "draggable" and "fade in" are two distinct Plans.
 
