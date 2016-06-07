@@ -69,6 +69,8 @@ This function must use a `Plan type → Executor type` lookup table to identify 
 
 Our recommendation is to make Executors register at runtime the Plans they expect to be able to fulfill. This enforces a healthy separation of Plan/Fulfillment.
 
+If multiple Executors can fulfill a given Plan...what do?
+
 ### On commit: generate executors
 
 When a Transaction is committed, the Runtime must generate an executor for each Plan in the Transaction. Consider the Transaction log we'd explored above:
