@@ -29,11 +29,11 @@ Intention is **what you want a thing to do**. It is the Plan.
 Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
+- Plan (this Starmap)
 
-## scrubbing
+## plan
 
-The act of directly manipulating a Timeline's `progress` value.
-
+A Plan is what 
 
 ## platform
 
@@ -47,8 +47,12 @@ Synonyms:
 - Web (Chrome)
 - Web (Safari)
 
+## scrubbing
+
+The act of directly manipulating a Timeline's `progress` value.
+
 ## target
 
-A target is the entity to which an Intention is meant to be applied.
+A target is the entity to which a Plan is meant to be applied.
 
 An element is a target.
