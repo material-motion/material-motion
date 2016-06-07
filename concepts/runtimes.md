@@ -84,7 +84,7 @@ Let's map `runtimeObjectForPlan` to each of our Plans:
     squareView's runtime objects = [runtimeObjectForPlan(Draggable)]
     squareView's named runtime objects = {"name1": runtimeObjectForPlan(Pinchable)}
 
-We now have a set of instances that are able to fulfill the provided Plans.
+We now have a collection of instances that are able to fulfill the provided Plans.
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
