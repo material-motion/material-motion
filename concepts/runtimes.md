@@ -53,7 +53,7 @@ After committing the above transaction, our Runtime's internal state might resem
 
 Note that `Rotatable` is not listed. This is because we *also* removed the named intention for "name2" in this Transaction.
 
-![](../_assets/TargetManager.svg)
+![](../_assets/TargetManagers.svg)
 
 The Runtime is now expected to fulfill its Plans.
 
