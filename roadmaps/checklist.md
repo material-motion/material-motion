@@ -1,6 +1,6 @@
 # Checklist
 
-This is a list of implementations the Material Motion team plans to work on.
+This is a list of implementations the Material Motion team plans to work on. Stable implementations will be listed in the [Community Index](https://material-motion.gitbooks.io/material-motion-starmap/content/community_index/).
 
 ## Expression Foundation
 
