@@ -1,4 +1,4 @@
-This document's current status: Stable
+Status of this document: **Stable**
 
 ## The Coordinator/Plan pattern
 
