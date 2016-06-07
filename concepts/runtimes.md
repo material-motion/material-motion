@@ -59,7 +59,7 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
-### Plan to Executor association
+### Plan ↔ Executor association
 
 We'll assume a function exists that returns an object capable of fulfilling a Plan. We'll call such an object an **executor**. The method signature for this method might look like this:
 
