@@ -74,11 +74,9 @@ When a Transaction is committed, the Runtime must generate an executor for each 
       {action:"remove", name: "name2", target: squareView}
     ]
 
-Recall that the above log translated to the following set of Plans:
+Recall that the above log translated to the following internal state:
 
-    circleView's Plans = [FadeIn]
-    squareView's Plans = [Draggable]
-    squareView's named Plans = {"name1": Pinchable}
+![](../_assets/TargetManagers.svg)
 
 Let's map `executorForPlan` to each of our Plans:
 
