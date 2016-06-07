@@ -149,7 +149,7 @@ For example: if an executor does not care about the animation event then the Run
 - **Animation**. Called each time the platform is ready to draw a new frame.
 - **Gesture**. Called each time a gesture recognizer's state is changed.
 
-### Energy in a Runtime
+### Runtime activity
 
 At any given point in time a Runtime can either be **idle** or **active**.
 
