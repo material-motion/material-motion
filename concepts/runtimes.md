@@ -106,7 +106,7 @@ One practical benefit of this approach is for physical simulation. Let's say we 
 
 If every instance of a Plan has its own executor, then velocity state would be created multiple times. Forces would be applied regardless of other Plans. The net result is a confusing physical simulation.
 
-What if each Plan is provided to a single executor? The executor now knows to create a single representation of velocity. It can also sum the two forces and apply them to the velocity in one step.
+What if each Plan is provided to a single executor? The executor now knows to create a single representation of velocity. It can sum both forces and apply them to the velocity in one step.
 
 ### Forwarding events to executors
 
