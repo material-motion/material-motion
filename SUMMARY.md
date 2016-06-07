@@ -13,7 +13,6 @@
    * [Applications](specifications/applications.md)
 * [Material Motion](material_motion/README.md)
    * [Dictionary](material_motion/dictionary.md)
-* [Material Motion Dictionary](dictionary.md)
 * [Material Motion Grammar](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
