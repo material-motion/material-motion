@@ -132,7 +132,7 @@ Note that "one executor per type of Plan" does not resolve the problem of sharin
 
 ### Repeated: forward external events to executors
 
-The Runtime is now expected to forward relevant events to the executors.
+The Runtime is now expected to forward relevant external events to the executors.
 
 Executors are informed of events via the following pseudo-algorithm:
 
