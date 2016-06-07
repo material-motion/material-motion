@@ -80,13 +80,13 @@ Recall that the above log translated to the following set of Plans:
     squareView's Plans = [Draggable]
     squareView's named Plans = {"name1": Pinchable}
 
-Let's map `runtimeObjectForPlan` to each of our Plans:
+Let's map `runtimeChildForPlan` to each of our Plans:
 
-    circleView's runtime objects = [runtimeObjectForPlan(FadeIn)]
-    squareView's runtime objects = [runtimeObjectForPlan(Draggable)]
-    squareView's named runtime objects = {"name1": runtimeObjectForPlan(Pinchable)}
+    circleView's runtime objects = [runtimeChildForPlan(FadeIn)]
+    squareView's runtime objects = [runtimeChildForPlan(Draggable)]
+    squareView's named runtime objects = {"name1": runtimeChildForPlan(Pinchable)}
 
-We now have a collection of instances that are able to fulfill the provided Plans.
+We now have a collection of runtime children that are able to fulfill the provided Plans.
 
 ### Storage of runtime objects
 
