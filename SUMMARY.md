@@ -11,6 +11,7 @@
    * [Expression](specifications/expressions.md)
    * [Odeon Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
+* Material Motion
 * [Material Motion Grammar](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
    * [Connectors](languages/connectors.md)
@@ -30,5 +31,4 @@
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
-* Material Motion
 
