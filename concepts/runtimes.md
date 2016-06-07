@@ -100,7 +100,7 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 ### One executor per type of Plan
 
-A single executor is created for every type of Plan registered to a target. The purpose of this approach is to allow executors to coordinate state on a given target.
+A single executor is created for every type of Plan registered to a target. The purpose of this approach is to allow executors to maintain coherent state even when multiple Plans are concerned.
 
 A practical benefit of this approach is for physical simulation. Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
 
