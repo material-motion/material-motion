@@ -1,3 +1,5 @@
+This document's current status: Stable
+
 ## The Plan/Fulfillment pattern
 
 This pattern emphasizes a **separation** of the *plan* of motion from its *fulfillment*.
