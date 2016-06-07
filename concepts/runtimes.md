@@ -90,9 +90,12 @@ We now have a collection of runtime children that are able to fulfill the provid
 
 ### Storage of runtime children
 
+Constraints:
 
+- Must be able to efficiently enumerate all children in a consistent order.
 
 ### Forwarding events to runtime children
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
+TODO: Discuss marking some targets as dependent on others and how this affects ordering of event forwarding.
