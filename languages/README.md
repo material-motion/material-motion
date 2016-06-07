@@ -2,7 +2,7 @@
 
 Motion design terminology is fragmented.  What some platforms refer to as "incoming easing" is called "ease out" on others.
 
-The Material Motion uses the following guide to consistently discuss motion across platforms and languages.
+The Material Motion team uses this guide to discuss motion across platforms and languages.
 
 For our language to be effective, it must enable people to naturally express a complete **thought** that accurately describes an animation.  Each **thought** begins with an **action** and is followed by a string of **connectors** and **values**.
 
