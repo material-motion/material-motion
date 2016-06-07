@@ -29,7 +29,6 @@ An Intention is a type of Plan.
 Synonyms:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
-- Plan (this Starmap)
 
 ## plan
 
