@@ -2,7 +2,7 @@
 
 This is a definition of the Terms used by the Material Motion team in their Expressions. All Material Motion Term implementations are expected to adhere to this guide.
 
-This guide is written primarily for engineers. It is also a reference for potential terminology.
+This guide is primarily written for engineers. It is also a reference of terminology.
 
 Terminology used here:
 
