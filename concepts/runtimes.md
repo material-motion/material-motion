@@ -100,7 +100,7 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 ### Executor state
 
-Executors are expected to fulfill specific types of Plans. On a given target, only one instance of an executor is created per type of Plan. This allows executors to share state across many Plans.
+One instance of an executor is created per type of Plan for a given target. This allows executors to share state across many Plans.
 
 One practical benefit of this approach is for physical simulation. Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
 
