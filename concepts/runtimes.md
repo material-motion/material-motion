@@ -98,7 +98,7 @@ Let's create executors by calling our hypothetical `executorForPlan` on each tar
 
 We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
 
-### One executor per type of Plan
+#### One executor per type of Plan
 
 A single executor is created for every type of Plan registered to a target. This allows executors to maintain coherent state even when multiple Plans are concerned.
 
@@ -130,7 +130,9 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Forwarding events to executors
+### Forward events to executors
+
+The Runtime is now expected to 
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
