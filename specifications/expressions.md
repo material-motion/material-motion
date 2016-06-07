@@ -182,3 +182,16 @@ Basic JSON structure:
     Term = [String, [Modifier]...]
     Modifier = [String, Arg...]
     Arg = AnyType
+
+### "Style"
+
+**Proposal (status: new)**: How can we "stylize" expressions without having to resort to a brand new Language?
+
+TODO: Provide recommendations for customizing Expressions without having to resort to creating an entirely new Language or subclass of a Language.
+
+Ideas
+
+Encourage functions that accept expressions for the purposes of styling:
+
+    expression = Language().term()
+    expression = someStyler(expression)
