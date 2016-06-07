@@ -1,3 +1,5 @@
+Status: Stable
+
 # Primitives
 
 This section explores **essential building blocks** of rich, interactive motion.
