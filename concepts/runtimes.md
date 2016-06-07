@@ -59,9 +59,9 @@ A Runtime must translate Plans into executable logic.
 
 We'll assume that a function exists that returns an object capable of executing the Plan. The method signature for this method might look like so:
 
-    function objectForPlan(plan) -> Object
+    function runtimeObjectForPlan(plan) -> Object
 
-When a Transaction is committed, the Runtime must generate an object for each Plan in the Transaction. Consider the Transaction log we'd explored above:
+When a Transaction is committed, the Runtime must generate a runtimeObject for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
     [
@@ -78,11 +78,11 @@ Recall that the above log translated to the following set of Plans:
     squareView's Plans = [Draggable]
     squareView's named Plans = {"name1": Pinchable}
 
-Let's map `objectForPlan` to each of our Plans:
+Let's map `runtimeObjectForPlan` to each of our Plans:
 
-    circleView's objects = [objectForPlan(FadeIn)]
-    squareView's objects = [objectForPlan(Draggable)]
-    squareView's named objects = {"name1": objectForPlan(Pinchable)}
+    circleView's runtime objects = [runtimeObjectForPlan(FadeIn)]
+    squareView's runtime objects = [runtimeObjectForPlan(Draggable)]
+    squareView's named runtime objects = {"name1": runtimeObjectForPlan(Pinchable)}
 
 We now have a set of instances that are able to fulfill the provided Plans.
 
