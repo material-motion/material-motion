@@ -72,7 +72,7 @@ Support for Actors driven by external systems. E.g. Core Animation on iOS.
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
-Actor animation pump event forwarding. Enables custom animations such as Squishable.
+Actor animation pump event forwarding. Enables custom Intentions like Squishable.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
