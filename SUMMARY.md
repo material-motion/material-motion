@@ -23,7 +23,7 @@
        * [Patterns](languages/patterns.md)
        * [Simulation](languages/simulation.md)
        * [Other Vocabulary](languages/other_vocabulary.md)
-   * [Dictionary](material_motion/specification.md)
+   * [Dictionary](material_motion/dictionary.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
