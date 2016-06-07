@@ -11,7 +11,7 @@ This pattern is important because:
 
 A Plan is simply **what you want something to do**.
 
-Each of the Primitives we explored in [the previous section](primitives.md) can be described as a Plan in some form. For example, "draggable" and "fade in" are two distinct Plans.
+Every [Primitive](../primitives.md) can be described as a Plan in some form. For example, "draggable" and "fade in" are two distinct Plans.
 
 Consider the following pseudo-code:
 
