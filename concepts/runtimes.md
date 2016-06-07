@@ -88,7 +88,7 @@ Let's map `executorForPlan` to each of our Plans:
 
 We now have a collection of executors that are able to fulfill the provided Plans.
 
-### Storage and retrieval of runtime children
+### Storage and retrieval of executors
 
 Constraints:
 
