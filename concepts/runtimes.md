@@ -61,7 +61,7 @@ A Runtime must translate Plans into executable logic.
 
 We'll assume that a function exists that returns an object capable of fulfilling a Plan. We'll call these objects: **executors**. The method signature for this method might look like this:
 
-    function executorForPlan(plan) -> Object
+    function executorForPlan(plan, target) -> Object
 
 ### On commit: generate executors
 
