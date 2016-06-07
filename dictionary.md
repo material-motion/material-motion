@@ -2,8 +2,16 @@
 
 This is a definition of the Terms used by the Material Motion team in their Expressions.
 
-    fadeIn()[.from(float)][.to(float)]
+    Term: fadeIn()
+    Modifiers:
+    - .from(float)
+    - .to(float)
 
-Fade an element in.
+Fade an element's opacity in.
 
-    fadeOut()[.from(float)][.to(float)]
+    Term: fadeIn()
+    Modifiers:
+    - .from(float)
+    - .to(float)
+
+Fade an element's opacity out.
