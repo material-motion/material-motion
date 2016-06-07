@@ -88,6 +88,8 @@ Note that we've created two executors: one for Tweens, another for Gestures. The
 
 Executors can choose whether or not to be **unique** for a given Target.
 
+When an executor is unique it means that at **most** one instance of the executor will be created per target.
+
 Many Plans can be executed by a single executor entity. For example, the Gesture executor can now change the anchor point of the view exactly once.
 
 ### Forwarding events to executors
