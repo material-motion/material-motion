@@ -2,7 +2,7 @@
 
 ## actor
 
-An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
+An **Actor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
 
 Similar concepts:
 
