@@ -12,6 +12,7 @@
    * [Odeon Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
 * [Material Motion](material_motion/README.md)
+   * Dictionary
 * [Material Motion Dictionary](dictionary.md)
 * [Material Motion Grammar](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
