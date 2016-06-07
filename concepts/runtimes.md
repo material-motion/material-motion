@@ -47,13 +47,9 @@ The Transaction's log might resemble the following pseudo-object:
 
 After committing the above transaction, our Runtime's internal state might resemble the following:
 
-    circleView's Plans = [FadeIn]
-    squareView's Plans = [Draggable]
-    squareView's named Plans = {"name1": Pinchable}
+![](../_assets/TargetManagers.svg)
 
 Note that `Rotatable` is not listed. This is because we *also* removed the named intention for "name2" in this Transaction.
-
-![](../_assets/TargetManagers.svg)
 
 The Runtime is now expected to fulfill its Plans.
 
