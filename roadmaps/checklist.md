@@ -2,3 +2,8 @@
 
 This is a list of implementations we hope to make available on every platform.
 
+| Platform | Expression |
+|:--------:|:----------:|
+| Android | https://github.com/material-motion/material-motion-expression-android |
+| iOS | |
+| Web | |
