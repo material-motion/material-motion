@@ -93,6 +93,7 @@ We now have a collection of runtime children that are able to fulfill the provid
 Constraints:
 
 - Must be able to efficiently enumerate all children in a consistent order.
+- Certain Plans may desire having one runtime child per target per Plan. Other Plans may desire having only one runtime child per target, for any number of Plans.
 
 ### Forwarding events to runtime children
 
