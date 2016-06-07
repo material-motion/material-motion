@@ -1,6 +1,8 @@
 # Material Motion Dictionary
 
-This is a definition of the Terms used by the Material Motion team in their Expressions. All Material Motion Terms are expected to adhere to this guide.
+This is a definition of the Terms used by the Material Motion team in their Expressions. All Material Motion Term implementations are expected to adhere to this guide.
+
+This guide is written primarily for engineers, though it can serve as a general reference of potential terminology.
 
 Terminology used here:
 
