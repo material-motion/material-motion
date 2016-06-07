@@ -73,7 +73,7 @@ Plans define the Executor they require. This requires Plans to be aware of their
 
 **Executor → Plan**
 
-Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. It introduces the possibility of conflicting Executors for a given Plan.
+Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. It introduces the possibility of Executors conflicting on a given Plan.
 
 ### On commit: generate executors
 
