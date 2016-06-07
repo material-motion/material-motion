@@ -153,8 +153,20 @@ A Runtime is active when there is at least one active executor.
 An executor can be active for any of the following reasons:
 
 - The animate event returned a Boolean value of false.
-- The executor has informed the Runtime of an ongoing callback and the callback has not completed.
+- The executor has indicated some form of active **external activity**.
 
-### Animation activity
+### External activity
 
-If an executor receives the animate
+Executors often depend on external systems to fulfill their Plans. An Executor is responsible for informing the Runtime of two events:
+
+- When external activity begins.
+- When external activity ends.
+
+External activity affects the active state of the Runtime. This can have propagating effects to systems watching the Runtime's current state.
+
+The Runtime can provide executors with two methods:
+
+    var activityWillStart = function(name)
+    var activityDidEnd = function(name)
+
+The name provided to these functions should be scoped to the executor, not globally to the runtime.
