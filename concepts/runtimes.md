@@ -69,7 +69,7 @@ This function will use a `Plan type → Executor type` lookup table. The lookup 
 
 **Plan → Executor**
 
-Plans define the Executor they require. This requires Plans to be aware of their Executors. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
 **Executor → Plan**
 
