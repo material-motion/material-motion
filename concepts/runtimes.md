@@ -84,7 +84,7 @@ Let's create executors by calling our hypothetical `executorForPlan` on each tar
 
 ![](../_assets/Executors.svg)
 
-We've created three executors in total. `circleView` has two executors while `squareView` has one.
+We've created three executors in total. `circleView` has two executors. `squareView` has one.
 
 ### Unique vs common executors
 
