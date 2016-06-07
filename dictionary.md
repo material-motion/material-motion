@@ -5,6 +5,7 @@ This is a definition of the Terms used by the Material Motion team in their Expr
 Terminology used here:
 
 - `<null>`. Platform-dependent. Generally means "the current value of the target's relevant property"
+- `float`. Platform-dependent. Generally a floating point number.
 - `point`. Platform-dependent. Generally a two- or three-dimensional position in space.
 
 ---
