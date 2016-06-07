@@ -52,6 +52,10 @@ Modifiers:
 - .from(position) Default: `point`
 - .to(position)   Default: `<null>`
 
+Required target properties:
+
+- position
+
 ---
 
 Term: `moveTo(point)`
@@ -62,6 +66,10 @@ Modifiers:
 
 - .from(position) Default: `<null>`
 - .to(position)   Default: `point`
+
+Required target properties:
+
+- position
 
 ---
 
