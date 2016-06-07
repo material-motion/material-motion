@@ -8,7 +8,7 @@
        * [Coordinator/Plan](concepts/patterns/coordinator-plan.md)
    * [Runtime](concepts/runtimes.md)
 * [Specifications](specifications/README.md)
-   * [Expression](concepts/expressions.md)
+   * [Expression](specifications/expressions.md)
    * [Odeon Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
 * [The Language of Motion](languages/README.md)
