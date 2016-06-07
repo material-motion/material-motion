@@ -86,7 +86,7 @@ Note that we've created two executors: one for Tweens, another for Gestures. The
 
 #### Why is there only one executor for Draggable and Pinchable?
 
-Most Plans work better if executed by a single executor entity. For example, this Gesture executor can now coordinate anchor point adjustments to the target view.
+Most Plans work better if executed by a single executor entity. For example, the Gesture executor now knows to think in terms of both gestures acting simultaneously.
 
 ### Forwarding events to executors
 
