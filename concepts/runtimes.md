@@ -130,7 +130,7 @@ Alternatively, consider how this situation would have played out if we had one e
 
 Note that "one executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Repeated: forward external events to executors
+### Repeated: forward animate events to executors
 
 The Runtime is now expected to forward relevant external events to the executors.
 
@@ -144,11 +144,6 @@ A Runtime should make reasonable efforts to send relevant events to executors.
 
 For example: if an executor does not care about the animation event then the Runtime should not inform the executor.
 
-#### Types of external event
-
-- **Animation**. Called each time the platform is ready to draw a new frame.
-- **Gesture**. Called each time a gesture recognizer's state is changed.
-
 ### Runtime active vs idle state
 
 At any given time a Runtime can either be **idle** or **active**.
@@ -157,6 +152,9 @@ A Runtime is active when there is at least one active executor.
 
 An executor can be active for any of the following reasons:
 
-- An associated gesture recognizer is active.
 - The animate event returned a Boolean value of false.
 - The executor has informed the Runtime of an ongoing callback and the callback has not completed.
+
+### Animation activity
+
+If an executor receives the animate
