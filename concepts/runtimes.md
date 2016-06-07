@@ -113,7 +113,7 @@ Our circleView now has two Plans and one executor, a PhysicalSimulationExecutor.
 
 The executor now knows the following:
 
-- It has two Forces, both affecting position.
+- It has two Forces, both affecting `position`.
 - It needs to model `velocity` for the `position`.
 
 The executor now creates some state that will track the position's velocity.
@@ -126,7 +126,7 @@ The executor can now:
 
 on every animation cycle.
 
-
+Alternatively, consider how this situation would have played out if we had one executor per plan. There would now be two representations of `velocity` for the same `position`. On each animation step one executor would "lose". The result would be a confusing animation.
 
 ### Forwarding events to executors
 
