@@ -86,7 +86,7 @@ Note that we've created two executors: one for Tweens, another for Gestures. The
 
 #### Why is there only one executor for Draggable and Pinchable?
 
-Many Plans can be executed by a single executor entity. For example, the Gesture executor can change the anchor point of the view exactly once. If two Gesture executors existed then they might unnecessarily attempt to both change the anchor point.
+Many Plans can be executed by a single executor entity. For example, the Gesture executor can change the anchor point of the view exactly once. With two Gesture executors, both might attempt to unnecessarily change the anchor point.
 
 ### Forwarding events to executors
 
