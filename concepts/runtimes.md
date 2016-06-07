@@ -80,7 +80,7 @@ Recall that the above log translated to the following internal state:
 
 ![](../_assets/TargetManagers.svg)
 
-Let's ask each TargetManager to create its executors by calling our hypothetical `executorForPlan` on each target's Plans.
+Let's create executors by calling our hypothetical `executorForPlan` on each target's Plans.
 
 ![](../_assets/Executors.svg)
 
