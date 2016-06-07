@@ -61,6 +61,8 @@ We'll assume that a function exists that returns an object capable of executing 
 
     function runtimeObjectForPlan(plan) -> Object
 
+### On commit: generate runtime objects
+
 When a Transaction is committed, the Runtime must generate a runtimeObject for each Plan in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
@@ -85,6 +87,8 @@ Let's map `runtimeObjectForPlan` to each of our Plans:
     squareView's named runtime objects = {"name1": runtimeObjectForPlan(Pinchable)}
 
 We now have a collection of instances that are able to fulfill the provided Plans.
+
+
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
