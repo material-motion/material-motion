@@ -54,4 +54,4 @@ The act of directly manipulating a Timeline's `progress` value.
 
 A target is the entity to which a Plan is meant to be applied.
 
-An element is a target.
+An element is a target. A Timeline could also be a target.
