@@ -84,11 +84,15 @@ Let's ask each TargetManager to create its executors by calling our hypothetical
 
 Note that we've created two executors: one for Tweens, another for Gestures. These executors are stored in the "TargetManager" entity.
 
-### Executors and uniqueness
+### Unique vs common executors
 
-Executors can choose whether or not to be **unique** for a given Target.
+Executors can either be **unique** or **common**.
 
-When an executor is unique it means that at **most** one instance of the executor will be created per target.
+A unique executor can have at **most** one instance for a given target. All Plans that can be fulfilled by this executor are provided to that unique instance.
+
+A common executor can have at **most** one instance for a given target.
+
+When an executor is common
 
 Many Plans can be executed by a single executor entity. For example, the Gesture executor can now change the anchor point of the view exactly once.
 
