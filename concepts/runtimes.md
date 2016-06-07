@@ -78,7 +78,7 @@ Recall that the above log translated to the following internal state:
 
 ![](../_assets/TargetManagers.svg)
 
-Let's map `executorForPlan` to each of our Plans:
+Let's ask each TargetManager to create the necessary executors.
 
     circleView's runtime objects = [executorForPlan(FadeIn)]
     squareView's runtime objects = [executorForPlan(Draggable)]
