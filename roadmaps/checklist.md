@@ -9,8 +9,8 @@ This is a list of implementations we hope to make available on every platform.
 | Platform | Implementation |
 |:--------:|:----------:|
 | Android | https://github.com/material-motion/material-motion-expression-android |
-| iOS | |
-| Web | |
+| iOS | Not started |
+| Web | Not started |
 
 ## Tween Expression
 
@@ -18,7 +18,7 @@ E.g. Tween().fadeIn()
 
 | Platform | Implementation |
 |:--------:|:----------:|
-| Android | |
-| iOS | |
-| Web | |
+| Android | Not started |
+| iOS | Not started |
+| Web | Not started |
 
