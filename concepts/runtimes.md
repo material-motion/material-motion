@@ -57,9 +57,9 @@ The Runtime is now expected to fulfill its Plans.
 
 A Runtime must translate Plans into executable logic.
 
-We'll assume that a function exists that returns an object capable of executing the Plan. The method signature for this method might look like so:
+We'll assume that a function exists that returns an object capable of executing the Plan. We'll call these objects: **runtime children**. The method signature for this method might look like so:
 
-    function runtimeObjectForPlan(plan) -> Object
+    function runtimeChildForPlan(plan) -> Object
 
 ### On commit: generate runtime objects
 
@@ -88,7 +88,11 @@ Let's map `runtimeObjectForPlan` to each of our Plans:
 
 We now have a collection of instances that are able to fulfill the provided Plans.
 
+### Storage of runtime objects
 
+
+
+### Forwarding events to runtime objects
 
 TODO: Discuss how to store these Plans.
 TODO: Discuss how to send events to these Plans.
