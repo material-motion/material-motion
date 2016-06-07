@@ -26,13 +26,13 @@ E.g. CoreAnimation().fadeIn()
 | iOS | Not started |
 | Web | Not started |
 
-## Intention Tween Expression
+## Material Design Tween Expression
 
-Expressions for built-in tween animation types.
+Opinionated Tween Expressions.
 
 [Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
 
-E.g. CoreAnimation().fadeIn()
+E.g. MaterialDesignTween().fadeIn()
 
 | Platform | Implementation |
 |:--------:|:----------:|
