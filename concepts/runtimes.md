@@ -102,8 +102,6 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 A single executor is created for every type of Plan registered to a target.
 
-This allows many Plans to be executed by a single executor.
-
 One practical benefit of this approach is for physical simulation. Let's say we have two Plans representing Friction and an Anchored Spring, respectively. Both Plans are associated with the target's `position` property. An executor for such Plans must store additional state in order to perform the physical simulations. This additional state is the velocity.
 
 If every instance of a Plan has its own executor, then velocity state would be created multiple times. Forces would be applied regardless of other Plans. The net result is a confusing physical simulation.
