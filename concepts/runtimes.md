@@ -69,7 +69,7 @@ This function must use a `Plan type → Executor type` lookup table to identify 
 
 Our recommendation is to make Executors register at runtime the Plans they expect to be able to fulfill. This enforces a healthy separation of Plan/Fulfillment.
 
-If multiple Executors can fulfill a given Plan...what do?
+If multiple Executors can fulfill a given Plan then...what do?
 
 ### On commit: generate executors
 
