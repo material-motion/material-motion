@@ -34,14 +34,14 @@ Required target properties:
 
 ---
 
-Term: moveTo()
+Term: moveTo(point)
 
-Moves 
+Moves the target to the provided position.
 
 Modifiers:
 
-- .from(float) Default: 1
-- .to(float)   Default: 0
+- .from(position) Default: <null>
+- .to(position)   Default: point
 
 ---
 
