@@ -1,6 +1,6 @@
 # Checklist
 
-This is a list of implementations we hope to make available on every platform.
+This is a list of implementations the Material Motion team plans to work on.
 
 ## Expression Foundation
 
