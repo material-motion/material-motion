@@ -24,7 +24,7 @@ Synonyms:
 
 ## intention
 
-Intention is **what you want a thing to do**.
+Intention is **what you want a thing to do**. It is the Plan.
 
 Synonyms:
 
