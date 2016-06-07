@@ -157,7 +157,7 @@ An executor can be active for any of the following reasons:
 
 ### External activity
 
-Executors often depend on external systems to fulfill their Plans. An Executor is responsible for informing the Runtime of two events:
+Executors often depend on external systems to fulfill their Plans. An Executor is therefor responsible for informing the Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
