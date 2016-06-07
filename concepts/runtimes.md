@@ -65,9 +65,15 @@ We'll assume a function exists that returns an object capable of fulfilling a Pl
 
     function executorForPlan(plan, target, existingExecutors) -> Executor
 
-This function must use a `Plan type → Executor type` lookup table to identify what type of Executor it needs to instantiate.
+This function must use a `Plan type → Executor type` lookup table to identify what type of Executor it needs to instantiate. This lookup can be implemented in many ways, each with their own trade-offs:
 
-The simplest way to generate this lookup table is to allow Plans to define which Executor they require. This does not provide the cleanest separation of concerns. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+**Plan → Executor**
+
+The simplest way to generate the lookup table is to allow Plans to define which Executor they require. This does not provide the cleanest separation of concerns. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+
+**Executor → Plan**
+
+In this approach, Executors register themselves as being capable of fulfilling specific Plans. This approach allows Plans to be less intelligent. It introduces the possibility of conflicting Executors for a given Plan.
 
 ### On commit: generate executors
 
