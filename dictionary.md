@@ -36,7 +36,7 @@ Required target properties:
 
 Term: moveFrom(point)
 
-Moves the target to the provided position.
+Moves the target from the provided position.
 
 Modifiers:
 
