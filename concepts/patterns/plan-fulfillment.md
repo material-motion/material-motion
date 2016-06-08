@@ -6,8 +6,8 @@ This pattern emphasizes a **separation** of the *plan* of motion from its *fulfi
 
 This pattern is important because:
 
-- It allows expensive work to execute on separate threads, processes, or workers.
-- Fulfillment is, in practice, code. Plans could be code, but they can more easily be represented with rich user interfaces or even sent from one device to another.
+- It allows expensive work to execute in separate threads, processes, or workers.
+- Fulfillment is, in practice, code. Plans could be code, but they can be more easily represented with rich user interfaces or even sent from one device to another.
 
 ### A Plan of Motion
 
