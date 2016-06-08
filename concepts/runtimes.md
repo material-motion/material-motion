@@ -18,7 +18,8 @@ A Transaction's public API should support the following operations:
 - Associate a Plan with a target.
 - Associate a named Plan with a target.
 - Remove any Plan associated with a given name from a target.
-- Enumerate the log of operations.
+
+A Transaction should also be able to enumerate a log of operations.
 
 The log's order must match the order of the requested operations.
 
