@@ -42,7 +42,9 @@ Synonyms:
 
 ## intention
 
-An Intention is a type of Plan.
+An Intention is an object representing **what you want something to do**.
+
+An Intention is a Plan in the Plan/Fulfillment pattern.
 
 ## plan
 
