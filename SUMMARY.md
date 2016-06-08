@@ -5,7 +5,7 @@
    * [Primitives](concepts/primitives.md)
    * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
 * [Specifications](specifications/README.md)
-   * [Runtime](concepts/runtime.md)
+   * [Runtime](specifications/runtime.md)
    * [Expression](specifications/expressions.md)
    * [Applications](specifications/applications.md)
 * [Material Motion](material_motion/README.md)
