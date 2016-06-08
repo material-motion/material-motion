@@ -124,7 +124,7 @@ The executor can now:
 2. apply the force to the velocity, and
 3. apply the velocity to the position
 
-on every animation cycle.
+on every frame.
 
 Alternatively, consider how this situation would have played out if we had one executor per plan. There would now be two representations of `velocity` for the same `position`. On each animation step one executor would "lose". The result would be a confusing animation.
 
