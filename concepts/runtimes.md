@@ -140,9 +140,7 @@ Executors are informed of events via the following pseudo-algorithm:
       for every executor
         executor.event()
 
-A Runtime should make reasonable efforts to send relevant events to executors.
-
-For example: if an executor does not care about the animation event then the Runtime should not inform the executor.
+A Runtime should make reasonable efforts to send relevant events to executors.  For instance: if an executor does not care about the animation event, the Runtime should not inform the executor.
 
 ### Runtime active vs idle state
 
