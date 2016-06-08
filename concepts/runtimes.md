@@ -191,3 +191,9 @@ Similarly, an executor might implement the following when working with an extern
         endActivity("animation")
       })
     }
+
+### Open topics
+
+The following topics are open for discussion. They do not presently have a clear recommendation.
+
+- When should executors be removed from a Runtime?
