@@ -51,7 +51,7 @@ Consider this pseudo-code:
     # Adding many Plans to one target
     target.addPlans(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Reusing an Plan on a second target
+    # Reusing a Plan on a second target
     target2.addPlan(draggable)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the Plan's fulfillment. `target2` is simply expected to be draggable.
