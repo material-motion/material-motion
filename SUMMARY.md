@@ -29,5 +29,5 @@
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
 * Drafts
-   * Odeon runtime notes
+   * [Odeon runtime notes](specifications/odeon_runtime.md)
 
