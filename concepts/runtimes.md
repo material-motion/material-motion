@@ -21,7 +21,7 @@ A Transaction's public API should support the following operations:
 
 It must be possible to enumerate the operations of a Transaction.
 
-The log's order must match the order of the requested operations.
+The log's order must match the order the operations were requested in.
 
 A Transaction must be explicitly committed to a Runtime; e.g. `runtime.commit(transaction)`.
 
