@@ -96,8 +96,9 @@ It is generally possible to move in the other direction:
 **Transitions** always consist of exactly **two** States and a **Direction**.
 
     A → B is a Transition from State A to State B.
+    A ← B is a Transition to State A from State B
 
-    A ← B is a Transition to State A from State B (note the direction of the arrow)
+Note that only the **direction** flips direction between the two lines above. Thinking of transitions in terms of what's on the "left", what's on the "right", and which direction we're moving (to the left or to the right) has technical implementation benefits.
 
 Physical Simulations can be associated with States.
 
