@@ -166,7 +166,28 @@ External activity affects the active state of the Runtime. This can have propaga
 
 The Runtime can provide executors with two methods:
 
-    var activityWillStart = function(name)
-    var activityDidEnd = function(name)
+    var startActivity = function(name)
+    var endActivity = function(name)
 
-The name provided to these functions should be scoped to the executor, not globally to the runtime.
+The name provided to these functions should be scoped to the executor, not globally to the Runtime.
+
+For example, an executor might have a gesture handler that looks like this:
+
+    function handleGesture(gesture) {
+      switch (gesture.state) {
+      case .Began:
+        startActivity("gesture")
+      case .Canceled:
+      case .Ended:
+        endActivity("gesture")
+      }
+    }
+
+Similarly, an executor might implement the following when working with an external animation system:
+
+    function setup() {
+      startActivity("animation")
+      target.doAnimation(parameters, completion: {
+        endActivity("animation")
+      })
+    }
