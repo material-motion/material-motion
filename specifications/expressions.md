@@ -63,8 +63,6 @@ Pseudo-code example implementation:
 
 A term may return an instance of a **modifier** that can be used to further configure the expression.
 
-A modifier class is a type of Language.
-
 **Example modifier definition:**
 
     TweenTerm {
