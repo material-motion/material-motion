@@ -30,6 +30,15 @@ Discussed in:
 
 - [Concepts → Runtime](concepts/runtime.md)
 
+## frame
+
+One iteration of the animation loop.  Frames should be redrawn at least 60 times per second to ensure an application is [jank-free](http://jankfree.org).
+
+Synonyms:
+
+- tick
+- cycle
+
 ## intention
 
 An Intention is a type of Plan.
