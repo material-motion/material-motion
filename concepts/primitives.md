@@ -93,12 +93,12 @@ It is generally possible to move in the other direction:
 
     A ← B ← C ← D
 
-**Transitions** always consist of exactly **two** States and a **Direction**.
+**Transitions** always consist of exactly **two** States and a **direction**.
 
     A → B is a Transition from State A to State B.
     A ← B is a Transition to State A from State B
 
-Note that only the **direction** flips direction between the two lines above. Thinking of transitions in terms of what's on the "left", what's on the "right", and which direction we're moving (to the left or to the right) has technical implementation benefits.
+Note that only the **direction** changes between the two lines above. We think of transitions in terms of what's on the "left" and what's on the "right". Thinking of the direction in terms of "to the left" or "to the right" has technical advantages.
 
 Physical Simulations can be associated with States.
 
