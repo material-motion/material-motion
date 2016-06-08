@@ -8,7 +8,7 @@ A **Coordinator** describes an interactive experience by creating Plans and asso
 
 Coordinators use Plans that may be fulfilled by any of the available [Primitives](primitives.md). This enables the expression of **coordinated interactions** involving gestures, animations, and physical simulation.
 
-> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordinator might associate a Draggable Plan with a given avatar. The Coordination might also associate a Spring Attachment Plan to the avatar once the user has released it.
+> Imagine a set of avatars as being draggable and, when not being dragged, the avatars gravitate toward the edges of a defined area. The Coordinator might associate a Draggable Plan with a given avatar. The Coordinator might also associate a Spring Attachment Plan to the avatar once the user has released it.
 
 **Multiple Coordinators** can affect a given set of elements. The software designer must choose reasonable lines of overlapping responsibility.
 
