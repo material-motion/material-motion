@@ -85,25 +85,20 @@ A Timeline limits its value, **progress**, between 0 and 1.
 
 Typical phone applications utilize full-screen transitions between views. Each view is a distinct application state:
 
-```
-A → B → C → D
-```
+    A → B → C → D
 
 Each arrow in the above diagram is a Transition, each letter is a State.
 
 It is generally possible to move in the other direction:
 
-```
-A ← B ← C ← D
-```
+    A ← B ← C ← D
 
 **Transitions** always consist of exactly **two** States and a **Direction**.
 
-```
-A → B is a Transition from State A to State B.
+    A → B is a Transition from State A to State B.
 
-A ← B is a Transition to State A from State B.
-```
+    A ← B is a Transition to State A from State B (note the direction of the arrow)
+
 Physical Simulations can be associated with States.
 
 > For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
