@@ -4,9 +4,7 @@ Status of this document: **Draft**
 
 The system we propose here is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern. We call it a Runtime.
 
-The purpose of a Runtime is to fulfill Plans of rich, interactive motion. In other words, a Runtime is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern.
-
-A Runtime instance must be able to do the following:
+An instance of a Runtime must be able to do the following:
 
 - Commit to Plans.
 - Fulfill those Plans.
