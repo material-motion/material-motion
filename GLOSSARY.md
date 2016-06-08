@@ -37,6 +37,7 @@ One iteration of the animation loop.  Frames should be redrawn at least 60 times
 Synonyms:
 
 - tick
+- step
 - cycle
 
 ## intention
