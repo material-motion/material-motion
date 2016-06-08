@@ -5,7 +5,7 @@
    * [Primitives](concepts/primitives.md)
    * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
 * [Specifications](specifications/README.md)
-   * [Runtime](concepts/runtimes.md)
+   * [Runtime](concepts/runtime.md)
    * [Expression](specifications/expressions.md)
    * [Odeon Runtime](specifications/runtime.md)
    * [Applications](specifications/applications.md)
