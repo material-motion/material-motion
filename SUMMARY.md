@@ -7,7 +7,6 @@
 * [Specifications](specifications/README.md)
    * [Expression](specifications/expressions.md)
    * [Runtime](specifications/runtime.md)
-   * [Applications](specifications/applications.md)
 * [Material Motion](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
@@ -27,6 +26,7 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
+* [Applications](specifications/applications.md)
 * Drafts
    * [Odeon runtime notes](specifications/odeon_runtime.md)
 
