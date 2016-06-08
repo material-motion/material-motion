@@ -1,6 +1,6 @@
 Status of this document: **Draft**
 
-# Runtimes
+# Runtime
 
 The purpose of a Runtime is to fulfill Plans of rich, interactive motion. In other words, a Runtime is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern.
 
