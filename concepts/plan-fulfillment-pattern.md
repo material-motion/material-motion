@@ -2,6 +2,7 @@ Status of this document: **Stable**
 
 ## The Plan/Fulfillment pattern
 
+
 This pattern emphasizes a **separation** of the *plan* of motion from its *fulfillment*.
 
 This pattern is important because:
