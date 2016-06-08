@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
-   * [Plan/Fulfillment](concepts/patterns/plan-fulfillment.md)
+   * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
    * [Runtime](concepts/runtimes.md)
 * [Specifications](specifications/README.md)
    * [Expression](specifications/expressions.md)
