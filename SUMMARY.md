@@ -26,7 +26,7 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
-* [Applications](specifications/applications.md)
 * Drafts
+   * [Applications](specifications/applications.md)
    * [Odeon runtime notes](specifications/odeon_runtime.md)
 
