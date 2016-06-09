@@ -3,3 +3,8 @@ Status of this document:
 
 # Runtime plugins
 
+## Events
+
+### Idle ↔ Active state change
+
+Any time the Runtime changes its Idle/Active state it should fire an observable event.
