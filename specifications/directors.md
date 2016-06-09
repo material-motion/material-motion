@@ -2,7 +2,7 @@ Status of this document: **Drafting by featherless**
 
 # Directors
 
-A Director is an entity that describes an interactive experience. Typically-speaking, a Directors coordinates experiences with a Runtime.
+A Director is an entity that describes an interactive experience. Directors make use of a Runtime.
 
 **Transitions**. Directors are great entities to describe Transitions. Such Directors benefit from having a State Machine and Timeline primitive at hand.
 
