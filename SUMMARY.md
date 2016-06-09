@@ -11,7 +11,7 @@
        * [View duplication](specifications/view_duplication.md)
        * [Transitions](specifications/transitions.md)
    * [Directors](specifications/directors.md)
-   * Transient views
+   * [Transient views](specifications/transient_views.md)
    * Scripting
 * [Material Motion Linguistics](material_motion/README.md)
    * [Grammar](languages/README.md)
