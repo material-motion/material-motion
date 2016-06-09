@@ -5,6 +5,8 @@ Status of this document:
 
 ## Events
 
+Observable events.
+
 ### Idle ↔ Active state change
 
 Any time the Runtime changes its Idle/Active state it should fire an observable event.
