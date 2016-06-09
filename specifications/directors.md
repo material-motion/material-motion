@@ -12,7 +12,7 @@ A Director is an entity that describes an interactive experience. Typically-spea
 
 A Director should have some form of set up phase. Provide an instance of a Runtime to this phase. This allows many Directors to affect a single Runtime.
 
-During this set up phase a Director is expected to register an initial set of Intentions with a Runtime.
+During the set up phase a Director may register an initial set of Intentions with a Runtime.
 
     function setUp(runtime) {
       transaction = Transaction()
