@@ -181,14 +181,14 @@ Actors often depend on external systems to fulfill their Intentions. An Actor is
 - When external activity begins.
 - When external activity ends.
 
-The Runtime can provide executors with two methods:
+The Runtime might provide executors with two function instances:
 
     var startActivity = function(name)
     var endActivity = function(name)
 
-The name provided to these functions should be scoped to the executor, not globally to the Runtime.
+When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Runtime.
 
-For example, an executor might have a gesture handler that looks like this:
+For example, an Actor might have a gesture handler that looks like this:
 
     function handleGesture(gesture) {
       switch (gesture.state) {
@@ -200,7 +200,7 @@ For example, an executor might have a gesture handler that looks like this:
       }
     }
 
-Similarly, an executor might implement the following when working with an external animation system:
+Similarly, an Actor might implement the following when working with an external animation system:
 
     function setup() {
       startActivity("animation")
@@ -213,4 +213,4 @@ Similarly, an executor might implement the following when working with an extern
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should executors be removed from a Runtime?
+- When should Actors be removed from a Runtime?
