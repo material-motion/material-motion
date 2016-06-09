@@ -4,6 +4,8 @@ Status of this document: **Stable**
 
 An Expression is functional syntactic sugar for the creation and configuration of Intentions.
 
+New terminology: Language, Term, and modifier.
+
 Through the following examples we will explore the essential aspects of an Expression:
 
 1. `expression = Tween()`
