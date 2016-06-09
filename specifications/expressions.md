@@ -85,8 +85,6 @@ A term may return an instance of a **modifier** that can be used to further conf
       })
     }
 
-Note the use of the self.chain method. This internal method creates a new immutable TweenTerm instance with a reference to the current instance and the provided function.
-
 The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
 
     fadeIn = Tween().fadeIn()
