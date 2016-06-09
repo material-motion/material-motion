@@ -151,17 +151,17 @@ Alternatively, consider how this situation would have played out if we had one A
 
 Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
-### Repeated: forward animation events to executors
+### Repeated: forward animation events to Actors
 
-The Runtime is now expected to forward animation events to the executors.
+The Runtime is now expected to forward animation events to the Actor instances.
 
 Actors are informed of events via the following pseudo-algorithm:
 
     for every target
-      for every executor
-        executor.event()
+      for every actor
+        actor.event()
 
-A Runtime should make reasonable efforts to send relevant events to executors.  For instance: if an executor does not care about the animation event, the Runtime should not inform the executor.
+Some Actors are not interested in animation events. These Actors should not be informed of animation events.
 
 ### Runtime active vs idle state
 
