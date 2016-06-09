@@ -36,9 +36,11 @@ The Director may want to store a reference to the Runtime in order to commit new
       }
     }
 
-**State changes**. A typical state change is the reversal of a Transition midway through.
+**State changes**. A Director may be the hub of many different types of state changes.
 
-    function onTransitionEvent(transition) {
+One type of state change is the reversal of a Transition's direction.
+
+    function onStateChange(transition) {
       transaction = Transaction()
       if transition.direction == ToTheRight {
         // Register incoming Intentions
