@@ -49,3 +49,6 @@ One type of state change is the reversal of a Transition's direction.
       }
       runtime.commit(transaction)
     }
+
+## Specialized Directors
+
