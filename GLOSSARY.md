@@ -73,3 +73,7 @@ The act of directly manipulating a Timeline's `progress` value.
 ## target
 
 A target is the entity to which a Plan is meant to be applied, such as an element or a Timeline.
+
+## transaction
+
+A mechanism by which new Intentions are committed to a Runtime.
