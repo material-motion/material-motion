@@ -14,7 +14,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
-Aside: if we zoom in to the Runtime then we can see how the Plan/Fulfillment pattern is composable.
+Aside: if we zoom in to the Runtime then we can see how the Plan/Fulfillment pattern is composable. Core Animation and its CABasicAnimation is simply a nested Plan/Fulfillment system.
 
 ![](../_assets/AbstractionDive.svg)
 
