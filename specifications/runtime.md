@@ -45,7 +45,7 @@ It must be possible to enumerate the operations of a Transaction.
 
 The log's order must match the order of operation requests.
 
-A Transaction must be explicitly committed to a Runtime; e.g. `runtime.commit(transaction)`.
+A Transaction needs to be committed to a Runtime; e.g. `runtime.commit(transaction)`.
 
 Consider the following transaction pseudo-code:
 
