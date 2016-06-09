@@ -4,6 +4,12 @@ Status of this document: **Draft**
 
 The system we propose here is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern. We call it a Runtime.
 
+## Purpose
+
+The purpose of this Runtime is to unify the expression of different types of motion and interaction. We think of it as a layer of abstraction between the application engineer and the systems of fulfillment that exist on a given platform.
+
+## Overview
+
 An instance of a Runtime must be able to do the following:
 
 - Commit to Plans.
