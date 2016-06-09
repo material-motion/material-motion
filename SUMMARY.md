@@ -1,47 +1,33 @@
 # Summary
 
 * [Introduction](README.md)
-
-## Concepts
-
 * [Overview](concepts/README.md)
 * [Primitives](concepts/primitives.md)
 * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
-
-## Specifications
-
-* [Overview](specifications/README.md))
+* [Overview](specifications/README.md)
 * [Expression](specifications/expressions.md)
 * [Runtime](specifications/runtime.md)
-
-## Material Motion Linguistics
-
 * [Overview](material_motion/README.md)
 * [Grammar](languages/README.md)
-    * [Types of Motion](languages/types_of_motion.md)
-    * [Connectors](languages/connectors.md)
-    * [Actions](languages/actions.md)
-    * [Properties](languages/properties.md)
-    * [Values](languages/values.md)
-    * [Easing](languages/easing.md)
-    * [Input](languages/input.md)
-    * [Patterns](languages/patterns.md)
-    * [Simulation](languages/simulation.md)
-    * [Other Vocabulary](languages/other_vocabulary.md)
+   * [Types of Motion](languages/types_of_motion.md)
+   * [Connectors](languages/connectors.md)
+   * [Actions](languages/actions.md)
+   * [Properties](languages/properties.md)
+   * [Values](languages/values.md)
+   * [Easing](languages/easing.md)
+   * [Input](languages/input.md)
+   * [Patterns](languages/patterns.md)
+   * [Simulation](languages/simulation.md)
+   * [Other Vocabulary](languages/other_vocabulary.md)
 * [Dictionary](material_motion/dictionary.md)
-
-## Community
-
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
-
----
-
 * [Glossary](GLOSSARY.md)
 * Drafts
    * [Applications](specifications/applications.md)
    * [Odeon runtime notes](specifications/odeon_runtime.md)
+* Runtime plugins
 
