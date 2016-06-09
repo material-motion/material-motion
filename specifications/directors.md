@@ -4,7 +4,7 @@ Status of this document: **Drafting by featherless**
 
 A Director is an entity that describes an interactive experience. Directors make use of a Runtime.
 
-**Transitions**. Directors are often used to describe Transitions. Such Directors benefit from having a State Machine and Timeline primitive at hand.
+**Transitions**. Directors are best to describe Transitions. Such Directors benefit from having a State Machine and Timeline primitive at hand.
 
 **Logic**. Directors often involve a combination of conditional logic and Intentions.
 
@@ -18,4 +18,14 @@ During the set up phase a Director may register an initial set of Intentions wit
       transaction = Transaction()
       
       runtime.commit(transaction)
+    }
+
+**Gestures**. This is also a good opportunity for the Director to register any new gesture recognizers. The Director will want to store the Runtime so that it can make further Transactions at a later point.
+
+    function onGesture(gesture) {
+      if gesture.state == Ended {
+        transaction = Transaction()
+        // Some new Intentions
+        runtime.commit(transaction)
+      }
     }
