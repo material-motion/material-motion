@@ -6,7 +6,7 @@ The system we propose here is an implementation of the [Plan/Fulfillment](patter
 
 ## Purpose
 
-The purpose of this Runtime is to coordinate the expression of different types of motion and interaction. Think of it as an abstraction layer between the application engineer and existing systems of fulfillment.
+The purpose of this Runtime is to coordinate the expression of different types of motion and interaction. It as an abstraction layer between the application engineer and existing systems of fulfillment.
 
 ## Overview
 
