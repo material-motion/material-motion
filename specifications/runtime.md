@@ -27,7 +27,7 @@ According to the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern, In
 
 An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`.
 
-{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that Plan must not fulfill themselves.{% endem %} The Runtime will determine how to fulfill an Intention.
+{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that Plan must not fulfill themselves.{% endem %} The Runtime will determine how to fulfill its provided Intentions.
 
 ## Commit Plans
 
