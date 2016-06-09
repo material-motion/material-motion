@@ -9,7 +9,7 @@
    * [Runtime](specifications/runtime.md)
    * [Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
-       * Transitions
+       * [Transitions](specifications/transitions.md)
    * Directors
    * Transient views
    * Scripting
