@@ -80,21 +80,21 @@ The Runtime is now expected to fulfill its Intentions.
 
 A Runtime must translate Intentions into executable logic.
 
-### Intention ↔ Executor association
+### Intention ↔ Actor association
 
 We'll assume a function exists that returns an object capable of fulfilling an Intention. We'll call such an object an **executor**. The method signature for this method might look like this:
 
-    function executorForIntention(plan, target, existingExecutors) -> Executor
+    function executorForIntention(plan, target, existingActors) -> Actor
 
-This function will use a `Intention type → Executor type` lookup table. The lookup can be implemented in many ways:
+This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
 
-**Intention → Executor**
+**Intention → Actor**
 
-Intentions define the Executor they require. This requires Intentions to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Intentions they fulfill.
+Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
 
-**Executor → Intention**
+**Actor → Intention**
 
-Executors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Executors conflicting on a given Intention.
+Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
 
 ### On commit: generate executors
 
@@ -115,7 +115,7 @@ Recall that the above log translated to the following internal state:
 
 Let's create executors by calling our hypothetical `executorForIntention` on each target's Intentions.
 
-![](../_assets/Executors.svg)
+![](../_assets/Actors.svg)
 
 We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
 
@@ -130,7 +130,7 @@ Consider the following pseudo-Transaction involving physical simulation Intentio
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-Our circleView now has two Intentions and one executor, a PhysicalSimulationExecutor. Both Intentions are provided to the executor instance.
+Our circleView now has two Intentions and one executor, a PhysicalSimulationActor. Both Intentions are provided to the executor instance.
 
 The executor now knows the following:
 
@@ -155,7 +155,7 @@ Note that "one executor per type of Intention" does not resolve the problem of s
 
 The Runtime is now expected to forward animation events to the executors.
 
-Executors are informed of events via the following pseudo-algorithm:
+Actors are informed of events via the following pseudo-algorithm:
 
     for every target
       for every executor
@@ -174,7 +174,7 @@ A Runtime is active when there is at least one active executor.  An executor can
 
 ### External activity
 
-Executors often depend on external systems to fulfill their Intentions. An Executor is therefor responsible for informing the Runtime of two events:
+Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
