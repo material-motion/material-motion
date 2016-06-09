@@ -1,4 +1,4 @@
-Status of this document: **Under construction**
+Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
 # Directors
