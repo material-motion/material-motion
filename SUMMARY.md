@@ -9,7 +9,6 @@
    * [Runtime](specifications/runtime.md)
    * [Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
-       * [Transitions](specifications/transitions.md)
    * [Directors](specifications/directors.md)
    * [Transient views](specifications/transient_views.md)
    * [Scripting](specifications/scripting.md)
