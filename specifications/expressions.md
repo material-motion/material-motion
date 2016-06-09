@@ -22,7 +22,7 @@ Expressions begin with a Language. A Language is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Languages have **terms**.
+Languages have **terms**. A term initiates the description of new Plans.
 
 For example, the Tween Language definition might look like:
 
