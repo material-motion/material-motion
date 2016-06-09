@@ -14,6 +14,8 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
+![](../_assets/AbstractionDive.svg)
+
 As we'll discuss in detail below, the Runtime acts as a fulfillment engine for objects we call Intention.
 
 ## Overview
