@@ -98,7 +98,7 @@ Actors define which Intentions they can fulfill. This approach allows Intentions
 
 ### On commit: generate executors
 
-When a Transaction is committed, the Runtime must generate an executor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
+When a Transaction is committed, the Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
     [
