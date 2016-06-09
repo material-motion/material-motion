@@ -58,4 +58,5 @@ A Director class hierarchy might include specialized Director implementations th
 
 **Initialization**. A Transition Director is created when a Transition is about to occur. The Director's `setUp` method should be invoked at this point.
 
-**End state**. The Director is responsible for communicating when the Transition has ended.
+**End state**. The Director is responsible for communicating when the Transition has ended. The Director will likely make use of the Runtime's idle/active events to communicate this.
+
