@@ -78,7 +78,7 @@ The Runtime is now expected to fulfill its Intentions.
 
 ## Fulfill Intentions
 
-A Runtime must translate Intentions into executable logic.
+The Runtime we propose uses an entity called an Actor to fulfill specific types of Intention. The Actor is the final mediating agent between Intention and fulfillment.
 
 ### Intention ↔ Actor association
 
