@@ -2,7 +2,7 @@ Status of this document: **Draft**
 
 # Runtime
 
-The system we propose here is an implementation of the [Plan/Fulfillment](patterns/plan-fulfillment.md) pattern. We call it a Runtime.
+The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Runtime.
 
 ## Purpose
 
@@ -18,8 +18,12 @@ As we'll discuss in detail below, the Runtime acts as a fulfillment engine for o
 
 An instance of a Runtime must be able to do the following:
 
-- Commit to Plans.
-- Fulfill those Plans.
+- Commit to Intentions.
+- Fulfill those Intentions.
+
+## Intention
+
+Intention is a type of Plan as far as the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern is concerned.
 
 ## Commit Plans
 
