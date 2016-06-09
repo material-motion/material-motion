@@ -8,6 +8,10 @@ The system we propose here is an implementation of the [Plan/Fulfillment](patter
 
 The purpose of this Runtime is to coordinate the expression of different types of motion and interaction. It as an abstraction layer between the application engineer and existing systems of fulfillment.
 
+The following diagram shows where the Runtime lives in a platform like iOS.
+
+![](../_assets/Abstraction.svg)
+
 ## Overview
 
 An instance of a Runtime must be able to do the following:
