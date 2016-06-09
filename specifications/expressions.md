@@ -131,13 +131,13 @@ In order for the next term's `intentions()` function to resolve a chain of multi
       }
     }
 
-## 5. Generating Intentions
+## 5. Generating Plans
 
-    intentions = expression.intentions()
+    plans = expression.plans()
 
-Every expression must be resolvable into an array of Intentions.
+Every expression must be resolvable into an array of Plans.
 
-Successive invocations of this method should generate new Intentions.
+Successive invocations of this method should generate new Plans.
 
 ## Follow-up considerations
 
