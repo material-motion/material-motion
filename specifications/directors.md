@@ -4,8 +4,18 @@ Status of this document: **Drafting by featherless**
 
 A Director is an entity that describes an interactive experience. Typically-speaking, a Directors coordinates experiences with a Runtime.
 
-Directors are great entities to describe Transitions. Such Directors benefit from having a State Machine and Timeline primitive at hand.
+**Transitions**. Directors are great entities to describe Transitions. Such Directors benefit from having a State Machine and Timeline primitive at hand.
 
-Directors often involve a combination of conditional logic and Intentions.
+**Logic**. Directors often involve a combination of conditional logic and Intentions.
 
+## Set up phase
 
+A Director should have some form of set up phase. Provide an instance of a Runtime to this phase. This allows multiple Directors to affect a single Runtime.
+
+During this set up phase a Director is expected to register an initial set of Intentions with a Runtime.
+
+    function setUp(runtime) {
+      transaction = Transaction()
+      
+      runtime.commit(transaction)
+    }
