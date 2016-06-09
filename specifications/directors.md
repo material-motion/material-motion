@@ -10,7 +10,7 @@ A Director is an entity that describes an interactive experience. Typically-spea
 
 ## Set up phase
 
-A Director should have some form of set up phase. Provide an instance of a Runtime to this phase. This allows multiple Directors to affect a single Runtime.
+A Director should have some form of set up phase. Provide an instance of a Runtime to this phase. This allows many Directors to affect a single Runtime.
 
 During this set up phase a Director is expected to register an initial set of Intentions with a Runtime.
 
