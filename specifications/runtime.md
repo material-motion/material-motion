@@ -14,6 +14,8 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
+Aside: zooming in to the Runtime we can see how the Plan/Fulfillment pattern is inherently recursive.
+
 ![](../_assets/AbstractionDive.svg)
 
 As we'll discuss in detail below, the Runtime acts as a fulfillment engine for objects we call Intention.
