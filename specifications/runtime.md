@@ -8,7 +8,7 @@ New terminology: Transaction, Intention, and Actor.
 
 ## Purpose
 
-The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and existing fulfillment systems.
+The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and any number of fulfillment systems.
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
