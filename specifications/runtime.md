@@ -29,7 +29,7 @@ An Intention instance could be a named object with no data, e.g. SquishableInten
 
 Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`.
 
-{% em type="green" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) does not fulfill itself.{% endem %} Fulfillment is left up to the Runtime.
+{% em type="green" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) does not fulfill itself.{% endem %} The Runtime will determine how to fulfill an Intention.
 
 ## Commit Plans
 
