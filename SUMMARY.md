@@ -4,9 +4,10 @@
 
 ---
 
-* [Concepts](concepts/README.md)
-   * [Primitives](concepts/primitives.md)
-   * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
+### [Concepts](concepts/README.md)
+
+* [Primitives](concepts/primitives.md)
+* [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
 
 ---
 
