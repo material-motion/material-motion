@@ -32,15 +32,17 @@
 
 ---
 
+## Community
+
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
-* [Glossary](GLOSSARY.md)
 
 ---
 
+* [Glossary](GLOSSARY.md)
 * Drafts
    * [Applications](specifications/applications.md)
    * [Odeon runtime notes](specifications/odeon_runtime.md)
