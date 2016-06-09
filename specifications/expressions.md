@@ -131,7 +131,7 @@ In order for the next term's `intentions()` function to resolve a chain of multi
       }
     }
 
-## 5. Generating intentions
+## 5. Generating Intentions
 
     intentions = expression.intentions()
 
