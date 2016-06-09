@@ -46,6 +46,10 @@ An Intention is an object representing **what you want something to do**.
 
 An Intention is a Plan in the Plan/Fulfillment pattern.
 
+## language
+
+The beginning of an Expression.
+
 ## plan
 
 A Plan is **what you want something to do**.
