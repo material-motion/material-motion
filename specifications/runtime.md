@@ -161,7 +161,7 @@ Actors are informed of events via the following pseudo-algorithm:
       for every actor
         actor.event()
 
-Some Actors are not interested in animation events. These Actors should not be informed of animation events.
+Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
 
 ### Runtime active vs idle state
 
