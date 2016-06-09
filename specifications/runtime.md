@@ -78,7 +78,7 @@ The Runtime is now expected to fulfill its Intentions.
 
 ## Fulfill Intentions
 
-The Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the mediating agent between Intention and its fulfillment.
+The Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its fulfillment.
 
 ### Intention ↔ Actor association
 
