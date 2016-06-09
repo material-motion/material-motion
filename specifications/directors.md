@@ -22,7 +22,11 @@ A Director should have some form of set up phase.
       runtime.commit(transaction)
     }
 
-**Gestures**. This is also a good opportunity for the Director to register any new gesture recognizers. The Director will want to store the Runtime so that it can make further Transactions at a later point.
+## Event handling
+
+The Director may want to store a reference to the Runtime in order to commit new Intentions in response to different events.
+
+**Gestures**. The Director will want to store the Runtime so that it can make further Transactions at a later point.
 
     function onGesture(gesture) {
       if gesture.state == Ended {
@@ -30,4 +34,16 @@ A Director should have some form of set up phase.
         // Some new Intentions
         runtime.commit(transaction)
       }
+    }
+
+**State changes**. A typical state change is the reversal of a Transition midway through.
+
+    function onTransitionEvent(transition) {
+      transaction = Transaction()
+      if transition.direction == ToTheRight {
+        // Register incoming Intentions
+      } else {
+        // Register outgoing Intentions
+      }
+      runtime.commit(transaction)
     }
