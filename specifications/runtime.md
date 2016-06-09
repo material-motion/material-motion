@@ -82,9 +82,9 @@ The Runtime we propose uses entities called **Actors** to fulfill specific types
 
 ### Intention ↔ Actor association
 
-We'll assume a function exists that returns an object capable of fulfilling an Intention. We'll call such an object an **executor**. The method signature for this method might look like this:
+We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 
-    function executorForIntention(plan, target, existingActors) -> Actor
+    function actorForIntention(intention, target, existingActors) -> Actor
 
 This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
 
@@ -102,24 +102,24 @@ When a Transaction is committed, the Runtime must generate an Actor for each Int
 
     > transaction.log
     [
-      {action:"add", plan: FadeIn, target: circleView},
-      {action:"add", plan: Draggable, target: squareView},
-      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
-      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
-      {action:"remove", name: "name2", target: squareView}
+      {action:"add", intention: FadeIn, target: circleView},
+      {action:"add", intention: Draggable, target: squareView},
+      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
+      {action:"remove", intention: "name2", target: squareView}
     ]
 
 Recall that the above log translated to the following internal state:
 
 ![](../_assets/TargetManagers.svg)
 
-Let's create executors by calling our hypothetical `executorForIntention` on each target's Intentions.
+Let's create Actors by calling our hypothetical `actorForIntention` on each target's Intentions.
 
 ![](../_assets/Actors.svg)
 
-We've created three executors in total. `circleView` has two executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture executor for the squareView?"
+We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
-#### One executor per type of Intention
+#### One Actor instance per type of Intention
 
 A single executor is created for every type of Intention registered to a target. This allows executors to maintain coherent state even when multiple Intentions are concerned.
 
