@@ -12,7 +12,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
-As we'll discuss in detail below, the Runtime acts as a translation unit from Plans to their fulfillment.
+As we'll discuss in detail below, the Runtime acts as a translation unit from objects we call Intention to their eventual fulfillment.
 
 ## Overview
 
