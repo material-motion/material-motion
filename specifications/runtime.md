@@ -4,6 +4,8 @@ Status of this document: **Draft**
 
 The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Runtime.
 
+New terms: Transaction, Intention, and Actor.
+
 ## Purpose
 
 The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It as an abstraction layer between the application engineer and existing systems of fulfillment.
