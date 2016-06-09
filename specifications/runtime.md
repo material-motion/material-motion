@@ -62,15 +62,15 @@ The Transaction's log might resemble the following pseudo-object:
 
     > transaction.log
     [
-      {action:"add", plan: FadeIn, target: circleView},
-      {action:"add", plan: Draggable, target: squareView},
-      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
-      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
+      {action:"add", intention: FadeIn, target: circleView},
+      {action:"add", intention: Draggable, target: squareView},
+      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
       {action:"remove", name: "name2", target: squareView}
-      {action:"add", plan: Draggable, target: circleView},
+      {action:"add", intention: Draggable, target: circleView},
     ]
 
-After committing the above transaction, our Runtime's internal state might resemble the following:
+After committing the above transaction, the Runtime's internal state might resemble the following:
 
 ![](../_assets/TargetManagers.svg)
 
