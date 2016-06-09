@@ -23,7 +23,13 @@ An instance of a Runtime must be able to do the following:
 
 ## Intention
 
-Intention is a type of Plan as far as the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern is concerned.
+Intention is a type of Plan in terms of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern.
+
+An Intention instance could be a named object with no data, e.g. SquishableIntention.
+
+Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`.
+
+Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) does not fulfill itself.
 
 ## Commit Plans
 
