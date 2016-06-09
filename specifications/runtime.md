@@ -4,7 +4,7 @@ Status of this document: **Draft**
 
 The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Runtime.
 
-New terms: Transaction, Intention, and Actor.
+New terminology: Transaction, Intention, and Actor.
 
 ## Purpose
 
