@@ -167,9 +167,11 @@ Some Actors are not interested in animation events. Do not inform these Actors o
 
 At any given time a Runtime can either be **idle** or **active**.
 
-A Runtime is active when there is at least one active executor.  An executor can be active for any of the following reasons:
+A Runtime is active when there is at least one active Actor. 
 
-- The animate event returned a Boolean value of false.
+An Actor can be active for any of the following reasons:
+
+- The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
 - The executor has indicated some form of active **external activity**.
 
 ### External activity
