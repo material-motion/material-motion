@@ -22,7 +22,7 @@ Expressions begin with a Language. A Language is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Languages have **term functions**. A term function initiates the creation of Plans.
+Languages have **term functions**. A term function initiates the description of Plans.
 
 For example, the Tween Language definition might look like:
 
@@ -42,7 +42,7 @@ For example, the Tween Language definition might look like:
 
     expression = Tween().fadeIn()
 
-A **term function** initiates the creation of Plans. An instance of a Term is returned by a Language’s term function.
+A **term function** initiates the description of Plans. An instance of a Term is returned by a Language’s term function.
 
 > Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow expressioins like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
