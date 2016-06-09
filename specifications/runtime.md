@@ -14,7 +14,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
-Aside: zooming in to the Runtime we can see how the Plan/Fulfillment pattern is inherently recursive.
+If we zoom in to the Runtime then we can see how the Plan/Fulfillment pattern is inherently recursive.
 
 ![](../_assets/AbstractionDive.svg)
 
