@@ -12,7 +12,7 @@
        * [Transitions](specifications/transitions.md)
    * [Directors](specifications/directors.md)
    * [Transient views](specifications/transient_views.md)
-   * Scripting
+   * [Scripting](specifications/scripting.md)
 * [Material Motion Linguistics](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
