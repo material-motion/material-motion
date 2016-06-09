@@ -66,6 +66,10 @@ Examples:
 - Web (Chrome)
 - Web (Safari)
 
+## runtime
+
+An entity that facilitates the coordination of rich, interactive motion. Receives Plans and fulfills them.
+
 ## scrubbing
 
 The act of directly manipulating a Timeline's `progress` value.
