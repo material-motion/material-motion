@@ -16,7 +16,7 @@ As we'll discuss in detail below, the Runtime acts as a fulfillment engine for o
 
 ## Overview
 
-An instance of a Runtime must be capable of the following:
+An instance of a Runtime must be able to do the following:
 
 - Commit to Intentions.
 - Fulfill those Intentions.
