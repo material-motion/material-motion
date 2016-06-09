@@ -172,7 +172,7 @@ A Runtime is active when there is at least one active Actor.
 An Actor can be active for any of the following reasons:
 
 - The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
-- The executor has indicated some form of active **external activity**.
+- The Actor has indicated some form of active **external activity**.
 
 ### External activity
 
@@ -180,8 +180,6 @@ Actors often depend on external systems to fulfill their Intentions. An Actor is
 
 - When external activity begins.
 - When external activity ends.
-
-External activity affects the active state of the Runtime. This can have propagating effects to systems watching the Runtime's current state.
 
 The Runtime can provide executors with two methods:
 
