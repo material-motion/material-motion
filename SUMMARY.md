@@ -30,8 +30,6 @@
     * [Other Vocabulary](languages/other_vocabulary.md)
 * [Dictionary](material_motion/dictionary.md)
 
----
-
 ## Community
 
 * [Community index](community_index/README.md)
