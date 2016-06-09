@@ -6,7 +6,7 @@ The system we propose here is an implementation of the [Plan/Fulfillment](../con
 
 ## Purpose
 
-The purpose of this Runtime is to coordinate the expression of different types of motion and interaction. It as an abstraction layer between the application engineer and existing systems of fulfillment.
+The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It as an abstraction layer between the application engineer and existing systems of fulfillment.
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
