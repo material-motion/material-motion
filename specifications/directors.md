@@ -52,3 +52,10 @@ One type of state change is the reversal of a Transition's direction.
 
 ## Specialized Directors
 
+A Director class hierarchy might include specialized Director implementations that provide essential scaffolding.
+
+### Transition Director
+
+**Initialization**. A Transition Director is created when a Transition is about to occur. The Director's `setUp` method should be invoked at this point.
+
+**End state**. The Director is responsible for communicating when the Transition has ended.
