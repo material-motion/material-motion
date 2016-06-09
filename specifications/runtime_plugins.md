@@ -5,7 +5,7 @@ Status of this document:
 
 ## Events
 
-Observable events.
+Events observable by external entities.
 
 ### Idle ↔ Active state change
 
