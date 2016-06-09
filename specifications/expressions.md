@@ -2,7 +2,7 @@ Status of this document: **Stable**
 
 # Expression
 
-An Expression is functional syntactic sugar for the creation and configuration of Intentions.
+An Expression is functional syntactic sugar for the creation and configuration of Plans.
 
 New terminology: Language, Term, and modifier.
 
@@ -12,7 +12,7 @@ Through the following examples we will explore the essential aspects of an Expre
 2. `expression = Tween().fadeIn()`
 3. `expression = Tween().fadeIn().withEasingCurve(easeOut)`
 4. `expression = Gesture().pinchable().rotatable().draggable()`
-5. `intentions = expression.intentions()`
+5. `plans = expression.plans()`
 
 ## 1. Languages
 
@@ -42,11 +42,11 @@ For example, the Tween Language definition might look like:
 
     expression = Tween().fadeIn()
 
-A **term function** is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
+A **term function** is the entry point for creating Plans. An instance of a Term is returned by a Language’s term function.
 
 > Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow expressioins like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
-The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+The purpose of a Term is to initiate the creation of one or more Plans. The implementation of the term may create one or more Plans and initialize well-documented defaults.
 
 Pseudo-code example implementation:
 
@@ -77,11 +77,11 @@ A term may return an instance of a **modifier** that can be used to further conf
 
     function TweenModifier.withEasingCurve(curve) -> TweenTerm {
       return TweenTerm(previousTerm: self.previousTerm, work: function() {
-        let intentions = self.work()
-        for intention in intentions {
-          intention.easingCurve = curve
+        let plans = self.work()
+        for plan in plans {
+          plan.easingCurve = curve
         }
-        return intentions
+        return plans
       })
     }
 
@@ -90,10 +90,10 @@ Note the use of the self.chain method. This internal method creates a new immuta
 The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
 
     fadeIn = Tween().fadeIn()
-    elementA.addIntentions(fadeIn.intentions())
+    elementA.addPlans(fadeIn.plans())
 
     fadeInEaseOut = fadeIn.withEasingCurve(easeOut)
-    elementB.addIntentions(fadeInEaseOut.intentions())
+    elementB.addPlans(fadeInEaseOut.plans())
 
 **Immutability**: modifiers are immutable.
 
@@ -108,14 +108,14 @@ The above implementation allows the engineer to **chain** modifications. Express
 Additional examples:
 
     draggable = Gesture().draggable()
-    target.addIntentions(draggable.intentions())
+    target.addPlans(draggable.plans())
     
     # Reusing the draggable expression
-    target.addIntentions(draggable.and.rotatable().intentions())
+    target.addPlans(draggable.and.rotatable().plans())
 
 Terms within a Language can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the Language object.
 
-In order for the next term's `intentions()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
+In order for the next term's `plans()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
 
     TweenTerm {
       and = function() -> Tween {
@@ -126,8 +126,8 @@ In order for the next term's `intentions()` function to resolve a chain of multi
     TweenAndTerm: Tween, Term {
       let previousTerm
       
-      intentions = function() -> [Intentions] {
-        return self.previousTerm.intentions()
+      plans = function() -> [Plans] {
+        return self.previousTerm.plans()
       }
     }
 
@@ -143,7 +143,7 @@ Successive invocations of this method should generate new Plans.
 
 ### Expression helper methods
 
-APIs that accept intentions could also accept Expressions. This reduces the need to resolve the expression at the call site.
+APIs that accept plans could also accept Expressions. This reduces the need to resolve the expression at the call site.
 
     target.addExpression(Gesture().draggable())
 
@@ -151,7 +151,7 @@ APIs that accept intentions could also accept Expressions. This reduces the need
 
 **Proposal (status: new)**: Expressions should be able to be serialized.
 
-TODO: Discuss value of serializing Expressions vs serializing Intentions. Expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an Expression then it doesn't matter which Intentions are used. If Intentions were serialized then we'd be somewhat more implementation-dependant.
+TODO: Discuss value of serializing Expressions vs serializing Plans. Expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an Expression then it doesn't matter which Plans are used. If Plans were serialized then we'd be somewhat more implementation-dependant.
 
     Gesture().draggable().toJSON()
 
@@ -198,4 +198,4 @@ Encourage functions that accept expressions for the purposes of styling:
 
 Discussion
 
-Is more likely that we'll allow clients to stylize Intentions than we will allow styling of Expressions/Languages.
+Is more likely that we'll allow clients to stylize Plans than we will allow styling of Expressions/Languages.
