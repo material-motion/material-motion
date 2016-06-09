@@ -11,6 +11,8 @@ Events observable by external entities.
 
 Any time the Runtime changes its Idle/Active state it should fire an observable event.
 
+This is helpful for Transition Directors.
+
 ### New target referenced
 
 Each time a new target is referenced, the Runtime should send an event. The receivers of this event should be allowed to return a new "shadow" instance of the target. This shadow instance will be provided to the Actors.
