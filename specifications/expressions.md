@@ -22,7 +22,7 @@ Expressions begin with a Language. A Language is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Languages have **term functions**. A term function initiates the description of Plans.
+Languages have **term functions**. A term function initiates the creation of Plans.
 
 For example, the Tween Language definition might look like:
 
