@@ -11,7 +11,7 @@ Similar concepts:
 
 ## dictionary
 
-A Language's list of terms and modifiers.
+A list of terms and modifiers.
 
 ## element
 
