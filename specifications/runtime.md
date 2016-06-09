@@ -96,7 +96,7 @@ Intentions define the Actor they require. This requires Intentions to be aware o
 
 Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
 
-### On commit: generate executors
+### On commit: generate Actors
 
 When a Transaction is committed, the Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
 
@@ -130,7 +130,7 @@ Consider the following pseudo-Transaction involving physical simulation Intentio
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-Our circleView now has two Intentions and one executor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
+Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
 The Actor now knows the following:
 
@@ -181,7 +181,7 @@ Actors often depend on external systems to fulfill their Intentions. An Actor is
 - When external activity begins.
 - When external activity ends.
 
-The Runtime might provide executors with two function instances:
+The Runtime might provide Actors with two function instances:
 
     var startActivity = function(name)
     var endActivity = function(name)
