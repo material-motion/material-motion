@@ -24,6 +24,8 @@ Expressions begin with a Language. A Language is an instance of an object.
 
 Languages have **term functions**. A term function initiates the description of Plans.
 
+**Scope**: The purpose of a Language object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Languages to exist where some Languages may have similar or identical terms. The responsibility of any given Language’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
+
 For example, the Tween Language definition might look like:
 
     Tween {
@@ -33,8 +35,6 @@ For example, the Tween Language definition might look like:
       fn rotateBy(...) -> Term
       ...
     }
-
-**Scope**: The purpose of a Language object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Languages to exist where some Languages may have similar or identical terms. The responsibility of any given Language’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
 
 **Capitalization**: Language names start with a capital letter. Terms start with a lowercase letter.
 
