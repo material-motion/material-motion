@@ -37,7 +37,7 @@ Intentions are committed to Runtimes via Transactions.
 
 A Transaction's public API should support the following operations:
 
-- Associate a Intention with a target.
+- Associate an Intention with a target.
 - Associate a named Intention with a target.
 - Remove any Intention associated with a given name from a target.
 
@@ -84,7 +84,7 @@ A Runtime must translate Intentions into executable logic.
 
 ### Intention ↔ Executor association
 
-We'll assume a function exists that returns an object capable of fulfilling a Intention. We'll call such an object an **executor**. The method signature for this method might look like this:
+We'll assume a function exists that returns an object capable of fulfilling an Intention. We'll call such an object an **executor**. The method signature for this method might look like this:
 
     function executorForIntention(plan, target, existingExecutors) -> Executor
 
