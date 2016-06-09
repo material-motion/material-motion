@@ -8,7 +8,7 @@
    * [Expression](specifications/expressions.md)
    * [Runtime](specifications/runtime.md)
    * [Runtime plugins](specifications/runtime_plugins.md)
-       * View duplication
+       * [View duplication](specifications/view_duplication.md)
        * Transitions
    * Directors
    * Transient views
