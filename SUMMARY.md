@@ -7,6 +7,7 @@
 * [Overview](specifications/README.md)
 * [Expression](specifications/expressions.md)
 * [Runtime](specifications/runtime.md)
+* Runtime plugins
 * [Overview](material_motion/README.md)
 * [Grammar](languages/README.md)
    * [Types of Motion](languages/types_of_motion.md)
@@ -29,5 +30,4 @@
 * Drafts
    * [Applications](specifications/applications.md)
    * [Odeon runtime notes](specifications/odeon_runtime.md)
-* Runtime plugins
 
