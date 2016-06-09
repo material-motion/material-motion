@@ -10,7 +10,7 @@
    * [Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
        * [Transitions](specifications/transitions.md)
-   * Directors
+   * [Directors](specifications/directors.md)
    * Transient views
    * Scripting
 * [Material Motion Linguistics](material_motion/README.md)
