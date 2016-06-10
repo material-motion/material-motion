@@ -1,28 +1,28 @@
 Status of this document: **Draft**
 
-# Runtime
+# Motion Runtime
 
-The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Runtime.
+The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Motion Runtime.
 
 New terminology: Transaction, Intention, and Actor.
 
 ## Purpose
 
-The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and any number of fulfillment systems.
+The purpose of a Motion Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and any number of fulfillment systems.
 
-The following diagram shows where the Runtime lives in relation to a platform like iOS.
+The following diagram shows where the Motion Runtime lives in relation to a platform like iOS.
 
 ![](../_assets/Abstraction.svg)
 
-Aside: if we zoom in to the Runtime then we can see how the Plan/Fulfillment pattern is composable: Core Animation and its CABasicAnimation is simply a nested Plan/Fulfillment system.
+Aside: if we zoom in to the Motion Runtime then we can see how the Plan/Fulfillment pattern is composable: Core Animation and its CABasicAnimation is simply a nested Plan/Fulfillment system.
 
 ![](../_assets/AbstractionDive.svg)
 
-As we'll discuss in detail below, the Runtime acts as a fulfillment engine for objects we call Intention.
+As we'll discuss in detail below, the Motion Runtime acts as a fulfillment engine for objects we call Intention.
 
 ## Overview
 
-An instance of a Runtime must be able to do the following:
+An instance of a Motion Runtime must be able to do the following:
 
 - Commit to Intentions.
 - Fulfill those Intentions.
@@ -33,11 +33,11 @@ According to the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern, In
 
 An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`. If the programming language allows for it, Intention could even be a protocol that existing objects conform to.
 
-{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) must not fulfill itself.{% endem %} The Runtime will determine how to fulfill its provided Intentions.
+{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) must not fulfill itself.{% endem %} The Motion Runtime will determine how to fulfill its provided Intentions.
 
 ## Commit Intentions
 
-Intentions are committed to Runtimes via Transactions.
+Intentions are committed to Motion Runtimes via Transactions.
 
 A Transaction's public API should support the following operations:
 
@@ -49,7 +49,7 @@ It must be possible to enumerate the operations of a Transaction.
 
 The log's order must match the order of operation requests.
 
-A Transaction needs to be committed to a Runtime for it to take effect; e.g. `runtime.commit(transaction)`.
+A Transaction needs to be committed to a Motion Runtime for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
 
 Consider the following transaction pseudo-code:
 
@@ -60,7 +60,7 @@ Consider the following transaction pseudo-code:
     transaction.addNamed("name2", Rotatable, squareView)
     transaction.removeNamed("name2", squareView)
     transaction.add(Draggable, circleView)
-    runtime.commit(transaction)
+    Motion Runtime.commit(transaction)
 
 The Transaction's log might resemble the following pseudo-object:
 
@@ -74,17 +74,17 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"add", intention: Draggable, target: circleView},
     ]
 
-After committing the above transaction, the Runtime's internal state might resemble the following:
+After committing the above transaction, the Motion Runtime's internal state might resemble the following:
 
 ![](../_assets/TargetManagers.svg)
 
 Note that `Rotatable` is not listed. This is because we also removed any Intention named "name2" in this Transaction.
 
-The Runtime is now expected to fulfill its Intentions.
+The Motion Runtime is now expected to fulfill its Intentions.
 
 ## Fulfill Intentions
 
-The Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its fulfillment.
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its fulfillment.
 
 ### Intention ↔ Actor association
 
@@ -104,7 +104,7 @@ Actors define which Intentions they can fulfill. This approach allows Intentions
 
 ### On commit: generate Actors
 
-When a Transaction is committed, the Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
+When a Transaction is committed, the Motion Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
 
     > transaction.log
     [
@@ -134,7 +134,7 @@ Consider the following pseudo-Transaction involving physical simulation Intentio
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
     transaction.add(AnchoredSpring.on(position), circleView)
-    runtime.commit(transaction)
+    Motion Runtime.commit(transaction)
 
 Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
@@ -159,7 +159,7 @@ Note that "one Actor per type of Intention" does not resolve the problem of shar
 
 ### Repeated: forward animation events to Actors
 
-The Runtime is now expected to forward animation events to the Actor instances.
+The Motion Runtime is now expected to forward animation events to the Actor instances.
 
 Actors are informed of events via the following pseudo-algorithm:
 
@@ -167,13 +167,13 @@ Actors are informed of events via the following pseudo-algorithm:
       for every actor
         actor.event()
 
-Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
+Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Motion Runtime should not listen to animation events.
 
-### Runtime active vs idle state
+### Motion Runtime active vs idle state
 
-At any given time a Runtime can either be **idle** or **active**.
+At any given time a Motion Runtime can either be **idle** or **active**.
 
-A Runtime is active when there is at least one active Actor. 
+A Motion Runtime is active when there is at least one active Actor. 
 
 An Actor can be active for any of the following reasons:
 
@@ -182,17 +182,17 @@ An Actor can be active for any of the following reasons:
 
 ### External activity
 
-Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Runtime of two events:
+Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Motion Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
 
-The Runtime might provide Actors with two function instances:
+The Motion Runtime might provide Actors with two function instances:
 
     var startActivity = function(name)
     var endActivity = function(name)
 
-When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Runtime.
+When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Motion Runtime.
 
 For example, an Actor might have a gesture handler that looks like this:
 
@@ -219,4 +219,4 @@ Similarly, an Actor might implement the following when working with an external 
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should Actors be removed from a Runtime?
+- When should Actors be removed from a Motion Runtime?
