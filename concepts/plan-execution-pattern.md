@@ -70,6 +70,6 @@ Good systems of execution will carefully balance the needs of performance, power
 
 ## Examples of this separation
 
-Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this pattern for other [primitives](../primitives.md).
+Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
 
 ![](../_assets/PatternMatches.svg)
