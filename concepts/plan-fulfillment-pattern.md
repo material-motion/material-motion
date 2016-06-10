@@ -6,7 +6,7 @@ This pattern emphasizes a **separation** of the *definition* of motion from its 
 
 This pattern is important because:
 
-- It allows expensive work to execute in separate threads, processes, or workers.
+- Expensive execution can occur in separate threads, processes, or workers.
 - execution is code. Definitions are more easily represented with rich user interfaces. Definitions can be sent from one device to another.
 
 ### A definition of motion
