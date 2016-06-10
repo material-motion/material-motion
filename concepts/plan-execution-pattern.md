@@ -8,8 +8,8 @@ Status of this document: **Stable**
 
 Separating plans of motion from their execution is important because:
 
-- It allows execution to occur in separate contexts.
-- Execution relies on code. Plans can be represented in rich user interfaces. Plans can also be sent "over the wire".
+- It allows execution to occur in a separate, potentially non-blocking context.
+- Execution relies on code. Plans, on the other hand, can be represented in rich user interfaces. Plans can also be sent over the wire. This enable design tooling and engineering to communicate in a similar "language".
 
 ### A plan of motion
 
