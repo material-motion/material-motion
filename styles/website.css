@@ -7,8 +7,8 @@
 }
 
 blockquote {
-  border-left: 5px solid #E8F0FE;
-  margin-left: -10px;
-  padding-left: 5px;
+  padding: 1px 8px 1px 16px;
+  background-color: #e8f0fe;
+  border-left: 4px solid #3367d6;
 }
 
