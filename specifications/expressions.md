@@ -12,19 +12,19 @@ Through the following examples we will explore the essential aspects of a motion
 4. `expression = Gesture().pinchable().rotatable().draggable()`
 5. `plans = expression.plans()`
   
-## 1. Languages
+## 1. Families
 
     expression = Tween()
 
-Motion expressions begin with a Language. A Language is an instance of an object.
+Motion expressions begin with a family. A family is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Languages have **term functions**. A term function initiates the description of Plans.
+Families have **term functions**. A term function initiates the description of Plans.
 
-**Scope**: The purpose of a Language object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Languages to exist where some Languages may have similar or identical terms. The responsibility of any given Language’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
+**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Families to exist where some Families may have similar or identical terms. The responsibility of any given family’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
 
-For example, the Tween Language definition might look like:
+For example, the tween family definition might look like:
 
     Tween {
       fn fadeIn(...) -> Term
@@ -34,13 +34,13 @@ For example, the Tween Language definition might look like:
       ...
     }
 
-**Capitalization**: Language names start with a capital letter. Terms start with a lowercase letter.
+**Capitalization**: Family names start with a capital letter. Terms start with a lowercase letter.
 
 ## 2. Terms
 
     expression = Tween().fadeIn()
 
-A **term function** initiates the description of Plans. An instance of a Term is returned by a Language’s term function.
+A **term function** initiates the description of Plans. An instance of a Term is returned by a family’s term function.
 
 > Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
@@ -109,9 +109,9 @@ Additional examples:
     # Reusing the draggable expression
     target.addPlans(draggable.and.rotatable().plans())
 
-Terms within a Language can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the Language object.
+Terms within a family can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the family object.
 
-In order for the next term's `plans()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
+In order for the next term's `plans()` function to resolve a chain of multiple terms, the returned family object must store a reference to the previous term. One way to do this is to create a sub-type of the family called an "AndTerm".
 
     TweenTerm {
       and = function() -> Tween {
@@ -173,28 +173,28 @@ TODO: Discuss value of serializing motion expressions vs serializing Plans. Moti
 
 Basic JSON structure:
 
-    Expression = [Language]
-    Language = {"language": String, "terms": [Term]}
+    Expression = [Family]
+    Family = {"language": String, "terms": [Term]}
     Term = [String, [Modifier]...]
     Modifier = [String, Arg...]
     Arg = AnyType
 
 ### "Style"
 
-**Proposal (status: new)**: How can we "stylize" motion expressions without having to resort to a brand new Language?
+**Proposal (status: new)**: How can we "stylize" motion expressions without having to resort to a brand new family?
 
-TODO: Provide recommendations for customizing motion expressions without having to resort to creating an entirely new Language or subclass of a Language.
+TODO: Provide recommendations for customizing motion expressions without having to resort to creating an entirely new family or subclass of a family.
 
 Ideas
 
 Encourage functions that accept motion expressions for the purposes of styling:
 
-    expression = Language().term()
+    expression = Family().term()
     expression = someStyler(expression)
 
 Discussion
 
-Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Languages.
+Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Families.
 
 <!--
 
