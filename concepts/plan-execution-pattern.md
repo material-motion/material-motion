@@ -68,8 +68,8 @@ For example, a plan of "fade in" could reasonably be executed by a built-in anim
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
-## Examples of this pattern
+## Examples of this separation
 
-Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other [primitives](../primitives.md).
+Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this pattern for other [primitives](../primitives.md).
 
 ![](../_assets/PatternMatches.svg)
