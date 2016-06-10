@@ -6,7 +6,7 @@ Status of this document: **Stable**
 
 **Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
-Separating plans of motion from its execution is important because:
+Separating plans of motion from their execution is important because:
 
 - It allows execution to occur in separate threads, processes, or workers.
 - Execution relies on code. Plans can be represented in rich user interfaces. Plans can also be sent "over the wire".
