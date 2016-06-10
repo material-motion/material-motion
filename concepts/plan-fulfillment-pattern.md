@@ -7,7 +7,7 @@ This pattern emphasizes a **separation** of the *plan* of motion from its *execu
 This pattern is important because:
 
 - It allows execution to occur in separate threads, processes, or workers.
-- Execution relies on code. plans can be represented in rich user interfaces. plans can also be sent "over the wire".
+- Execution relies on code. Plans can be represented in rich user interfaces. Plans can also be sent "over the wire".
 
 ### A plan of motion
 
