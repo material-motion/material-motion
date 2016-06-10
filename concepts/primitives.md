@@ -128,7 +128,7 @@ There is no known benefit to driving gestural or physical simulation primitives 
 
 Physical simulations can be associated with individual states of a State Machine.
 
-> For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+> For example, a photo element might have two states: collapsed and expanded. Each state has an associated spring attachment. These springs change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view. TODO: Add video.
 
 #### Timelines and transitions
 
