@@ -1,8 +1,8 @@
 Status of this document: **Stable**
 
-# Expression
+# Motion Expression
 
-An Expression is functional syntactic sugar for the creation and configuration of Plans.
+A Motion Expression is functional syntactic sugar for the creation and configuration of Plans.
 
 New terminology: Language, Term, and modifier.
 
