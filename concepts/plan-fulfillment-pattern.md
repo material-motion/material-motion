@@ -37,7 +37,7 @@ Also consider this pseudo-code:
 
 In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
 
-> **Note:** This example emphasizes the separation between plan and execution.  Take care to author code that suits your platform.  Functional plans may not be portable across thread/worker boundaries on some platforms.
+> **Note:** This example emphasizes the separation between plan and execution.  Take care to author code that suits your platform.  Function plans may not be portable across thread/worker boundaries on some platforms.
 
 Many plans of motion can be attached to a single target. A single plan of motion can also be attached to many targets.
 
