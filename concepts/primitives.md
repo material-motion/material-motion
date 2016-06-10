@@ -15,7 +15,9 @@ This section’s topics:
 
 Delta primitives represent change over time.
 
-Aside: time in a computer is not limited to wall-clock time - it can slow down, stop, or reverse. It can jump to arbitrary moments and external systems can control it. When we use the word time we mean this understanding of "computer time".
+<div class="callout">
+Time in a computer is not limited to wall-clock time - it can slow down, stop, or reverse. It can jump to arbitrary moments and external systems can control it. When we use the word time we mean this understanding of "computer time".
+</div>
 
 We explore the following delta primitives below:
 
