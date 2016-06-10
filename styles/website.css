@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 
-.callout {
+blockquote {
   border-left: 5px solid #E8F0FE;
   margin-left: -10px;
   padding-left: 5px;
