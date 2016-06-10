@@ -6,7 +6,7 @@ A **motion expression** is functional syntactic sugar for the creation and confi
 
 New terminology: Language, Term, and modifier.
 
-Through the following examples we will explore the essential aspects of an Expression:
+Through the following examples we will explore the essential aspects of a motion expression:
 
 1. `expression = Tween()`
 2. `expression = Tween().fadeIn()`
@@ -44,7 +44,7 @@ For example, the Tween Language definition might look like:
 
 A **term function** initiates the description of Plans. An instance of a Term is returned by a Language’s term function.
 
-> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
 The purpose of a Term is to initiate the creation of one or more Plans. The implementation of the term may create one or more Plans and initialize well-documented defaults.
 
@@ -63,7 +63,7 @@ Pseudo-code example implementation:
 
     expression = Tween().fadeIn().withEasingCurve(easeOut)
 
-A term may return an instance of a **modifier** that can be used to further configure the expression.
+A term may return an instance of a **modifier** that can be used to further configure the motion expression.
 
 **Example modifier definition:**
 
@@ -85,7 +85,7 @@ A term may return an instance of a **modifier** that can be used to further conf
       })
     }
 
-The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
+The above implementation allows the engineer to **chain** modifications. Motion expressions can now be stored and extended without affecting previous instances.
 
     fadeIn = Tween().fadeIn()
     elementA.addPlans(fadeIn.plans())
@@ -133,23 +133,23 @@ In order for the next term's `plans()` function to resolve a chain of multiple t
 
     plans = expression.plans()
 
-Every expression must be resolvable into an array of Plans.
+Every motion expression must be resolvable into an array of Plans.
 
 Successive invocations of this method should generate new Plans.
 
 ## Follow-up considerations
 
-### Expression helper methods
+### Motion expression helper methods
 
-APIs that accept plans could also accept Expressions. This reduces the need to resolve the expression at the call site.
+APIs that accept plans could also accept motion expressions. This reduces the need to resolve the motion expression at the call site.
 
-    target.addExpression(Gesture().draggable())
+    target.addMotion(Gesture().draggable())
 
 ### Serialization
 
-**Proposal (status: new)**: Expressions should be able to be serialized.
+**Proposal (status: new)**: Motion expressions should be able to be serialized.
 
-TODO: Discuss value of serializing Expressions vs serializing Plans. Expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an Expression then it doesn't matter which Plans are used. If Plans were serialized then we'd be somewhat more implementation-dependant.
+TODO: Discuss value of serializing motion expressions vs serializing Plans. Motion expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an motion expression then it doesn't matter which Plans are used. If Plans were serialized then we'd be somewhat more implementation-dependant.
 
     Gesture().draggable().toJSON()
 
@@ -183,17 +183,17 @@ Basic JSON structure:
 
 ### "Style"
 
-**Proposal (status: new)**: How can we "stylize" expressions without having to resort to a brand new Language?
+**Proposal (status: new)**: How can we "stylize" motion expressions without having to resort to a brand new Language?
 
-TODO: Provide recommendations for customizing Expressions without having to resort to creating an entirely new Language or subclass of a Language.
+TODO: Provide recommendations for customizing motion expressions without having to resort to creating an entirely new Language or subclass of a Language.
 
 Ideas
 
-Encourage functions that accept expressions for the purposes of styling:
+Encourage functions that accept motion expressions for the purposes of styling:
 
     expression = Language().term()
     expression = someStyler(expression)
 
 Discussion
 
-Is more likely that we'll allow clients to stylize Plans than we will allow styling of Expressions/Languages.
+Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Languages.
