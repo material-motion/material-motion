@@ -49,10 +49,10 @@ Consider this pseudo-code:
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
     # Adding many plans to one target
-    target.addplans(draggable, pinchable, rotatable, anchoredSpring)
+    target.addPlans(draggable, pinchable, rotatable, anchoredSpring)
     
     # Reusing a plan on a second target
-    target2.addplan(draggable)
+    target2.addPlan(draggable)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an execution detail of the plan's execution. `target2` is simply expected to be draggable.
 
