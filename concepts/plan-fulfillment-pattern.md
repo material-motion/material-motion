@@ -13,7 +13,7 @@ This pattern is important because:
 
 A definition is **what you want something to do**.
 
-Every [primitive](../primitives.md) can be described with a definition of motion. For example, "draggable" and "fade in" are two distinct definitions of motion that use Gesture and Tween primitives.
+Every [primitive](../primitives.md) can be described with a definition of motion. For example, "draggable" and "fade in" are two distinct definitions of motion. Their execution might use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
@@ -23,7 +23,7 @@ Consider the following pseudo-code:
     fadeIn.to = 1
     target.addDefinition(fadeIn)
 
-Here, `fadeIn` is the definition. The execution of "fade in" **is not executed here**.
+Here, `fadeIn` is the definition. The logic of "Fade in" **is not executed here**.
 
 `addDefinition` has registered the definition to a system. It does not matter which system, so long as the definition is eventually executed.
 
@@ -33,13 +33,13 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.adddefinition(behavior)
+    target.addDefinition(behavior)
 
-In this example, the logic of the `animate` function is the definition. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the definition is eventually fulfilled.
+In this example, the logic of the `animate` function is the definition. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the definition is eventually executed.
 
-> **Note:** This is only an example to emphasize the separation between declaration and execution.  Take care to author code that suits your platform.  Function definitions may not be portable across thread/worker boundaries on some platforms.
+> **Note:** This example emphasizes the separation between definition and execution.  Take care to author code that suits your platform.  Function definitions may not be portable across thread/worker boundaries on some platforms.
 
-Many definitions can be attached to a single target. A single definition can also be attached to many targets.
+Many definitions of motion can be attached to a single target. A single definition of motion can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -49,10 +49,10 @@ Consider this pseudo-code:
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
     # Adding many definitions to one target
-    target.adddefinitions(draggable, pinchable, rotatable, anchoredSpring)
+    target.addDefinitions(draggable, pinchable, rotatable, anchoredSpring)
     
     # Reusing a definition on a second target
-    target2.adddefinition(draggable)
+    target2.addDefinition(draggable)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an execution detail of the definition's execution. `target2` is simply expected to be draggable.
 
