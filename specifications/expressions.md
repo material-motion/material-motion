@@ -153,7 +153,7 @@ TODO: Discuss value of serializing motion expressions vs serializing plans. Moti
 
     [
       {
-        "language": "Gesture",
+        "family": "Gesture",
         "terms": [
           ["draggable"]
         ]
@@ -164,7 +164,7 @@ TODO: Discuss value of serializing motion expressions vs serializing plans. Moti
     
     [
       {
-        "language": "Tween",
+        "family": "Tween",
         "terms": [
           ["fadeIn", ["withDuration", 5]]
         ]
@@ -174,7 +174,7 @@ TODO: Discuss value of serializing motion expressions vs serializing plans. Moti
 Basic JSON structure:
 
     Expression = [Family]
-    Family = {"language": String, "terms": [Term]}
+    Family = {"family": String, "terms": [Term]}
     Term = [String, [Modifier]...]
     Modifier = [String, Arg...]
     Arg = AnyType
