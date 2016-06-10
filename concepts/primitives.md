@@ -136,7 +136,6 @@ Timelines are a helpful metaphor for constructing transitions.
 
 > For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be one-off tweens that occur when transitioning from A to B and vice versa.
 
-
 <!--
 
 LGTM:
