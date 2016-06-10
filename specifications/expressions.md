@@ -20,7 +20,7 @@ Motion expressions begin with a family. A family is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Families have **term functions**. A term function initiates the description of Plans.
+Families have **term functions**. A term function initiates the description of plans.
 
 **Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Families to exist where some Families may have similar or identical terms. The responsibility of any given family’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
 
@@ -40,11 +40,11 @@ For example, the tween family definition might look like:
 
     expression = Tween().fadeIn()
 
-A **term function** initiates the description of Plans. An instance of a Term is returned by a family’s term function.
+A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
 
 > Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
-The purpose of a Term is to initiate the creation of one or more Plans. The implementation of the term may create one or more Plans and initialize well-documented defaults.
+The purpose of a Term is to initiate the creation of one or more plans. The implementation of the term may create one or more plans and initialize well-documented defaults.
 
 Pseudo-code example implementation:
 
@@ -127,13 +127,13 @@ In order for the next term's `plans()` function to resolve a chain of multiple t
       }
     }
 
-## 5. Generating Plans
+## 5. Generating plans
 
     plans = expression.plans()
 
-Every motion expression must be resolvable into an array of Plans.
+Every motion expression must be resolvable into an array of plans.
 
-Successive invocations of this method should generate new Plans.
+Successive invocations of this method should generate new plans.
 
 ## Follow-up considerations
 
@@ -147,7 +147,7 @@ APIs that accept plans could also accept motion expressions. This reduces the ne
 
 **Proposal (status: new)**: Motion expressions should be able to be serialized.
 
-TODO: Discuss value of serializing motion expressions vs serializing Plans. Motion expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an motion expression then it doesn't matter which Plans are used. If Plans were serialized then we'd be somewhat more implementation-dependant.
+TODO: Discuss value of serializing motion expressions vs serializing plans. Motion expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an motion expression then it doesn't matter which plans are used. If plans were serialized then we'd be somewhat more implementation-dependant.
 
     Gesture().draggable().toJSON()
 
@@ -194,7 +194,7 @@ Encourage functions that accept motion expressions for the purposes of styling:
 
 Discussion
 
-Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Families.
+Is more likely that we'll allow clients to stylize plans than we will allow styling of motion expressions/Families.
 
 <!--
 
