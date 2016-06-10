@@ -6,7 +6,7 @@ Status of this document: **Stable**
 
 **Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
-This pattern emphasizes a **separation** of the plan of motion from its execution. This separation is important because:
+This pattern emphasizes a *separation* of the plan of motion from its execution. This separation is important because:
 
 - It allows execution to occur in separate threads, processes, or workers.
 - Execution relies on code. Plans can be represented in rich user interfaces. Plans can also be sent "over the wire".
