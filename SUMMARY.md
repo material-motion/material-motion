@@ -7,7 +7,7 @@
 * [Specifications](specifications/README.md)
    * [Expression](specifications/expressions.md)
    * [Motion Runtime](specifications/runtime.md)
-   * [Runtime plugins](specifications/runtime_plugins.md)
+   * [Motion Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
    * [Directors](specifications/directors.md)
    * [Transient views](specifications/transient_views.md)
