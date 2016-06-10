@@ -12,28 +12,7 @@ Through the following examples we will explore the essential aspects of a motion
 4. `expression = Gesture().pinchable().and.rotatable().and.draggable()`
 5. `plans = expression.plans()`
 
-## 1. Terms
-
-    expression = Tween().fadeIn()
-
-A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
-
-> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
-
-The purpose of a Term is to initiate the creation of one or more plans. The implementation of the term may create one or more plans and initialize well-documented defaults.
-
-Pseudo-code example implementation:
-
-    fn Tween.fadeIn() -> TweenTerm {
-      return TweenTerm(previousTerm: self, work: function() {
-        let animation = TweenAnimation("opacity")
-        animation.from = 0
-        animation.to = 1
-        return [animation]
-      })
-    }
-
-## 2. Families
+## 1. Families
 
     expression = Tween()
 
@@ -56,6 +35,27 @@ For example, the tween family definition might look like:
     }
 
 **Capitalization**: Family names start with a capital letter. Terms start with a lowercase letter.
+
+## 2. Terms
+
+    expression = Tween().fadeIn()
+
+A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
+
+> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+
+The purpose of a Term is to initiate the creation of one or more plans. The implementation of the term may create one or more plans and initialize well-documented defaults.
+
+Pseudo-code example implementation:
+
+    fn Tween.fadeIn() -> TweenTerm {
+      return TweenTerm(previousTerm: self, work: function() {
+        let animation = TweenAnimation("opacity")
+        animation.from = 0
+        animation.to = 1
+        return [animation]
+      })
+    }
 
 ## 3. Modifiers
 
