@@ -11,7 +11,7 @@ This pattern is important because:
 
 ### A plan of motion
 
-A plan is **what you want something to do**.
+A plan describes **what you want something to do**.
 
 Every [primitive](../primitives.md) can be described with a plan of motion. For example, "draggable" and "fade in" are two distinct plans of motion. Their execution might use Gesture and Tween primitives.
 
