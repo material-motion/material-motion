@@ -25,3 +25,9 @@ or a more complex one:
 | Action | Connector | Value | Connector | Value | Connector | Value | Connector | Value |
 | -- | -- | -- | -- | -- | -- | -- | -- | -- |
 | Move | from | (0,0) | to | (0,100) | over | 300ms | with | Easing |
+
+<!--
+
+LGTM:
+
+-->
