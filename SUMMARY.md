@@ -5,7 +5,7 @@
    * [Primitives](concepts/primitives.md)
    * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
 * [Specifications](specifications/README.md)
-   * [Expression](specifications/expressions.md)
+   * [Motion Expression](specifications/expressions.md)
    * [Motion Runtime](specifications/runtime.md)
    * [Motion Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
