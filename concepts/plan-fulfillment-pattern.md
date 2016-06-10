@@ -13,7 +13,7 @@ This pattern is important because:
 
 A definition is **what you want something to do**.
 
-Every [Primitive](../primitives.md) can be described with a definition of motion. For example, "draggable" and "fade in" are two distinct definitions of motion that use Gesture and Tween primitives.
+Every [primitive](../primitives.md) can be described with a definition of motion. For example, "draggable" and "fade in" are two distinct definitions of motion that use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
