@@ -13,7 +13,7 @@ This pattern is important because:
 
 A plan describes **what you want something to do**.
 
-Every [primitive](../primitives.md) can be described with a plan. For example, "draggable" and "fade in" are two distinct plans of motion. Their execution might use Gesture and Tween primitives.
+Every [primitive](../primitives.md) can be described with a plan. For example, "draggable" and "fade in" are two distinct plans. Their execution might use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
@@ -21,11 +21,11 @@ Consider the following pseudo-code:
     fadeIn.property = "opacity"
     fadeIn.from = 0
     fadeIn.to = 1
-    target.addplan(fadeIn)
+    target.addPlan(fadeIn)
 
-Here, `fadeIn` is the plan. The logic of "Fade in" **is not executed here**.
+Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
 
-`addplan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
+`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
 
 Also consider this pseudo-code:
 
@@ -37,7 +37,7 @@ Also consider this pseudo-code:
 
 In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
 
-> **Note:** This example emphasizes the separation between plan and execution.  Take care to author code that suits your platform.  Function plans may not be portable across thread/worker boundaries on some platforms.
+> **Note:** This example emphasizes the separation between plan and execution.  Take care to author code that suits your platform.  Functional plans may not be portable across thread/worker boundaries on some platforms.
 
 Many plans of motion can be attached to a single target. A single plan of motion can also be attached to many targets.
 
