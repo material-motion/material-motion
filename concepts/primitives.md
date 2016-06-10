@@ -1,27 +1,29 @@
+Status of this document: **Stable**
+
 # Primitives
 
 This section explores **essential building blocks** of rich, interactive motion.
 
 This section’s topics:
 
-- [Delta Primitives](#delta-primitives)
+- [Delta primitives](#delta-primitives)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
-- [Connecting Primitives](#connecting-primitives)
+- [Connecting primitives](#connecting-primitives)
 
-## Delta Primitives
+## Delta primitives
 
-Delta Primitives represent change over time.
+Delta primitives represent change over time.
 
 > Time in a computer is not limited to wall-clock time - it can slow down, stop, or reverse. It can jump to arbitrary moments and external systems can control it. When we use the word time we mean this understanding of "computer time".
 
-We explore the following Delta Primitives below:
+We explore the following delta primitives below:
 
 - [Tweens](#tweens)
 - [Gesture recognition](#gesture-recognition)
 - [Physical simulation](#physical-simulation)
 
-Please note that these Primitives can apply to an arbitrary number of dimensions and types of input.
+Please note that these primitives can apply to an arbitrary number of dimensions and types of input.
 
 ### Tweens
 
@@ -55,7 +57,7 @@ recognizers have failed. For instance:
 
 > An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
 
-**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a Physical Simulation.
+**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a physical simulation.
 
 ### Physical simulation
 
@@ -73,7 +75,7 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 
 ## Timeline
 
-**What it is**: *an object that contains a floating-point value, which can be driven by a Delta Primitive, and to which Tweens may be associated*.
+**What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which Tweens may be associated*.
 
 A Timeline limits its value, **progress**, between 0 and 1.
 
@@ -83,26 +85,22 @@ A Timeline limits its value, **progress**, between 0 and 1.
 
 Typical phone applications utilize full-screen transitions between views. Each view is a distinct application state:
 
-```
-A → B → C → D
-```
+    A → B → C → D
 
 Each arrow in the above diagram is a Transition, each letter is a State.
 
 It is generally possible to move in the other direction:
 
-```
-A ← B ← C ← D
-```
+    A ← B ← C ← D
 
-**Transitions** always consist of exactly **two** States and a **Direction**.
+**Transitions** always consist of exactly **two** States and a **direction**.
 
-```
-A → B is a Transition from State A to State B.
+    A → B is a Transition  from  State A   to  State B
+    A ← B is a Transition  to    State A from  State B
 
-A ← B is a Transition to State A from State B.
-```
-Physical Simulations can be associated with States.
+Note that only the **direction** changes between the two lines above. We think of transitions in terms of what's on the "left" and what's on the "right". This allows us to think of the direction in terms of "to the left" or "to the right".
+
+Physical simulations can be associated with States.
 
 > For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
 
@@ -112,20 +110,20 @@ Tweens and Timelines can be associated with Transitions.
 
 ## Connecting primitives
 
-We use “**to drive**” to refer to the idea of *an output from one Primitive being fed into the input of another*. This enables the expression of novel interactions such as a Gesture driving a Timeline that is driving a collection of Tweens.
+We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of Tweens.
 
 #### Primitives that can drive Timelines
 
-A timeline's **progress** can be driven by the following Delta Primitives if they have been mapped to a domain of `[0...1]`:
+A timeline's **progress** can be driven by the following delta primitives if they have been mapped to a domain of `[0...1]`:
 
 - **Time** can move `progress` forward or backward.
 - **Gestures** can scrub `progress` directly.
 - **Physical simulation**: `progress` can be physically anchored to a position, usually 1 or 0,
-  using a Spring. A Gesture primitive’s final velocity can also be fed into this simulation.
+  using a Spring. A gesture primitive’s final velocity can also be fed into this simulation.
 - **Tweens**.
 
 #### Timelines can drive these primitives
 
 The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
-There is no known benefit to driving Gestural or Physical Simulation Primitives with a Timeline; it is also not particularly clear what that would mean.
+There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.

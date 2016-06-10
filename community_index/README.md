@@ -4,7 +4,7 @@ Working on or found an implementation to an idea explored in this book? We'd lov
 
 This is an index of **existing or in-development implementations** of the ideas expressed in this book.
 
-> Note: The [Material Motion team](https://material-motion.gitbooks.io/material-motion-team/content/) is dedicated to finding and building solutions to ideas explored in this book.
+> Note: The Material Motion team is dedicated to finding and building solutions to ideas explored in this book. All work is tracked in the team's [Roadmaps](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/).
 
 ## Suggested repository naming convention
 
@@ -16,10 +16,10 @@ Note that everything is lower-case. We recommend using hyphens to separate words
 
 The following names match the convention:
 
-- material-motion-language-tween-objc
-- material-motion-language-tween-swift
-- material-motion-language-tween-android
-- material-motion-language-tween-web
+- material-motion-expression-tween-objc
+- material-motion-expression-tween-swift
+- material-motion-expression-tween-android
+- material-motion-expression-tween-web
 - material-motion-runtime-objc
 - material-motion-runtime-android
 - material-motion-runtime-web
@@ -29,4 +29,4 @@ The following names do not match the convention:
 
 - SwiftTweenLanguage
 - TweenLanguage
-- material-motionRuntime
+- material-motion-Runtime

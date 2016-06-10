@@ -1,24 +1,28 @@
-# Expression
+Status of this document: **Stable**
 
-An Expression is functional syntactic sugar for the creation and configuration of Intentions.
+# Motion expression
 
-Through the following examples we will explore the essential aspects of an Expression:
+A **motion expression** is functional syntactic sugar for the creation and configuration of Plans.
+
+Through the following examples we will explore the essential aspects of a motion expression:
 
 1. `expression = Tween()`
 2. `expression = Tween().fadeIn()`
 3. `expression = Tween().fadeIn().withEasingCurve(easeOut)`
 4. `expression = Gesture().pinchable().rotatable().draggable()`
-5. `intentions = expression.intentions()`
-
+5. `plans = expression.plans()`
+  
 ## 1. Languages
 
     expression = Tween()
 
-Expressions begin with a Language. A Language is an instance of an object.
+Motion expressions begin with a Language. A Language is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
-Languages have **terms**.
+Languages have **term functions**. A term function initiates the description of Plans.
+
+**Scope**: The purpose of a Language object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Languages to exist where some Languages may have similar or identical terms. The responsibility of any given Language’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
 
 For example, the Tween Language definition might look like:
 
@@ -30,19 +34,17 @@ For example, the Tween Language definition might look like:
       ...
     }
 
-**Scope**: The purpose of a Language object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Languages to exist where some Languages may have similar or identical terms. The responsibility of any given Language’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
-
 **Capitalization**: Language names start with a capital letter. Terms start with a lowercase letter.
 
 ## 2. Terms
 
     expression = Tween().fadeIn()
 
-A **term function** is the entry point for creating Intention. An instance of a Term is returned by a Language’s term function.
+A **term function** initiates the description of Plans. An instance of a Term is returned by a Language’s term function.
 
-> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow expressioins like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
-The purpose of a Term is to initiate the creation of one or more Intentions. The implementation of the term may create one or more Intentions and initialize well-documented defaults.
+The purpose of a Term is to initiate the creation of one or more Plans. The implementation of the term may create one or more Plans and initialize well-documented defaults.
 
 Pseudo-code example implementation:
 
@@ -59,9 +61,7 @@ Pseudo-code example implementation:
 
     expression = Tween().fadeIn().withEasingCurve(easeOut)
 
-A term may return an instance of a **modifier** that can be used to further configure the expression.
-
-A modifier class is a type of Language.
+A term may return an instance of a **modifier** that can be used to further configure the motion expression.
 
 **Example modifier definition:**
 
@@ -75,23 +75,21 @@ A modifier class is a type of Language.
 
     function TweenModifier.withEasingCurve(curve) -> TweenTerm {
       return TweenTerm(previousTerm: self.previousTerm, work: function() {
-        let intentions = self.work()
-        for intention in intentions {
-          intention.easingCurve = curve
+        let plans = self.work()
+        for plan in plans {
+          plan.easingCurve = curve
         }
-        return intentions
+        return plans
       })
     }
 
-Note the use of the self.chain method. This internal method creates a new immutable TweenTerm instance with a reference to the current instance and the provided function.
-
-The above implementation allows the engineer to **chain** modifications. Expressions can now be stored and extended without affecting previous instances.
+The above implementation allows the engineer to **chain** modifications. Motion expressions can now be stored and extended without affecting previous instances.
 
     fadeIn = Tween().fadeIn()
-    elementA.addIntentions(fadeIn.intentions())
+    elementA.addPlans(fadeIn.plans())
 
     fadeInEaseOut = fadeIn.withEasingCurve(easeOut)
-    elementB.addIntentions(fadeInEaseOut.intentions())
+    elementB.addPlans(fadeInEaseOut.plans())
 
 **Immutability**: modifiers are immutable.
 
@@ -106,14 +104,14 @@ The above implementation allows the engineer to **chain** modifications. Express
 Additional examples:
 
     draggable = Gesture().draggable()
-    target.addIntentions(draggable.intentions())
+    target.addPlans(draggable.plans())
     
     # Reusing the draggable expression
-    target.addIntentions(draggable.and.rotatable().intentions())
+    target.addPlans(draggable.and.rotatable().plans())
 
 Terms within a Language can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the Language object.
 
-In order for the next term's `intentions()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
+In order for the next term's `plans()` function to resolve a chain of multiple terms, the returned Language object must store a reference to the previous term. One way to do this is to create a sub-type of the Language called an "AndTerm".
 
     TweenTerm {
       and = function() -> Tween {
@@ -124,32 +122,32 @@ In order for the next term's `intentions()` function to resolve a chain of multi
     TweenAndTerm: Tween, Term {
       let previousTerm
       
-      intentions = function() -> [Intentions] {
-        return self.previousTerm.intentions()
+      plans = function() -> [Plans] {
+        return self.previousTerm.plans()
       }
     }
 
-## 5. Generating intentions
+## 5. Generating Plans
 
-    intentions = expression.intentions()
+    plans = expression.plans()
 
-Every expression must be resolvable into an array of Intentions.
+Every motion expression must be resolvable into an array of Plans.
 
-Successive invocations of this method should generate new Intentions.
+Successive invocations of this method should generate new Plans.
 
 ## Follow-up considerations
 
-### Expression helper methods
+### Motion expression helper methods
 
-APIs that accept intentions could also accept Expressions. This reduces the need to resolve the expression at the call site.
+APIs that accept plans could also accept motion expressions. This reduces the need to resolve the motion expression at the call site.
 
-    target.addExpression(Gesture().draggable())
+    target.addMotion(Gesture().draggable())
 
 ### Serialization
 
-**Proposal (status: new)**: Expressions should be able to be serialized.
+**Proposal (status: new)**: Motion expressions should be able to be serialized.
 
-TODO: Discuss value of serializing Expressions vs serializing Intentions. Expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an Expression then it doesn't matter which Intentions are used. If Intentions were serialized then we'd be somewhat more implementation-dependant.
+TODO: Discuss value of serializing motion expressions vs serializing Plans. Motion expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an motion expression then it doesn't matter which Plans are used. If Plans were serialized then we'd be somewhat more implementation-dependant.
 
     Gesture().draggable().toJSON()
 
@@ -180,3 +178,20 @@ Basic JSON structure:
     Term = [String, [Modifier]...]
     Modifier = [String, Arg...]
     Arg = AnyType
+
+### "Style"
+
+**Proposal (status: new)**: How can we "stylize" motion expressions without having to resort to a brand new Language?
+
+TODO: Provide recommendations for customizing motion expressions without having to resort to creating an entirely new Language or subclass of a Language.
+
+Ideas
+
+Encourage functions that accept motion expressions for the purposes of styling:
+
+    expression = Language().term()
+    expression = someStyler(expression)
+
+Discussion
+
+Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Languages.

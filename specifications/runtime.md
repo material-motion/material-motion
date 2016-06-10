@@ -1,356 +1,222 @@
-# Odeon Runtime
+Status of this document: **Draft**
 
-This section explores one specification for a Runtime that follows a theatrical metaphor.
+# Motion Runtime
+
+The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Motion Runtime.
+
+New terminology: Transaction, Intention, and Actor.
+
+## Purpose
+
+The purpose of a Motion Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and any number of fulfillment systems.
+
+The following diagram shows where the Motion Runtime lives in relation to a platform like iOS.
+
+![](../_assets/Abstraction.svg)
+
+Let's zoom in to the Motion Runtime for a moment. We can see how the Plan/Fulfillment pattern is composable: Core Animation and its CABasicAnimation is simply a nested Plan/Fulfillment system.
+
+![](../_assets/AbstractionDive.svg)
+
+As we'll discuss in detail below, the Motion Runtime acts as a fulfillment engine for objects we call Intention.
 
 ## Overview
 
-The purpose of a Runtime is to **coordinate** the expression of Plans in an application. We will apply the [Plan/Fulfillment](patterns/plan-fulfillment.md) and [Coordinator/Plan](patterns/coordinator-plan.md) patterns to the design of this system.
+An instance of a Motion Runtime must be able to do the following:
 
-Throughout this chapter we will apply a metaphor oriented around theater terminology. The metaphor primarily consists of **Directors**, **Actors**, and **Intentions**.
+- Commit to Intentions.
+- Fulfill those Intentions.
 
-- A Director is a **coordinator**.
-- An Intention is a **plan**.
-- An Actor is expected to **fulfill** Intentions.
+## Intention
 
-Directors register Intentions with a Runtime. The Runtime creates Actors and passes a variety of events to them. These events allow Actors to fulfill their Intentions.
+According to the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern, Intention is a type of Plan.
 
-![Runtime](../_assets/RuntimeDiagram.png)  
+An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`. If the programming language allows for it, Intention could even be a protocol that existing objects conform to.
 
-### How to read this chapter
+{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) must not fulfill itself.{% endem %} The Motion Runtime will determine how to fulfill its provided Intentions.
 
-The API examples are not prescriptive. Please use good judgment on a given platform.
+## Commit Intentions
 
-### The Runtime
+Intentions are committed to Motion Runtimes via Transactions.
 
-A Runtime must be able to initialize with zero arguments.
+A Transaction's public API should support the following operations:
 
-    class Runtime
-      function init()
+- Associate an Intention with a target.
+- Associate a named Intention with a target.
+- Remove any Intention associated with a given name from a target.
 
-#### Essential state
+It must be possible to enumerate the operations of a Transaction.
 
-A Runtime can be paused. A new Runtime is initially paused. A paused Runtime will not forward events to its Actors.
+The log's order must match the order of operation requests.
 
-    class Runtime
-      var paused: Boolean = true
+A Transaction needs to be committed to a Motion Runtime for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
 
-A Runtime can be in two states: Active or Idle. The `state` property is read-only. A Runtime is Active so long as any of the following conditions are met:
+Consider the following transaction pseudo-code:
 
-- Any Actor is active. (TODO: Flesh this out in the Actor section).
-- Any Gesture is active.
+    transaction = Transaction()
+    transaction.add(FadeIn, circleView)
+    transaction.add(Draggable, squareView)
+    transaction.addNamed("name1", Pinchable, squareView)
+    transaction.addNamed("name2", Rotatable, squareView)
+    transaction.removeNamed("name2", squareView)
+    transaction.add(Draggable, circleView)
+    Motion Runtime.commit(transaction)
 
-```
-RuntimeState {
-  Idle
-  Active
-}
+The Transaction's log might resemble the following pseudo-object:
 
-class Runtime
-  readonly var state: RuntimeState
-```
+    > transaction.log
+    [
+      {action:"add", intention: FadeIn, target: circleView},
+      {action:"add", intention: Draggable, target: squareView},
+      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
+      {action:"remove", name: "name2", target: squareView}
+      {action:"add", intention: Draggable, target: circleView},
+    ]
 
-#### Event delegation
+After committing the above transaction, the Motion Runtime's internal state might resemble the following:
 
-A Runtime exposes certain events to a delegate.
+![](../_assets/TargetManagers.svg)
 
-    class Runtime
-      var delegate: RuntimeDelegate
+Note that `Rotatable` is not listed. This is because we also removed any Intention named "name2" in this Transaction.
 
-Whenever the Runtime's state changes it must notify its delegate. This i
+The Motion Runtime is now expected to fulfill its Intentions.
 
-    protocol RuntimeDelegate
-      function runtime(runtime, stateDidChangeFrom: oldState)
+## Fulfill Intentions
 
-#### Gesture handling
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its fulfillment.
 
-A Runtime is responsible for forwarding gesture recognition events to the relevant Actor instances. Gesture recognizers also affect the Runtime's `state` value.
+### Intention ↔ Actor association
 
-    class Runtime
-      function addGestureRecognizer(gestureRecognizer)
+We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 
-#### Starting a transaction
+    function actorForIntention(intention, target, existingActors) -> Actor
 
-Intentions must be registered to a Runtime with a Transaction. A Transaction defines a scope within which a set of operations may be bulked together.
+This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
 
-    class Runtime
-      function beginTransaction() -> Transaction
-      function endTransaction(Transaction)
+**Intention → Actor**
 
-For example:
+Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
 
-    transaction = runtime.beginTransaction()
-    // Register intentions
-    runtime.endTransaction(transaction)
+**Actor → Intention**
 
-If a Transaction instance goes out of scope before endTransaction is called, the Transaction's deallocation should invoke endTransaction.
+Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
 
-### Transactions
+### On commit: generate Actors
 
-A Transaction instance provides methods for:
+When a Transaction is committed, the Motion Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
 
-- registering Intention to a Runtime, and
-- creating Transient views.
+    > transaction.log
+    [
+      {action:"add", intention: FadeIn, target: circleView},
+      {action:"add", intention: Draggable, target: squareView},
+      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
+      {action:"remove", intention: "name2", target: squareView}
+    ]
 
-#### Intention
+Recall that the above log translated to the following internal state:
 
-Intentions can be added to a target. Intentions will be associated with the Target indefinitely. (TODO: Explore Intentions that can be "removed" upon fulfillment).
+![](../_assets/TargetManagers.svg)
 
-    class Transaction
-      function addIntention(Intention, to: Target)
+Let's create Actors by calling our hypothetical `actorForIntention` on each target's Intentions.
 
-    transaction.addIntention(intention, to: target)
+![](../_assets/Actors.svg)
 
-Named Intentions can be added to a target. If an Intention with the same name already exists for a target, the old Intention is first removed and the new Intention is set.
+We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
-    class Transaction
-      function setIntention(Intention, withName: String, to: Target)
+#### One Actor instance per type of Intention
 
-    transaction.setIntention(intention, withName: name, to: target)
+A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are concerned.
 
-Named Intentions can be removed from a target.
+Consider the following pseudo-Transaction involving physical simulation Intentions:
 
-    class Transaction
-      function removeIntention(withName: String, from: Target)
+    transaction = Transaction()
+    transaction.add(Friction.on(position), circleView)
+    transaction.add(AnchoredSpring.on(position), circleView)
+    Motion Runtime.commit(transaction)
 
-    transaction.setIntention(intention, withName: name, to: target)
+Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
-#### Transient Views
+The Actor now knows the following:
 
-TODO: Can transient views be modeled outside of the Runtime?
+- It has two Forces, both affecting `position`.
+- It needs to model `velocity` for the `position`.
 
-A transient view is one whose lifetime is bound to a condition. `condition` is evaluated at the end of an animation event and at the end of each gesture recognition event. When `condition` returns `true`, the view — and all associated Actors — is removed.
+The Actor now creates some state that will track the position's velocity.
 
-All transient views are removed when a Runtime is terminated.
+The Actor can now:
 
-    class Transaction
-      function addTransientView(View, untilCondition: Function)
+1. convert each Intention into a physics force,
+2. apply the force to the velocity, and
+3. apply the velocity to the position
 
-Pre-fabricated conditions:
+on every frame.
 
-- Is idle: The Runtime has entered an idle state.
-- Is offscreen: The view has moved "off-screen".
+Alternatively, consider how this situation would have played out if we had one Actor per Intention. There would now be two representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
 
-For example:
+Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
-    class Transaction
-      function addTransientView(View, untilCondition: Runtime.isIdleCondition)
+### Repeated: forward animation events to Actors
 
----
+The Motion Runtime is now expected to forward animation events to the Actor instances.
 
-EVERYTHING BELOW THIS LINE IS AN UNORGANIZED SET OF NOTES.
+Actors are informed of events via the following pseudo-algorithm:
 
-After the Director registers its Intentions, the Runtime creates a collection of Actors that are able to fulfill the contract of the Intentions.
+    for every target
+      for every actor
+        actor.event()
 
-> TODO: There must exist some mechanism by which Intention and Actors are associated. The question that the Runtime will need to ask is “Which Actor can execute these Intentions?” This is being discussed in [#8](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions/8).
+Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Motion Runtime should not listen to animation events.
 
-The Runtime now has a collection of Actors.
+### Motion Runtime active vs idle state
 
-The Runtime is now responsible for forwarding events to Actors. (Link to Actor events).
+At any given time a Motion Runtime can either be **idle** or **active**.
 
-A Runtime is constantly measuring the amount of energy in the system. Energy is defined as "the number of active Actors". If there is no energy then the Runtime should enter an idle state. This is an important part of minimizing battery consumption on mobile devices. (Link to Runtime states).
+A Motion Runtime is active when there is at least one active Actor. 
 
-## Plans
+An Actor can be active for any of the following reasons:
 
-Intentions are a concrete implementation of the **Description** part of the [Description/Execution](patterns.md) pattern.
+- The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
+- The Actor has indicated some form of active **external activity**.
 
-Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
+### External activity
 
-    protocol Description {}
-    extension Animation: Description {
+Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Motion Runtime of two events:
+
+- When external activity begins.
+- When external activity ends.
+
+The Motion Runtime might provide Actors with two function instances:
+
+    var startActivity = function(name)
+    var endActivity = function(name)
+
+When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Motion Runtime.
+
+For example, an Actor might have a gesture handler that looks like this:
+
+    function handleGesture(gesture) {
+      switch (gesture.state) {
+      case .Began:
+        startActivity("gesture")
+      case .Canceled:
+      case .Ended:
+        endActivity("gesture")
+      }
     }
 
-Strongly-typed programming-languages that **lack** protocols or interfaces can create "container" objects. Such a container object would be part of an Description class hierarchy. This is important because it allows [Runtimes](runtimes.md) to think in terms of Description types.
+Similarly, an Actor might implement the following when working with an external animation system:
 
-     class Description {}
-     class AnimationDescription: Description {
-       var animation
-     }
- 
-[Duck-typed](https://en.wikipedia.org/wiki/Duck_typing) languages may treat any object as potentially-an-Description.
+    function setup() {
+      startActivity("animation")
+      target.doAnimation(parameters, completion: {
+        endActivity("animation")
+      })
+    }
 
-## Execution
+### Open topics
 
-TODO: Define Actors.
+The following topics are open for discussion. They do not presently have a clear recommendation.
 
-**Events**: Executions can ask to receive the following events:
-
-- Animation events.
-- Gesture recognition events.
-
-**Activity**: An Execution is either active or dormant. An **active** Execution will generate change in response to input. Conversely, a **dormant** Execution will not generate change in response to input.
-
-Examples of *active* Executions:
-
-- Fulfilling a Pan Plan while pan gesture events are being generated. 
-- Fulfilling a Spring Attachment Plan and the body has not yet reached its final resting state. 
-
-Examples of *dormant* Executions:
-
-- Fulfilling a Pan Plan for which there are no pan gesture events. 
-- Fulfilling a Spring Attachment Plan and the body has reached its final resting state. 
-
-The process or thread on which an Execution executes its contract depends on a combination of the types of Primitives it employs and assumptions already made by a given platform.
-
-> Imagine a platform that executes user input on the main thread of the application while Tween animations are executed on a separate process altogether. A Gesture Execution would likely execute on the main thread. A Tween Execution would likely execute some or all of its logic on the separate process.
-
-## Intention registration
-
-TODO: Discuss how Intentions are registered with the system. Specifically, discuss how Intentions should interact with Plugins like view duplication.
-
-## Director events
-
-### Setup
-
-### Teardown
-
-### Gesture recognition
-
-Directors may listen to Gesture Recognizer events in order to facilitate high-level coordination of Intentions.
-
-## Runtime states
-
-- Initializing
-- Idle
-- Active
-
-## Actor state
-
-- The direct target (what the Actor was initially registered to).
-- The dynamic target (may not be the target).
-- Permanently-registered Intentions.
-- Intentions registered by name.
-
-TODO: There is likely value in maintaining this state outside of the Actor instances themselves. Provide the actors with a variable that enables easy access of the above state (perhaps nicely scoped to the Actor). E.g. state.intentions or state.intentionForName("name").
-
-## Actor events
-
-The Runtime identifies which events each Actor expects to receive. Events include:
-
-- intention registration,
-- animation events, and
-- gesture recognition events.
-
-### Intention registration
-
-TODO: Discuss adding permanent intentions.
-
-TODO: Discuss adding named intentions.
-
-### Animation
-
-The animate event is invoked when the system is about to render a new frame. This event is often called many times per second.
-
-Each Actor is responsible for calculating time deltas. Take care to respect platform animation speed scalars.
-
-### Gesture recognition
-
-The gesture event is invoked when a gesture recognizer's state has changed.
-
-## Plugins
-
-TODO: Write an intro. Emphasize that plugins are one of the most platform-specific parts of a runtime.
-
-### Plugin events
-
-#### Runtime state changed
-
-- Useful for transition system handoff.
-
-#### Actor created for target
-
-- Useful for view duplication. This event must allow the plugin to change the "associated target" for all Actors referencing a given target.
-
-### Specific plugins
-
-#### View duplication
-
-TODO: Discuss when view duplication hooks into the system. Emphasize the need to hook in to intention registration events with new elements in the system.
-
-Required events:
-
-- First-time registration of Intention to element 
-
-#### Transition
-
-Coordinate events with the operating system’s existing transition system.
-
-Required events:
-
-- Did start 
-- Did idle 
-
-## Companions to a Runtime
-
-TODO: Write an intro. These systems coordinate the creation of Runtimes in reaction to other events. The most simple example is that of a "Transition" coordinator.
-
-### Scripting
-
-TODO: Discuss how one might integrate a scripting language with a Runtime.
-
-### Transition coordination
-
-This system allows you to define which Directors to use for a transition between two “Screens” in an application.
-
-- Discuss the “Narrator” concept.
-
-# Diagrams
-
-Runtimes in relation to the overall Starmap ecosystem.
-
-![](../_assets/overview.svg)
-
-
-## Outline (notes, not final copy)
-
-TODO: The following content is an outline and needs to be folded into the above content.
-
-- Runtime can have many Directors. Allow multiple Directors to share Actors. 
-- Directors receive following events: 
-    - Registration - expected to register intentions in this phase 
-    - Input handling - may register new intentions 
-- Actors receive following events from Runtime: 
-    - Initialization 
-    - Display link pump -&gt; returns Bool indicating “isActive?” 
-    - Gesture events 
-- Actor types include: 
-    - Gestural actors 
-    - Simulation actors 
-    - Event actors 
-        - Must have way to communicate to Runtime when the Actor becomes inactive (emphasis: this supports “external” animation systems like Core Animation) 
-
-- Intention registration mechanism 
-    - Associates intentions with elements 
-    - Intentions can be added to elements permanently 
-    - An array of intentions can be added to an element with a name 
-        - Named intentions allow for “state” changes 
-        - Adding named intentions will remove all previous intentions for that element with the same name 
-
-- Runtime receives all Intention requests from the Director, then creates all the necessary Actors to execute those requests 
-- Runtime may hook in to the refresh rate for a screen and use this as a simulation pump. This pump will only be provided to actors (emphasis: not the director) 
-- Support the following states: 
-    - Initializing 
-    - Idle - no actors are currently causing changes to the system (emphasis: includes no “active” gesture recognizers) 
-    - Active 
-
-- Support the following state changes: 
-    - Initializing -&gt; Idle|Active 
-    - Idle -&gt; Active 
-    - Active -&gt; Idle 
-
-- Support Pausing the runtime 
-- Support enumerating all registered intentions, elements, and actors 
-    - Can be used to generate a console dump 
-    - Can be used to build inspectors 
-
-- Plugin system should enable listening to key events in a Runtime: 
-    - When a new element has received intention, allow returning a new element that should be used instead (emphasis: this is for view duplication support) 
-    - When a runtime’s current state has changed 
-
-- Runtime should always be evaluating current “energy level” of the system. If Runtime reaches a steady state, this should be an event. (emphasis: allows other systems to react to runtime completion such as transitions) 
-- Runtime should support some semblance of Actor priority. 
-    - Unclear what this looks like, but order of Actor execution could potentially matter. Assumption presently is that Actors execute Intention in order that they were registered. 
-
-- Existing Runtimes: 
-    - Core Animation 
-    - Android’s animation system 
-    - Web animations
+- When should Actors be removed from a Motion Runtime?

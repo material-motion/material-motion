@@ -2,7 +2,7 @@
 
 ## actor
 
-An **Actor**'s sole responsibility is to fulfill the contract defined by a corresponding Intention.
+An **Actor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
 
 Similar concepts:
 
@@ -11,7 +11,7 @@ Similar concepts:
 
 ## dictionary
 
-A Language's list of terms and modifiers.
+A list of terms and modifiers.
 
 ## element
 
@@ -22,9 +22,33 @@ Examples:
 - [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
 - DOM element (web)
 
+## execution
+
+The execution of a plan.
+
+Discussed in:
+
+- [The plan/execution pattern](concepts/plan-execution-pattern.md)
+
+## frame
+
+One iteration of the animation loop.  Frames should be redrawn at least 60 times per second to ensure an application is [jank-free](http://jankfree.org).
+
+Synonyms:
+
+- tick
+- step
+- cycle
+
 ## intention
 
-An Intention is a type of Plan.
+An Intention is an object representing **what you want something to do**.
+
+An Intention is a Plan in the Plan/Fulfillment pattern.
+
+## language
+
+The beginning of an Expression.
 
 ## plan
 
@@ -46,6 +70,10 @@ Examples:
 - Web (Chrome)
 - Web (Safari)
 
+## runtime
+
+An entity that facilitates the coordination of rich, interactive motion. Receives Plans and fulfills them.
+
 ## scrubbing
 
 The act of directly manipulating a Timeline's `progress` value.
@@ -53,3 +81,11 @@ The act of directly manipulating a Timeline's `progress` value.
 ## target
 
 A target is the entity to which a Plan is meant to be applied, such as an element or a Timeline.
+
+## term
+
+Initiates the description of new Plans in an Expression.
+
+## transaction
+
+A mechanism by which new Intentions are committed to a Runtime.
