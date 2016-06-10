@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
-   * [The plan/execution pattern](concepts/plan-execution-pattern.md)
+   * [Separation of plan/execution](concepts/plan-execution-pattern.md)
 * [Specifications](specifications/README.md)
    * [Motion Expression](specifications/expressions.md)
    * [Motion Runtime](specifications/runtime.md)
