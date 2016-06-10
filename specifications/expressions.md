@@ -4,8 +4,6 @@ Status of this document: **Stable**
 
 A **motion expression** is functional syntactic sugar for the creation and configuration of Plans.
 
-New terminology: Language, Term, and modifier.
-
 Through the following examples we will explore the essential aspects of a motion expression:
 
 1. `expression = Tween()`
