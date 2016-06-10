@@ -2,7 +2,7 @@ Status of this document: **Stable**
 
 # Motion expression
 
-A **motion expression** is functional syntactic sugar for the creation and configuration of Plans.
+A **motion expression** is functional syntactic sugar for the creation and configuration of plans.
 
 Through the following examples we will explore the essential aspects of a motion expression:
 
