@@ -39,7 +39,7 @@ In this example, the logic of the `animate` function is the plan. The `animate` 
 
 > **Note:** This example emphasizes the separation between plan and execution.  Take care to author code that suits your platform.  Function plans may not be portable across thread/worker boundaries on some platforms.
 
-Many plans of motion can be attached to a single target. A single plan of motion can also be attached to many targets.
+Many plans can be attached to a single target. A single plan can also be attached to many targets.
 
 Consider this pseudo-code:
 
