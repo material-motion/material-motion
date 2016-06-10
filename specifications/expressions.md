@@ -1,8 +1,8 @@
 Status of this document: **Stable**
 
-# Motion Expression
+# Motion expression
 
-A Motion Expression is functional syntactic sugar for the creation and configuration of Plans.
+A **motion expression** is functional syntactic sugar for the creation and configuration of Plans.
 
 New terminology: Language, Term, and modifier.
 
@@ -18,7 +18,7 @@ Through the following examples we will explore the essential aspects of an Expre
 
     expression = Tween()
 
-Expressions begin with a Language. A Language is an instance of an object.
+Motion expressions begin with a Language. A Language is an instance of an object.
 
 > Read our [Motion Language recommendations](../languages/README.md).
 
