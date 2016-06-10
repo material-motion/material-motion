@@ -22,13 +22,13 @@ Examples:
 - [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
 - DOM element (web)
 
-## executor
+## execution
 
-An executor fulfills one or more Plans of a given type.
+The execution of a plan.
 
 Discussed in:
 
-- [Concepts → Runtime](concepts/runtime.md)
+- [The plan/execution pattern](concepts/plan-execution-pattern.md)
 
 ## frame
 
