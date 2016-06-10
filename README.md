@@ -6,15 +6,11 @@ This book aspires to empower creators with the language and tools needed to desc
 
 ---
 
-We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. Work is being planned in the [Roadmap](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/meta.html).
-
----
-
 ## Evolution
 
-This book is expected to evolve over time. Please feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
+This book is expected to evolve over time; planned work is in the [Roadmap](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/meta.html). 
 
-Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book.
+Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
 ## Who should read this?
 
