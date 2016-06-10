@@ -9,7 +9,7 @@ Through the following examples we will explore the essential aspects of a motion
 1. `expression = Tween()`
 2. `expression = Tween().fadeIn()`
 3. `expression = Tween().fadeIn().withEasingCurve(easeOut)`
-4. `expression = Gesture().pinchable().rotatable().draggable()`
+4. `expression = Gesture().pinchable().and.rotatable().and.draggable()`
 5. `plans = expression.plans()`
   
 ## 1. Families
