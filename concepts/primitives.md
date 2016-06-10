@@ -73,6 +73,10 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 
 **Custom forces**: A physical simulation system should also allow for the expression of arbitrary forces.
 
+---
+
+The following primitives are more structural in nature than the delta primitives described above.
+
 ## Timeline
 
 **What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which Tweens may be associated*.
