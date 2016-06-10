@@ -145,7 +145,7 @@ APIs that accept plans could also accept motion expressions. This reduces the ne
 
 ### Serialization
 
-**Proposal (status: new)**: Motion expressions should be able to be serialized.
+**Proposal (status: new)**: Motion expressions should be serializable.
 
 TODO: Discuss value of serializing motion expressions vs serializing plans. Motion expressions have benefit of not necessarily being entirely platform-specific. As long as a language exists that can implement an motion expression then it doesn't matter which plans are used. If plans were serialized then we'd be somewhat more implementation-dependant.
 
