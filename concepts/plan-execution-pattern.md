@@ -73,3 +73,10 @@ Good systems of execution will carefully balance the needs of performance, power
 Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
 
 ![](../_assets/PatternMatches.svg)
+
+<!--
+
+LGTM:
+- featherless
+
+-->
