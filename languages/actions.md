@@ -52,3 +52,9 @@ To change the elevation value of an object along the Z axis.
 ### Tint
 
 To change the color of an object by fading in a solid color surface
+
+<!--
+
+LGTM:
+
+-->
