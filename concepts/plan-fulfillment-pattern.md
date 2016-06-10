@@ -1,19 +1,19 @@
 Status of this document: **Stable**
 
-## The Plan/Fulfillment pattern
+## The definition/execution pattern
 
-This pattern emphasizes a **separation** of the *plan* of motion from its *fulfillment*.
+This pattern emphasizes a **separation** of the *definition* of motion from its *execution*.
 
 This pattern is important because:
 
 - It allows expensive work to execute in separate threads, processes, or workers.
-- Fulfillment is, in practice, code. Plans could be code, but they can be more easily represented with rich user interfaces or even sent from one device to another.
+- execution is code. Definitions are more easily represented with rich user interfaces. Definitions can be sent from one device to another.
 
-### A Plan of Motion
+### A definition of motion
 
-A Plan is **what you want something to do**.
+A definition is **what you want something to do**.
 
-Every [Primitive](../primitives.md) can be described as a Plan in some form. For example, "draggable" and "fade in" are two distinct Plans.
+Every [Primitive](../primitives.md) can be described with a definition. For example, "draggable" and "fade in" are two distinct definitions of motion.
 
 Consider the following pseudo-code:
 
@@ -21,11 +21,11 @@ Consider the following pseudo-code:
     fadeIn.property = "opacity"
     fadeIn.from = 0
     fadeIn.to = 1
-    target.addPlan(fadeIn)
+    target.addDefinition(fadeIn)
 
-Here, `fadeIn` is the Plan. Note that the fading in of the target **is not executed here**.
+Here, `fadeIn` is the definition. The execution of "fade in" **is not executed here**.
 
-`addPlan` has registered the Plan to a system. It does not matter which system, so long as the Plan is eventually fulfilled.
+`addDefinition` has registered the definition to a system. It does not matter which system, so long as the definition is eventually executed.
 
 Also consider this pseudo-code:
 
@@ -33,13 +33,13 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.addPlan(behavior)
+    target.adddefinition(behavior)
 
-In this example, the logic of the `animate` function is the Plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the Plan is eventually fulfilled.
+In this example, the logic of the `animate` function is the definition. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the definition is eventually fulfilled.
 
 > **Note:** This is only an example to emphasize the separation between declaration and execution.  Take care to author code that suits your platform.  Function definitions may not be portable across thread/worker boundaries on some platforms.
 
-Many Plans can be attached to a single target. A single Plan can also be attached to many targets.
+Many definitions can be attached to a single target. A single definition can also be attached to many targets.
 
 Consider this pseudo-code:
 
@@ -48,24 +48,24 @@ Consider this pseudo-code:
     rotatable = RotatableGesture()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
-    # Adding many Plans to one target
-    target.addPlans(draggable, pinchable, rotatable, anchoredSpring)
+    # Adding many definitions to one target
+    target.adddefinitions(draggable, pinchable, rotatable, anchoredSpring)
     
-    # Reusing a Plan on a second target
-    target2.addPlan(draggable)
+    # Reusing a definition on a second target
+    target2.adddefinition(draggable)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the Plan's fulfillment. `target2` is simply expected to be draggable.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an execution detail of the definition's execution. `target2` is simply expected to be draggable.
 
-### Fulfillment of a Plan
+### execution of a definition
 
-Exactly how a Plan is fulfilled is less important than that it **is** fulfilled and that the execution is able to occur elsewhere.
+Exactly how a definition is fulfilled is less important than that it **is** fulfilled and that the execution is able to occur elsewhere.
 
-For example, a Plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same Plan could also be fulfilled by a custom interpolation function. The Plan doesn't know or care how it's fulfilled.
+For example, a definition of "fade in" could reasonably be fulfilled by a built-in animation system. The same definition could also be fulfilled by a custom interpolation function. The definition doesn't know or care how it's fulfilled.
 
-Good systems of fulfillment will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
+Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
 ## Examples of this pattern
 
-Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other types of [Primitive](../primitives.md).
+Most platforms have an execution of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other types of [Primitive](../primitives.md).
 
 ![](../_assets/PatternMatches.svg)
