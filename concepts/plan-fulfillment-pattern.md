@@ -54,18 +54,20 @@ Consider this pseudo-code:
     # Reusing a plan on a second target
     target2.addPlan(draggable)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an execution detail of the plan's execution. `target2` is simply expected to be draggable.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's execution.
 
-### execution of a plan
+`target2` is expected to be draggable.
 
-Exactly how a plan is fulfilled is less important than that it **is** fulfilled and that the execution is able to occur elsewhere.
+### Execution of a plan
 
-For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom interpolation function. The plan doesn't know or care how it's fulfilled.
+Exactly how a plan is executed is less important than that it **is** executed and that the execution is able to occur elsewhere.
+
+For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom interpolation function. The plan doesn't know or care how it's executed.
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
 ## Examples of this pattern
 
-Most platforms have an execution of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other types of [Primitive](../primitives.md).
+Most platforms have an implementation of this pattern for Tween animations. Few platforms, however, have implemented this pattern for other [primitives](../primitives.md).
 
 ![](../_assets/PatternMatches.svg)
