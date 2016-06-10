@@ -111,22 +111,6 @@ Additional examples:
 
 Terms within a family can be chained together by using the special `and` object. `and` is a function (`and()`) or dynamic property (`and`) that returns a new instance of the family object.
 
-In order for the next term's `plans()` function to resolve a chain of multiple terms, the returned family object must store a reference to the previous term. One way to do this is to create a sub-type of the family called an "AndTerm".
-
-    TweenTerm {
-      and = function() -> Tween {
-        return TweenAndTerm(previousTerm: self)
-      }
-    }
-    
-    TweenAndTerm: Tween, Term {
-      let previousTerm
-      
-      plans = function() -> [Plans] {
-        return self.previousTerm.plans()
-      }
-    }
-
 ## 5. Generating plans
 
     plans = expression.plans()
