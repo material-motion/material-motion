@@ -79,7 +79,7 @@ The following primitives are more structural in nature than the delta primitives
 
 ## Timeline
 
-**What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which Tweens may be associated*.
+**What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which tweens may be associated*.
 
 A Timeline limits its value, **progress**, between 0 and 1.
 
@@ -106,7 +106,7 @@ Note that only the **direction** changes between the two lines above. We think o
 
 ## Connecting primitives
 
-We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of Tweens.
+We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
 
 #### Primitives that can drive Timelines
 
@@ -120,13 +120,13 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 #### Timelines can drive these primitives
 
-The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
+The timeline's progress can drive tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
 There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.
 
-#### Attaching Physical Simulation to States
+#### Physical simulation and states
 
-Physical simulations can be associated with States.
+Physical simulations can be associated with individual states of a State Machine.
 
 > For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
 
@@ -134,7 +134,7 @@ Physical simulations can be associated with States.
 
 Timelines are a helpful metaphor for constructing transitions.
 
-> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be one-off tweens that occur when transitioning from A to B and vice versa.
 
 
 <!--
