@@ -26,3 +26,9 @@ Describes the relationship between objects that are magnetically attracted to on
 ### Repulsion
 
 Describes the relationship between objects that are magnetically repelled by one another.
+
+<!--
+
+LGTM:
+
+-->
