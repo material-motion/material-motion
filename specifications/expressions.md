@@ -195,3 +195,10 @@ Encourage functions that accept motion expressions for the purposes of styling:
 Discussion
 
 Is more likely that we'll allow clients to stylize Plans than we will allow styling of motion expressions/Languages.
+
+<!--
+
+LGTM:
+- featherless
+
+-->
