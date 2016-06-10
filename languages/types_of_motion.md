@@ -11,3 +11,9 @@ Motion that is driven by an event, like tapping a button or dragging beyond a th
 ### Gestural
 
 Motion that is directly correlated to a user's continuous input. There can be **Triggered** motion during **Gestural** motion.
+
+<!--
+
+LGTM:
+
+-->
