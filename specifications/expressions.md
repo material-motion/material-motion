@@ -22,7 +22,7 @@ Motion expressions begin with a family. A family is an instance of an object.
 
 Families have **term functions**. A term function initiates the description of plans.
 
-**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of Families to exist where some Families may have similar or identical terms. The responsibility of any given family’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
+**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. The responsibility of any given family’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
 
 For example, the tween family definition might look like:
 
@@ -194,7 +194,7 @@ Encourage functions that accept motion expressions for the purposes of styling:
 
 Discussion
 
-Is more likely that we'll allow clients to stylize plans than we will allow styling of motion expressions/Families.
+Is more likely that we'll allow clients to stylize plans than we will allow styling of motion expressions/families.
 
 <!--
 
