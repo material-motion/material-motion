@@ -6,7 +6,7 @@
    * [Plan/Fulfillment](concepts/plan-fulfillment-pattern.md)
 * [Specifications](specifications/README.md)
    * [Expression](specifications/expressions.md)
-   * [Runtime](specifications/runtime.md)
+   * [Motion Runtime](specifications/runtime.md)
    * [Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
    * [Directors](specifications/directors.md)
