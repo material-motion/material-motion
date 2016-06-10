@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
-   * [Plan/Execution](concepts/plan-fulfillment-pattern.md)
+   * [Plan/execution pattern](concepts/plan-fulfillment-pattern.md)
 * [Specifications](specifications/README.md)
    * [Motion Expression](specifications/expressions.md)
    * [Motion Runtime](specifications/runtime.md)
