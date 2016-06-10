@@ -11,6 +11,12 @@ Separating plans of motion from their execution is important because:
 - It allows execution to occur in a separate, potentially non-blocking context.
 - It enables design tooling and engineering to communicate in a language that isn't code.
 
+## Examples of this separation
+
+Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
+
+![](../_assets/PatternMatches.svg)
+
 ### A plan of motion
 
 A plan describes **what you want something to do**.
@@ -67,12 +73,6 @@ Exactly how a plan is executed is less important than that it **is** executed an
 For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom interpolation function. The plan doesn't know or care how it's executed.
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
-
-## Examples of this separation
-
-Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
-
-![](../_assets/PatternMatches.svg)
 
 <!--
 
