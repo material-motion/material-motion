@@ -8,5 +8,6 @@ Within the best of our ability these specifications are platform and language-ag
 
 LGTM:
 - featherless
+- larche
 
 -->
