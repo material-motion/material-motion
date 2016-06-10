@@ -43,3 +43,9 @@ An animation waits a certain amount of time to be triggered.
 The easing curve applied to an animation.
 
 > If an element moves **with** a specific easing curve, it completes this movement using the defined easing curve's acceleration and deceleration.
+
+<!--
+
+LGTM:
+
+-->
