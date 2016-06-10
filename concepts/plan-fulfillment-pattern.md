@@ -6,14 +6,14 @@ This pattern emphasizes a **separation** of the *definition* of motion from its 
 
 This pattern is important because:
 
-- Expensive execution can occur in separate threads, processes, or workers.
-- execution is code. Definitions are more easily represented with rich user interfaces. Definitions can be sent from one device to another.
+- It allows execution to occur in separate threads, processes, or workers.
+- Execution relies on code. Definitions can be represented in rich user interfaces. Definitions can also be sent "over the wire".
 
 ### A definition of motion
 
 A definition is **what you want something to do**.
 
-Every [Primitive](../primitives.md) can be described with a definition. For example, "draggable" and "fade in" are two distinct definitions of motion.
+Every [Primitive](../primitives.md) can be described with a definition of motion. For example, "draggable" and "fade in" are two distinct definitions of motion that use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
