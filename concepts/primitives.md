@@ -104,14 +104,6 @@ It is generally possible to move in the other direction:
 
 Note that only the **direction** changes between the two lines above. We think of transitions in terms of what's on the "left" and what's on the "right". This allows us to think of the direction in terms of "to the left" or "to the right".
 
-Physical simulations can be associated with States.
-
-> For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
-
-Tweens and Timelines can be associated with Transitions.
-
-> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
-
 ## Connecting primitives
 
 We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of Tweens.
@@ -131,6 +123,19 @@ A timeline's **progress** can be driven by the following delta primitives if the
 The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
 There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.
+
+#### Attaching Physical Simulation to States
+
+Physical simulations can be associated with States.
+
+> For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+
+#### Timelines and transitions
+
+Timelines are a helpful metaphor for constructing transitions.
+
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
+
 
 <!--
 
