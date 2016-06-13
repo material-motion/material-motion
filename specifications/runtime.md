@@ -211,9 +211,9 @@ Actors are informed of events via the following algorithm:
 
 Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
 
-### Runtime active vs idle state
+#### Runtime active vs inactive state
 
-At any given time a Runtime can either be **idle** or **active**.
+A Runtime can be in two states: **inactive** or **active**. Runtimes start in the inactive state.
 
 A Runtime is active when there is at least one active Actor. 
 
@@ -222,7 +222,7 @@ An Actor can be active for any of the following reasons:
 - The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
 - The Actor has indicated some form of active **external activity**.
 
-### External activity
+##### External activity
 
 Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Motion Runtime of two events:
 
@@ -257,7 +257,9 @@ Similarly, an Actor might implement the following when working with an external 
       })
     }
 
-### Open topics
+---
+
+## Open topics
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
