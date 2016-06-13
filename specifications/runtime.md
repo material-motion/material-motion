@@ -41,9 +41,9 @@ An instance of Intention represents a plan of motion.
 
 ## Transactions
 
-A runtimes receives intention via **transactions**.
+A runtime receives intention via **transactions**.
 
-A Transaction's public API should support the following operations:
+A transaction's public API should support the following operations:
 
 - Associate an Intention with a target.
 - Associate a named Intention with a target.
