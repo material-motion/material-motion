@@ -32,6 +32,6 @@
 * [Glossary](GLOSSARY.md)
 * Drafts
    * [Applications](_drafts/applications.md)
-   * [Odeon runtime notes](specifications/odeon_runtime.md)
+   * [Odeon runtime notes](_drafts/odeon_runtime.md)
    * [Expressions](_drafts/expressions.md)
 
