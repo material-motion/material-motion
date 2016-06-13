@@ -27,7 +27,7 @@ An instance of a Motion Runtime must be able to do the following:
 
 ## Intention
 
-According to the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern, Intention is a type of Plan.
+According to the [separation of plan and execution](../plan-execution-pattern.md), Intention is a type of Plan.
 
 An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`. If the programming language allows for it, Intention could even be a protocol that existing objects conform to.
 
