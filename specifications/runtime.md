@@ -2,7 +2,7 @@ Status of this document: **Draft**
 
 # Motion Runtime
 
-The system we propose here is an implementation of the [Plan/Fulfillment](../concepts/plan-fulfillment.md) pattern. We call it a Motion Runtime.
+The system we propose here emphasizes a separation of plan from its execution. We call it a Motion Runtime.
 
 New terminology: Transaction, Intention, and Actor.
 
