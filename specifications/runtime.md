@@ -16,7 +16,7 @@ Let's zoom in to the Motion Runtime for a moment. Core Animation is just another
 
 ## Overview
 
-A Motion Runtime relies on objects called Intentions. Intentions define an abstract plan of motion.
+A Motion Runtime relies on objects called Intentions.
 
 ### Intention
 
@@ -32,6 +32,12 @@ An instance of Intention represents a plan of motion.
 **Configuration**: Intentions can have configurable properties.
 
 **Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
+
+Intentions are executed by Actors.
+
+### Actors
+
+Actors are created by a Runtime in order to execute Intention.
 
 ## Transactions
 
