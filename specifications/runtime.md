@@ -53,7 +53,7 @@ It must be possible to enumerate the operations of a Transaction.
 
 The log's order must match the order of operation requests.
 
-A Transaction needs to be committed to a Motion Runtime for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
+A transaction must be committed to a Motion Runtime in order for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
 
 Consider the following transaction pseudo-code:
 
