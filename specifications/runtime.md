@@ -26,7 +26,7 @@ Runtimes create Actor instances that are capable of fulfilling the provided Inte
 
 ## Intention
 
-According to the [separation of plan and execution](../plan-execution-pattern.md), Intention is a type of Plan.
+An Intention instance represents a plan of motion.
 
 An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`. If the programming language allows for it, Intention could even be a protocol that existing objects conform to.
 
