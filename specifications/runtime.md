@@ -24,7 +24,7 @@ A Motion Runtime relies on objects called Intentions. Intentions define an abstr
 
 Runtimes create Actor instances that are capable of fulfilling the provided Intentions.
 
-## Intention
+### Intention
 
 An instance of Intention represents a plan of motion.
 
@@ -39,7 +39,7 @@ An instance of Intention represents a plan of motion.
 
 **Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
 
-## Commit Intentions
+## Transactions
 
 Intentions are committed to Motion Runtimes via Transactions.
 
