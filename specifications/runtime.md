@@ -37,7 +37,7 @@ Intentions are executed by Actors.
 
 ### Actors
 
-Actors are objects created by a Runtime for the purposes of executing Intention.
+Actors are objects created by a Runtime for the purposes of translating Intention into execution.
 
 
 
