@@ -41,16 +41,38 @@ Actors are objects created by a Runtime for the purposes of translating Intentio
 
 ---
 
-We will now walk through the life cycle of an Intention.
+## Life cycle of an Intention
 
+We will now walk through the life cycle of an Intention and its eventual execution.
+
+1. Create a Runtime.
 1. Create Intention.
-2. Commit it to a Runtime via a Transaction.
-3. The Runtime creates necessary Actors.
-4. The Actors execute their Intentions.
+1. Commit it to a Runtime via a Transaction.
+1. The Runtime creates necessary Actors.
+1. The Actors execute their Intentions.
 
-## Step 1: Create Intention
+### Step 1: Create a Runtime
 
-## Step 2: Commit Intention
+Many Runtimes may exist in an application. Creating a runtime should be as simple as creating a new instance.
+
+    runtime = Runtime()
+
+### Step 2: Create Intention
+
+All motion in a runtime begins with Intention. Let's explore four different types of Intention:
+
+    animation = Tween()
+    animation.property = "opacity"
+    animation.from = 0
+    animation.to = 1
+    
+    draggable = Draggable()
+    pinchable = Pinchable()
+    rotatable = Rotatable()
+
+The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the runtime.
+
+### Step 2: Transaction
 
 A runtime receives Intention via **transactions**.
 
