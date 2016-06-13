@@ -28,7 +28,7 @@ Runtimes create Actor instances that are capable of fulfilling the provided Inte
 
 An Intention instance represents a plan of motion.
 
-**Examples**: An object named Squishable could be a type of Intention. A generic object named Tween could also be a type of Intention.
+An object named `Squishable` could be a type of Intention. A more generic object named `Tween` could also be a type of Intention.
 
 **Configuration**: Intentions can have configurable properties.
 
