@@ -53,7 +53,7 @@ We will now walk through the life cycle of an Intention and its eventual executi
 
 ### Step 1: Create a Runtime
 
-Many Runtimes may exist in an application. Creating a runtime should be as simple as creating a new instance.
+Creating a runtime should be as simple as creating a new instance. Many Runtimes may exist in an application.
 
     runtime = Runtime()
 
