@@ -32,7 +32,7 @@ The tween family definition might look like:
 
 A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
 
-> Note: **Terms must be functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+> Note: **Terms must be created with functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
 The purpose of a Term is to initiate the creation of one or more plans. The implementation of the term may create one or more plans and initialize well-documented defaults.
 
