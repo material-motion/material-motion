@@ -15,7 +15,7 @@ Separating plans of motion from their execution is important because:
 
 Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
 
-![](../_assets/PatternMatches.svg)
+![](_assets/PatternMatches.svg)
 
 ### A plan of motion
 
