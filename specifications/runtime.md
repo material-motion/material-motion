@@ -209,7 +209,7 @@ Actors are informed of events via the following algorithm:
       for every actor
         actor.event()
 
-Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Motion Runtime should not listen to animation events.
+Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
 
 ### Motion Runtime active vs idle state
 
