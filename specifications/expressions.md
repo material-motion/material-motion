@@ -14,7 +14,7 @@ Families have **term functions**. A term function initiates the description of p
 
 **Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. A family should document what its term do.
 
-For example, the tween family definition might look like:
+The tween family definition might look like:
 
     Tween {
       fn fadeIn(...) -> Term
