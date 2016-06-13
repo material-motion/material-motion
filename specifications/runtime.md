@@ -106,6 +106,10 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"add", intention: Draggable, target: circleView},
     ]
 
+Let's commit the transaction:
+
+    runtime.commit(transaction)
+
 After committing the above transaction, the Runtime's internal state might resemble the following:
 
 ![](../_assets/TargetManagers.svg)
@@ -114,9 +118,9 @@ Note that `Rotatable` is not listed. This is because we also removed any Intenti
 
 The Runtime is now expected to fulfill its Intentions.
 
-## Fulfill Intentions
+### Step 4: Runtime creates Actors
 
-The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its fulfillment.
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its execution.
 
 ### Intention ↔ Actor association
 
