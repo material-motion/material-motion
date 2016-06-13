@@ -199,7 +199,7 @@ Note that "one Actor per type of Intention" does not resolve the problem of shar
 
 ---
 
-### Step 5: Actors execute Intention.
+### Step 5: Actors execute Intention
 
 The Runtime is now expected to forward animation events to the Actor instances.
 
