@@ -1,6 +1,6 @@
 Status of this document: **Stable**
 
-# Primitives
+# Motion primitives
 
 This section explores some **building blocks** of rich, interactive motion.
 
