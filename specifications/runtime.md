@@ -41,7 +41,7 @@ An instance of Intention represents a plan of motion.
 
 ## Transactions
 
-Intentions are committed to Motion Runtimes via Transactions.
+A runtimes receives intention via **transactions**.
 
 A Transaction's public API should support the following operations:
 
