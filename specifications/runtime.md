@@ -74,15 +74,7 @@ The four objects created above are Intentions. Each Instance represents a plan o
 
 ### Step 3: Start a transaction and commit it
 
-    transaction = Transaction()
-    transaction.add(animation, circleView)
-    transaction.add(draggable, squareView)
-    transaction.addNamed("name1", pinchable, squareView)
-    transaction.addNamed("name2", rotatable, squareView)
-    transaction.removeNamed("name2", squareView)
-    transaction.add(draggable, circleView)
-
-A Runtime receives Intention via **transactions**.
+Intention must be committed to a Runtime via a Transaction. Transactions associated Intention with specific targets.
 
 A transaction's public API should support the following operations:
 
@@ -90,13 +82,17 @@ A transaction's public API should support the following operations:
 - Associate a named Intention with a target.
 - Remove any Intention associated with a given name from a target.
 
-It must be possible to enumerate the operations of a Transaction.
+It must be possible to enumerate the operations of a Transaction. The log's order must match the order of operation requests.
 
-The log's order must match the order of operation requests.
+Consider the following pseudo-code:
 
-A transaction must be committed to a Motion Runtime in order for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
-
-Consider the following transaction pseudo-code:
+    transaction = Transaction()
+    transaction.add(animation, circleView)
+    transaction.add(draggable, squareView)
+    transaction.addNamed("name1", pinchable, squareView)
+    transaction.addNamed("name2", rotatable, squareView)
+    transaction.removeNamed("name2", squareView)
+    transaction.add(draggable, circleView)
 
 The Transaction's log might resemble the following pseudo-object:
 
@@ -110,13 +106,13 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"add", intention: Draggable, target: circleView},
     ]
 
-After committing the above transaction, the Motion Runtime's internal state might resemble the following:
+After committing the above transaction, the Runtime's internal state might resemble the following:
 
 ![](../_assets/TargetManagers.svg)
 
 Note that `Rotatable` is not listed. This is because we also removed any Intention named "name2" in this Transaction.
 
-The Motion Runtime is now expected to fulfill its Intentions.
+The Runtime is now expected to fulfill its Intentions.
 
 ## Fulfill Intentions
 
