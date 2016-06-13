@@ -26,14 +26,14 @@ Runtimes create Actor instances that are capable of fulfilling the provided Inte
 
 ## Intention
 
-An Intention instance represents a plan of motion.
+An instance of Intention represents a plan of motion.
 
 **Example objects**:
 
-- `SquashAndStretch` causes a target to squash and stretch in the direction of its movement.
-- `Tween` could also be a type of Intention.
-- `Draggable` represents a gestural intention.
-- `AnchoredSpring` represents a spring anchored to a location.
+- `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
+- `Tween` describes a tween animation.
+- `Draggable` describes gestural translation.
+- `AnchoredSpring` describes a physical simulation.
 
 **Configuration**: Intentions can have configurable properties.
 
