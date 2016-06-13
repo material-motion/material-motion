@@ -47,8 +47,8 @@ We will now walk through the life cycle of an Intention and its eventual executi
 
 1. Create a Runtime.
 1. Create Intention.
-1. Create a Transaction and commit it.
-1. Runtime creates necessary Actors.
+1. Start a transaction and commit it.
+1. The Runtime creates necessary Actors.
 1. The Actors execute their Intentions.
 
 ### Step 1: Create a Runtime
@@ -72,7 +72,7 @@ All motion in a runtime begins with Intention. Let's explore four different type
 
 The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the runtime.
 
-### Step 3: Transaction
+### Step 3: Start a transaction and commit it
 
 A runtime receives Intention via **transactions**.
 
