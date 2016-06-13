@@ -31,7 +31,7 @@
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
 * Drafts
-   * [Applications](specifications/applications.md)
+   * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](specifications/odeon_runtime.md)
    * [Expressions](_drafts/expressions.md)
 
