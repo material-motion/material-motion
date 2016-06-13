@@ -74,7 +74,15 @@ The four objects created above are Intentions. Each Instance represents a plan o
 
 ### Step 3: Start a transaction and commit it
 
-A runtime receives Intention via **transactions**.
+    transaction = Transaction()
+    transaction.add(animation, circleView)
+    transaction.add(draggable, squareView)
+    transaction.addNamed("name1", pinchable, squareView)
+    transaction.addNamed("name2", rotatable, squareView)
+    transaction.removeNamed("name2", squareView)
+    transaction.add(draggable, circleView)
+
+A Runtime receives Intention via **transactions**.
 
 A transaction's public API should support the following operations:
 
@@ -89,15 +97,6 @@ The log's order must match the order of operation requests.
 A transaction must be committed to a Motion Runtime in order for it to take effect; e.g. `Motion Runtime.commit(transaction)`.
 
 Consider the following transaction pseudo-code:
-
-    transaction = Transaction()
-    transaction.add(FadeIn, circleView)
-    transaction.add(Draggable, squareView)
-    transaction.addNamed("name1", Pinchable, squareView)
-    transaction.addNamed("name2", Rotatable, squareView)
-    transaction.removeNamed("name2", squareView)
-    transaction.add(Draggable, circleView)
-    runtime.commit(transaction)
 
 The Transaction's log might resemble the following pseudo-object:
 
