@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Motion Primitives](primitives.md)
+* [Motion primitives](primitives.md)
 * [Separation of plan/execution](plan-execution-pattern.md)
 * [Specifications](specifications/README.md)
    * [Motion Expression](specifications/expressions.md)
