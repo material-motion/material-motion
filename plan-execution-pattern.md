@@ -25,10 +25,11 @@ Every [primitive](../primitives.md) can be described with a plan. For example, "
 
 Consider the following pseudo-code:
 
-    fadeIn = Animation()
-    fadeIn.property = "opacity"
-    fadeIn.from = 0
-    fadeIn.to = 1
+    fadeIn = {
+      property: 'opacity',
+      from: 0,
+      to: 1
+    }
     target.addPlan(fadeIn)
 
 Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
