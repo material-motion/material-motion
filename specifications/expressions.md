@@ -24,8 +24,6 @@ For example, the tween family definition might look like:
       ...
     }
 
-> Related: [Material motion language](../languages/README.md).
-
 **Capitalization**: Family names start with a capital letter. Terms start with a lowercase letter.
 
 ## 2. Terms
