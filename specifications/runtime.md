@@ -37,6 +37,8 @@ An instance of Intention represents a plan of motion.
 
 **Configuration**: Intentions can have configurable properties.
 
+**Execution**: Following the separation of plan/execution, Intentions should not be expected to execute their plans of motion.
+
 ## Commit Intentions
 
 Intentions are committed to Motion Runtimes via Transactions.
