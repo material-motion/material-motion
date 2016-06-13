@@ -213,9 +213,9 @@ Some Actors are not interested in animation events. Do not inform these Actors o
 
 ### Runtime active vs idle state
 
-At any given time a Motion Runtime can either be **idle** or **active**.
+At any given time a Runtime can either be **idle** or **active**.
 
-A Motion Runtime is active when there is at least one active Actor. 
+A Runtime is active when there is at least one active Actor. 
 
 An Actor can be active for any of the following reasons:
 
