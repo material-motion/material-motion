@@ -10,7 +10,7 @@ The following diagram shows where the Motion Runtime lives in relation to a plat
 
 ![](../_assets/Abstraction.svg)
 
-Let's zoom in to the Motion Runtime for a moment. Core Animation is simply another form of plan/execution system. This composition allows the Motion Runtime to translate plans into the best possible execution.
+Let's zoom in to the Motion Runtime for a moment. Core Animation is just another form of the plan/execution separation. In this case, our Runtime has interpreted the "fadeIn" intention as being executable by Core Animation.
 
 ![](../_assets/AbstractionDive.svg)
 
