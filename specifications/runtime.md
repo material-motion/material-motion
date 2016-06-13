@@ -47,8 +47,8 @@ We will now walk through the life cycle of an Intention and its eventual executi
 
 1. Create a Runtime.
 1. Create Intention.
-1. Commit it to a Runtime via a Transaction.
-1. The Runtime creates necessary Actors.
+1. Create a Transaction and commit it.
+1. Runtime creates necessary Actors.
 1. The Actors execute their Intentions.
 
 ### Step 1: Create a Runtime
