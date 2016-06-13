@@ -18,8 +18,6 @@ Let's zoom in to the Motion Runtime for a moment. Core Animation is simply anoth
 
 ![](../_assets/AbstractionDive.svg)
 
-As we'll discuss in detail below, the Motion Runtime acts as a fulfillment engine for objects we call Intention.
-
 ## Overview
 
 An instance of a Motion Runtime must be able to do the following:
