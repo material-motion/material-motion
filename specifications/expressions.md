@@ -10,8 +10,6 @@ A **motion expression** is functional, syntactic sugar for the creation and conf
 
 Motion expressions begin with a family. A family is an instance of an object.
 
-> Read our [Motion Language recommendations](../languages/README.md).
-
 Families have **term functions**. A term function initiates the description of plans.
 
 **Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. The responsibility of any given family’s creator is to clearly explain what a term will do. This documentation would be ideally represented as a visual interactive dictionary.
@@ -25,6 +23,8 @@ For example, the tween family definition might look like:
       fn rotateBy(...) -> Term
       ...
     }
+
+> Read our [Motion language recommendations](../languages/README.md).
 
 **Capitalization**: Family names start with a capital letter. Terms start with a lowercase letter.
 
