@@ -37,7 +37,7 @@ An instance of Intention represents a plan of motion.
 
 **Configuration**: Intentions can have configurable properties.
 
-**Portability**: Intentions should be encodable. An Intention should be transferable over a network and to disk.
+**Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
 
 ## Commit Intentions
 
