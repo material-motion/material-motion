@@ -28,9 +28,9 @@ Runtimes create Actor instances that are capable of fulfilling the provided Inte
 
 An Intention instance represents a plan of motion.
 
-An Intention instance could be a named object with no data, e.g. SquishableIntention. Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`. If the programming language allows for it, Intention could even be a protocol that existing objects conform to.
+An Intention instance could be a named object with no data, e.g. SquishableIntention.
 
-{% em type="red" %}Emphasis: recall from [Plan/Fulfillment](../concepts/plan-fulfillment.md) that an Intention (the Plan) must not fulfill itself.{% endem %} The Motion Runtime will determine how to fulfill its provided Intentions.
+Another Intention instance might have data, such as `fromValue`, `toValue`, and an `easingCurve`.
 
 ## Commit Intentions
 
