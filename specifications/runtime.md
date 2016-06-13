@@ -53,13 +53,13 @@ We will now walk through the life cycle of an Intention and its eventual executi
 
 ### Step 1: Create a Runtime
 
-Creating a runtime should be as simple as creating a new instance. Many Runtimes may exist in an application.
+Creating a Runtime should be as simple as creating a new instance. Many Runtimes may exist in an application.
 
     runtime = Runtime()
 
 ### Step 2: Create Intention
 
-All motion in a runtime begins with Intention. Let's explore four different types of Intention:
+All motion in a Runtime begins with Intention. We'll explore four different types of Intention:
 
     animation = Tween()
     animation.property = "opacity"
@@ -70,7 +70,7 @@ All motion in a runtime begins with Intention. Let's explore four different type
     pinchable = Pinchable()
     rotatable = Rotatable()
 
-The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the runtime.
+The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the Runtime.
 
 ### Step 3: Start a transaction and commit it
 
