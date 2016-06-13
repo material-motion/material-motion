@@ -72,7 +72,7 @@ All motion in a runtime begins with Intention. Let's explore four different type
 
 The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the runtime.
 
-### Step 2: Transaction
+### Step 3: Transaction
 
 A runtime receives Intention via **transactions**.
 
