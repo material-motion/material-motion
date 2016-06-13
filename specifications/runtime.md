@@ -64,7 +64,7 @@ Consider the following transaction pseudo-code:
     transaction.addNamed("name2", Rotatable, squareView)
     transaction.removeNamed("name2", squareView)
     transaction.add(Draggable, circleView)
-    Motion Runtime.commit(transaction)
+    runtime.commit(transaction)
 
 The Transaction's log might resemble the following pseudo-object:
 
@@ -138,7 +138,7 @@ Consider the following pseudo-Transaction involving physical simulation Intentio
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
     transaction.add(AnchoredSpring.on(position), circleView)
-    Motion Runtime.commit(transaction)
+    runtime.commit(transaction)
 
 Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
