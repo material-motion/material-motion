@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Primitives](concepts/primitives.md)
 * [Concepts](concepts/README.md)
    * [Primitives](concepts/primitives.md)
    * [Separation of plan/execution](concepts/plan-execution-pattern.md)
