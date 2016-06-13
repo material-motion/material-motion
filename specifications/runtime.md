@@ -37,9 +37,22 @@ Intentions are executed by Actors.
 
 ### Actors
 
-Actors are created by a Runtime in order to execute Intention.
+Actors are objects created by a Runtime for the purposes of executing Intention.
 
-## Transactions
+
+
+---
+
+We will now walk through the life cycle of an Intention.
+
+1. Create Intention.
+2. Commit it to a Runtime via a Transaction.
+3. The Runtime creates necessary Actors.
+4. The Actors execute their Intentions.
+
+## Step 1: Create Intention
+
+## Step 2: Commit Intention
 
 A runtime receives Intention via **transactions**.
 
