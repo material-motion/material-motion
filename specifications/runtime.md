@@ -124,7 +124,7 @@ The Motion Runtime we propose uses entities called **Actors** to fulfill specifi
 
 ---
 
-### Aside: Intention ↔ Actor association
+#### Aside: Intention ↔ Actor association
 
 We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 
@@ -142,9 +142,7 @@ Actors define which Intentions they can fulfill. This approach allows Intentions
 
 ---
 
-### On commit: generate Actors
-
-When a Transaction is committed, the Motion Runtime must generate an Actor for each Intention in the Transaction. Consider the Transaction log we'd explored above:
+When a transaction is committed, the Runtime must generate an Actor for each Intention in the transaction. Consider the transaction log we'd explored above:
 
     > transaction.log
     [
@@ -165,7 +163,9 @@ Let's create Actors by calling our hypothetical `actorForIntention` on each targ
 
 We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
-#### One Actor instance per type of Intention
+---
+
+#### Aside: One Actor instance per type of Intention
 
 A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are concerned.
 
@@ -197,11 +197,13 @@ Alternatively, consider how this situation would have played out if we had one A
 
 Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
-### Repeated: forward animation events to Actors
+---
 
-The Motion Runtime is now expected to forward animation events to the Actor instances.
+### Step 5: Actors execute Intention.
 
-Actors are informed of events via the following pseudo-algorithm:
+The Runtime is now expected to forward animation events to the Actor instances.
+
+Actors are informed of events via the following algorithm:
 
     for every target
       for every actor
