@@ -137,7 +137,7 @@ TODO: Discuss value of serializing motion expressions vs serializing plans. Moti
 
     [
       {
-        "family": "Gesture",
+        "family": "material-motion-gestures",
         "terms": [
           ["draggable"]
         ]
@@ -148,7 +148,7 @@ TODO: Discuss value of serializing motion expressions vs serializing plans. Moti
     
     [
       {
-        "family": "Tween",
+        "family": "material-motion-tweens",
         "terms": [
           ["fadeIn", ["withDuration", 5]]
         ]
