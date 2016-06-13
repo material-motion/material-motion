@@ -24,11 +24,6 @@ A Motion Runtime relies on objects called Intentions. Intentions define an abstr
 
 Runtimes create Actor instances that are capable of fulfilling the provided Intentions.
 
-An instance of a Motion Runtime must be able to do the following:
-
-- Commit to Intentions.
-- Fulfill those Intentions.
-
 ## Intention
 
 According to the [separation of plan and execution](../plan-execution-pattern.md), Intention is a type of Plan.
