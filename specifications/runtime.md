@@ -28,7 +28,7 @@ Runtimes create Actor instances that are capable of fulfilling the provided Inte
 
 An Intention instance represents a plan of motion.
 
-An object named `Squishable` could be a type of Intention. A more generic object named `Tween` could also be a type of Intention. `Draggable` represents a gestural intention. `AnchoredSpring` represents a spring anchored to a location.
+**Examples**: An object named `Squishable` could be a type of Intention. A more generic object named `Tween` could also be a type of Intention. `Draggable` represents a gestural intention. `AnchoredSpring` represents a spring anchored to a location.
 
 **Configuration**: Intentions can have configurable properties.
 
