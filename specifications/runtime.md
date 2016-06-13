@@ -14,7 +14,7 @@ The following diagram shows where the Motion Runtime lives in relation to a plat
 
 ![](../_assets/Abstraction.svg)
 
-Let's zoom in to the Motion Runtime for a moment. We can see how the Plan/Fulfillment pattern is composable: Core Animation and its CABasicAnimation is simply a nested Plan/Fulfillment system.
+Let's zoom in to the Motion Runtime for a moment. Core Animation is simply another form of plan/execution system. This composition allows the Motion Runtime to translate plans into the best possible execution.
 
 ![](../_assets/AbstractionDive.svg)
 
