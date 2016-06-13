@@ -74,6 +74,10 @@ For example, a plan of "fade in" could reasonably be executed by a built-in anim
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
+## Additional reading
+
+- [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
+
 <!--
 
 LGTM:
