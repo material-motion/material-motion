@@ -1,4 +1,4 @@
-Status of this document: **Stable**
+Status of this document: **Experimental**
 
 # Motion expression
 
