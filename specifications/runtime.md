@@ -10,13 +10,13 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ![](../_assets/Abstraction.svg)
 
-Let's zoom in to the Motion Runtime for a moment. Core Animation is just another form of the plan/execution separation. In this case, our Runtime has interpreted the "fadeIn" intention as being executable by Core Animation. The Runtime has delegated its execution to another system (a common pattern we'll make great use of).
+Let's zoom in to the Runtime for a moment. Core Animation is just another form of the plan/execution separation. In this case, our Runtime has interpreted the "fadeIn" intention as being executable by Core Animation. The Runtime has delegated its execution to another system (a common pattern we'll make great use of).
 
 ![](../_assets/AbstractionDive.svg)
 
 ## Overview
 
-A Motion Runtime relies on objects called Intentions.
+A Runtime relies on objects called Intentions.
 
 ### Intention
 
