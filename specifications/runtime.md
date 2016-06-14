@@ -263,7 +263,7 @@ Similarly, an Actor might implement the following when working with an external 
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should Actors be removed from a Motion Runtime?
+- When should Actors be removed from a Runtime?
 
 <!--
 
