@@ -8,7 +8,7 @@
    * [Motion Runtime](specifications/runtime.md)
    * [Motion Runtime plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
-   * Motion Actors
+   * Actors
    * [Directors](specifications/directors.md)
    * [Transient views](specifications/transient_views.md)
    * [Scripting](specifications/scripting.md)
