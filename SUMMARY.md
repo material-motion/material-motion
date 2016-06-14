@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* [Motion primitives](primitives.md)
 * [Separation of plan/execution](plan-execution-pattern.md)
 * [Specifications](specifications/README.md)
+   * [Motion primitives](primitives.md)
    * [Motion Runtime](specifications/runtime.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
