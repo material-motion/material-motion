@@ -10,6 +10,8 @@ This chapter defines technologies that we feel aid in the creation of interactiv
 
 Within the best of our ability these specifications are platform and language-agnostic. We will not always be perfect, nor are we attempting to achieve perfect agreement.
 
+The authors of this chapter have backgrounds in Android, iOS, and web application development.
+
 <!--
 
 LGTM:
