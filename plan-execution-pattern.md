@@ -1,5 +1,3 @@
-Status of this document: **Stable**
-
 ## Separation of plan/execution
 
 **Plan**: a detailed proposal for doing or achieving something.
