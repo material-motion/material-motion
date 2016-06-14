@@ -13,7 +13,7 @@ Separating plans of motion from their execution is important because:
 
 ## Examples of this separation
 
-Most platforms have an implementation of this separation for Tween animations. Few platforms, however, have implemented this separation for other [primitives](../primitives.md).
+Most platforms have an implementation of this separation for Tween animations. Few platforms have implemented this separation for other [primitives](../primitives.md).
 
 ![](_assets/PatternMatches.svg)
 
@@ -21,7 +21,7 @@ Most platforms have an implementation of this separation for Tween animations. F
 
 A plan describes **what you want something to do** or **how you want it to behave**.
 
-Every [primitive](../primitives.md) can be described with a plan. For example, "draggable" and "fade in" are two distinct plans. Their execution might use Gesture and Tween primitives.
+For example, "be draggable" and "fade in" are two distinct plans. Their execution might use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
