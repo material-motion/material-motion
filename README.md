@@ -2,7 +2,7 @@
 
 This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more.
 
-This book is a starmap. It defines high-level goals and identifies patterns.
+This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) tracks implementations that are available for specific platforms and languages.
 
 ## Evolution
 
@@ -15,10 +15,6 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 The chapter titled "Engineering concepts" is for software engineers familiar with animation systems.
 
 The chapter titled "Material motion language" is for motion designers and tool creators.
-
-## Implementations
-
-This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Community index](community_index/).
 
 ## License
 
