@@ -6,7 +6,7 @@ This book is a starmap. It defines high-level goals and identifies patterns.
 
 ## Evolution
 
-This book is in a very early drafting phase. We expect it to evolve over time.
+This book is in a very early drafting phase. It will evolve over time.
 
 Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
