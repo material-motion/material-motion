@@ -10,12 +10,12 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-The sections "[Specifications](specifications/)" and "[Applications](applications/)" are both written for software engineers. We assume a certain level of background including:
+The chapter titled "Engineering concepts" is written for software engineers. It makes the following assumptions:
 
 - familiarity with at least one programming language, and
-- familiarity with animation systems.
+- familiarity with at least one animation system.
 
-The sections "[Languages](languages/)" and "[Hypotheticals](hypotheticals/)" are both written for anyone interested in interactive motion.
+The chapter titled "Material motion language" is written for motion designers.
 
 ## Implementations
 
