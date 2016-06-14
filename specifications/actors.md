@@ -8,7 +8,7 @@ Status of this document: **Drafting by featherless**
 
 **Intentions**: Intentions may be provided to Actors as they're committed to the Runtime.
 
-Example pseudo-code:
+Example pseudo-code from within the Runtime:
 
     actor = actorForIntention(intention)
     actor.addIntention(intention)
@@ -18,7 +18,7 @@ Example pseudo-code:
 1. Remove any previously-committed Intention with the same name from the target's actors. This may be on a different Actor instance.
 2. Provide the relevant Actor with the new named Intention.
 
-Example pseudo-code:
+Example pseudo-code from within the Runtime:
 
     # Step 1
     actorForName(name).removeIntentionWithName(name)
