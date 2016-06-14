@@ -21,3 +21,9 @@ Fade Out
 Scale Out
 
 Swipe to Dismiss
+
+<!--
+
+LGTM:
+
+-->

@@ -26,9 +26,9 @@ Examples:
 
 The execution of a plan.
 
-Discussed in:
+## expression
 
-- [The plan/execution pattern](concepts/plan-execution-pattern.md)
+Functional, syntactic sugar for the creation and configuration of plans.
 
 ## frame
 

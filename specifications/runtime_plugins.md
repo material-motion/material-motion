@@ -7,9 +7,9 @@ Status of this document:
 
 Events observable by external entities.
 
-### Idle ↔ Active state change
+### Idle ↔ active state change
 
-Any time the Motion Runtime changes its Idle/Active state it should fire an observable event.
+Any time the Motion Runtime changes its idle/active state it should fire an observable event.
 
 This is helpful for Transition Directors.
 
@@ -17,4 +17,4 @@ This is helpful for Transition Directors.
 
 Each time a new target is referenced, the Motion Runtime should send an event. The receivers of this event should be allowed to return a new "shadow" instance of the target. This shadow instance will be provided to the Actors.
 
-This event enables the "View duplication" plugin.
+This event enables the "view duplication" plugin.

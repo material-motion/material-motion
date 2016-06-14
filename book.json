@@ -4,9 +4,6 @@
         "emphasize"
     ],
     "pluginsConfig": {
-        "theme-default": {
-            "showLevel": true
-        },
         "edit-link": {
             "base": "https://www.gitbook.com/book/material-motion/material-motion-starmap/edit#/edit/master/",
             "label": "Edit this page"

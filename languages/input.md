@@ -50,3 +50,9 @@ Multi-directional, free-roam.
 ### Orient
 
 Changing the orientation of the device.
+
+<!--
+
+LGTM:
+
+-->

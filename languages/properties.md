@@ -41,3 +41,9 @@ The **Opacity** property is controlled by the **Fade** action, and is measured i
 ### Anchor Point
 
 The **Anchor Point** property is the point at which the coordinates of the **Position** property is set, and is measured in **Density Pixels**. This can influence the **Move** and **Rotate** actions.
+
+<!--
+
+LGTM:
+
+-->

@@ -1,36 +1,32 @@
 # Interactive Motion Starmap
 
-Interactivity and motion play an important role in software interfaces. Yet there is often a gap between what a software creator can imagine and what can be built in production applications.
+This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more.
 
-This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [software design patterns](concepts/patterns.md), [essential primitives](concepts/primitives.md), [motion runtimes](concepts/runtimes.md), and more.
-
----
-
-We're still writing this book; feel free to leave comments, but many chapters and sections are actively changing. Work is being planned in the [Roadmap](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/meta.html).
-
----
+This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
 
 ## Evolution
 
-This book is expected to evolve over time. Please feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
+This book is in a very early drafting phase. It will evolve over time.
 
-Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book.
+Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
 ## Who should read this?
 
-The sections "[Concepts](concepts/)" and "[Applications](applications/)" are both written for software engineers. We assume a certain level of background including:
+The chapter titled "Engineering concepts" is for software engineers familiar with animation systems.
 
-- familiarity with at least one programming language, and
-- familiarity with animation systems.
-
-The sections "[Languages](languages/)" and "[Hypotheticals](hypotheticals/)" are both written for anyone interested in interactive motion.
-
-## Implementations
-
-This book explores ideas that may or may not exist on a given platform or for a given language. For an index of existing and in-development solutions, please consult the [Community index](community_index/).
+The chapter titled "Material motion language" is for motion designers and tool creators.
 
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+
+<!--
+
+LGTM:
+- featherless
+- larche
+- markwei
+
+-->

@@ -60,3 +60,9 @@ A Director class hierarchy might include specialized Director implementations th
 
 **End state**. The Director is responsible for communicating when the Transition has ended. The Director will likely make use of the Motion Runtime's idle/active events to communicate this.
 
+<!--
+
+LGTM:
+- featherless
+
+-->

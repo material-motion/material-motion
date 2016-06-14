@@ -26,3 +26,9 @@ Values are the units in which a specific movement is measured.
 ### Time (ms)
 
 **Time** is used by various **Connectors** to determine the duration of an animation.
+
+<!--
+
+LGTM:
+
+-->

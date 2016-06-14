@@ -1,10 +1,8 @@
-Status of this document: **Stable**
+# Motion primitives
 
-# Primitives
+This section explores some **building blocks** of rich, interactive motion.
 
-This section explores **essential building blocks** of rich, interactive motion.
-
-This section’s topics:
+This section's topics:
 
 - [Delta primitives](#delta-primitives)
 - [Timeline](#timeline)
@@ -73,11 +71,17 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 
 **Custom forces**: A physical simulation system should also allow for the expression of arbitrary forces.
 
+---
+
+The following primitives are more structural in nature than the delta primitives described above.
+
 ## Timeline
 
-**What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which Tweens may be associated*.
+**What it is**: *an object that contains a floating-point value, the progress*.
 
-A Timeline limits its value, **progress**, between 0 and 1.
+**Normalized progress**: A Timeline's progress should be considered "normalized" to a `[0...1]` range.
+
+**Extending past the timeline**: A Timeline's progress can extend beyond its bounds. What this means to objects observing the Timeline is implementation-dependent.
 
 ## State Machine
 
@@ -95,22 +99,14 @@ It is generally possible to move in the other direction:
 
 **Transitions** always consist of exactly **two** States and a **direction**.
 
-    A → B is a Transition  from  State A   to  State B
+    A → B is a Transition  from  State A to    State B
     A ← B is a Transition  to    State A from  State B
 
 Note that only the **direction** changes between the two lines above. We think of transitions in terms of what's on the "left" and what's on the "right". This allows us to think of the direction in terms of "to the left" or "to the right".
 
-Physical simulations can be associated with States.
-
-> For example, a photo element might have two states: collapsed and expanded. Both states have spring attachments that change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
-
-Tweens and Timelines can be associated with Transitions.
-
-> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of Tweens. There might also be one-off Tweens that occur when transitioning from A to B and vice versa.
-
 ## Connecting primitives
 
-We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of Tweens.
+We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
 
 #### Primitives that can drive Timelines
 
@@ -124,6 +120,27 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 #### Timelines can drive these primitives
 
-The timeline's progress can drive Tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
+The timeline's progress can drive tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
 There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.
+
+#### Physical simulation and states
+
+Physical simulations can be associated with individual states of a State Machine.
+
+> For example, a photo element might have two states: collapsed and expanded. Each state has an associated spring attachment. These springs change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+
+#### Timelines and transitions
+
+Timelines are a helpful metaphor for constructing transitions.
+
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be one-off tweens that occur when transitioning from A to B and vice versa.
+
+<!--
+
+LGTM:
+- featherless
+- larche
+- markwei
+
+-->

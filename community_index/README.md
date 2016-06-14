@@ -30,3 +30,9 @@ The following names do not match the convention:
 - SwiftTweenLanguage
 - TweenLanguage
 - material-motion-Runtime
+
+## Solutions by platform
+
+- [Android](android.md)
+- [iOS](ios.md)
+- [Web](web.md)
