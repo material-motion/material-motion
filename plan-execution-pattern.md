@@ -76,6 +76,8 @@ Good systems of execution will carefully balance the needs of performance, power
 ## Prior art and research
 
 - [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
+- [Core Animation](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)
+- [Web animations](https://w3c.github.io/web-animations/)
 
 <!--
 
