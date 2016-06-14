@@ -16,7 +16,7 @@ Families have **term functions**. A term function initiates the description of p
 
 The tween family definition might look like:
 
-    Tween {
+    Tween: Family {
       fn fadeIn(...) -> Term
       fn fadeOut(...) -> Term
       fn moveTo(...) -> Term
