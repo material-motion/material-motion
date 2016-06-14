@@ -6,7 +6,9 @@ Status of this document: **Drafting by featherless**
 
 ## Intention
 
-**Intentions**: Intentions may be provided to Actors as they're committed to the Runtime. Example pseudo-code:
+**Intentions**: Intentions may be provided to Actors as they're committed to the Runtime.
+
+Example pseudo-code:
 
     actor = actorForIntention(intention)
     actor.addIntention(intention)
