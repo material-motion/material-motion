@@ -8,6 +8,12 @@ Status of this document: **Drafting by featherless**
 
 **Intentions**: Intentions may be provided to Actors as they're committed to the Runtime.
 
+Example pseudo-API available on the Actor:
+
+    Actor {
+      function addIntention(intention)
+    }
+
 Example pseudo-code from within the Runtime:
 
     actor = actorForIntention(intention)
@@ -17,6 +23,13 @@ Example pseudo-code from within the Runtime:
 
 1. Remove any previously-committed Intention with the same name from the target's actors. This may be on a different Actor instance.
 2. Provide the relevant Actor with the new named Intention.
+
+Example pseudo-API available on the Actor:
+
+    Actor {
+      function addIntention(intention, withName: name)
+      function removeIntentionWithName(name)
+    }
 
 Example pseudo-code from within the Runtime:
 
