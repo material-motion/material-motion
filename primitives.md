@@ -1,5 +1,3 @@
-Status of this document: **Stable**
-
 # Motion primitives
 
 This section explores some **building blocks** of rich, interactive motion.
