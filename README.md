@@ -15,7 +15,7 @@ The chapter titled "Engineering concepts" is written for software engineers. It 
 - familiarity with at least one programming language, and
 - familiarity with at least one animation system.
 
-The chapter titled "Material motion language" is written for motion designers.
+The chapter titled "Material motion language" is written for motion designers and design tool developers.
 
 ## Implementations
 
