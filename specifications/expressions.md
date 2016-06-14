@@ -8,9 +8,9 @@ A **motion expression** is functional, syntactic sugar for the creation and conf
 
     expression = Tween()
 
-Motion expressions begin with a family. The user creates an instance of a Family to start a motion expression. A family does not intrinsically define any plans.
+Motion expressions begin with a family. The user creates an instance of a family to start a motion expression. A family does not intrinsically define any plans.
 
-The purpose of a **Family** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of families to exist where some families may have similar or identical term functions. A family should document what its term functions do.
+The purpose of a **family** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of families to exist where some families may have similar or identical term functions. A family should document what its term functions do.
 
 Pseudo-code example implementation of a tween family:
 
@@ -47,9 +47,9 @@ Pseudo-code example implementation of a fade in term function:
 
 **Syntax**: Term functions start with a lowercase letter. Term functions are verbs. Adjectives should be prepended with an auxiliary verb (e.g. do/be/has) to make a verb phrase.
 
-A term function creates an instance of a Term. The term carries the initialized plans.
+A term function creates an instance of a term. The term carries the initialized plans.
 
-The purpose of a **Term** is to define a lexical scope for a particular set of modifier functions. This allows a term to define modifier functions that are relevant to its plans. A term should document what its modifier functions do.
+The purpose of a **term** is to define a lexical scope for a particular set of modifier functions. This allows a term to define modifier functions that are relevant to its plans. A term should document what its modifier functions do.
 
 Pseudo-code example implementation of a tween term:
 
@@ -81,7 +81,7 @@ Pseudo-code example implementation of an easing curve modifier function:
       })
     }
     
-> **Modifier functions must return a new instance of the Term**. It may be tempting to directly modify the plans in the Term and return `self`. This is not allowed and will break immutability.
+> **Modifier functions must return a new instance of the term**. It may be tempting to directly modify the plans in the term and return `self`. This is not allowed and will break immutability.
 
 **Syntax**: Modifier functions start with a lowercase letter. Modifier functions begin with a preposition (e.g. with/to/after).
 
