@@ -28,7 +28,7 @@ Consider the following pseudo-code:
       from: 0,
       to: 1
     }
-    system.addPlan(fadeIn, toTarget:target)
+    system.addPlan(fadeIn, toTarget: target)
 
 Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
 
@@ -40,7 +40,7 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    system.addPlan(fadeIn, toTarget:target)
+    system.addPlan(fadeIn, toTarget: target)
 
 In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
 
@@ -56,10 +56,10 @@ Consider this pseudo-code:
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
     # Adding many plans to one target
-    target.addPlans(draggable, pinchable, rotatable, anchoredSpring)
+    system.addPlans(draggable, pinchable, rotatable, anchoredSpring, toTarget: target)
     
     # Reusing a plan on a second target
-    target2.addPlan(draggable)
+    system.addPlan(draggable, toTarget: target2)
 
 `target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's execution.
 
