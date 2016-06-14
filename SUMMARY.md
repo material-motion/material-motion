@@ -1,9 +1,9 @@
 # Summary
 
 * [Introduction](README.md)
-* [Separation of plan/execution](plan-execution-pattern.md)
 * [Specifications](specifications/README.md)
    * [Motion primitives](primitives.md)
+   * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
@@ -13,7 +13,6 @@
    * [Directors](specifications/directors.md)
    * [Motion Expression](specifications/expressions.md)
 * [Material motion language](material_motion/README.md)
-   * [Separation of plan/execution](plan-execution-pattern.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
        * [Connectors](languages/connectors.md)
