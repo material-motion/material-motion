@@ -16,6 +16,10 @@ The chapter titled "Engineering concepts" is for software engineers familiar wit
 
 The chapter titled "Material motion language" is for motion designers and tool creators.
 
+## Announcements
+
+We will send announcements to the `material-motion-announce` mailing list. [Subscribe to the mailing list](https://groups.google.com/forum/#!forum/material-motion-announce) to receive announcements. We will also post announcements to our twitter handle: [@material_motion](http://twitter.com/material_motion). 
+
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
