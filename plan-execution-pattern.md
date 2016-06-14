@@ -21,7 +21,7 @@ Most platforms have an implementation of this separation for Tween animations. F
 
 A plan describes **what you want something to do** or **how you want it to behave**.
 
-For example, "be draggable" and "fade in" are two distinct plans. Their execution might use Gesture and Tween primitives.
+For example, "fade in" and "draggable" are two distinct plans. Their execution might use Gesture and Tween primitives.
 
 Consider the following pseudo-code:
 
