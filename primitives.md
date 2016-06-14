@@ -2,7 +2,7 @@
 
 This section explores some **building blocks** of rich, interactive motion.
 
-This section’s topics:
+This section's topics:
 
 - [Delta primitives](#delta-primitives)
 - [Timeline](#timeline)
