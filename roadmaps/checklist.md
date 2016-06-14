@@ -8,8 +8,8 @@ This is a list of implementations the Material Motion team plans to work on. Sta
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
-| Android  | [In development](https://github.com/material-motion/material-motion-expression-android) | Unknown |
-| Objective-C | [Experiment](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/expressions/ExpressionsCatalog/ExpressionsCatalog) | Unknown |
+| Android  | [Experimental work](https://github.com/material-motion/material-motion-expression-android) | Unknown |
+| Objective-C | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/expressions/ExpressionsCatalog/ExpressionsCatalog) | Unknown |
 | Swift    | Not started | Unknown |
 | Web      | Not started | Unknown |
 
@@ -40,7 +40,7 @@ Transactions for registering Intentions.
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
 | Android  | Not started | Unknown |
-| iOS      | Not started | Unknown |
+| iOS      | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/runtime/RuntimeCatalog/RuntimeCatalog) | Unknown |
 | Web      | Not started | Unknown |
 
 Actor creation and storage mechanisms.
