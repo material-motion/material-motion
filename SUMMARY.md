@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Specifications](specifications/README.md)
+* [Engineering concepts](specifications/README.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime.md)
