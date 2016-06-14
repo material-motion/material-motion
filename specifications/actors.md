@@ -14,7 +14,7 @@ Status of this document:
 
 **Named Intentions**: Actors may choose to support named Intentions. When a named Intention is committed to a target, two things must happen.
 
-1. Remove any previously committed target with the same name. This may be on a different Actor instance.
+1. Remove any previously-committed Intention with the same name from the target's actors. This may be on a different Actor instance.
 2. Provide the relevant Actor with the new named Intention.
 
 Example pseudo-code:
