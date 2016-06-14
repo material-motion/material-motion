@@ -5,6 +5,8 @@ Status of this document:
 
 **Initialization**: Runtimes create Actors. The Runtime provides the target to the Actor during initialization.
 
+## Intention
+
 **Intentions**: Intentions may be provided to Actors as they're committed to the Runtime. Example pseudo-code:
 
     actor = actorForIntention(intention)
