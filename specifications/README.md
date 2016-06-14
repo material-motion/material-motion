@@ -2,7 +2,7 @@
 
 This chapter contains software engineering concepts.
 
-In the spirit of our Starmap, the tone of this chapter is highly aspirational.
+🌟 In the spirit of our Starmap, the tone of this chapter is highly aspirational.
 
 Much of what we're describing is not new. Some things we'll discuss have existed for decades. Where applicable we've included links to prior art and research.
 
