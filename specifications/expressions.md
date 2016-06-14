@@ -8,13 +8,11 @@ A **motion expression** is functional, syntactic sugar for the creation and conf
 
     expression = Tween()
 
-Motion expressions begin with a family. A family is an instance of an object.
+Motion expressions begin with a family. An instance of a Family is created by the user to start a motion expression. A family does not intrinsically define any plans.
 
-Families have **term functions**. A term function initiates the description of plans.
+The purpose of a Family is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. A family should document what its terms do.
 
-**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. A family should document what its terms do.
-
-The tween family definition might look like:
+Pseudo-code example implementation of a Tween family:
 
     Tween: Family {
       fn fadeIn(...) -> Term
@@ -24,19 +22,19 @@ The tween family definition might look like:
       ...
     }
 
-**Capitalization**: Family names start with a capital letter. Terms start with a lowercase letter.
+> Note: Family names start with a capital letter.
+
+Families have **term functions**. A term function initiates the description of plans.
 
 ## 2. Terms
 
     expression = Tween().fadeIn()
-
-A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
-
-> Note: **Terms must be created with functions**. It may be tempting to define argument-less terms as dynamic properties (if your language supports this). This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+    
+A term is the building block of in a motion expression. An instance of a Term is returned by a family’s term function. A term defines and manages a set of related plans.
 
 The purpose of a Term is to create and initialize one or more plans. The implementation of the term may initialize well-documented defaults on the plans.
 
-Pseudo-code example implementation:
+Pseudo-code example implementation of a fadeIn() term function:
 
     fn Tween.fadeIn() -> TweenTerm {
       return TweenTerm(previousTerm: self, work: function() {
@@ -46,12 +44,17 @@ Pseudo-code example implementation:
         return [animation]
       })
     }
+    
+> Note: Term functions start with a lowercase letter.
+> **Terms must be created with functions**. It may be tempting to define argument-less terms as dynamic properties (if your language supports this). This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+    
+Terms have **modifier functions**. A modifier function modifies the plans defined in the term.
 
 ## 3. Modifiers
 
     expression = Tween().fadeIn().withEasingCurve(easeOut)
 
-A term may return an instance of a **modifier** that can be used to further configure the motion expression.
+A term may define modifier functions that can be used to configure the plans defined in that term.
 
 **Example modifier definition:**
 
