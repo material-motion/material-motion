@@ -2,7 +2,7 @@
 
 This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more.
 
-This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) tracks implementations that are available for specific platforms and languages.
+This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
 
 ## Evolution
 
