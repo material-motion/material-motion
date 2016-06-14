@@ -4,7 +4,7 @@ Status of this document: **Drafting by featherless**
 
 **Initialization**: Runtimes create Actors. The Runtime provides the target to the Actor during initialization.
 
-**Duck-typed design**: Every method described below should be **optional** for the Actor.
+**Optional methods**: Every method described below should be **optional** for the Actor.
 
 ## Intention
 
