@@ -10,7 +10,7 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-The chapter titled "Engineering concepts" is written for software engineers who have some familiarity with animation systems.
+The chapter titled "Engineering concepts" is written for software engineers who are familiar with animation systems.
 
 The chapter titled "Material motion language" is written for motion designers and tool creators.
 
