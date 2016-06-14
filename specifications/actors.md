@@ -2,6 +2,8 @@ Status of this document: **Drafting by featherless**
 
 # Actors
 
+Actors are the entities responsible for executing Intention.
+
 **Who creates them?**: Runtimes create Actors.
 
 **When are they created?** When a transaction is committed.
