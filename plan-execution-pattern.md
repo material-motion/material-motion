@@ -19,7 +19,7 @@ Most platforms have an implementation of this separation for Tween animations. F
 
 ### A plan of motion
 
-A plan describes **what you want something to do**.
+A plan describes **what you want something to do** or **how you want it to behave**.
 
 Every [primitive](../primitives.md) can be described with a plan. For example, "draggable" and "fade in" are two distinct plans. Their execution might use Gesture and Tween primitives.
 
