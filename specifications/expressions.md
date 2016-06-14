@@ -87,13 +87,11 @@ Pseudo-code example implementation of an easing curve modifier function:
 
 ## 4. Chaining
 
+    expression = Gesture().rotatable().withMaxDelta(45).and.draggable()
+
 A motion expression is **immutable**, which allows the engineer to **chain** terms and modifications. Motion expressions can be stored and extended without affecting previous instances.
 
 **Term chaining**: Terms within a family can be chained together by using the special `and` object.
-
-    expression = Gesture().pinchable().and.rotatable().and.draggable()
-
-Additional examples:
 
     draggable = Gesture().draggable()
     target.addPlans(draggable.plans())
