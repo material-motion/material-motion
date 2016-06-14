@@ -28,7 +28,7 @@ Consider the following pseudo-code:
       from: 0,
       to: 1
     }
-    target.addPlan(fadeIn)
+    system.addPlan(fadeIn, toTarget:target)
 
 Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
 
@@ -40,7 +40,7 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    target.addplan(behavior)
+    system.addPlan(fadeIn, toTarget:target)
 
 In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
 
