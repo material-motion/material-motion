@@ -2,7 +2,9 @@ Status of this document: **Drafting by featherless**
 
 # Actors
 
-**Who creates them?**: Runtimes create Actors when a transaction is committed.
+**Who creates them?**: Runtimes create Actors.
+
+**When are they created?** When a transaction is committed.
 
 **Initialization**: The Runtime initializes the Actor by providing a target instance.
 
