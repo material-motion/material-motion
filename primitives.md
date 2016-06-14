@@ -77,9 +77,11 @@ The following primitives are more structural in nature than the delta primitives
 
 ## Timeline
 
-**What it is**: *an object that contains a floating-point value, which can be driven by a delta primitive, and to which tweens may be associated*.
+**What it is**: *an object that contains a floating-point value, the progress*.
 
-A Timeline limits its value, **progress**, between 0 and 1.
+**Normalized progress**: A Timeline's progress should be considered "normalized" to a `[0...1]` range.
+
+**Extending past the timeline**: A Timeline's progress can extend beyond its bounds. What this means to objects observing the Timeline is implementation-dependent.
 
 ## State Machine
 
