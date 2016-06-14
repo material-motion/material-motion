@@ -12,7 +12,7 @@ Motion expressions begin with a family. A family is an instance of an object.
 
 Families have **term functions**. A term function initiates the description of plans.
 
-**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. A family should document what its term do.
+**Scope**: The purpose of a family object is to define a lexical scope for a particular set of terms. This allows an ecosystem of families to exist where some families may have similar or identical terms. A family should document what its terms do.
 
 The tween family definition might look like:
 
@@ -32,9 +32,9 @@ The tween family definition might look like:
 
 A **term function** initiates the description of plans. An instance of a Term is returned by a family’s term function.
 
-> Note: **Terms must be created with functions**. It may be tempting to define argument-less terms as dynamic properties. This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
+> Note: **Terms must be created with functions**. It may be tempting to define argument-less terms as dynamic properties (if your language supports this). This would allow motion expressions like `Tween().fadeIn`. We explicitly discourage this. Ensure that every term is a function in order to provide consistency to the engineer.
 
-The purpose of a Term is to initiate the creation of one or more plans. The implementation of the term may create one or more plans and initialize well-documented defaults.
+The purpose of a Term is to create and initialize one or more plans. The implementation of the term may initialize well-documented defaults on the plans.
 
 Pseudo-code example implementation:
 
