@@ -1,5 +1,4 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
+Status of this document: **Drafting by featherless**
 
 # Actors
 
