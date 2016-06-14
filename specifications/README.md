@@ -1,6 +1,8 @@
 # Engineering concepts
 
-This chapter contains software engineering concepts. The tone of this chapter is highly 🌟 aspirational 🌟.
+This chapter contains software engineering concepts.
+
+The tone of this chapter is highly 🌟 aspirational 🌟.
 
 Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable we've included links to prior art and research.
 
