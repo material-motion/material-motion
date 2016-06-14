@@ -5,7 +5,7 @@
 * [Separation of plan/execution](plan-execution-pattern.md)
 * [Specifications](specifications/README.md)
    * [Motion Runtime](specifications/runtime.md)
-     * [Motion Runtime plugins](specifications/runtime_plugins.md)
+     * [Plugins](specifications/runtime_plugins.md)
        * [View duplication](specifications/view_duplication.md)
      * [Directors](specifications/directors.md)
      * [Actors](specifications/actors.md)
