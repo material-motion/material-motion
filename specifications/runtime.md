@@ -20,7 +20,7 @@ A Runtime relies on objects called Intentions.
 
 ### Intention
 
-An instance of Intention represents a plan of motion.
+A plan is represented in the Runtime by an instance of Intention.
 
 **Example objects**:
 
