@@ -11,7 +11,6 @@
        * [Transient views](specifications/transient_views.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
-   * [Motion Expression](specifications/expressions.md)
 * [Material motion language](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
@@ -31,6 +30,7 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
+* [Motion Expression](specifications/expressions.md)
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
