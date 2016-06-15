@@ -30,7 +30,7 @@ Consider the following pseudo-code:
     }
     system.addPlan(fadeIn, toTarget: target)
 
-Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
+Here, the object `fadeIn` is the plan. The "fade in" logic **is not executed here**.
 
 `addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
 
