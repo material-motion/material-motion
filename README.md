@@ -20,7 +20,8 @@ The chapter titled "Material motion language" is for motion designers and tool c
 
 We will send announcements to the `material-motion-announce` google group. [Subscribe to the mailing list](https://groups.google.com/forum/#!forum/material-motion-announce) to receive announcements.
 
-We will also post announcements to our twitter handle: [@material_motion](http://twitter.com/material_motion). 
+We will also post announcements to our twitter handle: [@material_motion](http://twitter.com/material_motion).
+
 
 ## License
 
