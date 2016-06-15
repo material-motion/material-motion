@@ -33,6 +33,6 @@
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
-   * [Expressions](_drafts/expressions.md)
    * [Motion Expression](specifications/expressions.md)
+   * [Expressions](_drafts/expressions.md)
 
