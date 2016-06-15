@@ -30,9 +30,9 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
-* [Motion Expression](specifications/expressions.md)
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
+   * [Motion Expression](specifications/expressions.md)
    * [Expressions](_drafts/expressions.md)
 
