@@ -2,7 +2,7 @@ Status of this document: **Draft**
 
 # Motion Runtime
 
-The system we propose here emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
+The system described here emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
 
 The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and execution systems.
 
