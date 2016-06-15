@@ -22,7 +22,6 @@ We will send announcements to the `material-motion-announce` google group. [Subs
 
 We will also post announcements to our twitter handle: [@material_motion](http://twitter.com/material_motion).
 
-
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
