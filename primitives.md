@@ -83,6 +83,10 @@ The following primitives are more structural in nature than the delta primitives
 
 **Extending past the timeline**: A Timeline's progress can extend beyond its bounds. What this means to objects observing the Timeline is implementation-dependent.
 
+- **Fade** does not make sense beyond 0 or 1 and can clamp to `[0...1]`.
+- **Scale** does not make sense beyond 0, but may make sense beyond 1. It can clamp to `[0...]`.
+- **Move** may make sense beyond 0 or 1 and may not clamp at all.
+
 ## State Machine
 
 **What it is**: *a [directed graph](https://en.wikipedia.org/wiki/Directed_graph) consisting of multiple States (nodes) with Transitions (edges) between those states*.
