@@ -8,6 +8,7 @@ The purpose of a Runtime is to coordinate the expression of diverse types of mot
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
+
 ![](../_assets/Abstraction.svg)
 
 Let's zoom in to the Runtime for a moment. Core Animation is just another form of the plan/execution separation. Our Runtime has interpreted the "fadeIn" intention as being executable by Core Animation. The Runtime has delegated its execution to another system (a common pattern we'll make use of).
