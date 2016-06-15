@@ -4,7 +4,7 @@ This book aspires to empower creators with the language and tools needed to desc
 
 This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
 
-## Evolution and contributing
+## Evolution and contribution
 
 This book is in a very early drafting phase. It will evolve over time.
 
