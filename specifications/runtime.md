@@ -74,7 +74,7 @@ The four objects created above are Intentions. Each Instance represents a plan o
 
 ### Step 3: Start a transaction and commit it
 
-Intention must be committed to a Runtime via a Transaction. Transactions associated Intention with specific targets.
+Intention must be committed to a Runtime via a Transaction. Transactions associate Intention with specific targets.
 
 A transaction's public API should support the following operations:
 
