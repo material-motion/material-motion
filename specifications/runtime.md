@@ -8,6 +8,7 @@ The purpose of a Runtime is to coordinate the expression of diverse types of mot
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
+
 ![](../_assets/Abstraction.svg)
 
 ## Overview
