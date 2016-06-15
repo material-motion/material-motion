@@ -17,7 +17,7 @@ Most platforms have an implementation of this separation for tween animations. F
 
 ### A plan of motion
 
-We use the term *plan* to mean **what you want something to do** or **how you want it to behave**.
+We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
 For example, "fade in" and "draggable" are two distinct plans. Their execution might use gesture and tween primitives.
 
