@@ -11,7 +11,6 @@
        * [Actors](specifications/actors.md)
        * [Plugins](specifications/runtime_plugins.md)
        * [Multi-threading](specifications/multi-threading.md)
-       * [Scripting](specifications/scripting.md)
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
@@ -21,6 +20,7 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
+* [Scripting](specifications/scripting.md)
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
