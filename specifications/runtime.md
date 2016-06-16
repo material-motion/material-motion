@@ -220,8 +220,8 @@ Actors often depend on external systems to execute their Intentions. An Actor is
 
 The Motion Runtime might provide Actors with two function instances:
 
-    var startActivity = function(name)
-    var endActivity = function(name)
+    var remoteExecutionWillStart = function(name)
+    var remoteExecutionDidEnd = function(name)
 
 When an Actor calls these methods, the provided name should be scoped to that Actor instance, not globally to the Motion Runtime.
 
@@ -230,19 +230,19 @@ For example, an Actor might have a gesture handler that looks like this:
     function handleGesture(gesture) {
       switch (gesture.state) {
       case .Began:
-        startActivity("gesture")
+        remoteExecutionWillStart("gesture")
       case .Canceled:
       case .Ended:
-        endActivity("gesture")
+        remoteExecutionDidEnd("gesture")
       }
     }
 
 Similarly, an Actor might implement the following when working with an external animation system:
 
     function setup() {
-      startActivity("animation")
+      remoteExecutionWillStart("animation")
       target.doAnimation(parameters, completion: {
-        endActivity("animation")
+        remoteExecutionDidEnd("animation")
       })
     }
 
