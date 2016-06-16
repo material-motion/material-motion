@@ -30,7 +30,7 @@ Learn more about [Intentions](intentions.md).
 
 ### Actors
 
-Actors are objects created by a Runtime for the purposes of translating Intention into execution.
+Actors are objects created by a Runtime. Actors are expected to translate Intention into execution.
 
 Learn more about [Actors](actors.md).
 
