@@ -19,4 +19,4 @@ The Runtime should send an event each time a new target is referenced.
 
 The receivers of this event should be allowed to set a new "shadow" instance of the target. The shadow instance will be provided to the Actors.
 
-This event enables the "view duplication" plugin.
+This event enables "view duplication".
