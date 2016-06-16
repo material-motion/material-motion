@@ -32,10 +32,6 @@ A plan is represented in the Runtime by an instance of Intention.
 
 Intentions are executed by Actors.
 
-### Actors
-
-Actors are objects created by a Runtime for the purposes of translating Intention into execution.
-
 ---
 
 ## Life cycle of an Intention
