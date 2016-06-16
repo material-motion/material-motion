@@ -157,7 +157,7 @@ We've created three Actors in total. `circleView` has two Actors. `squareView` h
 
 #### One Actor instance per Intention type per Target
 
-A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are committed.
+A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions have been committed.
 
 Consider the following pseudo-Transaction involving physical simulation Intentions:
 
