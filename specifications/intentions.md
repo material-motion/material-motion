@@ -6,6 +6,8 @@ An Intention is the *plan* part of the separation of plan/fulfillment.
 
 **Configuration**: Intentions can have configurable properties.
 
+Pseudo-code example:
+
     Tween: Intention {
       var fromValue
       var toValue
