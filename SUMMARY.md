@@ -7,7 +7,7 @@
    * [Motion Runtime](specifications/runtime.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
-       * Intentions
+       * [Intentions](specifications/intentions.md)
        * [Actors](specifications/actors.md)
        * [Transient views](specifications/transient_views.md)
        * [Multi-threading](specifications/multi-threading.md)
