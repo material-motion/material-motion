@@ -52,7 +52,7 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
 ### Step 2: Create Intention
 
-All motion in a Runtime begins with Intention. We'll explore four different types of Intention:
+All motion in a Runtime begins with an Intention. We'll explore four different types of Intentions:
 
     animation = Tween()
     animation.property = "opacity"
@@ -130,7 +130,7 @@ The Motion Runtime we propose uses entities called **Actors** to fulfill specifi
 
 >**Actor → Intention**
 
->Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
+>Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
 
 ---
 
@@ -159,7 +159,7 @@ We've created three Actors in total. `circleView` has two Actors. `squareView` h
 
 #### Aside: One Actor instance per type of Intention
 
-A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are concerned.
+A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are committed.
 
 Consider the following pseudo-Transaction involving physical simulation Intentions:
 
@@ -191,7 +191,7 @@ Note that "one Actor per type of Intention" does not resolve the problem of shar
 
 ---
 
-### Step 5: Actors execute Intention
+### Step 5: Actors execute Intentions
 
 The Runtime is now expected to forward animation events to the Actor instances.
 
