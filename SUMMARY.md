@@ -8,7 +8,7 @@
    * [Motion Runtime](specifications/runtime.md)
        * [Intentions](specifications/intentions.md)
        * [Actors](specifications/actors.md)
-       * Transactions
+       * [Transactions](specifications/transactions.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
        * [Transient views](specifications/transient_views.md)
