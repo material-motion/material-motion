@@ -16,4 +16,3 @@ Transactions aggregate requests for Intention-target associations. Transactions 
     # Remove a named intention with a target.
     removeIntentionNamed(name, fromTarget: target)
 
-
