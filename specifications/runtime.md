@@ -215,8 +215,8 @@ An Actor can be active for any of the following reasons:
 
 Actors often depend on external systems to execute their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
 
-- When external activity begins.
-- When external activity ends.
+- When remote execution begins.
+- When remote execution ends.
 
 The Motion Runtime might provide Actors with two function instances:
 
