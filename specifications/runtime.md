@@ -42,6 +42,10 @@ Actors are objects created by a Runtime. Actors are expected to translate Intent
 
 Learn more about [Actors](actors.md).
 
+### Transactions
+
+Transactions are the mechanism by which Intentions are committed to a Runtime.
+
 ---
 
 ## Life cycle of an Intention
