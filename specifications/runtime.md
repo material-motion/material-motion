@@ -19,6 +19,13 @@ A Runtime relies on objects called Intentions.
 
 A plan is represented in the Runtime by an instance of Intention.
 
+Example Intention objects:
+
+- `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
+- `Tween` describes a tween animation.
+- `Draggable` describes gestural translation.
+- `AnchoredSpring` describes a physical simulation.
+
 ### Actors
 
 Actors are objects created by a Runtime for the purposes of translating Intention into execution.
