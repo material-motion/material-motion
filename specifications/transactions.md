@@ -3,4 +3,5 @@ Status of this document:
 
 # Transactions
 
-Transactions aggregate requests Intention-target associations. Transactions can be committed to a Runtime.
+Transactions aggregate requests for Intention-target associations. Transactions can be committed to a Runtime.
+
