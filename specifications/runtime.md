@@ -54,7 +54,7 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
 ### Step 2: Create Intention
 
-All motion in a Runtime begins with Intention. We'll explore four different types of Intention:
+All motion in a Runtime begins with an Intention. We'll explore four different types of Intentions:
 
     animation = Tween()
     animation.property = "opacity"
@@ -115,27 +115,25 @@ The Runtime is now expected to fulfill its Intentions.
 
 ### Step 4: Runtime creates Actors
 
-The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its execution.
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between an Intention and its execution.
 
----
 
-#### Aside: Intention ↔ Actor association
-
-We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
+>#### Aside: Intention ↔ Actor association
+>
+>We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 
     function actorForIntention(intention, target, existingActors) -> Actor
 
-This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
+>This function could use an `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
 
-**Intention → Actor**
+>**Intention → Actor**
 
-Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
+>Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
 
-**Actor → Intention**
+>**Actor → Intention**
 
-Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
+>Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
 
----
 
 When a transaction is committed, the Runtime must generate an Actor for each Intention in the transaction. Consider the transaction log we'd explored above:
 
@@ -158,13 +156,12 @@ Let's create Actors by calling our hypothetical `actorForIntention` on each targ
 
 We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
----
 
-#### Aside: One Actor instance per type of Intention
+#### One Actor instance per Intention type per Target
 
-A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are concerned.
+A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions have been committed.
 
-Consider the following pseudo-Transaction involving physical simulation Intentions:
+Consider the following pseudo-code Transaction involving physical simulation Intentions:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
@@ -175,7 +172,7 @@ Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. 
 
 The Actor now knows the following:
 
-- It has two Forces, both affecting `position`.
+- It has two forces, both affecting `position`.
 - It needs to model `velocity` for the `position`.
 
 The Actor now creates some state that will track the position's velocity.
@@ -188,38 +185,37 @@ The Actor can now:
 
 on every frame.
 
-Alternatively, consider how this situation would have played out if we had one Actor per Intention. There would now be two representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
+Alternatively, consider how this situation would have played out if we had one Actor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
 
 Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
----
 
-### Step 5: Actors execute Intention
+### Step 5: Actors execute Intentions
 
-The Runtime is now expected to forward animation events to the Actor instances.
+The Runtime is now expected to forward update events to the Actor instances.
 
 Actors are informed of events via the following algorithm:
 
     for every target
       for every actor
-        actor.event()
+        actor.update()
 
-Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
+Some Actors are not interested in update events. Do not inform these Actors of update events. If no Actor requires update events, then the Runtime should not listen to update events.
 
 #### Runtime active vs inactive state
 
-A Runtime can be in two states: **inactive** or **active**. Runtimes start in the inactive state.
+A Runtime has two states: **active** or **inactive**. 
 
-A Runtime is active when there is at least one active Actor. 
+A Runtime is active if there is at least one active Actor. 
 
 An Actor can be active for any of the following reasons:
 
-- The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
+- The update event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next update event.
 - The Actor has indicated some form of active **external activity**.
 
 ##### External activity
 
-Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Motion Runtime of two events:
+Actors often depend on external systems to fulfill their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
@@ -229,7 +225,7 @@ The Motion Runtime might provide Actors with two function instances:
     var startActivity = function(name)
     var endActivity = function(name)
 
-When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Motion Runtime.
+When an Actor calls these methods, the provided name should be scoped to that Actor instance, not globally to the Motion Runtime.
 
 For example, an Actor might have a gesture handler that looks like this:
 
