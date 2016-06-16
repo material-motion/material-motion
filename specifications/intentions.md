@@ -2,7 +2,7 @@
 
 An Intention is an object representing **what you want something to do**.
 
-An Intention is the *plan* part of the separation of plan/fulfillment.
+An Intention is the *plan* part of the separation of plan/execution.
 
 **Configuration**: Intentions can have configurable properties.
 
