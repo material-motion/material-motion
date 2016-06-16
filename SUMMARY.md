@@ -10,7 +10,6 @@
        * [Transactions](specifications/transactions.md)
        * [Actors](specifications/actors.md)
        * [Plugins](specifications/runtime_plugins.md)
-       * [Multi-threading](specifications/multi-threading.md)
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
@@ -20,6 +19,7 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
+* [Multi-threading](specifications/multi-threading.md)
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
