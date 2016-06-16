@@ -9,7 +9,7 @@
            * [View duplication](specifications/view_duplication.md)
        * [Actors](specifications/actors.md)
        * [Transient views](specifications/transient_views.md)
-       * Multi-threading
+       * [Multi-threading](specifications/multi-threading.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
    * [Tech tree](specifications/tech_tree.md)
