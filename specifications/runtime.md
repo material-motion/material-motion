@@ -46,6 +46,8 @@ Learn more about [Actors](actors.md).
 
 Transactions are the mechanism by which Intentions are committed to a Runtime.
 
+Learn more about [Transactions](transactions.md).
+
 ---
 
 ## Life cycle of an Intention
