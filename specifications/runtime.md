@@ -244,7 +244,7 @@ Similarly, an Actor might implement the following when working with an external 
       })
     }
 
-**Scope**: The name to these methods should be scoped to an individual Actor instance.
+**Scope**: The Runtime receiving these events should scope the provided name to the Actor instance.
 
 ---
 
