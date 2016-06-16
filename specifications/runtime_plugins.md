@@ -13,7 +13,7 @@ Any time the Runtime changes its idle/active state it should fire an observable 
 
 This is helpful for Transition Directors.
 
-### New target referenced
+### Event: new target
 
 Each time a new target is referenced, the Runtime should send an event. The receivers of this event should be allowed to return a new "shadow" instance of the target. This shadow instance will be provided to the Actors.
 
