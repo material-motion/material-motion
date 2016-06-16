@@ -11,7 +11,7 @@ A Runtime should generate events. These events should be observable by external 
 
 Any time the Runtime changes its idle/active state it should fire an observable event.
 
-This is helpful for Transition Directors.
+This event enables "Transition Directors".
 
 ### Event: new target
 
