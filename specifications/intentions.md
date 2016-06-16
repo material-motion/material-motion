@@ -24,3 +24,4 @@ Pseudo-code example:
 
 **Execution**: Actors execute Intentions.
 
+This separation of concerns encourages reusable code.
