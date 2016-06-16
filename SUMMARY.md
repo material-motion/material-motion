@@ -9,7 +9,7 @@
        * [Intentions](specifications/intentions.md)
        * [Actors](specifications/actors.md)
        * [Plugins](specifications/runtime_plugins.md)
-           * [View duplication](specifications/view_duplication.md)
+       * [View duplication](specifications/view_duplication.md)
        * [Transient views](specifications/transient_views.md)
        * [Multi-threading](specifications/multi-threading.md)
        * [Scripting](specifications/scripting.md)
