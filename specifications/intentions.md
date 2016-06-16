@@ -15,5 +15,12 @@ Pseudo-code example:
 
 **Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
 
+Pseudo-code example:
+
+    Tween: Intention {
+      function toJSON() -> JSON
+      function fromJSON(JSON)
+    }
+
 **Execution**: Actors execute Intentions.
 
