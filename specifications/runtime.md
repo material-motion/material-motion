@@ -13,7 +13,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-A Runtime relies on objects called Intentions.
+TODO: Summarize.
 
 ### Intention
 
