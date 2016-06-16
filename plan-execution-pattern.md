@@ -50,9 +50,9 @@ Many plans can be attached to a single target. A single plan can also be attache
 
 Consider this pseudo-code:
 
-    draggable = DraggableGesture()
-    pinchable = PinchableGesture()
-    rotatable = RotatableGesture()
+    draggable = Draggable()
+    pinchable = Pinchable()
+    rotatable = Rotatable()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
     # Adding many plans to one target

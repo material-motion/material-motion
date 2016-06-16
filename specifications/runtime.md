@@ -13,24 +13,26 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-A Runtime relies on objects called Intentions.
+TODO: Summarize.
 
 ### Intention
 
 A plan is represented in the Runtime by an instance of Intention.
 
-**Example objects**:
+Example Intention objects:
 
 - `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
 - `Tween` describes a tween animation.
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
-**Configuration**: Intentions can have configurable properties.
+Learn more about [Intentions](intentions.md).
 
-**Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
+### Actors
 
-Intentions are executed by Actors.
+Actors are objects created by a Runtime. Actors are expected to translate Intention into execution.
+
+Learn more about [Actors](actors.md).
 
 ---
 
