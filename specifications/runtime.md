@@ -13,7 +13,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-A Runtime is an object that works with three types of object:
+A Runtime is an object that requires three other types of object:
 
 - Intentions
 - Actors
