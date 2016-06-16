@@ -8,8 +8,8 @@
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
        * [Actors](specifications/actors.md)
-       * Multi-threading
        * [Transient views](specifications/transient_views.md)
+       * Multi-threading
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
    * [Tech tree](specifications/tech_tree.md)
