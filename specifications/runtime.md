@@ -30,7 +30,7 @@ A plan is represented in the Runtime by an instance of Intention.
 
 **Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
 
-**Execution**: Intentions are executed by Actors.
+**Execution**: Actors execute Intentions.
 
 ### Actors
 
