@@ -115,23 +115,22 @@ The Runtime is now expected to fulfill its Intentions.
 
 The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its execution.
 
----
 
-#### Aside: Intention ↔ Actor association
-
-We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
+>#### Aside: Intention ↔ Actor association
+>
+>We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 
     function actorForIntention(intention, target, existingActors) -> Actor
 
-This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
+>This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
 
-**Intention → Actor**
+>**Intention → Actor**
 
-Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
+>Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
 
-**Actor → Intention**
+>**Actor → Intention**
 
-Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
+>Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. It introduces the possibility of Actors conflicting on a given Intention.
 
 ---
 
