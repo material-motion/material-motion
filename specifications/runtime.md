@@ -223,8 +223,6 @@ The Motion Runtime might provide Actors with two function instances:
     var remoteExecutionWillStart = function(name)
     var remoteExecutionDidEnd = function(name)
 
-When an Actor calls these methods, the provided name should be scoped to that Actor instance, not globally to the Motion Runtime.
-
 For example, an Actor might have a gesture handler that looks like this:
 
     function handleGesture(gesture) {
@@ -245,6 +243,8 @@ Similarly, an Actor might implement the following when working with an external 
         remoteExecutionDidEnd("animation")
       })
     }
+
+**Scope**: The name to these methods should be scoped to an individual Actor instance.
 
 ---
 
