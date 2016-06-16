@@ -26,9 +26,13 @@ Example Intention objects:
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
+Learn more about [Intentions](intentions.md).
+
 ### Actors
 
 Actors are objects created by a Runtime for the purposes of translating Intention into execution.
+
+Learn more about [Actors](actors.md).
 
 ---
 
