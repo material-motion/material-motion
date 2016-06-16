@@ -20,10 +20,10 @@
    * [Web](community_index/web.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
-* [Scripting](specifications/scripting.md)
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
+   * [Scripting](specifications/scripting.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](_drafts/expressions.md)
 
