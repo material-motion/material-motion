@@ -40,6 +40,8 @@ If no consensus is able to be reached then the discussion will be closed and the
 - Intention
 - Runtime
 
+Example: A Runtime creates Actors.
+
 # Contributing to the community index
 
 View the [Community index](community/) for a community-curated list of Starmap concept implementations.
