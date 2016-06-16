@@ -13,7 +13,15 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-A Runtime is an object responsible for receiving Intentions, creating Actors, and enabling the Actors to execute.
+A Runtime is an object that works with three types of object:
+
+- Intentions
+- Actors
+- Transactions
+
+Intentions and Actors are best described as abstract protocols.
+
+Transactions and Runtimes are concrete objects.
 
 ### Intention
 
