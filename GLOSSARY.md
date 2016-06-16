@@ -99,4 +99,4 @@ We've listed technologies/APIs that provide this type of event for a variety of 
 - Unity: Update event on a Behavior
 - Web: `window.requestAnimationFrame`
 - Android: `Choreographer.FrameCallback`
-- OpenGL: `Update()`
+- GLUT: `Update()`
