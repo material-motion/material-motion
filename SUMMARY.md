@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Engineering concepts](specifications/README.md)
+   * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime.md)
@@ -13,7 +14,6 @@
        * [Multi-threading](specifications/multi-threading.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
-   * [Tech tree](specifications/tech_tree.md)
 * [Material motion language](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
