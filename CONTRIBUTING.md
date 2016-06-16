@@ -31,6 +31,15 @@ If you feel that a chosen term does not effectively communicate the intended mea
 
 If no consensus is able to be reached then the discussion will be closed and the terminology will not be changed.
 
+## Style guide
+
+**Capitalization**: We capitalize the following terms whenever we refer to them:
+
+- Actor
+- Director
+- Intention
+- Runtime
+
 # Contributing to the community index
 
 View the [Community index](community/) for a community-curated list of Starmap concept implementations.
