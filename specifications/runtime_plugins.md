@@ -17,6 +17,6 @@ This is helpful for Transition Directors.
 
 The Runtime should send an event each time a new target is referenced.
 
-The receivers of this event should be allowed to return a new "shadow" instance of the target. This shadow instance will be provided to the Actors.
+The receivers of this event should be allowed to set a new "shadow" instance of the target. This shadow instance will be provided to the Actors.
 
 This event enables the "view duplication" plugin.
