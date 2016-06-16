@@ -6,6 +6,11 @@ An Intention is the *plan* part of the separation of plan/fulfillment.
 
 **Configuration**: Intentions can have configurable properties.
 
+    Tween: Intention {
+      var fromValue
+      var toValue
+    }
+
 **Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
 
 **Execution**: Actors execute Intentions.
