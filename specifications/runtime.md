@@ -213,7 +213,7 @@ An Actor can be active for any of the following reasons:
 
 ##### External activity
 
-Actors often depend on external systems to fulfill their Intentions. An Actor is therefor responsible for informing the Motion Runtime of two events:
+Actors often depend on external systems to fulfill their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
