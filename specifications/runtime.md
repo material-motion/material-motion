@@ -13,7 +13,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-TODO: Summarize.
+A Runtime is an object responsible for receiving Intentions, creating Actors, and enabling the Actors to execute.
 
 ### Intention
 
