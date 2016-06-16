@@ -95,8 +95,8 @@ A mechanism by which new Intentions are committed to a Runtime.
 The update event is called on an Actor many times per second. These events are usually synchronized to the current display's refresh rate: 60 times per second being common, 90 times per second being recommended for VR.
 
 We've listed technologies/APIs that provide this type of event for a variety of platforms below:
-Core Animation: CADisplayLink's update event
-Unity: Update event on a Behavior
-Web: window.requestAnimationFrame
-Android: Choreographer.FrameCallback
-OpenGL: Update()
+- Core Animation: CADisplayLink's selector calls
+- Unity: Update event on a Behavior
+- Web: `window.requestAnimationFrame`
+- Android: `Choreographer.FrameCallback`
+- OpenGL: `Update()`
