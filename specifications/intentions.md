@@ -1,3 +1,6 @@
+Status of this document:
+![](../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Intentions
 
 An Intention is an object representing **what you want something to do**.
