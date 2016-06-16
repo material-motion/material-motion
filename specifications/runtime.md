@@ -19,7 +19,7 @@ A Runtime is an object that works with three types of object:
 - Actors
 - Transactions
 
-Intentions and Actors are best described as abstract protocols.
+Intentions and Actors are best described as abstract protocols. They represent plan and execution, respectively. 
 
 Transactions and Runtimes are concrete objects.
 
