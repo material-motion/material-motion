@@ -117,7 +117,7 @@ The Runtime is now expected to fulfill its Intentions.
 
 The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between an Intention and its execution.
 
-> #### Aside: Intention ↔ Actor association
+> ***Aside: Intention ↔ Actor association***
 >
 > We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 >
