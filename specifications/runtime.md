@@ -113,7 +113,7 @@ The Runtime is now expected to fulfill its Intentions.
 
 ### Step 4: Runtime creates Actors
 
-The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intention. The Actor is the specialized mediating agent between Intention and its execution.
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between Intention and its execution.
 
 
 >#### Aside: Intention ↔ Actor association
