@@ -5,7 +5,7 @@ Status of this document:
 
 ## Events
 
-Events observable by external entities.
+A Runtime should generate events. These events should be observable by external entities.
 
 ### Idle ↔ active state change
 
