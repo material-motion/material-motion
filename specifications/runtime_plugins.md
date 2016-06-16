@@ -7,7 +7,7 @@ Status of this document:
 
 A Runtime should generate events. These events should be observable by external entities.
 
-### Idle ↔ active state change
+### Event: activity state did change
 
 Any time the Runtime changes its idle/active state it should fire an observable event.
 
