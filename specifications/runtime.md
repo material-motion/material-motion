@@ -19,7 +19,7 @@ A Runtime is an object that requires three other types of object:
 - Actors
 - Transactions
 
-Intentions and Actors are best described as abstract protocols. They represent plan and execution, respectively. 
+Intentions and Actors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. They represent plan and execution, respectively. 
 
 Transactions and Runtimes are concrete objects.
 
@@ -273,5 +273,5 @@ The following topics are open for discussion. They do not presently have a clear
 LGTM:
 - featherless
 - markwei
-- larche
+
 -->
