@@ -159,7 +159,7 @@ We've created three Actors in total. `circleView` has two Actors. `squareView` h
 
 A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions have been committed.
 
-Consider the following pseudo-Transaction involving physical simulation Intentions:
+Consider the following pseudo-code Transaction involving physical simulation Intentions:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
@@ -183,7 +183,7 @@ The Actor can now:
 
 on every frame.
 
-Alternatively, consider how this situation would have played out if we had one Actor per Intention. There would now be two representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
+Alternatively, consider how this situation would have played out if we had one Actor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
 
 Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
@@ -202,7 +202,7 @@ Some Actors are not interested in animation events. Do not inform these Actors o
 
 #### Runtime active vs inactive state
 
-A Runtime can be in two states: **inactive** or **active**. Runtimes start in the inactive state.
+A Runtime can be in two states: **active** or **inactive**. Runtimes start in the inactive state.
 
 A Runtime is active when there is at least one active Actor. 
 
