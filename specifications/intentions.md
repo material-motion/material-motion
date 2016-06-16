@@ -1,6 +1,8 @@
 # Intentions
 
-A plan is represented in the Runtime by an instance of Intention.
+An Intention is an object representing **what you want something to do**.
+
+An Intention is the *plan* part of the separation of plan/fulfillment.
 
 **Example Intention objects**:
 
