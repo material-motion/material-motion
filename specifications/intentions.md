@@ -1,5 +1,7 @@
 # Intentions
 
+A plan is represented in the Runtime by an instance of Intention.
+
 **Example Intention objects**:
 
 - `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
