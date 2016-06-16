@@ -211,9 +211,9 @@ An Actor can be active for any of the following reasons:
 - The update event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next update event.
 - The Actor has indicated some form of active **external activity**.
 
-##### External activity
+##### Remote execution
 
-Actors often depend on external systems to fulfill their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
+Actors often depend on external systems to execute their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
 
 - When external activity begins.
 - When external activity ends.
