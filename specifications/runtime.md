@@ -202,9 +202,9 @@ Some Actors are not interested in animation events. Do not inform these Actors o
 
 #### Runtime active vs inactive state
 
-A Runtime can be in two states: **active** or **inactive**. Runtimes start in the inactive state.
+A Runtime has two states: **active** or **inactive**. 
 
-A Runtime is active when there is at least one active Actor. 
+A Runtime is active if there is at least one active Actor. 
 
 An Actor can be active for any of the following reasons:
 
