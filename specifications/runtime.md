@@ -55,7 +55,7 @@ Learn more about [Transactions](transactions.md).
 We will now walk through the life cycle of an Intention and its eventual execution.
 
 1. Create a Runtime.
-1. Create Intention.
+1. Create Intentions.
 1. Create a Transaction and commit it.
 1. The Runtime creates necessary Actors.
 1. The Actors execute their Intentions.
