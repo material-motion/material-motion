@@ -1,6 +1,6 @@
 # Motion primitives
 
-This section explores some **building blocks** of rich, interactive motion.
+This section explores some **building blocks** of rich, interactive motion. The purpose of this section is to begin defining a common language with which we can discuss motion.
 
 This section's topics:
 

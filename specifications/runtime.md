@@ -2,42 +2,37 @@ Status of this document: **Draft**
 
 # Motion Runtime
 
-The system we propose here emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
+The system described here emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
 
 The purpose of a Runtime is to coordinate the expression of diverse types of motion and interaction. It is an abstraction layer between the application engineer and execution systems.
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
+
 ![](../_assets/Abstraction.svg)
-
-Let's zoom in to the Runtime for a moment. Core Animation is just another form of the plan/execution separation. Our Runtime has interpreted the "fadeIn" intention as being executable by Core Animation. The Runtime has delegated its execution to another system (a common pattern we'll make use of).
-
-![](../_assets/AbstractionDive.svg)
 
 ## Overview
 
-A Runtime relies on objects called Intentions.
+TODO: Summarize.
 
 ### Intention
 
-An instance of Intention represents a plan of motion.
+A plan is represented in the Runtime by an instance of Intention.
 
-**Example objects**:
+Example Intention objects:
 
 - `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
 - `Tween` describes a tween animation.
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
-**Configuration**: Intentions can have configurable properties.
-
-**Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
-
-Intentions are executed by Actors.
+Learn more about [Intentions](intentions.md).
 
 ### Actors
 
-Actors are objects created by a Runtime for the purposes of translating Intention into execution.
+Actors are objects created by a Runtime. Actors are expected to translate Intention into execution.
+
+Learn more about [Actors](actors.md).
 
 ---
 
@@ -47,7 +42,7 @@ We will now walk through the life cycle of an Intention and its eventual executi
 
 1. Create a Runtime.
 1. Create Intention.
-1. Start a transaction and commit it.
+1. Create a Transaction and commit it.
 1. The Runtime creates necessary Actors.
 1. The Actors execute their Intentions.
 
@@ -74,7 +69,7 @@ The four objects created above are Intentions. Each Instance represents a plan o
 
 ### Step 3: Start a transaction and commit it
 
-Intention must be committed to a Runtime via a Transaction. Transactions associated Intention with specific targets.
+Intention must be committed to a Runtime via a Transaction. Transactions associate Intention with specific targets.
 
 A transaction's public API should support the following operations:
 
@@ -269,5 +264,6 @@ The following topics are open for discussion. They do not presently have a clear
 
 LGTM:
 - featherless
+- markwei
 
 -->

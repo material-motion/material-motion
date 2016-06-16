@@ -2,16 +2,18 @@
 
 * [Introduction](README.md)
 * [Engineering concepts](specifications/README.md)
+   * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime.md)
+       * [Intentions](specifications/intentions.md)
+       * [Actors](specifications/actors.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
-       * [Actors](specifications/actors.md)
        * [Transient views](specifications/transient_views.md)
+       * [Multi-threading](specifications/multi-threading.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
-   * [Motion Expression](specifications/expressions.md)
 * [Material motion language](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
@@ -34,5 +36,6 @@
 * Drafts
    * [Applications](_drafts/applications.md)
    * [Odeon runtime notes](_drafts/odeon_runtime.md)
-   * [Expressions](_drafts/expressions.md)
+   * [Motion Expression](specifications/expressions.md)
+       * [Further considerations](_drafts/expressions.md)
 

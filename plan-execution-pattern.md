@@ -11,15 +11,15 @@ Separating plans of motion from their execution is important because:
 
 ## Examples of this separation
 
-Most platforms have an implementation of this separation for Tween animations. Few platforms have implemented this separation for other [primitives](../primitives.md).
+Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](../primitives.md).
 
 ![](_assets/PatternMatches.svg)
 
 ### A plan of motion
 
-We use the term *plan* to mean **what you want something to do** or **how you want it to behave**.
+We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
-For example, "fade in" and "draggable" are two distinct plans. Their execution might use Gesture and Tween primitives.
+For example, "fade in" and "draggable" are two distinct plans. Their execution might use gesture and tween primitives.
 
 Consider the following pseudo-code:
 
@@ -30,7 +30,7 @@ Consider the following pseudo-code:
     }
     system.addPlan(fadeIn, toTarget: target)
 
-Here, `fadeIn` is the plan. The "fade in" logic **is not executed here**.
+Here, the object `fadeIn` is the plan. The "fade in" logic **is not executed here**.
 
 `addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
 
@@ -50,9 +50,9 @@ Many plans can be attached to a single target. A single plan can also be attache
 
 Consider this pseudo-code:
 
-    draggable = DraggableGesture()
-    pinchable = PinchableGesture()
-    rotatable = RotatableGesture()
+    draggable = Draggable()
+    pinchable = Pinchable()
+    rotatable = Rotatable()
     anchoredSpring = AnchoredSpringAtLocation(x, y)
     
     # Adding many plans to one target

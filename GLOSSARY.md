@@ -44,7 +44,7 @@ Synonyms:
 
 An Intention is an object representing **what you want something to do**.
 
-An Intention is a Plan in the Plan/Fulfillment pattern.
+An Intention is the *plan* part of the separation of plan/fulfillment.
 
 ## language
 
