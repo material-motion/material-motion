@@ -11,7 +11,7 @@
        * [Transient views](specifications/transient_views.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
-   * Tech tree
+   * [Tech tree](specifications/tech_tree.md)
 * [Material motion language](material_motion/README.md)
    * [Grammar](languages/README.md)
        * [Types of Motion](languages/types_of_motion.md)
