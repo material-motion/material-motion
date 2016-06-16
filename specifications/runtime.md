@@ -52,7 +52,7 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
     runtime = Runtime()
 
-### Step 2: Create Intention
+### Step 2: Create Intentions
 
 All motion in a Runtime begins with an Intention. We'll explore four different types of Intentions:
 
@@ -117,23 +117,21 @@ The Runtime is now expected to fulfill its Intentions.
 
 The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between an Intention and its execution.
 
-
->#### Aside: Intention ↔ Actor association
+> ***Aside: Intention ↔ Actor association***
 >
->We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
-
-    function actorForIntention(intention, target, existingActors) -> Actor
-
->This function could use an `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
-
->**Intention → Actor**
-
->Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
-
->**Actor → Intention**
-
->Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
-
+> We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
+>
+>     function actorForIntention(intention, target, existingActors) -> Actor
+>
+> This function could use an `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
+>
+> **Intention → Actor**
+>
+> Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
+>
+> **Actor → Intention**
+>
+> Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
 
 When a transaction is committed, the Runtime must generate an Actor for each Intention in the transaction. Consider the transaction log we'd explored above:
 
@@ -213,40 +211,40 @@ An Actor can be active for any of the following reasons:
 - The update event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next update event.
 - The Actor has indicated some form of active **external activity**.
 
-##### External activity
+##### Remote execution
 
-Actors often depend on external systems to fulfill their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
+Actors often depend on external systems to execute their Intentions. An Actor is therefore responsible for informing the Motion Runtime of two events:
 
-- When external activity begins.
-- When external activity ends.
+- When remote execution begins.
+- When remote execution ends.
 
 The Motion Runtime might provide Actors with two function instances:
 
-    var startActivity = function(name)
-    var endActivity = function(name)
-
-When an Actor calls these methods, the provided name should be scoped to that Actor instance, not globally to the Motion Runtime.
+    var remoteExecutionWillStart = function(name)
+    var remoteExecutionDidEnd = function(name)
 
 For example, an Actor might have a gesture handler that looks like this:
 
     function handleGesture(gesture) {
       switch (gesture.state) {
       case .Began:
-        startActivity("gesture")
+        remoteExecutionWillStart("gesture")
       case .Canceled:
       case .Ended:
-        endActivity("gesture")
+        remoteExecutionDidEnd("gesture")
       }
     }
 
 Similarly, an Actor might implement the following when working with an external animation system:
 
     function setup() {
-      startActivity("animation")
+      remoteExecutionWillStart("animation")
       target.doAnimation(parameters, completion: {
-        endActivity("animation")
+        remoteExecutionDidEnd("animation")
       })
     }
+
+**Scope**: The Runtime receiving these events should scope the provided name to the Actor instance.
 
 ---
 
