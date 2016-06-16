@@ -196,7 +196,7 @@ Actors are informed of events via the following algorithm:
 
     for every target
       for every actor
-        actor.event()
+        actor.update()
 
 Some Actors are not interested in update events. Do not inform these Actors of update events. If no Actor requires update events, then the Runtime should not listen to update events.
 
