@@ -190,7 +190,7 @@ Note that "one Actor per type of Intention" does not resolve the problem of shar
 
 ### Step 5: Actors execute Intentions
 
-The Runtime is now expected to forward animation events to the Actor instances.
+The Runtime is now expected to forward update events to the Actor instances.
 
 Actors are informed of events via the following algorithm:
 
@@ -198,7 +198,7 @@ Actors are informed of events via the following algorithm:
       for every actor
         actor.event()
 
-Some Actors are not interested in animation events. Do not inform these Actors of animation events. If no Actor requires animation events, then the Runtime should not listen to animation events.
+Some Actors are not interested in update events. Do not inform these Actors of update events. If no Actor requires update events, then the Runtime should not listen to update events.
 
 #### Runtime active vs inactive state
 
