@@ -11,6 +11,7 @@
        * [Transient views](specifications/transient_views.md)
        * [Multi-threading](specifications/multi-threading.md)
        * [Scripting](specifications/scripting.md)
+       * Intentions
    * [Directors](specifications/directors.md)
    * [Tech tree](specifications/tech_tree.md)
 * [Material motion language](material_motion/README.md)
