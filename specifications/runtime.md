@@ -52,7 +52,7 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
     runtime = Runtime()
 
-### Step 2: Create Intention
+### Step 2: Create Intentions
 
 All motion in a Runtime begins with an Intention. We'll explore four different types of Intentions:
 
