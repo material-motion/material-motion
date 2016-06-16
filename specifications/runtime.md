@@ -208,7 +208,7 @@ A Runtime is active if there is at least one active Actor.
 
 An Actor can be active for any of the following reasons:
 
-- The animate event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next animate event.
+- The update event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next update event.
 - The Actor has indicated some form of active **external activity**.
 
 ##### External activity
@@ -223,7 +223,7 @@ The Motion Runtime might provide Actors with two function instances:
     var startActivity = function(name)
     var endActivity = function(name)
 
-When an Actor calls these methods, the provided name should be scoped to the Actor instance, not globally to the Motion Runtime.
+When an Actor calls these methods, the provided name should be scoped to that Actor instance, not globally to the Motion Runtime.
 
 For example, an Actor might have a gesture handler that looks like this:
 
