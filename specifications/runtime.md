@@ -113,7 +113,7 @@ The Runtime is now expected to fulfill its Intentions.
 
 ### Step 4: Runtime creates Actors
 
-The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between Intention and its execution.
+The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between an Intention and its execution.
 
 
 >#### Aside: Intention ↔ Actor association
@@ -122,7 +122,7 @@ The Motion Runtime we propose uses entities called **Actors** to fulfill specifi
 
     function actorForIntention(intention, target, existingActors) -> Actor
 
->This function will use a `Intention type → Actor type` lookup table. The lookup can be implemented in many ways:
+>This function could use a `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
 
 >**Intention → Actor**
 
@@ -132,7 +132,6 @@ The Motion Runtime we propose uses entities called **Actors** to fulfill specifi
 
 >Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
 
----
 
 When a transaction is committed, the Runtime must generate an Actor for each Intention in the transaction. Consider the transaction log we'd explored above:
 
@@ -156,37 +155,37 @@ Let's create Actors by calling our hypothetical `actorForIntention` on each targ
 We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
 
->#### Aside: One Actor instance per type of Intention
+#### One Actor instance per Intention type per Target
 
->A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are committed.
+A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions are committed.
 
->Consider the following pseudo-Transaction involving physical simulation Intentions:
+Consider the following pseudo-Transaction involving physical simulation Intentions:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
->Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
+Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
->The Actor now knows the following:
+The Actor now knows the following:
 
->- It has two Forces, both affecting `position`.
+- It has two forces, both affecting `position`.
 - It needs to model `velocity` for the `position`.
 
->The Actor now creates some state that will track the position's velocity.
+The Actor now creates some state that will track the position's velocity.
 
->The Actor can now:
+The Actor can now:
 
->1. convert each Intention into a physics force,
+1. convert each Intention into a physics force,
 2. apply the force to the velocity, and
 3. apply the velocity to the position
 
->on every frame.
+on every frame.
 
->Alternatively, consider how this situation would have played out if we had one Actor per Intention. There would now be two representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
+Alternatively, consider how this situation would have played out if we had one Actor per Intention. There would now be two representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
 
->Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
+Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
 
 ### Step 5: Actors execute Intentions
