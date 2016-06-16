@@ -4,11 +4,11 @@
 * [Engineering concepts](specifications/README.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
-       * Multi-threading
    * [Motion Runtime](specifications/runtime.md)
        * [Plugins](specifications/runtime_plugins.md)
            * [View duplication](specifications/view_duplication.md)
        * [Actors](specifications/actors.md)
+       * Multi-threading
        * [Transient views](specifications/transient_views.md)
        * [Scripting](specifications/scripting.md)
    * [Directors](specifications/directors.md)
