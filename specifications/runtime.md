@@ -122,7 +122,7 @@ The Motion Runtime we propose uses entities called **Actors** to fulfill specifi
 
     function actorForIntention(intention, target, existingActors) -> Actor
 
->This function could use a `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
+>This function could use an `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
 
 >**Intention → Actor**
 
