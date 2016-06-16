@@ -1,5 +1,3 @@
-Status of this document: **Draft**
-
 # Motion Runtime
 
 The system described here emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
