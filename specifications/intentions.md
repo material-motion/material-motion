@@ -4,6 +4,8 @@ A Plan is an object representing **what you want something to do**.
 
 A Plan is the *plan* part of the separation of plan/execution.
 
+**Protocol**: Represent Plans as an abstract protocol, if your language allows.
+
 `v1` **Configuration**: Plans can have configurable properties.
 
 Pseudo-code example:
