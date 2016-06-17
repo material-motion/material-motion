@@ -57,7 +57,9 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 ---
 
-`feature: dynamicplans` **Dynamic Plans**: Directors can register new Plans after `setUp` has been invoked.
+<p style="text-align:center"><tt>specification: dynamic plans</tt></p>
+
+**Dynamic Plans**: Directors can register new Plans after `setUp` has been invoked.
 
 A classic example is a Director that is responding to gesture recognition events.
 
