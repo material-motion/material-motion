@@ -58,7 +58,7 @@ One type of state change is the reversal of a Transition's direction.
 
 ## Specialized Directors
 
-A Director class hierarchy might include specialized Director implementations that provide essential scaffolding.
+Specialized Directors should be provided for common operations.
 
 - [Transition Directors](transition_directors.md)
 - [Interaction Directors](interaction_directors.md)
