@@ -56,9 +56,9 @@ Learn more about [Transactions](transactions.md).
 
 ---
 
-## Life cycle of an Intention
+## Life of an Intention
 
-We will now walk through the life cycle of an Intention and its eventual execution.
+We will now walk through the life of an Intention and its eventual execution.
 
 1. Create a Runtime.
 1. Create Intentions.
