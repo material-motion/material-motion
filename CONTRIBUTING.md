@@ -40,13 +40,3 @@ If no consensus is able to be reached then the discussion will be closed and the
 - Runtime
 
 Example: A Runtime creates Actors.
-
-# Contributing to the community index
-
-View the [Community index](community/) for a community-curated list of Starmap concept implementations.
-
-## Building a new solution?
-
-Awesome. We've provided some recommendations below.
-
-**API names**: API names in the Starmap are not prescriptive. Use your best judgment. Follow your platform or language's conventions.
