@@ -17,7 +17,7 @@
        * [Transition Directors](specifications/transition_directors.md)
        * [Interaction Directors](specifications/interaction_directors.md)
 * [Community](CONTRIBUTING.md)
-   * Communication
+   * [Communication](communication.md)
    * [Governance](governance.md)
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
