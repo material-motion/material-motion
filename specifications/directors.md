@@ -13,9 +13,7 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up**: A Director has a `setUp` method that is invoked exactly once.
-
-**Prepared transaction**: The setUp method receives a Transaction instance.
+**Set up**: A Director has a `setUp` method that is invoked exactly once. This method must be provided with a Transaction instance.
 
 Example pseudo-code:
 
