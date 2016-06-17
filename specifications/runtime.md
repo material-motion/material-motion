@@ -13,58 +13,58 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 A Runtime is an object that requires three other objects:
 
-- Intentions
+- Plans
 - Executors
 - Transactions
 
 ![](../_assets/RuntimeOverview.svg)
 
-Intentions are added to Transactions.
+Plans are added to Transactions.
 
 Transactions are committed to Runtimes.
 
 Runtimes create Executors.
 
-Intentions and Executors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. Intentions and Executors represent plan and execution, respectively. 
+Plans and Executors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. Plans and Executors represent plan and execution, respectively. 
 
 Transactions and Runtimes are both concrete objects.
 
-### Intention
+### Plan
 
-A plan is represented in the Runtime by an instance of Intention.
+A plan is represented in the Runtime by an instance of Plan.
 
-Example Intention objects:
+Example Plan objects:
 
 - `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
 - `Tween` describes a tween animation.
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
-Learn more about [Intentions](intentions.md).
+Learn more about [Plans](plans.md).
 
 ### Executors
 
-Executors are objects created by a Runtime. Executors are expected to translate Intention into execution.
+Executors are objects created by a Runtime. Executors are expected to translate Plans into execution.
 
 Learn more about [Executors](Executors.md).
 
 ### Transactions
 
-Transactions are the mechanism by which Intentions are committed to a Runtime.
+Transactions are the mechanism by which Plans are committed to a Runtime.
 
 Learn more about [Transactions](transactions.md).
 
 ---
 
-## Life of an Intention
+## Life of a Plan
 
-We will now walk through the life of an Intention and its eventual execution.
+We will now walk through the life of a Plan and its eventual execution.
 
 1. Create a Runtime.
-1. Create Intentions.
+1. Create Plans.
 1. Create a Transaction and commit it to the Runtime.
 1. The Runtime creates necessary Executors.
-1. The Executors execute their Intentions.
+1. The Executors execute their Plans.
 
 ### Step 1: Create a Runtime
 
@@ -72,9 +72,9 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
     runtime = Runtime()
 
-### Step 2: Create Intentions
+### Step 2: Create Plans
 
-All motion in a Runtime begins with an Intention. We'll explore four different types of Intentions:
+All motion in a Runtime begins with a Plan. We'll explore four different types of Plans:
 
     animation = Tween()
     animation.property = "opacity"
@@ -85,17 +85,17 @@ All motion in a Runtime begins with an Intention. We'll explore four different t
     pinchable = Pinchable()
     rotatable = Rotatable()
 
-The four objects created above are Intentions. Each Instance represents a plan of motion to be executed by the Runtime.
+The four objects created above are Plans. Each Instance represents a plan of motion to be executed by the Runtime.
 
 ### Step 3: Start a transaction and commit it
 
-Intention must be committed to a Runtime via a Transaction. Transactions associate Intention with specific targets.
+Plan must be committed to a Runtime via a Transaction. Transactions associate Plan with specific targets.
 
 A transaction's public API should support the following operations:
 
-- Associate an Intention with a target.
-- Associate a named Intention with a target.
-- Remove any Intention associated with a given name from a target.
+- Associate a Plan with a target.
+- Associate a named Plan with a target.
+- Remove any Plan associated with a given name from a target.
 
 It must be possible to enumerate the operations of a Transaction. The log's order must match the order of operation requests.
 
@@ -129,31 +129,31 @@ After committing the above transaction, the Runtime's internal state might resem
 
 ![](../_assets/TargetManagers.svg)
 
-Note that `Rotatable` is not listed. This is because we also removed any Intention named "name2" in this Transaction.
+Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
 
-The Runtime is now expected to fulfill its Intentions.
+The Runtime is now expected to fulfill its Plans.
 
 ### Step 4: Runtime creates Executors
 
-The Motion Runtime we propose uses entities called **Executors** to fulfill specific types of Intentions. The Executor is the specialized mediating agent between an Intention and its execution.
+The Motion Runtime we propose uses entities called **Executors** to fulfill specific types of Plans. The Executor is the specialized mediating agent between a Plan and its execution.
 
-> ***Aside: Intention ↔ Executor association***
+> ***Aside: Plan ↔ Executor association***
 >
-> We'll assume a function exists that returns an Executor capable of fulfilling a type of Intention. The method signature for this method might look like this:
+> We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
 >
->     function ExecutorForIntention(intention, target, existingExecutors) -> Executor
+>     function ExecutorForPlan(intention, target, existingExecutors) -> Executor
 >
-> This function could use an `Intention type → Executor type` look-up table. The look-up could be implemented in many ways:
+> This function could use an `Plan type → Executor type` look-up table. The look-up could be implemented in many ways:
 >
-> **Intention → Executor**
+> **Plan → Executor**
 >
-> Intentions define the Executor they require. This requires Intentions to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Intentions they fulfill.
+> Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 >
-> **Executor → Intention**
+> **Executor → Plan**
 >
-> Executors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Executors conflicting on a given Intention.
+> Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
-When a transaction is committed, the Runtime must generate an Executor for each Intention in the transaction. Consider the transaction log we'd explored above:
+When a transaction is committed, the Runtime must generate an Executor for each Plan in the transaction. Consider the transaction log we'd explored above:
 
     > transaction.log
     [
@@ -168,24 +168,24 @@ Recall that the above log translated to the following internal state:
 
 ![](../_assets/TargetManagers.svg)
 
-Let's create Executors by calling our hypothetical `ExecutorForIntention` on each target's Intentions.
+Let's create Executors by calling our hypothetical `ExecutorForPlan` on each target's Plans.
 
 ![](../_assets/Executors.svg)
 
 We've created three Executors in total. `circleView` has two Executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Executor for the squareView?"
 
-#### One Executor instance per Intention type per Target
+#### One Executor instance per Plan type per Target
 
-A single Executor instance is created for each *type* of Intention registered to a target. This allows Executors to maintain coherent state even when multiple Intentions have been committed.
+A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
 
-Consider the following pseudo-code transaction involving physical simulation Intentions:
+Consider the following pseudo-code transaction involving physical simulation Plans:
 
     transaction = Transaction()
     transaction.add(Friction.on(position), circleView)
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-`circleView` now has two Intentions and one Executor, a PhysicalSimulationExecutor. Both Intentions are provided to the Executor instance.
+`circleView` now has two Plans and one Executor, a PhysicalSimulationExecutor. Both Plans are provided to the Executor instance.
 
 The Executor knows the following:
 
@@ -196,17 +196,17 @@ The Executor creates some state that will track the position's velocity.
 
 The Executor can now:
 
-1. convert each Intention into a physics force,
+1. convert each Plan into a physics force,
 2. apply the force to the velocity, and
 3. apply the velocity to the position
 
 on every frame.
 
-Alternatively, consider how this situation would have played out if we had one Executor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
+Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
 
-> Note that "one Executor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
+> Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-### Step 5: Executors execute Intentions
+### Step 5: Executors execute Plans
 
 The Runtime is now expected to forward update events to the Executor instances.
 
@@ -231,7 +231,7 @@ An Executor can be active for any of the following reasons:
 
 ##### Remote execution
 
-Executors often depend on external systems to execute their Intentions. An Executor therefore is responsible for informing the Runtime of two events:
+Executors often depend on external systems to execute their Plans. An Executor therefore is responsible for informing the Runtime of two events:
 
 - When remote execution begins.
 - When remote execution ends.
