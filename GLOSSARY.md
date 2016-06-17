@@ -1,14 +1,5 @@
 # Glossary
 
-## executor
-
-An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
-
-Similar concepts:
-
-- [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
-- [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
-
 ## dictionary
 
 A list of terms and modifiers.
@@ -25,6 +16,15 @@ Examples:
 ## execution
 
 The execution of a plan.
+
+## executor
+
+An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
+
+Similar concepts:
+
+- [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
+- [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
 
 ## expression
 
