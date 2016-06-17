@@ -1,9 +1,5 @@
 # Glossary
 
-## dictionary
-
-A list of terms and modifiers.
-
 ## element
 
 A node in a hierarchical layout/compositing system.
