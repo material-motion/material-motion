@@ -57,23 +57,29 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 ---
 
-<p style="text-align:center"><tt>feature: dynamic plans</tt></p>
+<p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
 
-**Dynamic Plans**: Directors can register new Plans after `setUp` has been invoked.
+Directors can register new Plans after `setUp` has been invoked.
 
-A classic example is a Director that is responding to gesture recognition events.
+Such Directors must be provided with a transaction initiation function. Consider the following pseudo-code:
 
-Consider the following pseudo-code:
+    director.transact = function(function(Transaction) work) {
+      transaction = Transaction()
+      work(transaction)
+      runtime.commit(transaction)
+    }
+
+We've provided the direct with a function called `transact`. This function can be called at any time by the Director.
+
+A classic example is a Director that is responding to gesture recognition events. Consider the following pseudo-code:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
-        transaction = Transaction()
-        // Some new Plans
-        runtime.commit(transaction)
+        self.transact(function(transaction) {
+          transaction.add(plan, targetA)
+        }
       }
     }
-
-**State changes**. A Director may be the hub of many different types of state changes.
 
 One type of state change is the reversal of a Transition's direction.
 
