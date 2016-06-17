@@ -5,13 +5,13 @@ Status of this document:
 
 Actors are the objects responsible for executing Intention.
 
-**Who creates them?**: Runtimes create Actors.
+**Who creates them?** `v1`: Runtimes create Actors.
 
-**When are they created?** When a transaction is committed.
+**When are they created?** `v1`: When a transaction is committed.
 
-**Initialization**: The Runtime initializes the Actor by providing a target instance.
+**Initialization** `v1`: The Runtime initializes the Actor by providing a target instance.
 
-**Optional methods**: Every method described below should be **optional** for the Actor.
+Every other method described below should be **optional** for the Actor.
 
 ## Intention
 
