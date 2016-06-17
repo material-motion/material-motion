@@ -115,8 +115,8 @@ The Transaction's log might resemble the following pseudo-object:
     [
       {action:"add", intention: FadeIn, target: circleView},
       {action:"add", intention: Draggable, target: squareView},
-      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
-      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
+      {action:"add", intention: Pinchable, name: "name1", target: squareView},
+      {action:"add", intention: Rotatable, name: "name2", target: squareView},
       {action:"remove", name: "name2", target: squareView}
       {action:"add", intention: Draggable, target: circleView},
     ]
