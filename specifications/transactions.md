@@ -8,7 +8,7 @@ Transactions aggregate requests for Intention-target associations. Transactions 
 
 **Operations**: Transactions should support the following operations.
 
-> Note: the function names included below are not prescriptive. Provide argument names and context where your language allows. It is more important that you support the operation and the relevant arguments than what the exact API is called.
+> Note: the function names included below are not prescriptive. Pick argument names according to your language/platform conventions. It is more important that you support the operation and the relevant arguments than what the exact API is called.
 
 `v1` operations:
 
