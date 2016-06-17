@@ -15,6 +15,8 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
+The `setUp` event should be the first event invoked on a Director.
+
 The setUp method should receive a Transaction instance.
 
 Example pseudo-code:
@@ -56,6 +58,14 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 ---
 
+<p style="text-align:center"><tt>feature: tear-down</tt></p>
+
+Directors may wish to receive a tearDown event when their Runtime is about to shut down.
+
+<p style="text-align:center"><tt>/feature: tear-down</tt></p>
+
+---
+
 <p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
 
 Directors may wish to register new Plans after `setUp` has been invoked.
@@ -93,8 +103,6 @@ Specialized Directors should be provided for common operations.
 
 - [Transition Directors](transition_directors.md)
 - [Interaction Directors](interaction_directors.md)
-
-TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
 
 TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
 
