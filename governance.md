@@ -6,7 +6,7 @@ The Interactive Motion Starmap is a collaborative effort lead by a core group of
 
 We use the following rules for accepting contributions.
 
-1. We require all contributors to sign [Google's Contributor License Agreement](https://cla.developers.google.com/).
+1. We require that all contributors sign [Google's Contributor License Agreement](https://cla.developers.google.com/).
 
 1. All contributions must be approved by a member of the core contributors group.
 
