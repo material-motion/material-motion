@@ -14,17 +14,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Links our yeoman generators for use. Run yo --help to list the available generators.
+# Install proselint.
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-"$dir/yo"
+"$dir/pip"
 
-for file in $ROOT_DIR/generators/*; do
-  name=$( basename "$file" | sed "s/generator-//" )
-  if [[ ! $( yo --generators | grep "^ *$name$" ) ]]; then
-    echo "Linking $(basename $file) for yo..."
-    cd $file
-    npm link
-  fi
-done
+if [[ $(proselint --version >/dev/null 2>&1) -ne 0 ]]; then
+  echo "Requesting sudo to install proselint..."
+  sudo pip uninstall proselint -y
+  sudo pip install proselint
+fi

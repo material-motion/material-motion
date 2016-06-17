@@ -24,8 +24,15 @@ install() {
   done
 }
 
+list() {
+  for file in $dir/installers/*; do
+    echo "$( basename "$file" )"
+  done
+}
+
 case "$1" in
   install)  install "${@:2}" ;;
+  list)     list "${@:2}" ;;
 
-  *) echo "Usage: $cmd [install]"; exit 1 ;;
+  *) echo "Usage: $cmd [install|list]"; exit 1 ;;
 esac

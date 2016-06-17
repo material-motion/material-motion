@@ -18,6 +18,7 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 readonly B=$(tput bold)
 readonly U=$(tput smul)
 readonly N=$(tput sgr0)
+readonly RUNNER_CMD=$( basename "${BASH_SOURCE[0]}" )
 readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
 readonly COMMAND_DIR=$( cd "$dir/../.." && pwd )
 readonly BUILTIN_DIR=$( cd "$dir/../builtin" && pwd )
