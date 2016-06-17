@@ -11,11 +11,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-A Runtime is an object that collaborates with three other objects:
-
-- Plans
-- Executors
-- Transactions
+We'll go over three new object types: Plans, Executors, and Transactions.
 
 ![](../../_assets/RuntimeOverview.svg)
 
