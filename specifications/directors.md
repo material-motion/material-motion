@@ -5,8 +5,6 @@ Status of this document:
 
 A Director is an entity that describes an interactive experience. Directors make use of a Runtime.
 
-**Transitions**. A Director is a natural fit for describing a Transition. Such a Director benefits from having a State Machine and Timeline primitive at hand.
-
 **Logic**. Directors often involve a combination of conditional logic and Plans.
 
 TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
