@@ -218,7 +218,7 @@ Executors are informed of events via the following algorithm:
 
 Some Executors are not interested in update events. Do not inform these Executors of update events. If no Executor requires update events, then the Runtime should not listen to update events.
 
-#### Runtime active vs inactive state
+#### Runtime activity state
 
 A Runtime has two states: **active** or **inactive**. 
 
