@@ -21,6 +21,8 @@ Named Intentions support:
     # Remove any named Intention from a target.
     transaction.unset(name, target)
 
+**Copying Intentions**: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction.
+
 **Committing**: Transactions must be committed to a Runtime.
 
     runtime.commit(transaction)
