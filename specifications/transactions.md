@@ -7,8 +7,12 @@ Transactions aggregate requests for Intention-target associations. Transactions 
 
 **Operations**: Transactions should support the following operations:
 
+Minimal support:
+
     # Associate an Intention with a target.
     add(intention, target)
+    
+Support for named Intentions:
     
     # Associate a named Intention with a target.
     set(intention, name, target)
