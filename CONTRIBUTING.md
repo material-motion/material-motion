@@ -2,7 +2,7 @@
 
 ### Patch acceptance process
 
-- Read the [Governance](governance.md) plan.
+- Read the [Governance](governance.md) article.
 - Discuss your proposed changes and get agreement on our mailing list.
 - Make the changes in a fork of the GitHub repository.
 - Create a pull request.
