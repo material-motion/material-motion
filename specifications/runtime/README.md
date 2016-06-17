@@ -54,12 +54,6 @@ Transactions are the mechanism by which Plans are committed to a Runtime.
 
 Learn more about [Transactions](transactions.md).
 
-## Open topics
-
-The following topics are open for discussion. They do not presently have a clear recommendation.
-
-- When should Executors be removed from a Runtime?
-
 <!--
 
 LGTM:
