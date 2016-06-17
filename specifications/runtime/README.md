@@ -11,7 +11,25 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-Let's introduce some new object types: `Plans`, `Transactions`, and `Executors`.
+Provide plans to a Runtime and it will find a way to execute them.
+
+This sentence introduces two important questions:
+
+1. How are plans provided to a Runtime?
+1. How does a Runtime know how to execute Plans?
+
+To answer the first question we introduce two new types into the system: the `Plan` and the `Transaction`.
+
+A Plan is an object representing **what you want something to do**.
+
+A Transaction aggregates requests for Plan-target associations.
+
+Let's introduce three new types: `Plan`, `Transaction`, and `Executor`.
+
+    class Transaction
+    
+    protocol Plan
+    protocol Executor
 
 The following diagram shows the relationship of these objects to one another:
 
