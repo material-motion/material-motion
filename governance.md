@@ -12,6 +12,8 @@ We use the following rules for accepting contributions.
 
 ## Core contributors
 
+Each core contributor has a specific focus area.
+
 - appsforartists :: web
 - [featherless](http://github.com/jverkoey) :: objective-c/swift
 - larche :: objective-c/swift
