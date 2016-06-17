@@ -24,3 +24,7 @@ Listen to Runtime events and duplicate views, if possible.
     }
 
 Duplicator likely owned by a Director. Likely the duplicator is already configured by the entity that created the Director.
+
+Default implementation should take a snapshot of views. Make exceptions for common cases.
+
+- On iOS, is helpful to make rich duplicate of UIImageView instances for scaling purposes.
