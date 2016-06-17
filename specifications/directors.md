@@ -1,6 +1,3 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Directors
 
 A Director is an object that describes an interactive experience.
