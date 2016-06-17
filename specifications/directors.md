@@ -14,7 +14,7 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 
 ---
 
-<p style="text-align:center"><tt>specification: v1</tt></p>
+<p style="text-align:center"><tt>MVP</tt></p>
 
 **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
@@ -57,7 +57,7 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 ---
 
-<p style="text-align:center"><tt>specification: dynamic plans</tt></p>
+<p style="text-align:center"><tt>feature: dynamic plans</tt></p>
 
 **Dynamic Plans**: Directors can register new Plans after `setUp` has been invoked.
 
