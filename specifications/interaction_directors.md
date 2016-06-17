@@ -3,6 +3,6 @@ Status of this document:
 
 # Interaction Directors
 
-Interaction Directors are concerned with describing in-place experiences, often involving some form of interaction.
+Interaction Directors are concerned with describing in-place experiences, often involving some form of human interaction.
 
 
