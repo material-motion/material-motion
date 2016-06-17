@@ -6,6 +6,11 @@ A Plan is the *plan* part of the separation of plan/execution.
 
 **Protocol**: Represent Plans as an abstract protocol, if your language allows.
 
+Pseudo-code example:
+
+    protocol Plan {
+    }
+
 `v1` **Configuration**: Plans can have configurable properties.
 
 Pseudo-code example:
