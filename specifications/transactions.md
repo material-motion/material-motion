@@ -11,8 +11,8 @@ Transactions aggregate requests for Intention-target associations. Transactions 
     addIntention(intention, toTarget: target)
     
     # Associate a named intention with a target.
-    setNamedIntention(intention, withName:name, toTarget: target)
+    setIntention(intention, named:name, toTarget: target)
     
     # Remove a named intention with a target.
-    removeIntentionNamed(name, fromTarget: target)
+    unsetIntentionNamed(name, fromTarget: target)
 
