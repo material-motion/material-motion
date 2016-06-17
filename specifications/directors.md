@@ -9,16 +9,23 @@ A Director is an object that describes an interactive experience.
 
 The setUp method should receive a Transaction instance.
 
+Example pseudo-code:
+
     Director {
       function setUp(Transaction)
     }
 
-After `setUp` completes, the Transaction should be committed to a Runtime.
+The owner of a Director is responsible for creating a Runtime and committing the Transaction.
 
-Hiding the Runtime from the Transaction has the following benefits:
+Example pseudo-code:
 
-- Director is funneled toward using a single Runtime instance.
-- Larger Transactions can potentially be optimized.
+    runtime = Runtime()
+    transaction = Transaction()
+    
+    director = Director()
+    director.setUp(transaction)
+    
+    runtime.commit(transaction)
 
 `v1` **Initial Plans**. The Director is expected to register an initial set of Plans.
 
