@@ -187,12 +187,12 @@ Consider the following pseudo-code transaction involving physical simulation Int
 
 `circleView` now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
-The Actor now knows the following:
+The Actor knows the following:
 
 - It has two forces, both affecting `position`.
 - It needs to model `velocity` for the `position`.
 
-The Actor now creates some state that will track the position's velocity.
+The Actor creates some state that will track the position's velocity.
 
 The Actor can now:
 
