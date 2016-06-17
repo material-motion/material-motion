@@ -10,7 +10,7 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 > Hiding the Runtime from the Director has the following benefits:
 > 
 > - There is a primary Runtime.
-> - Director can be given cleaner APIs for registering Plans.
+> - Director can be provided with clean APIs for registering Plans.
 > - Big Transactions can potentially be optimized.
 
 ---
