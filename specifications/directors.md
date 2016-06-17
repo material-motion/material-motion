@@ -47,7 +47,7 @@ Pseudo-code:
       ...
     }
 
-`v1` **Providing targets**: Directors must be provided with target objects.
+`v1` **Providing targets**: Directors are provided with target objects.
 
 How a Director receives targets is up to the engineer. Common solutions include:
 
