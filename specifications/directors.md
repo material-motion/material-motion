@@ -60,7 +60,8 @@ One type of state change is the reversal of a Transition's direction.
 
 A Director class hierarchy might include specialized Director implementations that provide essential scaffolding.
 
-- [Transition Director](transition_director.md)
+- [Transition Directors](transition_directors.md
+- [Interaction Directors](interaction_directors.md))
 
 TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
 
