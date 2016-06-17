@@ -84,18 +84,6 @@ Consider the following pseudo-code of a Director responding to a gesture recogni
       }
     }
 
-One type of state change is the reversal of a Transition's direction.
-
-    function onStateChange(transition) {
-      transaction = Transaction()
-      if transition.direction == ToTheRight {
-        // Register incoming Plans
-      } else {
-        // Register outgoing Plans
-      }
-      runtime.commit(transaction)
-    }
-
 ## Specialized Directors
 
 Specialized Directors should be provided for common operations.
