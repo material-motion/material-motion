@@ -2,7 +2,7 @@
 
 Transactions aggregate requests for Intention-target associations. Transactions are designed to be committed to a Runtime.
 
-**Creation** `v1`: Transactions can be created at any time.
+`v1` **Creation**: Transactions can be created at any time.
 
     transaction = Transaction()
 
