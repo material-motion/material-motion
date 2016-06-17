@@ -2,6 +2,13 @@
 
 A Plan is an object representing **what you want something to do**.
 
+Example Plan objects:
+
+- `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
+- `Tween` describes a tween animation.
+- `Draggable` describes gestural translation.
+- `AnchoredSpring` describes a physical simulation.
+
 A Plan is the *plan* part of the separation of plan/execution.
 
 **Protocol**: Represent Plans as an abstract protocol, if your language allows.
