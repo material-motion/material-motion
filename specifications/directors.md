@@ -7,6 +7,11 @@ A Director is an object that describes an interactive experience.
 
 A Director operates primarily in terms of targets and Plans. Directors must not have direct access to a Runtime.
 
+> Hiding the Runtime from the Transaction has the following benefits:
+> 
+> - Director is funneled toward using a single Runtime instance.
+> - Larger Transactions can potentially be optimized.
+
 `v1` **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
 The setUp method should receive a Transaction instance.
