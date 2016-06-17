@@ -15,7 +15,7 @@ Every other method described below should be **optional** for the Actor.
 
 ## Intention
 
-**Intentions**: Intentions may be provided to Actors as they're committed to the Runtime.
+**Intentions** `v1`: Intentions may be provided to Actors as they're committed to the Runtime.
 
 Example pseudo-API available on the Actor:
 
@@ -28,7 +28,7 @@ Example pseudo-code from within the Runtime:
     actor = actorForIntention(intention)
     actor.addIntention(intention)
 
-**Named Intentions**: Actors may choose to support named Intentions. When a named Intention is committed to a target, two things must happen:
+**Named Intentions** `feature: named`: Actors may choose to support named Intentions. When a named Intention is committed to a target, two things must happen:
 
 1. Remove any previously-committed Intention with the same name from the target's actors. This may be on a different Actor instance.
 2. Provide the relevant Actor with the new named Intention.
