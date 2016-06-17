@@ -9,5 +9,3 @@ TODO: Discuss debugging tools.
 - Pausing animations.
 - Slowing down animations.
 - Scrubbing through animations.
-- Enumerating available states.
-- 
