@@ -3,3 +3,7 @@ Status of this document:
 
 # Transition Directors
 
+Transition Directors are concerned with elegantly moving from one state to another.
+
+On iOS, for example, a Transition Director might coordinate a UIViewController transition.
+
