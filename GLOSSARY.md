@@ -30,15 +30,11 @@ Functional, syntactic sugar for the creation and configuration of plans.
 
 The beginning of an expression.
 
-## intention
-
-An Intention is an object representing **what you want something to do**.
-
-An Intention is the *plan* part of the separation of plan/fulfillment.
-
 ## plan
 
 A plan is **what you want something to do**.
+
+In relation to a Runtime, a Plan is a concrete object that can be associated with a target.
 
 Examples:
 
