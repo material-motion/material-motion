@@ -5,7 +5,7 @@ Status of this document:
 
 TODO: Discuss debugging tools.
 
-- Enumerating Intentions and Actors currently active in a Runtime.
+- Enumerating Intentions and Executors currently active in a Runtime.
 - Pausing animations.
 - Slowing down animations.
 - Scrubbing through animations.
