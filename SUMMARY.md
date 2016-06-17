@@ -14,7 +14,7 @@
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
-       * Transition Directors
+       * [Transition Directors](specifications/transition_directors.md)
        * Interaction Directors
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
