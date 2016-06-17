@@ -15,9 +15,9 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
-The `setUp` event should be the first event invoked on a Director.
+The `setUp` event must be the first event invoked on a Director.
 
-The setUp method should receive a Transaction instance.
+The setUp method must receive a Transaction instance.
 
 Example pseudo-code:
 
