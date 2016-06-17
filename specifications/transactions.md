@@ -33,8 +33,7 @@ Named Intentions support:
 
 The transaction's log must look like so:
 
-    [
-      add(intention (fromValue = 0)
+    [add(intention (fromValue = 0), add(intention (fromValue = 5)]
 
 **Enumerating operations**: Operations recorded to a transaction must be enumerable.
 
