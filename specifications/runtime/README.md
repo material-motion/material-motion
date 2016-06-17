@@ -20,9 +20,9 @@ This sentence introduces two important questions:
 
 To answer the first question we introduce two new types into the system: the Plan and the Transaction.
 
-A Plan is an object representing **what you want something to do**.
+> A Plan is an object representing **what you want something to do**. A Transaction aggregates requests for Plan-target associations.
 
-A Transaction aggregates requests for Plan-target associations.
+To answer the second question we introduce one more type: the Executor.
 
 Let's introduce three new types: `Plan`, `Transaction`, and `Executor`.
 
