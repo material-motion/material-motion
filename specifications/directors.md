@@ -74,7 +74,7 @@ Provide these Directors a *transaction initiation function*. Consider the follow
 
 The Director can now start a new transaction by invoking `transact`.
 
-A classic example is a Director that is responding to gesture recognition events. Consider the following pseudo-code:
+Consider the following pseudo-code of a Director responding to a gesture recognition event:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
