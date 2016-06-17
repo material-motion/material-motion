@@ -53,10 +53,11 @@ Common solutions include:
 
 *Delegate pattern*. The Director requests targets via a delegate.
 
+![](../_assets/DirectorTransaction-Request.svg)
+
 *Initialization*. Targets are provided to the Director's initializer.
 
-![](../_assets/DirectorTransaction.svg)
-
+![](../_assets/DirectorTransaction-Provide.svg)
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
