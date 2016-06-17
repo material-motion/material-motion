@@ -38,9 +38,9 @@ Pseudo-code:
 
 ## Event handling
 
-The Director may want to store a reference to the Motion Runtime in order to commit new Intentions in response to different events.
+The Director may want to store a reference to the Runtime in order to commit new Intentions in response to different events.
 
-**Gestures**. The Director will want to store the Motion Runtime so that it can make further Transactions at a later point.
+**Gestures**. The Director will want to store the Runtime so that it can make further Transactions at a later point.
 
     function onGesture(gesture) {
       if gesture.state == Ended {
