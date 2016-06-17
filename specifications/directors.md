@@ -52,6 +52,8 @@ How a Director receives targets is up to the engineer. Common solutions include:
 - *Delegate pattern*. The Director requests targets via a delegate.
 - *Initialization*. Targets are provided to the Director's initializer.
 
+<p style="text-align:center"><tt>/MVP</tt></p>
+
 ---
 
 <p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
