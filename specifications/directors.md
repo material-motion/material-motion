@@ -12,7 +12,11 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 > - There is a primary Runtime.
 > - Big Transactions can potentially be optimized.
 
-`v1` **Set up**: A Director has a `setUp` method that is invoked exactly once.
+---
+
+<p style="text-align:center"><tt>v1</tt></p>
+
+**Set up**: A Director has a `setUp` method that is invoked exactly once.
 
 The setUp method should receive a Transaction instance.
 
@@ -34,13 +38,13 @@ Example pseudo-code:
     
     runtime.commit(transaction)
 
-`v1` **Initial Plans**. The Director is expected to register an initial set of Plans.
+**Initial Plans**. The Director is expected to register an initial set of Plans.
 
 Pseudo-code:
 
     function setUp(Runtime) {
-      transaction.add(intention, targetA)
-      transaction.add(intention, targetB)
+      transaction.add(plan, targetA)
+      transaction.add(plan, targetB)
       ...
     }
 
@@ -51,9 +55,13 @@ How a Director receives targets is up to the engineer. Common solutions include:
 - *Delegate pattern*. The Director requests targets via a delegate.
 - *Initialization*. Targets are provided to the Director's initializer.
 
-## Event handling
+---
 
-**Gestures**. The Director will want to store the Runtime so that it can make further Transactions at a later point.
+`feature: dynamicplans` **Dynamic Plans**: Directors can register new Plans after `setUp` has been invoked.
+
+A classic example is a Director that is responding to gesture recognition events.
+
+Consider the following pseudo-code:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
