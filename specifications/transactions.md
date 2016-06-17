@@ -12,7 +12,7 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 `v1` operations:
 
-    # Associate an Plan with a target.
+    # Associate a Plan with a target.
     transaction.add(plan, target)
 
 `feature: named` operations:
@@ -27,7 +27,7 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 Operations must enumerate in the exact same order in which they were recorded.
 
-`v1` **Copying Plans**: When an Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
+`v1` **Copying Plans**: When a Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
 
     plan.fromValue = 0
     transaction.add(plan, target)
