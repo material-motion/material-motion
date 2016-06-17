@@ -6,11 +6,12 @@ This is a list of implementations the Material Motion team plans to work on. Sta
 
 [Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/expressions.html).
 
-| Platform | Implementation | Estimated # eng days |
-|:--------:|:--------------:|:--------------------:|
-| Android  | [In development](https://github.com/material-motion/material-motion-expression-android) | Unknown |
-| iOS      | Not started | Unknown |
-| Web      | Not started | Unknown |
+| Platform | Implementation |
+|:--------:|:--------------:|
+| Android  | [Experimental work](https://github.com/material-motion/material-motion-expression-android) |
+| Objective-C | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/expressions/ExpressionsCatalog/ExpressionsCatalog) |
+| Swift    | Not started |
+| Web      | Not started |
 
 ## System Tween Expression
 
@@ -19,20 +20,6 @@ Expressions for built-in tween animation types.
 [Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
 
 E.g. CoreAnimation().fadeIn()
-
-| Platform | Implementation | Estimated # eng days |
-|:--------:|:--------------:|:--------------------:|
-| Android  | Not started | Unknown |
-| iOS      | Not started | Unknown |
-| Web      | Not started | Unknown |
-
-## Material Design Tween Expression
-
-Opinionated Tween Expressions.
-
-[Dictionary](https://material-motion.gitbooks.io/material-motion-starmap/content/material_motion/dictionary.html).
-
-E.g. MaterialDesignTween().fadeIn()
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
@@ -53,7 +40,7 @@ Transactions for registering Intentions.
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
 | Android  | Not started | Unknown |
-| iOS      | Not started | Unknown |
+| iOS      | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/runtime/RuntimeCatalog/RuntimeCatalog) | Unknown |
 | Web      | Not started | Unknown |
 
 Actor creation and storage mechanisms.
