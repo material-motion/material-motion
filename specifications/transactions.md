@@ -48,3 +48,7 @@ Note that the first intention's `fromValue` did not magically transform into `5`
 `feature: serialization` **Serialization**: Transactions may be serializable.
 
 Serializable transactions can be sent over a wire or recorded to disk.
+
+`feature: optimized` **Optimizations**: Transactions can optimize their operations.
+
+TODO: Emphasize that it's important that which targets were "touched" by a Transaction is not lost. The Runtime needs this for its "new target" event.
