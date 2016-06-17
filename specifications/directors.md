@@ -5,10 +5,6 @@ Status of this document:
 
 A Director is an entity that describes an interactive experience.
 
-TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
-
-TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
-
 ## Set up phase
 
 A Director should have a `setUp` method that is invoked exactly once.
@@ -64,11 +60,11 @@ One type of state change is the reversal of a Transition's direction.
 
 A Director class hierarchy might include specialized Director implementations that provide essential scaffolding.
 
-### Transition Director
+- [Transition Director](transition_director.md)
 
-**Initialization**. A Transition Director is created when a Transition is about to occur. The Director's `setUp` method should be invoked at this point.
+TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
 
-**End state**. The Director is responsible for communicating when the Transition has ended. The Director will likely make use of the Motion Runtime's idle/active events to communicate this.
+TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
 
 <!--
 
