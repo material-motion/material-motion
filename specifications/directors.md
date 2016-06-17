@@ -8,13 +8,19 @@ A Director is an entity that describes an interactive experience. Directors make
 
 **Logic**. Directors often involve a combination of conditional logic and Intentions.
 
+TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, update, tearDown at a minimum.
+
 ## Set up phase
 
-A Director should have some form of set up phase.
+A Director should have a `setUp` method that is invoked exactly once.
 
-**Motion Runtime**. Provide an instance of a Motion Runtime to this phase. This allows many Directors to affect a single Motion Runtime.
+`v1` **Runtime**. An instance of a Runtime should be provided to this method.
 
-**Initial Intentions**. During the set up phase a Director may register an initial set of Intentions with a Motion Runtime.
+Directors should generally be registering Intention to a single Runtime.
+
+`v1` **Initial Intentions**. The Director is expected to register an initial set of Intentions.
+
+Pseudo-code:
 
     function setUp(Motion Runtime) {
       transaction = Transaction()
