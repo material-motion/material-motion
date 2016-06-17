@@ -61,7 +61,7 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 Directors may wish to register new Plans after `setUp` has been invoked.
 
-Such Directors must be provided with a transaction initiation function. Consider the following pseudo-code:
+Provide these Directors a *transaction initiation function*. Consider the following pseudo-code:
 
     # Typical set up
     director.setUp(transaction)
@@ -72,7 +72,7 @@ Such Directors must be provided with a transaction initiation function. Consider
       runtime.commit(transaction)
     }
 
-The Director now owns a function called `transact`. The Director can use this method to commit new Plans to the Runtime in a safe manner.
+The Director can start a new transaction by invoking `transact`.
 
 A classic example is a Director that is responding to gesture recognition events. Consider the following pseudo-code:
 
