@@ -16,7 +16,7 @@
    * [Directors](specifications/directors.md)
        * [Transition Directors](specifications/transition_directors.md)
        * [Interaction Directors](specifications/interaction_directors.md)
-* Community
+* [Community](community/README.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
