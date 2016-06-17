@@ -72,7 +72,7 @@ Provide these Directors a *transaction initiation function*. Consider the follow
       runtime.commit(transaction)
     }
 
-The Director can start a new transaction by invoking `transact`.
+The Director can now start a new transaction by invoking `transact`.
 
 A classic example is a Director that is responding to gesture recognition events. Consider the following pseudo-code:
 
