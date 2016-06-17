@@ -14,7 +14,9 @@ We use the following rules for accepting contributions.
 
 Each core contributor has a specific focus area.
 
-- appsforartists :: web
-- [featherless](http://github.com/jverkoey) :: [ios|mac]OS
-- larche :: [ios]appleOS
-- markwei :: android
+| Handle | Focus |
+|:-------|:------|
+| appsforartists | `web` |
+| [featherless](http://github.com/jverkoey) | `iOS, macOS` |
+| larche | `iOS` |
+| markwei | `android` |
