@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 #
 # Copyright 2016-present The Material Motion Authors. All Rights Reserved.
 #
@@ -14,10 +14,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+cmd=$(basename "${BASH_SOURCE[0]}" | rev | cut -d'.' -f2- | rev)
 
-for file in $DIR/../../generators/*; do
-  echo "Linking $(basename $file) for yo..."
-  cd $file
-  npm link
-done
+function editcommand {
+  FILE="$BUILTIN_DIR/$1/$1"
+  if [ ! -f "$FILE" ]; then
+    FILE="$COMMAND_DIR/$1/$1"
+    if [ ! -f "$FILE" ]; then
+      echo "Unknown command $B$1$N."
+      exit 1
+    fi
+  fi
+
+  $EDITOR "$FILE"
+}
+
+case "$1" in
+  "") echo "Usage: $cmd <command>"; exit 1 ;;
+
+  *)  editcommand "${@:1}" ;;
+esac
