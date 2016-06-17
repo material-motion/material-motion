@@ -6,12 +6,12 @@ This is a list of implementations the Material Motion team plans to work on. Sta
 
 [Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/expressions.html).
 
-| Platform | Implementation | Estimated # eng days |
-|:--------:|:--------------:|:--------------------:|
-| Android  | [Experimental work](https://github.com/material-motion/material-motion-expression-android) | Unknown |
-| Objective-C | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/expressions/ExpressionsCatalog/ExpressionsCatalog) | Unknown |
-| Swift    | Not started | Unknown |
-| Web      | Not started | Unknown |
+| Platform | Implementation |
+|:--------:|:--------------:|
+| Android  | [Experimental work](https://github.com/material-motion/material-motion-expression-android) |
+| Objective-C | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/expressions/ExpressionsCatalog/ExpressionsCatalog) |
+| Swift    | Not started |
+| Web      | Not started |
 
 ## System Tween Expression
 
