@@ -51,8 +51,12 @@ How targets are provided to a Director is up to the creator of the Director.
 
 Common solutions include:
 
-- *Delegate pattern*. The Director requests targets via a delegate.
-- *Initialization*. Targets are provided to the Director's initializer.
+*Delegate pattern*. The Director requests targets via a delegate.
+
+*Initialization*. Targets are provided to the Director's initializer.
+
+![](../_assets/DirectorTransaction.svg)
+
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
