@@ -13,9 +13,7 @@ A Runtime should generate events. These events should be observable by external 
 
 This event enables "Transition Directors".
 
-### Event: new target
-
-The Runtime should send an event each time a new target is referenced.
+`feature: duplication` **Event: new target**: The Runtime should send an event each time a new target is referenced.
 
 The receivers of this event should be allowed to set a new "shadow" instance of the target. The shadow instance will be provided to the Actors.
 
