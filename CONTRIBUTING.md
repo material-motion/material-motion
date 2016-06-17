@@ -52,6 +52,6 @@ Awesome. We've provided some recommendations below.
 
 **API names**: API names in the Starmap are not prescriptive. Use your best judgment. Follow your platform or language's conventions.
 
-### The small print
+# The small print
 
 Contributions made by corporations are covered by a different agreement than the one above, the [Software Grant and Corporate Contributor License Agreement](https://cla.developers.google.com/about/google-corporate).
