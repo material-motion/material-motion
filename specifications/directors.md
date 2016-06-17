@@ -63,13 +63,16 @@ Directors can register new Plans after `setUp` has been invoked.
 
 Such Directors must be provided with a transaction initiation function. Consider the following pseudo-code:
 
+    # Typical set up
+    director.setUp(transaction)
+    
     director.transact = function(function(Transaction) work) {
       transaction = Transaction()
       work(transaction)
       runtime.commit(transaction)
     }
 
-We've provided the direct with a function called `transact`. This function can be called at any time by the Director.
+The Director now owns a function called `transact`. The Director can use this method to commit new Plans to the Runtime in a safe manner.
 
 A classic example is a Director that is responding to gesture recognition events. Consider the following pseudo-code:
 
