@@ -15,8 +15,6 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
-**First**: The `setUp` event must be the first event invoked on a Director.
-
 **Prepared transaction**: The setUp method receives a Transaction instance.
 
 Example pseudo-code:
@@ -36,6 +34,8 @@ Example pseudo-code:
     director.setUp(transaction)
     
     runtime.commit(transaction)
+
+**First**: The `setUp` event must be the first event invoked on a Director.
 
 **Initial Plans**. The Director registers Plans in `setUp`.
 
