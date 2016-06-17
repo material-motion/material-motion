@@ -49,7 +49,7 @@ Pseudo-code:
 
 `v1` **Providing targets**: Provide targets to Directors.
 
-How targets are provided to a Director is up to the engineer.
+How targets are provided to a Director is up to the owner of the Director.
 
 Common solutions include:
 
