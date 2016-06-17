@@ -34,11 +34,11 @@ The beginning of an expression.
 
 A plan is **what you want something to do**.
 
-In relation to a Runtime, a Plan is a concrete object that can be associated with a target.
-
 Examples:
 
 - [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
+
+In relation to a Runtime, a Plan is a concrete object that can be associated with a target.
 
 ## platform
 
