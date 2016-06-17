@@ -23,6 +23,10 @@ Named Intentions support:
     # Remove any named Intention from a target.
     transaction.remove(name, target)
 
+**Enumerating operations**: Operations recorded to a transaction must be enumerable.
+
+Operations must enumerate in the exact same order in which they were recorded.
+
 **Copying Intentions**: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction. For example:
 
     intention.fromValue = 0
@@ -36,8 +40,6 @@ The transaction's log must look like so:
     [add(intention (fromValue = 0), add(intention (fromValue = 5)]
 
 Note that the first intention's `fromValue` did not magically transform into `5`.
-
-**Enumerating operations**: Operations recorded to a transaction must be enumerable.
 
 **Committing**: Transactions must be committed to a Runtime.
 
