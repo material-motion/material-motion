@@ -31,8 +31,6 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
 
 Plans must be added to a Transaction. The Transaction can then be committed to a Runtime. Transactions allow Plans to be associated targets.
 
-Consider the following pseudo-code:
-
     transaction = Transaction()
     transaction.add(animation, circleView)
     transaction.add(draggable, squareView)
@@ -53,7 +51,7 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"add", plan: Draggable, target: circleView},
     ]
 
-Let's commit the transaction:
+We can now commit the transaction:
 
     runtime.commit(transaction)
 
