@@ -10,7 +10,7 @@
        * [Runtime](specifications/runtime/runtime.md)
        * [Plan](specifications/runtime/plan.md)
        * [Transaction](specifications/runtime/transaction.md)
-       * [Executors](specifications/executors.md)
+       * [Executor](specifications/executors.md)
        * [Plugins](specifications/runtime_plugins.md)
        * [Debugging](specifications/debugging.md)
    * [View duplication](specifications/view_duplication.md)
