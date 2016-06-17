@@ -29,7 +29,7 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
 
 ### Step 3: Start a transaction and commit it
 
-Plans must be added to a Transaction. Transactions are then committed to a Runtime. Transactions allow Plans to be associated targets.
+Plans must be added to a Transaction. The Transaction can then be committed to a Runtime. Transactions allow Plans to be associated targets.
 
 A transaction's public API should support the following operations:
 
