@@ -8,11 +8,11 @@ Transactions aggregate requests for Intention-target associations. Transactions 
 **Operations**: Transactions should support the following operations:
 
     # Associate an intention with a target.
-    addIntention(intention, toTarget: target)
+    add(intention, target)
     
     # Associate a named intention with a target.
-    setIntention(intention, named:name, toTarget: target)
+    set(intention, name, target)
     
     # Remove a named intention with a target.
-    unsetIntentionNamed(name, fromTarget: target)
+    unset(name, target)
 
