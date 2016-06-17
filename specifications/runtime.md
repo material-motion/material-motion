@@ -104,9 +104,9 @@ Consider the following pseudo-code:
     transaction = Transaction()
     transaction.add(animation, circleView)
     transaction.add(draggable, squareView)
-    transaction.addNamed("name1", pinchable, squareView)
-    transaction.addNamed("name2", rotatable, squareView)
-    transaction.removeNamed("name2", squareView)
+    transaction.add(pinchable, "name1", squareView)
+    transaction.add(rotatable, "name2", squareView)
+    transaction.remove("name2", squareView)
     transaction.add(draggable, circleView)
 
 The Transaction's log might resemble the following pseudo-object:
