@@ -1,22 +1,22 @@
-# Intentions
+# Plans
 
-An Intention is an object representing **what you want something to do**.
+A Plan is an object representing **what you want something to do**.
 
-An Intention is the *plan* part of the separation of plan/execution.
+A Plan is the *plan* part of the separation of plan/execution.
 
-`v1` **Configuration**: Intentions can have configurable properties.
+`v1` **Configuration**: Plans can have configurable properties.
 
 Pseudo-code example:
 
-    Tween: Intention {
+    Tween: Plan {
       var fromValue
       var toValue
     }
 
-`v1` **Execution**: Executors execute Intentions.
+`v1` **Execution**: Executors execute Plans.
 
 This separation of concerns encourages reusable code.
 
-`feature: serialization` **Serialization**: Intentions may be serializable.
+`feature: serialization` **Serialization**: Plans may be serializable.
 
-Serializable Intentions can be sent over a wire or recorded to disk.
+Serializable Plans can be sent over a wire or recorded to disk.
