@@ -27,7 +27,7 @@ All motion in a Runtime begins with a Plan. We'll explore four different types o
     pinchable = Pinchable()
     rotatable = Rotatable()
 
-The four objects created above are Plans. Each Instance represents a plan of motion to be executed by the Runtime.
+The four objects created above are Plan instances. Each Instance represents a plan of motion to be executed by the Runtime.
 
 ### Step 3: Start a transaction and commit it
 
