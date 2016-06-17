@@ -11,7 +11,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-We'll go over three new object types: Plans, Executors, and Transactions.
+We'll go over three new object types: Plans, Transactions, Executors.
 
 ![](../../_assets/RuntimeOverview.svg)
 
