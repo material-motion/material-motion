@@ -4,7 +4,7 @@ A Director is an object that describes an interactive experience.
 
 A Director operates primarily in terms of targets and Plans. Directors must not have direct access to a Runtime.
 
-> Hiding the Runtime from the Director has the following benefits:
+> Hiding the Runtime from a Director has the following benefits:
 > 
 > - There is a primary Runtime.
 > - Big Transactions can potentially be optimized.
