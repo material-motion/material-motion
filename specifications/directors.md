@@ -3,9 +3,7 @@ Status of this document:
 
 # Directors
 
-A Director is an entity that describes an interactive experience. Directors make use of a Runtime.
-
-**Logic**. Directors often involve a combination of conditional logic and Plans.
+A Director is an entity that describes an interactive experience.
 
 TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
 
