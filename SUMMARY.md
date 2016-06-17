@@ -5,7 +5,7 @@
    * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
-   * [Motion Runtime](specifications/runtime.md)
+   * [Motion Runtime](specifications/runtime/README.md)
        * [Runtime](specifications/runtime/runtime.md)
        * [Plans](specifications/intentions.md)
        * [Transactions](specifications/transactions.md)
