@@ -28,23 +28,14 @@ Plans are added to Transactions. Transactions are committed to Runtimes. Runtime
 
 ![](../../_assets/RuntimeOverview.svg)
 
-Learn more about the [Runtime](runtime.md).
+Learn more about this process by reading [Life of a Plan](life_of_a_plan.md).
 
-### Plan
+Engineering specifications:
 
-Learn more about .
-
-### Executors
-
-Executors are objects created by a Runtime. Executors are expected to translate Plans into execution.
-
-Learn more about [Executors](Executors.md).
-
-### Transactions
-
-Transactions are the mechanism by which Plans are committed to a Runtime.
-
-Learn more about [Transactions](transactions.md).
+- [Runtime](runtime.md).
+- [Plan](plan.md).
+- [Transaction](transaction.md).
+- [Executor](executor.md).
 
 <!--
 
