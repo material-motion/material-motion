@@ -1,6 +1,6 @@
 # Contributing to the Starmap
 
-### Patch acceptance process
+## Patch acceptance process
 
 - Read the [Governance](governance.md) article.
 - Discuss your proposed changes and get agreement on our mailing list.
