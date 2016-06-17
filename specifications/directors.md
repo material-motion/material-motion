@@ -53,8 +53,6 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 ## Event handling
 
-The Director may want to store a reference to the Runtime in order to commit new Plans in response to different events.
-
 **Gestures**. The Director will want to store the Runtime so that it can make further Transactions at a later point.
 
     function onGesture(gesture) {
