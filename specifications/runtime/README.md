@@ -21,7 +21,7 @@ Learn more about the [Runtime](runtime.md).
 
 ### Plan
 
-Learn more about [Plans](plans.md).
+Learn more about .
 
 ### Executors
 
