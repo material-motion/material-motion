@@ -16,7 +16,7 @@ Creating a Runtime should be as simple as creating a new instance. Many Runtimes
 
 ### Step 2: Create Plans
 
-All motion in a Runtime begins with a Plan. We'll explore four different types of Plans:
+All motion in a Runtime begins with a Plan. We'll explore four different types of Plans here, but there's no limit to the types of Plans:
 
     animation = Tween()
     animation.property = "opacity"
