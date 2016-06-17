@@ -39,9 +39,9 @@ Example pseudo-code:
 Pseudo-code:
 
     function setUp(Runtime) {
-      transaction = Transaction()
-      
-      runtime.commit(transaction)
+      transaction.add(intention, targetA)
+      transaction.add(intention, targetB)
+      ...
     }
 
 ## Event handling
