@@ -4,7 +4,7 @@
 
 - Read the [Governance](governance.md) article.
 - Discuss your proposed changes and get agreement on our mailing list.
-- Make the changes in a fork of the GitHub repository.
+- Make the changes in a fork of the [GitHub repository](https://github.com/material-motion/material-motion-starmap).
 - Create a pull request.
   - Ensure that you have signed [Google's Contributor License Agreement](https://cla.developers.google.com/)
 - Once your pull request has been approved, a core contributor will merge your pull request.
