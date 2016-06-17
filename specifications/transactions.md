@@ -10,12 +10,12 @@ Transactions aggregate requests for Intention-target associations. Transactions 
 
 > Note: the function names included below are not prescriptive. Provide argument names and context where your language allows. It is more important that you support the operation and the relevant arguments than what the exact API is called.
 
-`v1` support:
+`v1` operations:
 
     # Associate an Intention with a target.
     transaction.add(intention, target)
 
-`feature: named` support:
+`feature: named` operations:
 
     # Associate a named Intention with a target.
     transaction.add(intention, name, target)
