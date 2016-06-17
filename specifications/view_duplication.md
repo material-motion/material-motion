@@ -3,3 +3,4 @@ Status of this document:
 
 # View duplication
 
+View duplication requires the 
