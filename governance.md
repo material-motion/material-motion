@@ -16,7 +16,7 @@ Each core contributor has a specific focus area.
 
 | Handle | Focus |
 |:-------|:------|
-| appsforartists | `web` |
-| [featherless](http://github.com/jverkoey) | `iOS, macOS` |
-| larche | `iOS` |
-| markwei | `android` |
+| [appsforartists](https://github.com/appsforartists) | `web` |
+| [featherless](https://github.com/jverkoey) | `iOS, macOS` |
+| [larche](https://github.com/willlarche) | `iOS` |
+| [markwei](https://github.com/pingpongboss) | `android` |
