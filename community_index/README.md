@@ -4,7 +4,21 @@ Working on or found an implementation to an idea explored in this book? We'd lov
 
 This is an index of **existing or in-development implementations** of the ideas expressed in this book.
 
-> Note: The Material Motion team is dedicated to finding and building solutions to ideas explored in this book. All work is tracked in the team's [Roadmaps](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/).
+## Solutions by platform
+
+- [Android](android.md)
+- [iOS](ios.md)
+- [Web](web.md)
+
+# Contributing to the community index
+
+View the [Community index](community/) for a community-curated list of Starmap concept implementations.
+
+## Building a new solution?
+
+Awesome. We've provided some recommendations below.
+
+**API names**: API names in the Starmap are not prescriptive. Use your best judgment. Follow your platform or language's conventions.
 
 ## Suggested repository naming convention
 
@@ -30,9 +44,3 @@ The following names do not match the convention:
 - SwiftTweenLanguage
 - TweenLanguage
 - material-motion-Runtime
-
-## Solutions by platform
-
-- [Android](android.md)
-- [iOS](ios.md)
-- [Web](web.md)
