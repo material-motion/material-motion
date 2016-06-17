@@ -26,19 +26,19 @@ Similar concepts:
 
 Functional, syntactic sugar for the creation and configuration of plans.
 
+## family
+
+The beginning of an expression.
+
 ## intention
 
 An Intention is an object representing **what you want something to do**.
 
 An Intention is the *plan* part of the separation of plan/fulfillment.
 
-## language
-
-The beginning of an Expression.
-
 ## plan
 
-A Plan is **what you want something to do**.
+A plan is **what you want something to do**.
 
 Examples:
 
@@ -46,7 +46,7 @@ Examples:
 
 ## platform
 
-Either an operating system or a cross-platform abstraction layer.
+An operating system or a cross-platform abstraction layer.
 
 Examples:
 
@@ -58,7 +58,7 @@ Examples:
 
 ## runtime
 
-An entity that facilitates the coordination of rich, interactive motion. Receives Plans and fulfills them.
+An object that facilitates the coordination of rich, interactive motion.
 
 ## scrubbing
 
@@ -66,7 +66,7 @@ The act of directly manipulating a Timeline's `progress` value.
 
 ## target
 
-A target is the entity to which a Plan is meant to be applied, such as an element or a Timeline.
+A target is the entity to which a plan is meant to be applied such as an element or a Timeline.
 
 ## transaction
 
