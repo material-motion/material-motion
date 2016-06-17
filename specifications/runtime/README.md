@@ -24,12 +24,7 @@ To answer the first question we introduce two new types into the system: the Pla
 
 To answer the second question we introduce one more type: the Executor.
 
-Let's introduce three new types: `Plan`, `Transaction`, and `Executor`.
-
-    class Transaction
-    
-    protocol Plan
-    protocol Executor
+Plans are added to Transactions. Transactions are committed to Runtimes. Runtimes create Executors.
 
 The following diagram shows the relationship of these objects to one another:
 
