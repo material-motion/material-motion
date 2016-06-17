@@ -1,6 +1,6 @@
 # Transactions
 
-Transactions aggregate requests for Intention-target associations. Transactions are designed to be committed to a Runtime.
+Transactions aggregate requests for Plan-target associations. Transactions are designed to be committed to a Runtime.
 
 `v1` **Creation**: Transactions can be created at any time.
 
@@ -12,34 +12,34 @@ Transactions aggregate requests for Intention-target associations. Transactions 
 
 `v1` operations:
 
-    # Associate an Intention with a target.
-    transaction.add(intention, target)
+    # Associate an Plan with a target.
+    transaction.add(plan, target)
 
 `feature: named` operations:
 
-    # Associate a named Intention with a target.
-    transaction.add(intention, name, target)
+    # Associate a named Plan with a target.
+    transaction.add(plan, name, target)
     
-    # Remove any named Intention from a target.
+    # Remove any named Plan from a target.
     transaction.remove(name, target)
 
 `v1` **Enumerating operations**: Operations recorded to a transaction must be enumerable.
 
 Operations must enumerate in the exact same order in which they were recorded.
 
-`v1` **Copying Intentions**: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction. For example:
+`v1` **Copying Plans**: When an Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
 
-    intention.fromValue = 0
-    transaction.add(intention, target)
+    plan.fromValue = 0
+    transaction.add(plan, target)
     
-    intention.fromValue = 5
-    transaction.add(intention, target)
+    plan.fromValue = 5
+    transaction.add(plan, target)
 
 The transaction's log must look like so:
 
-    [add(intention (fromValue = 0), add(intention (fromValue = 5)]
+    [add(plan (fromValue = 0), add(plan (fromValue = 5)]
 
-Note that the first intention's `fromValue` did not magically transform into `5`.
+Note that the first plan's `fromValue` did not magically transform into `5`.
 
 `v1` **Committing**: Transactions must be committed to a Runtime.
 
