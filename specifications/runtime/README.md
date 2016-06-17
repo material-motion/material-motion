@@ -21,15 +21,6 @@ Learn more about the [Runtime](runtime.md).
 
 ### Plan
 
-A plan is represented in the Runtime by an instance of Plan.
-
-Example Plan objects:
-
-- `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
-- `Tween` describes a tween animation.
-- `Draggable` describes gestural translation.
-- `AnchoredSpring` describes a physical simulation.
-
 Learn more about [Plans](plans.md).
 
 ### Executors
