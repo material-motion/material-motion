@@ -113,12 +113,12 @@ The Transaction's log might resemble the following pseudo-object:
 
     > transaction.log
     [
-      {action:"add", intention: FadeIn, target: circleView},
-      {action:"add", intention: Draggable, target: squareView},
-      {action:"add", intention: Pinchable, name: "name1", target: squareView},
-      {action:"add", intention: Rotatable, name: "name2", target: squareView},
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"add", plan: Pinchable, name: "name1", target: squareView},
+      {action:"add", plan: Rotatable, name: "name2", target: squareView},
       {action:"remove", name: "name2", target: squareView}
-      {action:"add", intention: Draggable, target: circleView},
+      {action:"add", plan: Draggable, target: circleView},
     ]
 
 Let's commit the transaction:
@@ -141,7 +141,7 @@ The Motion Runtime we propose uses entities called **Executors** to fulfill spec
 >
 > We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
 >
->     function ExecutorForPlan(intention, target, existingExecutors) -> Executor
+>     function ExecutorForPlan(plan, target, existingExecutors) -> Executor
 >
 > This function could use an `Plan type → Executor type` look-up table. The look-up could be implemented in many ways:
 >
@@ -157,11 +157,11 @@ When a transaction is committed, the Runtime must generate an Executor for each 
 
     > transaction.log
     [
-      {action:"add", intention: FadeIn, target: circleView},
-      {action:"add", intention: Draggable, target: squareView},
-      {action:"addNamed", intention: Pinchable, name: "name1", target: squareView},
-      {action:"addNamed", intention: Rotatable, name: "name2", target: squareView},
-      {action:"remove", intention: "name2", target: squareView}
+      {action:"add", plan: FadeIn, target: circleView},
+      {action:"add", plan: Draggable, target: squareView},
+      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
+      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
+      {action:"remove", plan: "name2", target: squareView}
     ]
 
 Recall that the above log translated to the following internal state:
