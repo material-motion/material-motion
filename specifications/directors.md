@@ -21,6 +21,11 @@ A Director should have a `setUp` method that is invoked exactly once.
 
 After `setUp` completes, the Transaction should be committed to a Runtime.
 
+Hiding the Runtime from the Transaction has the following benefits:
+
+- Director is funneled toward using a single Runtime instance.
+- Larger Transactions can potentially be optimized.
+
 `v1` **Initial Intentions**. The Director is expected to register an initial set of Intentions.
 
 Pseudo-code:
