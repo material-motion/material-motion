@@ -1,5 +1,7 @@
 # Governance
 
-The Interactive Motion Starmap is a collaborative effort across many platforms.
+The Interactive Motion Starmap is a collaborative effort lead by a core group of contributors. The core contributors represent diverse backgrounds across many platforms and languages.
 
-The group of core contributors is self-managing - core contributors are added by two supporting votes from core contributors on the mailing list and no veto within four business days. We expect that new contributors will submit a number of patches before they become core contributors.
+## Core contributors
+
+- featherless. [GitHub](//github.com/jverkoey). [Twitter](//twitter.com/featherless).
