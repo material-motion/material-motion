@@ -9,7 +9,9 @@ A Director is an entity that describes an interactive experience. Directors make
 
 **Logic**. Directors often involve a combination of conditional logic and Intentions.
 
-TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, update, tearDown at a minimum.
+TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
+
+TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
 
 ## Set up phase
 
