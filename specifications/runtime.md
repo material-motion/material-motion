@@ -185,7 +185,7 @@ Consider the following pseudo-code transaction involving physical simulation Int
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-Our circleView now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
+`circleView` now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
 
 The Actor now knows the following:
 
