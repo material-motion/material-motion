@@ -15,7 +15,7 @@ This event enables "Transition Directors".
 
 `feature: duplication` **Event: new target**: The Runtime should send an event each time a new target is referenced.
 
-The receivers of this event should be allowed to set a new "shadow" instance of the target. The shadow instance will be provided to the Actors.
+The receivers of this event should be allowed to set a new "shadow" instance of the target. The shadow instance will be provided to the Executors.
 
 This event enables "view duplication".
 
@@ -27,8 +27,8 @@ This event enables "view duplication".
 
 This event enables reactionary Intentions, i.e. registering new Intentions once a Target has entered an idle state.
 
-> NOTE: It may be more valuable to have actor-level idling. Target-level idling may not be helpful. It's unclear how actor-level idling would work, given that the outside system should generally be unaware of actors. Perhaps you could use intentions as the entry-point:
+> NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors. Perhaps you could use intentions as the entry-point:
 >
 >     transaction.add(intention, target, function() {
->       actor idle callback
+>       Executor idle callback
 >     })
