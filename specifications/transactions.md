@@ -12,7 +12,7 @@ Minimal support:
     # Associate an Intention with a target.
     add(intention, target)
     
-Support for named Intentions:
+Named Intentions support:
     
     # Associate a named Intention with a target.
     set(intention, name, target)
