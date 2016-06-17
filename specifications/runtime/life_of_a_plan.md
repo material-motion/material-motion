@@ -27,8 +27,6 @@ All motion in a Runtime begins with a Plan. We'll explore four different types o
     pinchable = Pinchable()
     rotatable = Rotatable()
 
-Each instance represents a distinct plan to be executed by the Runtime.
-
 ### Step 3: Start a transaction and commit it
 
 Plan must be committed to a Runtime via a Transaction. Transactions associate Plan with specific targets.
