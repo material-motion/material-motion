@@ -10,7 +10,6 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 > Hiding the Runtime from the Director has the following benefits:
 > 
 > - There is a primary Runtime.
-> - Director can be provided with clean APIs for registering Plans.
 > - Big Transactions can potentially be optimized.
 
 ---
@@ -60,7 +59,7 @@ How a Director receives targets is up to the engineer. Common solutions include:
 
 <p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
 
-Directors can register new Plans after `setUp` has been invoked.
+Directors may wish to register new Plans after `setUp` has been invoked.
 
 Such Directors must be provided with a transaction initiation function. Consider the following pseudo-code:
 
