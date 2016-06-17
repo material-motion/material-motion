@@ -11,7 +11,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-Provide plans to a Runtime and it will find a way to execute them.
+Provide some plans to a Runtime and it will find a way to execute them.
 
 This sentence introduces two important questions:
 
