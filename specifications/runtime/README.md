@@ -25,8 +25,6 @@ Transactions are committed to Runtimes.
 
 Runtimes create Executors.
 
-Plans and Executors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. Plans and Executors represent plan and execution, respectively. 
-
 Transactions and Runtimes are both concrete objects.
 
 Learn more about the [Runtime](runtime.md).
