@@ -19,6 +19,7 @@ A Runtime is an object that collaborates with three other objects:
 
 ![](../_assets/RuntimeOverview.svg)
 
+
 Plans are added to Transactions.
 
 Transactions are committed to Runtimes.
