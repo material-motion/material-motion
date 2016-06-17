@@ -7,10 +7,7 @@
 - Make the changes in a fork of the GitHub repository.
 - Create a pull request.
   - Ensure that you have signed [Google's Contributor License Agreement](https://cla.developers.google.com/)
-
-# How to contribute to the Starmap
-
-View our guide on "[Creating a GitBook pull request](https://material-motion.gitbooks.io/material-motion-team/content/gitbook_pull_request.html)".
+- Once your pull request has been approved, a core contributor will merge your pull request.
 
 ## Proposing new concepts
 
