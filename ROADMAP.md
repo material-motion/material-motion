@@ -2,14 +2,28 @@
 
 This roadmap defines our short-term priorities for the contents of the Starmap.
 
-## Now
+<table>
+<tr>
+  <th>Phase</th>
+  <th>Milestone</th>
+  <th>Target date</th>
+  <th>Features</th>
+</tr>
 
-- Port initial content to the Starmap book.
+<tr>
+  <td rowspan="2">Pre-public</td>
+  <td>Publication</td>
+  <td>June 22, 2016</td>
+  <td>
+    
+  </td>
+</tr>
 
-## Soon
+<tr>
+  <td></td>
+  <td>
+    Bar
+  </td>
+</tr>
 
-- Define a "release" process for the book.
-
-## Later
-
-- Publicize the book and invite public collaboration.
+</table>
