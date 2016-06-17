@@ -1,6 +1,6 @@
 ## Life of a Plan
 
-This article walks through the life of a Plan and its eventual execution.
+Let's walk through the life of a Plan.
 
 1. Create a Runtime.
 1. Create Plans.
