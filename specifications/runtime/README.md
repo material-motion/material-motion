@@ -29,6 +29,8 @@ Plans and Executors are best described as abstract protocols. Abstract base clas
 
 Transactions and Runtimes are both concrete objects.
 
+Learn more about the [Runtime](runtime.md).
+
 ### Plan
 
 A plan is represented in the Runtime by an instance of Plan.
