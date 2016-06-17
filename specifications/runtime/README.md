@@ -13,6 +13,8 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 Let's introduce some new object types: `Plans`, `Transactions`, and `Executors`.
 
+The following diagram shows the relationship of these objects to one another.
+
 ![](../../_assets/RuntimeOverview.svg)
 
 Plans are added to Transactions.
