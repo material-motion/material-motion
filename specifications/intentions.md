@@ -13,7 +13,9 @@ Pseudo-code example:
       var toValue
     }
 
-**Portability**: Intentions should be encodable. An Intention should be transferable over a network and to/from permanent storage.
+**Serializable**: Intentions may be serializable.
+
+Serializable Intentions can be transfered over a network and to/from permanent storage.
 
 Pseudo-code example:
 
