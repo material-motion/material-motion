@@ -31,12 +31,6 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
 
 Plans must be added to a Transaction. The Transaction can then be committed to a Runtime. Transactions allow Plans to be associated targets.
 
-A transaction's public API should support the following operations:
-
-- Associate a Plan with a target.
-- Associate a named Plan with a target.
-- Remove any Plan associated with a given name from a target.
-
 It must be possible to enumerate the operations of a Transaction. The log's order must match the order of operation requests.
 
 Consider the following pseudo-code:
