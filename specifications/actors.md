@@ -3,7 +3,7 @@ Status of this document:
 
 # Actors
 
-Actors are the entities responsible for executing Intention.
+Actors are the objects responsible for executing Intention.
 
 **Who creates them?**: Runtimes create Actors.
 
