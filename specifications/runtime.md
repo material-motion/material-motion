@@ -14,7 +14,7 @@ The following diagram shows where the Runtime lives in relation to a platform li
 A Runtime is an object that requires three other objects:
 
 - Intentions
-- Actors
+- Executors
 - Transactions
 
 ![](../_assets/RuntimeOverview.svg)
@@ -23,9 +23,9 @@ Intentions are added to Transactions.
 
 Transactions are committed to Runtimes.
 
-Runtimes create Actors.
+Runtimes create Executors.
 
-Intentions and Actors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. Intentions and Actors represent plan and execution, respectively. 
+Intentions and Executors are best described as abstract protocols. Abstract base classes are a reasonable fall-back. Intentions and Executors represent plan and execution, respectively. 
 
 Transactions and Runtimes are both concrete objects.
 
@@ -42,11 +42,11 @@ Example Intention objects:
 
 Learn more about [Intentions](intentions.md).
 
-### Actors
+### Executors
 
-Actors are objects created by a Runtime. Actors are expected to translate Intention into execution.
+Executors are objects created by a Runtime. Executors are expected to translate Intention into execution.
 
-Learn more about [Actors](actors.md).
+Learn more about [Executors](Executors.md).
 
 ### Transactions
 
@@ -63,8 +63,8 @@ We will now walk through the life of an Intention and its eventual execution.
 1. Create a Runtime.
 1. Create Intentions.
 1. Create a Transaction and commit it to the Runtime.
-1. The Runtime creates necessary Actors.
-1. The Actors execute their Intentions.
+1. The Runtime creates necessary Executors.
+1. The Executors execute their Intentions.
 
 ### Step 1: Create a Runtime
 
@@ -133,27 +133,27 @@ Note that `Rotatable` is not listed. This is because we also removed any Intenti
 
 The Runtime is now expected to fulfill its Intentions.
 
-### Step 4: Runtime creates Actors
+### Step 4: Runtime creates Executors
 
-The Motion Runtime we propose uses entities called **Actors** to fulfill specific types of Intentions. The Actor is the specialized mediating agent between an Intention and its execution.
+The Motion Runtime we propose uses entities called **Executors** to fulfill specific types of Intentions. The Executor is the specialized mediating agent between an Intention and its execution.
 
-> ***Aside: Intention ↔ Actor association***
+> ***Aside: Intention ↔ Executor association***
 >
-> We'll assume a function exists that returns an Actor capable of fulfilling a type of Intention. The method signature for this method might look like this:
+> We'll assume a function exists that returns an Executor capable of fulfilling a type of Intention. The method signature for this method might look like this:
 >
->     function actorForIntention(intention, target, existingActors) -> Actor
+>     function ExecutorForIntention(intention, target, existingExecutors) -> Executor
 >
-> This function could use an `Intention type → Actor type` look-up table. The look-up could be implemented in many ways:
+> This function could use an `Intention type → Executor type` look-up table. The look-up could be implemented in many ways:
 >
-> **Intention → Actor**
+> **Intention → Executor**
 >
-> Intentions define the Actor they require. This requires Intentions to be aware of their Actors, which is not ideal. It does, however, avoid a class of problems that exist if Actors can define which Intentions they fulfill.
+> Intentions define the Executor they require. This requires Intentions to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Intentions they fulfill.
 >
-> **Actor → Intention**
+> **Executor → Intention**
 >
-> Actors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Actors conflicting on a given Intention.
+> Executors define which Intentions they can fulfill. This approach allows Intentions to be less intelligent. But it introduces the possibility of Executors conflicting on a given Intention.
 
-When a transaction is committed, the Runtime must generate an Actor for each Intention in the transaction. Consider the transaction log we'd explored above:
+When a transaction is committed, the Runtime must generate an Executor for each Intention in the transaction. Consider the transaction log we'd explored above:
 
     > transaction.log
     [
@@ -168,15 +168,15 @@ Recall that the above log translated to the following internal state:
 
 ![](../_assets/TargetManagers.svg)
 
-Let's create Actors by calling our hypothetical `actorForIntention` on each target's Intentions.
+Let's create Executors by calling our hypothetical `ExecutorForIntention` on each target's Intentions.
 
-![](../_assets/Actors.svg)
+![](../_assets/Executors.svg)
 
-We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
+We've created three Executors in total. `circleView` has two Executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Executor for the squareView?"
 
-#### One Actor instance per Intention type per Target
+#### One Executor instance per Intention type per Target
 
-A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions have been committed.
+A single Executor instance is created for each *type* of Intention registered to a target. This allows Executors to maintain coherent state even when multiple Intentions have been committed.
 
 Consider the following pseudo-code transaction involving physical simulation Intentions:
 
@@ -185,16 +185,16 @@ Consider the following pseudo-code transaction involving physical simulation Int
     transaction.add(AnchoredSpring.on(position), circleView)
     runtime.commit(transaction)
 
-`circleView` now has two Intentions and one Actor, a PhysicalSimulationActor. Both Intentions are provided to the Actor instance.
+`circleView` now has two Intentions and one Executor, a PhysicalSimulationExecutor. Both Intentions are provided to the Executor instance.
 
-The Actor knows the following:
+The Executor knows the following:
 
 - It has two forces, both affecting `position`.
 - It needs to model `velocity` for the `position`.
 
-The Actor creates some state that will track the position's velocity.
+The Executor creates some state that will track the position's velocity.
 
-The Actor can now:
+The Executor can now:
 
 1. convert each Intention into a physics force,
 2. apply the force to the velocity, and
@@ -202,46 +202,46 @@ The Actor can now:
 
 on every frame.
 
-Alternatively, consider how this situation would have played out if we had one Actor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
+Alternatively, consider how this situation would have played out if we had one Executor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
 
-> Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
+> Note that "one Executor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
-### Step 5: Actors execute Intentions
+### Step 5: Executors execute Intentions
 
-The Runtime is now expected to forward update events to the Actor instances.
+The Runtime is now expected to forward update events to the Executor instances.
 
-Actors are informed of events via the following algorithm:
+Executors are informed of events via the following algorithm:
 
     for every target
-      for every actor
-        actor.update()
+      for every Executor
+        Executor.update()
 
-Some Actors are not interested in update events. Do not inform these Actors of update events. If no Actor requires update events, then the Runtime should not listen to update events.
+Some Executors are not interested in update events. Do not inform these Executors of update events. If no Executor requires update events, then the Runtime should not listen to update events.
 
 #### Runtime active vs inactive state
 
 A Runtime has two states: **active** or **inactive**. 
 
-A Runtime is active if there is at least one active Actor. 
+A Runtime is active if there is at least one active Executor. 
 
-An Actor can be active for any of the following reasons:
+An Executor can be active for any of the following reasons:
 
-- The update event returned a Boolean value of true. True indicates that the Actor expects to perform more work on the next update event.
-- The Actor has indicated some form of active **external activity**.
+- The update event returned a Boolean value of true. True indicates that the Executor expects to perform more work on the next update event.
+- The Executor has indicated some form of active **external activity**.
 
 ##### Remote execution
 
-Actors often depend on external systems to execute their Intentions. An Actor therefore is responsible for informing the Runtime of two events:
+Executors often depend on external systems to execute their Intentions. An Executor therefore is responsible for informing the Runtime of two events:
 
 - When remote execution begins.
 - When remote execution ends.
 
-The Runtime might provide Actors with two function instances:
+The Runtime might provide Executors with two function instances:
 
     var remoteExecutionWillStart = function(name)
     var remoteExecutionDidEnd = function(name)
 
-For example, an Actor might have a gesture handler that looks like this:
+For example, an Executor might have a gesture handler that looks like this:
 
     function handleGesture(gesture) {
       switch (gesture.state) {
@@ -253,7 +253,7 @@ For example, an Actor might have a gesture handler that looks like this:
       }
     }
 
-Similarly, an Actor might implement the following when working with an external animation system:
+Similarly, an Executor might implement the following when working with an external animation system:
 
     function setup() {
       remoteExecutionWillStart("animation")
@@ -262,7 +262,7 @@ Similarly, an Actor might implement the following when working with an external 
       })
     }
 
-**Scope**: The Runtime receiving these events should scope the provided name to the Actor instance.
+**Scope**: The Runtime receiving these events should scope the provided name to the Executor instance.
 
 ---
 
@@ -270,7 +270,7 @@ Similarly, an Actor might implement the following when working with an external 
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should Actors be removed from a Runtime?
+- When should Executors be removed from a Runtime?
 
 <!--
 
