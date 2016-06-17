@@ -4,4 +4,4 @@ The Interactive Motion Starmap is a collaborative effort lead by a core group of
 
 ## Core contributors
 
-- featherless. [GitHub](//github.com/jverkoey). [Twitter](//twitter.com/featherless).
+- featherless. [GitHub](http://github.com/jverkoey). [Twitter](http://twitter.com/featherless).
