@@ -17,7 +17,7 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 **First**: The `setUp` event must be the first event invoked on a Director.
 
-**Transaction**: The setUp method must receive a Transaction instance.
+**Prepared transaction**: The setUp method must receive a Transaction instance.
 
 Example pseudo-code:
 
