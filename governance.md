@@ -12,7 +12,7 @@ We use the following rules for accepting contributions.
 
 ## Core contributors
 
-- appsforartists
-- [featherless](http://github.com/jverkoey)
-- larche
-- markwei
+- appsforartists :: web
+- [featherless](http://github.com/jverkoey) :: objective-c/swift
+- larche :: objective-c/swift
+- markwei :: android
