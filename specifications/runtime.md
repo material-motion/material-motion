@@ -174,7 +174,6 @@ Let's create Actors by calling our hypothetical `actorForIntention` on each targ
 
 We've created three Actors in total. `circleView` has two Actors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Actor for the squareView?"
 
-
 #### One Actor instance per Intention type per Target
 
 A single Actor instance is created for each *type* of Intention registered to a target. This allows Actors to maintain coherent state even when multiple Intentions have been committed.
