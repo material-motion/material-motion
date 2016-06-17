@@ -14,7 +14,7 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 
 ---
 
-<p style="text-align:center">specification: <tt>v1</tt></p>
+<p style="text-align:center"><tt>specification: v1</tt></p>
 
 **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
