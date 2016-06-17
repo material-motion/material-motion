@@ -9,8 +9,8 @@ A Director operates primarily in terms of targets and Plans. Directors must not 
 
 > Hiding the Runtime from the Director has the following benefits:
 > 
-> - Director is funneled toward using a single Runtime instance.
-> - Larger Transactions can potentially be optimized.
+> - There is a primary Runtime.
+> - Large Transactions can potentially be optimized.
 
 `v1` **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
