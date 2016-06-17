@@ -49,7 +49,9 @@ Pseudo-code:
 
 `v1` **Providing targets**: Provide targets to Directors.
 
-How a Director receives targets is up to the engineer. Common solutions include:
+How targets are provided to a Director is up to the engineer.
+
+Common solutions include:
 
 - *Delegate pattern*. The Director requests targets via a delegate.
 - *Initialization*. Targets are provided to the Director's initializer.
