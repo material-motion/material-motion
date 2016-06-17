@@ -15,6 +15,7 @@
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
        * Transition Directors
+       * Interaction Directors
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
    * [iOS](community_index/ios.md)
