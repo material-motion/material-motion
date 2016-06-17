@@ -80,7 +80,7 @@ Consider the following pseudo-code of a Director responding to a gesture recogni
       if gesture.state == Ended {
         self.transact(function(transaction) {
           transaction.add(plan, targetA)
-        }
+        })
       }
     }
 
