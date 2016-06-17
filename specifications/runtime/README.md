@@ -18,7 +18,7 @@ This sentence introduces two important questions:
 1. How are plans provided to a Runtime?
 1. How does a Runtime know how to execute Plans?
 
-To answer the first question we introduce two new types into the system: the `Plan` and the `Transaction`.
+To answer the first question we introduce two new types into the system: the Plan and the Transaction.
 
 A Plan is an object representing **what you want something to do**.
 
