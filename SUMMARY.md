@@ -10,7 +10,7 @@
        * [Transactions](specifications/transactions.md)
        * [Actors](specifications/actors.md)
        * [Plugins](specifications/runtime_plugins.md)
-       * Debugging
+       * [Debugging](specifications/debugging.md)
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
