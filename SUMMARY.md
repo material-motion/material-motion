@@ -6,7 +6,7 @@
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime.md)
-       * [Intentions](specifications/intentions.md)
+       * [Plans](specifications/intentions.md)
        * [Transactions](specifications/transactions.md)
        * [Executors](specifications/executors.md)
        * [Plugins](specifications/runtime_plugins.md)
