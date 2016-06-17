@@ -1,6 +1,6 @@
 # Transactions
 
-Transactions aggregate requests for Intention-target associations. Transactions can be committed to a Runtime.
+Transactions aggregate requests for Intention-target associations. Transactions are designed to be committed to a Runtime.
 
 **Creation**: Transactions can be created at any time.
 
@@ -44,3 +44,7 @@ Note that the first intention's `fromValue` did not magically transform into `5`
 **Committing**: Transactions must be committed to a Runtime.
 
     runtime.commit(transaction)
+
+**Serialization**: Transactions may be serializable.
+
+Serializable transactions can be sent over a wire or recorded to disk.
