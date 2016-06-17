@@ -37,7 +37,7 @@ Example pseudo-code:
     
     runtime.commit(transaction)
 
-**Initial Plans**. The Director is expected to register an initial set of Plans.
+**Initial Plans**. The Director registers Plans in setUp.
 
 Pseudo-code:
 
