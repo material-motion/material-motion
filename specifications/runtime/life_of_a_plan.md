@@ -69,7 +69,7 @@ Let's commit the transaction:
 
 After committing the above transaction, the Runtime's internal state might resemble the following:
 
-![](../_assets/TargetManagers.svg)
+![](../../_assets/TargetManagers.svg)
 
 Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
 
