@@ -83,6 +83,10 @@ Consider the following pseudo-code of a Director responding to a gesture recogni
       }
     }
 
+<p style="text-align:center"><tt>/feature: post-setup transactions</tt></p>
+
+---
+
 ## Specialized Directors
 
 Specialized Directors should be provided for common operations.
