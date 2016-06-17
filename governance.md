@@ -19,4 +19,4 @@ Each core contributor has a specific focus area.
 | [appsforartists](https://github.com/appsforartists) | `web` |
 | [featherless](https://github.com/jverkoey) | `iOS, macOS` |
 | [larche](https://github.com/willlarche) | `iOS` |
-| [markwei](https://github.com/pingpongboss) | `android` |
+| [pingpongboss](https://github.com/pingpongboss) | `android` |
