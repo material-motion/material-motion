@@ -9,7 +9,7 @@
        * [Life of a Plan](specifications/runtime/life_of_a_plan.md)
        * [Runtime](specifications/runtime/runtime.md)
        * [Plan](specifications/runtime/plan.md)
-       * [Transactions](specifications/transactions.md)
+       * [Transaction](specifications/transactions.md)
        * [Executors](specifications/executors.md)
        * [Plugins](specifications/runtime_plugins.md)
        * [Debugging](specifications/debugging.md)
