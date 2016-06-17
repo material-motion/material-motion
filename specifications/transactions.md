@@ -36,6 +36,8 @@ The transaction's log must look like so:
     [
       add(intention (fromValue = 0)
 
+**Enumerating operations**: Operations recorded to a transaction must be enumerable.
+
 **Committing**: Transactions must be committed to a Runtime.
 
     runtime.commit(transaction)
