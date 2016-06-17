@@ -44,6 +44,13 @@ Pseudo-code:
       ...
     }
 
+`v1` **Providing targets**: Directors must be provided with target objects.
+
+How a Director receives targets is up to the engineer. Common solutions include:
+
+- *Delegate pattern*. The Director requests targets via a delegate.
+- *Initialization*. Targets are provided to the Director's initializer.
+
 ## Event handling
 
 The Director may want to store a reference to the Runtime in order to commit new Plans in response to different events.
