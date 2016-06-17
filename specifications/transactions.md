@@ -35,7 +35,7 @@ The transaction's log must look like so:
 
     [add(intention (fromValue = 0), add(intention (fromValue = 5)]
 
-Note that the first intention's fromValue did not magically transform into `5`.
+Note that the first intention's `fromValue` did not magically transform into `5`.
 
 **Enumerating operations**: Operations recorded to a transaction must be enumerable.
 
