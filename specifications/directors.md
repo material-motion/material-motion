@@ -3,7 +3,7 @@ Status of this document:
 
 # Directors
 
-A Director is an entity that describes an interactive experience.
+A Director is an object that describes an interactive experience.
 
 `v1` **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
