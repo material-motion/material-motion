@@ -5,9 +5,11 @@ Status of this document:
 
 A Director is an entity that describes an interactive experience.
 
-## Set up phase
+`v1` **Set up**: A Director has a `setUp` method that is invoked exactly once.
 
-A Director should have a `setUp` method that is invoked exactly once.
+    Director {
+      function setUp()
+    }
 
 `v1` **Provide a Transaction**: The setUp method should receive a Transaction instance.
 
