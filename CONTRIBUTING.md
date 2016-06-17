@@ -8,7 +8,7 @@ Before you start working on a larger contribution, you should get in touch with 
 
 # How to contribute to the Starmap
 
-TODO: Discuss GitBook. How we use branches. How we review changes. When do we publish releases?
+View our guide on "[Creating a GitBook pull request](https://material-motion.gitbooks.io/material-motion-team/content/gitbook_pull_request.html)".
 
 ## Proposing new concepts
 
