@@ -2,6 +2,7 @@
 
 The following chart is a graphical representation of the Starmap's engineering concepts. Dependencies are represented as arrows.
 
+
 This tree is designed to be a companion to the Starmap's content.
 
 ![](../_assets/TechTree.svg)
