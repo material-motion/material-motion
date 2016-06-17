@@ -13,7 +13,7 @@ Pseudo-code example:
       var toValue
     }
 
-`v1` **Execution**: Actors execute Intentions.
+`v1` **Execution**: Executors execute Intentions.
 
 This separation of concerns encourages reusable code.
 
