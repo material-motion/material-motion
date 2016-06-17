@@ -1,6 +1,3 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Transactions
 
 Transactions aggregate requests for Intention-target associations. Transactions can be committed to a Runtime.
@@ -24,3 +21,6 @@ Named Intentions support:
     # Remove any named Intention from a target.
     transaction.unset(name, target)
 
+**Committing**: Transactions must be committed to a Runtime.
+
+    runtime.commit(transaction)
