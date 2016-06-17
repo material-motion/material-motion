@@ -15,15 +15,15 @@ TODO: Create a flow chart showing the states a Director goes through. E.g. setUp
 
 A Director should have a `setUp` method that is invoked exactly once.
 
-`v1` **Runtime**. An instance of a Runtime should be provided to this method.
+`v1` **Provide a Transaction**: The setUp method should receive a Transaction instance.
 
-Directors should generally be registering Intention to a single Runtime.
+After `setUp` completes, the Transaction should be committed to a Runtime.
 
 `v1` **Initial Intentions**. The Director is expected to register an initial set of Intentions.
 
 Pseudo-code:
 
-    function setUp(Motion Runtime) {
+    function setUp(Runtime) {
       transaction = Transaction()
       
       runtime.commit(transaction)
