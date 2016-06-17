@@ -18,10 +18,10 @@ Minimal support:
 Named Intentions support:
 
     # Associate a named Intention with a target.
-    transaction.set(intention, name, target)
+    transaction.add(intention, name, target)
     
     # Remove any named Intention from a target.
-    transaction.unset(name, target)
+    transaction.remove(name, target)
 
 **Copying Intentions**: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction. For example:
 
