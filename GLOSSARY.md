@@ -26,16 +26,6 @@ Similar concepts:
 
 Functional, syntactic sugar for the creation and configuration of plans.
 
-## frame
-
-One iteration of the animation loop.  Frames should be redrawn at least 60 times per second to ensure an application is [jank-free](http://jankfree.org).
-
-Synonyms:
-
-- tick
-- step
-- cycle
-
 ## intention
 
 An Intention is an object representing **what you want something to do**.
