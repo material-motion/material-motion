@@ -12,7 +12,7 @@ Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contr
 
 ## Who should read this?
 
-This book is written for software engineers familiar with animation systems.
+This book is written for software engineers. It is assumed that you have some familiarity with animation systems.
 
 ## Announcements
 
