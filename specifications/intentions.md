@@ -13,17 +13,10 @@ Pseudo-code example:
       var toValue
     }
 
-**Serializable**: Intentions may be serializable.
-
-Serializable Intentions can be transfered over a network and to/from permanent storage.
-
-Pseudo-code example:
-
-    Tween: Intention {
-      function toJSON() -> JSON
-      function fromJSON(JSON)
-    }
-
 **Execution**: Actors execute Intentions.
 
 This separation of concerns encourages reusable code.
+
+**Serialization**: Intentions may be serializable.
+
+Serializable Intentions can be sent over a wire or recorded to disk.
