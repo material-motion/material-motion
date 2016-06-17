@@ -25,7 +25,7 @@ Please note that these primitives can apply to an arbitrary number of dimensions
 
 ### Tweens
 
-**What it is**: *an interpolation through each value in a list of values*.
+**What it is**: *an interpolation through each value in a list of values over a defined period of time*.
 
 Tweens have a **starting time** and a **duration**. The starting time and duration properties allow tweens to be sequenced in relation to other tweens.
 
