@@ -7,7 +7,7 @@ A Director is an entity that describes an interactive experience. Directors make
 
 **Transitions**. A Director is a natural fit for describing a Transition. Such a Director benefits from having a State Machine and Timeline primitive at hand.
 
-**Logic**. Directors often involve a combination of conditional logic and Intentions.
+**Logic**. Directors often involve a combination of conditional logic and Plans.
 
 TODO: Create a flow chart showing the states a Director goes through. E.g. setUp, tearDown at a minimum.
 
@@ -26,7 +26,7 @@ Hiding the Runtime from the Transaction has the following benefits:
 - Director is funneled toward using a single Runtime instance.
 - Larger Transactions can potentially be optimized.
 
-`v1` **Initial Intentions**. The Director is expected to register an initial set of Intentions.
+`v1` **Initial Plans**. The Director is expected to register an initial set of Plans.
 
 Pseudo-code:
 
@@ -38,14 +38,14 @@ Pseudo-code:
 
 ## Event handling
 
-The Director may want to store a reference to the Runtime in order to commit new Intentions in response to different events.
+The Director may want to store a reference to the Runtime in order to commit new Plans in response to different events.
 
 **Gestures**. The Director will want to store the Runtime so that it can make further Transactions at a later point.
 
     function onGesture(gesture) {
       if gesture.state == Ended {
         transaction = Transaction()
-        // Some new Intentions
+        // Some new Plans
         runtime.commit(transaction)
       }
     }
@@ -57,9 +57,9 @@ One type of state change is the reversal of a Transition's direction.
     function onStateChange(transition) {
       transaction = Transaction()
       if transition.direction == ToTheRight {
-        // Register incoming Intentions
+        // Register incoming Plans
       } else {
-        // Register outgoing Intentions
+        // Register outgoing Plans
       }
       runtime.commit(transaction)
     }
