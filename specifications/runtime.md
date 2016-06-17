@@ -204,8 +204,7 @@ on every frame.
 
 Alternatively, consider how this situation would have played out if we had one Actor for every Intention. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Actor would "lose". The result would be a confusing animation.
 
-Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
-
+> Note that "one Actor per type of Intention" does not resolve the problem of sharing state across different types of Intentions. This is an open problem.
 
 ### Step 5: Actors execute Intentions
 
