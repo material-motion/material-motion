@@ -6,13 +6,13 @@
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
+       * Life of a Plan
        * [Runtime](specifications/runtime/runtime.md)
        * [Plans](specifications/intentions.md)
        * [Transactions](specifications/transactions.md)
        * [Executors](specifications/executors.md)
        * [Plugins](specifications/runtime_plugins.md)
        * [Debugging](specifications/debugging.md)
-       * Life of a Plan
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
