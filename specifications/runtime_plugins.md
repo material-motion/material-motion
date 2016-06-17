@@ -25,10 +25,10 @@ This event enables "view duplication".
 
 `feature: targetidle` **Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
 
-This event enables reactionary Intentions, i.e. registering new Intentions once a Target has entered an idle state.
+This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
 
-> NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors. Perhaps you could use intentions as the entry-point:
+> NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors. Perhaps you could use plans as the entry-point:
 >
->     transaction.add(intention, target, function() {
+>     transaction.add(plan, target, function() {
 >       Executor idle callback
 >     })
