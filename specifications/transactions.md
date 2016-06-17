@@ -2,11 +2,11 @@
 
 Transactions aggregate requests for Intention-target associations. Transactions are designed to be committed to a Runtime.
 
-**Creation**: Transactions can be created at any time.
+**Creation** `v1`: Transactions can be created at any time.
 
     transaction = Transaction()
 
-**Operations**: Transactions should support the following operations.
+**Operations** `v1`: Transactions should support the following operations.
 
 > Note: the function names included below are not prescriptive. Provide argument names and context where your language allows. It is more important that you support the operation and the relevant arguments than what the exact API is called.
 
@@ -23,11 +23,11 @@ Named Intentions support:
     # Remove any named Intention from a target.
     transaction.remove(name, target)
 
-**Enumerating operations**: Operations recorded to a transaction must be enumerable.
+**Enumerating operations** `v1`: Operations recorded to a transaction must be enumerable.
 
 Operations must enumerate in the exact same order in which they were recorded.
 
-**Copying Intentions**: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction. For example:
+**Copying Intentions** `v1`: When an Intention is added to a transaction it must be copied. This ensures that subsequent modifications to the Intention object do not "sneak" in to the transaction. For example:
 
     intention.fromValue = 0
     transaction.add(intention, target)
@@ -41,10 +41,10 @@ The transaction's log must look like so:
 
 Note that the first intention's `fromValue` did not magically transform into `5`.
 
-**Committing**: Transactions must be committed to a Runtime.
+**Committing** `v1`: Transactions must be committed to a Runtime.
 
     runtime.commit(transaction)
 
-**Serialization**: Transactions may be serializable.
+**Serialization** `feature: serialization`: Transactions may be serializable.
 
 Serializable transactions can be sent over a wire or recorded to disk.
