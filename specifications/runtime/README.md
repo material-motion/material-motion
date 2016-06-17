@@ -7,7 +7,7 @@ The purpose of a Runtime is to coordinate the expression of diverse types of mot
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
 
-![](../_assets/Abstraction.svg)
+![](../../_assets/Abstraction.svg)
 
 ## Overview
 
@@ -17,7 +17,7 @@ A Runtime is an object that collaborates with three other objects:
 - Executors
 - Transactions
 
-![](../_assets/RuntimeOverview.svg)
+![](../../_assets/RuntimeOverview.svg)
 
 Plans are added to Transactions.
 
@@ -166,11 +166,11 @@ When a transaction is committed, the Runtime must generate an Executor for each 
 
 Recall that the above log translated to the following internal state:
 
-![](../_assets/TargetManagers.svg)
+![](../../_assets/TargetManagers.svg)
 
 Let's create Executors by calling our hypothetical `ExecutorForPlan` on each target's Plans.
 
-![](../_assets/Executors.svg)
+![](../../_assets/Executors.svg)
 
 We've created three Executors in total. `circleView` has two Executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Executor for the squareView?"
 
