@@ -213,8 +213,8 @@ The Runtime is now expected to forward update events to the Executor instances.
 Executors are informed of events via the following algorithm:
 
     for every target
-      for every Executor
-        Executor.update()
+      for every executor
+        executor.update()
 
 Some Executors are not interested in update events. Do not inform these Executors of update events. If no Executor requires update events, then the Runtime should not listen to update events.
 
