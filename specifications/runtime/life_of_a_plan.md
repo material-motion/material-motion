@@ -55,11 +55,11 @@ After committing the above transaction, the Runtime's internal state might resem
 
 > Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
 
-The Runtime is now expected to fulfill its Plans.
+The Runtime is now expected to execute its Plans.
 
 ### Step 4: Runtime creates Executors
 
-The Runtime uses entities called **Executors** to fulfill specific types of Plans. The Executor is the specialized mediating agent between a Plan and its execution.
+The Runtime uses entities called **Executors** to execute types of Plans. The Executor is the specialized mediating agent between a Plan and its execution.
 
 We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
 
