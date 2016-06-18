@@ -102,8 +102,16 @@ A single Executor instance is created for each *type* of Plan registered to a ta
 
 The Runtime is now expected to send relevant events to each Executor instance.
 
-Executors are often provided with the Plans that caused their creation. This allows the Executor to translate specific Plans in to actionable logic.
+Executors can implement their Plans in a countless number of ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
+
+**Update execution**
 
 Some Executors require an `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
 
+**Remote execution**
+
 Some Executors execute their work remotely. For example, an Executor might turn a Plan into a system animation. The Executor in this case is responsible for informing the Runtime of two things: when the remote execution will start, and when the remote execution has ended.
+
+TODO: Fold this last paragraph in to the above.
+
+Executors are often provided with the Plans that caused their creation. This allows the Executor to translate specific Plans in to actionable logic.
