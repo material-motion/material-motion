@@ -25,6 +25,8 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
     pinchable = Pinchable()
     rotatable = Rotatable()
 
+![](../../_assets/LifeOfAPlan-step2.svg)
+
 ### Step 3: Start a transaction and commit it
 
 Plans are added to a transaction. Plans are often added in relation to a specific target.
