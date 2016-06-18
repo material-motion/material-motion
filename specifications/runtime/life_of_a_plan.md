@@ -8,6 +8,8 @@ Runtimes are cheap and easy to create. Many Runtimes may exist in an application
 
     runtime = Runtime()
 
+![](../../_assets/LifeOfAPlan-step1.svg)
+
 ### Step 2: Create Plans
 
 All motion in a Runtime begins with a Plan. Let's create four different types of Plan:
