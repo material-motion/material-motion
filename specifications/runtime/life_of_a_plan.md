@@ -2,12 +2,6 @@
 
 Let's walk through the life of a Plan.
 
-1. Create a Runtime.
-1. Create Plans.
-1. Create a Transaction and commit it to the Runtime.
-1. The Runtime creates necessary Executors.
-1. The Executors execute their Plans.
-
 ### Step 1: Create a Runtime
 
 Creating a Runtime should be as simple as creating a new instance. Many Runtimes may exist in an application.
