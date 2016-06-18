@@ -126,9 +126,9 @@ Alternatively, consider how this situation would have played out if we had one E
 
 ### Step 5: Executors execute Plans
 
-The Runtime is now expected to forward update events to the Executor instances.
+The Runtime is now expected to send relevant events to the Executor.
 
-Some Executors are not interested in update events. Do not inform these Executors of update events. If no Executor requires update events, then the Runtime should not listen to update events.
+Some Executors require an `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
 
 #### Runtime activity state
 
