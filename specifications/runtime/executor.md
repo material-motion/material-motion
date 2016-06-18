@@ -29,7 +29,7 @@ Operations must enumerate in the exact same order in which they were recorded.
 
 `v1` **Copying Plans**: When a Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
 Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
+![](../../../_assets/under-construction-flashing-barracade-animation.gif)
 
 # Executors
 
