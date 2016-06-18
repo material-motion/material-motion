@@ -65,7 +65,7 @@ We'll assume a function exists that returns an Executor capable of executing a t
 
     function executorForPlan(Plan, target, existingExecutors) -> Executor
 
-The Runtime must generate an Executor for each type of Plan for each target in the transaction. Recall the transaction log we'd explored above:
+Recall the transaction log we'd explored above:
 
     > transaction.log
     [
