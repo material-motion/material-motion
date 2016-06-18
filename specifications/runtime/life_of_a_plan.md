@@ -45,7 +45,7 @@ The Transaction's log might resemble the following pseudo-object:
       {action:"add", plan: Draggable, target: circleView},
     ]
 
-We can now commit the transaction:
+A transaction must be committed to a Runtime in order for it to take affect.
 
     runtime.commit(transaction)
 
