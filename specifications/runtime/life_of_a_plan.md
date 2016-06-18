@@ -76,7 +76,7 @@ Recall the transaction log we'd explored above:
       {action:"remove", plan: "name2", target: squareView}
     ]
 
-Recall that the above log translated to the following internal state:
+The above operations committed to the following internal Runtime state:
 
 ![](../../_assets/TargetManagers.svg)
 
