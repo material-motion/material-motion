@@ -86,11 +86,11 @@ Recall that the above log translated to the following internal state:
 
 ![](../../_assets/TargetManagers.svg)
 
-Let's create Executors by calling our hypothetical `ExecutorForPlan` on each target's Plans.
+Let's create Executors by calling our hypothetical `executorForPlan` on each target's Plans.
 
 ![](../../_assets/Executors.svg)
 
-We've created three Executors in total. `circleView` has two Executors. `squareView` has one. We've also introduced a question to the reader: "Why is there only one gesture Executor for the squareView?"
+We've created three Executors in total. `circleView` has two Executors. `squareView` has one. You might be wondering now: "Why is there only one gesture Executor for the squareView?"
 
 #### One Executor instance per Plan type per Target
 
@@ -127,12 +127,6 @@ Alternatively, consider how this situation would have played out if we had one E
 ### Step 5: Executors execute Plans
 
 The Runtime is now expected to forward update events to the Executor instances.
-
-Executors are informed of events via the following algorithm:
-
-    for every target
-      for every executor
-        executor.update()
 
 Some Executors are not interested in update events. Do not inform these Executors of update events. If no Executor requires update events, then the Runtime should not listen to update events.
 
