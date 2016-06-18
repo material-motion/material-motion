@@ -2,8 +2,6 @@
 
 Let's walk through the life of a Plan.
 
-We'll talk about Runtimes, Plans, Transactions, and Executors.
-
 ### Step 1: Create a Runtime
 
 Runtimes are cheap and easy to create. Many Runtimes may exist in an application.
@@ -97,3 +95,5 @@ The Runtime is now expected to send relevant events to each Executor instance.
 Executors are often provided with the Plans that caused their creation. This allows the Executor to translate specific Plans in to actionable logic.
 
 Some Executors require an `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
+
+Some Executors execute their work remotely. For example, an Executor might turn a Plan into a system animation. The Executor in this case is responsible for informing the Runtime of two things: when the remote execution will start, and when the remote execution has ended.
