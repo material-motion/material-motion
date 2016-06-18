@@ -40,7 +40,7 @@ Alternatively, consider how this situation would have played out if we had one E
 
 We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
 
-    function ExecutorForPlan(plan, target, existingExecutors) -> Executor
+    function executorForPlan(plan, target, existingExecutors) -> Executor
 
 This function could use an `Plan type → Executor type` look-up table. The look-up could be implemented in many ways:
 
