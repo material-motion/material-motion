@@ -29,6 +29,10 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
 
 ### Step 3: Start a transaction and commit it
 
+Let's say we have two targets - a circle and a square - to which we want to associate our plans.
+
+![](../../_assets/LifeOfAPlan-step3-targets.svg)
+
 Plans are added to a transaction. Plans are often added in relation to a specific target.
 
     transaction = Transaction()
