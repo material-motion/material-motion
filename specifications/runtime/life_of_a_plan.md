@@ -2,6 +2,8 @@
 
 Let's walk through the life of a Plan.
 
+We'll talk about Runtimes, Plans, Transactions, and Executors.
+
 ### Step 1: Create a Runtime
 
 Runtimes are cheap and easy to create. Many Runtimes may exist in an application.
