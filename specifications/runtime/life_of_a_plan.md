@@ -100,13 +100,11 @@ A single Executor instance is created for each *type* of Plan registered to a ta
 
 ### Step 5: Executors execute Plans
 
-The Runtime is now expected to send relevant events to each Executor instance.
-
 Executors can implement their Plans in a countless number of ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
 
 **Update execution**
 
-Some Executors require an `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
+Some Executors implement the `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
 
 **Remote execution**
 
