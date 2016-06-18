@@ -23,7 +23,9 @@ All motion in a Runtime begins with a Plan. Let's create four different types of
 
 ### Step 3: Start a transaction and commit it
 
-Plans must be added to a transaction. A transaction must be committed to a Runtime in order for it to take affect. Transactions allow Plans to be associated with targets.
+Plans are added to a transaction. Plans are often added in relation to a specific target.
+
+A transaction must be committed to a Runtime in order for it to take affect.
 
     transaction = Transaction()
     transaction.add(animation, circleView)
