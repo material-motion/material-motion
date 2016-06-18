@@ -4,7 +4,7 @@ Let's walk through the life of a Plan.
 
 ### Step 1: Create a Runtime
 
-Creating a Runtime should be as simple as creating a new instance. Many Runtimes may exist in an application.
+Runtimes are cheap to create. Many Runtimes may exist in an application.
 
     runtime = Runtime()
 
