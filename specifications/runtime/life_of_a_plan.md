@@ -33,7 +33,7 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-Plans are added to a transaction. Plans are often added in relation to a specific target.
+Plans are associated to targets using a Transaction.
 
     transaction = Transaction()
     transaction.add(animation, circleView)
