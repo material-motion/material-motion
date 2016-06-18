@@ -90,6 +90,8 @@ A single Executor instance is created for each *type* of Plan registered to a ta
 
 ### Step 5: Executors execute Plans
 
-The Runtime is now expected to send relevant events to the Executor.
+The Runtime is now expected to send relevant events to each Executor instance.
+
+Executors are often provided with the Plans that caused their creation. This allows the Executor to translate specific Plans in to actionable logic.
 
 Some Executors require an `update` event. This event is called many times per second. The Executor can apply the perceived change in time to some internal progress
