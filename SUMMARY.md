@@ -11,7 +11,6 @@
        * [Plan](specifications/runtime/plan.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Executor](specifications/runtime/executor.md)
-       * [Plugins](specifications/runtime_plugins.md)
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Directors](specifications/directors.md)
