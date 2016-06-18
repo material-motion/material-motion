@@ -61,7 +61,7 @@ The Runtime is now expected to execute its Plans.
 
 The Runtime uses entities called **Executors** to execute types of Plans. The Executor is the specialized mediating agent between a Plan and its execution.
 
-We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
+We'll assume a function exists that returns an Executor capable of executing a type of Plan. The method signature for this method might look like this:
 
     function executorForPlan(Plan, target, existingExecutors) -> Executor
 
