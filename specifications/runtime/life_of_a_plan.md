@@ -2,6 +2,8 @@
 
 Let's walk through the life of a Plan.
 
+> Any code you see here is pseudo-code.
+
 ### Step 1: Create a Runtime
 
 Runtimes are cheap and easy to create. Many Runtimes may exist in an application. Let's create one.
