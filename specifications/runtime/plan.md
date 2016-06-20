@@ -1,5 +1,7 @@
 # Plans
 
+This is the engineering specification for the Plan object.
+
 A Plan is an object representing **what you want something to do**.
 
 A Plan is the *plan* part of the separation of plan/execution.
