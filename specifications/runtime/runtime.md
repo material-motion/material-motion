@@ -54,7 +54,7 @@ Plans define the Executor they require. This requires Plans to be aware of their
 
 > This is the preferred approach.
 
-- Map Executor to Plan type with lookup table
+- Map Executor type to Plan type with lookup table
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
