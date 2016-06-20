@@ -192,6 +192,24 @@ NOTE: It may be more valuable to have Executor-level idling. Target-level idling
 
 ---
 
+TODO: Spec out named plans.
+
+When a named Plan is committed to a target, two things must happen:
+
+1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
+2. Provide the relevant Executor with the new named Plan.
+
+Example pseudo-code from within the Runtime:
+
+    # Step 1
+    ExecutorForName(name).removePlanWithName(name)
+    
+    # Step 2
+    Executor = ExecutorForPlan(plan)
+    Executor.setPlan(plan, withName: name)
+    ExecutorForName(name) = Executor
+
+
 ## Open topics
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
