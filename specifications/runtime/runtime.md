@@ -78,13 +78,17 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 **Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
-`feature: duplication` **Event: new target**: The Runtime should send an event each time a new target is referenced.
+<p style="text-align:center"><tt>/MVP</tt></p>
 
-The receivers of this event should be allowed to set a new "shadow" instance of the target. The shadow instance will be provided to the Executors.
+---
+
+<p style="text-align:center"><tt>feature: new target event</tt></p>
+
+The Runtime should send an event each time a new target is referenced.
+
+The receivers of this event can set a new sandbag instance of the target. Executors are expected to act on the sandbag instance rather than the original target.
 
 This event enables "view duplication".
-
-<p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
 
