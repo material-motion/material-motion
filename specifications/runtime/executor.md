@@ -42,8 +42,13 @@ The update function will be called as part of the Runtime's update event.
 
 Example pseudo-code:
 
+    enum ExecutorActivityState {
+      .Active
+      .Idle
+    }
+    
     protocol UpdateExecuting {
-      function update() -> Boolean
+      function update() -> ExecutorActivityState
     }
 
 The update function is expected to return a Boolean value. A return value of true indicates that the Executor is active. A return value of false indicates that the Executor is idle.
