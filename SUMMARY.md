@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Engineering concepts](specifications/README.md)
+* [Engineering specifications](specifications/README.md)
    * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
