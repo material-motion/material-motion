@@ -140,6 +140,14 @@ This is a more focused event than the "Runtime activity state did change".
 
 This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
 
+    Runtime {
+      function addActivityStateObserverForTarget(target, function)
+    }
+    
+    runtime.addActivityStateObserverForTarget(target, function(newState) {
+      // Start a new transaction and register it to the Runtime...
+    })
+
 > NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors. Perhaps you could use plans as the entry-point:
 >
 >     transaction.add(plan, target, function() {
