@@ -24,7 +24,7 @@ Example pseudo-code:
 
 Requires: [Transaction](transaction.md)
 
-**One Executor per type of Plan per target**: A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
+**One instance of an Executor type per target**: Create One Executor instance for each *type* of Executor required by a target. This allows multiple Plans to affect a single Executor instance. The Executors can then maintain state across multiple Plans.
 
 ![](../../_assets/OneExecutor.svg)
 
