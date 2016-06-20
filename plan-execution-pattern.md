@@ -1,5 +1,7 @@
 ## Separation of plan/execution
 
+This section defines a software design pattern. This pattern aids the development of complex interactive applications.
+
 **Plan**: a detailed proposal for doing or achieving something.
 
 **Execution**: the carrying out or putting into effect of a plan, order, or course of action.
