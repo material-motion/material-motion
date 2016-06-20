@@ -152,6 +152,8 @@ Unlocks [view duplication](../view_duplication.md).
 
 A sandbag instance is an instance created on demand to be used in place of the original target.
 
+One common implementation of sandbagging is "view duplication". In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
+
 Executors are expected to act on the sandbag instance rather than the original target.
 
 <p style="text-align:center"><tt>/feature: new target event</tt></p>
