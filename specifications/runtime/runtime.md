@@ -12,6 +12,14 @@ Example pseudo-code:
 
     runtime = Runtime()
 
+**Transaction commit API**: Provide an API to commit Transactions to a Runtime.
+
+Example pseudo-code:
+
+    runtime.commit(transaction)
+
+Requires: [Transaction](transaction.md)
+
 **One Executor per type of Plan per target**: A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
 
 ![](../../_assets/OneExecutor.svg)
