@@ -11,7 +11,7 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Creation**: Transactions can be created at any time.
+**Simple initializer**: A Transaction is cheap to create.
 
     transaction = Transaction()
 
