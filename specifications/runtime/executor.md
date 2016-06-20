@@ -6,7 +6,7 @@ Executors are the objects responsible for executing Plan.
 
 Printable tech tree/checklist:
 
-
+![](../../_assets/ExecutorTechTree.svg)
 
 ---
 
