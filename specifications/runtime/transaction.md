@@ -58,10 +58,24 @@ Transactions support named add/remove operations.
     # Remove any named Plan from a target.
     transaction.remove(name, target)
 
-`feature: serialization` **Serialization**: Transactions may be serializable.
+Operation order matters for named operations.
+
+<p style="text-align:center"><tt>/feature: named operations</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: serialization</tt></p>
+
+Transactions are serializable.
 
 Serializable transactions can be sent over a wire or recorded to disk.
 
-`feature: optimized` **Optimizations**: Transactions can optimize their operations.
+<p style="text-align:center"><tt>/feature: serialization</tt></p>
 
-TODO: Emphasize that it's important that which targets were "poked" by a Transaction is not lost. The Runtime needs this for its "new target" event.
+---
+
+<p style="text-align:center"><tt>feature: optimized</tt></p>
+
+Transactions optimize their operations.
+
+<p style="text-align:center"><tt>/feature: optimized</tt></p>
