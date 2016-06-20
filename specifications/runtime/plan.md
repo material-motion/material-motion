@@ -13,6 +13,10 @@ Example Plan objects:
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
+Printable tech tree/checklist:
+
+![](../../_assets/PlanSpecification.svg)
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
