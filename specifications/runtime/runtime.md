@@ -140,11 +140,11 @@ This is a more focused event than the "Runtime activity state did change".
 
 This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
 
-    Runtime {
+    Transaction {
       function addActivityStateObserverForTarget(target, function)
     }
     
-    runtime.addActivityStateObserverForTarget(target, function(newState) {
+    transaction.addActivityStateObserverForTarget(target, function(newState) {
       // Start a new transaction and commit it to the Runtime...
     })
 
