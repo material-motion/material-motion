@@ -1,6 +1,6 @@
 # Engineering concepts
 
-This chapter is written to be both 🌟 aspirational 🌟 and educational.
+This chapter is written to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
 Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable we've included links to prior art and research.
 
