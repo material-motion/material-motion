@@ -109,7 +109,9 @@ Executors can hook in to the Runtime's update event. The update event fires many
 
 **Remote execution**
 
-Some Executors use external systems. For example, an Executor might turn a Plan into an animation object more easily understood by the platform. The Executor in this case is responsible for informing the Runtime of two things: when the remote execution will start, and when the remote execution has ended.
+Some Executors use external systems. For example, an Executor might turn a Plan into an animation object more easily understood by the platform.
+
+The Executor is responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
 
 TODO: Fold this last paragraph in to the above.
 
