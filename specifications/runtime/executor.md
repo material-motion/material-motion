@@ -38,15 +38,19 @@ Example pseudo-code from within the Runtime:
 
 The Executor may choose not to implement this API.
 
+The update event will be called many times per second. The Executor may use this method to perform time-based calculations.
+
+The method returns an activity state enumeration. This enumeration has two states: active and idle.
+
 Example pseudo-code:
 
-    enum ExecutorActivityState {
+    enum ActivityState {
       .Active
       .Idle
     }
     
     protocol UpdateExecuting {
-      function update() -> ExecutorActivityState
+      function update() -> ActivityState
     }
 
 The update function is expected to return an ExecutorActivityState.
