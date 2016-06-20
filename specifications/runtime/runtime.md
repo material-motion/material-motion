@@ -58,7 +58,7 @@ Plans define the Executor they require. This requires Plans to be aware of their
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
-**Event: runtime activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
+**Event: activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
 
 This event enables "Transition Directors".
 
