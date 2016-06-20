@@ -127,12 +127,14 @@ Runtimes support named Plans. Named Plans are plans with a name associated via t
 Example pseudo-code from within the Runtime:
 
     # Step 1
-    ExecutorForName(name).removePlanWithName(name)
+    executorForName(name).removePlanWithName(name)
     
     # Step 2
-    Executor = ExecutorForPlan(plan)
-    Executor.setPlan(plan, withName: name)
-    ExecutorForName(name) = Executor
+    executor = executorForPlan(plan)
+    executor.setPlan(plan, withName: name)
+    executorForName(name) = executor
+
+<p style="text-align:center"><tt>/feature: named plans</tt></p>
 
 ---
 
