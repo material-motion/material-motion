@@ -135,7 +135,9 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 Fire an observable event when a new target is referenced.
 
-The receivers of this event can set a new sandbag instance of the target. Executors are expected to act on the sandbag instance rather than the original target.
+Unlocks [view duplication](../view_duplication.md).
+
+**new target API**: Provide a mechanism for listening to new target references.
 
     Runtime {
       function addNewTargetObserver(function)
@@ -146,7 +148,11 @@ The receivers of this event can set a new sandbag instance of the target. Execut
       return clonedTarget
     })
 
-Unlocks [view duplication](../view_duplication.md).
+**Sandbagging**: Allow the event receiver to return a new sandbag instance.
+
+A sandbag instance is an instance created on demand to be used in place of the original target.
+
+Executors are expected to act on the sandbag instance rather than the original target.
 
 <p style="text-align:center"><tt>/feature: new target event</tt></p>
 
