@@ -6,7 +6,7 @@ This section defines a software design pattern. The pattern involves a separatio
 
 **Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
-Separating plans of motion from their execution is important because:
+Benefits of this separation:
 
 - It allows execution to occur in a separate, potentially non-blocking context.
 - It enables design tooling and engineering to communicate in a language that isn't code.
