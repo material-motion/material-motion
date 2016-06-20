@@ -115,7 +115,7 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 <p style="text-align:center"><tt>feature: named plans</tt></p>
 
-Runtimes support named Plans. Named Plans are plans with an associated name.
+Runtimes support named Plans. Named Plans are plans with a name associated via the Transaction.
 
 Two things must happen when a named Plan is committed:
 
