@@ -33,6 +33,12 @@ Pseudo-code example:
       var toValue
     }
 
+**Copyable**: Plans can be copied.
+
+Pseudo-code example:
+
+    planCopy = plan.copy()
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
