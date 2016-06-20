@@ -4,8 +4,8 @@ This section defines a system that emphasizes a separation of plan from its exec
 
 A Runtime serves two primary purposes:
 
-- Coordinate the expression of diverse types of motion and interaction.
 - Provide an abstraction layer between the application engineer and execution systems.
+- Coordinate the expression of diverse types of motion and interaction.
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
