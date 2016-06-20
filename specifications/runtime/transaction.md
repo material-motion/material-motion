@@ -13,11 +13,15 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 **Simple initializer**: A Transaction is cheap to create.
 
+Example pseudo-code:
+
     transaction = Transaction()
 
 **Operations**: Transactions support a basic add operation.
 
 > Note: the function names included below are not prescriptive. Choose appropriate names for your language/platform conventions.
+
+Example pseudo-code:
 
     # Associate a Plan with a target.
     transaction.add(plan, target)
@@ -30,6 +34,8 @@ Operations are enumerated in the order in which they were recorded.
 
 Targets are enumerated in the order in which they were first referenced.
 
+Example pseudo-code:
+
     > transaction.targets
     [
       circleView,
@@ -37,6 +43,8 @@ Targets are enumerated in the order in which they were first referenced.
     ]
 
 **Copying Plans**: When a Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
+
+Example pseudo-code:
 
     plan.fromValue = 0
     transaction.add(plan, target)
@@ -52,6 +60,8 @@ Note that the first plan's `fromValue` did not magically transform into `5`.
 
 **Committing**: Transactions must be committed to a Runtime.
 
+Example pseudo-code:
+
     runtime.commit(transaction)
 
 <p style="text-align:center"><tt>/MVP</tt></p>
@@ -61,6 +71,8 @@ Note that the first plan's `fromValue` did not magically transform into `5`.
 <p style="text-align:center"><tt>feature: named operations</tt></p>
 
 Transactions support named add/remove operations.
+
+Example pseudo-code:
 
     # Associate a named Plan with a target.
     transaction.add(plan, name, target)
