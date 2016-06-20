@@ -4,9 +4,9 @@ This chapter defines engineering specifications and concepts. This chapter is a 
 
 The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
-Statements are written as simple facts, but all are open for debate and conversation.
+Though statements are written as simple facts, all are open for debate and conversation.
 
-Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable we've included links to prior art and research.
+Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable, we've included links to both ours and others' work in the field.
 
 Within the best of our ability the provided specifications are platform and language-agnostic.
 
