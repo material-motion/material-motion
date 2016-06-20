@@ -105,7 +105,7 @@ The Runtime now provides each Plan instance to the relevant Executor. This allow
 
 ### Step 6: Executors execute Plans
 
-Executors can implement their Plans in a countless number of ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
+Executors can execute their Plans in a countless number of ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
 
 **Update execution**
 
