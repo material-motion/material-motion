@@ -47,12 +47,12 @@ The Transaction's log might resemble the following pseudo-object:
 
     > transaction.log
     [
-      {action:"add", plan: FadeIn, target: circleView},
-      {action:"add", plan: Draggable, target: squareView},
-      {action:"add", plan: Pinchable, name: "name1", target: squareView},
-      {action:"add", plan: Rotatable, name: "name2", target: squareView},
-      {action:"remove", name: "name2", target: squareView}
-      {action:"add", plan: Draggable, target: circleView},
+      {action:"add",    plan: FadeIn,                   target: circleView},
+      {action:"add",    plan: Draggable,                target: squareView},
+      {action:"add",    plan: Pinchable, name: "name1", target: squareView},
+      {action:"add",    plan: Rotatable, name: "name2", target: squareView},
+      {action:"remove",                  name: "name2", target: squareView}
+      {action:"add",    plan: Draggable,                target: circleView},
     ]
 
 A transaction must be committed to a Runtime in order for it to take affect.
