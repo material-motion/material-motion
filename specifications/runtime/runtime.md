@@ -150,6 +150,14 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
 
 NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors.
 
+    Transaction {
+      function addActivityStateObserverForPlan(plan, function)
+    }
+    
+    transaction.addActivityStateObserverForPlan(plan, function(newState) {
+      // Start a new transaction and commit it to the Runtime...
+    })
+
 ---
 
 ## Open topics
