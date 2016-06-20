@@ -76,7 +76,7 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 - The Executor has an active remote execution.
 - The Executor returned `true` from its last update event.
 
-**Event: activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
+**Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
 This event enables "Transition Directors".
 
