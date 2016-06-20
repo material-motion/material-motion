@@ -99,7 +99,11 @@ We've created three Executors in total. `circleView` has two Executors. `squareV
 
 A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
 
-### Step 5: Executors execute Plans
+### Step 5: Provide Plans to Executors
+
+The Runtime now provides each Plan instance to the relevant Executor. This allows the Executor to translate specific Plans in to actionable logic.
+
+### Step 6: Executors execute Plans
 
 Executors can implement their Plans in a countless number of ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
 
@@ -112,7 +116,3 @@ Executors can hook in to the Runtime's update event. The update event fires many
 Some Executors use external systems. For example, an Executor might turn a Plan into an animation object more easily understood by the platform.
 
 The Executor is responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
-
-TODO: Fold this last paragraph in to the above.
-
-Executors are often provided with the Plans that caused their creation. This allows the Executor to translate specific Plans in to actionable logic.
