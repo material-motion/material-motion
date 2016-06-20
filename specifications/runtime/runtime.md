@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Runtime object.
 
-Printable tech tree:
+Printable tech tree/checklist:
 
 ![](../../_assets/RuntimeTechTree.svg)
 
