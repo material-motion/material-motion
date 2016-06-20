@@ -27,7 +27,13 @@ To answer the first question we introduce two new types into the system: the Pla
 
 To answer the second question we introduce one more type: the Executor.
 
-Add Plans to Transactions. Commit Transactions to Runtimes. Runtimes create Executors. Or in visual form:
+The following statements define the relationships between each type:
+
+1. Add Plans to Transactions.
+2. Commit Transactions to Runtimes.
+3. Runtimes create Executors.
+
+In visual form:
 
 ![](../../_assets/RuntimeOverview.svg)
 
