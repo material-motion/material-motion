@@ -36,6 +36,10 @@ Example pseudo-code from within the Runtime:
       executor.addPlan(plan)
     }
 
+**Update event**: Executors can provide an update function.
+
+The update function will be called as part of the Runtime's update event.
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
