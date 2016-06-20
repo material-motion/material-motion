@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Runtime object.
 
-Visual tech tree:
+Printable tech tree:
 
 ![](../../_assets/RuntimeTechTree.svg)
 
