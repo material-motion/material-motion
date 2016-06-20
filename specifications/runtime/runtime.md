@@ -48,13 +48,13 @@ Note that "one Executor per type of Plan" does not resolve the problem of sharin
 
 This lookup can be implemented in many ways:
 
-- Map Plan to Executor type
+- Plans map to Executor type
 
 Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
 > This is the preferred approach.
 
-- Map Executor to Plan type
+- Map Executor to Plan type with lookup table
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
