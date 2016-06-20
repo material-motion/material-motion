@@ -35,7 +35,7 @@ Pseudo-code example:
 
 **Copyable**: Plans can be copied.
 
-Modifications made to the copy should not affect the original.
+Modifications made to the copy do not affect the original.
 
 Pseudo-code example:
 
