@@ -22,7 +22,7 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
     # Associate a Plan with a target.
     transaction.add(plan, target)
 
-**Enumerating operations**: Operations recorded to a transaction must be enumerable.
+**Enumerating operations**: Operations recorded to a transaction are enumerable.
 
 Operations must enumerate in the exact same order in which they were recorded.
 
