@@ -11,7 +11,7 @@ Executors are the objects responsible for executing Plan.
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Initialization**: Executors are initialized with a target.
+**Initialize with target**: Executors are initialized with a target.
 
 Example pseudo-code:
 
