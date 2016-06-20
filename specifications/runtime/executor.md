@@ -3,6 +3,8 @@ Status of this document:
 
 # Executors
 
+This is the engineering specification for the Executor object.
+
 Executors are the objects responsible for executing Plan.
 
 `v1` **Who creates them?**: Runtimes create Executors.
