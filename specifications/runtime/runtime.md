@@ -50,6 +50,8 @@ The receivers of this event should be allowed to set a new "shadow" instance of 
 
 This event enables "view duplication".
 
+<p style="text-align:center"><tt>/MVP</tt></p>
+
 ---
 
 ## Experimental ideas
