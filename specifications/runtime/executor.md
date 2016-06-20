@@ -19,6 +19,10 @@ Example pseudo-code:
     protocol Executor {
     }
 
+**Not configurable**: Executors do not provide direct configuration methods.
+
+Executors can only be configured by providing them with Plans.
+
 **Initialize with target**: Executors are initialized with a target.
 
 Example pseudo-code:
