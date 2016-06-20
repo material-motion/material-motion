@@ -89,6 +89,16 @@ Serializable transactions can be sent over a wire or recorded to disk.
 
 Requires: Serializable Plans.
 
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a Transaction.
+
+Example pseudo-code:
+
+    # Serialize the transaction
+    json = transaction.serialize()
+    
+    # Create a new Transaction from json
+    transaction = Transaction(json)
+
 **JSON serialization**: A serialized Transaction is represented in JSON.
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
