@@ -1,5 +1,7 @@
 # Transactions
 
+This is the engineering specification for the Transaction object.
+
 Transactions aggregate requests for Plan-target associations. Transactions are designed to be committed to a Runtime.
 
 `v1` **Creation**: Transactions can be created at any time.
