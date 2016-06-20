@@ -79,7 +79,7 @@ Store named operations in the same log as unnamed operations.
 
 Targets referenced in a transaction are enumerable.
 
-Targets are enumerated in the order in which they were first referenced.
+**Order**: Targets are enumerated in the order in which they were first referenced.
 
 Example pseudo-code:
 
