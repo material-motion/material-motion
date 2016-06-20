@@ -54,7 +54,7 @@ Example pseudo-code:
     json = plan.serialize()
     
     # Create a new Plan from json
-    transaction = Plan(json)
+    plan = Plan(json)
 
 **JSON serialization**: A serialized Plan is represented in JSON.
 
