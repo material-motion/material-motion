@@ -68,21 +68,6 @@ Example pseudo-code:
       function removePlanWithName(name)
     }
 
-When a named Plan is committed to a target, two things must happen:
-
-1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
-2. Provide the relevant Executor with the new named Plan.
-
-Example pseudo-code from within the Runtime:
-
-    # Step 1
-    ExecutorForName(name).removePlanWithName(name)
-    
-    # Step 2
-    Executor = ExecutorForPlan(plan)
-    Executor.setPlan(plan, withName: name)
-    ExecutorForName(name) = Executor
-
 <p style="text-align:center"><tt>/feature: Named plans</tt></p>
 
 ---
