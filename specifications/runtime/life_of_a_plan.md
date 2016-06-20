@@ -117,6 +117,3 @@ Some Executors use external systems. For example, an Executor might turn a Plan 
 
 The Executor is responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
 
----
-
-This concludes the life of a Plan.
