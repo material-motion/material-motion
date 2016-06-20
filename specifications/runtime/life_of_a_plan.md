@@ -79,11 +79,12 @@ Recall the transaction log we'd explored above:
 
     > transaction.log
     [
-      {action:"add", plan: FadeIn, target: circleView},
-      {action:"add", plan: Draggable, target: squareView},
-      {action:"addNamed", plan: Pinchable, name: "name1", target: squareView},
-      {action:"addNamed", plan: Rotatable, name: "name2", target: squareView},
-      {action:"remove", plan: "name2", target: squareView}
+      {action:"add",    target: circleView, plan: FadeIn},
+      {action:"add",    target: squareView, plan: Draggable},
+      {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
+      {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
+      {action:"remove", target: squareView,                  name: "name2"}
+      {action:"add",    target: circleView, plan: Draggable},
     ]
 
 The above operations committed to the following internal Runtime state:
