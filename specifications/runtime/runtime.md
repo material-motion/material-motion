@@ -8,6 +8,8 @@ This is the engineering specification for the Runtime object.
 
 **Simple initializer**: A Runtime should be cheap to create.
 
+Example pseudo-code:
+
     runtime = Runtime()
 
 **One Executor per type of Plan per target**: A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
