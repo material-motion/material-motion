@@ -33,18 +33,6 @@ Example pseudo-code:
 
 Operations are enumerated in the order in which they were recorded.
 
-**Target enumeration**: Targets referenced in a transaction are enumerable.
-
-Targets are enumerated in the order in which they were first referenced.
-
-Example pseudo-code:
-
-    > transaction.targets
-    [
-      circleView,
-      squareView
-    ]
-
 **Copying Plans**: When a Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
 
 Example pseudo-code:
@@ -84,6 +72,24 @@ Example pseudo-code:
 Store named operations in the same log as unnamed operations.
 
 <p style="text-align:center"><tt>/feature: named operations</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: target enumeration</tt></p>
+
+Targets referenced in a transaction are enumerable.
+
+Targets are enumerated in the order in which they were first referenced.
+
+Example pseudo-code:
+
+    > transaction.targets
+    [
+      circleView,
+      squareView
+    ]
+
+<p style="text-align:center"><tt>/feature: target enumeration</tt></p>
 
 ---
 
