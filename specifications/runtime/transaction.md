@@ -75,7 +75,7 @@ Example pseudo-code:
 
 **Order**: Operation order also matters for named operations.
 
-Do not store named operations in a dictionary/map.
+Store named operations in the same log as unnamed operations.
 
 <p style="text-align:center"><tt>/feature: named operations</tt></p>
 
