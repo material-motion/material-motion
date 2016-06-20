@@ -17,7 +17,7 @@ Example Plan objects:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Protocol**: A Plan is an abstract protocol, if your language allows.
+**Abstract type**: A Plan is an abstract protocol or interface, if your language allows.
 
 Pseudo-code example:
 
