@@ -2,6 +2,10 @@
 
 This is the engineering specification for the Runtime object.
 
+Visual tech tree:
+
+![](../../_assets/RuntimeTechTree.svg)
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
