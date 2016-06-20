@@ -16,14 +16,18 @@ Example Plan objects:
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
-**Protocol**: Represent Plans as an abstract protocol, if your language allows.
+---
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
+**Protocol**: A Plan is an abstract protocol, if your language allows.
 
 Pseudo-code example:
 
     protocol Plan {
     }
 
-`v1` **Configuration**: Plans can have configurable properties.
+**Configurable**: Plans can have configurable properties.
 
 Pseudo-code example:
 
@@ -32,10 +36,14 @@ Pseudo-code example:
       var toValue
     }
 
-`v1` **Execution**: Executors execute Plans.
+<p style="text-align:center"><tt>/MVP</tt></p>
 
-This separation of concerns encourages reusable code.
+---
 
-`feature: serialization` **Serialization**: Plans may be serializable.
+<p style="text-align:center"><tt>feature: serialization</tt></p>
+
+Plans are serializable.
 
 Serializable Plans can be sent over a wire or recorded to disk.
+
+<p style="text-align:center"><tt>/feature: serialization</tt></p>
