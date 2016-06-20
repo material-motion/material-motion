@@ -29,7 +29,7 @@ Example pseudo-code:
 
     executor = Executor(target)
 
-**Provide Plans**: Provide Plans to Executors as they're committed to the Runtime.
+**Add Plans API**: Plans are provided to Executors.
 
 The Executor may choose not to implement this API.
 
