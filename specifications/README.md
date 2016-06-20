@@ -6,7 +6,7 @@ The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
 The audience is software engineers interested in building motion and interaction systems.
 
-Though statements are written as simple facts, all are open for debate and conversation.
+Throughout this chapter we write statements as simple facts. All are open for debate and conversation.
 
 Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable, we've included links to both ours and others' work in the field.
 
