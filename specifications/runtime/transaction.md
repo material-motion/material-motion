@@ -6,6 +6,7 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 ![](../../_assets/TransactionTechTree.svg)
 
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
