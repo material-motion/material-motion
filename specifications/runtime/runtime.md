@@ -127,13 +127,13 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 **Many observers**: Allow many observers to be registered.
 
-<p style="text-align:center"><tt>/feature: activity state did change event</tt></p>
+<p style="text-align:center"><tt>/feature: activity state change event</tt></p>
 
 ---
 
 <p style="text-align:center"><tt>feature: new target event</tt></p>
 
-The Runtime should send an event each time a new target is referenced.
+Fire an observable event when a new target is referenced.
 
 The receivers of this event can set a new sandbag instance of the target. Executors are expected to act on the sandbag instance rather than the original target.
 
