@@ -1,4 +1,4 @@
-# Directors
+# Director
 
 A Director is an object that describes an interactive experience.
 
