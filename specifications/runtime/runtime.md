@@ -197,3 +197,4 @@ NOTE: It may be more valuable to have Executor-level idling. Target-level idling
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
 - When should Executors be removed from a Runtime?
+- Should Runtimes support target-less Plans?
