@@ -10,7 +10,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Simple initializer**: A Runtime should be cheap to create.
+**Simple initializer**: A Runtime is cheap to create.
 
 Example pseudo-code:
 
