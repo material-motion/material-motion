@@ -1,4 +1,4 @@
-# Engineering specifications
+# Engineering spec
 
 This chapter is written to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
