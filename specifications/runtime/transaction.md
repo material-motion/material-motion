@@ -29,11 +29,11 @@ Example pseudo-code:
     # Associate a Plan with a target.
     transaction.add(plan, target)
 
-**Enumerating operations**: Operations recorded to a transaction are enumerable.
+**Operation enumeration**: Operations recorded to a transaction are enumerable.
 
 Operations are enumerated in the order in which they were recorded.
 
-**Enumerating targets**: Targets referenced in a transaction are enumerable.
+**Target enumeration**: Targets referenced in a transaction are enumerable.
 
 Targets are enumerated in the order in which they were first referenced.
 
