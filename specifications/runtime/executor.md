@@ -73,6 +73,10 @@ Example pseudo-code:
 
 Executors can receive named Plans.
 
+**Add/remove API**: Executors can implement an add/remove function.
+
+If one method is implemented, so must the other.
+
 Example pseudo-code:
 
     protocol NamedPlanExecuting {
