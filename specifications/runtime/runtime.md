@@ -78,6 +78,8 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 **Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
+This enables [Transition Directors](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/transition_directors.html).
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
