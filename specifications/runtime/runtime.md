@@ -113,9 +113,9 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 Fire an observable event when the idle/active state changes.
 
-**activity state changed API**: Provide a mechanism for listening to activity state changes.
+Unlocks [Transition Directors](../transition_directors.md).
 
-Allow many observers to be registered.
+**activity state changed API**: Provide a mechanism for listening to activity state changes.
 
     Runtime {
       function addActivityStateObserver(function)
@@ -125,7 +125,7 @@ Allow many observers to be registered.
       // React to state change
     })
 
-Unlocks [Transition Directors](../transition_directors.md).
+**Many observers**: Allow many observers to be registered.
 
 <p style="text-align:center"><tt>/feature: activity state did change event</tt></p>
 
