@@ -53,8 +53,6 @@ Example pseudo-code:
       function update() -> ActivityState
     }
 
-The update function is expected to return an ExecutorActivityState.
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
