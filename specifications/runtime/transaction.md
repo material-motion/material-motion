@@ -63,6 +63,8 @@ Note that the first plan's `fromValue` did not magically transform into `5`.
 
 Transactions support named add/remove operations.
 
+**Named operations API**: Provide an API for add and remove with a name argument.
+
 Example pseudo-code:
 
     # Associate a named Plan with a target.
