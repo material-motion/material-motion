@@ -115,7 +115,7 @@ Fire an observable event when the idle/active state changes.
 
 **activity state changed API**: Provide a mechanism for listening to activity state changes.
 
-This should be a one-to-many observer pattern.
+Allow many observers to be registered.
 
     Runtime {
       function addActivityStateObserver(function)
