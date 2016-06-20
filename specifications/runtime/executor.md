@@ -11,7 +11,7 @@ Executors are the objects responsible for executing Plan.
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Initialization**: The Runtime initializes the Executor by providing a target instance.
+**Initialization**: Executors are initialized with a target.
 
 Example pseudo-code:
 
