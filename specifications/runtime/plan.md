@@ -15,7 +15,7 @@ Example Plan objects:
 
 Printable tech tree/checklist:
 
-![](../../_assets/PlanSpecification.svg)
+![](../../_assets/PlanTechTree.svg)
 
 ---
 
