@@ -12,7 +12,7 @@ Example pseudo-code:
 
     runtime = Runtime()
 
-**Transaction commit API**: Provide an API to commit Transactions to a Runtime.
+**commit API**: Provide an API to commit Transactions to a Runtime.
 
 Example pseudo-code:
 
