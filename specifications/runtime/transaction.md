@@ -4,7 +4,6 @@ This is the engineering specification for the Transaction object.
 
 Transactions aggregate requests for Plan-target associations. Transactions are designed to be committed to a Runtime.
 
-
 Printable tech tree/checklist:
 
 ![](../../_assets/TransactionTechTree.svg)
