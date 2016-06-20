@@ -97,6 +97,12 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 - The Executor has an active remote execution.
 - The Executor returned `true` from its last update event.
 
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: activity state did change event</tt></p>
+
 **Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
     Runtime {
@@ -109,7 +115,7 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 Unlocks [Transition Directors](../transition_directors.md).
 
-<p style="text-align:center"><tt>/MVP</tt></p>
+<p style="text-align:center"><tt>/feature: activity state did change event</tt></p>
 
 ---
 
@@ -129,6 +135,8 @@ The receivers of this event can set a new sandbag instance of the target. Execut
     })
 
 Unlocks [view duplication](../view_duplication.md).
+
+<p style="text-align:center"><tt>/feature: new target event</tt></p>
 
 ---
 
