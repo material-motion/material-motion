@@ -1,5 +1,6 @@
 Status of this document:
 ![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Plan specification
 
 This is the engineering specification for the Plan object.
