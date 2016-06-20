@@ -105,7 +105,7 @@ Executors can implement their Plans in a countless number of ways. Let's focus o
 
 **Update execution**
 
-Executors can hook in to the Runtime's update event. The update event fires many times per second and provides some sort of time step. This time step can be used to drive the execution.
+Executors can hook in to the Runtime's update event. The update event fires many times per second and provides some sort of time step. This time step can drive the execution.
 
 **Remote execution**
 
