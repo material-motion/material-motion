@@ -16,33 +16,33 @@ Example pseudo-code:
 
 ![](../../_assets/OneExecutor.svg)
 
-Consider the following pseudo-code transaction involving physical simulation:
+> Consider the following pseudo-code transaction involving physical simulation:
+> 
+>     transaction = Transaction()
+>     transaction.add(Friction.on(position), circleView)
+>     transaction.add(AnchoredSpring.on(position), circleView)
+>     runtime.commit(transaction)
+> 
+> `circleView` now has two Plans and one Executor, a PhysicalSimulationExecutor. Both Plans are provided to the Executor instance.
+> 
+> The Executor knows the following:
+> 
+> - It has two forces, both affecting `position`.
+> - It needs to model `velocity` for the `position`.
+> 
+> The Executor creates some state that will track the position's velocity.
+> 
+> The Executor can now:
+> 
+> 1. convert each Plan into a physics force,
+> 2. apply the force to the velocity, and
+> 3. apply the velocity to the position
 
-    transaction = Transaction()
-    transaction.add(Friction.on(position), circleView)
-    transaction.add(AnchoredSpring.on(position), circleView)
-    runtime.commit(transaction)
+> on every frame.
+> 
+> Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
 
-`circleView` now has two Plans and one Executor, a PhysicalSimulationExecutor. Both Plans are provided to the Executor instance.
-
-The Executor knows the following:
-
-- It has two forces, both affecting `position`.
-- It needs to model `velocity` for the `position`.
-
-The Executor creates some state that will track the position's velocity.
-
-The Executor can now:
-
-1. convert each Plan into a physics force,
-2. apply the force to the velocity, and
-3. apply the velocity to the position
-
-on every frame.
-
-Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
-
-> Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
+Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
 ## Events
 
