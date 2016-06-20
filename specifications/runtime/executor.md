@@ -46,7 +46,7 @@ Example pseudo-code:
       function update() -> Boolean
     }
 
-The update function is expected to return a Boolean value. A return value of true indicates that the Executor is active. A return value of false indicates that the Executor is inactive.
+The update function is expected to return a Boolean value. A return value of true indicates that the Executor is active. A return value of false indicates that the Executor is idle.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
