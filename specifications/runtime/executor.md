@@ -11,8 +11,6 @@ Executors are the objects responsible for executing Plan.
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Create on Transaction commit**: Create Executors when a Transaction is committed.
-
 **Initialization**: The Runtime initializes the Executor by providing a target instance.
 
 Example pseudo-code:
