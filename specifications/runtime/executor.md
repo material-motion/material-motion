@@ -19,22 +19,30 @@ Example pseudo-code:
 
     executor = Executor(target)
 
-## Plan
+**Provide Plans**: Provide Plans to Executors as they're committed to the Runtime.
 
-`v1` **Plans**: Plans may be provided to Executors as they're committed to the Runtime.
+The Executor may choose not to implement this API.
 
-Example pseudo-API available on the Executor:
+Example pseudo-code:
 
-    Executor {
+    protocol PlanExecuting {
       function addPlan(plan)
     }
 
 Example pseudo-code from within the Runtime:
 
-    Executor = ExecutorForPlan(plan)
-    Executor.addPlan(plan)
+    executor = executorForPlan(plan, target)
+    if executor.addPlan {
+      executor.addPlan(plan)
+    }
 
-`feature: named` **Named Plans**: Executors may choose to support named Plans. When a named Plan is committed to a target, two things must happen:
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: Named plans</tt></p>
+
+Executors can support named Plans. When a named Plan is committed to a target, two things must happen:
 
 1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
 2. Provide the relevant Executor with the new named Plan.
