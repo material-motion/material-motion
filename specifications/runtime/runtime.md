@@ -78,7 +78,7 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 **Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
-Enables the creation of [Transition Directors](../transition_directors.md).
+Unlocks [Transition Directors](../transition_directors.md).
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -90,7 +90,7 @@ The Runtime should send an event each time a new target is referenced.
 
 The receivers of this event can set a new sandbag instance of the target. Executors are expected to act on the sandbag instance rather than the original target.
 
-Enables [view duplication](../view_duplication.md).
+Unlocks [view duplication](../view_duplication.md).
 
 ---
 
