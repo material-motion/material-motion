@@ -15,7 +15,7 @@
    * [Transient views](specifications/transient_views.md)
    * [Director](specifications/directors.md)
        * [Transition Director](specifications/transition_directors.md)
-       * [Interaction Directors](specifications/interaction_directors.md)
+       * [Interaction Director](specifications/interaction_directors.md)
    * [Debugging](specifications/debugging.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
