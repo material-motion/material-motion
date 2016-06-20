@@ -1,7 +1,7 @@
 Status of this document:
 ![](../../../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Executors
+# Executor specification
 
 This is the engineering specification for the Executor object.
 
