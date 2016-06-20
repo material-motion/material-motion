@@ -113,6 +113,10 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 Fire an observable event when the idle/active state changes.
 
+**activity state changed API**: Provide a mechanism for listening to activity state changes.
+
+This should be a one-to-many observer pattern.
+
     Runtime {
       function addActivityStateObserver(function)
     }
