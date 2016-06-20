@@ -73,7 +73,9 @@ Example pseudo-code:
     # Remove any named Plan from a target.
     transaction.remove(name, target)
 
-Operation order matters for named operations.
+**Order**: Operation order also matters for named operations.
+
+Do not store named operations in a dictionary.
 
 <p style="text-align:center"><tt>/feature: named operations</tt></p>
 
