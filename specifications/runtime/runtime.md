@@ -48,21 +48,17 @@ Note that "one Executor per type of Plan" does not resolve the problem of sharin
 
 This lookup can be implemented in many ways:
 
-**Map Plan to Executor type**
+- Map Plan to Executor type
 
 Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
 > This is the preferred approach.
 
-**Map Executor to Plan type**
+- Map Executor to Plan type
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
-## Events
-
-A Runtime must generate events. These events should be observable by external entities.
-
-`v1` **Event: runtime activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
+**Event: runtime activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
 
 This event enables "Transition Directors".
 
