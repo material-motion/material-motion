@@ -37,9 +37,9 @@ In visual form:
 
 ![](../../_assets/RuntimeOverview.svg)
 
-Learn more about this process by reading [Life of a Plan](life_of_a_plan.md).
+Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.md).
 
-Engineering specifications:
+Or dive in to the engineering specifications:
 
 - [Runtime](runtime.md).
 - [Plan](plan.md).
