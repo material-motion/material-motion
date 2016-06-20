@@ -19,8 +19,8 @@ Example pseudo-code:
 > Consider the following pseudo-code transaction involving physical simulation:
 > 
 >     transaction = Transaction()
->     transaction.add(Friction.on(position), circleView)
->     transaction.add(AnchoredSpring.on(position), circleView)
+>     transaction.add(Friction(), circleView)
+>     transaction.add(AnchoredSpringAtLocation(x, y), circleView)
 >     runtime.commit(transaction)
 > 
 > `circleView` now has two Plans and one Executor, a PhysicalSimulationExecutor. Both Plans are provided to the Executor instance.
