@@ -36,9 +36,17 @@ Example pseudo-code from within the Runtime:
       executor.addPlan(plan)
     }
 
-**Update event**: Executors can provide an update function.
+**Update event**: Executors can implement an update function.
 
 The update function will be called as part of the Runtime's update event.
+
+Example pseudo-code:
+
+    protocol UpdateExecuting {
+      function update() -> Boolean
+    }
+
+The update function is expected to return a Boolean value. A return value of true indicates that the Executor is active. A return value of false indicates that the Executor is inactive.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
