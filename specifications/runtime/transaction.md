@@ -55,12 +55,6 @@ The transaction's log must look like so:
 
 Note that the first plan's `fromValue` did not magically transform into `5`.
 
-**Committing**: Transactions must be committed to a Runtime.
-
-Example pseudo-code:
-
-    runtime.commit(transaction)
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
