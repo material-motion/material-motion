@@ -1,4 +1,4 @@
-# Transactions
+# Transaction specification
 
 This is the engineering specification for the Transaction object.
 
