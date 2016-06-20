@@ -44,6 +44,22 @@ Example pseudo-code:
 
 Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
+**Plan ↔ Executor association**
+
+We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
+
+    function executorForPlan(Plan, target, existingExecutors) -> Executor
+
+This function could use an `Plan type → Executor type` look-up table. The look-up could be implemented in many ways:
+
+**Plan → Executor**
+
+Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+
+**Executor → Plan**
+
+Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
+
 ## Events
 
 A Runtime should generate events. These events should be observable by external entities.
@@ -76,24 +92,6 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
 
 
 ---
-
-## Considerations
-
-### Plan ↔ Executor association
-
-We'll assume a function exists that returns an Executor capable of fulfilling a type of Plan. The method signature for this method might look like this:
-
-    function executorForPlan(Plan, target, existingExecutors) -> Executor
-
-This function could use an `Plan type → Executor type` look-up table. The look-up could be implemented in many ways:
-
-**Plan → Executor**
-
-Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
-
-**Executor → Plan**
-
-Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
 ## Open topics
 
