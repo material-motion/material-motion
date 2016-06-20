@@ -4,6 +4,10 @@ This is the engineering specification for the Executor object.
 
 Executors are the objects responsible for executing Plan.
 
+Printable tech tree/checklist:
+
+
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
