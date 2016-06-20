@@ -87,6 +87,10 @@ Transactions are serializable.
 
 Serializable transactions can be sent over a wire or recorded to disk.
 
+Requires: Serializable Plans.
+
+**JSON serialization**: A serialized Transaction is represented in JSON.
+
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
 
 ---
