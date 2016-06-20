@@ -117,7 +117,9 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 Runtimes support named Plans. Named Plans are plans with a name associated via the Transaction.
 
-Two things must happen when a named Plan is committed:
+**Target-scoped names**: Names are scoped to the target.
+
+**Remove-then-add**: Two things must happen when a named Plan is committed:
 
 1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
 2. Provide the relevant Executor with the new named Plan.
