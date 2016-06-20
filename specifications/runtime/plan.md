@@ -1,4 +1,4 @@
-# Plans
+# Plan specification
 
 This is the engineering specification for the Plan object.
 
