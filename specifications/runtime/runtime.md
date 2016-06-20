@@ -2,6 +2,10 @@
 
 This is the engineering specification for the Runtime object.
 
+---
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
 **Single Executor per type of Plan per target**: A single Executor instance is created for each *type* of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
 
 Consider the following pseudo-code transaction involving physical simulation Plans:
