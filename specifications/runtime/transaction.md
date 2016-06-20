@@ -8,6 +8,8 @@ Printable tech tree/checklist:
 
 ![](../../_assets/TransactionTechTree.svg)
 
+Unlocks: [Runtime](runtime.md).
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
