@@ -66,16 +66,6 @@ Example pseudo-code from within the Runtime:
     Executor.setPlan(plan, withName: name)
     ExecutorForName(name) = Executor
 
-Note that the first plan's `fromValue` did not magically transform into `5`.
+<p style="text-align:center"><tt>/feature: Named plans</tt></p>
 
-`v1` **Committing**: Transactions must be committed to a Runtime.
-
-    runtime.commit(transaction)
-
-`feature: serialization` **Serialization**: Transactions may be serializable.
-
-Serializable transactions can be sent over a wire or recorded to disk.
-
-`feature: optimized` **Optimizations**: Transactions can optimize their operations.
-
-TODO: Emphasize that it's important that which targets were "poked" by a Transaction is not lost. The Runtime needs this for its "new target" event.
+---
