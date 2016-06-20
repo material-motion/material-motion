@@ -113,6 +113,28 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 ---
 
+<p style="text-align:center"><tt>feature: activity state change event</tt></p>
+
+Fire an observable event when the idle/active state changes.
+
+Unlocks [Transition Directors](../transition_directors.md).
+
+**activity state changed API**: Provide a mechanism for listening to activity state changes.
+
+    Runtime {
+      function addActivityStateObserver(function)
+    }
+    
+    runtime.addActivityStateObserver(function(newState) {
+      // React to state change
+    })
+
+**Many observers**: Allow many observers to be registered.
+
+<p style="text-align:center"><tt>/feature: activity state change event</tt></p>
+
+---
+
 <p style="text-align:center"><tt>feature: named plans</tt></p>
 
 Runtimes support named Plans. Named Plans are plans with a name associated via the Transaction.
@@ -135,28 +157,6 @@ Example pseudo-code from within the Runtime:
     executorForName(name) = executor
 
 <p style="text-align:center"><tt>/feature: named plans</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: activity state change event</tt></p>
-
-Fire an observable event when the idle/active state changes.
-
-Unlocks [Transition Directors](../transition_directors.md).
-
-**activity state changed API**: Provide a mechanism for listening to activity state changes.
-
-    Runtime {
-      function addActivityStateObserver(function)
-    }
-    
-    runtime.addActivityStateObserver(function(newState) {
-      // React to state change
-    })
-
-**Many observers**: Allow many observers to be registered.
-
-<p style="text-align:center"><tt>/feature: activity state change event</tt></p>
 
 ---
 
