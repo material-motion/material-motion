@@ -60,7 +60,7 @@ Executors define which Plans they can fulfill. This approach allows Plans to be 
 
 ## Events
 
-A Runtime should generate events. These events should be observable by external entities.
+A Runtime must generate events. These events should be observable by external entities.
 
 `v1` **Event: runtime activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
 
