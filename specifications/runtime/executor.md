@@ -42,17 +42,19 @@ Example pseudo-code from within the Runtime:
 
 <p style="text-align:center"><tt>feature: Named plans</tt></p>
 
-Executors can support named Plans. When a named Plan is committed to a target, two things must happen:
+Executors can receive named Plans.
 
-1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
-2. Provide the relevant Executor with the new named Plan.
+Example pseudo-code:
 
-Example pseudo-API available on the Executor:
-
-    Executor {
+    protocol NamedPlanExecuting {
       function addPlan(plan, withName: name)
       function removePlanWithName(name)
     }
+
+When a named Plan is committed to a target, two things must happen:
+
+1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
+2. Provide the relevant Executor with the new named Plan.
 
 Example pseudo-code from within the Runtime:
 
@@ -63,16 +65,6 @@ Example pseudo-code from within the Runtime:
     Executor = ExecutorForPlan(plan)
     Executor.setPlan(plan, withName: name)
     ExecutorForName(name) = Executor
-
-    plan.fromValue = 0
-    transaction.add(plan, target)
-    
-    plan.fromValue = 5
-    transaction.add(plan, target)
-
-The transaction's log must look like so:
-
-    [add(plan (fromValue = 0), add(plan (fromValue = 5)]
 
 Note that the first plan's `fromValue` did not magically transform into `5`.
 
