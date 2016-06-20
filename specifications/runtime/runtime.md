@@ -64,6 +64,8 @@ This lookup can be implemented in many ways:
 
 Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
+> This is the preferred approach.
+
 Example pseudo-code:
 
     class SomePlan {
@@ -75,8 +77,6 @@ Example pseudo-code:
     # In the Runtime...
     executorType = plan.executorType()
     executor = executorType()
-
-> This is the preferred approach.
 
 - Map Executor type to Plan type with look-up table
 
