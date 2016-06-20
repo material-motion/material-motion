@@ -24,7 +24,11 @@ Transactions aggregate requests for Plan-target associations. Transactions are d
 
 **Enumerating operations**: Operations recorded to a transaction are enumerable.
 
-Operations must enumerate in the exact same order in which they were recorded.
+Operations must enumerate in the same order in which they were recorded.
+
+**Enumerating targets**: Targets referenced in a transaction are enumerable.
+
+Targets must enumerate in the same order in which they were first referenced.
 
 **Copying Plans**: When a Plan is added to a transaction it must be copied. This ensures that subsequent modifications to the Plan object do not "sneak" in to the transaction. For example:
 
