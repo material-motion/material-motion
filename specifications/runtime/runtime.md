@@ -109,7 +109,7 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 ---
 
-<p style="text-align:center"><tt>feature: activity state did change</tt></p>
+<p style="text-align:center"><tt>feature: activity state change event</tt></p>
 
 Fire an observable event when the idle/active state changes.
 
