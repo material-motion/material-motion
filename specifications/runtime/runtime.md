@@ -113,6 +113,27 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 ---
 
+<p style="text-align:center"><tt>feature: named plans</tt></p>
+
+Runtimes support named Plans. Named Plans are plans with an associated name.
+
+Two things must happen when a named Plan is committed:
+
+1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
+2. Provide the relevant Executor with the new named Plan.
+
+Example pseudo-code from within the Runtime:
+
+    # Step 1
+    ExecutorForName(name).removePlanWithName(name)
+    
+    # Step 2
+    Executor = ExecutorForPlan(plan)
+    Executor.setPlan(plan, withName: name)
+    ExecutorForName(name) = Executor
+
+---
+
 <p style="text-align:center"><tt>feature: activity state change event</tt></p>
 
 Fire an observable event when the idle/active state changes.
@@ -191,24 +212,6 @@ NOTE: It may be more valuable to have Executor-level idling. Target-level idling
     })
 
 ---
-
-TODO: Spec out named plans.
-
-When a named Plan is committed to a target, two things must happen:
-
-1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
-2. Provide the relevant Executor with the new named Plan.
-
-Example pseudo-code from within the Runtime:
-
-    # Step 1
-    ExecutorForName(name).removePlanWithName(name)
-    
-    # Step 2
-    Executor = ExecutorForPlan(plan)
-    Executor.setPlan(plan, withName: name)
-    ExecutorForName(name) = Executor
-
 
 ## Open topics
 
