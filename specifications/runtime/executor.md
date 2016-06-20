@@ -36,7 +36,7 @@ Example pseudo-code from within the Runtime:
 
 **Update event**: Executors can implement an update function.
 
-The update function will be called as part of the Runtime's update event.
+The Executor may choose not to implement this API.
 
 Example pseudo-code:
 
