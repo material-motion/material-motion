@@ -52,11 +52,32 @@ This lookup can be implemented in many ways:
 
 Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
 
+Example pseudo-code:
+
+    class SomePlan {
+      function executorType() {
+        return SomeExecutor.type
+      }
+    }
+    
+    # In the Runtime...
+    executorType = plan.executorType()
+    executor = executorType()
+
 > This is the preferred approach.
 
 - Map Executor type to Plan type with look-up table
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
+
+Example pseudo-code:
+
+    # In some initialization step...
+    runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
+    
+    # In the Runtime...
+    executorType = plan.executorTypeForPlan(plan)
+    executor = executorType()
 
 **Activity state**: Activity state is one of either active or idle. The Runtime must provide a read-only API for accessing this state.
 
@@ -78,6 +99,14 @@ A Runtime is active if any of its Executor instances are active. An Executor is 
 
 **Event: activity state did change**: Fire an observable event when the idle/active state changes.
 
+    Runtime {
+      function addActivityStateObserver(function)
+    }
+    
+    runtime.addActivityStateObserver(function(newState) {
+      // React to state change
+    })
+
 Unlocks [Transition Directors](../transition_directors.md).
 
 <p style="text-align:center"><tt>/MVP</tt></p>
@@ -90,13 +119,24 @@ The Runtime should send an event each time a new target is referenced.
 
 The receivers of this event can set a new sandbag instance of the target. Executors are expected to act on the sandbag instance rather than the original target.
 
+    Runtime {
+      function addNewTargetObserver(function)
+    }
+    
+    runtime.addNewTargetObserver(function(target) {
+      // Potentially clone the target
+      return clonedTarget
+    })
+
 Unlocks [view duplication](../view_duplication.md).
 
 ---
 
 ## Experimental ideas
 
-`feature: targetidle` **Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
+**Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
+
+This is a more focused event than the "Runtime activity state did change".
 
 This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
 
@@ -106,7 +146,6 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
 >       Executor idle callback
 >     })
 
-
 ---
 
 ## Open topics
@@ -114,4 +153,3 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
 - When should Executors be removed from a Runtime?
-
