@@ -7,13 +7,17 @@ This is the engineering specification for the Executor object.
 
 Executors are the objects responsible for executing Plan.
 
-`v1` **Who creates them?**: Runtimes create Executors.
+---
 
-`v1` **When are they created?**: When a transaction is committed.
+<p style="text-align:center"><tt>MVP</tt></p>
 
-`v1` **Initialization**: The Runtime initializes the Executor by providing a target instance.
+**Create on Transaction commit**: Create Executors when a Transaction is committed.
 
-Every other method described below should be **optional** for the Executor.
+**Initialization**: The Runtime initializes the Executor by providing a target instance.
+
+Example pseudo-code:
+
+    executor = Executor(target)
 
 ## Plan
 
