@@ -58,6 +58,24 @@ Plans define the Executor they require. This requires Plans to be aware of their
 
 Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
 
+**Activity state**: Activity state is one of either active or idle. The Runtime must provide a read-only API for accessing this state.
+
+Pseudo-code example:
+
+    enum RuntimeActivityState {
+      .Active
+      .Idle
+    }
+    
+    Runtime {
+      function activityState() -> RuntimeActivityState
+    }
+
+A Runtime is active if any of its Executor instances are active. An Executor is active if either of the following conditions are met:
+
+- The Executor has an active remote execution.
+- The Executor returned `true` from its last update event.
+
 **Event: activity state did change**: Any time the Runtime changes its idle/active state it should fire an observable event.
 
 This event enables "Transition Directors".
