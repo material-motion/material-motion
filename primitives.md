@@ -138,7 +138,7 @@ Physical simulations can be associated with individual states of a State Machine
 
 Timelines are a helpful metaphor for constructing transitions.
 
-> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be one-off tweens that occur when transitioning from A to B and vice versa.
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be ephemeral tweens created in response to user input during the transition.
 
 <!--
 
