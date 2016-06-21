@@ -12,5 +12,3 @@ TODO: Discuss the life-cycle of a Transition.
 - Controller starts the Runtime.
 - When Runtime idles, Controller indicates that the transition has completed.
 - Controller likely needs to extract "completed" vs "canceled" state from the Director.
-
-
