@@ -1,6 +1,6 @@
 # Plan specification
 
-This is the engineering specification for the Plan object.
+This is the engineering specification for the Plan abstract type.
 
 A Plan is an object representing **what you want something to do**.
 
