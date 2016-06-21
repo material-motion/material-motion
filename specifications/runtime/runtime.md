@@ -64,7 +64,7 @@ This lookup can be implemented in many ways:
 
   This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
   
-  > This is the preferred approach.
+  > This is the simpler approach, and may be used for MVPs.
   
   Example pseudo-code:
   
