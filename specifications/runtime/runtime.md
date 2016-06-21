@@ -80,7 +80,7 @@ This lookup can be implemented in many ways:
 
 - Map Executor type to Plan type with look-up table
 
-  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
+  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.  The Runtime would need to be able to determine which one to use.
   
   Example pseudo-code:
   
