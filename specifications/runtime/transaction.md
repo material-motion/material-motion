@@ -43,9 +43,12 @@ Example pseudo-code:
     plan.fromValue = 5
     transaction.add(plan, target)
 
-The transaction's log must look like so:
+Here's the log.  Notice that each entry has a different `fromValue`.
 
-    [add(plan (fromValue = 0), add(plan (fromValue = 5)]
+    [
+      {action: 'add', plan: {..., fromValue = 0}}, 
+      {action: 'add', plan: {..., fromValue = 5}}
+    ]
 
 Note that the first plan's `fromValue` did not magically transform into `5`.
 
