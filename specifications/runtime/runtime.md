@@ -49,7 +49,7 @@ Requires: [Transaction](transaction.md)
 > 1. convert each Plan into a physics force,
 > 2. apply the force to the velocity, and
 > 3. apply the velocity to the position
-
+>
 > on every update event.
 > 
 > Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
