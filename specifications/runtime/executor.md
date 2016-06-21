@@ -1,6 +1,6 @@
 # Executor specification
 
-This is the engineering specification for the Executor object.
+This is the engineering specification for the Executor abstract type.
 
 Executors are the objects responsible for executing Plans.
 
