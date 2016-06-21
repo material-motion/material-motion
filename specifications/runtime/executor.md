@@ -31,11 +31,11 @@ Example pseudo-code:
 
 **Add Plans API**: Plans are provided to Executors.
 
-The Executor may choose not to implement this API.
+>The Executor may choose not to implement this API.
 
 Example pseudo-code:
 
-    protocol PlanExecuting {
+    protocol PlanExecution {
       function addPlan(plan)
     }
 
@@ -46,11 +46,11 @@ Example pseudo-code from within the Runtime:
       executor.addPlan(plan)
     }
 
-**Update event**: Executors can implement an update function.
+**Update API**: Executors can implement an update function.
 
 The Executor may choose not to implement this API.
 
-The update event will be called many times per second. The Executor may use this method to perform time-based calculations.
+The update function will be called many times per second. The Executor may use this method to perform time-based calculations.
 
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
@@ -80,7 +80,7 @@ If one method is implemented, so must the other.
 Example pseudo-code:
 
     protocol NamedPlanExecuting {
-      function addPlan(plan, withName: name)
+      function addPlanWithName(plan, name)
       function removePlanWithName(name)
     }
 
