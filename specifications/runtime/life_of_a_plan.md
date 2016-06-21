@@ -106,17 +106,15 @@ The Runtime now provides each Plan instance to the relevant Executor. This allow
 
 ### Step 6: Executors execute Plans
 
-Executors can execute their Plans in countless ways. Let's focus on two specializations of the Executor type: update execution and remote execution.
+Executors can execute their Plans in countless ways. Let's focus on two of them.
 
-**Update execution**
+**Manual execution**
 
-Executors can hook in to the Runtime's update event. The update event fires many times per second and provides some sort of time step. This time step can drive the execution.
+Executors will be notified each time the system will draw a new frame by the Runtime's `update` event.  On each frame, the Executor could calculate and set its target's next state.
 
-**Remote execution**
+**Delegated execution**
 
-Some Executors use external systems. For example, an Executor might turn a Plan into an animation object more easily understood by the platform.
-
-The Executor is responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
+An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation.  The Executor would be responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
 
 <!--
 
