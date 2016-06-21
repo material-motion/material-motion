@@ -2,7 +2,7 @@
 
 Let's walk through the life of a Plan.
 
-    Remember, any code you see here is pseudo-code.
+>Remember, any code you see here is pseudo-code.
 
 ### Step 1: Create a Runtime
 
