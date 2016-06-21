@@ -19,9 +19,9 @@ We use the following rules for accepting contributions.
 
 Each core contributor has a specific focus area.
 
-| Handle | Focus |
+| GitHub Account | Platform |
 |:-------|:------|
-| [appsforartists](https://github.com/appsforartists) | `web` |
-| [featherless](https://github.com/jverkoey) | `iOS, macOS` |
-| [larche](https://github.com/willlarche) | `iOS` |
-| [pingpongboss](https://github.com/pingpongboss) | `android` |
+| [appsforartists](https://github.com/appsforartists) | JavaScript, Web |
+| [featherless](https://github.com/jverkoey) | iOS, macOS |
+| [pingpongboss](https://github.com/pingpongboss) | Android |
+| [willlarche](https://github.com/willlarche) | iOS |
