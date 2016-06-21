@@ -24,9 +24,7 @@ Example pseudo-code:
       function setUp(transaction)
     }
 
-**First**: The `setUp` event must be the first event invoked on a Director.
-
-**Initial Plans**. The Director registers Plans in `setUp`.
+**Initial Plans**. The Director commits Plans in `setUp`.
 
 Pseudo-code:
 
@@ -56,7 +54,7 @@ Common solutions include:
 
 <p style="text-align:center"><tt>feature: tear-down</tt></p>
 
-Directors may wish to receive a tearDown event when their Runtime is about to shut down.
+Directors may implement a `tearDown` function. This function will be invoked when their Runtime is about to shut down.
 
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
 
