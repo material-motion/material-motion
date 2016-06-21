@@ -18,7 +18,7 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 Example pseudo-code:
 
     Director {
-      function setUp(Transaction)
+      function setUp(transaction)
     }
 
 The owner of a Director is responsible for creating a Runtime and committing the Transaction.
@@ -39,7 +39,7 @@ Example pseudo-code:
 
 Pseudo-code:
 
-    function setUp(Runtime) {
+    function setUp(transaction) {
       transaction.add(plan, targetA)
       transaction.add(plan, targetB)
       ...
