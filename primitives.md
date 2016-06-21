@@ -25,7 +25,7 @@ Please note that these primitives can apply to an arbitrary number of dimensions
 
 ### Tweens
 
-**What it is**: *an interpolation through each value in a list of values*.
+**What it is**: *an interpolation through each value in a list of values over a length of time*.
 
 Tweens have a **starting time** and a **duration**. The starting time and duration properties allow tweens to be sequenced in relation to other tweens.
 
@@ -126,23 +126,24 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 The timeline's progress can drive tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
-There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.
+Similarly, a timeline could be used to emit gesture events that simulate user input.  This pattern could be useful for teaching a user how to perform a gesture or for automated testing. 
 
 #### Physical simulation and states
 
 Physical simulations can be associated with individual states of a State Machine.
 
-> For example, a photo element might have two states: collapsed and expanded. Each state has an associated spring attachment. These springs change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+> For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
 
 #### Timelines and transitions
 
 Timelines are a helpful metaphor for constructing transitions.
 
-> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be one-off tweens that occur when transitioning from A to B and vice versa.
+> For example, a Transition between state A and B might have a Timeline that drives a coordinated set of tweens. There might also be ephemeral tweens created in response to user input during the transition.
 
 <!--
 
 LGTM:
+- appsforartists
 - featherless
 - larche
 - markwei

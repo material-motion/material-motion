@@ -1,64 +1,115 @@
-Status of this document: **Drafting by featherless**
+# Director
 
-# Directors
+A Director is an object that describes an interactive experience.
 
-A Director is an entity that describes an interactive experience. Directors make use of a Motion Runtime.
+A Director operates primarily in terms of targets and Plans. Directors do not have direct access to a Runtime.
 
-**Transitions**. A Director is a natural fit for describing a Transition. Such a Director benefits from having a State Machine and Timeline primitive at hand.
+> Hiding the Runtime from a Director has the following benefits:
+> 
+> - There is a primary Runtime.
+> - Big Transactions can potentially be optimized.
 
-**Logic**. Directors often involve a combination of conditional logic and Intentions.
+---
 
-## Set up phase
+<p style="text-align:center"><tt>MVP</tt></p>
 
-A Director should have some form of set up phase.
+**Set up**: A Director has a `setUp` method that is invoked exactly once. This method must be provided with a Transaction instance.
 
-**Motion Runtime**. Provide an instance of a Motion Runtime to this phase. This allows many Directors to affect a single Motion Runtime.
+Example pseudo-code:
 
-**Initial Intentions**. During the set up phase a Director may register an initial set of Intentions with a Motion Runtime.
+    Director {
+      function setUp(Transaction)
+    }
 
-    function setUp(Motion Runtime) {
+The owner of a Director is responsible for creating a Runtime and committing the Transaction.
+
+Example pseudo-code:
+
+    runtime = Runtime()
+    transaction = Transaction()
+    
+    director = Director()
+    director.setUp(transaction)
+    
+    runtime.commit(transaction)
+
+**First**: The `setUp` event must be the first event invoked on a Director.
+
+**Initial Plans**. The Director registers Plans in `setUp`.
+
+Pseudo-code:
+
+    function setUp(Runtime) {
+      transaction.add(plan, targetA)
+      transaction.add(plan, targetB)
+      ...
+    }
+
+`v1` **Providing targets**: Provide targets to Directors.
+
+How targets are provided to a Director is up to the creator of the Director.
+
+Common solutions include:
+
+*Delegate pattern*. The Director requests targets via a delegate.
+
+![](../_assets/DirectorTransaction-Request.svg)
+
+*Initialization*. Targets are provided to the Director's initializer.
+
+![](../_assets/DirectorTransaction-Provide.svg)
+
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: tear-down</tt></p>
+
+Directors may wish to receive a tearDown event when their Runtime is about to shut down.
+
+<p style="text-align:center"><tt>/feature: tear-down</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
+
+Directors may wish to register new Plans after `setUp` has been invoked.
+
+Provide these Directors a *transaction initiation function*. Consider the following pseudo-code:
+
+    # Typical set up
+    director.setUp(transaction)
+    
+    director.transact = function(function(Transaction) work) {
       transaction = Transaction()
-      
+      work(transaction)
       runtime.commit(transaction)
     }
 
-## Event handling
+The Director can now start a new transaction by invoking `transact`.
 
-The Director may want to store a reference to the Motion Runtime in order to commit new Intentions in response to different events.
-
-**Gestures**. The Director will want to store the Motion Runtime so that it can make further Transactions at a later point.
+Consider the following pseudo-code of a Director responding to a gesture recognition event:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
-        transaction = Transaction()
-        // Some new Intentions
-        runtime.commit(transaction)
+        self.transact(function(transaction) {
+          transaction.add(plan, targetA)
+        })
       }
     }
 
-**State changes**. A Director may be the hub of many different types of state changes.
+<p style="text-align:center"><tt>/feature: post-setup transactions</tt></p>
 
-One type of state change is the reversal of a Transition's direction.
-
-    function onStateChange(transition) {
-      transaction = Transaction()
-      if transition.direction == ToTheRight {
-        // Register incoming Intentions
-      } else {
-        // Register outgoing Intentions
-      }
-      runtime.commit(transaction)
-    }
+---
 
 ## Specialized Directors
 
-A Director class hierarchy might include specialized Director implementations that provide essential scaffolding.
+Specialized Directors should be provided for common operations.
 
-### Transition Director
+- [Transition Directors](transition_directors.md)
+- [Interaction Directors](interaction_directors.md)
 
-**Initialization**. A Transition Director is created when a Transition is about to occur. The Director's `setUp` method should be invoked at this point.
-
-**End state**. The Director is responsible for communicating when the Transition has ended. The Director will likely make use of the Motion Runtime's idle/active events to communicate this.
+TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
 
 <!--
 

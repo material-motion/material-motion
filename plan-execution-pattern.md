@@ -1,13 +1,15 @@
 ## Separation of plan/execution
 
+This section defines a software design pattern. The pattern involves a separation between **plans** and their **execution**.
+
 **Plan**: a detailed proposal for doing or achieving something.
 
 **Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
-Separating plans of motion from their execution is important because:
+Benefits of this separation:
 
 - It allows execution to occur in a separate, potentially non-blocking context.
-- It enables design tooling and engineering to communicate in a language that isn't code.
+- It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
 
@@ -73,7 +75,7 @@ For example, a plan of "fade in" could reasonably be executed by a built-in anim
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
-## Prior art and research
+## Existing solutions and research
 
 - [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
 - [Core Animation](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)

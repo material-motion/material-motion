@@ -1,14 +1,16 @@
-# Engineering concepts
+# Engineering spec
 
-This chapter contains software engineering concepts.
+This chapter defines engineering specifications and concepts. This chapter is a platform-independent grounds to discuss implementation details.
 
-The tone of this chapter is highly 🌟 aspirational 🌟.
+The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
-Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable we've included links to prior art and research.
+The audience is software engineers interested in building motion and interaction systems.
 
-This chapter defines technologies that we feel aid in the creation of interactive applications. We challenge the reader to identify gaps in languages/platforms and to build solutions.
+Throughout this chapter we write statements as simple facts. All are open for debate and conversation.
 
-Within the best of our ability these specifications are platform and language-agnostic. We will not always be perfect, nor are we attempting to achieve perfect agreement.
+Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable, we've included links to both ours and others' work in the field.
+
+Within the best of our ability the provided specifications are platform and language-agnostic.
 
 <!--
 
