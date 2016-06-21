@@ -62,7 +62,7 @@ This lookup can be implemented in many ways:
 
 - Plans define their Executor type
 
-  Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+  This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
   
   > This is the preferred approach.
   
