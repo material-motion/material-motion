@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Transaction object.
 
-Transactions aggregate requests for Plan-target associations. Transactions are designed to be committed to a Runtime.
+A Transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Runtime](./index.md).
 
 Printable tech tree/checklist:
 
