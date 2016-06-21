@@ -13,25 +13,13 @@ A Director operates primarily in terms of targets and Plans. Directors do not ha
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up**: A Director has a `setUp` method that is invoked exactly once. This method must be provided with a Transaction instance.
+**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This API accepts a Transaction instance.
 
 Example pseudo-code:
 
     Director {
       function setUp(transaction)
     }
-
-The owner of a Director is responsible for creating a Runtime and committing the Transaction.
-
-Example pseudo-code:
-
-    runtime = Runtime()
-    transaction = Transaction()
-    
-    director = Director()
-    director.setUp(transaction)
-    
-    runtime.commit(transaction)
 
 **First**: The `setUp` event must be the first event invoked on a Director.
 
