@@ -62,34 +62,34 @@ This lookup can be implemented in many ways:
 
 - Plans define their Executor type
 
-Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
-
-> This is the preferred approach.
-
-Example pseudo-code:
-
-    class SomePlan {
-      function executorType() {
-        return SomeExecutor.type
+  Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+  
+  > This is the preferred approach.
+  
+  Example pseudo-code:
+  
+      class SomePlan {
+        function executorType() {
+          return SomeExecutor.type
+        }
       }
-    }
-    
-    # In the Runtime...
-    executorType = plan.executorType()
-    executor = executorType()
+      
+      # In the Runtime...
+      executorType = plan.executorType()
+      executor = executorType()
 
 - Map Executor type to Plan type with look-up table
 
-Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
-
-Example pseudo-code:
-
-    # In some initialization step...
-    runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
-    
-    # In the Runtime...
-    executorType = plan.executorTypeForPlan(plan)
-    executor = executorType()
+  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
+  
+  Example pseudo-code:
+  
+      # In some initialization step...
+      runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
+      
+      # In the Runtime...
+      executorType = plan.executorTypeForPlan(plan)
+      executor = executorType()
 
 **Activity state**: Activity state is one of either active or idle. The Runtime must provide a read-only API for accessing this state.
 
