@@ -33,9 +33,9 @@ If no consensus is able to be reached then the discussion will be closed and the
 
 **Capitalization**: We capitalize the following terms whenever we refer to them:
 
-- Actor
+- Executor
 - Director
-- Intention
+- Plan
 - Runtime
 
-Example: A Runtime creates Actors.
+Example: A Runtime creates Executors.
