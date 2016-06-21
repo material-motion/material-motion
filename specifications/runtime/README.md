@@ -1,6 +1,6 @@
 # Motion Runtime
 
-This section defines a system that emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
+This section defines a system that emphasizes the separation of a plan from its execution. We call it a Motion Runtime, or Runtime for short.
 
 A Runtime serves two primary purposes:
 
