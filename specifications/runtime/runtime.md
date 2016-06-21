@@ -95,13 +95,13 @@ Example pseudo-code:
 
 Pseudo-code example:
 
-    enum RuntimeActivityState {
+    enum ActivityState {
       .Active
       .Idle
     }
     
     Runtime {
-      function activityState() -> RuntimeActivityState
+      function activityState() -> ActivityState
     }
 
 A Runtime is active if any of its Executor instances are active. An Executor is active if either of the following conditions are met:
