@@ -52,7 +52,7 @@ Requires: [Transaction](transaction.md)
 >
 > on every update event.
 > 
-> Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
+> Alternatively, consider how this situation would have played out if we had one Executor for each Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
 
 Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
