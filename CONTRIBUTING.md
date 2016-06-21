@@ -28,14 +28,3 @@ If you feel that a chosen term does not effectively communicate the intended mea
 1. Propose the change as a patch.
 
 If no consensus by the core team is reachable then the terminology will not be changed.
-
-## Style guide
-
-**Capitalization**: We capitalize the following terms whenever we refer to them:
-
-- Executor
-- Director
-- Plan
-- Runtime
-
-Example: A Runtime creates Executors.
