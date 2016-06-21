@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Transaction object.
 
-A Transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Runtime](./readme.md).
+A Transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Runtime](./README.md).
 
 Printable tech tree/checklist:
 
