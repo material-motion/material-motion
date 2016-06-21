@@ -132,7 +132,7 @@ Similarly, a timeline could be used to emit gesture events that simulate user in
 
 Physical simulations can be associated with individual states of a State Machine.
 
-> For example, a photo element might have two states: collapsed and expanded. Each state has an associated spring attachment. These springs change the dimensions and position of the photo. Changing the state to expanded would cause the expanded state springs to be attached to the view.
+> For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
 
 #### Timelines and transitions
 
@@ -143,6 +143,7 @@ Timelines are a helpful metaphor for constructing transitions.
 <!--
 
 LGTM:
+- appsforartists
 - featherless
 - larche
 - markwei
