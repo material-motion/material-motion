@@ -18,7 +18,7 @@
        * [Life of a Transition](specifications/life_of_a_transition.md)
        * [Transition Director](specifications/transition_directors.md)
        * [Transition Controller](specifications/transition_controller.md)
-   * Interactions
+   * [Interactions](specifications/interactions.md)
        * [Interaction Director](specifications/interaction_directors.md)
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
