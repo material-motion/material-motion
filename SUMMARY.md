@@ -14,9 +14,13 @@
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Director](specifications/directors.md)
-       * [Life of a Transition](specifications/life_of_a_transition.md)
-       * [Transition Director](specifications/transition_directors.md)
-       * [Interaction Director](specifications/interaction_directors.md)
+   * Transitions
+     * [Life of a Transition](specifications/life_of_a_transition.md)
+     * [Transition Director](specifications/transition_directors.md)
+     * Transition Controller
+   * Interactions
+     * [Interaction Director](specifications/interaction_directors.md)
+     * Interaction Controller
    * [Debugging](specifications/debugging.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
@@ -33,4 +37,3 @@
        * [Scripting](specifications/scripting.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](_drafts/expressions.md)
-
