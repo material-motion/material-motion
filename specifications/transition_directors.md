@@ -10,5 +10,3 @@ Transition Directors are concerned with elegantly moving from one state to anoth
 **Directionality**: Transition Directors think in terms of "left" and "right + a direction.
 
 **View duplication**: Transition Directors should have a view duplicator.
-
-The view duplicator should already be created by the time
