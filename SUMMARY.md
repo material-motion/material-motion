@@ -22,6 +22,7 @@
        * [Interaction Director](specifications/interaction_directors.md)
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
+   * Server
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
