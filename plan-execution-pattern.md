@@ -9,7 +9,7 @@ This section defines a software design pattern. The pattern involves a separatio
 Benefits of this separation:
 
 - It allows execution to occur in a separate, potentially non-blocking context.
-- It enables design tooling and engineering to communicate in a language that isn't code.
+- It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
 
