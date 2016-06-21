@@ -126,7 +126,7 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 The timeline's progress can drive tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
 
-There is no known benefit to driving gestural or physical simulation primitives with a Timeline; it is also not particularly clear what that would mean.
+Similarly, a timeline could be used to emit gesture events that simulate user input.  This pattern could be useful for teaching a user how to perform a gesture or for automated testing. 
 
 #### Physical simulation and states
 
