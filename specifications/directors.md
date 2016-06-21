@@ -1,3 +1,6 @@
+Status of this document:
+![](../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Director
 
 A Director is an object that describes some coordinated experience.
