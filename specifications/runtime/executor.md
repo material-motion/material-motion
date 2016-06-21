@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Executor object.
 
-Executors are the objects responsible for executing Plan.
+Executors are the objects responsible for executing Plan(s).
 
 Printable tech tree/checklist:
 
