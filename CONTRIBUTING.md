@@ -12,7 +12,7 @@
 
 This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
-If you feel that the Starmap is missing a concept please draft the concept and [start a discussion](https://material-motion.gitbooks.io/material-motion-starmap/discussions).
+If you feel that the Starmap is missing a concept please follow our patch acceptance process.
 
 ## Proposing terminology changes
 
