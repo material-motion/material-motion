@@ -50,8 +50,6 @@ Here's the log.  Notice that each entry has a different `fromValue`.
       {action: 'add', plan: {..., fromValue = 5}}
     ]
 
-Note that the first plan's `fromValue` did not magically transform into `5`.
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
