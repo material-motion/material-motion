@@ -1,6 +1,6 @@
 # Director
 
-A Director is an object that describes an interactive experience.
+A Director is an object that describes some coordinated experience.
 
 A Director operates primarily in terms of targets and Plans. Directors do not have direct access to a Runtime.
 
