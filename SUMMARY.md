@@ -11,6 +11,7 @@
        * [Transaction](specifications/runtime/transaction.md)
        * [Executor](specifications/runtime/executor.md)
        * [Runtime](specifications/runtime/runtime.md)
+       * Life of a Transition
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Director](specifications/directors.md)
