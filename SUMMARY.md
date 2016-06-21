@@ -7,11 +7,11 @@
    * [Separation of plan/execution](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a Plan](specifications/runtime/life_of_a_plan.md)
+       * Life of a Transition
        * [Plan](specifications/runtime/plan.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Executor](specifications/runtime/executor.md)
        * [Runtime](specifications/runtime/runtime.md)
-       * Life of a Transition
    * [View duplication](specifications/view_duplication.md)
    * [Transient views](specifications/transient_views.md)
    * [Director](specifications/directors.md)
