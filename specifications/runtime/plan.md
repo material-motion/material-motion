@@ -1,6 +1,6 @@
 # Plan specification
 
-This is the engineering specification for the Plan object.
+This is the engineering specification for the Plan abstract type.
 
 A Plan is an object representing **what you want something to do**.  As its name suggests, a Plan (with a capital P) is an implementation of the [plan/execution pattern](../../plan-execution-pattern.md).
 
