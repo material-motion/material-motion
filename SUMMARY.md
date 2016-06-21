@@ -15,12 +15,12 @@
    * [Transient views](specifications/transient_views.md)
    * [Director](specifications/directors.md)
    * Transitions
-     * [Life of a Transition](specifications/life_of_a_transition.md)
-     * [Transition Director](specifications/transition_directors.md)
-     * Transition Controller
+       * [Life of a Transition](specifications/life_of_a_transition.md)
+       * [Transition Director](specifications/transition_directors.md)
+       * [Transition Controller](specifications/transition_controller.md)
    * Interactions
-     * [Interaction Director](specifications/interaction_directors.md)
-     * Interaction Controller
+       * [Interaction Director](specifications/interaction_directors.md)
+       * Interaction Controller
    * [Debugging](specifications/debugging.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
@@ -37,3 +37,4 @@
        * [Scripting](specifications/scripting.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](_drafts/expressions.md)
+
