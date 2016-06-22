@@ -90,27 +90,34 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Remote execution</tt></p>
+<p style="text-align:center"><tt>feature: Delegated execution</tt></p>
 
 Executors can delegate work to a remote API such as a platform-native API.
 
-**Remote execution API**: Executor can invoke callbacks when remote execution starts and ends.
+**Delegated execution API**: Executor can invoke callbacks when remote execution starts and ends.
 
-> If an Executor doesn't utilize remote execution, it may not implement this API.
+> If an Executor does not use delegated execution, it does not have to implement this API.
 
-The Executor would be responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
+The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
 
-Example pseudo-code:
+Example pseudo-code if your language does not support anonymous functions:
 
-    protocol RemoteExecution {
-      function setRemoteExecutionCallback(callback)
+    protocol DelegatedExecution {
+      function setDelegatedExecutionCallback(callback)
     }
     
-    class RemoteExecutionCallback {
-      function onRemoteExecutionStart(executor, name)
-      function onRemoteExecutionEnd(executor, name)
+    class DelegatedExecutionCallback {
+      function onDelegatedExecutionStart(executor, name)
+      function onDelegatedExecutionEnd(executor, name)
     }
 
-<p style="text-align:center"><tt>/feature: Remote execution</tt></p>
+Example pseudo-code if your language supports anonymous functions:
+
+    protocol DelegatedExecution {
+      var onDelegatedExecutionStart(executor, name)
+      var onDelegatedExecutionEnd(executor, name)
+    }
+
+<p style="text-align:center"><tt>/feature: Delegated execution</tt></p>
 
 ---
