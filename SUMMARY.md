@@ -24,6 +24,7 @@
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
+   * Repository structure
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
