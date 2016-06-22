@@ -45,7 +45,7 @@ There are many ways to provide targets to Directors. We explore a couple options
 
 ![](../_assets/DirectorTransaction-Request.svg)
 
-*Initialization*. Targets are provided to the Director's initializer.
+*Setters*. Targets are provided to the Director post-initialization.
 
 ![](../_assets/DirectorTransaction-Provide.svg)
 
