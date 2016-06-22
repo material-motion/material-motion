@@ -33,11 +33,11 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create an instance of a Transaction.
+First we must create a Transaction.
 
     transaction = Transaction()
 
-Plans are associated to targets using a Transaction instance.
+Plans are associated to targets via the transaction.
 
     transaction.add(animation, circleView)
     transaction.add(draggable, squareView)
