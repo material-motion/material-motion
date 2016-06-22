@@ -9,7 +9,6 @@ A Runtime serves two primary purposes:
 
 The following diagram shows where the Runtime lives in relation to a platform like iOS.
 
-
 ![](../../_assets/Abstraction.svg)
 
 ## Overview
@@ -25,15 +24,15 @@ To answer the first question we introduce two new types into the system: the **_
 
 > A Plan is an object representing **what you want something to do**. A Transaction aggregates requests for Plan-target associations.
 
-To answer the second question we introduce one more type: the **_Executor_**.
+To answer the second question we introduce two more types: the **_Executor_** and the **_Scheduler_**.
 
-> An Executor's sole responsibility is to fulfill the contract defined by one or more Plans.
+> An Executor's sole responsibility is to fulfill the contract defined by one or more Plans. A Scheduler is the entity that creates Executors.
 
 Here's how these objects fit together:
 
 1. Plans are added to Transactions.
-2. Transactions are committed to Runtimes.
-3. Runtimes create Executors.
+2. Transactions are committed to a Scheduler.
+3. Schedulers create Executors.
 
 In visual form:
 
@@ -43,10 +42,10 @@ Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.
 
 Or dive in to the engineering specifications:
 
-- [Runtime](runtime.md)
 - [Plan](plan.md)
 - [Transaction](transaction.md)
 - [Executor](executor.md)
+- [Scheduler](scheduler.md)
 
 Collectively, these objects represent what we consider to be a *minimum-viable motion runtime*.
 
