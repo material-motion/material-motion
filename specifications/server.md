@@ -3,7 +3,7 @@ Status of this document:
 
 # Server
 
-TODO: Flesh out the role of the Server in relation to the Runtime.
+TODO: Flesh out the role of the server in relation to the runtime.
 
 TODO: Formalize the following content as a protocol.
 
