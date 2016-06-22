@@ -4,17 +4,17 @@ Let's walk through the life of a Plan.
 
 >Remember, any code you see here is pseudo-code.
 
-### Step 1: Create a Runtime
+### Step 1: Create a Scheduler
 
-Runtimes are cheap and easy to create. Many Runtimes may exist in an application. Let's create one.
+Schedulers are cheap and easy to create. Many Schedulers may exist in an application. Let's create one.
 
-    runtime = Runtime()
+    Scheduler = Scheduler()
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
 
 ### Step 2: Create Plans
 
-All motion in a Runtime begins with a Plan. Let's create four different types of Plan:
+All motion in a Scheduler begins with a Plan. Let's create four different types of Plan:
 
     animation = Tween()
     animation.property = "opacity"
@@ -59,21 +59,21 @@ The transaction's log might resemble this:
     ]
 
 
-A transaction must be committed to a Runtime in order for it to take affect.
+A transaction must be committed to a Scheduler in order for it to take affect.
 
-    runtime.commit(transaction)
+    Scheduler.commit(transaction)
 
-After committing the above transaction, the Runtime's internal state might resemble this:
+After committing the above transaction, the Scheduler's internal state might resemble this:
 
 ![](../../_assets/TargetManagers.svg)
 
 > Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
 
-The Runtime is now expected to execute its Plans.
+The Scheduler is now expected to execute its Plans.
 
-### Step 4: Runtime creates Executors
+### Step 4: Scheduler creates Executors
 
-The Runtime uses entities called **Executors** to execute Plans. The Executor is the specialized mediating agent between a Plan and its execution.
+The Scheduler uses entities called **Executors** to execute Plans. The Executor is the specialized mediating agent between a Plan and its execution.
 
 We'll assume a function exists that returns an Executor capable of executing a type of Plan. The method signature for this method might look like this:
 
@@ -91,7 +91,7 @@ Recall the transaction log we'd explored above:
       {action:'add",    target: circleView, plan: Draggable               },
     ]
 
-The above operations committed to the following internal Runtime state:
+The above operations committed to the following internal Scheduler state:
 
 ![](../../_assets/TargetManagers.svg)
 
@@ -105,7 +105,7 @@ A single Executor instance is created for each _type_ of Plan registered to a ta
 
 ### Step 5: Provide Plans to Executors
 
-The Runtime now provides each Plan instance to the relevant Executor. This allows the Executor to translate specific Plans in to actionable logic.
+The Scheduler now provides each Plan instance to the relevant Executor. This allows the Executor to translate specific Plans in to actionable logic.
 
 ### Step 6: Executors execute Plans
 
@@ -113,11 +113,11 @@ Executors can execute their Plans in countless ways. Let's focus on two of them.
 
 **Manual execution**
 
-Executors will be notified each time the system will draw a new frame by the Runtime's `update` event. The Executor is expected to calculate and set its target's next state on each update event.
+Executors will be notified each time the system will draw a new frame by the Scheduler's `update` event. The Executor is expected to calculate and set its target's next state on each update event.
 
 **Delegated execution**
 
-An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The Executor would be responsible for informing the Scheduler of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
