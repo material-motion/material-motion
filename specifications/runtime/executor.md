@@ -103,7 +103,7 @@ An Executor can choose to implement an update API that will be called many times
 
 >The Executor may choose not to implement this API.
 
-The update function will be called many times per second. The Executor may use this method to perform time-based calculations.
+The update API will be called each time the platform will draw a new frame. The Executor may use this method to perform time-based calculations.
 
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
