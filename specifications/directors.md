@@ -102,6 +102,5 @@ TODO: Describe entity that manages creation of Director. This entity is responsi
 <!--
 
 LGTM:
-- featherless
 
 -->
