@@ -21,6 +21,6 @@ Each core contributor has a specific focus area.
 | GitHub Account | Platform |
 |:-------|:------|
 | [appsforartists](https://github.com/appsforartists) | JavaScript, Web |
-| [featherless](https://github.com/jverkoey) | iOS, macOS |
+| [featherless](https://github.com/jverkoey) | iOS, macOS, project lead |
 | [pingpongboss](https://github.com/pingpongboss) | Android |
 | [willlarche](https://github.com/willlarche) | iOS |
