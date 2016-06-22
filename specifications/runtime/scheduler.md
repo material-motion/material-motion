@@ -178,7 +178,7 @@ Fire an observable event when a new target is referenced.
 
 Unlocks [view duplication](../view_duplication.md).
 
-**New target API**: Provide a mechanism for listening to new target references, optionally modifying the target or even replacing it with an entirely new instance.
+**new target API**: Provide a mechanism for listening to new target references, optionally modifying the target or even replacing it with an entirely new instance.
 
 Executors are expected to act on the new instance rather than the original target.
 
