@@ -177,7 +177,9 @@ Fire an observable event when a new target is referenced.
 
 Unlocks [view duplication](../view_duplication.md).
 
-**new target API**: Provide a mechanism for listening to new target references.
+**New target API**: Provide a mechanism for listening to new target references, optionally modifying the target or even replacing it with an entirely new instance.
+
+Executors are expected to act on the new instance rather than the original target.
 
     Scheduler {
       function addNewTargetObserver(function)
@@ -188,13 +190,7 @@ Unlocks [view duplication](../view_duplication.md).
       return clonedTarget
     })
 
-**Sandbagging**: Allow the event receiver to return a new sandbag instance.
-
-A sandbag instance is an instance created on demand to be used in place of the original target.
-
-One common implementation of sandbagging is "view duplication". In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
-
-Executors are expected to act on the sandbag instance rather than the original target.
+**View duplication**: One common implementation of this API is to enable "view duplication". In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
 
 <p style="text-align:center"><tt>/feature: new target event</tt></p>
 
