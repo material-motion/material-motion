@@ -65,13 +65,13 @@ Directors may wish to register new Plans after `setUp` has been invoked.
 
 **Transact API**: A Director may be provided with a *transaction initiation function*.
 
-Consider the following pseudo-code:
+Example pseudo-code protocol:
 
-    MyDirector {
+    TransactionDirector {
       var transact // settable
     }
 
-Provide the Director with a function that resembles the following:
+The provided function implementation might resemble the following:
 
     var transact = function(work) {
       transaction = Transaction()
