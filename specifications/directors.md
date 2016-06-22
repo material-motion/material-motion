@@ -17,8 +17,10 @@ Directors have little — if any — imperative code. Directors prefer to descr
 
 Example pseudo-code:
 
-    Director {
-      function setUp(transaction)
+    MyDirector {
+      function setUp(transaction) {
+        // Set things up
+      }
     }
 
 **Initial Plans**. Directors are expected to commit Plans in `setUp`.
@@ -46,6 +48,14 @@ We may lift this restriction if there are strong technical reasons to do so.
 Directors may implement a `tearDown` function. This function must be invoked when the associated Runtime is about to terminate.
 
 **Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding Runtime is about to terminate.
+
+Pseudo-code example:
+
+    MyDirector {
+      function tearDown() {
+        // Perform any cleanup work
+      }
+    }
 
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
 
