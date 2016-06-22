@@ -13,7 +13,7 @@ Directors have little — if any — imperative code. Directors prefer to descr
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This API accepts a Transaction instance.
+**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This function accepts a Transaction instance.
 
 Example pseudo-code:
 
@@ -21,7 +21,7 @@ Example pseudo-code:
       function setUp(transaction)
     }
 
-**Initial Plans**. The Director commits Plans in `setUp`.
+**Initial Plans**. Directors are expected to commit Plans in `setUp`.
 
 Pseudo-code:
 
@@ -30,6 +30,12 @@ Pseudo-code:
       transaction.add(plan, targetB)
       ...
     }
+
+**No Runtime access**: Directors do not have direct access to a Runtime.
+
+The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A Transaction is the preferred bridge between a Director and a Runtime.
+
+We may lift this restriction if there are strong technical reasons to do so.
 
 `v1` **Providing targets**: Provide targets to Directors.
 
