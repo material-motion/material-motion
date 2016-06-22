@@ -5,9 +5,9 @@ Status of this document:
 
 This is the engineering specification for the Director abstract type.
 
-A Director is an object that describes some coordinated experience.
+A Director is an object created for the purposes of describing a complete interactive experience.
 
-A Director operates primarily in terms of targets and Plans. Directors do not have direct access to a Runtime.
+A Director uses with Plans and Transactions. Directors do not have direct access to a Runtime.
 
 > Hiding the Runtime from a Director has the following benefits:
 > 
