@@ -26,6 +26,14 @@ Pseudo-code example:
     protocol Plan {
     }
 
+**Defines Executor type**: Plans must define the type of Executor that can fulfill it.
+
+Pseudo-code example:
+
+    protocol Plan {
+      Class executorClass
+    }
+
 **Copyable**: Plans can be copied.
 
 Modifications made to the copy do not affect the original.
@@ -34,7 +42,7 @@ This can be implemented in a variety of ways. We've included a few options we kn
 
 - Immutable types.
 - Value types.
-- Implement a copy method on a reference type.
+- Implement a copy or clone method on a reference type.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
