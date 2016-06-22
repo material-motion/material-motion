@@ -94,7 +94,7 @@ Example pseudo-code:
 
 An Executor can delegate its work to a platform-native API, like Web Animations or CoreAnimation.
 
-**Delegated execution API**: Executor can invoke callbacks when remote execution starts and ends.
+**Delegated execution API**: Executor can invoke callbacks when delegated execution starts and ends.
 
 > If an Executor does not use delegated execution, it does not have to implement this API.
 
