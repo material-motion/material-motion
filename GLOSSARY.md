@@ -1,5 +1,9 @@
 # Glossary
 
+## director
+
+An object created for the purposes of describing motion.
+
 ## element
 
 A node in a hierarchical layout/compositing system.
