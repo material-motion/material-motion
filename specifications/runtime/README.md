@@ -27,6 +27,8 @@ To answer the first question we introduce two new types into the system: the **_
 
 To answer the second question we introduce one more type: the **_Executor_**.
 
+> An Executor's sole responsibility is to fulfill the contract defined by one or more Plans.
+
 Here's how these objects fit together:
 
 1. Plans are added to Transactions.
