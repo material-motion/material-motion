@@ -48,6 +48,8 @@ Or dive in to the engineering specifications:
 - [Transaction](transaction.md)
 - [Executor](executor.md)
 
+Collectively these objects represent a minimum-viable runtime.
+
 <!--
 
 LGTM:
