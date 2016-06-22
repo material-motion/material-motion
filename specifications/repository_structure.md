@@ -1,6 +1,8 @@
-# Repository structure
+# Library structure
 
-The following diagram details the GitHub repositories we intend to create. Each repository contains a specific set of objects or types. We've also defined the required dependencies between each repository.
+The following diagram details the libraries we intend to create. We use the term library to mean "a collection of objects or types that is as small as possible, but no smaller".
+
+The diagram includes dependencies between each library.
 
 This diagram does not include:
 
