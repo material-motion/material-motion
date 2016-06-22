@@ -118,8 +118,8 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 - **Time** can move `progress` forward or backward.
 - **Gestures** can scrub `progress` directly.
-- **Physical simulation**: `progress` can be physically anchored to a position, usually 1 or 0,
-  using a Spring. A gesture primitive’s final velocity can also be fed into this simulation.
+- **Physical simulation**: `progress` can be physically anchored to a position, usually 1 or 0, using a Spring. This allows a timeline to snap to completion.
+- **Physical simulation** and **Gestures**: feeding the final velocity of a gesture into a physical simulation allows the timeline to be tosse".
 - **Tweens**.
 
 #### Timelines can drive these primitives
