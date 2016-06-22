@@ -32,9 +32,9 @@ Example pseudo-code implementation:
       ...
     }
 
-**No Runtime access**: Directors do not have direct access to a Runtime.
+**No Scheduler access**: Directors do not have direct access to a scheduler.
 
-The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A Transaction is the preferred bridge between a Director and a Runtime.
+The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A transaction is the preferred bridge between a Director and a scheduler.
 
 We may lift this restriction if there are strong technical reasons to do so.
 
@@ -44,9 +44,9 @@ We may lift this restriction if there are strong technical reasons to do so.
 
 <p style="text-align:center"><tt>feature: tear-down</tt></p>
 
-Directors may implement a `tearDown` function. This function must be invoked when the associated Runtime is about to terminate.
+Directors may implement a `tearDown` function. This function must be invoked when the associated Scheduler is about to terminate.
 
-**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding Runtime is about to terminate.
+**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding scheduler is about to terminate.
 
 Pseudo-code example:
 
@@ -77,7 +77,7 @@ The provided function implementation might resemble the following:
     var transact = function(work) {
       transaction = Transaction()
       work(transaction)
-      runtime.commit(transaction)
+      scheduler.commit(transaction)
     }
 
 The Director can now start a new transaction by invoking `transact`.
@@ -103,7 +103,7 @@ Specialized Directors should be provided for common operations.
 - [Transition Directors](transition_directors.md)
 - [Interaction Directors](interaction_directors.md)
 
-TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
+TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Scheduler instance.
 
 <!--
 
