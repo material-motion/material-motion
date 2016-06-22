@@ -113,11 +113,11 @@ Executors can execute their Plans in countless ways. Let's focus on two of them.
 
 **Manual execution**
 
-Executors will be notified each time the system will draw a new frame by the Runtime's `update` event.  On each frame, the Executor could calculate and set its target's next state.
+Executors will be notified each time the system will draw a new frame by the Runtime's `update` event. The Executor is expected to calculate and set its target's next state on each update event.
 
 **Delegated execution**
 
-An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation.  The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
