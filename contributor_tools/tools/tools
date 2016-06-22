@@ -19,7 +19,7 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 install() {
   for file in $dir/installers/*; do
-    echo "Running installer $( basename "$file" )..."
+    echo "Running installer: $( basename "$file" )..."
     . $file
   done
 }

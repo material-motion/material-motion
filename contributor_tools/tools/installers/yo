@@ -16,7 +16,8 @@
 
 # Install yeoman.
 
-if [[ $(yo --version >/dev/null 2>&1) -ne 0 ]]; then
+yo --version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
   echo "Requesting sudo to install yo..."
   sudo npm install -g yo
 fi

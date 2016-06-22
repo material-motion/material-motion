@@ -20,7 +20,8 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 "$dir/pip"
 
-if [[ $(proselint --version >/dev/null 2>&1) -ne 0 ]]; then
+proselint --version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
   echo "Requesting sudo to install proselint..."
   sudo pip uninstall proselint -y
   sudo pip install proselint

@@ -16,7 +16,8 @@
 
 # Install gh - github CLI tool.
 
-if [[ $(gh --version >/dev/null 2>&1) -ne 0 ]]; then
+gh --version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
   echo "Requesting sudo to install gh..."
   sudo npm install -g gh
 fi

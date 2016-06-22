@@ -16,7 +16,8 @@
 
 # Install pip.
 
-if [[ $(pip --version >/dev/null 2>&1) -ne 0 ]]; then
+pip --version >/dev/null 2>&1
+if [[ $? -ne 0 ]]; then
   echo "Requesting sudo to install proselint..."
   sudo easy_install pip
 fi
