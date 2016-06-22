@@ -29,7 +29,7 @@ Please note that these primitives can apply to an arbitrary number of dimensions
 
 Tweens have a **starting time** and a **duration**. The starting time and duration properties allow tweens to be sequenced in relation to other tweens.
 
-Tweens use an **interpolation function**. This is often a cubic-bezier, but could be any mathematical equation of the form `f(t) = ...t...`
+Tweens use an **interpolation function**. This is often a cubic-bezier, but could be any mathematical equation accepting time as an input.
 
 ### Gesture recognition
 
