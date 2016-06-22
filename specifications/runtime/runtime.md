@@ -2,6 +2,11 @@
 
 This is the engineering specification for the Runtime object.
 
+A Runtime serves two primary purposes:
+
+- Provide an abstraction layer between the application engineer and execution systems.
+- Coordinate the expression of diverse types of motion and interaction.
+
 Printable tech tree/checklist:
 
 ![](../../_assets/RuntimeTechTree.svg)
@@ -49,10 +54,10 @@ Requires: [Transaction](transaction.md)
 > 1. convert each Plan into a physics force,
 > 2. apply the force to the velocity, and
 > 3. apply the velocity to the position
-
-> on every frame.
+>
+> on every update event.
 > 
-> Alternatively, consider how this situation would have played out if we had one Executor for every Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
+> Alternatively, consider how this situation would have played out if we had one Executor for each Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Executor would "lose". The result would be a confusing animation.
 
 Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
@@ -62,52 +67,49 @@ This lookup can be implemented in many ways:
 
 - Plans define their Executor type
 
-Plans define the Executor they require. This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
-
-> This is the preferred approach.
-
-Example pseudo-code:
-
-    class SomePlan {
-      function executorType() {
-        return SomeExecutor.type
+  This requires Plans to be aware of their Executors, which is not ideal. It does, however, avoid a class of problems that exist if Executors can define which Plans they fulfill.
+  
+  > This is the simpler approach, and may be used for MVPs.
+  
+  Example pseudo-code:
+  
+      class SomePlan {
+        function executorType() {
+          return SomeExecutor.type
+        }
       }
-    }
-    
-    # In the Runtime...
-    executorType = plan.executorType()
-    executor = executorType()
+      
+      # In the Runtime...
+      executorType = plan.executorType()
+      executor = executorType()
 
 - Map Executor type to Plan type with look-up table
 
-Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.
-
-Example pseudo-code:
-
-    # In some initialization step...
-    runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
-    
-    # In the Runtime...
-    executorType = plan.executorTypeForPlan(plan)
-    executor = executorType()
+  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.  The Runtime would need to be able to determine which one to use.
+  
+  Example pseudo-code:
+  
+      # In some initialization step...
+      runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
+      
+      # In the Runtime...
+      executorType = plan.executorTypeForPlan(plan)
+      executor = executorType()
 
 **Activity state**: Activity state is one of either active or idle. The Runtime must provide a read-only API for accessing this state.
 
 Pseudo-code example:
 
-    enum RuntimeActivityState {
+    enum ActivityState {
       .Active
       .Idle
     }
     
     Runtime {
-      function activityState() -> RuntimeActivityState
+      function activityState() -> ActivityState
     }
 
-A Runtime is active if any of its Executor instances are active. An Executor is active if either of the following conditions are met:
-
-- The Executor has an active remote execution.
-- The Executor returned `true` from its last update event.
+A Runtime is active if any of its Executor instances are active.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -139,6 +141,18 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 Runtimes support named Plans. Named Plans are plans with a name associated via the Transaction.
 
+Example use case: associating "behavior" with a target.
+
+Example pseudo-code:
+
+    # Initial state...
+    transaction.add(StaysSmall(), "behavior", target)
+    runtime.commit(transaction)
+    
+    # The user taps the target...
+    transaction.add(ExpandsLarge(), "behavior", target)
+    runtime.commit(transaction)
+
 **Target-scoped names**: Names are scoped to the target.
 
 **Remove-then-add**: Two things must happen when a named Plan is committed:
@@ -146,7 +160,7 @@ Runtimes support named Plans. Named Plans are plans with a name associated via t
 1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
 2. Provide the relevant Executor with the new named Plan.
 
-Example pseudo-code from within the Runtime:
+Example pseudo-code:
 
     # Step 1
     executorForName(name).removePlanWithName(name)
@@ -223,3 +237,15 @@ The following topics are open for discussion. They do not presently have a clear
 
 - When should Executors be removed from a Runtime?
 - Should Runtimes support target-less Plans?
+
+### Proposed features
+
+**Tear down API**: Provide an API to tear down a Runtime.
+
+This API would terminate all active executors and remove all registered Plans.
+
+It's unclear if this is a necessary feature at this point in time.
+
+Example pseudo-code:
+
+    runtime.tearDown()

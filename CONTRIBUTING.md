@@ -4,8 +4,7 @@
 
 - Read the [Governance](governance.md) article.
 - Discuss your proposed changes and get agreement on our mailing list.
-- Make the changes in a fork of the [GitHub repository](https://github.com/material-motion/material-motion-starmap).
-- Create a pull request.
+- [Create a pull request](https://material-motion.gitbooks.io/material-motion-team/content/gitbook_pull_request.html). This process differs from the typical GitHub pull request process.
   - Ensure that you have signed [Google's Contributor License Agreement](https://cla.developers.google.com/)
 - Once your pull request has been approved, a core contributor will merge your pull request.
 
@@ -13,7 +12,7 @@
 
 This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
-If you feel that the Starmap is missing a concept please draft the concept and [start a discussion](https://material-motion.gitbooks.io/material-motion-starmap/discussions).
+If you feel that the Starmap is missing a concept please follow our patch acceptance process.
 
 ## Proposing terminology changes
 
@@ -26,17 +25,6 @@ If you feel that a chosen term does not effectively communicate the intended mea
   1. What do you feel the current term describes? 
   1. What do you feel the new term describes that the current term does not? 
   1. Are there existing uses of your proposed term in the software industry? If so, please provide links to references. 
-1. [Propose the change as a discussion](https://www.gitbook.com/book/featherless/material-motion-starmap/discussions).
+1. Propose the change as a patch.
 
-If no consensus is able to be reached then the discussion will be closed and the terminology will not be changed.
-
-## Style guide
-
-**Capitalization**: We capitalize the following terms whenever we refer to them:
-
-- Actor
-- Director
-- Intention
-- Runtime
-
-Example: A Runtime creates Actors.
+If no consensus by the core team is reachable then the terminology will not be changed.

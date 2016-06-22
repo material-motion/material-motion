@@ -1,5 +1,9 @@
 # Glossary
 
+## director
+
+An object created for the purposes of describing motion.
+
 ## element
 
 A node in a hierarchical layout/compositing system.
@@ -15,7 +19,7 @@ The execution of a plan.
 
 ## executor
 
-An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
+An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Plans.
 
 Similar concepts:
 
@@ -66,7 +70,7 @@ A target is the entity to which a plan is meant to be applied, such as an elemen
 
 ## transaction
 
-A mechanism by which new Intentions are committed to a Runtime.
+A mechanism by which new Plans are committed to a Runtime.
 
 ## update event
 

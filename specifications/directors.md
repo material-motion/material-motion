@@ -1,63 +1,42 @@
-# Director
+# Director specification
 
-A Director is an object that describes an interactive experience.
+This is the engineering specification for the Director abstract type.
 
-A Director operates primarily in terms of targets and Plans. Directors do not have direct access to a Runtime.
+A Director is an object created for the purposes of describing motion.
 
-> Hiding the Runtime from a Director has the following benefits:
-> 
-> - There is a primary Runtime.
-> - Big Transactions can potentially be optimized.
+Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
+
+Printable tech tree/checklist:
+
+![](../_assets/DirectorTechTree.svg)
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up**: A Director has a `setUp` method that is invoked exactly once. This method must be provided with a Transaction instance.
+**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This function accepts a Transaction instance.
 
-Example pseudo-code:
+Example pseudo-code protocol definition:
 
-    Director {
-      function setUp(Transaction)
+    protocol Director {
+      function setUp(transaction)
     }
 
-The owner of a Director is responsible for creating a Runtime and committing the Transaction.
+Directors are expected to commit Plans to `setUp`'s provided transaction .
 
-Example pseudo-code:
+Example pseudo-code implementation:
 
-    runtime = Runtime()
-    transaction = Transaction()
-    
-    director = Director()
-    director.setUp(transaction)
-    
-    runtime.commit(transaction)
-
-**First**: The `setUp` event must be the first event invoked on a Director.
-
-**Initial Plans**. The Director registers Plans in `setUp`.
-
-Pseudo-code:
-
-    function setUp(Runtime) {
+    function setUp(transaction) {
       transaction.add(plan, targetA)
       transaction.add(plan, targetB)
       ...
     }
 
-`v1` **Providing targets**: Provide targets to Directors.
+**No Runtime access**: Directors do not have direct access to a Runtime.
 
-How targets are provided to a Director is up to the creator of the Director.
+The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A Transaction is the preferred bridge between a Director and a Runtime.
 
-Common solutions include:
-
-*Delegate pattern*. The Director requests targets via a delegate.
-
-![](../_assets/DirectorTransaction-Request.svg)
-
-*Initialization*. Targets are provided to the Director's initializer.
-
-![](../_assets/DirectorTransaction-Provide.svg)
+We may lift this restriction if there are strong technical reasons to do so.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -65,7 +44,17 @@ Common solutions include:
 
 <p style="text-align:center"><tt>feature: tear-down</tt></p>
 
-Directors may wish to receive a tearDown event when their Runtime is about to shut down.
+Directors may implement a `tearDown` function. This function must be invoked when the associated Runtime is about to terminate.
+
+**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding Runtime is about to terminate.
+
+Pseudo-code example:
+
+    protocol TearDownDirector {
+      function tearDown() {
+        // Perform any cleanup work
+      }
+    }
 
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
 
@@ -75,12 +64,17 @@ Directors may wish to receive a tearDown event when their Runtime is about to sh
 
 Directors may wish to register new Plans after `setUp` has been invoked.
 
-Provide these Directors a *transaction initiation function*. Consider the following pseudo-code:
+**Transact API**: A Director may be provided with a *transaction initiation function*.
 
-    # Typical set up
-    director.setUp(transaction)
-    
-    director.transact = function(function(Transaction) work) {
+Example pseudo-code protocol:
+
+    TransactionDirector {
+      var transact // settable
+    }
+
+The provided function implementation might resemble the following:
+
+    var transact = function(work) {
       transaction = Transaction()
       work(transaction)
       runtime.commit(transaction)
@@ -114,6 +108,5 @@ TODO: Describe entity that manages creation of Director. This entity is responsi
 <!--
 
 LGTM:
-- featherless
 
 -->

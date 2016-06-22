@@ -1,6 +1,6 @@
 # Motion Runtime
 
-This section defines a system that emphasizes a separation of plan from its execution. We call it a Motion Runtime, or Runtime for short.
+This section defines a system that emphasizes the separation of a plan from its execution. We call it a Motion Runtime, or Runtime for short.
 
 A Runtime serves two primary purposes:
 
@@ -14,23 +14,25 @@ The following diagram shows where the Runtime lives in relation to a platform li
 
 ## Overview
 
-Provide some plans to a Runtime and it will find a way to execute them.
+A Runtime will find a way to execute any plans it is provided.
 
 This sentence introduces two important questions:
 
 1. How are plans provided to a Runtime?
-1. How does a Runtime know how to execute Plans?
+1. How does a Runtime know how to execute plans?
 
-To answer the first question we introduce two new types into the system: the Plan and the Transaction.
+To answer the first question we introduce two new types into the system: the **_Plan_** and the **_Transaction_**.
 
 > A Plan is an object representing **what you want something to do**. A Transaction aggregates requests for Plan-target associations.
 
-To answer the second question we introduce one more type: the Executor.
+To answer the second question we introduce one more type: the **_Executor_**.
 
-The following statements define the relationships between each type:
+> An Executor's sole responsibility is to fulfill the contract defined by one or more Plans.
 
-1. Add Plans to Transactions.
-2. Commit Transactions to Runtimes.
+Here's how these objects fit together:
+
+1. Plans are added to Transactions.
+2. Transactions are committed to Runtimes.
 3. Runtimes create Executors.
 
 In visual form:
@@ -46,9 +48,12 @@ Or dive in to the engineering specifications:
 - [Transaction](transaction.md)
 - [Executor](executor.md)
 
+Collectively, these objects represent what we consider to be a *minimum-viable motion runtime*.
+
 <!--
 
 LGTM:
+- appsforartists
 - featherless
 - markwei
 

@@ -21,7 +21,7 @@ Most platforms have an implementation of this separation for tween animations. F
 
 We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
-For example, "fade in" and "draggable" are two distinct plans. Their execution might use gesture and tween primitives.
+For example, "fade in" and "be draggable" are two distinct plans. Their execution might use gesture and tween primitives.
 
 Consider the following pseudo-code:
 
@@ -71,7 +71,7 @@ Consider this pseudo-code:
 
 Exactly how a plan is executed is less important than that it **is** executed and that the execution is able to occur elsewhere.
 
-For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom interpolation function. The plan doesn't know or care how it's executed.
+For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function. The plan doesn't know or care how it's executed.
 
 Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
@@ -79,11 +79,12 @@ Good systems of execution will carefully balance the needs of performance, power
 
 - [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
 - [Core Animation](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)
-- [Web animations](https://w3c.github.io/web-animations/)
+- [Web Animations](https://w3c.github.io/web-animations/)
 
 <!--
 
 LGTM:
+- appsforartists
 - featherless
 - larche
 - markwei

@@ -2,7 +2,7 @@
 
 This is the engineering specification for the Transaction object.
 
-Transactions aggregate requests for Plan-target associations. Transactions are designed to be committed to a Runtime.
+A Transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Runtime](./README.md).
 
 Printable tech tree/checklist:
 
@@ -43,11 +43,12 @@ Example pseudo-code:
     plan.fromValue = 5
     transaction.add(plan, target)
 
-The transaction's log must look like so:
+Here's the log.  Notice that each entry has a different `fromValue`.
 
-    [add(plan (fromValue = 0), add(plan (fromValue = 5)]
-
-Note that the first plan's `fromValue` did not magically transform into `5`.
+    [
+      {action: 'add', plan: {..., fromValue = 0}}, 
+      {action: 'add', plan: {..., fromValue = 5}}
+    ]
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -124,3 +125,10 @@ Transactions optimize their operations.
 TODO: Spec this out.
 
 <p style="text-align:center"><tt>/feature: optimized</tt></p>
+
+<!--
+
+LGTM:
+- appsforartists
+
+-->
