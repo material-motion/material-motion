@@ -66,7 +66,7 @@ A target is the entity to which a plan is meant to be applied, such as an elemen
 
 ## transaction
 
-A mechanism by which new Intentions are committed to a Runtime.
+A mechanism by which new Plans are committed to a Runtime.
 
 ## update event
 
