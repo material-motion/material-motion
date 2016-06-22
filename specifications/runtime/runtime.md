@@ -9,7 +9,7 @@ A Scheduler serves two primary purposes:
 
 Printable tech tree/checklist:
 
-![](../../_assets/RuntimeTechTree.svg)
+![](../../_assets/SchedulerTechTree.svg)
 
 ---
 
