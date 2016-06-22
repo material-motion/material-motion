@@ -48,7 +48,7 @@ Or dive in to the engineering specifications:
 - [Transaction](transaction.md)
 - [Executor](executor.md)
 
-Collectively these objects represent what we consider to be a *minimum-viable motion runtime*.
+Collectively, these objects represent what we consider to be a *minimum-viable motion runtime*.
 
 <!--
 
