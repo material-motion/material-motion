@@ -4,7 +4,7 @@ The following diagram details the GitHub repositories we intend to create. Each 
 
 This diagram does not include:
 
-- plan/executor families.
+- plan/executor families. E.g. Tween, Gesturing.
 - Specific Director implementations. E.g. PhotoDirector, FadeDirector, SlideUpDirector.
 
 ![](../_assets/RepoStructure.svg)
