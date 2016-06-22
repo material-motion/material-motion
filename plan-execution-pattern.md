@@ -42,7 +42,7 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    system.addPlan(fadeIn, toTarget: target)
+    system.addPlan(behavior, toTarget: target)
 
 In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
 
