@@ -45,6 +45,8 @@ We may lift this restriction if there are strong technical reasons to do so.
 
 Directors may implement a `tearDown` function. This function must be invoked when the associated Runtime is about to terminate.
 
+**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding Runtime is about to terminate.
+
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
 
 ---
