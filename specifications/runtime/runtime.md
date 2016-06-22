@@ -113,8 +113,6 @@ A Runtime is active if any of its Executor instances are active.
 
 **Tear down API**: Provide an API to tear down a Runtime.
 
-This function should emit a warning if the Runtime's activity state is currently active.
-
 Example pseudo-code:
 
     runtime.tearDown()
