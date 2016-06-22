@@ -30,6 +30,12 @@ Pseudo-code example:
 
 Modifications made to the copy do not affect the original.
 
+This can be implemented in a variety of ways. We've included a few options we know of below:
+
+- Immutable types.
+- Value types.
+- Implement a copy method on a reference type.
+
 Pseudo-code example:
 
     planCopy = plan.copy()
