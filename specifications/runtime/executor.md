@@ -97,13 +97,13 @@ Example pseudo-code:
 
 <p style="text-align:center"><tt>feature: Manual execution</tt></p>
 
-An Executor can choose to implement an update API that will be called many times per second.
+An Executor can choose to implement an update function that will be called many times per second.
 
-**Update API**: Executors can implement an update function.
+**Manual execution API**: Executors can implement an update function.
 
 >The Executor may choose not to implement this API.
 
-The update API will be called each time the platform will draw a new frame. The Executor may use this method to perform time-based calculations.
+The update function will be called each time the platform will draw a new frame. The Executor may use this method to perform time-based calculations.
 
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
