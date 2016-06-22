@@ -58,7 +58,7 @@ Adding a release-blocking client is expensive and is done with great care.
 
 Examples of how a client can block a release:
 
-- We cut a release that we thought was minor, but is in fact major. We identify that it's major because when we mirror the library internally it breaks everyone.
+- We cut a release that we thought was minor, but is in fact major. We identify that it's major because when a release-blocking client upgrades to it, its builds break.
 
 ## Deprecation policy
 
