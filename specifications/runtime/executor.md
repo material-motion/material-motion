@@ -39,7 +39,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-Example pseudo-code from within the Runtime:
+Example pseudo-code from within the Scheduler:
 
     executor = executorForPlan(plan, target)
     if executor.addPlan {
