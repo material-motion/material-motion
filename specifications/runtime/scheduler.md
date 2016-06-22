@@ -2,10 +2,7 @@
 
 This is the engineering specification for the Scheduler object.
 
-A Scheduler serves two primary purposes:
-
-- Provide an abstraction layer between the application engineer and execution systems.
-- Coordinate the expression of diverse types of motion and interaction.
+A Scheduler accepts Transactions and creates Executors. The Scheduler generates relevant events for Executors and observers and keeps track of overall activity state.
 
 Printable tech tree/checklist:
 
