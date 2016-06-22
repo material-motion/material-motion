@@ -165,7 +165,8 @@ Example pseudo-code:
     # Step 2
     executor = executorForPlan(plan)
     executor.setPlan(plan, withName: name)
-    executorForName(name) = executor
+    executorForName(name) == executor 
+    > true
 
 <p style="text-align:center"><tt>/feature: named plans</tt></p>
 
