@@ -65,12 +65,17 @@ Pseudo-code example:
 
 Directors may wish to register new Plans after `setUp` has been invoked.
 
-Provide these Directors a *transaction initiation function*. Consider the following pseudo-code:
+**Transaction initiation API**: A Director may be provided with a *transaction initiation function*.
 
-    # Typical set up
-    director.setUp(transaction)
-    
-    director.transact = function(function(Transaction) work) {
+Consider the following pseudo-code:
+
+    MyDirector {
+      var transact // settable
+    }
+
+Provide the Director with a function that resembles the following:
+
+    var transact = function(work) {
       transaction = Transaction()
       work(transaction)
       runtime.commit(transaction)
