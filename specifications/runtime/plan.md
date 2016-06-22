@@ -26,15 +26,6 @@ Pseudo-code example:
     protocol Plan {
     }
 
-**Configurable**: Plans can have configurable properties.
-
-Pseudo-code example:
-
-    Tween: Plan {
-      var fromValue
-      var toValue
-    }
-
 **Copyable**: Plans can be copied.
 
 Modifications made to the copy do not affect the original.
