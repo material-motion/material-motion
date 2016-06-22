@@ -5,8 +5,8 @@
    * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
-   * Repository structure
    * [Reading spec diagrams](specifications/reading_spec_diagrams.md)
+   * Repository structure
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a Plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
