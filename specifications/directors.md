@@ -9,8 +9,6 @@ A Director is an object created for the purposes of describing motion.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
 
-Directors do not have direct access to a Runtime. The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with.
-
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
