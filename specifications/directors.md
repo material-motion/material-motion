@@ -65,7 +65,7 @@ Pseudo-code example:
 
 Directors may wish to register new Plans after `setUp` has been invoked.
 
-**Transaction initiation API**: A Director may be provided with a *transaction initiation function*.
+**Transact API**: A Director may be provided with a *transaction initiation function*.
 
 Consider the following pseudo-code:
 
