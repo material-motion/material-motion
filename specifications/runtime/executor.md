@@ -96,7 +96,7 @@ Executors can delegate work to a remote API such as a platform-native API.
 
 **Remote execution API**: Executor can invoke callbacks when remote execution starts and ends.
 
->The Executor may choose not to implement this API.
+> If an Executor doesn't utilize remote execution, it may not implement this API.
 
 The Executor would be responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
 
