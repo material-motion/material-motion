@@ -29,7 +29,7 @@ Example pseudo-code:
 
     executor = Executor(target)
 
-**Add Plans API**: Plans are provided to Executors.
+**Add plans API**: Plans are provided to Executors.
 
 >The Executor may choose not to implement this API.
 
@@ -48,7 +48,7 @@ Example pseudo-code from within the Runtime:
 
 **Update API**: Executors can implement an update function.
 
-The Executor may choose not to implement this API.
+>The Executor may choose not to implement this API.
 
 The update function will be called many times per second. The Executor may use this method to perform time-based calculations.
 
@@ -61,7 +61,7 @@ Example pseudo-code:
       .Idle
     }
     
-    protocol UpdateExecuting {
+    protocol UpdateExecution {
       function update() -> ActivityState
     }
 
@@ -75,15 +75,42 @@ Executors can receive named Plans.
 
 **Add/remove API**: Executors can implement an add/remove function.
 
+>The Executor may choose not to implement this API.
+
 If one method is implemented, so must the other.
 
 Example pseudo-code:
 
-    protocol NamedPlanExecuting {
+    protocol NamedPlanExecution {
       function addPlanWithName(plan, name)
       function removePlanWithName(name)
     }
 
 <p style="text-align:center"><tt>/feature: Named plans</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: Remote execution</tt></p>
+
+Executors can delegate work to a remote API such as a platform-native API.
+
+**Remote execution API**: Executor can invoke callbacks when remote execution starts and ends.
+
+>The Executor may choose not to implement this API.
+
+The Executor would be responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
+
+Example pseudo-code:
+
+    protocol RemoteExecution {
+      function setRemoteExecutionCallback(callback)
+    }
+    
+    class RemoteExecutionCallback {
+      function onRemoteExecutionStart(executor, name)
+      function onRemoteExecutionEnd(executor, name)
+    }
+
+<p style="text-align:center"><tt>/feature: Remote execution</tt></p>
 
 ---
