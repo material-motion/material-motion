@@ -29,7 +29,7 @@
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
-   * Writing code
+   * Code policies
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
        * [iOS](community_index/ios.md)
