@@ -46,23 +46,28 @@ Example pseudo-code from within the Runtime:
       executor.addPlan(plan)
     }
 
-**Update API**: Executors can implement an update function.
+**Delegated execution API**: An Executor can choose to delegate its work to a platform-native API, like Web Animations or CoreAnimation.
 
->The Executor may choose not to implement this API.
+> If an Executor does not use delegated execution, it does not have to implement this API.
 
-The update function will be called many times per second. The Executor may use this method to perform time-based calculations.
+The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
 
-The method returns an activity state enumeration. This enumeration has two states: active and idle.
+Example pseudo-code if your language does not support anonymous functions:
 
-Example pseudo-code:
-
-    enum ActivityState {
-      .Active
-      .Idle
+    protocol DelegatedExecution {
+      function setDelegatedExecutionCallback(callback)
     }
     
-    protocol UpdateExecution {
-      function update() -> ActivityState
+    class DelegatedExecutionCallback {
+      function onDelegatedExecutionStart(executor, name)
+      function onDelegatedExecutionEnd(executor, name)
+    }
+
+Example pseudo-code if your language supports anonymous functions:
+
+    protocol DelegatedExecution {
+      var onDelegatedExecutionStart(executor, name)
+      var onDelegatedExecutionEnd(executor, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
@@ -90,34 +95,29 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Delegated execution</tt></p>
+<p style="text-align:center"><tt>feature: Manual execution</tt></p>
 
-An Executor can delegate its work to a platform-native API, like Web Animations or CoreAnimation.
+An Executor can choose to implement an update API that will be called many times per second.
 
-**Delegated execution API**: Executor can invoke callbacks when delegated execution starts and ends.
+**Update API**: Executors can implement an update function.
 
-> If an Executor does not use delegated execution, it does not have to implement this API.
+>The Executor may choose not to implement this API.
 
-The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+The update function will be called many times per second. The Executor may use this method to perform time-based calculations.
 
-Example pseudo-code if your language does not support anonymous functions:
+The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
-    protocol DelegatedExecution {
-      function setDelegatedExecutionCallback(callback)
+Example pseudo-code:
+
+    enum ActivityState {
+      .Active
+      .Idle
     }
     
-    class DelegatedExecutionCallback {
-      function onDelegatedExecutionStart(executor, name)
-      function onDelegatedExecutionEnd(executor, name)
+    protocol ManualExecution {
+      function update() -> ActivityState
     }
 
-Example pseudo-code if your language supports anonymous functions:
-
-    protocol DelegatedExecution {
-      var onDelegatedExecutionStart(executor, name)
-      var onDelegatedExecutionEnd(executor, name)
-    }
-
-<p style="text-align:center"><tt>/feature: Delegated execution</tt></p>
+<p style="text-align:center"><tt>/feature: Manual execution</tt></p>
 
 ---
