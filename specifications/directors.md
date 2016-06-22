@@ -9,12 +9,7 @@ A Director is an object created for the purposes of describing motion.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
 
-A Director uses with Plans and Transactions. Directors do not have direct access to a Runtime.
-
-> Hiding the Runtime from a Director has the following benefits:
-> 
-> - There is a primary Runtime.
-> - Big Transactions can potentially be optimized.
+Directors do not have direct access to a Runtime. The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with.
 
 ---
 
