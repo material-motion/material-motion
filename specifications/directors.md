@@ -23,7 +23,7 @@ Example pseudo-code:
       }
     }
 
-**Initial Plans**. Directors are expected to commit Plans in `setUp`.
+**Initial Plans**. Directors are expected to commit Plans to `setUp`'s provided transaction .
 
 Pseudo-code:
 
