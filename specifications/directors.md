@@ -39,9 +39,7 @@ We may lift this restriction if there are strong technical reasons to do so.
 
 **Access to targets**: Target instances must somehow be provided to the Director.
 
-How targets are provided to a Director is up to the creator of the Director.
-
-Common solutions include:
+There are many ways to provide targets to Directors. We explore a couple options below.
 
 *Delegate pattern*. The Director requests targets via a delegate.
 
