@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* Guides
 * [Engineering spec](specifications/README.md)
    * [Tech tree](specifications/tech_tree.md)
    * [Reading spec diagrams](specifications/reading_spec_diagrams.md)
@@ -40,5 +41,4 @@
        * [Scripting](specifications/scripting.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](_drafts/expressions.md)
-* Guides
 
