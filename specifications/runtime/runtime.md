@@ -111,12 +111,6 @@ Pseudo-code example:
 
 A Runtime is active if any of its Executor instances are active.
 
-**Tear down API**: Provide an API to tear down a Runtime.
-
-Example pseudo-code:
-
-    runtime.tearDown()
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
@@ -243,3 +237,15 @@ The following topics are open for discussion. They do not presently have a clear
 
 - When should Executors be removed from a Runtime?
 - Should Runtimes support target-less Plans?
+
+### Proposed features
+
+**Tear down API**: Provide an API to tear down a Runtime.
+
+This API would terminate all active executors and remove all registered Plans.
+
+It's unclear if this is a necessary feature at this point in time.
+
+Example pseudo-code:
+
+    runtime.tearDown()
