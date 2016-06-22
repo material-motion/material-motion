@@ -117,7 +117,7 @@ Executors will be notified each time the system will draw a new frame by the Run
 
 **Delegated execution**
 
-An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation.  The Executor would be responsible for informing the Runtime of two things: when remote execution will start, and when remote execution has ended.
+An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation.  The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
