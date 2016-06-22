@@ -33,9 +33,12 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-Plans are associated to targets using a Transaction.
+First we must create a Transaction.
 
     transaction = Transaction()
+
+Plans are associated to targets using a Transaction instance.
+
     transaction.add(animation, circleView)
     transaction.add(draggable, squareView)
     transaction.add(pinchable, "name1", squareView)
@@ -43,7 +46,7 @@ Plans are associated to targets using a Transaction.
     transaction.remove("name2", squareView)
     transaction.add(draggable, circleView)
 
-The Transaction's log might resemble this:
+The transaction's log might resemble this:
 
     > transaction.log
     [
