@@ -104,10 +104,7 @@ Pseudo-code example:
       function activityState() -> ActivityState
     }
 
-A Runtime is active if any of its Executor instances are active. An Executor is active if either of the following conditions are met:
-
-- The Executor has an active remote execution.
-- The Executor returned `true` from its last update event.
+A Runtime is active if any of its Executor instances are active.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
