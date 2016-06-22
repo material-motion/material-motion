@@ -46,8 +46,6 @@ Cut new releases every Wednesday. We want to automate as much of this as possibl
 
 Every platform/language will have a different release process. We will formalize each one here as we begin to cut releases.
 
-Important part of the release process is mirroring our repos in to google3/third_party.
-
 ## Release-blocking clients
 
 A release-blocking client has the power to stop a release.
