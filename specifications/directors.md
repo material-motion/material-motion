@@ -9,6 +9,8 @@ A Director is an object created for the purposes of describing motion.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
 
+Printable tech tree/checklist:
+
 ![](../_assets/DirectorTechTree.svg)
 
 ---
