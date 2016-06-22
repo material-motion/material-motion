@@ -142,19 +142,29 @@ Example use case: associating "behavior" with a target.
 
 Example pseudo-code:
 
-    # Initial state...
-    transaction.add(StaysSmall(), "behavior", target)
-    scheduler.commit(transaction)
-    
-    # The user taps the target...
-    transaction.add(ExpandsLarge(), "behavior", target)
-    scheduler.commit(transaction)
+    # on drag
+    transaction1.add(
+      name: 'drag', 
+      plan: matchLocationOf(cursor), 
+      target
+    )
+    scheduler.commit(transaction1)
+
+    # on release
+    transaction2.add(
+      name: 'drag', 
+      plan: springToLocation(origin), 
+      target
+    )
+    scheduler.commit(transaction2)
 
 **Target-scoped names**: Names are scoped to the target.
 
 **Remove-then-add**: Two things must happen when a named Plan is committed:
 
-1. Remove any previously-committed Plan with the same name from the target's Executors. This may be on a different Executor instance.
+1. Remove any previously-committed Plan with the same name from the target's Executors. 
+
+   _Note:_ This may be on a different Executor instance.  In the above example, perhaps a PhysicsExecutor is needed for the second transaction, but not for the first.
 2. Provide the relevant Executor with the new named Plan.
 
 Example pseudo-code:
