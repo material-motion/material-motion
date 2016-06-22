@@ -43,7 +43,7 @@ There are many ways to provide targets to Directors. We explore a couple options
 
 *Delegate pattern*. The Director requests targets via a delegate.
 
-> This is the recommended approach.
+> This is the recommended approach for the general case.
 
 ![](../_assets/DirectorTransaction-Request.svg)
 
