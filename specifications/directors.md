@@ -43,6 +43,8 @@ There are many ways to provide targets to Directors. We explore a couple options
 
 *Delegate pattern*. The Director requests targets via a delegate.
 
+> This is the recommended approach.
+
 ![](../_assets/DirectorTransaction-Request.svg)
 
 *Setters*. Targets are provided to the Director post-initialization.
