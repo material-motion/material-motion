@@ -5,6 +5,7 @@
    * [Tech tree](specifications/tech_tree.md)
    * [Motion primitives](primitives.md)
    * [Separation of plan/execution](plan-execution-pattern.md)
+   * Reading specification diagrams
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a Plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
@@ -23,7 +24,6 @@
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
-   * Reading specification diagrams
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
