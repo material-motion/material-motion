@@ -36,10 +36,6 @@ This can be implemented in a variety of ways. We've included a few options we kn
 - Value types.
 - Implement a copy method on a reference type.
 
-Pseudo-code example:
-
-    planCopy = plan.copy()
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
