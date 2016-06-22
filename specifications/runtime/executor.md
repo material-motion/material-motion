@@ -92,7 +92,7 @@ Example pseudo-code:
 
 <p style="text-align:center"><tt>feature: Delegated execution</tt></p>
 
-Executors can delegate work to a remote API such as a platform-native API.
+An Executor can delegate its work to a platform-native API, like Web Animations or CoreAnimation.
 
 **Delegated execution API**: Executor can invoke callbacks when remote execution starts and ends.
 
