@@ -15,17 +15,15 @@ Directors have little — if any — imperative code. Directors prefer to descr
 
 **Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This function accepts a Transaction instance.
 
-Example pseudo-code:
+Example pseudo-code protocol definition:
 
-    MyDirector {
-      function setUp(transaction) {
-        // Set things up
-      }
+    protocol Director {
+      function setUp(transaction)
     }
 
-**Initial Plans**. Directors are expected to commit Plans to `setUp`'s provided transaction .
+Directors are expected to commit Plans to `setUp`'s provided transaction .
 
-Pseudo-code:
+Example pseudo-code implementation:
 
     function setUp(transaction) {
       transaction.add(plan, targetA)
@@ -51,7 +49,7 @@ Directors may implement a `tearDown` function. This function must be invoked whe
 
 Pseudo-code example:
 
-    MyDirector {
+    protocol TearDownDirector {
       function tearDown() {
         // Perform any cleanup work
       }
