@@ -23,6 +23,7 @@
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
+   * Reading specification diagrams
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
