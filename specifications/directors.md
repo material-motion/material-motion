@@ -37,7 +37,7 @@ The primary goal of this restriction is to minimize the number of novel APIs the
 
 We may lift this restriction if there are strong technical reasons to do so.
 
-`v1` **Providing targets**: Provide targets to Directors.
+**Access to targets**: Target instances must somehow be provided to the Director.
 
 How targets are provided to a Director is up to the creator of the Director.
 
