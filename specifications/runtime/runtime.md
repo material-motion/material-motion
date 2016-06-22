@@ -2,6 +2,11 @@
 
 This is the engineering specification for the Runtime object.
 
+A Runtime serves two primary purposes:
+
+- Provide an abstraction layer between the application engineer and execution systems.
+- Coordinate the expression of diverse types of motion and interaction.
+
 Printable tech tree/checklist:
 
 ![](../../_assets/RuntimeTechTree.svg)
