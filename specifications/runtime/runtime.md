@@ -1,31 +1,31 @@
-# Runtime specification
+# Scheduler specification
 
-This is the engineering specification for the Runtime object.
+This is the engineering specification for the Scheduler object.
 
-A Runtime serves two primary purposes:
+A Scheduler serves two primary purposes:
 
 - Provide an abstraction layer between the application engineer and execution systems.
 - Coordinate the expression of diverse types of motion and interaction.
 
 Printable tech tree/checklist:
 
-![](../../_assets/RuntimeTechTree.svg)
+![](../../_assets/SchedulerTechTree.svg)
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Simple initializer**: A Runtime is cheap to create.
+**Simple initializer**: A Scheduler is cheap to create.
 
 Example pseudo-code:
 
-    runtime = Runtime()
+    scheduler = Scheduler()
 
-**commit API**: Provide an API to commit Transactions to a Runtime.
+**commit API**: Provide an API to commit Transactions to a scheduler.
 
 Example pseudo-code:
 
-    runtime.commit(transaction)
+    scheduler.commit(transaction)
 
 Requires: [Transaction](transaction.md)
 
@@ -38,7 +38,7 @@ Requires: [Transaction](transaction.md)
 >     transaction = Transaction()
 >     transaction.add(Friction(), circleView)
 >     transaction.add(AnchoredSpringAtLocation(x, y), circleView)
->     runtime.commit(transaction)
+>     scheduler.commit(transaction)
 > 
 > `circleView` now has two Plans and one Executor, a PhysicalSimulationExecutor. Both Plans are provided to the Executor instance.
 > 
@@ -61,7 +61,7 @@ Requires: [Transaction](transaction.md)
 
 Note that "one Executor per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
 
-**Plan ↔ Executor association**: The Runtime must be able to translate Plans into Executors.
+**Plan ↔ Executor association**: The scheduler must be able to translate Plans into Executors.
 
 This lookup can be implemented in many ways:
 
@@ -79,24 +79,24 @@ This lookup can be implemented in many ways:
         }
       }
       
-      # In the Runtime...
+      # In the scheduler...
       executorType = plan.executorType()
       executor = executorType()
 
 - Map Executor type to Plan type with look-up table
 
-  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.  The Runtime would need to be able to determine which one to use.
+  Executors define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Executors conflicting on a given Plan.  The scheduler would need to be able to determine which one to use.
   
   Example pseudo-code:
   
       # In some initialization step...
-      runtime.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
+      scheduler.executorType(SomeExecutor.type, canExecutePlanType: SomePlan.type)
       
-      # In the Runtime...
+      # In the scheduler...
       executorType = plan.executorTypeForPlan(plan)
       executor = executorType()
 
-**Activity state**: Activity state is one of either active or idle. The Runtime must provide a read-only API for accessing this state.
+**Activity state**: Activity state is one of either active or idle. The scheduler must provide a read-only API for accessing this state.
 
 Pseudo-code example:
 
@@ -105,11 +105,11 @@ Pseudo-code example:
       .Idle
     }
     
-    Runtime {
+    Scheduler {
       function activityState() -> ActivityState
     }
 
-A Runtime is active if any of its Executor instances are active.
+A scheduler is active if any of its Executor instances are active.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -123,11 +123,11 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 **activity state changed API**: Provide a mechanism for listening to activity state changes.
 
-    Runtime {
+    Scheduler {
       function addActivityStateObserver(function)
     }
     
-    runtime.addActivityStateObserver(function(newState) {
+    scheduler.addActivityStateObserver(function(newState) {
       // React to state change
     })
 
@@ -139,7 +139,7 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 <p style="text-align:center"><tt>feature: named plans</tt></p>
 
-Runtimes support named Plans. Named Plans are plans with a name associated via the Transaction.
+Schedulers support named Plans. Named Plans are plans with a name associated via the Transaction.
 
 Example use case: associating "behavior" with a target.
 
@@ -147,11 +147,11 @@ Example pseudo-code:
 
     # Initial state...
     transaction.add(StaysSmall(), "behavior", target)
-    runtime.commit(transaction)
+    scheduler.commit(transaction)
     
     # The user taps the target...
     transaction.add(ExpandsLarge(), "behavior", target)
-    runtime.commit(transaction)
+    scheduler.commit(transaction)
 
 **Target-scoped names**: Names are scoped to the target.
 
@@ -182,11 +182,11 @@ Unlocks [view duplication](../view_duplication.md).
 
 **new target API**: Provide a mechanism for listening to new target references.
 
-    Runtime {
+    Scheduler {
       function addNewTargetObserver(function)
     }
     
-    runtime.addNewTargetObserver(function(target) {
+    scheduler.addNewTargetObserver(function(target) {
       // Potentially clone the target
       return clonedTarget
     })
@@ -207,7 +207,7 @@ Executors are expected to act on the sandbag instance rather than the original t
 
 **Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
 
-This is a more focused event than the "Runtime activity state did change".
+This is a more focused event than the "scheduler activity state did change".
 
 This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
 
@@ -216,7 +216,7 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
     }
     
     transaction.addActivityStateObserverForTarget(target, function(newState) {
-      // Start a new transaction and commit it to the Runtime...
+      // Start a new transaction and commit it to the scheduler...
     })
 
 NOTE: It may be more valuable to have Executor-level idling. Target-level idling may not be helpful. It's unclear how Executor-level idling would work, given that the outside system should generally be unaware of Executors.
@@ -226,7 +226,7 @@ NOTE: It may be more valuable to have Executor-level idling. Target-level idling
     }
     
     transaction.addActivityStateObserverForPlan(plan, function(newState) {
-      // Start a new transaction and commit it to the Runtime...
+      // Start a new transaction and commit it to the scheduler...
     })
 
 ---
@@ -235,12 +235,12 @@ NOTE: It may be more valuable to have Executor-level idling. Target-level idling
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should Executors be removed from a Runtime?
-- Should Runtimes support target-less Plans?
+- When should Executors be removed from a scheduler?
+- Should schedulers support target-less Plans?
 
 ### Proposed features
 
-**Tear down API**: Provide an API to tear down a Runtime.
+**Tear down API**: Provide an API to tear down a scheduler.
 
 This API would terminate all active executors and remove all registered Plans.
 
@@ -248,4 +248,4 @@ It's unclear if this is a necessary feature at this point in time.
 
 Example pseudo-code:
 
-    runtime.tearDown()
+    scheduler.tearDown()
