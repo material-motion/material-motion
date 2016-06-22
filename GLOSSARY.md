@@ -15,7 +15,7 @@ The execution of a plan.
 
 ## executor
 
-An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Intentions of a specific type.
+An **Executor**'s sole responsibility is to fulfill the contract defined by one or more Plans.
 
 Similar concepts:
 
