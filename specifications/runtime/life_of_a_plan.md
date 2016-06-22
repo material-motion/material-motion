@@ -33,7 +33,7 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create a Transaction.
+First we must create an instance of a Transaction.
 
     transaction = Transaction()
 
