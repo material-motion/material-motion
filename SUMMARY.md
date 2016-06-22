@@ -12,7 +12,7 @@
        * [Plan](specifications/runtime/plan.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Executor](specifications/runtime/executor.md)
-       * [Scheduler](specifications/runtime/runtime.md)
+       * [Scheduler](specifications/runtime/scheduler.md)
    * [Director](specifications/directors.md)
    * [Transient views](specifications/transient_views.md)
    * [View duplication](specifications/view_duplication.md)
