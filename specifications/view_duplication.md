@@ -43,7 +43,7 @@ Example pseudo-code:
 
 This API should accept an element and return either an element or null.
 
-The implementation of this API should first consult the list of disabled elements. If the element is present, the API should return null. If the element is not present, the controller should invoke the assigned duplicator's `duplicateElement` API.
+The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the assigned duplicator's `duplicateElement` API.
 
 Example pseudo-code:
 
