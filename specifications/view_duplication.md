@@ -26,7 +26,7 @@ Example pseudo-code:
 
 This API should accept an element and return an element.
 
-The API may return either a new element or the provided element. Returning the provided element is equivalent to not duplicating the element.
+The API may return either a duplicated version of the element or the provided element.
 
 Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
 
