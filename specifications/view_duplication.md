@@ -2,20 +2,20 @@
 
 This is the engineering specification for the DuplicationController object.
 
-A DuplicationController makes use of a Duplicator instance in order to create similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
+A `DuplicationController` makes use of a Duplicator instance in order to create similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Object type**: A DuplicationController is an object type.
+**Object type**: A `DuplicationController` is an object type.
 
 Example pseudo-code:
 
     DuplicationController {
     }
 
-**Duplicator API**: Provide an API for setting a Duplicator instance.
+**Duplicator API**: Provide an API for setting a `Duplicator` instance.
 
 The duplicator instance performs the actual duplication.
 
