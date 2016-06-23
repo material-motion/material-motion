@@ -38,7 +38,7 @@ Example pseudo-code:
 
 **Disallow duplication API**: Provide an API for disabling duplication of specific elements.
 
-The duplicator instance is expected to maintain a list of elements that should not be duplicated.
+The duplicator instance maintains a list of elements that should not be duplicated.
 
 Example pseudo-code:
 
