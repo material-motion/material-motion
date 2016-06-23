@@ -8,7 +8,7 @@ A `DuplicationController` makes use of a Duplicator instance in order to create 
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Object type**: A `DuplicationController` is an object type.
+**Concrete object**: A `DuplicationController` is a concrete object.
 
 Example pseudo-code:
 
