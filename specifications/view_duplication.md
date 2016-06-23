@@ -3,7 +3,7 @@ Status of this document:
 
 # Duplicator
 
-This is the engineering specification for the Duplicator object.
+This is the engineering specification for the Duplicator abstract type.
 
 A Duplicator creates apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
 
