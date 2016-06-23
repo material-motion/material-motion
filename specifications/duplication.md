@@ -10,6 +10,11 @@ The following often occurs after an element is duplicated:
 - Once its purpose is served, the duplicated element is thrown away.
 - The original element is unhidden.
 
+Duplication makes use of two APIs:
+
+- [Duplicator](duplicator.md)
+- [DuplicationController](duplication_controller.md)
+
 ---
 
 ## Open Questions ##
