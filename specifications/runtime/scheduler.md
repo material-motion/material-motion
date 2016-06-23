@@ -4,6 +4,7 @@ This is the engineering specification for the Scheduler object.
 
 A Scheduler accepts Transactions and creates Executors. The Scheduler generates relevant events for Executors and observers and monitors activity.
 
+
 Printable tech tree/checklist:
 
 ![](../../_assets/SchedulerTechTree.svg)
