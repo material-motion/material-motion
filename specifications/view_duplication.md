@@ -32,7 +32,7 @@ If possible, do not allow the API to return a null element.
 
 Example pseudo-code:
 
-    protocol Duplicator {
+    Duplicator {
       function duplicate(Element element) -> Element
     }
 
@@ -42,7 +42,7 @@ The duplicator instance is expected to maintain a list of elements that should n
 
 Example pseudo-code:
 
-    protocol Duplicator {
+    Duplicator {
       function disallowDuplication(Element element)
     }
 
