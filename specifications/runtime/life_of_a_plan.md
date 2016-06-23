@@ -6,9 +6,9 @@ Let's walk through the life of a Plan.
 
 ### Step 1: Create a Scheduler
 
-Schedulers are cheap and easy to create. Many Schedulers may exist in an application. Let's create one.
+Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one.
 
-    Scheduler = Scheduler()
+    scheduler = Scheduler()
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
 
