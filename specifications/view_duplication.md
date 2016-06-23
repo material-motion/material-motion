@@ -1,11 +1,11 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# View duplication
+# Element duplication
 
-View duplication is the act of creating an "apparent replica" of a visible element.
+Element duplication is the act of creating an "apparent replica" of a visual element.
 
-View duplication requires the "new target" event from the Runtime.
+Element duplication requires the "new target" event from the Runtime.
 
 Create an instance of a view duplicator.
 
