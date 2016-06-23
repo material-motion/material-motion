@@ -28,7 +28,11 @@ This API should accept an element and return an element.
 
 The API may return either a new element or the provided element.
 
+Every type of element is assumed to be duplicable by default. Use the disable duplication API to disable duplication for specific elements.
+
 If possible, do not allow the API to return a null element.
+
+The implementation of this method should create a best-effort apparent replica of the provided target.
 
 Example pseudo-code:
 
@@ -36,14 +40,14 @@ Example pseudo-code:
       function duplicate(Element element) -> Element
     }
 
-**Disallow duplication API**: Provide an API for disabling duplication of specific elements.
+**Disable duplication API**: Provide an API for disabling duplication of specific elements.
 
 The duplicator instance maintains a list of elements that should not be duplicated.
 
 Example pseudo-code:
 
     Duplicator {
-      function disallowDuplication(Element element)
+      function disableDuplicationForElement(Element element)
     }
 
 **Scheduler new target event**: A common use of this entity is as a placeholder generator for a scheduler.
