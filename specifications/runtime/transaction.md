@@ -20,7 +20,9 @@ Example pseudo-code:
 
     transaction = Transaction()
 
-**Add operation API**: Transactions support a basic add operation.
+**Add operation API**: Provide an API for a basic add operation.
+
+This API must accept a Plan type and a target.
 
 > Note: the function names included below are not prescriptive. Choose appropriate names for your language/platform conventions.
 
