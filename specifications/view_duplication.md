@@ -1,11 +1,11 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Element duplicator
+# Duplicator
 
-This is the engineering specification for the Element Duplicator object.
+This is the engineering specification for the Duplicator object.
 
-An Element Duplicator is responsible for creating an "apparent replica" of a visual element.
+A Duplicator is responsible for creating an "apparent replica" of a visual element.
 
 ---
 
