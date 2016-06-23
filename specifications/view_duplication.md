@@ -17,7 +17,7 @@ Scheduler
 
 - feature: new target event
 
-**Simple initializer**: 
+**Simple initializer**: Element duplicators should be cheap and easy to create.
 
 Create an instance of a view duplicator.
 
