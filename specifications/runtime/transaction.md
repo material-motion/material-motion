@@ -20,7 +20,7 @@ Example pseudo-code:
 
     transaction = Transaction()
 
-**Add operation**: Transactions support a basic add operation.
+**Add operation API**: Transactions support a basic add operation.
 
 > Note: the function names included below are not prescriptive. Choose appropriate names for your language/platform conventions.
 
