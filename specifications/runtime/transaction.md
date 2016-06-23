@@ -22,7 +22,7 @@ Example pseudo-code:
 
 **Add operation API**: Provide an API for a basic add operation.
 
-This API must accept a Plan type and a target.
+This API must accept a Plan type and a target object.
 
 > Note: the function names included below are not prescriptive. Choose appropriate names for your language/platform conventions.
 
