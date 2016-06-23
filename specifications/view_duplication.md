@@ -24,16 +24,18 @@ Example pseudo-code:
 
 **Duplication API**: Provide an API for duplicating an element.
 
-This API should accept an element and return an element.
+This API should accept an element and return either an element or null.
 
-The API may return either a duplicated version of the element or the provided element. The duplicated element should be a best-effort apparent replica of the provided target.
+Return an instance if the duplicator was able to duplicate the element. The returned element should be a best-effort apparent replica of the provided target. Duplication should be as cheap as possible.
+
+Return null if the duplicator was not able to duplicate the element.
 
 If possible, do not allow the API to return a null element.
 
 Example pseudo-code:
 
     Duplicator {
-      function duplicate(Element element) -> Element
+      function duplicate(Element element) -> Element or null
     }
 
 **Disable duplication API**: Provide an API for disabling duplication of specific elements.
