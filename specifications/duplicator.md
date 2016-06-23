@@ -4,6 +4,10 @@ This is the engineering specification for the `Duplicator` abstract type.
 
 A instance of a `Duplicator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
+Printable tech tree/checklist:
+
+![](../_assets/DuplicatorTechTree.svg)
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
