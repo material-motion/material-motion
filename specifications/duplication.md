@@ -7,7 +7,8 @@ The following often occurs after an element is duplicated:
 - The original element is hidden.
 - The duplicated element is positioned and sized to occupy the original element's place on the screen. The duplicated element may not necessarily be in the same node of the element tree.
 - Motion is applied to the duplicated element.
-- Once its purpose is served, the duplicated element is thrown away. If applicable, the original element is unhidden.
+- Once its purpose is served, the duplicated element is thrown away.
+- The original element is unhidden.
 
 ---
 
