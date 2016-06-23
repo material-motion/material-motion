@@ -12,7 +12,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: An Executor is an abstract protocol or interface, if your language allows.
+**Abstract type**: An Executor is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
