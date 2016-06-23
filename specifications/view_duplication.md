@@ -2,9 +2,7 @@
 
 This is the engineering specification for the DuplicationController object.
 
-A DuplicationController is expected to create similar replicas of visual elements. A replica does not necessarily need to be as functional as the original element.
-
-The DuplicationController requires a concrete implementation of the Duplicator abstract type.
+A DuplicationController makes use of a Duplicator instance to to create similar replicas of visual elements. Replicas does not necessarily need to be as functional as their original element.
 
 ---
 
