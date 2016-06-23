@@ -1,6 +1,6 @@
 # DuplicationController specification
 
-This is the engineering specification for the DuplicationController object.
+This is the engineering specification for the `DuplicationController` object.
 
 A `DuplicationController` makes use of a Duplicator instance in order to create similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
