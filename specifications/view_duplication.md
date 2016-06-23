@@ -30,7 +30,7 @@ The API may return either a new element or the provided element. If possible, do
 
 Example pseudo-code:
 
-    Duplicator {
+    protocol Duplicator {
       function duplicate(Element element) -> Element
     }
 
@@ -38,7 +38,7 @@ Example pseudo-code:
 
 Example pseudo-code:
 
-    Duplicator {
+    protocol Duplicator {
       function disallowDuplication(Element element)
     }
 
