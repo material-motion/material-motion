@@ -15,11 +15,11 @@ A Duplicator is expected to create apparent replicas of visual elements. An appa
 
 - Scheduler `feature: new target event`
 
-**Abstract type**: The Duplicator type is an abstract protocol or interface, if your language allows.
+**Object type**: A Duplicator is an object type.
 
 Example pseudo-code:
 
-    protocol Duplicator {
+    Duplicator {
     }
 
 **Duplication API**: Provide an API for duplicating an element.
