@@ -26,11 +26,9 @@ Example pseudo-code:
 
 This API should accept an element and return either an element or null.
 
-Return an instance if the duplicator was able to duplicate the element. The returned element should be a best-effort apparent replica of the provided target. Duplication should be as cheap as possible.
+Return a valid element if the duplicator was able to duplicate the element. The returned element should be a best-effort apparent replica of the provided target. Duplication should be as cheap as possible.
 
 Return null if the duplicator was not able to duplicate the element.
-
-If possible, do not allow the API to return a null element.
 
 Example pseudo-code:
 
@@ -40,7 +38,7 @@ Example pseudo-code:
 
 **Disable duplication API**: Provide an API for disabling duplication of specific elements.
 
-The duplicator instance maintains a list of elements that should not be duplicated.
+The duplicator maintains a list of elements that should not be duplicated.
 
 Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
 
