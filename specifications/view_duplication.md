@@ -3,7 +3,9 @@ Status of this document:
 
 # Element duplicator
 
-An element duplicator is the act of creating an "apparent replica" of a visual element.
+This is the engineering specification for the Element Duplicator object.
+
+An Element Duplicator is responsible for creating an "apparent replica" of a visual element.
 
 ---
 
