@@ -12,9 +12,9 @@ Schedulers are cheap and easy to create. Many Schedulers may exist in an applica
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
 
-### Step 2: Create Plans
+### Step 2: Create plans
 
-All motion in a Scheduler begins with a Plan. Let's create four different types of Plan:
+All motion in a motion runtime begins with a plan. Let's create four different types of Plan:
 
     animation = Tween()
     animation.property = "opacity"
@@ -71,7 +71,7 @@ After committing the above transaction, the scheduler's internal state might res
 
 The scheduler is now expected to execute the committed plans.
 
-### Step 4: Scheduler creates Executors
+### Step 4: Scheduler creates executors
 
 The scheduler uses entities called **Executors** to execute its plans. The Executor type represents a specialized mediating agent between a Plan and its execution.
 
@@ -103,11 +103,11 @@ We've created three executors in total. `circleView` has two executors. `squareV
 
 A single executor instance is created for each _type_ of plan registered to a target. This allows executors to maintain coherent state even when multiple plans have been committed.
 
-### Step 5: Provide Plans to Executors
+### Step 5: Provide plans to executors
 
 The scheduler now provides each plan instance to the relevant executor. This allows the executor to translate specific plans in to actionable logic.
 
-### Step 6: Executors execute Plans
+### Step 6: Executors execute plans
 
 Executors can execute their plans in countless ways. Let's focus on two of them.
 
