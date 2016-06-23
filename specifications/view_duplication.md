@@ -5,7 +5,7 @@ Status of this document:
 
 This is the engineering specification for the Duplicator object.
 
-A Duplicator is responsible for creating an apparent replica of a visual element. An apparent replica does not necessarily need to be a functional replica.
+A Duplicator creates apparent replicas of visual elements. An apparent replica does not necessarily need to be a functional replica.
 
 ---
 
