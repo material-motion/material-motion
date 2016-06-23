@@ -4,6 +4,8 @@ This is the engineering specification for the DuplicationController object.
 
 A DuplicationController is expected to create apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
 
+The DuplicationController requires a concrete implementation of the Duplicator abstract type.
+
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
