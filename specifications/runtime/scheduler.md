@@ -199,13 +199,13 @@ Unlocks [view duplication](../view_duplication.md).
       return clonedTarget
     })
 
-**Sandbagging**: Allow the event receiver to return a new sandbag instance.
+**Placeholders**: Allow the event receiver to return a new placeholder instance.
 
-A sandbag instance is an instance created on demand to be used in place of the original target.
+A placeholder instance is meant to be used in place of the original target.
 
-One common implementation of sandbagging is "view duplication". In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
+One common use of this feature is *view duplication*. In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
 
-Executors are expected to act on the sandbag instance rather than the original target.
+Executors are expected to act on the placeholder instance rather than the original target.
 
 <p style="text-align:center"><tt>/feature: new target event</tt></p>
 
