@@ -11,7 +11,7 @@ A Duplicator is responsible for creating an apparent replica of a visual element
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Dependencies**: An observable "new target" event from a scheduler instance.
+**Dependencies**
 
 - Scheduler feature: new target event
 
