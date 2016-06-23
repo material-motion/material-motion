@@ -21,7 +21,7 @@ Example pseudo-code:
 
     duplicator = Duplicator()
 
-**Duplication API**: Provide 
+**Duplication API**: Provide an API
 
 Identify views that shouldn't be duplicated.
 
