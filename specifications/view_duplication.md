@@ -1,11 +1,8 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
+# DuplicationController specification
 
-# Duplicator
+This is the engineering specification for the DuplicationController object.
 
-This is the engineering specification for the Duplicator object.
-
-A Duplicator is expected to create apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
+A DuplicationController is expected to create apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
 
 ---
 
@@ -15,11 +12,11 @@ A Duplicator is expected to create apparent replicas of visual elements. An appa
 
 - Scheduler `feature: new target event`
 
-**Object type**: A Duplicator is an object type.
+**Object type**: A DuplicationController is an object type.
 
 Example pseudo-code:
 
-    Duplicator {
+    DuplicationController {
     }
 
 **Duplication API**: Provide an API for duplicating an element.
@@ -32,7 +29,7 @@ Return null if the duplicator was not able to duplicate the element.
 
 Example pseudo-code:
 
-    Duplicator {
+    DuplicationController {
       function duplicate(Element element) -> Element or null
     }
 
@@ -44,7 +41,7 @@ Elements are assumed to be duplicable by default. Do not duplicate elements for 
 
 Example pseudo-code:
 
-    Duplicator {
+    DuplicationController {
       function disableDuplicationForElement(Element element)
     }
 
