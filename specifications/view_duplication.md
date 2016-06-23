@@ -21,7 +21,17 @@ Example pseudo-code:
 
     duplicator = Duplicator()
 
-**Duplication API**: Provide an API
+**Duplication API**: Provide an API for duplicating an element.
+
+This API should accept an element and return an element.
+
+The API may return either a new element or the provided element. If possible, do not allow the API to return a null element.
+
+Example pseudo-code:
+
+    Duplicator {
+      function duplicate(Element element) -> Element
+    }
 
 Identify views that shouldn't be duplicated.
 
