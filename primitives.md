@@ -4,26 +4,20 @@ This section explores some **building blocks** of rich, interactive motion. The 
 
 This section's topics:
 
-- [Delta primitives](#delta-primitives)
+- [Tweens](#tweens)
+- [Gesture recognition](#gesture-recognition)
+- [Physical simulation](#physical-simulation)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
 - [Connecting primitives](#connecting-primitives)
 
-## Delta primitives
-
-Delta primitives represent change over time.
+Most of these primitives represent change over time.
 
 > Time in a computer is not limited to wall-clock time - it can slow down, stop, or reverse. It can jump to arbitrary moments and external systems can control it. When we use the word time we mean this understanding of "computer time".
 
-We explore the following delta primitives below:
-
-- [Tweens](#tweens)
-- [Gesture recognition](#gesture-recognition)
-- [Physical simulation](#physical-simulation)
-
 Please note that these primitives can apply to an arbitrary number of dimensions and types of input.
 
-### Tweens
+## Tweens
 
 **What it is**: *an interpolation through each value in a list of values over a length of time*.
 
@@ -31,7 +25,7 @@ Tweens have a **starting time** and a **duration**. The starting time and durati
 
 Tweens use an **interpolation function**. This is often a cubic-bezier, but could be any mathematical equation accepting time as an input.
 
-### Gesture recognition
+## Gesture recognition
 
 **What it is**: *recognition of continuous or discrete actions from a stream of device input events*.
 
@@ -57,7 +51,7 @@ recognizers have failed. For instance:
 
 **Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a physical simulation.
 
-### Physical simulation
+## Physical simulation
 
 **What it is**: *the application of physical forces to a simulated body*.
 
