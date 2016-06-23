@@ -22,7 +22,7 @@
        * [Transition Director](specifications/transition_director.md)
        * [Transition Controller](specifications/transition_controller.md)
    * [Interactions](specifications/interactions.md)
-       * [Interaction Director](specifications/interaction_directors.md)
+       * [Interaction Director](specifications/interaction_director.md)
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
