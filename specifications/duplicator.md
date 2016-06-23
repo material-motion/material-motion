@@ -1,23 +1,21 @@
 # Duplicator specification
 
-This is the engineering specification for the Duplicator abstract type.
+This is the engineering specification for the `Duplicator` abstract type.
 
-A Duplicator is expected to create similar replicas of visual elements. A replica does not necessarily need to be as functional as the original element.
-
-The DuplicationController requires a concrete implementation of the Duplicator abstract type.
+A `Duplicator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Object type**: A DuplicationController is an object type.
+**Object type**: A `Duplicator` is an object type.
 
 Example pseudo-code:
 
-    DuplicationController {
+    Duplicator {
     }
 
-**Duplicator API**: Provide an API for setting a Duplicator instance.
+**Duplicator API**: Provide an API for setting a `Duplicator` instance.
 
 The duplicator instance performs the actual duplication.
 
@@ -25,7 +23,7 @@ The duplicator instance performs the actual duplication.
 
 Example pseudo-code:
 
-    DuplicationController {
+    Duplicator {
       var duplicator: Duplicator
     }
 
@@ -37,7 +35,7 @@ Elements are assumed to be duplicable by default. Do not duplicate elements for 
 
 Example pseudo-code:
 
-    DuplicationController {
+    Duplicator {
       function disableDuplicationForElement(Element element)
     }
 
@@ -45,11 +43,11 @@ Example pseudo-code:
 
 This API should accept an element and return either an element or null.
 
-The implementation of this API should first consult the list of disabled elements. If the element is present, the API should return null. If the element is not present, the controller should invoke the assigned duplicator's `duplicateElement` API.
+The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the assigned duplicator's `duplicateElement` API.
 
 Example pseudo-code:
 
-    DuplicationController {
+    Duplicator {
       function duplicate(Element element) -> Element or null {
         if disabledElements.contains(element) {
           return null
