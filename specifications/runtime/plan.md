@@ -19,7 +19,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: A Plan is an abstract protocol or interface, if your language allows.
+**Abstract type**: A Plan is a protocol, if your language has that concept.
 
 Pseudo-code example:
 
