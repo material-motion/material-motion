@@ -55,3 +55,7 @@ Example pseudo-code:
         return duplicator.duplicateElement(element)
       }
     }
+
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
