@@ -1,5 +1,6 @@
 # Duplication
 
+Duplication makes it possible to add motion to an element hierarchy without directly affecting the existing elements.
 
 ---
 
