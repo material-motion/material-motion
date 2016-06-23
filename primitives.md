@@ -1,4 +1,4 @@
-# Motion primitives
+# Motion building blocks
 
 This section explores some **building blocks** of rich, interactive motion.
 
