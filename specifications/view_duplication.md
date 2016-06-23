@@ -26,7 +26,9 @@ Example pseudo-code:
 
 This API should accept an element and return an element.
 
-The API may return either a new element or the provided element. If possible, do not allow the API to return a null element.
+The API may return either a new element or the provided element.
+
+If possible, do not allow the API to return a null element.
 
 Example pseudo-code:
 
