@@ -26,13 +26,9 @@ Example pseudo-code:
 
 This API should accept an element and return an element.
 
-The API may return either a duplicated version of the element or the provided element.
-
-Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
+The API may return either a duplicated version of the element or the provided element. The duplicated element should be a best-effort apparent replica of the provided target.
 
 If possible, do not allow the API to return a null element.
-
-The implementation of this method should create a best-effort apparent replica of the provided target.
 
 Example pseudo-code:
 
@@ -43,6 +39,8 @@ Example pseudo-code:
 **Disable duplication API**: Provide an API for disabling duplication of specific elements.
 
 The duplicator instance maintains a list of elements that should not be duplicated.
+
+Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
 
 Example pseudo-code:
 
