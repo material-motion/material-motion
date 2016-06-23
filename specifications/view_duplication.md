@@ -15,7 +15,7 @@ A Duplicator is expected to create apparent replicas of visual elements. An appa
 
 - Scheduler `feature: new target event`
 
-**Simple initializer**: Element duplicators are cheap and easy to create.
+**Abstract type**: Element duplicators are cheap and easy to create.
 
 Example pseudo-code:
 
