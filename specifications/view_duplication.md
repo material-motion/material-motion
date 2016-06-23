@@ -29,23 +29,9 @@ Example pseudo-code:
       var duplicator: Duplicator
     }
 
-**Duplication API**: Provide an API for duplicating an element.
-
-This API should accept an element and return either an element or null.
-
-Return a valid element if the duplicator was able to duplicate the element. The returned element should be a best-effort apparent replica of the provided target. Duplication should be as cheap as possible.
-
-Return null if the duplicator was not able to duplicate the element.
-
-Example pseudo-code:
-
-    DuplicationController {
-      function duplicate(Element element) -> Element or null
-    }
-
 **Disable duplication API**: Provide an API for disabling duplication of specific elements.
 
-The duplicator maintains a list of elements that should not be duplicated.
+The controller maintains a permanent list of elements that will not be duplicated. We will refer to this as the list of disabled elements.
 
 Elements are assumed to be duplicable by default. Do not duplicate elements for which duplication was disabled.
 
@@ -53,6 +39,23 @@ Example pseudo-code:
 
     DuplicationController {
       function disableDuplicationForElement(Element element)
+    }
+
+**Duplication API**: Provide an API for duplicating an element.
+
+This API should accept an element and return either an element or null.
+
+The implementation of this API should first consult the list of disabled elements. If the element is present, the API should return null. If the element is not present, the controller should invoke the assigned duplicator's `duplicateElement` API.
+
+Example pseudo-code:
+
+    DuplicationController {
+      function duplicate(Element element) -> Element or null {
+        if disabledElements.contains(element) {
+          return null
+        }
+        return duplicator.duplicateElement(element)
+      }
     }
 
 ---
