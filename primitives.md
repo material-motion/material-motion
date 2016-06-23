@@ -67,7 +67,7 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 
 ---
 
-The following primitives are more structural in nature than the delta primitives described above.
+The following primitives are more structural in nature than the primitives described above.
 
 ## Timeline
 
