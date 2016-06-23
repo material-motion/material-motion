@@ -33,9 +33,13 @@ Example pseudo-code:
       function duplicate(Element element) -> Element
     }
 
-Identify views that shouldn't be duplicated.
+**Disallow duplication API**: Provide an API for disabling duplication of specific elements.
 
-    duplicator.disallowDuplicationFor(target)
+Example pseudo-code:
+
+    Duplicator {
+      function disallowDuplication(Element element)
+    }
 
 Listen to Runtime events and duplicate views, if possible.
 
