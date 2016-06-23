@@ -1,15 +1,21 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Element duplication
+# Element duplicator
 
-Element duplication is the act of creating an "apparent replica" of a visual element.
+An element duplicator is the act of creating an "apparent replica" of a visual element.
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
 **Dependencies**: An observable "new target" event from a scheduler instance.
+
+Scheduler
+
+- feature: new target event
+
+**Simple initializer**: A
 
 Create an instance of a view duplicator.
 
