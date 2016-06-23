@@ -49,7 +49,7 @@ recognizers have failed. For instance:
 
 > An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
 
-**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a physical simulation.
+**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a applied forces.
 
 ## Applied forces
 
@@ -112,8 +112,8 @@ A timeline's **progress** can be driven by the following delta primitives if the
 
 - **Time** can move `progress` forward or backward.
 - **Gestures** can scrub `progress` directly.
-- **Physical simulation**: `progress` can be physically anchored to a position, usually 1 or 0, using a Spring. This allows a timeline to snap to completion.
-- **Physical simulation** and **Gestures**: feeding the final velocity of a gesture into a physical simulation allows the timeline to be tosse".
+- **Applied forces**: `progress` can be physically anchored to a position, usually 1 or 0, using a Spring. This allows a timeline to snap to completion.
+- **Applied forces** and **Gestures**: feeding the final velocity of a gesture into a applied forces allows the timeline to be tosse".
 - **Tweens**.
 
 #### Timelines can drive these primitives
@@ -122,9 +122,9 @@ The timeline's progress can drive tweens. For example: a fade-in animation could
 
 Similarly, a timeline could be used to emit gesture events that simulate user input.  This pattern could be useful for teaching a user how to perform a gesture or for automated testing. 
 
-#### Physical simulation and states
+#### Applied forces and states
 
-Physical simulations can be associated with individual states of a State Machine.
+Applied forcess can be associated with individual states of a State Machine.
 
 > For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
 
