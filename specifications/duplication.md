@@ -25,4 +25,14 @@ Duplication is a helpful tool for separating concerns in an application. Take ca
 
 - What are the ramifications for interactivity?  If there are event listeners registered on an element's children, how do you make sure the correct things still happen if those children are interacted with on the duplicate?
 
-If a client registers a plan to a target and the target is duplicated, then the Scheduler will apply the plans to the duplicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a duplicate.
+Potential answer: If a client registers a plan to a target and the target is duplicated, then the Scheduler will apply the plans to the duplicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a duplicate.
+
+- How should we handle duplication of child elements that have already been duplicated?
+
+For example:
+
+    containerView
+      childView
+        button
+
+What happens if we want to duplicate both the containerView and the button?
