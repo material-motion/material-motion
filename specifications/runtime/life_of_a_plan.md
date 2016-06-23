@@ -91,33 +91,33 @@ Recall the transaction log we'd explored above:
       {action:'add",    target: circleView, plan: Draggable               },
     ]
 
-The above operations committed to the following internal Scheduler state:
+When we commit this transaction to the scheduler, our scheduler has the following representation of the committed plans:
 
 ![](../../_assets/TargetManagers.svg)
 
-Let's create Executors by calling our hypothetical `executorForPlan` on each target's Plans.
+The scheduler now creates executors by calling our hypothetical `executorForPlan` on each target's plans.
 
 ![](../../_assets/Executors.svg)
 
-We've created three Executors in total. `circleView` has two Executors. `squareView` has one. You might be wondering now: "Why is there only one gesture Executor for the squareView?"
+We've created three executors in total. `circleView` has two executors. `squareView` has one. You might be wondering now: "Why is there only one gesture executor for the squareView?"
 
-A single Executor instance is created for each _type_ of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
+A single executor instance is created for each _type_ of plan registered to a target. This allows executors to maintain coherent state even when multiple plans have been committed.
 
 ### Step 5: Provide Plans to Executors
 
-The Scheduler now provides each Plan instance to the relevant Executor. This allows the Executor to translate specific Plans in to actionable logic.
+The scheduler now provides each plan instance to the relevant executor. This allows the executor to translate specific plans in to actionable logic.
 
 ### Step 6: Executors execute Plans
 
-Executors can execute their Plans in countless ways. Let's focus on two of them.
+Executors can execute their plans in countless ways. Let's focus on two of them.
 
 **Manual execution**
 
-Executors will be notified each time the system will draw a new frame by the Scheduler's `update` event. The Executor is expected to calculate and set its target's next state on each update event.
+Executors will be notified each time the system will draw a new frame by the scheduler's `update` event. The executor is expected to calculate and set its target's next state on each update event.
 
 **Delegated execution**
 
-An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The Executor would be responsible for informing the Scheduler of two things: when delegated execution will start, and when delegated execution has ended.
+An executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The executor would be responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
