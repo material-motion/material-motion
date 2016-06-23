@@ -28,7 +28,7 @@ This API should accept an element and return an element.
 
 The API may return either a new element or the provided element.
 
-Every type of element is assumed to be duplicable by default. Use the disable duplication API to disable duplication for specific elements.
+Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
 
 If possible, do not allow the API to return a null element.
 
