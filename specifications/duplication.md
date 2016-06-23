@@ -1,6 +1,6 @@
 # Duplication
 
-Duplication makes it possible to add motion to an element hierarchy without directly affecting the existing elements. This is helpful for separating concerns when building transitions.
+Duplication allows motion to be added to an element hierarchy without directly affecting the existing elements. This is helpful for separating concerns when building transitions.
 
 The following often occurs after an element is duplicated:
 
@@ -14,6 +14,10 @@ Duplication makes use of two APIs:
 
 - [Duplicator](duplicator.md)
 - [DuplicationController](duplication_controller.md)
+
+## Considerations
+
+Duplication is a helpful tool for separating concerns in an application. Take care, however, to consider the cost of duplication.
 
 ---
 
