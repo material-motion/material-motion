@@ -44,7 +44,7 @@ Example pseudo-code:
       function disallowDuplication(Element element)
     }
 
-**Scheduler new target event**: The most common use of this protocol is as a 
+**Scheduler new target event**: The most common use of this protocol is as a placeholder generator for a scheduler.
 
     scheduler.addNewTargetObserver(function(target) {
       if target is visible element type {
