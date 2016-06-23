@@ -17,7 +17,7 @@ Scheduler
 
 - feature: new target event
 
-**Simple initializer**: A
+**Simple initializer**: 
 
 Create an instance of a view duplicator.
 
