@@ -44,9 +44,13 @@ Example pseudo-code:
       function disallowDuplication(Element element)
     }
 
-**New target event bridge API**: Make it easy to hook a duplicator up to a scheduler's new target event.
+**Scheduler new target event**: The most common use of this protocol is as a 
 
-
+    scheduler.addNewTargetObserver(function(target) {
+      if target is visible element type {
+        return duplicator.duplicate(target)
+      }
+    })
 
 ---
 
