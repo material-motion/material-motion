@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `DuplicationController` object.
 
-A `DuplicationController` makes use of a Duplicator instance to create similar replicas of visual elements. The `DuplicationController` provides additional APIs for configuring duplication.
+A `DuplicationController` makes use of a Duplicator instance to create similar replicas of visual elements. The `DuplicationController` provides APIs for configuring when duplication should and should not occur.
 
 Printable tech tree/checklist:
 
