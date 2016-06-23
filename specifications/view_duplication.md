@@ -40,7 +40,7 @@ Example pseudo-code:
 
 The duplicator maintains a list of elements that should not be duplicated.
 
-Every type of element is assumed to be duplicable by default. An element should not be duplicated if duplication was disabled using the disable duplication API.
+Elements are assumed to be duplicable by default. Do not duplicate elements for which duplication was disabled.
 
 Example pseudo-code:
 
