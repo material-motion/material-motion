@@ -6,7 +6,7 @@ This section's topics:
 
 - [Tweens](#tweens)
 - [Gesture recognition](#gesture-recognition)
-- [Physical simulation](#physical-simulation)
+- [Applied forces](#applied-forces)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
 - [Connecting primitives](#connecting-primitives)
@@ -51,7 +51,7 @@ recognizers have failed. For instance:
 
 **Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a physical simulation.
 
-## Physical simulation
+## Applied forces
 
 **What it is**: *the application of physical forces to a simulated body*.
 
@@ -63,7 +63,7 @@ The body consists of both a position and a velocity.  Forces can be applied to i
 - Laminar [drag](https://en.wikipedia.org/wiki/Drag_(physics) (Friction)
 - [Collisions](https://en.wikipedia.org/wiki/Collision_detection)
 
-**Custom forces**: A physical simulation system should also allow for the expression of arbitrary forces.
+**Custom forces**: An applied force system should also allow for the expression of arbitrary forces.
 
 ---
 
