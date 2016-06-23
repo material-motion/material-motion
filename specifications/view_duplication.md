@@ -13,9 +13,7 @@ A Duplicator is responsible for creating an apparent replica of a visual element
 
 **Dependencies**: An observable "new target" event from a scheduler instance.
 
-Scheduler
-
-- feature: new target event
+- Scheduler feature: new target event
 
 **Simple initializer**: Element duplicators should be cheap and easy to create.
 
