@@ -18,7 +18,7 @@
    * [Transient views](specifications/transient_views.md)
    * [Duplication](specifications/duplication.md)
        * [DuplicationController](specifications/view_duplication.md)
-       * Duplicator
+       * [Duplicator](specifications/duplicator.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a Transition](specifications/life_of_a_transition.md)
        * [Transition Director](specifications/transition_director.md)
