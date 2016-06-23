@@ -59,21 +59,21 @@ The transaction's log might resemble this:
     ]
 
 
-A transaction must be committed to a Scheduler in order for it to take affect.
+A transaction must be committed to a scheduler in order for it to take affect.
 
-    Scheduler.commit(transaction)
+    scheduler.commit(transaction)
 
-After committing the above transaction, the Scheduler's internal state might resemble this:
+After committing the above transaction, the scheduler's internal state might resemble this:
 
 ![](../../_assets/TargetManagers.svg)
 
 > Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
 
-The Scheduler is now expected to execute its Plans.
+The scheduler is now expected to execute the committed plans.
 
 ### Step 4: Scheduler creates Executors
 
-The Scheduler uses entities called **Executors** to execute Plans. The Executor is the specialized mediating agent between a Plan and its execution.
+The scheduler uses entities called **Executors** to execute its plans. The Executor type represents a specialized mediating agent between a Plan and its execution.
 
 We'll assume a function exists that returns an Executor capable of executing a type of Plan. The method signature for this method might look like this:
 
