@@ -5,6 +5,10 @@ Status of this document:
 
 Element duplication is the act of creating an "apparent replica" of a visual element.
 
+---
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
 Element duplication requires the "new target" event from the Runtime.
 
 Create an instance of a view duplicator.
@@ -28,6 +32,8 @@ Duplicator likely owned by a Director. Likely the duplicator is already configur
 Default implementation should take a snapshot of views. Make exceptions for common cases.
 
 - On iOS, is helpful to make rich duplicate of UIImageView instances for scaling purposes.
+
+---
 
 ## Open Questions ##
 
