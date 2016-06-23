@@ -10,10 +10,6 @@ The DuplicationController requires a concrete implementation of the Duplicator a
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Dependencies**
-
-- Scheduler `feature: new target event`
-
 **Object type**: A DuplicationController is an object type.
 
 Example pseudo-code:
