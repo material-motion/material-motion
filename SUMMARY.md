@@ -19,7 +19,7 @@
    * [View duplication](specifications/view_duplication.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a Transition](specifications/life_of_a_transition.md)
-       * [Transition Director](specifications/transition_directors.md)
+       * [Transition Director](specifications/transition_director.md)
        * [Transition Controller](specifications/transition_controller.md)
    * [Interactions](specifications/interactions.md)
        * [Interaction Director](specifications/interaction_directors.md)
