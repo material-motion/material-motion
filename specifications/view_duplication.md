@@ -17,9 +17,11 @@ A Duplicator is responsible for creating an apparent replica of a visual element
 
 **Simple initializer**: Element duplicators are cheap and easy to create.
 
-Create an instance of a view duplicator.
+Example pseudo-code:
 
-    duplicator = ViewDuplicator()
+    duplicator = Duplicator()
+
+**Duplication API**: Provide 
 
 Identify views that shouldn't be duplicated.
 
