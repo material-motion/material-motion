@@ -9,7 +9,7 @@ Element duplication is the act of creating an "apparent replica" of a visual ele
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Dependencies**: An observable "new target" event from the Scheduler type.
+**Dependencies**: An observable "new target" event from a scheduler instance.
 
 Create an instance of a view duplicator.
 
