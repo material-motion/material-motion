@@ -44,6 +44,8 @@ Example pseudo-code:
       function disallowDuplication(Element element)
     }
 
+**Observation of Scheduler new target event**: 
+
 ---
 
 ## Open Questions ##
