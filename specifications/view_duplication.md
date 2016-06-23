@@ -5,7 +5,7 @@ Status of this document:
 
 This is the engineering specification for the Duplicator abstract type.
 
-A Duplicator creates apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
+A Duplicator is expected to create apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
 
 ---
 
