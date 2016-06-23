@@ -2,7 +2,7 @@
 
 This is the engineering specification for the DuplicationController object.
 
-A DuplicationController is expected to create apparent replicas of visual elements. An apparent replica does not necessarily need to be as functional as the original element.
+A DuplicationController is expected to create similar replicas of visual elements. A replica does not necessarily need to be as functional as the original element.
 
 The DuplicationController requires a concrete implementation of the Duplicator abstract type.
 
@@ -19,6 +19,18 @@ The DuplicationController requires a concrete implementation of the Duplicator a
 Example pseudo-code:
 
     DuplicationController {
+    }
+
+**Duplicator API**: Provide an API for setting a Duplicator instance.
+
+The duplicator instance performs the actual duplication.
+
+> Consider providing a default duplicator instance that performs a "best-effort" duplication.
+
+Example pseudo-code:
+
+    DuplicationController {
+      var duplicator: Duplicator
     }
 
 **Duplication API**: Provide an API for duplicating an element.
