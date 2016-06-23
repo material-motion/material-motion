@@ -13,9 +13,9 @@ A Duplicator is responsible for creating an apparent replica of a visual element
 
 **Dependencies**
 
-- Scheduler feature: new target event
+- Scheduler `feature: new target event`
 
-**Simple initializer**: Element duplicators should be cheap and easy to create.
+**Simple initializer**: Element duplicators are cheap and easy to create.
 
 Create an instance of a view duplicator.
 
