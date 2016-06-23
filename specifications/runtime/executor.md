@@ -115,7 +115,7 @@ Example pseudo-code:
     }
     
     protocol ManualExecution {
-      function update() -> ActivityState
+      function update(deltaTimeMs) -> ActivityState
     }
 
 <p style="text-align:center"><tt>/feature: Manual execution</tt></p>
