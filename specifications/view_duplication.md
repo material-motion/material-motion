@@ -48,16 +48,6 @@ Example pseudo-code:
       function disableDuplicationForElement(Element element)
     }
 
-**Scheduler new target event**: A common use of this entity is as a placeholder generator for a scheduler.
-
-Example pseudo-code:
-
-    scheduler.addNewTargetObserver(function(target) {
-      if target is visible element type {
-        return duplicator.duplicate(target)
-      }
-    })
-
 ---
 
 ## Open Questions ##
