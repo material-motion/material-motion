@@ -155,7 +155,7 @@ A Runtime is constantly measuring the amount of energy in the system. Energy is 
 
 Intentions are a concrete implementation of the **Description** part of the [Description/Execution](patterns.md) pattern.
 
-Strongly-typed programming languages can define Description as an empty protocol or interface. This allows existing entities to be described as Descriptions.
+Strongly-typed programming languages can define Description as an empty protocol. This allows existing entities to be described as Descriptions.
 
     protocol Description {}
     extension Animation: Description {
