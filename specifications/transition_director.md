@@ -22,11 +22,14 @@ Example pseudo-code:
 
 **Subclassing**: This class is expected to be subclassed.
 
-The sub-class is expected to implement 
+The sub-class is expected to implement the functions specified in the `Director` protocol.
 
 Example pseudo-code:
 
-    TransitionDirector: Director {
+    MyTransitionDirector: TransitionDirector {
+      function setUp() {
+        // Perform set up operations
+      }
     }
 
 **Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
