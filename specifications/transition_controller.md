@@ -1,7 +1,26 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# TransitionController
+# TransitionController specification
+
+This is the engineering specification for the `TransitionController` object.
+
+A
+
+---
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
+**Concrete type**: A `TransitionDirector` is a concrete type that conforms to the `Director` protocol.
+
+Example pseudo-code:
+
+    TransitionDirector: Director {
+    }
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
+---
 
 TODO: Spec out.
 
