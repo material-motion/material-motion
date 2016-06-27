@@ -117,3 +117,7 @@ TODO: Discuss transitions whose direction can change, i.e. "are cancelable". Wil
 <p style="text-align:center"><tt>/feature: director stack</tt></p>
 
 ---
+
+## Open Questions ##
+
+- How do we handle directors that never enter the .Active state?
