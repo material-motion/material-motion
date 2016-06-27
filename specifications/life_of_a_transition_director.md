@@ -28,7 +28,7 @@ Our `setUp` will use a simple tween plan:
       transaction.add(tween, target: rightElement)
     }
 
-If our plans have a concept of direction:
+Or if our plans have a concept of direction:
 
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
