@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Temporary views
+# Decoy elements
 
 Transient views are views that live for a finite period of time.
 
