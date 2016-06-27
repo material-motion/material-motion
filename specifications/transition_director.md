@@ -50,6 +50,4 @@ Example pseudo-code:
 
 ---
 
-**Directionality**: Transition Directors think in terms of "left" and "right + a direction.
-
 **View duplication**: Transition Directors should have a view duplicator.
