@@ -18,6 +18,8 @@ Example pseudo-code:
     TransitionController {
     }
 
+**One controller per transition**: Create one `TransitionController` for each transition.
+
 **Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
 The type must be a subclass of `TransitionDirector`.
