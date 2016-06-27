@@ -11,11 +11,11 @@ This is the engineering specification for the `TransitionController` object.
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Concrete type**: A `TransitionController` is a concrete type that conforms to the `Director` protocol.
+**Concrete type**: A `TransitionController` is a concrete type.
 
 Example pseudo-code:
 
-    TransitionDirector: Director {
+    TransitionController {
     }
 
 <p style="text-align:center"><tt>MVP</tt></p>
