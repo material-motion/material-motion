@@ -49,7 +49,7 @@ recognizers have failed. For instance:
 
 > An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
 
-**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into a applied forces.
+**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into applied forces.
 
 ## Applied forces
 
