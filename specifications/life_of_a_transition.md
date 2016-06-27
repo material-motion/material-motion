@@ -3,7 +3,7 @@ Status of this document:
 
 # Life of a Transition Director
 
-Let's walk through the life of a simple fade transition.
+Let's walk through the life of a simple fade transition director.
 
 >Remember, any code you see here is pseudo-code.
 
