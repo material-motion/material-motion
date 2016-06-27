@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Transient views
+# Temporary views
 
 Transient views are views that live for a finite period of time.
 
