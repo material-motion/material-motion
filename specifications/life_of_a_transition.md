@@ -3,7 +3,7 @@ Status of this document:
 
 # Life of a Transition
 
-Let's walk through the life of a transition.
+Let's walk through the life of a simple fade transition.
 
 >Remember, any code you see here is pseudo-code.
 
@@ -16,6 +16,10 @@ A `TransitionController` is the configuring entity for a transition.
 An instance of this type might lazily available for any transition on our platform. For example, on iOS each view controller might have its own transition controller.
 
     viewController.transitionController
+
+### Step 2: Set the director
+
+    transitionController.director = FadeTransitionDirector
 
 TODO: Discuss the life-cycle of a Transition.
 
