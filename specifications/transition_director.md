@@ -61,5 +61,3 @@ Example pseudo-code:
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
-
-**View duplication**: Transition Directors should have a view duplicator.
