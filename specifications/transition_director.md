@@ -20,9 +20,9 @@ Example pseudo-code:
 
 **Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
 
-**Read-only direction API**: Transition directors have a settable direction property.
+**initialDirection API**: Transition directors have a settable direction property.
 
-`direction` is initialized with the initial direction of the transition when the director is created.
+Provide the initial direction of the transition to the director's initializer.
 
 Example pseudo-code:
 
@@ -32,9 +32,9 @@ Example pseudo-code:
     }
     
     TransitionDirector {
-      readonly var direction
+      readonly var initialDirection
       
-      init(direction)
+      init(initialDirection)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
