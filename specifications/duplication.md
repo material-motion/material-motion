@@ -21,7 +21,7 @@ Duplication makes use of two APIs:
 
 **Cost of duplication**: Duplication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
 
-TODO: Discuss view recycling as a solution to duplication costs.
+**Recycling elements**: A `Duplicator` implementation may choose to recycle elements rather than create a new element with each duplication.
 
 ---
 
