@@ -33,7 +33,7 @@ Example pseudo-code:
       }
     }
 
-**Left/right side API**: Provide storage for relevant information to the transition.
+**Left/right side APIs**: Provide storage for relevant information to the transition.
 
 Transition directors think in terms of left and right *sides* of the transition. Provide APIs for storing relevant information.
 
