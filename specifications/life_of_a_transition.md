@@ -30,7 +30,17 @@ Our `setUp` will be involve a simple tween plan:
       transaction.add(tween, target: rightElement)
     }
 
-### Step 1: Create a transition controller
+If our plans have a concept of direction:
+
+    function setUp(transaction) {
+      var tween = Tween(property: "opacity")
+      tween.left = 0
+      tween.right = 1
+      tween.direction = self.initialDirection
+      transaction.add(tween, target: rightElement)
+    }
+
+### Step 3: Create a transition controller
 
 A `TransitionController` is the configuring entity for a transition.
 
