@@ -105,6 +105,8 @@ An Performer can choose to implement an update function that will be called many
 
 The update function will be called each time the platform will draw a new frame. The Performer may use this method to perform time-based calculations.
 
+TODO: Explain that this step is not expected to actually perform any rendering or drawing. Just animation/motion.
+
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
 Example pseudo-code:
