@@ -61,3 +61,11 @@ Example pseudo-code:
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
+
+---
+
+## Open Questions ##
+
+- Should we provide `TransitionDirector` with a timeline?
+- How does the `TransitionDirector` change the direction of the transition?
+
