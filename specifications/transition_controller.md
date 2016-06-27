@@ -5,7 +5,7 @@ Status of this document:
 
 This is the engineering specification for the `TransitionController` object.
 
-A
+`TransitionController` is the bridge between the platform's transitioning architecture and the `TransitionDirector` type.
 
 ---
 
