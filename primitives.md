@@ -72,7 +72,7 @@ The following primitives are more structural in nature than the primitives descr
 
 **What it is**: *an object that contains a floating-point value, the progress*.
 
-**Normalized progress**: A timeline's progress should be considered "normalized" to a `[0...1]` range.
+**Normalized progress**: A timeline's progress is "normalized" to a `[0...1]` range.
 
 **Extending past the timeline**: A timeline's progress can extend beyond its bounds. What this means to objects observing the timeline is implementation-dependent. For example:
 
