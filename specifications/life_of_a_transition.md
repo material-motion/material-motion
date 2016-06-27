@@ -60,7 +60,7 @@ Provide the `FadeTransitionDirector` type to the transition controller.
 
 ### Step 5: Initiate the transition
 
-Initiating our transition causes `FadeTransitionDirector` to be instantiated.
+Initiating our transition causes `FadeTransitionDirector` to be instantiated. The plans expressed by the 
 
 TODO: Discuss the life-cycle of a Transition.
 
