@@ -74,11 +74,10 @@ The following primitives are more structural in nature than the primitives descr
 
 **Normalized progress**: A Timeline's progress should be considered "normalized" to a `[0...1]` range.
 
-**Extending past the timeline**: A Timeline's progress can extend beyond its bounds. What this means to objects observing the Timeline is implementation-dependent.
+**Extending past the timeline**: A Timeline's progress can extend beyond its bounds. What this means to objects observing the Timeline is implementation-dependent. For example:
 
-- **Fade** does not make sense beyond 0 or 1 and can clamp to `[0...1]`.
-- **Scale** does not make sense beyond 0, but may make sense beyond 1. It can clamp to `[0...]`.
-- **Move** may make sense beyond 0 or 1 and may not clamp at all.
+- **Fade** does not extend beyond 0 or 1 and can clamp to `[0...1]`.
+- **Move** may extend beyond 0 or 1 and may not clamp at all.
 
 ## State Machine
 
