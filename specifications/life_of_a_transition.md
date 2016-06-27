@@ -60,5 +60,6 @@ Provide the `FadeTransitionDirector` type to the transition controller.
 
 ### Step 5: Initiate the transition
 
-Initiating our transition causes `FadeTransitionDirector` to be instantiated and its `setUp` method is invoked. The plans expressed by the director will then be executed. Upon completion, the director instance is thrown away. The transition controller resets its internal state in preparation for a future transition.
+Initiating our transition causes `FadeTransitionDirector` to be instantiated and its `setUp` method is invoked. The plans expressed by the director will then be executed.
 
+Upon completion, the director instance is thrown away. The transition controller resets its internal state in preparation for a future transition.
