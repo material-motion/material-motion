@@ -62,7 +62,7 @@ The body consists of both a position and a velocity. Physical forces can be appl
 - [Damped harmonic oscillators](https://en.wikipedia.org/wiki/Harmonic_oscillator#Damped_harmonic_oscillator) (Springs)
 - Laminar [drag](https://en.wikipedia.org/wiki/Drag_(physics) (Friction)
 
-**Custom forces**: An applied force system should also allow for the expression of arbitrary forces.
+**Custom forces**: An applied force system can express arbitrary forces.
 
 ---
 
