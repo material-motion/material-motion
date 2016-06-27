@@ -12,7 +12,7 @@ The following often occurs after an element is duplicated:
 
 Replication makes use of two APIs:
 
-- [Duplicator](duplicator.md)
+- [ElementReplicator](duplicator.md)
 - [ReplicationController](replication_controller.md)
 
 ## Considerations
