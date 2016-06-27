@@ -18,7 +18,7 @@ Example pseudo-code:
     TransitionController {
     }
 
-**One controller per transition**: Each potential transition has access to its own `TransitionController` instance.
+**One controller per transition**: Every transition has access to its own `TransitionController` instance.
 
 **Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
