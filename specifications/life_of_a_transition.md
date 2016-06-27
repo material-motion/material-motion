@@ -16,7 +16,7 @@ This object will provide the transition-specific plans.
 
 ### Step 2: Implement the Director setUp method
 
-Our `setUp` will be involve a simple tween plan:
+Our `setUp` will use a simple tween plan:
 
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
