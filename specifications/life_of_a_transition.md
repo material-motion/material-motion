@@ -13,7 +13,7 @@ A `TransitionController` is the configuring entity for a transition.
 
     transitionController = TransitionController()
 
-An instance of this type might be made lazily available for any transition on our platform. For example, on iOS each view controller might have its own transition controller.
+An instance of this type might lazily available for any transition on our platform. For example, on iOS each view controller might have its own transition controller.
 
     viewController.transitionController
 
