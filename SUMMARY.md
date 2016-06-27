@@ -15,7 +15,7 @@
        * [Transaction](specifications/runtime/transaction.md)
        * [TransactionScheduler](specifications/runtime/scheduler.md)
    * [Director](specifications/directors.md)
-   * [Temporary views](specifications/transient_views.md)
+   * [Conditional views](specifications/transient_views.md)
    * [Element duplication](specifications/duplication.md)
        * [Duplicator](specifications/duplicator.md)
        * [DuplicationController](specifications/duplication_controller.md)
