@@ -18,15 +18,29 @@ Example pseudo-code:
     TransitionController {
     }
 
-**Transition director type API**: Provide an API for storing a `TransitionDirector` type.
+**Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
 The type must be a subclass of `TransitionDirector`.
 
 Example pseudo-code:
 
     TransitionController {
-      var directorType: type(TransitionDirector)
+      public var directorType: type(TransitionDirector)
     }
+
+**Runtime**: Create a single `Runtime` instance.
+
+Create a Runtime when a transition is initiated.
+
+Example pseudo-code:
+
+    TransitionController {
+      private var runtime: Runtime
+    }
+
+**System bridge**: Implement the necessary bridge for the platform's transitioning APIs.
+
+This differs greatly from platform to platform.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
