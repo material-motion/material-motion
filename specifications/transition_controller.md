@@ -82,7 +82,7 @@ Example pseudo-code:
       }
     }
 
-**Finish on idle**: Terminate the transition when the scheduler enters the idle activity state.
+**Finish on idle**: Finish the transition when the scheduler enters the idle activity state.
 
 Example pseudo-code:
 
