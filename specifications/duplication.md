@@ -1,6 +1,6 @@
 # Duplication
 
-Duplication allows motion to be added to an element hierarchy without directly affecting the existing elements. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
+Duplication allows motion to be added to an element without directly affecting the existing elements. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
 
 The following often occurs after an element is duplicated:
 
