@@ -17,9 +17,9 @@ Duplication makes use of two APIs:
 
 ## Considerations
 
-Duplication is a helpful tool for separating concerns in an application.
+**Separation of concerns**: Duplication is a helpful tool for separating concerns in an application.
 
-Duplication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
+**Cost of duplication**: Duplication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
 
 TODO: Discuss view recycling as a solution to duplication costs.
 
