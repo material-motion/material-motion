@@ -102,7 +102,7 @@ Only the **direction** changes between the two lines above. We encourage thinkin
 
 ## Connecting primitives
 
-We use “**to drive**” to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
+We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
 
 #### Primitives that can drive Timelines
 
