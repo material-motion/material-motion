@@ -17,7 +17,7 @@
    * [Director](specifications/directors.md)
    * [Conditional elements](specifications/transient_views.md)
    * [Creating replica elements](specifications/duplication.md)
-       * [ElementReplicator](specifications/duplicator.md)
+       * [ReplicaCreator](specifications/duplicator.md)
        * [ReplicationController](specifications/duplication_controller.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
