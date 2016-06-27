@@ -1,4 +1,4 @@
-# Duplication
+# Element duplication
 
 Duplication allows motion to appear to affect an element without affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
 
