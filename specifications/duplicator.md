@@ -26,7 +26,7 @@ This API should accept an element and return an element.
 Example pseudo-code:
 
     protocol ElementReplicator {
-      function duplicate(Element element) -> Element
+      function createReplica(Element element) -> Element
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
