@@ -86,9 +86,15 @@ Example pseudo-code:
 
 <p style="text-align:center"><tt>feature: Context element</tt></p>
 
-The context element is an implementation-specific element. This is often related to the element that the user interacted with in order to initiate the transition.
+The context element is what that the user interacted with in order to initiate the transition.
 
 **Context element API**: Provide an API for retrieving the transition's context element.
+
+Example pseudo-code:
+
+    TransitionDirector {
+      readonly var contextElement
+    }
 
 <p style="text-align:center"><tt>/feature: Context</tt></p>
 
