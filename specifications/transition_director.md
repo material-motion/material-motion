@@ -18,6 +18,23 @@ Example pseudo-code:
     TransitionDirector: Director {
     }
 
+**Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
+
+**Direction API**: Transition directors have a settable direction property.
+
+`direction` is initialized with the initial direction of the transition.
+
+Example pseudo-code:
+
+    enum TransitionDirection {
+      .ToTheRight
+      .ToTheLeft
+    }
+    
+    TransitionDirector {
+      var direction
+    }
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
