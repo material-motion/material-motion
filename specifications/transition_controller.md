@@ -56,6 +56,10 @@ Example pseudo-code:
 
 **Transition will start**: The following should occur when a transition is about to begin:
 
+1. Initialize the director
+2. Invoke the `setUp` event on the director
+3. Commit the `setUp` transaction to a scheduler
+
 Example pseudo-code:
 
     TransitionController {
@@ -71,9 +75,9 @@ Example pseudo-code:
         director.setUp(transaction)
         
         # Initialize the runtime
-        runtime = Runtime()
-        runtime.addNewTargetObserver(duplicationController)
-        runtime.commit(transaction)
+        scheduler = Scheduler()
+        scheduler.addNewTargetObserver(duplicationController)
+        scheduler.commit(transaction)
       }
     }
 
