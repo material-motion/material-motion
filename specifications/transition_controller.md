@@ -18,6 +18,13 @@ Example pseudo-code:
     TransitionController {
     }
 
+**Stack**: A `TransitionController` is a concrete type.
+
+Example pseudo-code:
+
+    TransitionController {
+    }
+
 <p style="text-align:center"><tt>MVP</tt></p>
 
 ---
