@@ -22,7 +22,7 @@
    * [Transitions](specifications/transitions.md)
        * [Life of a Transition](specifications/life_of_a_transition.md)
        * [TransitionDirector](specifications/transition_director.md)
-       * [Transition Controller](specifications/transition_controller.md)
+       * [TransitionController](specifications/transition_controller.md)
    * [Interactions](specifications/interactions.md)
        * [Interaction Director](specifications/interaction_director.md)
        * [Interaction Controller](specifications/interaction_controller.md)
