@@ -1,4 +1,4 @@
-# Life of a transition
+# Life of a transition controller
 
 Let's walk through the life of an arbitrary transition.
 
