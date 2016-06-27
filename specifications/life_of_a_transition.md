@@ -7,6 +7,16 @@ Let's walk through the life of a transition.
 
 >Remember, any code you see here is pseudo-code.
 
+### Step 1: Create a transition controller
+
+A `TransitionController` is the configuring entity for a transition.
+
+    transitionController = TransitionController()
+
+An instance of this type might be made lazily available for any transition on our platform. For example, on iOS each view controller might have its own transition controller.
+
+    viewController.transitionController
+
 TODO: Discuss the life-cycle of a Transition.
 
 - Create a Transition Controller
