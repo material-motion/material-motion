@@ -77,30 +77,20 @@ Example pseudo-code:
         # Initialize the runtime
         scheduler = Scheduler()
         scheduler.addNewTargetObserver(duplicationController)
+        scheduler.addActivityStateObserver(self)
         scheduler.commit(transaction)
       }
     }
 
-**Terminate on idle**: The controller should observe activity state changes from the Runtime.
+**Finish on idle**: Terminate the transition when the scheduler enters the idle activity state.
 
 Example pseudo-code:
 
     TransitionController {
-      function transitionWillStart(initialDirection) {
-        # Initialize the Director
-        duplicationController = DuplicationController()
-        duplicationController.duplicator = SystemDuplicator()
-        
-        director = self.directorType(initialDirection, duplicationController)
-        
-        # Phase: set up
-        transaction = Transaction()
-        director.setUp(transaction)
-        
-        # Initialize the runtime
-        runtime = Runtime()
-        runtime.addNewTargetObserver(duplicationController)
-        runtime.commit(transaction)
+      function schedulerActivityStateDidChange(scheduler) {
+        if scheduler.state == .Idle {
+          self.transitionDidFinish()
+        }
       }
     }
 
