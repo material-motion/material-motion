@@ -59,13 +59,21 @@ Example pseudo-code:
 Example pseudo-code:
 
     TransitionController {
-      function transitionWillStart() {
-        director = self.directorType()
+      function transitionWillStart(initialDirection) {
+        # Initialize the Director
+        duplicationController = DuplicationController()
+        duplicationController.duplicator = SystemDuplicator()
         
+        director = self.directorType(initialDirection, duplicationController)
+        
+        # Phase: set up
         transaction = Transaction()
         director.setUp(transaction)
         
+        # Initialize the runtime
         runtime = Runtime()
+        runtime.addNewTargetObserver(duplicationController)
+        runtime.commit(transaction)
       }
     }
 
