@@ -14,7 +14,7 @@ Schedulers are cheap and easy to create. Many schedulers may exist in an applica
 
 ### Step 2: Create plans
 
-All motion in a motion runtime begins with a plan. Let's create four different types of plan:
+All motion in a runtime begins with a plan. Let's create four different types of plan:
 
     animation = Tween()
     animation.property = "opacity"
@@ -68,7 +68,7 @@ After committing the above transaction, the scheduler's internal state might res
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
 
-The scheduler is now expected to execute the committed plans.
+The scheduler is now expected to perform the committed plans.
 
 ### Step 4: Scheduler creates performers
 
