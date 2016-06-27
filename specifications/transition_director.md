@@ -100,6 +100,31 @@ Example pseudo-code:
 
 ---
 
+<p style="text-align:center"><tt>feature: Transition preconditions</tt></p>
+
+A transition can register certain pre-conditions. If any pre-condition fails, the director will not be selected for use in the transition.
+
+Requires: TransitionController director stack feature.
+
+**Preconditions API**: Provide an API for registering new preconditions.
+
+Example pseudo-code:
+
+    TransitionDirector {
+      function registerPrecondition(function)
+      
+      init() {
+        registerPrecondition(function() {
+          // Verify that some element exists
+          return elementExists
+        })
+      }
+    }
+
+<p style="text-align:center"><tt>/feature: Transition preconditions</tt></p>
+
+---
+
 ## Open Questions ##
 
 - How might we avoid subclassing this type?
