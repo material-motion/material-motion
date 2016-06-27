@@ -4,7 +4,7 @@ This section defines a software design pattern. The pattern involves a separatio
 
 **Plan**: a detailed proposal for doing or achieving something.
 
-**Execution**: the carrying out or putting into effect of a plan, order, or course of action.
+**Performance**: TODO: definition.
 
 Benefits of this separation:
 
