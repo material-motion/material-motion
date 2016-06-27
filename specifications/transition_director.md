@@ -20,7 +20,7 @@ Example pseudo-code:
     TransitionDirector: Director {
     }
 
-**Subclassing**: This class is expected to be subclassed.
+**Subclassing**: This class is designed to be subclassed.
 
 The sub-class is expected to implement the functions specified in the `Director` protocol.
 
@@ -80,6 +80,6 @@ Example pseudo-code:
 
 ## Open Questions ##
 
+- How might we avoid subclassing this type?
 - Should we provide `TransitionDirector` with a timeline?
 - How does the `TransitionDirector` change the direction of the transition?
-
