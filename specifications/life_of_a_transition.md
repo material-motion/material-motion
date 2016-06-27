@@ -9,7 +9,7 @@ Let's walk through the life of a simple fade transition director.
 
 ### Step 1: Define a new TransitionDirector type
 
-This object will provide the transition-specific plans.
+This object will provide transition-specific plans.
 
     FadeTransitionDirector: TransitionDirector {
     }
