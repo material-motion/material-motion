@@ -31,7 +31,7 @@ Replication makes use of two APIs:
 
 - What are the ramifications for interactivity?  If there are event listeners registered on an element's children, how do you make sure the correct things still happen if those children are interacted with on the replicate?
 
-Potential answer: If a client registers a plan to a target and the target is replicated, then the Scheduler will apply the plans to the replicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a replicate.
+Potential answer: If a client registers a plan to a target and the target is replicated, then the scheduler will apply the plans to the replicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a replicate.
 
 - How should we handle replication of child elements that have already been replicated?
 
