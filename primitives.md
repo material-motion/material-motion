@@ -104,7 +104,7 @@ Only the **direction** changes between the two lines above. We encourage thinkin
 
 We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
 
-#### Primitives that can drive Timelines
+#### Primitives that can drive timelines
 
 A timeline's **progress** can be driven by the following delta primitives if they have been mapped to a domain of `[0...1]`:
 
