@@ -77,6 +77,29 @@ Example pseudo-code:
       }
     }
 
+**Terminate on idle**: The controller should observe activity state changes from the Runtime.
+
+Example pseudo-code:
+
+    TransitionController {
+      function transitionWillStart(initialDirection) {
+        # Initialize the Director
+        duplicationController = DuplicationController()
+        duplicationController.duplicator = SystemDuplicator()
+        
+        director = self.directorType(initialDirection, duplicationController)
+        
+        # Phase: set up
+        transaction = Transaction()
+        director.setUp(transaction)
+        
+        # Initialize the runtime
+        runtime = Runtime()
+        runtime.addNewTargetObserver(duplicationController)
+        runtime.commit(transaction)
+      }
+    }
+
 **System bridge**: Implement the necessary bridge for the platform's transitioning APIs.
 
 This differs greatly from platform to platform.
