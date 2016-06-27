@@ -7,7 +7,7 @@
    * [Library structure](specifications/repository_structure.md)
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](primitives.md)
-   * [Separation of plan/perform](plan-execution-pattern.md)
+   * [Separation of plan/performer](plan-execution-pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
