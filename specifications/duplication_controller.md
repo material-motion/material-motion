@@ -1,22 +1,22 @@
-# ReplicationController specification
+# ReplicaController specification
 
-This is the engineering specification for the `ReplicationController` object.
+This is the engineering specification for the `ReplicaController` object.
 
-A `ReplicationController` makes use of a Duplicator instance to create similar replicas of visual elements. The `ReplicationController` provides APIs for configuring when duplication should and should not occur.
+A `ReplicaController` makes use of a Duplicator instance to create similar replicas of visual elements. The `ReplicaController` provides APIs for configuring when duplication should and should not occur.
 
 Printable tech tree/checklist:
 
-![](../_assets/DuplicateControllerTechTree.svg)
+![](../_assets/DuplicationControllerTechTree.svg)
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Concrete object**: A `ReplicationController` is a concrete object.
+**Concrete object**: A `ReplicaController` is a concrete object.
 
 Example pseudo-code:
 
-    ReplicationController {
+    ReplicaController {
     }
 
 **Duplicator API**: Provide an API for setting a `Duplicator` instance.
@@ -27,7 +27,7 @@ The duplicator instance performs the actual duplication.
 
 Example pseudo-code:
 
-    ReplicationController {
+    ReplicaController {
       var duplicator: Duplicator
     }
 
@@ -39,7 +39,7 @@ Elements are assumed to be duplicable by default. Do not duplicate elements for 
 
 Example pseudo-code:
 
-    ReplicationController {
+    ReplicaController {
       function disableDuplicationForElement(Element element)
     }
 
@@ -51,7 +51,7 @@ The implementation of this API first consults the list of disabled elements. If 
 
 Example pseudo-code:
 
-    ReplicationController {
+    ReplicaController {
       function duplicate(Element element) -> Element or null {
         if disabledElements.contains(element) {
           return null
