@@ -1,6 +1,6 @@
-## Separation of plan/execution
+## Separation of plan/performance
 
-This section defines a software design pattern. The pattern involves a separation between **plans** and their **execution**.
+This section defines a software design pattern. The pattern involves a separation between **plans** and their **performance**.
 
 **Plan**: a detailed proposal for doing or achieving something.
 
@@ -8,7 +8,7 @@ This section defines a software design pattern. The pattern involves a separatio
 
 Benefits of this separation:
 
-- It allows execution to occur in a separate, potentially non-blocking context.
+- It allows performance to occur in a separate, potentially non-blocking context.
 - It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
@@ -21,7 +21,7 @@ Most platforms have an implementation of this separation for tween animations. F
 
 We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
-For example, "fade in" and "be draggable" are two distinct plans. Their execution might use gesture and tween primitives.
+For example, "fade in" and "be draggable" are two distinct plans. Their performance might use gesture and tween primitives.
 
 Consider the following pseudo-code:
 
@@ -63,17 +63,17 @@ Consider this pseudo-code:
     # Reusing a plan on a second target
     system.addPlan(draggable, toTarget: target2)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's execution.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's performance.
 
 `target2` is expected to be draggable.
 
 ### Execution of a plan
 
-Exactly how a plan is executed is less important than that it **is** executed and that the execution is able to occur elsewhere.
+Exactly how a plan is executed is less important than that it **is** executed and that the performance is able to occur elsewhere.
 
 For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function. The plan doesn't know or care how it's executed.
 
-Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
+Good systems of performance will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 
