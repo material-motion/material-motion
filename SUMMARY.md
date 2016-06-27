@@ -21,9 +21,9 @@
        * [DuplicationController](specifications/duplication_controller.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a transition director](specifications/life_of_a_transition.md)
+       * Life of a transition
        * [TransitionDirector](specifications/transition_director.md)
        * [TransitionController](specifications/transition_controller.md)
-       * Life of a transition
    * [Interactions](specifications/interactions.md)
        * [Interaction Director](specifications/interaction_director.md)
        * [Interaction Controller](specifications/interaction_controller.md)
