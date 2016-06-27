@@ -1,37 +1,37 @@
-# Executor specification
+# Performer specification
 
-This is the engineering specification for the Executor abstract type.
+This is the engineering specification for the Performer abstract type.
 
-Executors are the objects responsible for executing Plans.
+Performers are the objects responsible for executing Plans.
 
 Printable tech tree/checklist:
 
-![](../../_assets/ExecutorTechTree.svg)
+![](../../_assets/PerformerTechTree.svg)
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: An Executor is a protocol, if your language has that concept.
+**Abstract type**: An Performer is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
-    protocol Executor {
+    protocol Performer {
     }
 
-**Not configurable**: Executors do not provide direct configuration methods.
+**Not configurable**: Performers do not provide direct configuration methods.
 
-Executors can only be configured by providing them with Plans.
+Performers can only be configured by providing them with Plans.
 
-**Initialize with target**: Executors are initialized with a target.
+**Initialize with target**: Performers are initialized with a target.
 
 Example pseudo-code:
 
-    executor = Executor(target)
+    executor = Performer(target)
 
-**Add plans API**: Plans are provided to Executors.
+**Add plans API**: Plans are provided to Performers.
 
->The Executor may choose not to implement this API.
+>The Performer may choose not to implement this API.
 
 Example pseudo-code:
 
@@ -46,11 +46,11 @@ Example pseudo-code from within the Scheduler:
       executor.addPlan(plan)
     }
 
-**Delegated execution API**: An Executor can choose to delegate its work to a platform-native API, like Web Animations or CoreAnimation.
+**Delegated execution API**: An Performer can choose to delegate its work to a platform-native API, like Web Animations or CoreAnimation.
 
-> If an Executor does not use delegated execution, it does not have to implement this API.
+> If an Performer does not use delegated execution, it does not have to implement this API.
 
-The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+The Performer would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
 
 Example pseudo-code if your language does not support anonymous functions:
 
@@ -76,11 +76,11 @@ Example pseudo-code if your language supports anonymous functions:
 
 <p style="text-align:center"><tt>feature: Named plans</tt></p>
 
-Executors can receive named Plans.
+Performers can receive named Plans.
 
-**Add/remove API**: Executors can implement an add/remove function.
+**Add/remove API**: Performers can implement an add/remove function.
 
->The Executor may choose not to implement this API.
+>The Performer may choose not to implement this API.
 
 If one method is implemented, so must the other.
 
@@ -97,13 +97,13 @@ Example pseudo-code:
 
 <p style="text-align:center"><tt>feature: Manual execution</tt></p>
 
-An Executor can choose to implement an update function that will be called many times per second.
+An Performer can choose to implement an update function that will be called many times per second.
 
-**Manual execution API**: Executors can implement an update function.
+**Manual execution API**: Performers can implement an update function.
 
->The Executor may choose not to implement this API.
+>The Performer may choose not to implement this API.
 
-The update function will be called each time the platform will draw a new frame. The Executor may use this method to perform time-based calculations.
+The update function will be called each time the platform will draw a new frame. The Performer may use this method to perform time-based calculations.
 
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
