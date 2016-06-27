@@ -84,6 +84,16 @@ Example pseudo-code:
 
 ---
 
+<p style="text-align:center"><tt>feature: Context element</tt></p>
+
+The context element is an implementation-specific element. This is often related to the element that the user interacted with in order to initiate the transition.
+
+**Context element API**: Provide an API for retrieving the transition's context element.
+
+<p style="text-align:center"><tt>/feature: Context</tt></p>
+
+---
+
 ## Open Questions ##
 
 - How might we avoid subclassing this type?
