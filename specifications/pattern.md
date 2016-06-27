@@ -2,7 +2,7 @@
 
 This section defines a software design pattern. The pattern involves a separation between **plans** and their **perfomers**.
 
-**Plan**: a detailed proposal for doing or achieving something.
+**Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
 **Performer**: one who carries into effect/fulfills.
 
