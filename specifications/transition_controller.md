@@ -112,7 +112,7 @@ TODO: Discuss director stack.
 
 <p style="text-align:center"><tt>feature: cancelable transitions</tt></p>
 
-TODO: Discuss transitions whose direction can change, i.e. "are cancelable".
+TODO: Discuss transitions whose direction can change, i.e. "are cancelable". Will need to read the director's final transition when the transition finishes.
 
 <p style="text-align:center"><tt>/feature: director stack</tt></p>
 
