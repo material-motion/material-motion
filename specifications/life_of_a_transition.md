@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Life of a Transition
+# Life of a Transition Director
 
 Let's walk through the life of a simple fade transition.
 
@@ -53,6 +53,7 @@ An instance of this type might lazily available for any transition on our platfo
 ### Step 4: Set the director
 
     transitionController.directorType = typeof(FadeTransitionDirector)
+
 
 TODO: Discuss the life-cycle of a Transition.
 
