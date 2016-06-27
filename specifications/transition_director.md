@@ -48,16 +48,16 @@ Example pseudo-code:
       init(initialDirection)
     }
 
-**View duplicator API**: Transition directors have a read-only `viewDuplicator` API.
+**duplicator API**: Transition directors have a read-only `duplicator` API.
 
-Provide a view duplicator to the director's initializer.
+Provide a duplicator to the director's initializer.
 
 Example pseudo-code:
 
     TransitionDirector {
-      readonly var viewDuplicator
+      readonly var duplicator
       
-      init(viewDuplicator)
+      init(duplicator)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
