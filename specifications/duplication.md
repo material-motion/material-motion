@@ -7,9 +7,9 @@ Replication allows motion to appear to affect an element without adversely affec
 The following often occurs after an element is replicated:
 
 - The original element is hidden.
-- The duplicated element is positioned and sized to occupy the original element's place on the screen. The duplicated element may not necessarily be in the same node of the element tree.
-- Motion is applied to the duplicated element.
-- Once its purpose is served, the duplicated element is thrown away.
+- The replicated element is positioned and sized to occupy the original element's place on the screen. The replicated element may not necessarily be in the same node of the element tree.
+- Motion is applied to the replicated element.
+- Once its purpose is served, the replicated element is thrown away.
 - The original element is unhidden.
 
 Replication makes use of two APIs:
@@ -29,11 +29,11 @@ Replication makes use of two APIs:
 
 ## Open Questions ##
 
-- What are the ramifications for interactivity?  If there are event listeners registered on an element's children, how do you make sure the correct things still happen if those children are interacted with on the duplicate?
+- What are the ramifications for interactivity?  If there are event listeners registered on an element's children, how do you make sure the correct things still happen if those children are interacted with on the replicate?
 
-Potential answer: If a client registers a plan to a target and the target is duplicated, then the Scheduler will apply the plans to the duplicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a duplicate.
+Potential answer: If a client registers a plan to a target and the target is replicated, then the Scheduler will apply the plans to the replicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a replicate.
 
-- How should we handle replication of child elements that have already been duplicated?
+- How should we handle replication of child elements that have already been replicated?
 
 For example:
 
@@ -41,4 +41,4 @@ For example:
       childView
         button
 
-What happens if we want to duplicate both the containerView and the button?
+What happens if we want to replicate both the containerView and the button?
