@@ -20,6 +20,15 @@ Example pseudo-code:
     TransitionDirector: Director {
     }
 
+**Subclassing**: This class is expected to be subclassed.
+
+The sub-class is expected to implement 
+
+Example pseudo-code:
+
+    TransitionDirector: Director {
+    }
+
 **Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
 
 TODO: Diagrams.
