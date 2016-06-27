@@ -104,8 +104,6 @@ Example pseudo-code:
 
 A transition can register certain pre-conditions. If any pre-condition fails, the director will not be selected for use in the transition.
 
-Requires: TransitionController director stack feature.
-
 **Preconditions API**: Provide an API for registering new preconditions.
 
 Example pseudo-code:
