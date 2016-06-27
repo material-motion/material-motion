@@ -1,4 +1,4 @@
-# Performer specification
+# TransactionPerformer specification
 
 This is the engineering specification for the Performer abstract type.
 
