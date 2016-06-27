@@ -1,6 +1,6 @@
 # Replicating elements
 
-Duplication allows motion to appear to affect an element without affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
+Replication allows motion to appear to affect an element without affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
 
 The following often occurs after an element is duplicated:
 
@@ -10,18 +10,18 @@ The following often occurs after an element is duplicated:
 - Once its purpose is served, the duplicated element is thrown away.
 - The original element is unhidden.
 
-Duplication makes use of two APIs:
+Replication makes use of two APIs:
 
 - [Duplicator](duplicator.md)
-- [DuplicationController](duplication_controller.md)
+- [ReplicationController](replication_controller.md)
 
 ## Considerations
 
-**Separation of concerns**: Duplication is a helpful tool for separating concerns in an application.
+**Separation of concerns**: Replication is a helpful tool for separating concerns in an application.
 
-**Cost of duplication**: Duplication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
+**Cost of replication**: Replication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
 
-**Recycling elements**: A `Duplicator` implementation may choose to recycle elements rather than create a new element with each duplication.
+**Recycling elements**: A `Duplicator` implementation may choose to recycle elements rather than create a new element with each replication.
 
 ---
 
@@ -31,7 +31,7 @@ Duplication makes use of two APIs:
 
 Potential answer: If a client registers a plan to a target and the target is duplicated, then the Scheduler will apply the plans to the duplicated element. This allows you to describe an element as being "draggable" without having to worry about whether it's the original element or a duplicate.
 
-- How should we handle duplication of child elements that have already been duplicated?
+- How should we handle replication of child elements that have already been duplicated?
 
 For example:
 
