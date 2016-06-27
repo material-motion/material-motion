@@ -72,7 +72,7 @@ The scheduler is now expected to perform the committed plans.
 
 ### Step 4: Scheduler creates performers
 
-The scheduler uses entities called **performers** to execute its plans. An performer is a specialized mediating agent between a plan and its execution.
+The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its execution.
 
 We'll assume a function exists that returns an performer capable of executing a type of plan. The method signature for this method might look like this:
 
