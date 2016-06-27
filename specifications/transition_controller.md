@@ -32,8 +32,6 @@ Example pseudo-code:
 
 **Runtime**: Store a single `Runtime` instance while the transition is active.
 
-Create a Runtime when a transition is initiated.
-
 Example pseudo-code:
 
     TransitionController {
