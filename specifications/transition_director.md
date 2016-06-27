@@ -76,8 +76,6 @@ Example pseudo-code:
 
 ---
 
----
-
 ## Open Questions ##
 
 - How might we avoid subclassing this type?
