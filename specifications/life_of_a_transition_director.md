@@ -39,7 +39,7 @@ Or if our plans have a concept of direction:
       transaction.add(tween, target: rightElement)
     }
 
-### Step 3: Create a transition controller
+### Step 3: Access a transition controller
 
 A `TransitionController` is the configuring entity for a transition.
 
