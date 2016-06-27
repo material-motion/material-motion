@@ -7,6 +7,29 @@ Let's walk through the life of a simple fade transition.
 
 >Remember, any code you see here is pseudo-code.
 
+### Step 1: Define a new TransitionDirector type
+
+This object will provide the transition-specific plans.
+
+    FadeTransitionDirector: TransitionDirector {
+    }
+
+### Step 2: Implement the Director setUp method
+
+Our `setUp` will be involve a simple tween plan:
+
+    function setUp(transaction) {
+      var tween = Tween(property: "opacity")
+      if self.direction == .ToTheRight {
+        tween.from = 0
+        tween.to = 1
+      } else {
+        tween.from = 1
+        tween.to = 0
+      }
+      transaction.add(tween, target: rightElement)
+    }
+
 ### Step 1: Create a transition controller
 
 A `TransitionController` is the configuring entity for a transition.
