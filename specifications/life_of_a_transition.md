@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Life of a Transition Director
+# Life of a transition director
 
 Let's walk through the life of a simple fade transition director.
 
@@ -20,6 +20,7 @@ Our `setUp` will use a simple tween plan:
 
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
+      tween.duration = 0.3
       if self.direction == .ToTheRight {
         tween.from = 0
         tween.to = 1
@@ -34,6 +35,7 @@ If our plans have a concept of direction:
 
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
+      tween.duration = 0.3
       tween.left = 0
       tween.right = 1
       tween.direction = self.initialDirection
@@ -52,8 +54,13 @@ An instance of this type might lazily available for any transition on our platfo
 
 ### Step 4: Set the director
 
+Provide the `FadeTransitionDirector` type to the transition controller.
+
     transitionController.directorType = typeof(FadeTransitionDirector)
 
+### Step 5: Initiate the transition
+
+Initiating our transition causes `FadeTransitionDirector` to be instantiated.
 
 TODO: Discuss the life-cycle of a Transition.
 
