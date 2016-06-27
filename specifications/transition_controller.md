@@ -28,7 +28,7 @@ Example pseudo-code:
       public var directorType: type(TransitionDirector)
     }
 
-**Runtime**: Create a single `Runtime` instance.
+**Runtime**: Store a single `Runtime` instance while the transition is active.
 
 Create a Runtime when a transition is initiated.
 
