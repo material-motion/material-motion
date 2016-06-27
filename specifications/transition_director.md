@@ -10,7 +10,6 @@ Printable tech tree/checklist:
 
 ![](../_assets/TransitionDirectorTechTree.svg)
 
-
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
