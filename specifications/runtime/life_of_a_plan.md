@@ -1,10 +1,10 @@
-## Life of a Plan
+## Life of a plan
 
-Let's walk through the life of a Plan.
+Let's walk through the life of a plan.
 
 >Remember, any code you see here is pseudo-code.
 
-### Step 1: Create a Scheduler
+### Step 1: Create a scheduler
 
 Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one.
 
@@ -14,7 +14,7 @@ Schedulers are cheap and easy to create. Many schedulers may exist in an applica
 
 ### Step 2: Create plans
 
-All motion in a motion runtime begins with a plan. Let's create four different types of Plan:
+All motion in a motion runtime begins with a plan. Let's create four different types of plan:
 
     animation = Tween()
     animation.property = "opacity"
@@ -33,7 +33,7 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create a Transaction.
+First we must create a transaction.
 
     transaction = Transaction()
 
@@ -58,7 +58,6 @@ The transaction's log might resemble this:
       {action:'add",    target: circleView, plan: Draggable               },
     ]
 
-
 A transaction must be committed to a scheduler in order for it to take affect.
 
     scheduler.commit(transaction)
@@ -67,15 +66,15 @@ After committing the above transaction, the scheduler's internal state might res
 
 ![](../../_assets/TargetManagers.svg)
 
-> Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
+> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
 
 The scheduler is now expected to execute the committed plans.
 
 ### Step 4: Scheduler creates executors
 
-The scheduler uses entities called **Executors** to execute its plans. The Executor type represents a specialized mediating agent between a Plan and its execution.
+The scheduler uses entities called **executors** to execute its plans. An executor is a specialized mediating agent between a plan and its execution.
 
-We'll assume a function exists that returns an Executor capable of executing a type of Plan. The method signature for this method might look like this:
+We'll assume a function exists that returns an executor capable of executing a type of plan. The method signature for this method might look like this:
 
     function executorForPlan(Plan, target, existingExecutors) -> Executor
 
