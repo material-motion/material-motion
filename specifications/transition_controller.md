@@ -38,6 +38,37 @@ Example pseudo-code:
       private var runtime: Runtime
     }
 
+**Duplication controller**: Store a single `DuplicationController` instance while the transition is active.
+
+Example pseudo-code:
+
+    TransitionController {
+      private var duplicationController: DuplicationController
+    }
+
+**Transition director**: Store a single `TransitionDirector` instance while the transition is active.
+
+Example pseudo-code:
+
+    TransitionController {
+      private var director: TransitionDirector
+    }
+
+**Transition will start**: The following should occur when a transition is about to begin:
+
+Example pseudo-code:
+
+    TransitionController {
+      function transitionWillStart() {
+        director = self.directorType()
+        
+        transaction = Transaction()
+        director.setUp(transaction)
+        
+        runtime = Runtime()
+      }
+    }
+
 **System bridge**: Implement the necessary bridge for the platform's transitioning APIs.
 
 This differs greatly from platform to platform.
