@@ -32,9 +32,9 @@ Consider the following pseudo-code:
     }
     system.addPlan(fadeIn, toTarget: target)
 
-Here, the object `fadeIn` is the plan. The "fade in" logic **is not executed here**.
+Here, the object `fadeIn` is the plan. The "fade in" logic **is not performed here**.
 
-`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
+`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually performed.
 
 Also consider this pseudo-code:
 
@@ -44,7 +44,7 @@ Also consider this pseudo-code:
     }
     system.addPlan(behavior, toTarget: target)
 
-In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
+In this example, the logic of the `animate` function is the plan. The `animate` function is not performed here.
 
 > **Note:** Take care to author code that suits your platform. Plans that include functions may not be portable across thread/worker boundaries on some platforms.
 
@@ -69,11 +69,11 @@ Consider this pseudo-code:
 
 ### Execution of a plan
 
-Exactly how a plan is executed is less important than that it **is** executed and that the performance is able to occur elsewhere.
+Exactly how a plan is performed is less important than that it **is** performed and that the performance is able to occur elsewhere.
 
-For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function. The plan doesn't know or care how it's executed.
+For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
 
-Good systems of performance will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
+Good systems of performance will carefully balance the needs of power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 
