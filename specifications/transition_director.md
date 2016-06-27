@@ -46,6 +46,23 @@ Example pseudo-code:
       init(initialDirection)
     }
 
+**View duplicator API**: Transition directors have a read-only `viewDuplicator` API.
+
+Provide the initial direction of the transition to the director's initializer.
+
+Example pseudo-code:
+
+    enum TransitionDirection {
+      .ToTheRight
+      .ToTheLeft
+    }
+    
+    TransitionDirector {
+      readonly var initialDirection
+      
+      init(initialDirection)
+    }
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
