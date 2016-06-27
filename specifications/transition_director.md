@@ -11,11 +11,11 @@ A instance of a `TransitionDirector` conforms to the `Director` protocol. A `Tra
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Conrete type**: A `TransitionDuplicator` is a concrete type.
+**Conrete type**: A `TransitionDirector` is a concrete type that conforms to the `Director` protocol.
 
 Example pseudo-code:
 
-    protocol Duplicator {
+    TransitionDirector: Director {
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
