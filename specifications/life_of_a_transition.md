@@ -50,7 +50,9 @@ A `TransitionController` is the configuring entity for a transition.
 
 An instance of this type might be lazily available for any transition on our platform.
 
-> On iOS each view controller might have its own transition controller. This transition controller governs the present/dismiss transitions of that particular view controller.
+> *Platform-specific example*: iOS
+> 
+> Each view controller might have its own transition controller. This transition controller governs the present/dismiss transitions of that particular view controller.
 > 
 >     viewController.transitionController
 
