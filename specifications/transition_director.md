@@ -20,7 +20,7 @@ Example pseudo-code:
 
 **Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
 
-**initialDirection API**: Transition directors have a settable direction property.
+**Initial direction API**: Transition directors have a read-only `initialDirection` API.
 
 Provide the initial direction of the transition to the director's initializer.
 
