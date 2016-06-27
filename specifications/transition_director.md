@@ -1,6 +1,3 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
 # TransitionDirector specification
 
 This is the engineering specification for the `TransitionDirector` object.
@@ -8,6 +5,11 @@ This is the engineering specification for the `TransitionDirector` object.
 A `TransitionDirector` provides essential scaffolding for managing a transition. A `TransitionDirector` class is instantiated by a `TransitionController`.
 
 `TransitionDirector` conforms to the `Director` protocol.
+
+Printable tech tree/checklist:
+
+![](../_assets/TransitionDirectorTechTree.svg)
+
 
 ---
 
