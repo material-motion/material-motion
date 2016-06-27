@@ -18,14 +18,25 @@ Example pseudo-code:
     TransitionController {
     }
 
-**Director API**: A `TransitionController` is a concrete type.
+**Transition director type API**: Provide an API for storing a `TransitionDirector` type.
+
+The type must be a subclass of `TransitionDirector`.
 
 Example pseudo-code:
 
     TransitionController {
+      var directorType: type(TransitionDirector)
     }
 
-<p style="text-align:center"><tt>MVP</tt></p>
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: director stack</tt></p>
+
+TODO: Discuss director stack.
+
+<p style="text-align:center"><tt>/feature: director stack</tt></p>
 
 ---
 
