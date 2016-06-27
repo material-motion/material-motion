@@ -3,3 +3,4 @@ Status of this document:
 
 # Transitions
 
+Transitions are the act of moving from one element hierarchy to another.
