@@ -74,7 +74,7 @@ The scheduler is now expected to perform the committed plans.
 
 The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its performance.
 
-We'll assume a function exists that returns an performer capable of executing a type of plan. The method signature for this method might look like this:
+We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
     function performerForPlan(Plan, target, existingPerformers) -> Performer
 
