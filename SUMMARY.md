@@ -11,7 +11,7 @@
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
-       * [Performer](specifications/runtime/executor.md)
+       * [Performer](specifications/runtime/performer.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [TransactionScheduler](specifications/runtime/scheduler.md)
    * [Director](specifications/directors.md)
