@@ -1,8 +1,10 @@
 # Creating replica elements
 
-Replication allows motion to appear to affect an element without affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
+Replication allows motion to appear to affect an element without adversely affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
 
-The following often occurs after an element is duplicated:
+**Replicate**: to make a close or exact copy; a replica.
+
+The following often occurs after an element is replicated:
 
 - The original element is hidden.
 - The duplicated element is positioned and sized to occupy the original element's place on the screen. The duplicated element may not necessarily be in the same node of the element tree.
