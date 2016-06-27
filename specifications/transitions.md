@@ -3,4 +3,4 @@ Status of this document:
 
 # Transitions
 
-Transitions are the act of moving from one element hierarchy to another.
+A transition causes a visual change from one element hierarchy to another.
