@@ -98,7 +98,7 @@ It is generally possible to move in the other direction:
     A → B is a Transition  from  State A to    State B
     A ← B is a Transition  to    State A from  State B
 
-Note that only the **direction** changes between the two lines above. We think of transitions in terms of what's on the "left" and what's on the "right". This allows us to think of the direction in terms of "to the left" or "to the right".
+Only the **direction** changes between the two lines above. We encourage thinking about transitions in terms of what's on the "left" and what's on the "right". This allows the direction to be thought of in terms of "to the left" or "to the right".
 
 ## Connecting primitives
 
