@@ -13,7 +13,7 @@
        * [Plan](specifications/runtime/plan.md)
        * [Performer](specifications/runtime/performer.md)
        * [Transaction](specifications/runtime/transaction.md)
-       * [TransactionScheduler](specifications/runtime/scheduler.md)
+       * [Scheduler](specifications/runtime/scheduler.md)
    * [MotionDirector](specifications/directors.md)
    * [Conditional elements](specifications/transient_views.md)
    * [Creating replica elements](specifications/duplication.md)
