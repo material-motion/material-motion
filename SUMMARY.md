@@ -6,7 +6,7 @@
    * [Reading spec diagrams](specifications/reading_spec_diagrams.md)
    * [Library structure](specifications/repository_structure.md)
 * [Engineering spec](specifications/README.md)
-   * [Motion primitives](primitives.md)
+   * [Motion primitives](specifications/primitives.md)
    * [Separation of plan/performance](specifications/pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
