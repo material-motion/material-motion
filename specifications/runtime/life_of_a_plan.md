@@ -70,13 +70,13 @@ After committing the above transaction, the scheduler's internal state might res
 
 The scheduler is now expected to execute the committed plans.
 
-### Step 4: Scheduler creates executors
+### Step 4: Scheduler creates performers
 
-The scheduler uses entities called **executors** to execute its plans. An executor is a specialized mediating agent between a plan and its execution.
+The scheduler uses entities called **performers** to execute its plans. An performer is a specialized mediating agent between a plan and its execution.
 
-We'll assume a function exists that returns an executor capable of executing a type of plan. The method signature for this method might look like this:
+We'll assume a function exists that returns an performer capable of executing a type of plan. The method signature for this method might look like this:
 
-    function executorForPlan(Plan, target, existingExecutors) -> Executor
+    function performerForPlan(Plan, target, existingPerformers) -> Performer
 
 Recall the transaction log we'd explored above:
 
@@ -94,29 +94,29 @@ When we commit this transaction to the scheduler, our scheduler has the followin
 
 ![](../../_assets/TargetManagers.svg)
 
-The scheduler now creates executors by calling our hypothetical `executorForPlan` on each target's plans.
+The scheduler now creates performers by calling our hypothetical `performerForPlan` on each target's plans.
 
-![](../../_assets/Executors.svg)
+![](../../_assets/Performers.svg)
 
-We've created three executors in total. `circleView` has two executors. `squareView` has one. You might be wondering now: "Why is there only one gesture executor for the squareView?"
+We've created three performers in total. `circleView` has two performers. `squareView` has one. You might be wondering now: "Why is there only one gesture performer for the squareView?"
 
-A single executor instance is created for each _type_ of plan registered to a target. This allows executors to maintain coherent state even when multiple plans have been committed.
+A single performer instance is created for each _type_ of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
-### Step 5: Provide plans to executors
+### Step 5: Provide plans to performers
 
-The scheduler now provides each plan instance to the relevant executor. This allows the executor to translate specific plans in to actionable logic.
+The scheduler now provides each plan instance to the relevant performer. This allows the performer to translate specific plans in to actionable logic.
 
-### Step 6: Executors execute plans
+### Step 6: Performers execute plans
 
-Executors can execute their plans in countless ways. Let's focus on two of them.
+Performers can execute their plans in countless ways. Let's focus on two of them.
 
 **Manual execution**
 
-Executors will be notified each time the system will draw a new frame by the scheduler's `update` event. The executor is expected to calculate and set its target's next state on each update event.
+Performers will be notified each time the system will draw a new frame by the scheduler's `update` event. The performer is expected to calculate and set its target's next state on each update event.
 
 **Delegated execution**
 
-An executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The executor would be responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
+An performer could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The performer would be responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
