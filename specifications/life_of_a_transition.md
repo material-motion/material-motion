@@ -50,9 +50,9 @@ An instance of this type might lazily available for any transition on our platfo
 
     viewController.transitionController
 
-### Step 2: Set the director
+### Step 4: Set the director
 
-    transitionController.director = FadeTransitionDirector
+    transitionController.directorType = typeof(FadeTransitionDirector)
 
 TODO: Discuss the life-cycle of a Transition.
 
