@@ -20,7 +20,7 @@
        * [Duplicator](specifications/duplicator.md)
        * [DuplicationController](specifications/duplication_controller.md)
    * [Transitions](specifications/transitions.md)
-       * [Life of a transition director](specifications/life_of_a_transition.md)
+       * [Life of a transition director](specifications/life_of_a_transition_director.md)
        * Life of a transition
        * [TransitionDirector](specifications/transition_director.md)
        * [TransitionController](specifications/transition_controller.md)
