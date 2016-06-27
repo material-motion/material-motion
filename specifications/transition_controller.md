@@ -110,6 +110,14 @@ TODO: Discuss director stack.
 
 ---
 
+<p style="text-align:center"><tt>feature: cancelable transitions</tt></p>
+
+TODO: Discuss transitions whose direction can change, i.e. "are cancelable".
+
+<p style="text-align:center"><tt>/feature: director stack</tt></p>
+
+---
+
 TODO: Spec out.
 
 The owner of a Transition Director is responsible for creating a Runtime and committing the Transaction.
