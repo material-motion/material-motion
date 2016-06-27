@@ -4,8 +4,6 @@ Let's walk through the life of a simple fade transition director.
 
     Remember, any code you see here is pseudo-code.
 
-ViewController A view controller B.
-
 ### Step 1: Define a new TransitionDirector type
 
 This object will provide transition-specific plans.
