@@ -48,9 +48,11 @@ A `TransitionController` is the configuring entity for a transition.
 
     transitionController = TransitionController()
 
-An instance of this type might be lazily available for any transition on our platform. For example, on iOS each view controller might have its own transition controller. This transition controller governs the present/dismiss transitions of that particular view controller.
+An instance of this type might be lazily available for any transition on our platform.
 
-    viewController.transitionController
+> On iOS each view controller might have its own transition controller. This transition controller governs the present/dismiss transitions of that particular view controller.
+> 
+>     viewController.transitionController
 
 ### Step 4: Set the director
 
