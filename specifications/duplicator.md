@@ -6,7 +6,6 @@ A instance of a `ElementDuplicator` creates similar replicas of visual elements.
 
 Printable tech tree/checklist:
 
-
 ![](../_assets/DuplicatorTechTree.svg)
 
 ---
