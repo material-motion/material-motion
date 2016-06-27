@@ -1,4 +1,4 @@
-## Separation of plan/performance
+## Separation of plan/perform
 
 This section defines a software design pattern. The pattern involves a separation between **plans** and their **performance**.
 
