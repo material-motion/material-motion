@@ -1,9 +1,9 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Decoy elements
+# Conditional elements
 
-Transient views are views that live for a finite period of time.
+Conditional views are views that live for a finite period of time.
 
 ---
 
