@@ -48,7 +48,7 @@ Example pseudo-code:
       init(initialDirection)
     }
 
-**duplicator API**: Transition directors have a read-only `duplicator` API.
+**duplicator API**: Transition directors have a read-only `duplicationController` API.
 
 Provide a duplicator to the director's initializer.
 
