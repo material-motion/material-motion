@@ -11,7 +11,7 @@ A instance of a `TransitionDirector` conforms to the `Director` protocol. A `Tra
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Conrete type**: A `TransitionDirector` is a concrete type that conforms to the `Director` protocol.
+**Concrete type**: A `TransitionDirector` is a concrete type that conforms to the `Director` protocol.
 
 Example pseudo-code:
 
