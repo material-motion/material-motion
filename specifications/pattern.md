@@ -21,7 +21,7 @@ Most platforms have an implementation of this separation for tween animations. F
 
 We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
-For example, "fade in" and "be draggable" are two distinct plans. Their performance might use gesture and tween primitives.
+For example, "fade in" and "be draggable" are two distinct plans.
 
 Consider the following pseudo-code:
 
