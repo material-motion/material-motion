@@ -20,6 +20,15 @@ Example pseudo-code:
 
 **Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
 
+**Transition direction type**: Provide a `TransitionDirection` type with two possible values: *to the left* and *to the right*.
+
+Example pseudo-code:
+
+    enum TransitionDirection {
+      .ToTheRight
+      .ToTheLeft
+    }
+
 **Initial direction API**: Transition directors have a read-only `initialDirection` API.
 
 Provide the initial direction of the transition to the director's initializer.
