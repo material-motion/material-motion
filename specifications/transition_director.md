@@ -33,9 +33,16 @@ Example pseudo-code:
       }
     }
 
-**Left/right side**: Transition directors think in terms of left and right *sides* of the transition.
+**Left/right side API**: Provide storage for relevant information to the transition.
 
-TODO: Diagrams.
+Transition directors think in terms of left and right *sides* of the transition.
+
+Example pseudo-code:
+
+    MyTransitionDirector: TransitionDirector {
+      public var leftViewController
+      public var rightViewController
+    }
 
 **Transition direction type**: Provide a `TransitionDirection` type with two possible values: *to the left* and *to the right*.
 
