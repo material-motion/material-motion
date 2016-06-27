@@ -1,4 +1,4 @@
-# Director specification
+# MotionDirector specification
 
 This is the engineering specification for the Director abstract type.
 
