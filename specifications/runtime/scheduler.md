@@ -1,8 +1,8 @@
-# Scheduler specification
+# TransactionScheduler specification
 
-This is the engineering specification for the Scheduler object.
+This is the engineering specification for the TransactionScheduler object.
 
-A Scheduler accepts Transactions and creates Performers. The Scheduler generates relevant events for Performers and observers and monitors activity.
+A TransactionScheduler accepts Transactions and creates Performers. The TransactionScheduler generates relevant events for Performers and observers and monitors activity.
 
 Printable tech tree/checklist:
 
@@ -12,11 +12,11 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Simple initializer**: A Scheduler is cheap to create.
+**Simple initializer**: A TransactionScheduler is cheap to create.
 
 Example pseudo-code:
 
-    scheduler = Scheduler()
+    scheduler = TransactionScheduler()
 
 **commit API**: Provide an API to commit Transactions to a scheduler.
 
@@ -102,7 +102,7 @@ Pseudo-code example:
       .Idle
     }
     
-    Scheduler {
+    TransactionScheduler {
       function activityState() -> ActivityState
     }
 
@@ -120,7 +120,7 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 **activity state changed API**: Provide a mechanism for listening to activity state changes.
 
-    Scheduler {
+    TransactionScheduler {
       function addActivityStateObserver(function)
     }
     
@@ -136,7 +136,7 @@ Unlocks [Transition Directors](../transition_directors.md).
 
 <p style="text-align:center"><tt>feature: named plans</tt></p>
 
-Schedulers support named Plans. Named Plans are plans with a name associated via the Transaction.
+TransactionSchedulers support named Plans. Named Plans are plans with a name associated via the Transaction.
 
 Example use case: associating "behavior" with a target.
 
@@ -190,7 +190,7 @@ Unlocks [view duplication](../view_duplication.md).
 
 **new target API**: Provide a mechanism for listening to new target references.
 
-    Scheduler {
+    TransactionScheduler {
       function addNewTargetObserver(function)
     }
     
