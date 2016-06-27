@@ -3,7 +3,9 @@ Status of this document:
 
 # TransitionDirector
 
-Transition Directors are concerned with elegantly moving from one state to another.
+This is the engineering specification for the `TransitionDirector` object.
+
+A instance of a `TransitionDirector` conforms to the `Director` protocol and provides essential scaffolding for managing a transition.
 
 ---
 
