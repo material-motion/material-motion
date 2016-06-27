@@ -5,7 +5,7 @@ Status of this document:
 
 This is the engineering specification for the `TransitionDirector` object.
 
-A instance of a `TransitionDirector` conforms to the `Director` protocol and provides essential scaffolding for managing a transition.
+A instance of a `TransitionDirector` conforms to the `Director` protocol. A `TransitionDirector` provides essential scaffolding for managing a transition.
 
 ---
 
