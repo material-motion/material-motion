@@ -1,10 +1,10 @@
-## Separation of plan/perform
+## Separation of plan/performer
 
-This section defines a software design pattern. The pattern involves a separation between **plans** and their **performance**.
+This section defines a software design pattern. The pattern involves a separation between **plans** and their **perfomers**.
 
 **Plan**: a detailed proposal for doing or achieving something.
 
-**Performance**: TODO: definition.
+**Performer**: one who carries into effect/fulfills.
 
 Benefits of this separation:
 
