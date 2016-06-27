@@ -21,9 +21,9 @@ Replication makes use of two APIs:
 
 **Separation of concerns**: Replication is a helpful tool for separating concerns in an application.
 
-**Cost of replication**: Replication may be expensive depending on the platform and the content of the element. Take care to consider this cost.
+**Cost of replication**: Depends on the platform and the content of the element. Take care to consider this cost.
 
-**Recycling elements**: A `Duplicator` implementation may choose to recycle elements rather than create a new element with each replication.
+**Recycling elements**: A `ReplicaCreator` implementation may choose to recycle elements rather than create a new element with each replication.
 
 ---
 
