@@ -18,7 +18,7 @@ Example pseudo-code:
     TransitionController {
     }
 
-**Stack**: A `TransitionController` is a concrete type.
+**Director API**: A `TransitionController` is a concrete type.
 
 Example pseudo-code:
 
