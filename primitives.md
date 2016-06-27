@@ -100,7 +100,7 @@ It is generally possible to move in the other direction:
 
 Only the **direction** changes between the two lines above. We encourage thinking about transitions in terms of what's on the "left" and what's on the "right". This allows the direction to be thought of in terms of "to the left" or "to the right".
 
-## Connecting primitives
+## How to connect primitives
 
 We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
 
