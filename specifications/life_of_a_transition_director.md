@@ -18,7 +18,7 @@ Our `setUp` will use a simple tween plan:
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
       tween.duration = 0.3
-      if self.direction == .ToTheRight {
+      if self.direction == FORWARD {
         tween.from = 0
         tween.to = 1
       } else {
@@ -33,8 +33,8 @@ Or if our plans have a concept of direction:
     function setUp(transaction) {
       var tween = Tween(property: "opacity")
       tween.duration = 0.3
-      tween.left = 0
-      tween.right = 1
+      tween.start = 0
+      tween.end = 1
       tween.direction = self.initialDirection
       transaction.add(tween, target: rightElement)
     }
