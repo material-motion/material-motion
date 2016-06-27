@@ -9,7 +9,7 @@ This section's topics:
 - [Applied forces](#applied-forces)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
-- [Connecting primitives](#connecting-primitives)
+- [How to connect primitives](#connecting-primitives)
 
 Most of these primitives represent change over time.
 
