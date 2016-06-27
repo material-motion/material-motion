@@ -1,5 +1,4 @@
 <span class="github-only">This book is best-formatted on GitBook. [Read it there](https://material-motion.gitbooks.io/material-motion-starmap/content/).</span>
-
 # 🌟 Interactive Motion Starmap 🗺
 
 This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more.
