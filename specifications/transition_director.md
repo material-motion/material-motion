@@ -32,7 +32,9 @@ Example pseudo-code:
     }
     
     TransitionDirector {
-      var direction
+      readonly var direction
+      
+      init(direction)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
