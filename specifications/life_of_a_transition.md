@@ -3,6 +3,10 @@ Status of this document:
 
 # Life of a Transition
 
+Let's walk through the life of a transition.
+
+>Remember, any code you see here is pseudo-code.
+
 TODO: Discuss the life-cycle of a Transition.
 
 - Create a Transition Controller
