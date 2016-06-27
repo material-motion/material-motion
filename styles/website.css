@@ -1,5 +1,9 @@
 /* CSS for website */
 
+.github-only {
+  display: none;
+}
+
 .markdown-section a.glossary-term {
   color: inherit;
   border-bottom: 1px dotted #AAA;
