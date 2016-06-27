@@ -22,7 +22,7 @@ Example pseudo-code:
 
 **Read-only direction API**: Transition directors have a settable direction property.
 
-`direction` is initialized with the initial direction of the transition.
+`direction` is initialized with the initial direction of the transition when the director is created.
 
 Example pseudo-code:
 
