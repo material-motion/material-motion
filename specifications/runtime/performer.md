@@ -27,7 +27,7 @@ Performers can only be configured by providing them with plans.
 
 Example pseudo-code:
 
-    executor = Performer(target)
+    performer = Performer(target)
 
 **Add plans API**: Plans are provided to Performers.
 
