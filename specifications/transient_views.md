@@ -3,7 +3,7 @@ Status of this document:
 
 # Condition elements
 
-Conditional views are views that live for a finite period of time.
+Condition elements are removed when a condition is met.
 
 ---
 
