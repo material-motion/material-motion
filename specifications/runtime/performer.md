@@ -47,7 +47,7 @@ The performer would be responsible for informing of two things: when delegated e
 
 Example pseudo-code if your language does not support anonymous functions:
 
-    protocol DelegatedPerformance {
+    protocol DelegatedPerforming {
       function setDelegatedPerformanceCallback(callback)
     }
     
