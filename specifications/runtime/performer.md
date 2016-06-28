@@ -52,15 +52,15 @@ Example pseudo-code if your language does not support anonymous functions:
     }
     
     class DelegatedPerformanceCallback {
-      function onDelegatedPerformanceStart(performer, name)
-      function onDelegatedPerformanceEnd(performer, name)
+      function delegatedPerformanceWillStart(performer, name)
+      function delegatedPerformanceStartEnd(performer, name)
     }
 
 Example pseudo-code if your language supports anonymous functions:
 
     protocol DelegatedPerformance {
-      var onDelegatedPerformanceStart(performer, name)
-      var onDelegatedPerformanceEnd(performer, name)
+      var delegatedPerformanceWillStart(performer, name)
+      var delegatedPerformanceDidEnd(performer, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
