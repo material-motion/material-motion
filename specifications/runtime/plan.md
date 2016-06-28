@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `Plan` abstract type.
 
-A plan is an object representing **what you want something to do**.  As its name suggests, a `Plan` is an implementation of the [plan/execution pattern](../../plan-execution-pattern.md).
+A plan is an object representing **what you want something to do**.  As its name suggests, a `Plan` is an implementation of the [plan/performance pattern](../pattern.md).
 
 Example plan objects:
 
