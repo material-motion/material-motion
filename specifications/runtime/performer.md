@@ -51,7 +51,7 @@ Example pseudo-code if your language does not support anonymous functions:
       function setDelegatedPerformanceCallback(callback)
     }
     
-    class DelegatedPerformanceCallback {
+    class DelegatedPerformingCallback {
       function delegatedPerformanceWillStart(performer, name)
       function delegatedPerformanceDidFinish(performer, name)
     }
