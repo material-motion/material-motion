@@ -26,7 +26,7 @@ Pseudo-code example:
     protocol Plan {
     }
 
-**Defines Executor type**: Plans define the type of executor that can fulfill them.
+**Performer type API**: Plans define the type of performer that can execute them.
 
 Pseudo-code example:
 
