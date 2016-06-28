@@ -33,12 +33,12 @@
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
+   * Editing policies
    * [Code policies](code_policies.md)
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
        * [iOS](community_index/ios.md)
        * [Web](community_index/web.md)
-   * Editing policies
 * [Glossary](GLOSSARY.md)
 * Drafts
    * [Applications](_drafts/applications.md)
