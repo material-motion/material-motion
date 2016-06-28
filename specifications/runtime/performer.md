@@ -53,7 +53,7 @@ Example pseudo-code if your language does not support anonymous functions:
     
     class DelegatedPerformanceCallback {
       function delegatedPerformanceWillStart(performer, name)
-      function delegatedPerformanceDidEnd(performer, name)
+      function delegatedPerformanceDidFinish(performer, name)
     }
 
 Example pseudo-code if your language supports anonymous functions:
