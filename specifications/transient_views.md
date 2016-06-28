@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Conditional elements
+# Condition elements
 
 Conditional views are views that live for a finite period of time.
 
