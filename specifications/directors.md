@@ -18,7 +18,7 @@ Printable tech tree/checklist:
 
 Example pseudo-code protocol definition:
 
-    protocol Director {
+    protocol MotionDirecting {
       function setUp(transaction)
     }
 
@@ -42,13 +42,13 @@ The primary goal of this restriction is to minimize the number of novel APIs a d
 
 <p style="text-align:center"><tt>feature: tear-down</tt></p>
 
-Directors may implement a `tearDown` function. This function must be invoked when the associated Scheduler is about to terminate.
+Directors may implement a `tearDown` function. This function is invoked when the associated scheduler is about to terminate.
 
-**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding scheduler is about to terminate.
+**Tear down API**: The `tearDown` function, if implemented, is invoked when the director's corresponding scheduler is about to terminate.
 
 Pseudo-code example:
 
-    protocol TearDownDirector {
+    protocol TearDownDirecting {
       function tearDown() {
         // Perform any cleanup work
       }
@@ -60,13 +60,13 @@ Pseudo-code example:
 
 <p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
 
-Directors may wish to register new Plans after `setUp` has been invoked.
+Directors may wish to register new plans after `setUp` has been invoked.
 
-**Transact API**: A Director may be provided with a *transaction initiation function*.
+**Transact API**: A director may be provided with a *transaction initiation function*.
 
 Example pseudo-code protocol:
 
-    TransactionDirector {
+    protocol TransactionDirecting {
       var transact // settable
     }
 
