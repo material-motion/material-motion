@@ -47,8 +47,6 @@ Or dive in to the engineering specifications:
 - [Performer](performer.md)
 - [Scheduler](scheduler.md)
 
-Collectively, these objects represent what we consider to be a *minimum-viable motion runtime*.
-
 <!--
 
 LGTM:
