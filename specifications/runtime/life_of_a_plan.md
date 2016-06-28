@@ -98,13 +98,15 @@ The scheduler now creates performers by calling our hypothetical `performerForPl
 
 ![](../../_assets/LifeOfAPlan-step4.svg)
 
-We've created three performers in total. `circleView` has two performers. `squareView` has one. You might be wondering now: "Why is there only one gesture performer for the squareView?"
+We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
-A single performer instance is created for each _type_ of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
+You might now be wondering: "Why is there only one gesture performer for the squareView?"
+
+A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
 ### Step 5: Provide plans to performers
 
-The scheduler now provides each plan instance to the relevant performer. This allows the performer to translate specific plans in to actionable logic.
+The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans in to actionable logic.
 
 ### Step 6: Performers execute plans
 
