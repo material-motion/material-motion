@@ -12,13 +12,13 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Simple initializer**: A Scheduler is cheap to create.
+**Simple initializer**: A scheduler is cheap to create.
 
 Example pseudo-code:
 
     scheduler = Scheduler()
 
-**commit API**: Provide an API to commit Transactions to a scheduler.
+**commit API**: Provide an API to commit transactions to a scheduler.
 
 Example pseudo-code:
 
@@ -26,7 +26,7 @@ Example pseudo-code:
 
 Requires: [Transaction](transaction.md)
 
-**One instance of an Performer type per target**: Create One Performer instance for each *type* of Performer required by a target. This allows multiple Plans to affect a single Performer instance. The Performers can then maintain state across multiple Plans.
+**One instance of a performer type per target**: Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
 ![](../../_assets/OnePerformer.svg)
 
