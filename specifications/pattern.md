@@ -67,9 +67,9 @@ Consider this pseudo-code:
 
 `target2` is expected to be draggable.
 
-### Execution of a plan
+### Performance of a plan
 
-Exactly how a plan is performed is less important than that it **is** performed and that the performance is able to occur elsewhere.
+Exactly how a plan is performed is less important than that it **is** performed by some other system.
 
 For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
 
