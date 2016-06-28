@@ -101,8 +101,6 @@ Specialized Directors should be provided for common operations.
 - [Transition Directors](transition_director.md)
 - [Interaction Directors](interaction_director.md)
 
-TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Scheduler instance.
-
 <!--
 
 LGTM:
