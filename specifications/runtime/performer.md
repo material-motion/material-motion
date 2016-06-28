@@ -1,6 +1,6 @@
 # Performer specification
 
-This is the engineering specification for the Performer abstract type.
+This is the engineering specification for the `Performer` abstract type.
 
 Performers are the objects responsible for executing Plans.
 
