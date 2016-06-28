@@ -93,16 +93,3 @@ Consider the following pseudo-code of a director responding to a gesture recogni
 <p style="text-align:center"><tt>/feature: post-setup transactions</tt></p>
 
 ---
-
-## Specialized Directors
-
-Specialized Directors should be provided for common operations.
-
-- [Transition Directors](transition_director.md)
-- [Interaction Directors](interaction_director.md)
-
-<!--
-
-LGTM:
-
--->
