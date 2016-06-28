@@ -28,7 +28,7 @@ Requires: [Transaction](transaction.md)
 
 **One instance of a performer type per target**: Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
-![](../../_assets/OneExecutor.svg)
+![](../../_assets/OnePerformer.svg)
 
 > Consider the following pseudo-code transaction involving physical simulation:
 > 
