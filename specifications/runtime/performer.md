@@ -31,7 +31,7 @@ Example pseudo-code:
 
 **Add plan API**: Define an optional API that allows performers to receive plans.
 
->The performer may choose not to implement this API.
+> The performer may choose not to implement this API.
 
 Example pseudo-code:
 
@@ -39,11 +39,11 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API**: An Performer can choose to delegate its work to a platform-native API, like Web Animations or CoreAnimation.
+**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
-> If an Performer does not use delegated execution, it does not have to implement this API.
+> The performer may choose not to implement this API.
 
-The Performer would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
 
 Example pseudo-code if your language does not support anonymous functions:
 
@@ -52,15 +52,15 @@ Example pseudo-code if your language does not support anonymous functions:
     }
     
     class DelegatedExecutionCallback {
-      function onDelegatedExecutionStart(executor, name)
-      function onDelegatedExecutionEnd(executor, name)
+      function onDelegatedExecutionStart(performer, name)
+      function onDelegatedExecutionEnd(performer, name)
     }
 
 Example pseudo-code if your language supports anonymous functions:
 
     protocol DelegatedExecution {
-      var onDelegatedExecutionStart(executor, name)
-      var onDelegatedExecutionEnd(executor, name)
+      var onDelegatedExecutionStart(performer, name)
+      var onDelegatedExecutionEnd(performer, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
@@ -69,7 +69,7 @@ Example pseudo-code if your language supports anonymous functions:
 
 <p style="text-align:center"><tt>feature: Named plans</tt></p>
 
-Performers can receive named Plans.
+Performers can receive named plans.
 
 **Add/remove API**: Performers can implement an add/remove function.
 
