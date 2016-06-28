@@ -12,7 +12,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: An Performer is a protocol, if your language has that concept.
+**Abstract type**: `Performer` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
