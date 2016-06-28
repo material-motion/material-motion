@@ -34,7 +34,6 @@
    * [Communication](communication.md)
    * [Governance](governance.md)
    * [Editing policies](editing_policies.md)
-
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
        * [iOS](community_index/ios.md)
