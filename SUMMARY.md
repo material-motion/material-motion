@@ -33,7 +33,7 @@
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
-   * Editing policies
+   * [Editing policies](editing_policies.md)
    * [Code policies](code_policies.md)
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
