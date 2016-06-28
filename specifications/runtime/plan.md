@@ -26,7 +26,7 @@ Pseudo-code example:
     protocol Plan {
     }
 
-**Performer type API**: Provide an API that returns the type of performer that can execute this plan.
+**Performer type API**: Provide an API that returns an instantiable type of performer that can execute this plan.
 
 Pseudo-code example:
 
