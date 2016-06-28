@@ -116,7 +116,7 @@ A scheduler is active if any of its performer instances are active.
 
 Fire an observable event when the idle/active state changes.
 
-**activity state changed API**: Provide a public API for registering an activity state change listener.
+**activity state changed API**: Provide a public API for registering an "activity state did change" listener.
 
     Scheduler {
       public function addActivityStateObserver(function)
@@ -195,13 +195,13 @@ Fire an observable event when a new target is referenced.
       return clonedTarget
     })
 
-**Placeholders**: Allow the event receiver to return a new placeholder instance.
+**Replicas**: Allow the event receiver to return a replica instance.
 
-A placeholder instance is meant to be used in place of the original target.
+A replica instance is meant to be used in place of the original target.
 
-One common use of this feature is *view duplication*. In this implementation, a visual duplicate of the view is created. This duplicate view can be modified with little consequence.
+One common use of this feature is *element replication*. The replica element can safely be modified with little consequence.
 
-Performers are expected to act on the placeholder instance rather than the original target.
+Performers are expected to act on the replica rather than the original target.
 
 <p style="text-align:center"><tt>/feature: new target event</tt></p>
 
@@ -213,7 +213,7 @@ Performers are expected to act on the placeholder instance rather than the origi
 
 This is a more focused event than the "scheduler activity state did change".
 
-This event enables reactionary Plans, i.e. registering new Plans once a Target has entered an idle state.
+This event enables reactionary plans, i.e. registering new plans once a target has entered an idle state.
 
     Transaction {
       function addActivityStateObserverForTarget(target, function)
@@ -223,7 +223,7 @@ This event enables reactionary Plans, i.e. registering new Plans once a Target h
       // Start a new transaction and commit it to the scheduler...
     })
 
-NOTE: It may be more valuable to have Performer-level idling. Target-level idling may not be helpful. It's unclear how Performer-level idling would work, given that the outside system should generally be unaware of Performers.
+NOTE: It may be more valuable to have performer-level idling. Target-level idling may not be helpful. It's unclear how performer-level idling would work, given that the outside system should generally be unaware of performers.
 
     Transaction {
       function addActivityStateObserverForPlan(plan, function)
@@ -239,14 +239,14 @@ NOTE: It may be more valuable to have Performer-level idling. Target-level idlin
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should Performers be removed from a scheduler?
-- Should schedulers support target-less Plans?
+- When should performers be removed from a scheduler?
+- Should schedulers support target-less plans?
 
 ### Proposed features
 
 **Tear down API**: Provide an API to tear down a scheduler.
 
-This API would terminate all active executors and remove all registered Plans.
+This API would terminate all active executors and remove all registered plans.
 
 It's unclear if this is a necessary feature at this point in time.
 
