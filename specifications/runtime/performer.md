@@ -31,7 +31,7 @@ Example pseudo-code:
 
 **Add plan API**: Define an optional API that allows performers to receive plans.
 
-> The performer may choose not to implement this API.
+> If a performer cannot be configured, it will not expose this API.
 
 Example pseudo-code:
 
