@@ -4,7 +4,7 @@ This section defines a software design pattern. The pattern involves a separatio
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
-**Performance**: the action of carrying out or accomplishing a plan.
+**Perform**: the action of carrying out or accomplishing a plan.
 
 Benefits of this separation:
 
