@@ -90,7 +90,7 @@ Recall the transaction log we'd explored above:
       {action:'add",    target: circleView, plan: Draggable               },
     ]
 
-When we commit this transaction to the scheduler, our scheduler has the following representation of the committed plans:
+Recall that when we committed this transaction to the scheduler our scheduler had the following representation of the committed plans:
 
 ![](../../_assets/TargetManagers.svg)
 
