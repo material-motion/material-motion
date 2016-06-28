@@ -96,7 +96,7 @@ Recall that when we committed this transaction to the scheduler our scheduler ha
 
 The scheduler now creates performers by calling our hypothetical `performerForPlan` on each target's plans.
 
-![](../../_assets/Executors.svg)
+![](../../_assets/LifeOfAPlan-step4.svg)
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one. You might be wondering now: "Why is there only one gesture performer for the squareView?"
 
