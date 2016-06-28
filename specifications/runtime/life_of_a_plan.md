@@ -110,15 +110,15 @@ The scheduler now provides each plan instance to the relevant performer. This al
 
 ### Step 6: Performers execute plans
 
-Performers can execute their plans in countless ways. Let's focus on two of them.
+Performers can execute their plans in countless ways. At a high level there are two categories of performer:
 
 **Manual execution**
 
-Performers will be notified each time the system will draw a new frame by the scheduler's `update` event. The performer is expected to calculate and set its target's next state on each update event.
+Manual execution performers are notified each time the system will draw a new frame. The performer is expected to calculate and set its target's next state each time this notification is received.
 
 **Delegated execution**
 
-An performer could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The performer would be responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
+Delegated execution performers delegate their work to external systems, like Web Animations or  CoreAnimation. Such a performer is responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 
