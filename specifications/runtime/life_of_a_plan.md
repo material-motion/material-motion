@@ -50,12 +50,12 @@ The transaction's log might resemble this:
 
     > transaction.log
     [
-      {action:'add",    target: circleView, plan: FadeIn                  },
-      {action:'add",    target: squareView, plan: Draggable               },
-      {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
-      {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
-      {action:'remove", target: squareView,                  name: "name2"},
-      {action:'add",    target: circleView, plan: Draggable               },
+      {action:"add",    target: circleView, plan: FadeIn                  },
+      {action:"add",    target: squareView, plan: Draggable               },
+      {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
+      {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
+      {action:"remove", target: squareView,                  name: "name2"},
+      {action:"add",    target: circleView, plan: Draggable               },
     ]
 
 A transaction must be committed to a scheduler in order for it to take affect.
