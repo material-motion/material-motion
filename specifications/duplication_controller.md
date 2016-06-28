@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `ReplicatorController` object.
 
-A replica controller makes use of a `ReplicaCreator` instance to create similar replicas of visual elements. The `ReplicatorController` provides APIs for configuring when duplication should and should not occur.
+A replicator controller makes use of a replicator instance to create replicas of elements. `ReplicatorController` provides APIs for configuring when replication should and should not occur.
 
 Printable tech tree/checklist:
 
