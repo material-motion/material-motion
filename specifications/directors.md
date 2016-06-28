@@ -1,10 +1,10 @@
 # MotionDirector specification
 
-This is the engineering specification for the Director abstract type.
+This is the engineering specification for the `MotionDirector` abstract type, or director for short.
 
-A Director is an object created for the purposes of describing motion.
+A director is an object created for the purposes of describing motion.
 
-Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
+Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative plans.
 
 Printable tech tree/checklist:
 
