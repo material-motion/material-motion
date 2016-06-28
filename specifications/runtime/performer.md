@@ -29,21 +29,14 @@ Example pseudo-code:
 
     performer = Performer(target)
 
-**Add plans API**: Plans are provided to Performers.
+**Add plans API**: Plans are provided to performers.
 
->The Performer may choose not to implement this API.
+>The performer may choose not to implement this API.
 
 Example pseudo-code:
 
-    protocol PlanExecution {
+    protocol PlanPerforming {
       function addPlan(plan)
-    }
-
-Example pseudo-code from within the Scheduler:
-
-    executor = executorForPlan(plan, target)
-    if executor.addPlan {
-      executor.addPlan(plan)
     }
 
 **Delegated execution API**: An Performer can choose to delegate its work to a platform-native API, like Web Animations or CoreAnimation.
