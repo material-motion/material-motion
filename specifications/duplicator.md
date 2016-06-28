@@ -4,7 +4,6 @@ This is the engineering specification for the `ReplicaCreator` abstract type.
 
 A instance of a `ReplicaCreator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
-
 Printable tech tree/checklist:
 
 ![](../_assets/ReplicaCreatorTechTree.svg)
