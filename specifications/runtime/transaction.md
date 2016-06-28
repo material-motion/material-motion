@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `Transaction` object.
 
-A transaction aggregates requests for plans to be assigned to targets. It can then be [committed to a Scheduler](./scheduler.md).
+A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Scheduler](scheduler.md).
 
 Printable tech tree/checklist:
 
