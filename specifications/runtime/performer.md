@@ -92,9 +92,9 @@ Example pseudo-code:
 
 An Performer can choose to implement an update function that will be called many times per second.
 
-**Manual execution API**: Performers can implement an update function.
+**Manual execution API**: Define an optional API that allows performers to implement an update function.
 
->The Performer may choose not to implement this API.
+> The Performer may choose not to implement this API.
 
 The update function will be called each time the platform will draw a new frame. The Performer may use this method to perform time-based calculations.
 
