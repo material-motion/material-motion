@@ -47,13 +47,13 @@ The performer would be responsible for informing of two things: when delegated e
 
 Example pseudo-code if your language does not support anonymous functions:
 
-    protocol DelegatedExecution {
-      function setDelegatedExecutionCallback(callback)
+    protocol DelegatedPerformance {
+      function setDelegatedPerformanceCallback(callback)
     }
     
-    class DelegatedExecutionCallback {
-      function onDelegatedExecutionStart(performer, name)
-      function onDelegatedExecutionEnd(performer, name)
+    class DelegatedPerformanceCallback {
+      function onDelegatedPerformanceStart(performer, name)
+      function onDelegatedPerformanceEnd(performer, name)
     }
 
 Example pseudo-code if your language supports anonymous functions:
