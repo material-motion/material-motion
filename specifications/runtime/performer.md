@@ -58,7 +58,7 @@ Example pseudo-code if your language does not support anonymous functions:
 
 Example pseudo-code if your language supports anonymous functions:
 
-    protocol DelegatedPerformance {
+    protocol DelegatedPerforming {
       var delegatedPerformanceWillStart(performer, name)
       var delegatedPerformanceDidFinish(performer, name)
     }
