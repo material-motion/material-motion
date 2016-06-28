@@ -12,7 +12,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: A `ReplicaCreator` is an abstract type.
+**Abstract type**: `ReplicaCreator` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
