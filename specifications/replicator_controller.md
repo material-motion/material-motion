@@ -6,7 +6,7 @@ A replicator controller makes use of a `Replicator` instance to create replicas 
 
 Printable tech tree/checklist:
 
-![](../_assets/DuplicationControllerTechTree.svg)
+![](../_assets/ReplicatorControllerTechTree.svg)
 
 ---
 
