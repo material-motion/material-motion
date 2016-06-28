@@ -8,7 +8,7 @@ Directors have little — if any — imperative code. Directors prefer to descr
 
 Printable tech tree/checklist:
 
-![](../_assets/DirectorTechTree.svg)
+![](../_assets/MotionDirectorTechTree.svg)
 
 ---
 
