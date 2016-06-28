@@ -9,7 +9,6 @@ This section's topics:
 - [Applied forces](#applied-forces)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
-- [How to connect primitives](#connecting-primitives)
 
 Most of these primitives represent change over time.
 
@@ -99,38 +98,6 @@ It is generally possible to move in the other direction:
     A ← B is a Transition  to    State A from  State B
 
 Only the **direction** changes between the two lines above. We encourage thinking about transitions in terms of what's on the "left" and what's on the "right". This allows the direction to be thought of in terms of "to the left" or "to the right".
-
-## How to connect primitives
-
-We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
-
-#### Primitives that can drive timelines
-
-A timeline's **progress** can be driven by the following delta primitives if they have been mapped to a domain of `[0...1]`:
-
-- **Time** can move `progress` forward or backward.
-- **Gestures** can scrub `progress` directly.
-- **Applied forces**: `progress` can be physically anchored to a position, usually 1 or 0, using a Spring. This allows a timeline to snap to completion.
-- **Applied forces** and **Gestures**: feeding the final velocity of a gesture into a applied forces allows the timeline to be tosse".
-- **Tweens**.
-
-#### Timelines can drive these primitives
-
-The timeline's progress can drive tweens. For example: a fade-in animation could occur during the first 50% of a timeline. Scrubbing the timeline would scrub the animation as well.
-
-Similarly, a timeline could be used to emit gesture events that simulate user input.  This pattern could be useful for teaching a user how to perform a gesture or for automated testing. 
-
-#### Applied forces and states
-
-Applied forcess can be associated with individual states of a State Machine.
-
-> For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
-
-#### Timelines and transitions
-
-Timelines are a helpful metaphor for constructing transitions.
-
-> For example, a transition between state A and B might have a timeline that drives a coordinated set of tweens. There might also be ephemeral tweens created in response to user input during the transition.
 
 <!--
 
