@@ -1,8 +1,8 @@
 # Scheduler specification
 
-This is the engineering specification for the Scheduler object.
+This is the engineering specification for the `Scheduler` object.
 
-A Scheduler accepts Transactions and creates Performers. The Scheduler generates relevant events for Performers and observers and monitors activity.
+A scheduler accepts transactions and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
 
 Printable tech tree/checklist:
 
