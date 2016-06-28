@@ -4,6 +4,10 @@
   display: none;
 }
 
+.markdown-section .github-only + h1 {
+    margin-top: 0!important;
+}
+
 .markdown-section a.glossary-term {
   color: inherit;
   border-bottom: 1px dotted #AAA;
