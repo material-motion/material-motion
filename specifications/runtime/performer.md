@@ -96,9 +96,7 @@ An Performer can choose to implement an update function that will be called many
 
 > The Performer may choose not to implement this API.
 
-The update function will be called each time the platform will draw a new frame. The Performer may use this method to perform time-based calculations.
-
-TODO: Explain that this step is not expected to actually perform any rendering or drawing. Just animation/motion.
+The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
 
 The method returns an activity state enumeration. This enumeration has two states: active and idle.
 
@@ -110,7 +108,7 @@ Example pseudo-code:
     }
     
     protocol ManualExecution {
-      function update(deltaTimeMs) -> ActivityState
+      function update(millisecondsSinceLastUpdate) -> ActivityState
     }
 
 <p style="text-align:center"><tt>/feature: Manual execution</tt></p>
