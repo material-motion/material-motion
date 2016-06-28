@@ -35,7 +35,7 @@ Example pseudo-code:
 
 The controller maintains a permanent list of elements that will not be replicated. We will refer to this as the list of disabled elements.
 
-Elements are assumed to be duplicable by default. Do not replicate elements for which replication was disabled.
+Elements are assumed to be replicable by default. Do not replicate elements for which replication was disabled.
 
 Example pseudo-code:
 
