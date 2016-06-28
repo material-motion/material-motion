@@ -18,7 +18,7 @@ Printable tech tree/checklist:
 
 Example pseudo-code protocol definition:
 
-    protocol MotionDirecting {
+    protocol MotionDirector {
       function setUp(transaction)
     }
 
