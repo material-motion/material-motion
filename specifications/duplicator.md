@@ -6,7 +6,7 @@ A instance of a `ReplicaCreator` creates similar replicas of visual elements. Re
 
 Printable tech tree/checklist:
 
-![](../_assets/DuplicatorTechTree.svg)
+![](../_assets/ReplicaCreatorTechTree.svg)
 
 ---
 
