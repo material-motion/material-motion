@@ -100,8 +100,6 @@ Transactions are serializable.
 
 Serializable transactions can be sent over a wire or recorded to disk.
 
-Requires: Serializable plans.
-
 **serialize/deserialize API**: Provide APIs for serializing and deserializing a transaction.
 
 Example pseudo-code:
