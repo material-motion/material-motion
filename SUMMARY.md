@@ -17,7 +17,7 @@
        * [Scheduler](specifications/runtime/scheduler.md)
    * [MotionDirector](specifications/directors.md)
    * [Creating replica elements](specifications/duplication.md)
-       * [Replicator](specifications/duplicator.md)
+       * [Replicator](specifications/replicator.md)
        * [ReplicaController](specifications/duplication_controller.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
