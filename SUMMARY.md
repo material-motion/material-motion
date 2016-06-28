@@ -15,7 +15,7 @@
        * [Transaction](specifications/runtime/transaction.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [MotionDirector](specifications/directors.md)
-   * [Conditional elements](specifications/transient_views.md)
+   * [Condition elements](specifications/transient_views.md)
    * [Creating replica elements](specifications/duplication.md)
        * [ReplicaCreator](specifications/duplicator.md)
        * [ReplicaController](specifications/duplication_controller.md)
