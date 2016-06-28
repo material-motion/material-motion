@@ -1,8 +1,8 @@
 # Transaction specification
 
-This is the engineering specification for the Transaction object.
+This is the engineering specification for the `Transaction` object.
 
-A Transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Scheduler](./scheduler.md).
+A transaction aggregates requests for Plans to be assigned to targets. It can then be [committed to a Scheduler](./scheduler.md).
 
 Printable tech tree/checklist:
 
@@ -14,7 +14,7 @@ Unlocks: [Scheduler](scheduler.md).
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Simple initializer**: A Transaction is cheap to create.
+**Simple initializer**: A transaction is cheap to create.
 
 Example pseudo-code:
 
@@ -104,17 +104,17 @@ Serializable transactions can be sent over a wire or recorded to disk.
 
 Requires: Serializable Plans.
 
-**serialize/deserialize API**: Provide APIs for serializing and deserializing a Transaction.
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a transaction.
 
 Example pseudo-code:
 
     # Serialize the transaction
     json = transaction.serialize()
     
-    # Create a new Transaction from json
+    # Create a new transaction from json
     transaction = Transaction(json)
 
-**JSON serialization**: A serialized Transaction is represented in JSON.
+**JSON serialization**: A serialized transaction is represented in JSON.
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
 
