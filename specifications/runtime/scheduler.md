@@ -246,7 +246,7 @@ The following topics are open for discussion. They do not presently have a clear
 
 **Tear down API**: Provide an API to tear down a scheduler.
 
-This API would terminate all active executors and remove all registered plans.
+This API would terminate all active performers and remove all registered plans.
 
 It's unclear if this is a necessary feature at this point in time.
 
