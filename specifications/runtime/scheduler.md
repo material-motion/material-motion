@@ -134,7 +134,7 @@ Fire an observable event when the idle/active state changes.
 
 <p style="text-align:center"><tt>feature: named plans</tt></p>
 
-Schedulers support named Plans. Named Plans are plans with a name associated via the Transaction.
+Schedulers support named plans. Named plans are plans with a name associated via the transaction.
 
 Example use case: associating "behavior" with a target.
 
@@ -158,22 +158,22 @@ Example pseudo-code:
 
 **Target-scoped names**: Names are scoped to the target.
 
-**Remove-then-add**: Two things must happen when a named Plan is committed:
+**Remove-then-add**: Two things must happen when a named plan is committed:
 
-1. Remove any previously-committed Plan with the same name from the target's Performers. 
+1. Remove any previously-committed plan with the same name from the target's performers. 
 
-   _Note:_ This may be on a different Performer instance.  In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
-2. Provide the relevant Performer with the new named Plan.
+   _Note:_ This may be on a different performer instance.  In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
+2. Provide the relevant performer with the new named plan.
 
 Example pseudo-code:
 
     # Step 1
-    executorForName(name).removePlanWithName(name)
+    performerForName(name).removePlanWithName(name)
     
     # Step 2
-    executor = executorForPlan(plan)
-    executor.setPlan(plan, withName: name)
-    executorForName(name) == executor 
+    performer = performerForPlan(plan)
+    performer.setPlan(plan, withName: name)
+    performerForName(name) == performer 
     > true
 
 <p style="text-align:center"><tt>/feature: named plans</tt></p>
@@ -184,12 +184,10 @@ Example pseudo-code:
 
 Fire an observable event when a new target is referenced.
 
-Unlocks [view duplication](../view_duplication.md).
-
-**new target API**: Provide a mechanism for listening to new target references.
+**new target API**: Provide a public API for adding a "new target" listener.
 
     Scheduler {
-      function addNewTargetObserver(function)
+      public function addNewTargetObserver(function)
     }
     
     scheduler.addNewTargetObserver(function(target) {
