@@ -6,7 +6,7 @@ Performers are the objects responsible for executing plans.
 
 Printable tech tree/checklist:
 
-![](../../_assets/ExecutorTechTree.svg)
+![](../../_assets/PerformerTechTree.svg)
 
 ---
 
