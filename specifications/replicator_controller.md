@@ -21,14 +21,14 @@ Example pseudo-code:
 
 **Duplicator API**: Provide an API for setting a replicator instance.
 
-The duplicator instance performs the actual replication.
+The replicator instance performs the actual replication.
 
-> Consider providing a default duplicator instance that performs a "best-effort" replication.
+> Consider providing a default replicator instance that performs a "best-effort" replication.
 
 Example pseudo-code:
 
     ReplicatorController {
-      var duplicator: Duplicator
+      var replicator: Duplicator
     }
 
 **Disable replication API**: Provide an API for disabling replication of specific elements.
@@ -43,11 +43,11 @@ Example pseudo-code:
       function disableReplicationForElement(Element element)
     }
 
-**Replication API**: Provide an API for duplicating an element.
+**Replication API**: Provide an API for replicating an element.
 
 This API should accept an element and return either an element or null.
 
-The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the assigned duplicator's `replicateElement` API.
+The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the assigned replicator's `replicateElement` API.
 
 Example pseudo-code:
 
@@ -56,7 +56,7 @@ Example pseudo-code:
         if disabledElements.contains(element) {
           return null
         }
-        return duplicator.replicateElement(element)
+        return replicator.replicateElement(element)
       }
     }
 
