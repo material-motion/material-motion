@@ -58,9 +58,9 @@ Example pseudo-code if your language does not support anonymous functions:
 
 Example pseudo-code if your language supports anonymous functions:
 
-    protocol DelegatedExecution {
-      var onDelegatedExecutionStart(performer, name)
-      var onDelegatedExecutionEnd(performer, name)
+    protocol DelegatedPerformance {
+      var onDelegatedPerformanceStart(performer, name)
+      var onDelegatedPerformanceEnd(performer, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
