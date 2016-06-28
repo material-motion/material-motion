@@ -29,7 +29,7 @@ Example pseudo-code:
 
     performer = Performer(target)
 
-**Add plans API**: Plans are provided to performers.
+**Add plans API**: Define an optional API that allows performers to receive plans.
 
 >The performer may choose not to implement this API.
 
