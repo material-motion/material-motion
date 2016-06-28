@@ -1,24 +1,24 @@
-# Motion Runtime
+# Motion runtime
 
-This section defines a system that emphasizes the separation of a plan from its execution. We call it a Motion Runtime, or Runtime for short.
+This section defines a system that emphasizes the separation of a plan from its execution. We call it a *motion runtime*, or **runtime** for short.
 
-A Runtime serves two primary purposes:
+A runtime serves two primary purposes:
 
-- Provide an abstraction layer between the application engineer and execution systems.
+- Provide an abstraction layer between the application engineer and the performance of motion.
 - Coordinate the expression of diverse types of motion and interaction.
 
-The following diagram shows where the Runtime lives in relation to a platform like iOS.
+The following diagram shows where the runtime lives in relation to a platform like iOS.
 
 ![](../../_assets/Abstraction.svg)
 
 ## Overview
 
-A Runtime will find a way to execute any plans it is provided.
+A runtime will find a way to execute any plans it is provided.
 
 This sentence introduces two important questions:
 
-1. How are plans provided to a Runtime?
-1. How does a Runtime know how to execute plans?
+1. How are plans provided to a runtime?
+1. How does a runtime know how to execute plans?
 
 To answer the first question we introduce two new types into the system: `Plan` and `Transaction`.
 
