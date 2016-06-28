@@ -18,7 +18,7 @@
    * [MotionDirector](specifications/directors.md)
    * [Creating replica elements](specifications/duplication.md)
        * [Replicator](specifications/replicator.md)
-       * [ReplicatorController](specifications/replica_controller.md)
+       * [ReplicatorController](specifications/replicator_controller.md)
    * [Transitions](specifications/transitions.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
