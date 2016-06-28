@@ -14,7 +14,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This function accepts a Transaction instance.
+**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a transaction instance.
 
 Example pseudo-code protocol definition:
 
@@ -22,7 +22,7 @@ Example pseudo-code protocol definition:
       function setUp(transaction)
     }
 
-Directors are expected to commit Plans to `setUp`'s provided transaction .
+Directors are expected to commit plans to `setUp`'s provided transaction .
 
 Example pseudo-code implementation:
 
@@ -32,11 +32,9 @@ Example pseudo-code implementation:
       ...
     }
 
-**No Scheduler access**: Directors do not have direct access to a scheduler.
+**No access to the scheduler**: Directors do not have direct access to a scheduler.
 
-The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A transaction is the preferred bridge between a Director and a scheduler.
-
-We may lift this restriction if there are strong technical reasons to do so.
+The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
