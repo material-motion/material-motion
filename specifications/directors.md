@@ -78,9 +78,9 @@ The provided function implementation might resemble the following:
       scheduler.commit(transaction)
     }
 
-The Director can now start a new transaction by invoking `transact`.
+The director can now start a new transaction by invoking `transact`.
 
-Consider the following pseudo-code of a Director responding to a gesture recognition event:
+Consider the following pseudo-code of a director responding to a gesture recognition event:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
