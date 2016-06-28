@@ -52,18 +52,18 @@ This can be implemented in a variety of ways. We've included a few options below
 
 Plans are serializable.
 
-Serializable Plans can be sent over a wire or recorded to disk.
+Serializable plans can be sent over a wire or recorded to disk.
 
-**serialize/deserialize API**: Provide APIs for serializing and deserializing a Plan.
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
 
 Example pseudo-code:
 
     # Serialize the plan
     json = plan.serialize()
     
-    # Create a new Plan from json
+    # Create a new plan from json
     plan = Plan(json)
 
-**JSON serialization**: A serialized Plan is represented in JSON.
+**JSON serialization**: A serialized plan is represented in JSON.
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
