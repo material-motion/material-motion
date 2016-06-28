@@ -1,20 +1,20 @@
-## Life of a Plan
+## Life of a plan
 
-Let's walk through the life of a Plan.
+Let's walk through the life of a plan.
 
 >Remember, any code you see here is pseudo-code.
 
-### Step 1: Create a Runtime
+### Step 1: Create a scheduler
 
-Runtimes are cheap and easy to create. Many Runtimes may exist in an application. Let's create one.
+Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one.
 
-    runtime = Runtime()
+    scheduler = Scheduler()
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
 
-### Step 2: Create Plans
+### Step 2: Create plans
 
-All motion in a Runtime begins with a Plan. Let's create four different types of Plan:
+All motion in a runtime begins with a plan. Let's create four different types of plan:
 
     animation = Tween()
     animation.property = "opacity"
@@ -33,7 +33,7 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create a Transaction.
+First we must create a transaction.
 
     transaction = Transaction()
 
@@ -50,34 +50,33 @@ The transaction's log might resemble this:
 
     > transaction.log
     [
-      {action:'add",    target: circleView, plan: FadeIn                  },
-      {action:'add",    target: squareView, plan: Draggable               },
-      {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
-      {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
-      {action:'remove", target: squareView,                  name: "name2"},
-      {action:'add",    target: circleView, plan: Draggable               },
+      {action:"add",    target: circleView, plan: FadeIn                  },
+      {action:"add",    target: squareView, plan: Draggable               },
+      {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
+      {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
+      {action:"remove", target: squareView,                  name: "name2"},
+      {action:"add",    target: circleView, plan: Draggable               },
     ]
 
+A transaction must be committed to a scheduler in order for it to take affect.
 
-A transaction must be committed to a Runtime in order for it to take affect.
+    scheduler.commit(transaction)
 
-    runtime.commit(transaction)
-
-After committing the above transaction, the Runtime's internal state might resemble this:
+After committing the above transaction, the scheduler's internal state might resemble this:
 
 ![](../../_assets/TargetManagers.svg)
 
-> Note that `Rotatable` is not listed. This is because we also removed any Plan named "name2" in this Transaction.
+> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
 
-The Runtime is now expected to execute its Plans.
+The scheduler is now expected to perform the committed plans.
 
-### Step 4: Runtime creates Executors
+### Step 4: Scheduler creates performers
 
-The Runtime uses entities called **Executors** to execute Plans. The Executor is the specialized mediating agent between a Plan and its execution.
+The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its performance.
 
-We'll assume a function exists that returns an Executor capable of executing a type of Plan. The method signature for this method might look like this:
+We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
-    function executorForPlan(Plan, target, existingExecutors) -> Executor
+    function performerForPlan(Plan, target, existingPerformers) -> Performer
 
 Recall the transaction log we'd explored above:
 
@@ -91,33 +90,35 @@ Recall the transaction log we'd explored above:
       {action:'add",    target: circleView, plan: Draggable               },
     ]
 
-The above operations committed to the following internal Runtime state:
+Recall that when we committed this transaction to the scheduler our scheduler had the following representation of the committed plans:
 
 ![](../../_assets/TargetManagers.svg)
 
-Let's create Executors by calling our hypothetical `executorForPlan` on each target's Plans.
+The scheduler now creates performers by calling our hypothetical `performerForPlan` on each target's plans.
 
-![](../../_assets/Executors.svg)
+![](../../_assets/LifeOfAPlan-step4.svg)
 
-We've created three Executors in total. `circleView` has two Executors. `squareView` has one. You might be wondering now: "Why is there only one gesture Executor for the squareView?"
+We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
-A single Executor instance is created for each _type_ of Plan registered to a target. This allows Executors to maintain coherent state even when multiple Plans have been committed.
+You might now be wondering: "Why is there only one gesture performer for the squareView?"
 
-### Step 5: Provide Plans to Executors
+A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
-The Runtime now provides each Plan instance to the relevant Executor. This allows the Executor to translate specific Plans in to actionable logic.
+### Step 5: Provide plans to performers
 
-### Step 6: Executors execute Plans
+The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans in to actionable logic.
 
-Executors can execute their Plans in countless ways. Let's focus on two of them.
+### Step 6: Performers execute plans
+
+Performers can execute their plans in countless ways. At a high level there are two categories of performer:
 
 **Manual execution**
 
-Executors will be notified each time the system will draw a new frame by the Runtime's `update` event. The Executor is expected to calculate and set its target's next state on each update event.
+Manual execution performers are notified each time the system will draw a new frame. The performer is expected to calculate and set its target's next state each time this notification is received.
 
 **Delegated execution**
 
-An Executor could also delegate its work to a platform-native API, like Web Animations or  CoreAnimation. The Executor would be responsible for informing the Runtime of two things: when delegated execution will start, and when delegated execution has ended.
+Delegated execution performers delegate their work to external systems, like Web Animations or  CoreAnimation. Such a performer is responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
 
 <!--
 

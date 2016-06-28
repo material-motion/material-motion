@@ -1,27 +1,27 @@
-## Separation of plan/execution
+## Separation of plan/performance
 
-This section defines a software design pattern. The pattern involves a separation between **plans** and their **execution**.
+This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **performance**.
 
-**Plan**: a detailed proposal for doing or achieving something.
+**Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
-**Execution**: the carrying out or putting into effect of a plan, order, or course of action.
+**Perform**: the action of carrying out or accomplishing a plan.
 
 Benefits of this separation:
 
-- It allows execution to occur in a separate, potentially non-blocking context.
+- It allows performance to occur in a separate, potentially non-blocking context.
 - It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
 
 Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](../primitives.md).
 
-![](_assets/PatternMatches.svg)
+![](../_assets/PatternMatches.svg)
 
 ### A plan of motion
 
 We use *plan* to mean **what you want something to do** or **how you want it to behave**.
 
-For example, "fade in" and "be draggable" are two distinct plans. Their execution might use gesture and tween primitives.
+For example, "fade in" and "be draggable" are two distinct plans.
 
 Consider the following pseudo-code:
 
@@ -32,9 +32,9 @@ Consider the following pseudo-code:
     }
     system.addPlan(fadeIn, toTarget: target)
 
-Here, the object `fadeIn` is the plan. The "fade in" logic **is not executed here**.
+Here, the object `fadeIn` is the plan. The "fade in" logic **is not performed here**.
 
-`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually executed.
+`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually performed.
 
 Also consider this pseudo-code:
 
@@ -42,9 +42,9 @@ Also consider this pseudo-code:
     behavior.animate = function() {
       // A custom animation.
     }
-    system.addPlan(fadeIn, toTarget: target)
+    system.addPlan(behavior, toTarget: target)
 
-In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here. The `behavior` instance has been registered with a system. Again: it does not matter which system, so long as the plan is eventually executed.
+In this example, the logic of the `animate` function is the plan. The `animate` function is not performed here.
 
 > **Note:** Take care to author code that suits your platform. Plans that include functions may not be portable across thread/worker boundaries on some platforms.
 
@@ -63,17 +63,17 @@ Consider this pseudo-code:
     # Reusing a plan on a second target
     system.addPlan(draggable, toTarget: target2)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's execution.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's performance.
 
 `target2` is expected to be draggable.
 
-### Execution of a plan
+### Performance of a plan
 
-Exactly how a plan is executed is less important than that it **is** executed and that the execution is able to occur elsewhere.
+Exactly how a plan is performed is less important than that it **is** performed by some other system.
 
-For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function. The plan doesn't know or care how it's executed.
+For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
 
-Good systems of execution will carefully balance the needs of performance, power consumption, event coordination, and user interaction.
+Good systems of performance will carefully balance the needs of power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 

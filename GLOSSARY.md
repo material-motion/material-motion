@@ -56,6 +56,12 @@ Examples:
 - Web (Chrome)
 - Web (Safari)
 
+## protocol
+
+The contract/shape/blueprint an object is expected to conform to in order to interoperate with other objects in the system.
+
+In some languages (like Java and ActionScript), this is called an `interface`.
+
 ## runtime
 
 An object that facilitates the coordination of rich, interactive motion.

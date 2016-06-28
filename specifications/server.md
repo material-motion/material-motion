@@ -3,15 +3,16 @@ Status of this document:
 
 # Server
 
-TODO: Flesh out the role of the Server in relation to the Runtime.
+TODO: Flesh out the role of the server in relation to the runtime.
 
 TODO: Formalize the following content as a protocol.
 
 The Server will need a variety of hooks in to the system. Notably it requires the following **outputs**:
 
-- List of all available Plans. (the available "motion language")
-- List of all active Runtimes.
-- List of all active Directors.
+- List of all Plans types. (the available "motion language")
+- List of all active Scheduler instances.
+- List of all Director types.
+- List of all active Director instances.
 - Directors can expose configurable settings.
 - For each Runtime:
   - List of active Executors.

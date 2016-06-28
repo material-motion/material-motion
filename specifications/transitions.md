@@ -3,3 +3,4 @@ Status of this document:
 
 # Transitions
 
+A transition causes a visual change from one element hierarchy to another.

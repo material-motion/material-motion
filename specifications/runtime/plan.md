@@ -1,10 +1,10 @@
 # Plan specification
 
-This is the engineering specification for the Plan abstract type.
+This is the engineering specification for the `Plan` abstract type.
 
-A Plan is an object representing **what you want something to do**.  As its name suggests, a Plan (with a capital P) is an implementation of the [plan/execution pattern](../../plan-execution-pattern.md).
+A plan is an object representing **what you want something to do** or **how you want it to behave**.  As its name suggests, a plan is part of an implementation of the [plan/performance pattern](../pattern.md).
 
-Example Plan objects:
+Example plan objects:
 
 - `SquashAndStretch` describes a target squashing and stretching in the direction of its movement.
 - `Tween` describes a tween animation.
@@ -19,29 +19,30 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: A Plan is an abstract protocol or interface, if your language allows.
+**Abstract type**: `Plan` is a protocol, if your language has that concept.
 
 Pseudo-code example:
 
     protocol Plan {
     }
 
-**Configurable**: Plans can have configurable properties.
+**Performer type API**: Provide an API that returns an instantiable type of performer that can execute this plan.
 
 Pseudo-code example:
 
-    Tween: Plan {
-      var fromValue
-      var toValue
+    protocol Plan {
+      var executorType
     }
 
 **Copyable**: Plans can be copied.
 
 Modifications made to the copy do not affect the original.
 
-Pseudo-code example:
+This can be implemented in a variety of ways. We've included a few options below:
 
-    planCopy = plan.copy()
+- Immutable types.
+- Value types.
+- Implement a copy or clone method on a reference type.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -51,18 +52,18 @@ Pseudo-code example:
 
 Plans are serializable.
 
-Serializable Plans can be sent over a wire or recorded to disk.
+Serializable plans can be sent over a wire or recorded to disk.
 
-**serialize/deserialize API**: Provide APIs for serializing and deserializing a Plan.
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
 
 Example pseudo-code:
 
     # Serialize the plan
     json = plan.serialize()
     
-    # Create a new Plan from json
+    # Create a new plan from json
     plan = Plan(json)
 
-**JSON serialization**: A serialized Plan is represented in JSON.
+**JSON serialization**: A serialized plan is represented in JSON.
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>

@@ -1,28 +1,28 @@
-# Director specification
+# MotionDirector specification
 
-This is the engineering specification for the Director abstract type.
+This is the engineering specification for the `MotionDirector` abstract type, or director for short.
 
-A Director is an object created for the purposes of describing motion.
+A director is an object created for the purposes of describing motion.
 
-Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative Plans.
+Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative plans.
 
 Printable tech tree/checklist:
 
-![](../_assets/DirectorTechTree.svg)
+![](../_assets/MotionDirectorTechTree.svg)
 
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up API**: A Director implements a `setUp` function. This function will be invoked exactly once. This function accepts a Transaction instance.
+**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a transaction instance.
 
 Example pseudo-code protocol definition:
 
-    protocol Director {
+    protocol MotionDirector {
       function setUp(transaction)
     }
 
-Directors are expected to commit Plans to `setUp`'s provided transaction .
+Directors are expected to commit plans to `setUp`'s provided transaction .
 
 Example pseudo-code implementation:
 
@@ -32,11 +32,9 @@ Example pseudo-code implementation:
       ...
     }
 
-**No Runtime access**: Directors do not have direct access to a Runtime.
+**No access to the scheduler**: Directors do not have direct access to a scheduler.
 
-The primary goal of this restriction is to minimize the number of novel APIs the Director must interact with. A Transaction is the preferred bridge between a Director and a Runtime.
-
-We may lift this restriction if there are strong technical reasons to do so.
+The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -44,13 +42,13 @@ We may lift this restriction if there are strong technical reasons to do so.
 
 <p style="text-align:center"><tt>feature: tear-down</tt></p>
 
-Directors may implement a `tearDown` function. This function must be invoked when the associated Runtime is about to terminate.
+Directors may implement a `tearDown` function. This function is invoked when the associated scheduler is about to terminate.
 
-**Tear down API**: The `tearDown` function, if implemented, is invoked when the Director's corresponding Runtime is about to terminate.
+**Tear down API**: The `tearDown` function, if implemented, is invoked when the director's corresponding scheduler is about to terminate.
 
 Pseudo-code example:
 
-    protocol TearDownDirector {
+    protocol TearDownDirecting {
       function tearDown() {
         // Perform any cleanup work
       }
@@ -62,13 +60,13 @@ Pseudo-code example:
 
 <p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
 
-Directors may wish to register new Plans after `setUp` has been invoked.
+Directors may wish to register new plans after `setUp` has been invoked.
 
-**Transact API**: A Director may be provided with a *transaction initiation function*.
+**Transact API**: A director may be provided with a *transaction initiation function*.
 
 Example pseudo-code protocol:
 
-    TransactionDirector {
+    protocol TransactionDirecting {
       var transact // settable
     }
 
@@ -77,12 +75,12 @@ The provided function implementation might resemble the following:
     var transact = function(work) {
       transaction = Transaction()
       work(transaction)
-      runtime.commit(transaction)
+      scheduler.commit(transaction)
     }
 
-The Director can now start a new transaction by invoking `transact`.
+The director can now start a new transaction by invoking `transact`.
 
-Consider the following pseudo-code of a Director responding to a gesture recognition event:
+Consider the following pseudo-code of a director responding to a gesture recognition event:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
@@ -95,18 +93,3 @@ Consider the following pseudo-code of a Director responding to a gesture recogni
 <p style="text-align:center"><tt>/feature: post-setup transactions</tt></p>
 
 ---
-
-## Specialized Directors
-
-Specialized Directors should be provided for common operations.
-
-- [Transition Directors](transition_directors.md)
-- [Interaction Directors](interaction_directors.md)
-
-TODO: Describe entity that manages creation of Director. This entity is responsible for creating a Director when appropriate, calling the setUp and tearDown methods, and owning the Runtime instance.
-
-<!--
-
-LGTM:
-
--->

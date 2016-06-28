@@ -1,9 +1,19 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Transient views
+# Condition elements
 
-Transient views are views that live for a finite period of time.
+Condition elements are removed when a condition is met.
+
+---
+
+<p style="text-align:center"><tt>MVP</tt></p>
+
+
+
+<p style="text-align:center"><tt>/MVP</tt></p>
+
+---
 
 Can be removed once some function evaluates to true. Many conditions can be built in this way:
 
@@ -11,6 +21,6 @@ Can be removed once some function evaluates to true. Many conditions can be buil
 - `timeHasPassed`
 - etc...
 
-Function can be scheduled to be checked on any Runtime event: update, teardown.
+Function can be scheduled to be checked on any scheduler event: update, teardown.
 
 Multiple functions can be registered to a single view.
