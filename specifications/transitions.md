@@ -20,3 +20,5 @@ Our application likely starts at state A. The user can enter state B, then state
          B <= C
 
 Note that the final transition's arrow is pointed to the left. We always keep states on the same "side" of the transition, regardless of whether we're drilling into or out of a state.
+
+This is an intentional departure from the conventional terminology of *source* and *destination*.
