@@ -37,76 +37,76 @@ Requires: [Transaction](transaction.md)
 >     transaction.add(AnchoredSpringAtLocation(x, y), circleView)
 >     scheduler.commit(transaction)
 > 
-> `circleView` now has two Plans and one Performer, a PhysicalSimulationPerformer. Both Plans are provided to the Performer instance.
+> `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans are provided to the performer instance.
 > 
-> The Performer knows the following:
+> The performer knows the following:
 > 
 > - It has two forces, both affecting `position`.
 > - It needs to model `velocity` for the `position`.
 > 
-> The Performer creates some state that will track the position's velocity.
+> The performer creates some state that will track the position's velocity.
 > 
-> The Performer can now:
+> The performer can now:
 > 
-> 1. convert each Plan into a physics force,
+> 1. convert each plan into a physics force,
 > 2. apply the force to the velocity, and
 > 3. apply the velocity to the position
 >
 > on every update event.
 > 
-> Alternatively, consider how this situation would have played out if we had one Performer for each Plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one Performer would "lose". The result would be a confusing animation.
+> Alternatively, consider how this situation would have played out if we had one performer for each plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one performer would "lose". The result would be a confusing animation.
 
-Note that "one Performer per type of Plan" does not resolve the problem of sharing state across different types of Plans. This is an open problem.
+Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of plans. This is an open problem.
 
-**Plan ↔ Performer association**: The scheduler must be able to translate Plans into Performers.
+**Plan ↔ performer association**: The scheduler must be able to translate plans into performers.
 
 This lookup can be implemented in many ways:
 
-- Plans define their Performer type
+- Plans define their performer type
 
-  This requires Plans to be aware of their Performers, which is not ideal. It does, however, avoid a class of problems that exist if Performers can define which Plans they fulfill.
+  This requires plans to be aware of their performers, which is not ideal. It does, however, avoid a class of problems that exist if performers can define which plans they fulfill.
   
   > This is the simpler approach, and may be used for MVPs.
   
   Example pseudo-code:
   
       class SomePlan {
-        function executorType() {
+        function performerType() {
           return SomePerformer.type
         }
       }
       
       # In the scheduler...
-      executorType = plan.executorType()
-      executor = executorType()
+      performerType = plan.performerType()
+      performer = performerType()
 
-- Map Performer type to Plan type with look-up table
+- Map performer type to plan type with look-up table.
 
-  Performers define which Plans they can fulfill. This approach allows Plans to be less intelligent. But it introduces the possibility of Performers conflicting on a given Plan.  The scheduler would need to be able to determine which one to use.
+  Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan.  The scheduler would need to be able to determine which one to use.
   
   Example pseudo-code:
   
       # In some initialization step...
-      scheduler.executorType(SomePerformer.type, canExecutePlanType: SomePlan.type)
+      scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
       
       # In the scheduler...
-      executorType = plan.executorTypeForPlan(plan)
-      executor = executorType()
+      performerType = plan.performerTypeForPlan(plan)
+      performer = performerType()
 
-**Activity state**: Activity state is one of either active or idle. The scheduler must provide a read-only API for accessing this state.
+**Activity state**: Activity state is one of either active or idle. The scheduler must provide a public read-only API for accessing this state.
 
 Pseudo-code example:
 
-    enum ActivityState {
+    public enum ActivityState {
       .Active
       .Idle
     }
     
     Scheduler {
-      function activityState() -> ActivityState
+      public function activityState() -> ActivityState
     }
 
-A scheduler is active if any of its Performer instances are active.
+A scheduler is active if any of its performer instances are active.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -116,12 +116,10 @@ A scheduler is active if any of its Performer instances are active.
 
 Fire an observable event when the idle/active state changes.
 
-Unlocks [Transition Directors](../transition_directors.md).
-
-**activity state changed API**: Provide a mechanism for listening to activity state changes.
+**activity state changed API**: Provide a public API for registering an activity state change listener.
 
     Scheduler {
-      function addActivityStateObserver(function)
+      public function addActivityStateObserver(function)
     }
     
     scheduler.addActivityStateObserver(function(newState) {
