@@ -39,7 +39,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Delegated performance API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
@@ -88,11 +88,11 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Manual execution</tt></p>
+<p style="text-align:center"><tt>feature: Manual performance</tt></p>
 
 An Performer can choose to implement an update function that will be called many times per second.
 
-**Manual execution API**: Define an optional API that allows performers to implement an update function.
+**Manual performance API**: Define an optional API that allows performers to implement an update function.
 
 > The Performer may choose not to implement this API.
 
@@ -111,6 +111,6 @@ Example pseudo-code:
       function update(millisecondsSinceLastUpdate) -> ActivityState
     }
 
-<p style="text-align:center"><tt>/feature: Manual execution</tt></p>
+<p style="text-align:center"><tt>/feature: Manual performance</tt></p>
 
 ---
