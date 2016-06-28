@@ -60,7 +60,7 @@ Example pseudo-code if your language supports anonymous functions:
 
     protocol DelegatedPerformance {
       var delegatedPerformanceWillStart(performer, name)
-      var delegatedPerformanceDidEnd(performer, name)
+      var delegatedPerformanceDidFinish(performer, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
