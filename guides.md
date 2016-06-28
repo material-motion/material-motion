@@ -1,3 +1,3 @@
-# Guides
+# Diagrams
 
-The articles in this chapter provide high-level overviews of the Starmap's content.
+The diagrams in this chapter provide visual overviews of the Starmap's content.
