@@ -7,7 +7,7 @@
    * [Library structure](specifications/repository_structure.md)
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
-       * How to connect primitives
+       * [How to connect primitives](specifications/how_to_connect_primitives.md)
    * [Separation of plan/performance](specifications/pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
