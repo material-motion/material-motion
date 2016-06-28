@@ -1,6 +1,6 @@
 ## Separation of plan/performance
 
-This section defines a software design pattern. The pattern involves a separation between **plans** and their **performance**.
+This section defines a software design pattern. The pattern involves a declarative separation between **plans** and their **performance**.
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
