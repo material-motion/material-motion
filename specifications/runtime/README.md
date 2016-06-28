@@ -13,12 +13,12 @@ The following diagram shows where the runtime lives in relation to a platform li
 
 ## Overview
 
-A runtime will find a way to execute any plans it is provided.
+A runtime will find a way to perform any plans it is provided.
 
 This sentence introduces two important questions:
 
 1. How are plans provided to a runtime?
-1. How does a runtime know how to execute plans?
+1. How does a runtime know how to perform plans?
 
 To answer the first question we introduce two new types into the system: `Plan` and `Transaction`.
 
