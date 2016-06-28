@@ -31,14 +31,14 @@ Pseudo-code example:
 Pseudo-code example:
 
     protocol Plan {
-      Class executorClass
+      var executorType
     }
 
 **Copyable**: Plans can be copied.
 
 Modifications made to the copy do not affect the original.
 
-This can be implemented in a variety of ways. We've included a few options we know of below:
+This can be implemented in a variety of ways. We've included a few options below:
 
 - Immutable types.
 - Value types.
