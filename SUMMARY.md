@@ -1,7 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Diagrams](guides.md)
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
        * [How to connect primitives](specifications/how_to_connect_primitives.md)
