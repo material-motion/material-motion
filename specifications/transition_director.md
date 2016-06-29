@@ -14,11 +14,12 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Concrete type**: A `TransitionDirector` is a concrete type that conforms to the `Director` protocol.
+**Concrete type**: A `TransitionDirector` is a concrete type that adheres to the informal Director APIs.
 
 Example pseudo-code:
 
-    TransitionDirector: Director {
+    TransitionDirector {
+      function setUp()
     }
 
 **Subclassing**: This class is designed to be subclassed.
