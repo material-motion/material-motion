@@ -1,8 +1,8 @@
-# MotionDirector specification
-
-This is the engineering specification for a director. "Director" does not have to be a formal type; or, put another way, `TransitionDirector` and `InteractionDirector` do not have to share a common sub-class or protocol.
+# Directors
 
 A director is an object created for the purposes of describing motion.
+
+This is the engineering specification for a director. "Director" does not have to be a formal type; or, put another way, `TransitionDirector` and `InteractionDirector` do not have to share a common sub-class or protocol.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative plans.
 
