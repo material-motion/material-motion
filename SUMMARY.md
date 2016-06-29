@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Diagrams](guides.md)
-   * [Tech tree](specifications/tech_tree.md)
    * [Reading spec diagrams](specifications/reading_spec_diagrams.md)
    * [Library structure](specifications/repository_structure.md)
 * [Engineering spec](specifications/README.md)
