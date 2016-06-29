@@ -22,6 +22,13 @@ The following chart is a [tech tree](https://en.wikipedia.org/wiki/Technology_tr
 
 We use [draw.io](https://www.draw.io/) to edit the tech tree. Drag the .svg file in to draw.io and begin editing. Export the resulting content as an svg.
 
+# Reading spec diagrams
+
+We use spec diagrams to provide visual representations of the work required to build a particular thing. The following chart is an example of one of these diagrams.
+
+We've annotated the important features.
+
+![](../_assets/ReadingTechTrees.svg)
 <!--
 
 LGTM:
