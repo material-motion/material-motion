@@ -11,7 +11,7 @@
        * [Performer](specifications/runtime/performer.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Scheduler](specifications/runtime/scheduler.md)
-   * [Director](specifications/directors.md)
+   * [Directors](specifications/directors.md)
    * [Creating replica elements](specifications/duplication.md)
        * [Replicator](specifications/replicator.md)
        * [ReplicatorController](specifications/replicator_controller.md)
