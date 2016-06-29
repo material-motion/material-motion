@@ -46,10 +46,8 @@ Directors may implement a `tearDown` function. This function is invoked when the
 
 Pseudo-code example:
 
-    protocol TearDownDirecting {
-      function tearDown() {
-        // Perform any cleanup work
-      }
+    function tearDown() {
+      // Perform any cleanup work
     }
 
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
@@ -64,9 +62,7 @@ Directors may wish to register new plans after `setUp` has been invoked.
 
 Example pseudo-code protocol:
 
-    protocol TransactionDirecting {
-      var transact // settable
-    }
+    var transact // settable
 
 The provided function implementation might resemble the following:
 
