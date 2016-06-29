@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Diagrams](guides.md)
-   * [Library structure](specifications/repository_structure.md)
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
        * [How to connect primitives](specifications/how_to_connect_primitives.md)
