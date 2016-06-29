@@ -1,8 +1,8 @@
 # Directors
 
-A director is an object created for the purposes of describing motion.
+A director is an object created for the purposes of describing motion. Its role is similar to that of the Controller in the Model-View-Controller pattern.
 
-This is the engineering specification for a director. "Director" does not have to be a formal type; or, put another way, `TransitionDirector` and `InteractionDirector` do not have to share a common sub-class or protocol.
+"Director" does not have to be a formal base type; or, put another way, the `TransitionDirector` and `InteractionDirector` that we explore here do not have to share a common sub-class or protocol.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative plans.
 
