@@ -16,11 +16,9 @@ Printable tech tree/checklist:
 
 **Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a transaction instance.
 
-Example pseudo-code protocol definition:
+Example pseudo-code definition:
 
-    protocol MotionDirector {
-      function setUp(transaction)
-    }
+    function setUp(transaction)
 
 Directors are expected to commit plans to `setUp`'s provided transaction .
 
