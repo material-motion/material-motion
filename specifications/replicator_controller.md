@@ -19,7 +19,7 @@ Example pseudo-code:
     ReplicatorController {
     }
 
-**Duplicator API**: Provide an API for setting a replicator instance.
+**Replicator API**: Provide an API for setting a replicator instance.
 
 The replicator instance performs the actual replication.
 
