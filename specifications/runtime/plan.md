@@ -31,7 +31,7 @@ Pseudo-code example:
 Pseudo-code example:
 
     protocol Plan {
-      var executorType
+      var performerType
     }
 
 **Copyable**: Plans can be copied.
