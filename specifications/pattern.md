@@ -67,9 +67,9 @@ Consider this pseudo-code:
 
 `target2` is expected to be draggable.
 
-### Fulfillment of a plan
+### Execution of a plan
 
-Exactly how a plan is fulfilled is less important than that it **is** executed by some other system.
+Exactly how a plan is executed is less important than that it **is** executed by some other system.
 
 For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
