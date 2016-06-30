@@ -30,7 +30,7 @@
    * [Applications](specifications/applications.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](specifications/expressions-addendum.md)
-* [Community](CONTRIBUTING.md)
+* [Community](community.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
    * [Editing policies](editing_policies.md)
