@@ -71,7 +71,7 @@ Consider this pseudo-code:
 
 Exactly how a plan is executed is less important than that it **is** executed by some other system.
 
-For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
+For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function executed.
 
 An ideal fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
 
