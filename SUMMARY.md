@@ -26,8 +26,8 @@
    * [Condition elements](specifications/transient_views.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
+   * [Applications](_drafts/applications.md)
    * [Serialization of plans](specifications/serialization.md)
-* [Applications](_drafts/applications.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
@@ -38,7 +38,6 @@
        * [Web](community_index/web.md)
 * [Glossary](GLOSSARY.md)
 * Drafts
-   * [Applications](_drafts/applications.md)
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](_drafts/expressions.md)
 
