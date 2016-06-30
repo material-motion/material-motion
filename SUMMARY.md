@@ -31,7 +31,7 @@
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](specifications/expressions-addendum.md)
 * [Community](community.md)
-   * Contributing
+   * [Contributing](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
    * [Editing policies](editing_policies.md)
