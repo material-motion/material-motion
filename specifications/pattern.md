@@ -1,6 +1,6 @@
-## Separation of plan/performance
+## Separation of plan/fulfillment
 
-This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **performance**.
+This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **fulfillment**.
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
@@ -8,7 +8,7 @@ This section defines a software design pattern. The pattern involves a [declarat
 
 Benefits of this separation:
 
-- It allows performance to occur in a separate, potentially non-blocking context.
+- It allows fulfillment to occur in a separate, potentially non-blocking context.
 - It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
@@ -63,7 +63,7 @@ Consider this pseudo-code:
     # Reusing a plan on a second target
     system.addPlan(draggable, toTarget: target2)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's performance.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's fulfillment.
 
 `target2` is expected to be draggable.
 
@@ -73,7 +73,7 @@ Exactly how a plan is performed is less important than that it **is** performed 
 
 For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
 
-Good systems of performance will carefully balance the needs of power consumption, event coordination, and user interaction.
+Good systems of fulfillment will carefully balance the needs of power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 
