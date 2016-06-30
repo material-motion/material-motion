@@ -75,15 +75,15 @@ For example, a plan of "fade in" could reasonably be fulfilled by a built-in ani
 
 An ideal fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
 
-## A Motion Runtime
-
-At the heart of everything we'll explore in this Starmap is what we call the Motion Runtime.
-
 ## Existing solutions and research
 
 - [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
 - [Core Animation](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)
 - [Web Animations](https://w3c.github.io/web-animations/)
+
+## A Motion Runtime
+
+This Starmap defines a system of fulfillment we'll call the "Motion Runtime".
 
 <!--
 
