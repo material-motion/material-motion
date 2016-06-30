@@ -1,6 +1,6 @@
 # Engineering spec
 
-This chapter defines engineering specifications and concepts. This chapter is a platform-independent grounds to discuss implementation details.
+This section of the book defines engineering specifications and concepts. These specifications are provided as a means to discuss implementation details across many platforms.
 
 The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
