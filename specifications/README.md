@@ -1,6 +1,6 @@
 # Engineering spec
 
-This section of the book defines engineering specifications and concepts. These specifications are provided as a means to discuss implementation details across many platforms.
+This section of the book defines engineering specifications and concepts.
 
 The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
 
