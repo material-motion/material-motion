@@ -44,7 +44,7 @@ Also consider this pseudo-code:
     }
     system.addPlan(behavior, toTarget: target)
 
-In this example, the logic of the `animate` function is the plan. The `animate` function is not performed here.
+In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here.
 
 > **Note:** Take care to author code that suits your platform. Plans that include functions may not be portable across thread/worker boundaries on some platforms.
 
