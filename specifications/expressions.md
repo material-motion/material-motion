@@ -10,7 +10,7 @@ A **motion expression** is functional, syntactic sugar for the creation and conf
 
 Motion expressions begin with a namespace.
 
-The purpose of a **namespace** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of families to exist where some families may have similar or identical term functions. A family should document what its term functions do.
+The purpose of a **namespace** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of namespaces to exist where some namespaces may have similar or identical term functions. A namespace should document what its term functions do.
 
 Pseudo-code example implementation of a tween family:
 
