@@ -67,11 +67,11 @@ Consider this pseudo-code:
 
 `target2` is expected to be draggable.
 
-### Execution of a plan
+### Fulfillment of a plan
 
-Exactly how a plan is executed is less important than that it **is** executed by some other system.
+In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system**.
 
-For example, a plan of "fade in" could reasonably be executed by a built-in animation system. The same plan could also be executed by a custom function executed.
+For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
 An ideal fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
 
