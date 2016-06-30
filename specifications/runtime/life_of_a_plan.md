@@ -2,7 +2,7 @@
 
 Let's walk through the life of a plan.
 
->Remember, any code you see here is pseudo-code.
+> Note: any code you see here is pseudo-code.
 
 ### Step 1: Create a scheduler
 
