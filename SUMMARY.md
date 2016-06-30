@@ -29,7 +29,7 @@
    * [Serialization of plans](specifications/serialization.md)
    * [Applications](specifications/applications.md)
    * [Motion Expression](specifications/expressions.md)
-       * [Further considerations](_drafts/expressions.md)
+       * [Further considerations](specifications/expressions-addendum.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
