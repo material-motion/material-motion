@@ -31,6 +31,7 @@
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](specifications/expressions-addendum.md)
 * [Community](community.md)
+   * Contributing
    * [Communication](communication.md)
    * [Governance](governance.md)
    * [Editing policies](editing_policies.md)
@@ -38,6 +39,5 @@
        * [Android](community_index/android.md)
        * [iOS](community_index/ios.md)
        * [Web](community_index/web.md)
-   * Contributing
 * [Glossary](GLOSSARY.md)
 
