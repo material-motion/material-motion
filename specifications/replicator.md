@@ -1,6 +1,6 @@
 # ReplicaControllerDelegate specification
 
-This is the engineering specification for the `Replicator` abstract type.
+This is the engineering specification for the `ReplicaControllerDelegate` abstract type.
 
 A instance of a `Replicator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
