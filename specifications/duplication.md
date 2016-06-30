@@ -12,11 +12,6 @@ The following often occurs after an element is replicated:
 - Once its purpose is served, the replicated element is thrown away.
 - The original element is unhidden.
 
-Replication makes use of two APIs:
-
-- [ElementReplicator](duplicator.md)
-- [ReplicationController](replication_controller.md)
-
 ## Considerations
 
 **Separation of concerns**: Replication is a helpful tool for separating concerns in an application.

@@ -1,14 +1,14 @@
-# MotionDirector specification
+# Directors
 
-This is the engineering specification for the `MotionDirector` abstract type, or director for short.
+A director is an object created for the purposes of describing motion. Its role is similar to that of the Controller in the Model-View-Controller pattern.
 
-A director is an object created for the purposes of describing motion.
+"Director" does not have to be a formal base type; or, put another way, the `TransitionDirector` and `InteractionDirector` that we explore here do not have to share a common sub-class or protocol.
 
 Directors have little — if any — imperative code. Directors prefer to describe motion in terms of declarative plans.
 
 Printable tech tree/checklist:
 
-![](../_assets/MotionDirectorTechTree.svg)
+![](../_assets/DirectorTechTree.svg)
 
 ---
 
@@ -16,11 +16,9 @@ Printable tech tree/checklist:
 
 **Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a transaction instance.
 
-Example pseudo-code protocol definition:
+Example pseudo-code definition:
 
-    protocol MotionDirector {
-      function setUp(transaction)
-    }
+    function setUp(transaction)
 
 Directors are expected to commit plans to `setUp`'s provided transaction .
 
@@ -48,10 +46,8 @@ Directors may implement a `tearDown` function. This function is invoked when the
 
 Pseudo-code example:
 
-    protocol TearDownDirecting {
-      function tearDown() {
-        // Perform any cleanup work
-      }
+    function tearDown() {
+      // Perform any cleanup work
     }
 
 <p style="text-align:center"><tt>/feature: tear-down</tt></p>
@@ -66,9 +62,7 @@ Directors may wish to register new plans after `setUp` has been invoked.
 
 Example pseudo-code protocol:
 
-    protocol TransactionDirecting {
-      var transact // settable
-    }
+    var transact // settable
 
 The provided function implementation might resemble the following:
 

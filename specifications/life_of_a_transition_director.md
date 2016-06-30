@@ -11,7 +11,7 @@ This object will provide transition-specific plans.
     FadeTransitionDirector: TransitionDirector {
     }
 
-### Step 2: Implement the Director setUp method
+### Step 2: Implement the director's setUp method
 
 Our `setUp` will use a simple tween plan:
 
