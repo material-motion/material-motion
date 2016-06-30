@@ -20,7 +20,7 @@ Similarly, a timeline could be used to emit gesture events that simulate user in
 
 #### Applied forces and states
 
-Applied forcess can be associated with individual states of a state machine.
+Applied forces can be associated with individual states of a state machine.
 
 > For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
 
