@@ -1,7 +1,6 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-
 # Debugging
 
 TODO: Discuss debugging tools.
