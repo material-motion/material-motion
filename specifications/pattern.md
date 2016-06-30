@@ -73,7 +73,7 @@ Exactly how a plan is fulfilled is less important than that it **is** executed b
 
 For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
-Good systems of fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
+An ideal fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 
