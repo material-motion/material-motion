@@ -68,7 +68,7 @@ After committing the above transaction, the scheduler's internal state might res
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
 
-The scheduler is now expected to perform the committed plans.
+The scheduler is now expected to fulfill the committed plans.
 
 ### Step 4: Scheduler creates performers
 
