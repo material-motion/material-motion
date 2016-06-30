@@ -1,4 +1,4 @@
-## Separation of plan/fulfillment
+## Declarative motion
 
 This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **fulfillment**.
 
