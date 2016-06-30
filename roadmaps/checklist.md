@@ -23,15 +23,15 @@ E.g. CoreAnimation().fadeIn()
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
-| Android  | Not started | Unknown |
+| Android  | [Experimental work](https://github.com/material-motion/material-motion-expression-tween-android) | Unknown |
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
-## Odeon Runtime
+## Material Motion Runtime
 
-An implementation of the [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/runtimes.html) concept applying the Odeon metaphor of Director/Intention/Actor. The Runtime can be built in stages.
+An implementation of the [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/) concept. The Runtime can be built in stages.
 
-[Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime.html).
+[Engineering specification](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/).
 
 ### Minimum-viable runtime
 
@@ -39,29 +39,29 @@ Transactions for registering Intentions.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
-| Android  | Not started | Unknown |
+| Android  | Experimental work | Unknown |
 | iOS      | [Experimental work](https://github.com/material-motion/material-motion-experiments-objc/tree/develop/runtime/RuntimeCatalog/RuntimeCatalog) | Unknown |
 | Web      | Not started | Unknown |
 
-Actor creation and storage mechanisms.
+Performer creation and storage mechanisms.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
-| Android  | Not started | Unknown |
+| Android  | Experimental work | Unknown |
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
-Support for Actors driven by external systems. E.g. Core Animation on iOS.
+Support for Delegated Performers driven by external systems. E.g. Core Animation on iOS.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
-| Android  | Not started | Unknown |
+| Android  | Experimental work | Unknown |
 | iOS      | Not started | Unknown |
 | Web      | Not started | Unknown |
 
 ### Runtime with custom animations
 
-Actor animation pump event forwarding. Enables custom Intentions like Squishable.
+Performer animation pump event forwarding. Enables custom Intentions like Squishable.
 
 | Platform | Implementation | Estimated # eng days |
 |:--------:|:--------------:|:--------------------:|
