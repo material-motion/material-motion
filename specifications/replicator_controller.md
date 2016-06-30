@@ -28,7 +28,7 @@ The replicator instance performs the actual replication.
 Example pseudo-code:
 
     ReplicatorController {
-      var replicator: Duplicator
+      var replicator: Replicator
     }
 
 **Disable replication API**: Provide an API for disabling replication of specific elements.
