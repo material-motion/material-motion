@@ -4,7 +4,7 @@
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
        * [How to connect primitives](specifications/how_to_connect_primitives.md)
-   * [Separation of plan/performance](specifications/pattern.md)
+   * [Separation of plan/fulfillment](specifications/pattern.md)
    * [Motion Runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
