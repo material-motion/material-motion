@@ -27,6 +27,8 @@
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
    * [Serialization of plans](specifications/serialization.md)
+   * [Motion Expression](specifications/expressions.md)
+       * [Further considerations](_drafts/expressions.md)
    * [Applications](_drafts/applications.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
@@ -38,6 +40,4 @@
        * [Web](community_index/web.md)
 * [Glossary](GLOSSARY.md)
 * Drafts
-   * [Motion Expression](specifications/expressions.md)
-       * [Further considerations](_drafts/expressions.md)
 
