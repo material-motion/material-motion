@@ -1,4 +1,4 @@
-# Replicator specification
+# ReplicaControllerDelegate specification
 
 This is the engineering specification for the `Replicator` abstract type.
 
