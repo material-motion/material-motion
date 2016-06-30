@@ -52,7 +52,7 @@ The implementation of this API first consults the list of disabled elements. If 
 Example pseudo-code:
 
     ReplicatorController {
-      function replicate(Element element) -> Element or null {
+      function createReplica(Element element) -> Element or null {
         if disabledElements.contains(element) {
           return null
         }
