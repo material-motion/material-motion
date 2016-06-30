@@ -1,10 +1,10 @@
 ## Declarative motion
 
-This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **fulfillment**.
+This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their ultimate **execution**.
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
-**Fulfillment**: the achievement of something desired.
+**Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
 Benefits of this separation:
 
