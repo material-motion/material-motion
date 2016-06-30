@@ -27,6 +27,7 @@
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
    * [Serialization of plans](specifications/serialization.md)
+* [Applications](_drafts/applications.md)
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
