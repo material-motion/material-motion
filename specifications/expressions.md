@@ -4,7 +4,7 @@ Status of this document: **Experimental**
 
 A **motion expression** is functional, syntactic sugar for the creation and configuration of plans.
 
-## 1. Families
+## 1. Expression namespace
 
     expression = Tween()
 
