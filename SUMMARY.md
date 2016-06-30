@@ -21,7 +21,7 @@
            * [Interaction Director](specifications/interaction_director.md)
            * [Interaction Controller](specifications/interaction_controller.md)
    * [Creating replica elements](specifications/duplication.md)
-       * [Replicator](specifications/replicator.md)
+       * [ReplicaControllerDelegate](specifications/replicator.md)
        * [ReplicaController](specifications/replicator_controller.md)
    * [Condition elements](specifications/transient_views.md)
    * [Debugging](specifications/debugging.md)
