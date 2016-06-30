@@ -100,9 +100,9 @@ The scheduler now creates performers by calling our hypothetical `performerForPl
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
-You might now be wondering: "Why is there only one gesture performer for the squareView?"
-
-A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
+> Why is there only one gesture performer for the squareView?
+>
+> A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
 ### Step 5: Provide plans to performers
 
