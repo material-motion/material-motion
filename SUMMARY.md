@@ -26,6 +26,7 @@
    * [Condition elements](specifications/transient_views.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
+   * Serialization of plans
 * [Community](CONTRIBUTING.md)
    * [Communication](communication.md)
    * [Governance](governance.md)
