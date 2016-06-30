@@ -22,7 +22,7 @@
            * [Interaction Controller](specifications/interaction_controller.md)
    * [Creating replica elements](specifications/duplication.md)
        * [Replicator](specifications/replicator.md)
-       * [ReplicataController](specifications/replicator_controller.md)
+       * [ReplicaController](specifications/replicator_controller.md)
    * [Condition elements](specifications/transient_views.md)
    * [Debugging](specifications/debugging.md)
    * [Server](specifications/server.md)
