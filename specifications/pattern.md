@@ -67,11 +67,11 @@ Consider this pseudo-code:
 
 `target2` is expected to be draggable.
 
-### Performance of a plan
+### Fulfillment of a plan
 
-Exactly how a plan is performed is less important than that it **is** performed by some other system.
+Exactly how a plan is fulfilled is less important than that it **is** executed by some other system.
 
-For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
+For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
 Good systems of fulfillment will carefully balance the needs of power consumption, event coordination, and user interaction.
 
