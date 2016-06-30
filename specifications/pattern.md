@@ -4,7 +4,7 @@ This section defines a software design pattern. The pattern involves a [declarat
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
-**Fulfillment**: the carrying out or accomplishing a plan.
+**Fulfillment**: the achievement of something desired.
 
 Benefits of this separation:
 
