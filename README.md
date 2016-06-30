@@ -1,13 +1,13 @@
 <p class="github-only">This book is best-formatted on GitBook. <a href="https://material-motion.gitbooks.io/material-motion-starmap/content/">Read it there</a>.</p>
-# 🌟 Interactive Motion Starmap 🗺
+# 🌟 Material Motion Starmap 🗺
 
-This book aspires to empower creators with the language and tools needed to describe and implement rich, interactive motion. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more.
+This document describes a system that will empower creators with the language and tools needed to describe and implement rich, interactive motion on any platform. Within, we explore [essential primitives](primitives.md), [software design patterns](plan-execution-pattern.md), [motion runtimes](concepts/runtimes.md), and more. Initially, we will be supporting Android, iOS, and the web, with variants and styles appropriate to each platform.
 
-This book is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
+This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
 
-## Evolution and contribution
+The engineering specifications are intended to provide a foundational set of ideas for building to Android, iOS, and the web. While these are the platforms we're presently focused on, we're open and supportive of the creation of solutions on other platforms.
 
-This book is in a very early drafting phase. It will evolve over time.
+**This book is in a very early drafting phase. It will evolve over time.**
 
 Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
