@@ -1,13 +1,27 @@
 # Communication
 
-We hang out on Discord. Visit https://discord.gg/AJbyYDf to join the server.
-
-All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
-
-For long-form discussion, please use the mailing list: [material-motion@googlegroups.com](https://groups.google.com/forum/#!forum/material-motion)
+## Announcements
 
 To receive announcements by email, subscribe to our announcement mailing list: [material-motion-announce@googlegroups.com](https://groups.google.com/forum/#!forum/material-motion-announce)
 
+## Roadmap planning + general discussion
+
+We hang out on Discord. Visit https://discord.gg/AJbyYDf to join the server.
+
+Our team is distributed, so we use Discord to plan our roadmaps and for daily standups.
+
+## Code
+
+All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
+
+## Long-form discussions
+
+For long-form discussion, please use the mailing list: [material-motion@googlegroups.com](https://groups.google.com/forum/#!forum/material-motion)
+
+## Code of conduct concerns
+
 Code of conduct concerns (emails visible only to core contributors): material-motion-coc@googlegroups.com
+
+## Twitter
 
 Our twitter handle: [@material_motion](http://twitter.com/material_motion)
