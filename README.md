@@ -5,7 +5,7 @@ This document describes a system that will empower creators with the language an
 
 This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages.
 
-**This book is in a very early drafting phase. It will evolve over time. Beware of construction. ![](../_assets/under-construction-flashing-barracade-animation.gif)**
+**This book is in a very early drafting phase. It will evolve over time. Beware of construction. ![](_assets/under-construction-flashing-barracade-animation.gif)**
 
 Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to this book. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
