@@ -1,7 +1,13 @@
 # Communication
 
-- When to post discussions on GitBook.
-- When to escalate to an email thread or Discord.
-- When to escalate to an in-person video chat.
-- What is our Stack Overflow tag? #material-motion
+We hang out on Discord. The channel is presently private. Visit https://discord.gg/AJbyYDf to join the server. A member of the core team will need to approve your account.
 
+All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
+
+Mailing list: material-motion@googlegroups.com
+
+Announcement mailing list: material-motion-announce@googlegroups.com
+
+Code of conduct concerns (emails visible only to core contributors): material-motion-coc@googlegroups.com
+
+Twitter: [@material_motion](http://twitter.com/material_motion)
