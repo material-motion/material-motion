@@ -26,6 +26,55 @@ err() { echo "$@" >&2; }
 command=${1:-help}
 shift || true # `|| true` ensures that -e doesn't kill our script when there aren't any args
 
+#
+# Detect profile file if not specified as environment variable
+# (eg: PROFILE=~/.myprofile)
+# The echo'ed path is guaranteed to be an existing file
+# Otherwise, an empty string is returned
+#
+# Originally ported from nvm_detect_profile on July 1, 2016
+# https://github.com/creationix/nvm/blob/master/install.sh
+# The MIT License (MIT)
+# Copyright (c) 2010-2016 Tim Caswell
+#
+detect_profile() {
+  if [ -n "$PROFILE" -a -f "$PROFILE" ]; then
+    echo "$PROFILE"
+    return
+  fi
+
+  local DETECTED_PROFILE
+  DETECTED_PROFILE=''
+  local SHELLTYPE
+  SHELLTYPE="$(basename "/$SHELL")"
+
+  if [ "$SHELLTYPE" = "bash" ]; then
+    if [ -f "$HOME/.bashrc" ]; then
+      DETECTED_PROFILE="$HOME/.bashrc"
+    elif [ -f "$HOME/.bash_profile" ]; then
+      DETECTED_PROFILE="$HOME/.bash_profile"
+    fi
+  elif [ "$SHELLTYPE" = "zsh" ]; then
+    DETECTED_PROFILE="$HOME/.zshrc"
+  fi
+
+  if [ -z "$DETECTED_PROFILE" ]; then
+    if [ -f "$HOME/.profile" ]; then
+      DETECTED_PROFILE="$HOME/.profile"
+    elif [ -f "$HOME/.bashrc" ]; then
+      DETECTED_PROFILE="$HOME/.bashrc"
+    elif [ -f "$HOME/.bash_profile" ]; then
+      DETECTED_PROFILE="$HOME/.bash_profile"
+    elif [ -f "$HOME/.zshrc" ]; then
+      DETECTED_PROFILE="$HOME/.zshrc"
+    fi
+  fi
+
+  if [ ! -z "$DETECTED_PROFILE" ]; then
+    echo "$DETECTED_PROFILE"
+  fi
+}
+
 cmdpath="$COMMAND_DIR/$command/$command"
 if [[ -L "$cmdpath" || -f "$cmdpath" ]]; then
   . "$cmdpath"
