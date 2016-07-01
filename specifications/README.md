@@ -42,11 +42,3 @@ This diagram does not include:
 - Specific Director implementations. E.g. PhotoDirector, FadeDirector, SlideUpDirector.
 
 ![](../_assets/RepoStructure.svg)
-
-<!--
-
-LGTM:
-- featherless
-- larche
-
--->
