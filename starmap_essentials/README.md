@@ -12,7 +12,7 @@ The Starmap represents our long-term plans as a team. Contributions made to the 
 
 ## Proposing new concepts
 
-This book covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
+The Starmap covers opinionated topics related to the creation of interactive software interfaces. The Starmap is not an exhaustive list of topics and ideas for motion and interaction in general.
 
 If you feel that the Starmap is missing a concept please follow our patch acceptance process.
 
