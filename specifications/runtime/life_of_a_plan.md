@@ -2,11 +2,11 @@
 
 Let's walk through the life of a plan.
 
->Remember, any code you see here is pseudo-code.
+> Note: any code you see here is pseudo-code.
 
 ### Step 1: Create a scheduler
 
-Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one.
+Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one. We will make use of this object later.
 
     scheduler = Scheduler()
 
@@ -68,11 +68,11 @@ After committing the above transaction, the scheduler's internal state might res
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
 
-The scheduler is now expected to perform the committed plans.
+The scheduler is now expected to fulfill the committed plans.
 
 ### Step 4: Scheduler creates performers
 
-The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its performance.
+The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its fulfillment.
 
 We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
@@ -100,9 +100,9 @@ The scheduler now creates performers by calling our hypothetical `performerForPl
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
-You might now be wondering: "Why is there only one gesture performer for the squareView?"
-
-A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
+> Why is there only one gesture performer for the squareView?
+>
+> A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
 ### Step 5: Provide plans to performers
 

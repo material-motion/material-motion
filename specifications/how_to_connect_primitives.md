@@ -1,10 +1,10 @@
 ## How to connect primitives
 
-We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a Timeline that is driving a collection of tweens.
+We use "**to drive**" to refer to the idea of *an output from one primitive being fed into the input of another*. This enables the expression of novel interactions such as a gesture driving a timeline that is driving a collection of tweens.
 
 #### Primitives that can drive timelines
 
-A timeline's **progress** can be driven by the following delta primitives if they have been mapped to a domain of `[0...1]`:
+A timeline's **progress** can be driven by the following primitives if they have been mapped to a domain of `[0...1]`:
 
 - **Time** can move `progress` forward or backward.
 - **Gestures** can scrub `progress` directly.
@@ -20,7 +20,7 @@ Similarly, a timeline could be used to emit gesture events that simulate user in
 
 #### Applied forces and states
 
-Applied forcess can be associated with individual states of a State Machine.
+Applied forces can be associated with individual states of a state machine.
 
 > For example, a photo element might have two states: collapsed and expanded. A spring could be used to transition between them by changing the dimensions and position of the photo to match the correct state.
 

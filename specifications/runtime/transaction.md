@@ -112,6 +112,8 @@ Example pseudo-code:
 
 **JSON serialization**: A serialized transaction is represented in JSON.
 
+Further reading: [Serialization](../serialization.md)
+
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
 
 ---

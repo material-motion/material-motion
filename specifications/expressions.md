@@ -4,15 +4,15 @@ Status of this document: **Experimental**
 
 A **motion expression** is functional, syntactic sugar for the creation and configuration of plans.
 
-## 1. Families
+## 1. Expression namespace
 
     expression = Tween()
 
-Motion expressions begin with a family. The user creates an instance of a family to start a motion expression. A family does not intrinsically define any plans.
+Motion expressions begin with a namespace.
 
-The purpose of a **family** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of families to exist where some families may have similar or identical term functions. A family should document what its term functions do.
+The purpose of a **namespace** is to define a lexical scope for a particular set of term functions. This allows an ecosystem of namespaces to exist where some namespaces may have similar or identical term functions. A namespace should document what its term functions do.
 
-Pseudo-code example implementation of a tween family:
+Pseudo-code example implementation of a tween namespace:
 
     Tween: Family {
       fn fadeIn(...) -> Term

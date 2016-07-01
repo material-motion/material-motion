@@ -1,6 +1,6 @@
-# Replicator specification
+# ReplicaControllerDelegate specification
 
-This is the engineering specification for the `Replicator` abstract type.
+This is the engineering specification for the `ReplicaControllerDelegate` abstract type.
 
 A instance of a `Replicator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
@@ -26,7 +26,7 @@ This API should accept an element and return an element.
 Example pseudo-code:
 
     protocol Replicator {
-      function replicate(Element element) -> Element
+      function createReplica(Element element) -> Element
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>

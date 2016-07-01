@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `Plan` abstract type.
 
-A plan is an object representing **what you want something to do** or **how you want it to behave**.  As its name suggests, a plan is part of an implementation of the [plan/performance pattern](../pattern.md).
+A plan is an object representing **what you want something to do** or **how you want it to behave**.
 
 Example plan objects:
 
@@ -31,7 +31,7 @@ Pseudo-code example:
 Pseudo-code example:
 
     protocol Plan {
-      var executorType
+      var performerType
     }
 
 **Copyable**: Plans can be copied.
@@ -65,5 +65,7 @@ Example pseudo-code:
     plan = Plan(json)
 
 **JSON serialization**: A serialized plan is represented in JSON.
+
+Further reading: [Serialization](../serialization.md)
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>

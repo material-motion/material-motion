@@ -1,14 +1,14 @@
-## Separation of plan/performance
+## Declarative motion
 
-This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their **performance**.
+This section defines a software design pattern. The pattern involves a [declarative separation](https://en.wikipedia.org/wiki/Declarative_programming) between **plans** and their ultimate **execution**.
 
 **Plan**: a detailed proposal for what you want something to do or how you want it to behave.
 
-**Perform**: the action of carrying out or accomplishing a plan.
+**Execution**: the carrying out or putting into effect of a plan, order, or course of action.
 
 Benefits of this separation:
 
-- It allows performance to occur in a separate, potentially non-blocking context.
+- It allows execution to occur in a separate, potentially non-blocking context.
 - It enables design tooling and bespoke applications to communicate in a language that isn't code.
 
 ## Examples of this separation
@@ -32,9 +32,9 @@ Consider the following pseudo-code:
     }
     system.addPlan(fadeIn, toTarget: target)
 
-Here, the object `fadeIn` is the plan. The "fade in" logic **is not performed here**.
+Here, the object `fadeIn` is the plan. The "fade in" logic **is not fulfilled here**.
 
-`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually performed.
+`addPlan` has registered the plan to a system. It does not matter which system, so long as the plan is eventually fulfilled.
 
 Also consider this pseudo-code:
 
@@ -44,7 +44,7 @@ Also consider this pseudo-code:
     }
     system.addPlan(behavior, toTarget: target)
 
-In this example, the logic of the `animate` function is the plan. The `animate` function is not performed here.
+In this example, the logic of the `animate` function is the plan. The `animate` function is not executed here.
 
 > **Note:** Take care to author code that suits your platform. Plans that include functions may not be portable across thread/worker boundaries on some platforms.
 
@@ -63,23 +63,27 @@ Consider this pseudo-code:
     # Reusing a plan on a second target
     system.addPlan(draggable, toTarget: target2)
 
-`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's performance.
+`target` is now expected to be directly manipulable. The target is also expected to spring back to the given `{ x, y }` coordinate. Whether this happens on release or at all times is an implementation detail of the plan's fulfillment.
 
 `target2` is expected to be draggable.
 
-### Performance of a plan
+### Fulfillment of a plan
 
-Exactly how a plan is performed is less important than that it **is** performed by some other system.
+In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system**.
 
-For example, a plan of "fade in" could reasonably be performed by a built-in animation system. The same plan could also be performed by a custom function.
+For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
-Good systems of performance will carefully balance the needs of power consumption, event coordination, and user interaction.
+An ideal fulfillment will carefully balance the considerations of power consumption, event coordination, and user interaction.
 
 ## Existing solutions and research
 
 - [Functional Reactive Animation](http://haskell.cs.yale.edu/wp-content/uploads/2011/02/icfp97.pdf)
 - [Core Animation](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CoreAnimation_guide/CoreAnimationBasics/CoreAnimationBasics.html)
 - [Web Animations](https://w3c.github.io/web-animations/)
+
+## A Motion Runtime
+
+This Starmap defines a novel system of fulfillment we'll call the "Motion Runtime".
 
 <!--
 
