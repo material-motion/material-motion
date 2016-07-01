@@ -8,7 +8,9 @@
 
 Add the bin scripts to your path:
 
-    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH" >> ~/.bash_profile
+    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
+
+Add the output of the above command to your bash profile (example: `~/.bash_profile`).
 
 See available commands by running:
 
@@ -21,7 +23,6 @@ directory next to the mdm repo containing two files: your command's script and a
 
     mdm/
       bin/
-        builtin/
         mdm
     yourcommand/
       yourcommand

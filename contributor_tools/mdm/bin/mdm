@@ -29,9 +29,7 @@ shift || true # `|| true` ensures that -e doesn't kill our script when there are
 
 builtinpath="$BUILTIN_DIR/$command/$command"
 cmdpath="$COMMAND_DIR/$command/$command"
-if [[ -L "$builtinpath" || -f "$builtinpath" ]]; then
-  . "$builtinpath"
-elif [[ -L "$cmdpath" || -f "$cmdpath" ]]; then
+if [[ -L "$cmdpath" || -f "$cmdpath" ]]; then
   . "$cmdpath"
 else
   this=$(basename "${BASH_SOURCE[0]}")

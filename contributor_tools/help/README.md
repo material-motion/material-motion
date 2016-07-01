@@ -1,11 +1,11 @@
-Usage: `oss help`
+Usage: `mdm help`
 
     List available commands.
 
-Usage: `oss help <command>`
+Usage: `mdm help <command>`
 
     The command's adjacent .md is written to the console.
 
-Usage: `oss help <command> --edit`
+Usage: `mdm help <command> --edit`
 
     The command's .md file is opened in $EDITOR.
