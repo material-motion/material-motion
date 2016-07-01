@@ -12,7 +12,11 @@ Our team is distributed, so we use Discord to plan our roadmaps and for daily st
 
 ## Code
 
-All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
+All of our code lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
+
+## Issue tracking
+
+All of our issues live in GitHub. We use [this dashboard](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+user%3Amaterial-motion+) to view issues across all of our projects.
 
 ## Long-form discussions
 
