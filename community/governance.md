@@ -14,7 +14,27 @@ We use the following rules for accepting contributions.
 > 
 > Contributions made by corporations are covered by a different agreement than the one above, the [Software Grant and Corporate Contributor License Agreement](https://cla.developers.google.com/about/google-corporate).
 
-## Core contributors
+## Roles
+
+We use GitHub teams to define specific roles for the material-motion organization.
+
+    core-team
+    - Admin access to all repos
+    - Push rights for stable branches restricted to core-team
+
+    <platform>-regular-contributors
+    - Write access to all <platform> repos
+    - Push rights for develop branches restricted to relevant -regular-contributors teams
+
+    <platform>-casual-contributors
+    - Write access to all <platform> repos
+    - No push rights to develop, but able to make branches, triage issues, etc...
+
+    everyone else
+    - No write access to any repo, must fork.
+    - Able to file issues, but not label them.
+
+### Core contributors
 
 Each core contributor has a specific focus area.
 
