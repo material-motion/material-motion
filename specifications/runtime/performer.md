@@ -107,7 +107,7 @@ Example pseudo-code:
       .Idle
     }
     
-    protocol ManualExecution {
+    protocol ManuallyExecutingPerformer {
       function update(millisecondsSinceLastUpdate) -> ActivityState
     }
 
