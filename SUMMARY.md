@@ -34,7 +34,6 @@
            * [Further considerations](specifications/expressions-addendum.md)
 * Community
    * [Contributing](CONTRIBUTING.md)
-   * [Communication](communication.md)
    * [Governance](governance.md)
    * [Editing policies](editing_policies.md)
    * [Community index](community_index/README.md)
