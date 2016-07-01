@@ -1,0 +1,2 @@
+# Starmap contributor essentials
+
