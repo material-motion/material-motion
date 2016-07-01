@@ -1,3 +1,3 @@
-# Regular contributors
+# Frequent contributors
 
-Essential information for **regular** contributors. [What's a regular contributor?](../../community/governance.md)
+Essential information for **frequent** contributors. [What's a frequent contributor?](../../community/governance.md)
