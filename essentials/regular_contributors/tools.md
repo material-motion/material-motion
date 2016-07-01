@@ -1,5 +1,9 @@
 ## Tools
 
+As a regular contributor you may work with a variety of tools.
+
+Here's a list of tools we currently use as a team:
+
 - [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
 - GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
 - git for all version tracking
