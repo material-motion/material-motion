@@ -160,7 +160,7 @@ Example pseudo-code:
 
 **Remove-then-add**: Two things must happen when a named plan is committed:
 
-1. Remove any previously-committed plan with the same name from the target's performers. 
+1. Remove any previously committed plan with the same name from the target's performers. 
 
    _Note:_ This may be on a different performer instance.  In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
 2. Provide the relevant performer with the new named plan.
