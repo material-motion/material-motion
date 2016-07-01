@@ -1,5 +1,3 @@
 # Roadmaps
 
-Roadmaps are how our team plans out work.
-
-We've split our roadmaps up by specific platforms and languages. This allows us to prioritize work for a given platform/language.
+We post and discuss our roadmaps, weekly plans, and daily standups in Discord. Read our [Communication](https://material-motion.gitbooks.io/material-motion-team/content/communication.html) article for a link to the channel.
