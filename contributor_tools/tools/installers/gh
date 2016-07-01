@@ -16,8 +16,13 @@
 
 # Install gh - github CLI tool.
 
-gh --version >/dev/null 2>&1
-if [[ $? -ne 0 ]]; then
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
+
+version=$(gh --version 2> /dev/null)
+if [[ $? -ne 0 || "$version" != *-mdm ]]; then
   echo "Requesting sudo to install gh..."
-  sudo npm install -g gh
+  cd $ROOT_DIR/third_party/gh
+  sudo npm link
 fi
