@@ -22,5 +22,3 @@ Community implementations:
 
 - [Rebound](https://github.com/facebook/rebound)
 
-## [Expressions](../concepts/expressions.md)
-
