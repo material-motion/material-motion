@@ -1,6 +1,6 @@
 # Communication
 
-We hang out on Discord. The channel is presently private. Visit https://discord.gg/AJbyYDf to join the server. A member of the core team will need to approve your account.
+We hang out on Discord. Visit https://discord.gg/AJbyYDf to join the server.
 
 All of our work lives in the [material-motion](https://github.com/material-motion) organization on GitHub.
 
