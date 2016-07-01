@@ -17,11 +17,30 @@
 cmd=$(basename "${BASH_SOURCE[0]}" | rev | cut -d'.' -f2- | rev)
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+run_installer() {
+  echo "Running installer: $1"
+  "$dir/installers/$1"
+}
+
 install() {
-  for file in $dir/installers/*; do
-    echo "Running installer: $( basename "$file" )..."
-    . $file
-  done
+  # Yeoman tools
+  run_installer yo
+  run_installer generators
+
+  # npm-based installers
+  run_installer gh
+  
+  # PIP-based installers
+  run_installer pip
+  run_installer proselint
+
+  if [ "$(uname)" == "Darwin" ]; then
+    echo "Installing mac-specific tools..."
+    
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    echo "Installing linux-specific tools..."
+    
+  fi
 }
 
 list() {

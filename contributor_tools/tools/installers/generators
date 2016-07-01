@@ -18,7 +18,7 @@
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-"$dir/yo"
+readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
 
 for file in $ROOT_DIR/generators/*; do
   name=$( basename "$file" | sed "s/generator-//" )
