@@ -2,7 +2,7 @@
 
 ## Primitives
 
-### [Tweens](../concepts/primitives.html#tweens)
+### [Tweens](../specifications/primitives.md#tweens)
 
 Standard CSS:
 
@@ -13,18 +13,15 @@ Standard JavaScript:
 
 - [element.animate](https://github.com/web-animations/web-animations-js/)
 
-### [Gesture recognition](../concepts/primitives.html#gesture-recognition)
+### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
 Community implementations:
 
 - [hammer.js](http://hammerjs.github.io/)
 
-### [Physical simulation](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/primitives.html#physical-simulation)
+### [Applied forces](../specifications/primitives.md#applied-forces)
 
 Community implementations:
 
 - [Rebound.js](https://github.com/facebook/rebound-js/) (JavaScript)
 - [React Motion](https://github.com/chenglou/react-motion/) (React)
-
-## [Expressions](../concepts/expressions.md)
-
