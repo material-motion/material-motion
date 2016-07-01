@@ -24,7 +24,7 @@ For long-form discussion, please use the mailing list: [material-motion@googlegr
 
 ## Code of conduct concerns
 
-Code of conduct concerns (emails visible only to core contributors): material-motion-coc@googlegroups.com
+Code of conduct concerns (emails visible only to core team): material-motion-coc@googlegroups.com
 
 ## Twitter
 
