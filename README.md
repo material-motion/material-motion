@@ -11,7 +11,7 @@ Please read the chapter on [Starmap contributor essentials](https://material-mot
 
 ## Who should read this?
 
-This book is written for software engineers. We assume that you have some familiarity with animation systems.
+The Starmap is written for software engineers. We assume that you have some familiarity with animation systems.
 
 ## Announcements
 
