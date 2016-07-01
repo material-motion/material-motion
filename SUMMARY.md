@@ -28,7 +28,7 @@
        * [Debugging](specifications/debugging.md)
        * [Server](specifications/server.md)
        * [Serialization of plans](specifications/serialization.md)
-       * REPL
+       * [REPL](specifications/repl.md)
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
