@@ -1,6 +1,6 @@
 # Casual contributors
 
-Essential information for **casual** contributors. [What's a casual contributor?](community/governance.md)
+Essential information for **casual** contributors. [What's a casual contributor?](../community/governance.md)
 
 ## Code review
 
