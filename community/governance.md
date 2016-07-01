@@ -27,7 +27,7 @@ We use GitHub teams to define specific roles for the material-motion organizatio
 - Can label issues.
 - All rights below.
 
-everyone else
+`everyone else`
 
 - Read access to any repo.
 - Fork a repo to suggest changes via Pull Request.
