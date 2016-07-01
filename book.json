@@ -1,7 +1,8 @@
 {
     "plugins": [
         "edit-link",
-        "emphasize"
+        "emphasize",
+        "ga"
     ],
     "pluginsConfig": {
         "edit-link": {
