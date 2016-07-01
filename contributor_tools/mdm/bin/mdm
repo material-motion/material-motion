@@ -21,13 +21,11 @@ readonly N=$(tput sgr0)
 readonly RUNNER_CMD=$( basename "${BASH_SOURCE[0]}" )
 readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
 readonly COMMAND_DIR=$( cd "$dir/../.." && pwd )
-readonly BUILTIN_DIR=$( cd "$dir/../builtin" && pwd )
 err() { echo "$@" >&2; }
 
 command=${1:-help}
 shift || true # `|| true` ensures that -e doesn't kill our script when there aren't any args
 
-builtinpath="$BUILTIN_DIR/$command/$command"
 cmdpath="$COMMAND_DIR/$command/$command"
 if [[ -L "$cmdpath" || -f "$cmdpath" ]]; then
   . "$cmdpath"
