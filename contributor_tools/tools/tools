@@ -23,23 +23,26 @@ run_installer() {
 }
 
 install() {
+  # nodejs
+  run_installer nodejs
+
   # Yeoman tools
   run_installer yo
   run_installer generators
 
   # npm-based installers
   run_installer gh
-  
+
   # PIP-based installers
   run_installer pip
   run_installer proselint
 
   if [ "$(uname)" == "Darwin" ]; then
     echo "Installing mac-specific tools..."
-    
+
   elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Installing linux-specific tools..."
-    
+
   fi
 }
 
