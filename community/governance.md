@@ -18,21 +18,29 @@ We use the following rules for accepting contributions.
 
 We use GitHub teams to define specific roles for the material-motion organization.
 
-    core-team
-    - Admin access to all repos
-    - Push rights for stable branches restricted to core-team
+![](../_assets/Contributors.svg)
 
-    <platform>-regular-contributors
-    - Write access to all <platform> repos
-    - Push rights for develop branches restricted to relevant -regular-contributors teams
+`core-team`
 
-    <platform>-casual-contributors
-    - Write access to all <platform> repos
-    - No push rights to develop, but able to make branches, triage issues, etc...
+- Admin access to all material-motion repos.
+- Push rights for `stable`.
 
-    everyone else
-    - No write access to any repo, must fork.
-    - Able to file issues, but not label them.
+`<platform>-regular-contributors`: [View all regular contributor teams](https://github.com/orgs/material-motion/teams?utf8=%E2%9C%93&query=regular%20contributors)
+
+- Write access to all <platform> repos.
+- Push rights for `develop`.
+
+`<platform>-casual-contributors`
+
+- Write access to all <platform> repos.
+- Can push new branches.
+- Can label issues.
+
+`everyone else`
+
+- Read access to any repo.
+- Fork a repo to suggest changes via Pull Request.
+- Can file issues.
 
 ### Core contributors
 
