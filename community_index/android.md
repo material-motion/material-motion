@@ -2,7 +2,7 @@
 
 ## Primitives
 
-### [Tweens](../concepts/primitives.html#tweens)
+### [Tweens](../specifications/primitives.md#tweens)
 
 Built in to Android:
 
