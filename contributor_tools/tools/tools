@@ -23,6 +23,12 @@ run_installer() {
 }
 
 install() {
+  pushd $ROOT_DIR >> /dev/null
+  echo "Updating submodules..."
+  git submodule init
+  git submodule update
+  popd >> /dev/null
+
   # nodejs
   run_installer nodejs
 
