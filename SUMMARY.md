@@ -33,8 +33,11 @@
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
 * [Contributing](CONTRIBUTING.md)
+* [Community index](community_index/README.md)
+   * [Android](community_index/android.md)
+   * [iOS](community_index/ios.md)
+   * [Web](community_index/web.md)
 * Community
-   * [Contributing](CONTRIBUTING.md)
    * [Community index](community_index/README.md)
        * [Android](community_index/android.md)
        * [iOS](community_index/ios.md)
