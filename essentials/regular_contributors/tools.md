@@ -1,4 +1,4 @@
-## Tools
+# Tools
 
 As a regular contributor you may work with a variety of tools.
 
@@ -11,7 +11,7 @@ Here's a list of tools we currently use as a team:
 - The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline
 - [draw.io](https://www.draw.io) for SVG and flow-chart editing
 
-### Installing our tools
+## Installing our tools
 
 We have a team command line tool that installs the different commands.
 
