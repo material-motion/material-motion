@@ -1,0 +1,9 @@
+{
+  "load": [
+    "third_party/arc-proselint"
+  ],
+  "phabricator.uri" : "http://codereview.cc/",
+  "arc.land.onto.default" : "develop",
+  "arc.feature.start.default": "origin/develop",
+  "git.default-relative-commit" : "origin/develop"
+}
