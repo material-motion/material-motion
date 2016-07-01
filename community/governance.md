@@ -14,7 +14,7 @@ We use GitHub teams to define specific roles for the material-motion organizatio
 - Push rights for `stable`.
 - All rights below.
 
-`*-regular-contributors`: [regular contributor teams](https://github.com/orgs/material-motion/teams?utf8=%E2%9C%93&query=regular%20contributors)
+`*-frequent-contributors`: [frequent contributor teams](https://github.com/orgs/material-motion/teams?utf8=%E2%9C%93&query=frequent%20contributors)
 
 - Write access to specific platform repos.
 - Push rights for `develop`.
