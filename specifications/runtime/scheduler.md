@@ -82,7 +82,7 @@ This lookup can be implemented in many ways:
 
 - Map performer type to plan type with look-up table.
 
-  Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan.  The scheduler would need to be able to determine which one to use.
+  Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
   
   Example pseudo-code:
   
@@ -162,7 +162,7 @@ Example pseudo-code:
 
 1. Remove any previously committed plan with the same name from the target's performers. 
 
-   _Note:_ This may be on a different performer instance.  In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
+   _Note:_ This may be on a different performer instance. In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
 2. Provide the relevant performer with the new named plan.
 
 Example pseudo-code:
@@ -248,7 +248,7 @@ The following topics are open for discussion. They do not presently have a clear
 
 This API would terminate all active performers and remove all registered plans.
 
-It's unclear if this is a necessary feature at this point in time.
+It's unclear if this is a necessary feature.
 
 Example pseudo-code:
 
