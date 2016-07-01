@@ -23,7 +23,7 @@
    * [Creating replica elements](specifications/duplication.md)
        * [ReplicaController](specifications/replicator_controller.md)
        * [ReplicaControllerDelegate](specifications/replicator.md)
-   * (drafts)
+   * [(drafts)](specifications/drafts.md)
        * [Condition elements](specifications/transient_views.md)
        * [Debugging](specifications/debugging.md)
        * [Server](specifications/server.md)
