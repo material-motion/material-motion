@@ -2,13 +2,13 @@
 
 ## Primitives
 
-### [Tweens](../concepts/primitives.html#tweens)
+### [Tweens](../specifications/primitives.md#tweens)
 
 Built in to Android:
 
 - [Property Animation](http://developer.android.com/guide/topics/graphics/prop-animation.html)
 
-### [Gesture recognition](../concepts/primitives.html#gesture-recognition)
+### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
 Built in to Android:
 
@@ -16,11 +16,14 @@ Built in to Android:
 - [ScaleGestureDetector](http://developer.android.com/training/gestures/scale.html#scale) / custom
 - [OnClickListener](http://developer.android.com/reference/android/view/View.OnClickListener.html) / [GestureDetector](http://developer.android.com/training/gestures/detector.html#detect)
 
-### [Physical simulation](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/primitives.html#physical-simulation)
+### [Applied forces](../specifications/primitives.md#applied-forces)
 
 Community implementations:
 
 - [Rebound](https://github.com/facebook/rebound)
 
-## [Expressions](../concepts/expressions.md)
+## [Runtime](../specifications/runtime/)
 
+Community implementations:
+
+- [Material Motion Runtime](https://github.com/material-motion/material-motion-runtime-android)

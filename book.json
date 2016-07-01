@@ -1,12 +1,17 @@
 {
     "plugins": [
         "edit-link",
-        "emphasize"
+        "emphasize",
+        "ga"
     ],
     "pluginsConfig": {
         "edit-link": {
             "base": "https://www.gitbook.com/book/material-motion/material-motion-starmap/edit#/edit/master/",
             "label": "Edit this page"
+        },
+        "ga": {
+            "token": "UA-80214706-1",
+            "configuration": "auto"
         }
     }
 }

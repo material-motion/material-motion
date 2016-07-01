@@ -2,7 +2,7 @@
 
 ## Primitives
 
-### [Tweens](../concepts/primitives.html#tweens)
+### [Tweens](../specifications/primitives.md#tweens)
 
 Built in to iOS:
 
@@ -14,7 +14,7 @@ Resources:
 - [Core Animation (Apple docs)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/CoreAnimation_guide/Introduction/Introduction.html)
 - [Animations Explained (objc.io)](https://www.objc.io/issues/12-animations/animations-explained/)
 
-### [Gesture recognition](../concepts/primitives.html#gesture-recognition)
+### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
 Built in to iOS:
 
@@ -27,7 +27,7 @@ Resources:
 
 - [Gesture recognizers (Apple docs)](https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/GestureRecognizer_basics/GestureRecognizer_basics.html)
 
-### [Physical simulation](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/primitives.html#physical-simulation)
+### [Applied forces](../specifications/primitives.md#applied-forces)
 
 Built in to iOS:
 
@@ -40,4 +40,8 @@ Community implementations:
 
 - [POP](https://github.com/facebook/pop)
 
-## [Expressions](../concepts/expressions.md)
+## [Runtime](../specifications/runtime/)
+
+Community implementations:
+
+- [Material Motion Runtime](https://github.com/material-motion/material-motion-runtime-objc)

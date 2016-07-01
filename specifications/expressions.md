@@ -116,11 +116,3 @@ A motion expression is **immutable**, which allows the engineer to **chain** ter
 Every motion expression must be resolvable into an array of plans.
 
 Successive invocations of this method should generate new plans.
-
-<!--
-
-LGTM:
-- featherless
-- markwei
-
--->

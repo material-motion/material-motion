@@ -119,10 +119,3 @@ Manual execution performers are notified each time the system will draw a new fr
 **Delegated execution**
 
 Delegated execution performers delegate their work to external systems, like Web Animations or  CoreAnimation. Such a performer is responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
-
-<!--
-
-LGTM:
-- appsforartists
-
--->

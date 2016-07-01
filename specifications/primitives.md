@@ -98,13 +98,3 @@ It is generally possible to move in the other direction:
     A ← B is a Transition  to    State A from  State B
 
 Only the **direction** changes between the two lines above. We encourage thinking about transitions in terms of what's on the "left" and what's on the "right". This allows the direction to be thought of in terms of "to the left" or "to the right".
-
-<!--
-
-LGTM:
-- appsforartists
-- featherless
-- larche
-- markwei
-
--->
