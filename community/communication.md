@@ -4,7 +4,7 @@
 
 To receive announcements by email, subscribe to our announcement mailing list: [material-motion-announce@googlegroups.com](https://groups.google.com/forum/#!forum/material-motion-announce)
 
-## Roadmap planning + general discussion
+## Chat + Roadmap planning
 
 We hang out on Discord. Visit https://discord.gg/AJbyYDf to join the server.
 
