@@ -16,7 +16,7 @@ Built in to Android:
 - [ScaleGestureDetector](http://developer.android.com/training/gestures/scale.html#scale) / custom
 - [OnClickListener](http://developer.android.com/reference/android/view/View.OnClickListener.html) / [GestureDetector](http://developer.android.com/training/gestures/detector.html#detect)
 
-### [Physical simulation](https://material-motion.gitbooks.io/material-motion-starmap/content/concepts/primitives.html#physical-simulation)
+### [Applied forces](../specifications/primitives.md#applied-forces)
 
 Community implementations:
 
