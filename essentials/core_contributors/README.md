@@ -1,3 +1,3 @@
-# Core contributors
+# Core team contributors
 
-Essential information for **core** contributors. [What's a core contributor?](../../community/governance.md)
+Essential information for **core team** contributors. [What's a core team contributor?](../../community/governance.md)
