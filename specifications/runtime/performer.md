@@ -39,7 +39,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated performance API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
@@ -47,20 +47,20 @@ The performer would be responsible for informing of two things: when delegated e
 
 Example pseudo-code if your language does not support anonymous functions:
 
-    protocol DelegatedPerforming {
-      function setDelegatedPerformanceCallback(callback)
+    protocol DelegatingPerformer {
+      function setDelegatedExecutionCallback(callback)
     }
     
-    class DelegatedPerformingCallback {
-      function delegatedPerformanceWillStart(performer, name)
-      function delegatedPerformanceDidFinish(performer, name)
+    class DelegatedExecutionCallback {
+      function delegatedExecutionWillStart(performer, name)
+      function delegatedExecutionDidFinish(performer, name)
     }
 
 Example pseudo-code if your language supports anonymous functions:
 
-    protocol DelegatedPerforming {
-      var delegatedPerformanceWillStart(performer, name)
-      var delegatedPerformanceDidFinish(performer, name)
+    protocol DelegatedExecution {
+      var delegatedExecutionWillStart(performer, name)
+      var delegatedExecutionDidFinish(performer, name)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
@@ -88,11 +88,11 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Manual performance</tt></p>
+<p style="text-align:center"><tt>feature: Manual execution</tt></p>
 
 An Performer can choose to implement an update function that will be called many times per second.
 
-**Manual performance API**: Define an optional API that allows performers to implement an update function.
+**Manual execution API**: Define an optional API that allows performers to implement an update function.
 
 > The Performer may choose not to implement this API.
 
@@ -111,6 +111,6 @@ Example pseudo-code:
       function update(millisecondsSinceLastUpdate) -> ActivityState
     }
 
-<p style="text-align:center"><tt>/feature: Manual performance</tt></p>
+<p style="text-align:center"><tt>/feature: Manual execution</tt></p>
 
 ---
