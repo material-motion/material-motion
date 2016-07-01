@@ -17,7 +17,7 @@ The Starmap is written for software engineers. We assume that you have some fami
 
 We will send announcements to the `material-motion-announce` google group. [Subscribe to the mailing list](https://groups.google.com/forum/#!forum/material-motion-announce) to receive announcements.
 
-We will also post announcements to our twitter handle: [@material_motion](http://twitter.com/material_motion).
+For other methods of communicating with the team, see our [communication](https://material-motion.gitbooks.io/material-motion-team/content/community/communication.html) documentation.
 
 ## License
 
