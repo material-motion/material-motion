@@ -28,10 +28,10 @@
        * [Debugging](specifications/debugging.md)
        * [Server](specifications/server.md)
        * [Serialization of plans](specifications/serialization.md)
+       * REPL
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
-       * REPL
 * Community
    * [Contributing](CONTRIBUTING.md)
    * [Communication](communication.md)
