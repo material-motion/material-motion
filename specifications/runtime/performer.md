@@ -19,7 +19,7 @@ Example pseudo-code:
     protocol Performer {
     }
 
-**Not configurable**: Performers do not provide direct configuration methods.
+**Not directly configurable**: Performers do not provide direct configuration methods.
 
 Performers can only be configured by providing them with plans.
 
