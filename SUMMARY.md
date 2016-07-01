@@ -32,6 +32,7 @@
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
+* [Contributing](CONTRIBUTING.md)
 * Community
    * [Contributing](CONTRIBUTING.md)
    * [Community index](community_index/README.md)
