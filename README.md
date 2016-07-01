@@ -7,7 +7,7 @@ This is a starmap. It defines high-level goals and identifies patterns. It is no
 
 **The Starmap is in a very early drafting phase. It will evolve over time.**
 
-Please read the chapter on [Contributing](CONTRIBUTING.md) to learn how to contribute to the Starmap. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
+Please read the chapter on [Starmap contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/starmap_essentials/) to learn how to contribute to the Starmap. Feel free to [start discussions](https://www.gitbook.com/book/material-motion/material-motion-starmap/discussions) or to leave comments in-line.
 
 ## Who should read this?
 
