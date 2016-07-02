@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 #
 # Copyright 2016-present The Material Motion Authors. All Rights Reserved.
 #
@@ -14,15 +14,4 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Install gh - github CLI tool.
-
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
-
-version=$(gh --version 2> /dev/null)
-if [[ $? -ne 0 || "$version" != *-mdm ]]; then
-  echo "Requesting sudo to install gh..."
-  cd $ROOT_DIR/third_party/gh
-  sudo npm link
-fi
+node "$ROOT_DIR/third_party/gh/bin/gh.js" $@
