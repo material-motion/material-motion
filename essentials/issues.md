@@ -14,7 +14,7 @@ Every issue must have at least one label from each category.
 
 We use GitHub milestones to plan out our work.
 
-Each project has a "Next release" milestone. We cut releases on Wednesdays each week. See our [release process](https://material-motion.gitbooks.io/material-motion-team/content/release_process/).
+Each project has a "Next release" milestone. We cut releases on Wednesdays each week. See our [release process](core_team_contributors/release_process).
 
 ### Next release
 
