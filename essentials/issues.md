@@ -14,7 +14,7 @@ Every issue must have at least one label from each category.
 
 We use GitHub milestones to plan our upcoming releases. We use our Discord channel to plan out longer-term roadmaps.
 
-Each project has a "Next release" milestone. We cut releases on Wednesdays each week.
+Each project has a "Next release" milestone.
 
 ### Next release
 
