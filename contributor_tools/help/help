@@ -56,7 +56,7 @@ function cmdhelp {
   else
     echo
     sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$HELPFILE" \
-      | sed -e "s:\(\`\(.*\)\`\):${B}\2${N}:" \
+      | perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" \
       | sed -e "s/^    /      /" \
       | sed -e "s/^Usage: /    /"
     echo
