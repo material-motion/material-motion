@@ -47,11 +47,3 @@ We want anyone to feel capable of contributing to our projects. We accept pull r
 **Create creative tools for declarative motion.**
 
 The [material-motion GitHub org](https://github.com/material-motion) houses our implementations.
-
-## Constraints
-
-The following constraints lead down what we think might be interesting paths:
-
-- What if we couldn't use a laptop to create our software?
-- What if we couldn't use MVC to structure our applications?
-- How would we design an application that never became "inactive"?
