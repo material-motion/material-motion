@@ -28,9 +28,13 @@ Open source projects are often driven by a core group of interested individuals.
 
 We're applying a community structure in which responsibility is shared early and often. We have gate keepers at important steps in the process (cutting a release, pushing to stable). We hope to grow that pool of gate keepers in the future.
 
-## Some things we hope to build
+## What we hope to achieve
 
-- Motion runtimes that enable the expression of declarative motion.
+- Create motion runtimes for the expression of declarative motion.
+- Whenever possible, work with platforms to build native solutions that replace our runtimes.
 - A common motion language that spans platforms.
 - Real-time motion debugging tools.
-- Creative tools for creating declarative motion.
+- Creative tools for declarative motion.
+
+## Problem solving
+
