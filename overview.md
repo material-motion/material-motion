@@ -46,6 +46,6 @@ We want anyone to feel capable of contributing to our projects. We accept pull r
 
 **Create creative tools for declarative motion.**
 
-**Encourage sharing and creation of motion languages.** The Material Motion's language will only be one of many.
+**Encourage a plugin culture of motion languages.** The Material Motion's language will only be one of many.
 
 The [material-motion GitHub org](https://github.com/material-motion) houses our implementations.
