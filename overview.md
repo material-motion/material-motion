@@ -36,6 +36,8 @@ We're applying a community structure in which responsibility is shared early and
 - Create real-time motion debugging tools.
 - Create creative tools for declarative motion.
 
+The [material-motion GitHub org](https://github.com/material-motion) houses all of our implementations.
+
 ## Creative constraints
 
 We use constraints to explore creative solutions to problems. Some of the constraints we apply:
