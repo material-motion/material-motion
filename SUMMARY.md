@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* Vision
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
        * [How to connect primitives](specifications/how_to_connect_primitives.md)
@@ -38,5 +39,4 @@
    * [iOS](community_index/ios.md)
    * [Web](community_index/web.md)
 * [Glossary](GLOSSARY.md)
-* Vision
 
