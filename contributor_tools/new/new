@@ -51,7 +51,32 @@ new_repo() {
   fi
 }
 
+new_command() {
+  if [ -z "$1" ]; then
+    usage
+    exit 1
+  fi
+  path="$COMMAND_DIR/$1"
+  mkdir -p $path
+  
+  if [ ! -f "$path/README.md" ];then
+    cat > "$path/README.md" <<EOF
+Usage: \`mdm $1\`
+
+    TODO: Short explanation of the command.
+EOF
+  fi
+
+  if [ ! -f "$path/$1" ]; then
+    cd $path
+    yo mm-file --name "$1" --type bash
+  fi
+
+  chmod +x "$path/$1"
+}
+
 case "$1" in
-  "")    usage ;;
-  repo)  new_repo ${@:2} ;;
+  repo)     new_repo ${@:2} ;;
+  command)  new_command ${@:2} ;;
+  *)        usage ;;
 esac
