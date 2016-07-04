@@ -54,4 +54,4 @@ We use constraints to explore creative solutions to problems. Some of the constr
 
 - What if we couldn't use a laptop to create our software?
 - What if we couldn't use MVC to structure our applications?
-- How would we design an application that was always reactive?
+- How would we design an application that never became "inactive"?
