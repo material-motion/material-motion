@@ -30,7 +30,7 @@ We're applying a community structure in which responsibility is shared early and
 
 ## Some things we hope to build
 
-- Motion runtimes on various platforms. These should allow expression of declarative motion.
+- Motion runtimes that enable the expression of declarative motion.
 - A common motion language that spans platforms.
 - Real-time motion debugging tools.
 - Creative tools for creating declarative motion.
