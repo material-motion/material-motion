@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Beyond the Starmap](vision.md)
+* [Beyond the Starmap](beyond_the_starmap.md)
 * [Engineering spec](specifications/README.md)
    * [Motion primitives](specifications/primitives.md)
        * [How to connect primitives](specifications/how_to_connect_primitives.md)
