@@ -14,7 +14,7 @@ We can readily express intent with shape and color. What if motion and interacti
 
 **The line between engineering and design tools will blur.**
 
-Prototypes often have to be translated to production-ready code. What if platforms provided the tools and language necessary to translate prototypes to production?
+Prototypes often must be translated in to production-ready code. What if platforms provided the tools and language necessary to translate prototypes to production?
 
 ## How we plan to get there
 
