@@ -16,9 +16,14 @@ We can readily express intent with shape and color. What if motion and interacti
 
 Prototypes often must be translated in to production-ready code. What if tools and languages existed that could more effectively describe prototypes in production?
 
-## How we plan to get there
+## Sustainable culture
 
-Operate in the open from day one.
+**Operate in the open from day one.**
 
-Encourage community ownership.
+Everything we build is open source from day one. We believe that being open and transparent allows better solutions to come to light.
 
+**Encourage community ownership.**
+
+Open source projects are often driven by a core group of interested individuals. This presents an important risk to consider: what happens when the core group moves on to other projects?
+
+We're applying a community structure in which responsibility is shared early and often. We have gate keepers at important steps in the process (cutting a release, pushing to stable). We hope to grow that pool of gate keepers in the future.
