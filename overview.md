@@ -6,7 +6,7 @@ The Material Motion team spans platforms, languages, personalities, and skill se
 
 The Starmap is our forum for proposing and hashing out ideas.
 
-## The future
+## The hopeful future
 
 **Describing motion will be as easy as describing shape and form.**
 
