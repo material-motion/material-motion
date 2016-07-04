@@ -28,6 +28,12 @@ Open source projects are often driven by a core group of interested individuals.
 
 We're applying a community structure in which responsibility is shared early and often. We have gate keepers at important steps in the process (cutting a release, pushing to stable). We hope to grow that pool of gate keepers in the future.
 
+**Casual contributors are important.**
+
+We want anyone to feel capable of contributing to our projects. We accept pull requests. Feel free to reach out to the team via any of our [communication](https://material-motion.gitbooks.io/material-motion-team/content/community/communication.html) channels.
+
+[Learn more about the impact of casual contributors](http://gustavopinto.org/codefather/2016/01/01/the-story-behind-casual-contributors.html).
+
 ## What we plan to do
 
 - Create motion runtimes for the expression of declarative motion.
