@@ -28,7 +28,7 @@ Open source projects are often driven by a core group of interested individuals.
 
 We're applying a community structure in which responsibility is shared early and often. We have gate keepers at important steps in the process (cutting a release, pushing to stable). We hope to grow that pool of gate keepers in the future.
 
-## Our plans
+## What plan to do
 
 - Create motion runtimes for the expression of declarative motion.
 - Whenever possible, work with platforms to build native solutions that replace our runtimes.
@@ -36,5 +36,9 @@ We're applying a community structure in which responsibility is shared early and
 - Create real-time motion debugging tools.
 - Create creative tools for declarative motion.
 
-## Problem solving
+## Creative constraints
 
+We use constraints to explore creative solutions to problems. Some of the constraints we apply:
+
+- What if we couldn't use a laptop to create our software?
+- What if we couldn't use MVC to structure our applications?
