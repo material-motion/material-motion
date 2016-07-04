@@ -36,11 +36,15 @@ We want anyone to feel capable of contributing to our projects. We accept pull r
 
 ## What we plan to do
 
-- Create motion runtimes for the expression of declarative motion.
-- Whenever possible, work with platforms to build native solutions that replace our runtimes.
-- Define a common motion language that spans platforms.
-- Create real-time motion debugging tools.
-- Create creative tools for declarative motion.
+**Create motion runtimes for the expression of declarative motion.**
+
+**Whenever possible, work with platforms to build native solutions that replace our runtimes.**
+
+**Define a common motion language that spans platforms.**
+
+**Create real-time motion debugging tools.**
+
+**Create creative tools for declarative motion.**
 
 The [material-motion GitHub org](https://github.com/material-motion) houses our implementations.
 
