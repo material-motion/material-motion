@@ -32,9 +32,9 @@ We're applying a community structure in which responsibility is shared early and
 
 - Create motion runtimes for the expression of declarative motion.
 - Whenever possible, work with platforms to build native solutions that replace our runtimes.
-- A common motion language that spans platforms.
-- Real-time motion debugging tools.
-- Creative tools for declarative motion.
+- Define a common motion language that spans platforms.
+- Create real-time motion debugging tools.
+- Create creative tools for declarative motion.
 
 ## Problem solving
 
