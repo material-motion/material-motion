@@ -26,7 +26,7 @@ Everything we build is open source from day one. We believe that being open and 
 
 Open source projects are often driven by a core group of interested individuals. This presents an important risk to consider: what happens when the core group moves on to other projects?
 
-We're inspired by the [Moya](https://github.com/Moya/contributors) project's take on community ownership. We share responsibility in our community early and often. Gate keepers do exist at important steps in the process (cutting a release, pushing to stable).
+We're inspired by the [Moya](https://github.com/Moya/contributors) project's take on community ownership. We grant responsibility in our community early and often. Gate keepers do exist at important steps in the process (cutting a release, pushing to stable).
 
 **Casual contributors are important.**
 
