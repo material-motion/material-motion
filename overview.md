@@ -48,9 +48,9 @@ We want anyone to feel capable of contributing to our projects. We accept pull r
 
 The [material-motion GitHub org](https://github.com/material-motion) houses our implementations.
 
-## Creative constraints
+## Constraints
 
-We use constraints to explore creative solutions to problems. Some of the constraints we apply:
+The following constraints lead down what we think might be interesting paths:
 
 - What if we couldn't use a laptop to create our software?
 - What if we couldn't use MVC to structure our applications?
