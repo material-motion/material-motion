@@ -21,28 +21,28 @@ usage() {
   $parentcmd help $cmd
 }
 
+if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
+  echo "Must be run from a git directory."
+  exit 1
+fi
+
+rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
+if [ -z "$3" ]; then
+  reponame=$(basename $rootdir)
+else
+  reponame="$3"
+fi
+ownername=${2:material-motion}
+
+if [ ! material-motion = $reponame* ] && [ -z "$2" ];then
+  echo "No material-motion prefix detected. Please provide an owner."
+  usage
+  exit 1
+fi
+
 publish_github() {
-  if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
-    echo "Must be run from a git directory."
-    exit 1
-  fi
-  
   # TODO: Check whether origin already points to something.
 
-  rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
-  if [ -z "$2" ]; then
-    reponame=$(basename $rootdir)
-  else
-    reponame="$2"
-  fi
-  ownername=${1:material-motion}
-
-  if [[ ! material-motion = $reponame* && -z "$1" ]];then
-    echo "No material-motion prefix detected. Please provide an owner."
-    usage
-    exit 1
-  fi
-  
   url="https://github.com/$ownername/$reponame"
 
   echo "About to create a new GitHub repository."
@@ -66,7 +66,109 @@ publish_github() {
   mdm gh label templatize --template "$ROOT_DIR/labels.json" -u $ownername -r $reponame
 }
 
+fetch_repository_phid() {
+  results=$(echo | arc call-conduit diffusion.repository.search <<EOF
+{
+  "constraints": {
+    "name": "$reponame"
+  }
+}
+EOF
+)
+  php <<CODE
+<?php
+  \$results = json_decode('$results', TRUE);
+  foreach (\$results['response']['data'] as \$row) {
+    if (\$row['fields']['name'] == '$reponame') {
+      echo \$row['phid'];
+      break;
+    }
+  }
+?>
+CODE
+}
+
+publish_phabricator() {
+  # TODO: Check whether origin already points to something.
+
+  url="https://github.com/$ownername/$reponame.git"
+
+  echo "About to create a codereview.cc diffusion repository."
+  echo "Please confirm the details below:"
+  echo
+  echo "    Repo name: $reponame"
+  echo "    GitHub repo url: $url"
+  echo
+  echo -n "Press enter to continue..."
+  read
+
+  phid=$(fetch_repository_phid)
+
+  echo | arc call-conduit diffusion.repository.edit <<EOF
+{
+  "transactions": [
+    {
+      "type": "vcs",
+      "value": "git"
+    },
+    {
+      "type": "name",
+      "value": "$reponame"
+    },
+    {
+      "type": "defaultBranch",
+      "value": "develop"
+    },
+    {
+      "type": "autocloseOnly",
+      "value": [
+        "develop"
+      ]
+    }
+  ],
+  "objectIdentifier": "$phid"
+}
+EOF
+
+  if [ -z "$phid" ]; then
+    phid=$(fetch_repository_phid)
+  fi
+
+  if [ -z "$phid" ]; then
+    echo "Failed to get the phid for this repo."
+    exit 1
+  fi
+
+  echo | arc call-conduit diffusion.uri.edit <<EOF
+{
+  "transactions": [
+    {
+      "type": "repository",
+      "value": "$phid"
+    },
+    {
+      "type": "uri",
+      "value": "$url"
+    },
+    {
+      "type": "io",
+      "value": "observe"
+    },
+    {
+      "type": "display",
+      "value": "always"
+    },
+    {
+      "type": "display",
+      "value": "always"
+    }
+  ]
+}
+EOF
+}
+
 case "$1" in
-  github)   publish_github ${@:2} ;;
-  *)        usage ;;
+  github)       publish_github ${@:2} ;;
+  phabricator)  publish_phabricator ${@:2} ;;
+  *)            usage ;;
 esac
