@@ -1,0 +1,261 @@
+#!/bin/bash +e
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+parentcmd=$(basename "${BASH_SOURCE[1]}")
+cmd=$(basename "${BASH_SOURCE[0]}")
+
+usage() {
+  $parentcmd help $cmd
+}
+
+if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
+  echo "Must be run from a git directory."
+  exit 1
+fi
+
+rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
+
+# HELPER METHODS
+
+current_branch() {
+  git rev-parse --abbrev-ref HEAD
+}
+
+enforce_clean_state() {
+  if [[ $(git status --porcelain) ]]; then
+    echo "${B}Your git repo is not in a clean state.${N}"
+    echo "Please revert or commit all changes before cutting a release."
+    git status
+    exit 1
+  fi
+}
+
+enforce_changelog_version() {
+  changelog_version=$(awk '/# (.+)/ { print $2; exit}' "$rootdir/CHANGELOG.md")
+  if [ "$changelog_version" == "release-candidate" ]; then
+    echo "${B}You haven't updated CHANGELOG.md with the current version yet.${N}"
+    echo "Please update CHANGELOG.md before running this command again."
+    exit 1
+  elif [ "$version" != "$changelog_version" ]; then
+    echo "Mismatch in CHANGELOG.md's latest version."
+    echo
+    echo "    CHANGELOG.md latest version: $changelog_version"
+    echo "                Desired version: $version"
+    echo
+    echo "Please edit CHANGELOG.md or change your version number."
+    echo
+    exit 1
+  fi
+}
+
+# COMMAND METHODS
+
+# Creates a release-candidate branch based off the latest origin/develop
+cut_release() {
+  isHotFix=false;
+
+  while test $# -gt 0; do
+    case "$1" in
+      --hotfix)
+        isHotFix=true;
+        shift
+        ;;
+    esac
+  done
+
+  if [ $(git rev-parse --verify release-candidate 2> /dev/null) ]; then
+    echo "${B}Release already cut.${N}"
+    echo "Consider deleting your existing release-candidate branch."
+    exit 1
+  fi
+
+  git fetch
+  if $isHotFix; then
+    branch_message="This is a hotfix... branching off origin/stable"
+    branch=origin/stable
+  else
+    branch_message="This is a normal release... branching off origin/develop"
+    branch=origin/develop
+  fi
+  echo $branch_message
+  git checkout -b release-candidate $branch
+
+  touch "$rootdir/CHANGELOG.md"
+  if ! grep "# release-candidate" "$rootdir/CHANGELOG.md" >> /dev/null; then
+    echo -e "# release-candidate\n\n TODO: Enumerate changes." | cat - "$rootdir/CHANGELOG.md" > /tmp/out && mv /tmp/out "$rootdir/CHANGELOG.md"
+  fi
+  git add "$rootdir/CHANGELOG.md"
+  git commit -m "Automatic changelog preparation for release."
+  git push origin release-candidate
+
+  RELEASE_SHA=$(git merge-base --fork-point release-candidate $branch)
+
+  today=$(date +'%B %d, %Y')
+  repopath=$(mdm gh repo --whoami)
+
+  echo
+  echo "${B}If you have not already, please send the following email:$N"
+  echo
+  echo "To: material-motion-announce@googlegroups.com"
+  echo "Subject: State of $repopath's $today release"
+  echo "Body:"
+  echo "I am about to cut the release for $today."
+  echo
+  echo "The release is being cut at $RELEASE_SHA."
+  echo "View this SHA on GitHub at https://github.com/$repopath/commit/$RELEASE_SHA"
+  echo
+  echo "We encourage clients to test this release. To do so, check out the"
+  echo "release-candidate branch like so:"
+  echo
+  echo "    git fetch"
+  echo "    git checkout origin/release-candidate"
+  echo
+}
+
+abort_release() {
+  if [ ! $(git rev-parse --verify release-candidate 2> /dev/null) ]; then
+    echo "No release in progress."
+    exit 0
+  fi
+
+  echo "${B}About to abort the release candidate.${N}"
+  echo "${B}${U}This action is not easily reversible.${N}"
+  echo
+  echo -n "Press enter to continue..."
+  read
+
+  git checkout origin/develop
+  git branch -D release-candidate
+  git push origin :release-candidate
+}
+
+merge_release() {
+  version=${1#v}
+  if [ -z "$version" ]; then
+    echo "Must provide a ${U}version${N} argument."
+    exit 1
+  fi
+
+  current_branch=$(current_branch)
+  if [ "$current_branch" != "release-candidate" ]; then
+    echo "This command must be run from the release-candidate branch."
+    echo
+    echo "Your current branch: $current_branch"
+    exit 1
+  fi
+
+  enforce_changelog_version
+
+  echo "Merging develop into stable..."
+
+  # Merge in to stable.
+  git fetch
+  git checkout stable
+  git rebase origin/stable
+  git merge --no-ff release-candidate --no-edit
+
+  git checkout develop
+  git rebase origin/develop
+  git merge --no-ff release-candidate --no-edit
+
+  git branch -D release-candidate
+
+  git checkout stable
+}
+
+publish_release() {
+  version=${1#v}
+  if [ -z "$version" ]; then
+    echo "Must provide a ${U}version${N} argument."
+    exit 1
+  fi
+
+  current_branch=$(current_branch)
+  if [ "$current_branch" != "stable" ]; then
+    echo "This command must be run from the ${B}stable${N} branch."
+    echo
+    echo "Your current branch: $current_branch"
+    exit 1
+  fi
+
+  enforce_changelog_version
+
+  echo "Checking gh authorization..."
+  $parentcmd gh user --whoami
+
+  repopath=$(mdm gh repo --whoami)
+
+  ghtoken=$($parentcmd gh user --token)
+  if [ -z "$ghtoken" ]; then
+    echo "Must be authenticated with mdm gh."
+    echo
+    echo "Run mdm gh user --whoami to authenticate."
+    echo
+    exit 1
+  fi
+
+  curl -sH "Authorization: token $ghtoken" \
+    "https://api.github.com/repos/$version/releases/tags/v$version" \
+    | grep -q 'message": "Not Found'
+
+  if [ $? -ne 0 ]; then # Found the release
+    echo "Release already cut."
+    echo
+    echo "    Release URL: https://github.com/$repopath/releases/tag/v$version"
+    open "https://github.com/$repopath/releases/tag/v$version"
+    exit 0
+  fi
+
+  git push origin stable develop
+
+  tmp_path=$(mktemp -d)
+
+  curl -s \
+    -H "Authorization: token $ghtoken" \
+    -H "Content-Type: application/json" \
+    -X POST \
+    -d '{"tag_name":"v'$version'","target_commitish":"stable","name":"v'$version'","draft":true}' \
+    "https://api.github.com/repos/$repopath/releases" > "$tmp_path/release"
+
+  # TODO: Check failure.
+
+  htmlurl=$(cat "$tmp_path/release" | grep '^  "html_url' | cut -d'"' -f4)
+  htmlurl=$(echo $htmlurl | sed "s:/tag/:/edit/:")
+
+  echo "A draft release has been made."
+  echo
+  echo "    Edit the draft: $htmlurl"
+  echo
+  echo "Update the release's description with the following:${B}"
+  awk '/# / { print $0; while(getline > 0) {if (/# /) exit; print $0 }}' "$rootdir/CHANGELOG.md" | tail -n +2
+  echo ${N}
+  open $htmlurl
+
+  echo "Deleting remote release-candidate..."
+  git push origin :release-candidate
+}
+
+enforce_clean_state
+
+case "$1" in
+  cut)     cut_release ${@:2} ;;
+  merge)   merge_release ${@:2} ;;
+  publish) publish_release ${@:2} ;;
+
+  abort)   abort_release ${@:2} ;;
+  
+  *)       usage ;;
+esac
