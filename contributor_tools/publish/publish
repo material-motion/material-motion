@@ -1,0 +1,72 @@
+#!/bin/bash
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+parentcmd=$(basename "${BASH_SOURCE[1]}")
+cmd=$(basename "${BASH_SOURCE[0]}")
+
+usage() {
+  $parentcmd help $cmd
+}
+
+publish_github() {
+  if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
+    echo "Must be run from a git directory."
+    exit 1
+  fi
+  
+  # TODO: Check whether origin already points to something.
+
+  rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
+  if [ -z "$2" ]; then
+    reponame=$(basename $rootdir)
+  else
+    reponame="$2"
+  fi
+  ownername=${1:material-motion}
+
+  if [[ ! material-motion = $reponame* && -z "$1" ]];then
+    echo "No material-motion prefix detected. Please provide an owner."
+    usage
+    exit 1
+  fi
+  
+  url="https://github.com/$ownername/$reponame"
+
+  echo "About to create a new GitHub repository."
+  echo "Please confirm the details below:"
+  echo
+  echo "    URL: $url"
+  echo "    Command: mdm gh repo -u $ownername --new $reponame"
+  echo
+  echo -n "Press enter to continue..."
+  read
+  
+  if [ $(mdm gh user -w) == "$ownername" ]; then
+    mdm gh repo -u $ownername --new $reponame || exit 1
+  else
+    mdm gh repo -O $ownername --new $reponame || exit 1
+  fi
+
+  git remote add origin "git@github.com:$ownername/$reponame.git"
+  git push origin develop stable || exit 1
+  mdm gh repo -u $ownername --edit $reponame --defaultbranch develop --haswiki false || exit 1
+  mdm gh label templatize --template "$ROOT_DIR/labels.json" -u $ownername -r $reponame
+}
+
+case "$1" in
+  github)   publish_github ${@:2} ;;
+  *)        usage ;;
+esac
