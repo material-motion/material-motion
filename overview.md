@@ -49,3 +49,7 @@ We want anyone to feel capable of contributing to our projects. We accept pull r
 **Encourage a plugin culture of motion languages.** The Material Motion's language will only be one of many.
 
 The [material-motion GitHub org](https://github.com/material-motion) houses our implementations.
+
+## Learn more
+
+Learn more about our team and culture by reading our [team documentation](https://material-motion.gitbooks.io/material-motion-team/content/).
