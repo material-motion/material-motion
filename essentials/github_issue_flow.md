@@ -50,7 +50,7 @@ See our [communication](../communication.md) article for an invite link to the c
 
 ### A milestone defines issue priority
 
-Within a given project we use GitHub milestones to define relative issue priority.
+Within a given project we use GitHub milestones to define relative issue priority. Issues at the top of the milestone are the most important.
 
 For example, consider the [Runtime v1.0.0 milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/1).
 
