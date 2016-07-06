@@ -1,7 +1,5 @@
 # Communicating early and often
 
-This article describes how the Material Motion team manages priorities and ongoing work as a distributed open source project. This article is written for anyone who's interested in or actively helping out with a material motion project.
-
 Frequent communication is paramount when working in a distributed open source team. Because our team is not located in one geographical location, we make heavy use of **distributed** workflow principles.
 
 ## Assignment is ownership
