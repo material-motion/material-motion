@@ -2,7 +2,11 @@
 
 This article describes a flow for taking ownership of GitHub issues.
 
-## Assignment is ownership
+## Communication
+
+Frequent communication is paramount when working in a distributed open source team.
+
+### Assignment is ownership
 
 If an issue is assigned to you, it is assumed that you are actively working on the issue.
 
@@ -10,9 +14,9 @@ The inversion of this assumption is important: if you are not working on an issu
 
 We will periodically remove assignees from issues that do not appear to have progressed. Don't be alarmed; you can always re-assign the issue in the future once you begin work on the issue.
 
-## Post updates early and often
+### Post updates early and often
 
-Regular communication is paramount when working in a distributed open source team. We want to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking) whenever possible, so we encourage posting to issues early and often.
+We want to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking) whenever possible, so we encourage posting to issues early and often.
 
 Some recommendations on communicating early and often:
 
@@ -30,3 +34,24 @@ Explain how you got stuck, what alternatives you're considering, and whether you
 
 Random updates to the issue are a helpful way to let others know that the issue is being worked on.
 
+## Priorities
+
+### Projects == GitHub repos, usually
+
+For most of our platforms, each "project" maps to a single GitHub repository.
+
+We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of the `where:` label for issues to break down project-specific tasks.
+
+### Roadmap defines project priority
+
+We define our roadmap on Discord. Our roadmap defines cross-project priorities. This is a good place to answer the question of "which project are we focused on this week?"
+
+See our [communication](../communication.md) article for an invite link to the channel.
+
+### A milestone defines issue priority
+
+Within a given project we use GitHub milestones to define relative issue priority.
+
+For example, consider the [Runtime v1.0.0 milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/1).
+
+![](../_assets/runtime-v1.0.0.png)
