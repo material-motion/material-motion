@@ -12,7 +12,7 @@ If an issue is assigned to you, it is assumed that you are actively working on t
 
 The inversion of this assumption is important: if you are not working on an issue, **please unassign yourself from it**.
 
-We will periodically remove assignees from issues that do not appear to have progressed. Don't be alarmed; you can always re-assign the issue in the future once you begin work on the issue.
+We will periodically remove assignees from issues that do not appear to have progressed. Don't be alarmed; you can always re-assign the issue in the future once you begin work on the issue. We do this simply to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking).
 
 ### Post updates to issues early and often
 
