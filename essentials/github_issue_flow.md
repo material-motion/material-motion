@@ -44,7 +44,16 @@ Flow labels move through the following process:
 
 ### Label type
 
-We also use labels to categorize the "type" of an issue.
+We also use labels to categorize the "type" of an issue. Types we use:
+
+- Bug
+- Documentation
+- Feature request
+- Internal cleanup
+- Process
+- Question
+- Visual bug
+- Working as intended
 
 ## Priorities
 
