@@ -34,6 +34,13 @@ Explain how you got stuck, what alternatives you're considering, and whether you
 
 Random updates to the issue are a helpful way to let others know that the issue is being worked on.
 
+### Label flow
+
+We use `flow:` labels to communicate the current state of an issue. See [our team repo's labels](https://github.com/material-motion/material-motion-team/labels).
+
+![](../_assets/LabelFlow.svg)
+
+
 ## Priorities
 
 ### Projects == GitHub repos, usually
