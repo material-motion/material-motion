@@ -35,6 +35,14 @@ install() {
   # nodejs
   run_installer nodejs
 
+  # gh
+  pushd $ROOT_DIR/third_party/gh >> /dev/null
+  npm install || { \
+    echo "npm install failed, requesting sudo to run npm install in $ROOT_DIR/third_party/gh..."; \
+    sudo npm install; \
+  }
+  popd >> /dev/null
+
   # Yeoman tools
   run_installer yo
   run_installer generators
