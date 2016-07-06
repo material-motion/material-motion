@@ -4,7 +4,7 @@ This article describes a flow for taking ownership of GitHub issues.
 
 ## Communication
 
-Frequent communication is paramount when working in a distributed open source team.
+Frequent communication is paramount when working in a distributed open source team. Because our team is not located in one geographical location, we make heavy use of **distributed** workflow principles.
 
 ### Assignment is ownership
 
@@ -14,7 +14,7 @@ The inversion of this assumption is important: if you are not working on an issu
 
 We will periodically remove assignees from issues that do not appear to have progressed. Don't be alarmed; you can always re-assign the issue in the future once you begin work on the issue.
 
-### Post updates early and often
+### Post updates to issues early and often
 
 We want to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking) whenever possible, so we encourage posting to issues early and often.
 
