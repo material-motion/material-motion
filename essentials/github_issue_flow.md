@@ -1,6 +1,6 @@
 # GitHub issue flow
 
-This article describes a flow for taking ownership of GitHub issues.
+This article describes a how the Material Motion team manages priorities and ongoing work as a distributed open source project.
 
 ## Communication
 
