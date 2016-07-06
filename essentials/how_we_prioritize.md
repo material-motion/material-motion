@@ -1,6 +1,6 @@
 # How we prioritize
 
-As a decentralized open source team working on many projects, prioritization is how we choose what to work on for a given week or day.
+Prioritization is how we choose what to work on for a given week or day.
 
 ## Projects == GitHub repos, usually
 
