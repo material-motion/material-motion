@@ -42,6 +42,9 @@ Flow labels move through the following process:
 
 ![](../_assets/LabelFlow.svg)
 
+### Label type
+
+We also use labels to categorize the "type" of an issue.
 
 ## Priorities
 
