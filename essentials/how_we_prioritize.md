@@ -1,6 +1,6 @@
 # How we prioritize
 
-Prioritization is how we choose what to work on for a given week or day.
+Prioritization is how we choose what to work on for a given week or day. We make heavy use of GitHub and Discord to communicate our priorities. This allows us to minimize the number of team meetings and encourages autonomity.
 
 ## Projects == GitHub repos, usually
 
@@ -8,7 +8,7 @@ For most of our platforms, each "project" maps to a single GitHub repository.
 
 We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of `where:` labels to break down project-specific tasks.
 
-## Roadmap defines project priority
+## Roadmap defines weekly project priority
 
 We define our roadmap on Discord. Our roadmap defines cross-project priorities. This is a good place to answer the question of "which project are we focused on this week?"
 
