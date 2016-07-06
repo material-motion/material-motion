@@ -1,12 +1,10 @@
-# GitHub issue flow
+# Communicating early and often
 
 This article describes how the Material Motion team manages priorities and ongoing work as a distributed open source project. This article is written for anyone who's interested in or actively helping out with a material motion project.
 
-## Communication
-
 Frequent communication is paramount when working in a distributed open source team. Because our team is not located in one geographical location, we make heavy use of **distributed** workflow principles.
 
-### Assignment is ownership
+## Assignment is ownership
 
 If an issue is assigned to you, it is assumed that you are actively working on the issue.
 
@@ -14,7 +12,7 @@ The inversion of this assumption is important: if you are not working on an issu
 
 We will periodically remove assignees from issues that do not appear to have progressed. Don't be alarmed; you can always re-assign the issue in the future once you begin work on the issue. We do this simply to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking).
 
-### Post updates to issues early and often
+## Post updates to issues early and often
 
 We encourage posting to issues early and often. This has many noticeable effects:
 
@@ -46,7 +44,7 @@ Explain how you got stuck, what alternatives you're considering, and whether you
 
 Random updates to the issue are a helpful way to let others know that the issue is being worked on. We encourage sharing emoji stories.
 
-### Label flow
+## Label flow
 
 We use `flow:` labels to communicate the current state of an issue. See [our team repo's labels](https://github.com/material-motion/material-motion-team/labels).
 
@@ -54,7 +52,7 @@ Flow labels move through the following process:
 
 ![](../_assets/LabelFlow.svg)
 
-### Label type
+## Label type
 
 We also use labels to categorize the "type" of an issue. Types we use:
 
