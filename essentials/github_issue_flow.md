@@ -44,7 +44,7 @@ Explain how you got stuck, what alternatives you're considering, and whether you
 
 **Randomly**
 
-Random updates to the issue are a helpful way to let others know that the issue is being worked on. Emoji poems are a helpful way to express yourself.
+Random updates to the issue are a helpful way to let others know that the issue is being worked on. We encourage sharing emoji stories.
 
 ### Label flow
 
