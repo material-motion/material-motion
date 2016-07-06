@@ -16,7 +16,11 @@ We will periodically remove assignees from issues that do not appear to have pro
 
 ### Post updates to issues early and often
 
-We want to avoid [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking) whenever possible, so we encourage posting to issues early and often.
+We encourage posting to issues early and often. This has many noticeable effects:
+
+- Combats [cookie-licking](http://communitymgt.wikia.com/wiki/Cookie_Licking).
+- Encourages asking for help.
+- Helps avoid getting "lost in the weeds".
 
 Some recommendations on communicating early and often:
 
