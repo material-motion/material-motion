@@ -73,7 +73,7 @@ We also use labels to categorize the "type" of an issue. Types we use:
 
 For most of our platforms, each "project" maps to a single GitHub repository.
 
-We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of the `where:` label for issues to break down project-specific tasks.
+We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of `where:` labels to break down project-specific tasks.
 
 ### Roadmap defines project priority
 
