@@ -30,6 +30,14 @@ Explain your plan, what considerations you're making, and how long you expect th
 
 This is also usually when you'd assign the issue to yourself.
 
+**I'm considering changing the direction of my work**
+
+It's rare that an issue is perfectly defined. When you find yourself changing the scope of what you're working on (I need this new tool; this bug has bigger ramifications; I need to try a completely new approach), post to the issue.
+
+**I've started working on something else**
+
+Context switching happens. When it happens, post to the issue. If you expect to be focusing on something else for a while, unassign yourself. This allows anyone else to start where you left off.
+
 **I've gotten stuck, help!**
 
 Explain how you got stuck, what alternatives you're considering, and whether you need help (use `@` mentions to ask for help).
