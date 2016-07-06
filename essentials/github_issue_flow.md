@@ -1,6 +1,6 @@
 # GitHub issue flow
 
-This article describes a how the Material Motion team manages priorities and ongoing work as a distributed open source project.
+This article describes how the Material Motion team manages priorities and ongoing work as a distributed open source project.
 
 ## Communication
 
