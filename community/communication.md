@@ -6,7 +6,7 @@ To receive announcements by email, subscribe to our announcement mailing list: [
 
 ## Chat + roadmap planning
 
-We hang out on Discord. Visit https://discord.gg/wUKcCds to join the server.
+We hang out on Discord. Visit https://discord.gg/ZJyGXza to join the server.
 
 Our team is distributed, so we use Discord to plan our roadmaps and for daily standups.
 

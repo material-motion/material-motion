@@ -10,11 +10,11 @@ Every issue must have at least one label from each category.
 
 - [See example of our labels](https://github.com/material-motion/material-motion-team/labels)
 
-## Milestones
+## Milestones and our roadmap
 
-We use GitHub milestones to plan out our work.
+We use GitHub milestones to plan our upcoming releases. We use our Discord channel to plan out longer-term roadmaps.
 
-Each project has a "Next release" milestone. We cut releases on Wednesdays each week. See our [release process](https://material-motion.gitbooks.io/material-motion-team/content/release_process/).
+Each project has a "Next release" milestone.
 
 ### Next release
 
