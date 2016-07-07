@@ -6,7 +6,7 @@ Prioritization is how we choose what to work on for a given week or day. We make
 
 https://material-motion.github.io/milemarker/
 
-This website fetches the material-motion org's repos and shows each repo's milestones in a simple tabular structure. We use this website to get a high-level overview of the project's status.
+This website fetches the material-motion org's repos and shows each repo's milestones in a simple tabular structure. We use this website to get a high-level overview of the project's status on any given platform.
 
 ## What is a project?
 
