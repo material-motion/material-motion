@@ -242,10 +242,13 @@ publish_release() {
   echo "Update the release's description with the following:${B}"
   awk '/# / { print $0; while(getline > 0) {if (/# /) exit; print $0 }}' "$rootdir/CHANGELOG.md" | tail -n +2
   echo ${N}
-  open $htmlurl
 
   echo "Deleting remote release-candidate..."
   git push origin :release-candidate
+
+  echo "Press enter to open the release draft url in your browser:"
+  read 
+  open $htmlurl
 }
 
 enforce_clean_state
