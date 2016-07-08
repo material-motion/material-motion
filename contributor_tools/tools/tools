@@ -53,6 +53,8 @@ install() {
 
   if [ "$(uname)" == "Darwin" ]; then
     echo "Installing mac-specific tools..."
+    run_installer brew
+    run_installer clang-format
 
   elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Installing linux-specific tools..."
