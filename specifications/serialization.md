@@ -19,3 +19,4 @@ Software design goals:
 Why this matters:
 
 - The interesting part of serialization is not the data format. The interesting part is whether you can easily transport plans across systems in a consistent manner.
+- A tool that is able to think in terms of a cross-platform "Tween" language shouldn't strictly have to care about whether the data is json or binary.
