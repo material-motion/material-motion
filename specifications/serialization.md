@@ -15,3 +15,7 @@ Software design goals:
 
 - Plan families should be encouraged to implement a plan serializer.
 - The Runtime should provide a SerializerManager object that can receive plans from disk/network and provide them to the correct serializer. The reverse should hold true of moving plans to disk/over network.
+
+Why this matters:
+
+- The interesting part of serialization is not the data format. The interesting part is whether you can easily transport plans across systems in a consistent manner.
