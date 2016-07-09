@@ -31,10 +31,10 @@
        * [Server](specifications/server.md)
        * [Serialization of plans](specifications/serialization.md)
        * [REPL](specifications/repl.md)
+       * A consultation interface
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
-       * A consultation interface
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
