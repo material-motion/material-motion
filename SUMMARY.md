@@ -31,7 +31,7 @@
        * [Server](specifications/server.md)
        * [Serialization of plans](specifications/serialization.md)
        * [REPL](specifications/repl.md)
-       * A consultation interface
+       * [A consultation interface](specifications/a_consultation_interface.md)
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
