@@ -25,6 +25,7 @@
        * [ReplicaController](specifications/replicator_controller.md)
        * [ReplicaControllerDelegate](specifications/replicator.md)
    * [(drafts)](specifications/drafts.md)
+       * Director composition
        * [Condition elements](specifications/transient_views.md)
        * [Debugging](specifications/debugging.md)
        * [Server](specifications/server.md)
@@ -33,7 +34,6 @@
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
-       * Director composition
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
