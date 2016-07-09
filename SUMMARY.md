@@ -25,7 +25,7 @@
        * [ReplicaController](specifications/replicator_controller.md)
        * [ReplicaControllerDelegate](specifications/replicator.md)
    * [(drafts)](specifications/drafts.md)
-       * Director composition
+       * [Director composition](specifications/director_composition.md)
        * [Condition elements](specifications/transient_views.md)
        * [Debugging](specifications/debugging.md)
        * [Server](specifications/server.md)
