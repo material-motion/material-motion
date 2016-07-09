@@ -33,6 +33,7 @@
        * [Applications](specifications/applications.md)
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
+       * Director composition
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
