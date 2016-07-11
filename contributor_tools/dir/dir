@@ -17,13 +17,27 @@
 find_path() {
   short_reponame=${1#material-motion-}
   full_reponame="material-motion-$short_reponame"
-
   parent_dir="$(dirname $ROOT_DIR)"
-  if [ -d "$parent_dir/$full_reponame" ]; then
-    echo $parent_dir/$full_reponame
-  elif [ -d "$parent_dir/$short_reponame" ]; then
-    echo $parent_dir/$short_reponame
+
+  suffixes=("" "-android" "-objc" "-swift" "-js")
+  matches=()
+
+  for suffix in "${suffixes[@]}"; do
+    if [ -d "$parent_dir/$full_reponame$suffix" ]; then
+      matches+=("$parent_dir/$full_reponame$suffix")
+    elif [ -d "$parent_dir/$short_reponame$suffix" ]; then
+      matches+=("$parent_dir/$short_reponame$suffix")
+    fi
+  done
+
+  if [[ "${#matches[@]}" -eq "0" ]]; then
+    echo "No matches found." >&2
+    exit 1
+  elif [[ "${#matches[@]}" -eq "1" ]]; then
+    echo "${matches[0]}"
   else
+    echo "Ambiguous matches, please specify a suffix manually. Found:" >&2
+    printf '%s\n' "${matches[@]}" >&2
     exit 1
   fi
 }
