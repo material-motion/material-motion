@@ -28,7 +28,7 @@ if [ "$SHOULD_INSTALL" = true ]; then
   echo "Installing brew..."
 
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-  echo "Requesting sudo to fix permissions in brew's install directory."
-  sudo /usr/sbin/chown -R $USER:admin /usr/local
 fi
+
+echo "Requesting sudo to fix permissions in brew's install directory."
+sudo /usr/sbin/chown -R $USER:admin /usr/local
