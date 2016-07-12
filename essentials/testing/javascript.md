@@ -20,6 +20,7 @@ Tools we'll likely use are **highlighted**.
   - Test runner with optional assertion library
   - Doesn't pollute global namespace with test methods
   - Runs tests in parallel
+  - Can export results to Test Anywhere Protocol for machine consumption
   - Written by @sindresorhus, a frequent collaborator of @addyo
   - Newer than the other popular options - likely in response to things they did less-well (like run tests in serial)
 - **[Chai](http://chaijs.com/)**
