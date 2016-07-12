@@ -14,10 +14,6 @@ Tools we'll likely use are **highlighted**.
   - The original native-to-JavaScript testing framework
   - Does all the things.
   - Popular among older projects.
-- [Tape](https://www.npmjs.com/package/tape)
-  - Does all the things.
-  - Exports results in [Test Anything Protocol](https://testanything.org/), to be consumed by machines or formatted to be human readable by a separate tool.
-  - Simpler/lower level than most options
 - **[Ava](https://github.com/avajs/ava)**
   - Test runner with optional assertion library
   - Doesn't pollute global namespace with test methods
@@ -41,6 +37,10 @@ Tools we'll likely use are **highlighted**.
   - Test runner
   - Written by Angular team
   - Popular paired with Chai, Mocha, and Sinon
+- [Tape](https://www.npmjs.com/package/tape)
+  - Does all the things.
+  - Exports results in [Test Anything Protocol](https://testanything.org/), to be consumed by machines or formatted to be human readable by a separate tool.
+  - Simpler/lower level than most options
 - [Jest](https://facebook.github.io/jest/)
   - Built by Facebook to run Jasmine tests with automatically-mocked dependencies
   - A quick Google Search makes it look like this magic is a fragile as it sounds.
