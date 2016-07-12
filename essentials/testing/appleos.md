@@ -1,6 +1,6 @@
 # appleOS
 
-We use Xcode unit tests for test our library code.
+We use Xcode unit tests to test our library code.
 
 ## Running tests
 
