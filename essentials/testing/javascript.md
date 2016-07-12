@@ -28,6 +28,7 @@ Tools we'll likely use are **highlighted**.
   - Popular among newer projects (usually paired with Mocha and Sinon)
 - [Sinon](http://sinonjs.org/)
   - Spy library
+  - @traviskaufman contributes
 - [Expect](https://github.com/mjackson/expect)
   - mjackson got tired of needing separate dependencies for assertions and spies, so he wrote one library that includes both.
   - Assertion methods are in camel-case vs. in an object tree (eg. `toBeEqual` instead of `to.equal`)
