@@ -8,7 +8,10 @@ Travis CI tests our pull requests.
 
 Regular and core team contributors can use `arc` to run unit tests locally.
 
-    arc unit # Run unit tests only if source was affected
-    arc unit --everything # Run all unit tests for everything
+    # Run unit tests only if source was affected
+    arc unit
+    
+    # Run all unit tests for everything
+    arc unit --everything
 
 ## Writing tests
