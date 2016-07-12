@@ -47,7 +47,16 @@ new_repo() {
       git checkout develop
     fi
   else
-    echo "$path already exists."
+    echo "Updating existing git repo at the following location:"
+    echo
+    echo "    $path"
+    echo
+    echo -n "Press enter to continue..."
+    read
+    
+    cd $path
+
+    yo mm-github
   fi
 }
 
@@ -58,7 +67,7 @@ new_command() {
   fi
   path="$COMMAND_DIR/$1"
   mkdir -p $path
-  
+
   if [ ! -f "$path/README.md" ];then
     cat > "$path/README.md" <<EOF
 Usage: \`mdm $1\`
