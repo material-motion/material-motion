@@ -16,4 +16,4 @@ Regular and core team contributors can use `arc` to run unit tests locally.
 
 ## Writing tests
 
-We follow the conventions defined at [material-motion/material-motion-conventions-objc](https://github.com/material-motion/material-motion-conventions-objc).
+Please follow the conventions defined at [material-motion/material-motion-conventions-objc](https://github.com/material-motion/material-motion-conventions-objc).
