@@ -14,6 +14,8 @@ Tools we'll likely use are **highlighted**.
   - The original native-to-JavaScript testing framework
   - Does all the things.
   - Popular among older projects.
+  - Least modular popular option
+    - Doesn't let you mock `requestAnimationFrame`
 - **[Ava](https://github.com/avajs/ava)**
   - Test runner with optional assertion library
   - Doesn't pollute global namespace with test methods
