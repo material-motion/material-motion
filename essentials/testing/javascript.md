@@ -15,7 +15,7 @@ Tools we'll likely use are **highlighted**.
   - Does all the things.
   - Popular among older projects.
   - Least modular popular option
-    - Doesn't let you mock `requestAnimationFrame`
+    - @traviskaufman uses the example that mocking `requestAnimationFrame` is painful
 - **[Ava](https://github.com/avajs/ava)**
   - Test runner with optional assertion library
   - Doesn't pollute global namespace with test methods
