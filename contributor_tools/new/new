@@ -78,7 +78,7 @@ EOF
 
   if [ ! -f "$path/$1" ]; then
     cd $path
-    yo mm-file --name "$1" --type bash
+    yo mm-file --name "$1" --type mdm-command
   fi
 
   chmod +x "$path/$1"
