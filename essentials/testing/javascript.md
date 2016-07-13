@@ -33,14 +33,14 @@ Tools we'll likely use are **highlighted**.
   - Spy library
   - @traviskaufman contributes
 - [Expect](https://github.com/mjackson/expect)
-  - mjackson got tired of needing separate dependencies for assertions and spies, so he wrote one library that includes both.
+  - @mjackson got tired of needing separate dependencies for assertions and spies, so he wrote one library that includes both.
   - Assertion methods are in camel-case vs. in an object tree (eg. `toBeEqual` instead of `to.equal`)
 - [Mocha](http://mochajs.org/)
+  - Test runner, tracks which ones pass/fail
   - Popular with Chai and Karma
-  - Not entirely sure what it does versus what Karma does
   - Runs tests in serial
 - [Karma](https://karma-runner.github.io/1.0/index.html)
-  - Test runner
+  - Test harness, opens a bunch of browsers and tracks which ones have problems
   - Written by Angular team
   - Popular paired with Chai, Mocha, and Sinon
 - [Tape](https://www.npmjs.com/package/tape)
@@ -55,5 +55,5 @@ Tools we'll likely use are **highlighted**.
   - That's all I know
 
 TODO(appsforartists): 
-- Figure out and document the actual structure of this (e.g. npm run test will run `ava` which will in turn call `__tests__/**` in each package).  
+- Figure out and document the actual structure of this (e.g. `npm run test` will run `ava` which will in turn call `__tests__/**` in each package).  
 - Document how to add a test to go along with a new feature/bug fix.
