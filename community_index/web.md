@@ -16,6 +16,7 @@ Standard JavaScript:
 Community implementations
 
 - [anime-js](http://anime-js.com/)
+- [mojs](http://mojs.io/)
 
 ### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
