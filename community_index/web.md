@@ -13,6 +13,10 @@ Standard JavaScript:
 
 - [element.animate](https://github.com/web-animations/web-animations-js/)
 
+Community implementations
+
+- [anime-js](http://anime-js.com/)
+
 ### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
 Community implementations:
