@@ -2,6 +2,8 @@
 
 Essential information for **casual** contributors. [What's a casual contributor?](../../community/governance.md)
 
-## Code review
+## Found a bug?
 
-For casual contributors, issue GitHub pull requests as you would with any GitHub project.
+Please file an issue in the relevant github repository in the material-motion org.
+
+ssue GitHub pull requests as you would with any GitHub project.
