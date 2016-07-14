@@ -261,6 +261,8 @@ publish_release() {
   echo "Deleting remote release-candidate..."
   git push origin :release-candidate
 
+  git checkout develop
+
   echo "Press enter to open the release draft url in your browser:"
   read 
   open $htmlurl
