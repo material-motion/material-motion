@@ -22,7 +22,7 @@ We will find alternative ways to communicate when a library is ready for product
 
 Our goal is to cut releases early and often. We plan to automate as much of this as possible.
 
-**Our release process is not yet defined**.
+**Our release process is actively being formalized**.
 
 Every platform/language will have a different release process. We will formalize each one here as we begin to cut releases.
 
