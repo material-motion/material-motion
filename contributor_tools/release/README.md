@@ -25,8 +25,21 @@ from the latest `origin/develop` commit.
 
 ## Test the release
 
-The release-candidate is tested. The repository's CHANGELOG.md is updated to
-reflect the changes that went in to this release.
+Test the release by checking out the `release-candidate` branch and running unit tests.
+
+If remote continuous-integration is set up this is a good time to push the release-candidate to the
+remote.
+
+## Update CHANGELOG.md
+
+Update the CHANGELOG.md with the relevant release notes.
+
+Things to include:
+
+- API changes
+- New features
+- Bug fixes
+- Call out contributions from casual contributors
 
 ## Merge the release
 
