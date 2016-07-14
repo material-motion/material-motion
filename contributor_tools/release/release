@@ -83,6 +83,21 @@ cut_release() {
   fi
 
   git fetch
+
+  git show develop >> /dev/null 2>&1 || { git checkout -b develop origin/develop; }
+
+  deviance=$(git log develop..origin/develop --oneline | wc -l)
+  if [ $deviance != "0" ]; then
+    echo
+    echo "    Your local develop branch is behind origin/develop."
+    echo "    Refusing to continue until you've rebased off of origin/develop."
+    echo
+    echo "    git checkout develop"
+    echo "    git rebase origin/develop"
+    echo
+    exit 1
+  fi
+
   if $isHotFix; then
     branch_message="This is a hotfix... branching off origin/stable"
     branch=origin/stable
