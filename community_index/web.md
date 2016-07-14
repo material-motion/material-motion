@@ -17,6 +17,7 @@ Community implementations
 
 - [anime-js](http://anime-js.com/)
 - [mojs](http://mojs.io/)
+- [popmotion](https://popmotion.io/)
 
 ### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
