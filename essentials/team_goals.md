@@ -15,4 +15,4 @@ Specific end goals:
 
 - Able to express interaction and motion consistently across platforms.
 - Elevate awareness of motion frameworks, tools, and education.
-- Provide languages of motion capable of expressing powerful interactions.
+- Provide languages of motion capable of expressing rich interactions.
