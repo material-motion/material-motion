@@ -6,4 +6,6 @@ Essential information for **casual** contributors. [What's a casual contributor?
 
 Please file an issue in the relevant github repository in the material-motion org.
 
-ssue GitHub pull requests as you would with any GitHub project.
+## Made some code changes?
+
+Contributions are welcome. Please be sure to read our [Community](../community/) documentation before sending a GitHub pull request.
