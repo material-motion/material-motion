@@ -22,9 +22,15 @@ We will find alternative ways to communicate when a library is ready for product
 
 Our goal is to cut releases early and often. We plan to automate as much of this as possible.
 
-**Our release process is actively being formalized**.
+### Frequency
 
-Every platform/language will have a different release process. We will formalize each one here as we begin to cut releases.
+We cut releases on Wednesday of each week.
+
+### Process
+
+We use the `mdm release` toolchain to cut and publish our releases.
+
+Learn more about the tools by reading [the documentation](https://github.com/material-motion/material-motion-team/tree/develop/contributor_tools/release) or by running `mdm help release`.
 
 ## Release-blocking clients
 
