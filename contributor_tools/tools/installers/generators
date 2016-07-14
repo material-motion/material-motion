@@ -22,9 +22,10 @@ readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
 
 for file in $ROOT_DIR/generators/*; do
   name=$( basename "$file" | sed "s/generator-//" )
+  cd $file
+  npm install
   if [[ ! $( yo --generators | grep "^ *$name$" ) ]]; then
     echo "Linking $(basename $file) for yo..."
-    cd $file
     npm link
   fi
 done
