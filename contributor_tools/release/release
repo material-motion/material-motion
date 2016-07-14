@@ -174,7 +174,7 @@ merge_release() {
 
   enforce_changelog_version
 
-  echo "Merging develop into stable..."
+  echo "Merging release-candidate into stable and develop..."
 
   # Merge in to stable.
   git fetch
