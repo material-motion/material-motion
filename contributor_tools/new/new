@@ -25,7 +25,17 @@ new_repo() {
     usage
     exit 1
   fi
-  path="$(dirname $ROOT_DIR)/$1"
+
+  if [ "$1" == "." ]; then
+    name="$(basename $(pwd))"
+    path="$(mdm dir $name 2> /dev/null)" || {
+      echo "Current dir is not in $(dirname $(mdm dir))." >&2
+      exit 1
+    }
+  else
+    path="$(dirname $ROOT_DIR)/$1"
+  fi
+
   if [ ! -d $path ]; then
     echo "About to create a new git repo at the following location:"
     echo
@@ -53,7 +63,7 @@ new_repo() {
     echo
     echo -n "Press enter to continue..."
     read
-    
+
     cd $path
 
     yo mm-github
