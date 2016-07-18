@@ -10,12 +10,4 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ## Supported Swift version
 
-We will be supporting Swift 2.3 in all of our core examples until Swift 3 is officially released. To set a project's Swift version, please include the following in a `Podfile`:
-
-    post_install do |installer|
-      installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-          config.build_settings['SWIFT_VERSION'] = '2.3'
-        end
-      end
-    end
+We use Swift 3.
