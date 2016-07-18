@@ -10,4 +10,6 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 
 ## Supported Swift version
 
-We use Swift 3.
+We use Swift 3 for all unit tests and examples.
+
+Our core libraries are written in Objective-C.
