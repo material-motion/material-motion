@@ -49,6 +49,8 @@ This API should accept an element and return either an element or null.
 
 The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the delegate's `createReplica` API.
 
+If the delegate returns the provided element then the replica controller should return null.
+
 Example pseudo-code:
 
     ReplicatorController {
