@@ -19,16 +19,16 @@ Example pseudo-code:
     ReplicatorController {
     }
 
-**Replicator API**: Provide an API for setting a replicator instance.
+**Delegate API**: Provide an API for setting a delegate instance.
 
-The replicator instance performs the actual replication.
+The delegate instance performs the actual replication.
 
-> Consider providing a default replicator instance that performs a "best-effort" replication.
+> Consider providing a default delegate instance that performs a "best-effort" replication.
 
 Example pseudo-code:
 
     ReplicatorController {
-      var replicator: Replicator
+      var delegate: ReplicaControllerDelegate
     }
 
 **Disable replication API**: Provide an API for disabling replication of specific elements.
