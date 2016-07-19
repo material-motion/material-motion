@@ -23,6 +23,8 @@ Example pseudo-code:
 
 This API should accept an element and return an element.
 
+Returning the provided element indicates that the element should not be replicated.
+
 Example pseudo-code:
 
     protocol Replicator {
