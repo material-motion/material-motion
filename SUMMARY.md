@@ -21,7 +21,7 @@
        * [Interactions](specifications/interactions.md)
            * [Interaction Director](specifications/interaction_director.md)
            * [Interaction Controller](specifications/interaction_controller.md)
-   * [Creating replica elements](specifications/duplication.md)
+   * [Creating replica elements](specifications/replicas.md)
        * [ReplicaController](specifications/replicator_controller.md)
        * [ReplicaControllerDelegate](specifications/replicator.md)
    * [(drafts)](specifications/drafts.md)
