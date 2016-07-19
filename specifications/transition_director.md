@@ -83,6 +83,16 @@ Example pseudo-code:
       init(replicaController)
     }
 
+**ReplicaControllerDelegate API**: Transition directors can assign a `replicaControllerDelegate`.
+
+Subclasses are expected to set a custom replica controller delegate using this API.
+
+Example pseudo-code:
+
+    TransitionDirector {
+      var replicaControllerDelegate
+    }
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
