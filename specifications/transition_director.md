@@ -70,14 +70,16 @@ Example pseudo-code:
       init(initialDirection)
     }
 
-**ReplicaController API**: Transition directors have a read-only `replicaController` API.
+**ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
 Provide the replica controller to the director's initializer.
+
+This API is not accessible to sub-classes.
 
 Example pseudo-code:
 
     TransitionDirector {
-      readonly var replicaController
+      private readonly var replicaController
       init(replicaController)
     }
 
