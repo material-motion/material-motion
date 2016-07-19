@@ -47,7 +47,7 @@ Example pseudo-code:
 
 This API should accept an element and return either an element or null.
 
-The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the assigned replicator's `replicateElement` API.
+The implementation of this API first consults the list of disabled elements. If the element is present, the API returns null. If the element is not present, the controller invokes the delegate's `createReplica` API.
 
 Example pseudo-code:
 
