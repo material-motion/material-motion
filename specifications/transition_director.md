@@ -70,15 +70,15 @@ Example pseudo-code:
       init(initialDirection)
     }
 
-**Duplicator API**: Transition directors have a read-only `duplicationController` API.
+**ReplicaController API**: Transition directors have a read-only `replicaController` API.
 
-Provide the duplication controller to the director's initializer.
+Provide the replica controller to the director's initializer.
 
 Example pseudo-code:
 
     TransitionDirector {
-      readonly var duplicationController
-      init(duplicationController)
+      readonly var replicaController
+      init(replicaController)
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>
