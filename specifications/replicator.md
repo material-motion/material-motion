@@ -19,9 +19,11 @@ Example pseudo-code:
     protocol Replicator {
     }
 
-**Duplication API**: Provide an API for duplicating an element.
+**createReplica API**: Provide an API for replicating an element.
 
 This API should accept an element and return an element.
+
+If the returned element **is** the provided element, then the element should be treated as though it were a replica. This often means moving the replica from its hierarchy to a new hierarchy. At some point in the future the element may again be moved to a new hierarchy.
 
 Example pseudo-code:
 
