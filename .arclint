@@ -7,8 +7,7 @@
       "type": "prose",
       "include": "(\\.(md)$)",
       "exclude": [
-        "(^CHANGELOG.md)",
-        "(/templates/)"
+        "(^CHANGELOG.md)"
       ],
       "severity": {
         "typography.symbols.curly_quotes": "disabled",
