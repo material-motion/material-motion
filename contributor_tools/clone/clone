@@ -1,0 +1,54 @@
+#!/bin/bash
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+parentcmd=$(basename "${BASH_SOURCE[1]}")
+cmd=$(basename "${BASH_SOURCE[0]}")
+
+usage() {
+  $parentcmd help $cmd
+}
+
+repos() {
+  mdm gh repo --list -u material-motion | grep /
+}
+
+clone_repo() {
+  repo=$1
+  org=$(echo $repo | cut -d'/' -f1)
+  name=$(echo $repo | cut -d'/' -f2)
+  path="$ROOT_DIR/../$name"
+  if [ ! -d "$path" ]; then
+    git clone --recursive "git@github.com:$repo.git" "$path"
+  fi
+}
+
+clone_android() {
+  for repo in $(repos | grep "\-android"); do
+    clone_repo $repo
+  done
+}
+
+clone_apple() {
+  for repo in $(repos | grep "\-objc\|\-swift"); do
+    clone_repo $repo
+  done
+}
+
+case "$1" in
+  android)  clone_android ;;
+  apple)    clone_apple ;;
+  *)        usage ;;
+esac
