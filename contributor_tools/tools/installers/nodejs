@@ -19,17 +19,21 @@
 SHOULD_INSTALL=false
 
 REQUIRED_VERSION="4"
-VERSION=$(node --version)
-MAJOR_VERSION="${VERSION:1:1}"
+VERSION=$(node --version 2> /dev/null)
 
 if [[ $? -ne 0 ]]; then
   echo "nodejs is not installed"
   SHOULD_INSTALL=true
-elif [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
-  echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
-  SHOULD_INSTALL=true
 else
-  echo "nodejs version $MAJOR_VERSION already installed."
+  echo "Found $VERSION"
+  MAJOR_VERSION="${VERSION:1:1}"
+
+  if [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
+    echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
+    SHOULD_INSTALL=true
+  else
+    echo "nodejs version $MAJOR_VERSION already installed."
+  fi
 fi
 
 if [ "$SHOULD_INSTALL" = true ]; then
