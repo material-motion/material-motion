@@ -26,14 +26,13 @@ function list {
 
   echo
   echo "${b}COMMANDS${N}"
-  for f in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
-    if [ "$f" == "$COMMAND_DIR" ]; then
+  for path in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
+    if [ "$path" == "$COMMAND_DIR" ]; then
       continue # Find includes the given folder
-    fi
-    if [[ ! -f "$f/$( basename "$f" )" ]]; then
+    elif [[ ! -f "$path/$( basename "$path" )" ]]; then
       continue # Ignore directories with no command
     fi
-    command=$(basename "$f" | rev | cut -d'.' -f2- | rev)
+    command=$(basename "$path" | rev | cut -d'.' -f2- | rev)
     echo "     $command"
   done
 
@@ -63,7 +62,20 @@ function cmdhelp {
   fi
 }
 
+function cmdhelp_all {
+  for path in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
+    if [ "$path" == "$COMMAND_DIR" ]; then
+      continue # Find includes the given folder
+    elif [[ ! -f "$path/$( basename "$path" )" ]]; then
+      continue # Ignore directories with no command
+    fi
+    command=$(basename "$path" | rev | cut -d'.' -f2- | rev)
+    cmdhelp "$command"
+  done
+}
+
 case "$1" in
-  "") list ;;
-  *)  cmdhelp "${@:1}" ;;
+  "")      list ;;
+  "--all") cmdhelp_all ;;
+  *)       cmdhelp "${@:1}" ;;
 esac

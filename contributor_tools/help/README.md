@@ -2,6 +2,10 @@ Usage: `mdm help`
 
     List available commands.
 
+Usage: `mdm help --all`
+
+    Display help for all available commands.
+
 Usage: `mdm help <command>`
 
     The command's adjacent .md is written to the console.
