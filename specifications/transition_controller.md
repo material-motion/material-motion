@@ -30,12 +30,12 @@ Example pseudo-code:
       public var directorType: type(TransitionDirector)
     }
 
-**Runtime**: Store a single `Runtime` instance while the transition is active.
+**Scheduler**: Store a single `Scheduler` instance while the transition is active.
 
 Example pseudo-code:
 
     TransitionController {
-      private var runtime: Runtime
+      private var scheduler: Scheduler
     }
 
 **Duplication controller**: Store a single `DuplicationController` instance while the transition is active.
@@ -74,7 +74,7 @@ Example pseudo-code:
         transaction = Transaction()
         director.setUp(transaction)
         
-        # Initialize the runtime
+        # Initialize the ruschedulerntime
         scheduler = Scheduler()
         scheduler.addNewTargetObserver(duplicationController)
         scheduler.addActivityStateObserver(self)
