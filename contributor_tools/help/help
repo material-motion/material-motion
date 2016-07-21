@@ -32,7 +32,7 @@ function list {
     elif [[ ! -f "$path/$( basename "$path" )" ]]; then
       continue # Ignore directories with no command
     fi
-    command=$(basename "$path" | rev | cut -d'.' -f2- | rev)
+    command=$(basename "$path")
     echo "     $command"
   done
 
@@ -69,7 +69,7 @@ function cmdhelp_all {
     elif [[ ! -f "$path/$( basename "$path" )" ]]; then
       continue # Ignore directories with no command
     fi
-    command=$(basename "$path" | rev | cut -d'.' -f2- | rev)
+    command=$(basename "$path")
     cmdhelp "$command"
   done
 }
