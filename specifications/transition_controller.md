@@ -38,12 +38,12 @@ Example pseudo-code:
       private var scheduler: Scheduler
     }
 
-**Duplication controller**: Store a single `DuplicationController` instance while the transition is active.
+**Replication controller**: Store a single `ReplicationController` instance while the transition is active.
 
 Example pseudo-code:
 
     TransitionController {
-      private var duplicationController: DuplicationController
+      private var replicationController: ReplicationController
     }
 
 **Transition director**: Store a single `TransitionDirector` instance while the transition is active.
@@ -65,10 +65,10 @@ Example pseudo-code:
     TransitionController {
       function transitionWillStart(initialDirection) {
         # Initialize the Director
-        duplicationController = DuplicationController()
-        duplicationController.duplicator = SystemDuplicator()
+        replicationController = ReplicationController()
+        replicationController.duplicator = SystemDuplicator()
         
-        director = self.directorType(initialDirection, duplicationController)
+        director = self.directorType(initialDirection, replicationController)
         
         # Phase: set up
         transaction = Transaction()
@@ -76,7 +76,7 @@ Example pseudo-code:
         
         # Initialize the ruschedulerntime
         scheduler = Scheduler()
-        scheduler.addNewTargetObserver(duplicationController)
+        scheduler.addNewTargetObserver(replicationController)
         scheduler.addActivityStateObserver(self)
         scheduler.commit(transaction)
       }
