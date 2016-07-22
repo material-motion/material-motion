@@ -18,7 +18,7 @@ Community implementations
 - [anime](http://anime-js.com/)
 - [mojs](http://mojs.io/)
 - [Popmotion](https://popmotion.io/)
-- [TweenLite](http://greensock.com/tweenlite)
+- [TweenLite](http://greensock.com/tweenlite) (_[funky license](http://greensock.com/standard-license)_)
 - [Velocity](http://velocityjs.org//)
 
 ### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
