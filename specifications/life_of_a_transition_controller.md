@@ -61,3 +61,5 @@ For example:
 Once the transition controller detects that the scheduler activity has idled, the transition controller should terminate the transition. How this is communicated will depend on the platform.
 
 > On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
+
+At this point the transition controller might throw away its `TransitionRuntime` instance.
