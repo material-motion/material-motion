@@ -30,7 +30,7 @@ Most platforms have a standard mechanism for initiating a transition. At this po
 
 ### Step 4: Create a runtime and a director
 
-To coordinate a transition, a transition controller must create a Material Motion Runtime and a director.
+To coordinate a transition, a transition controller must create a scheduler and a director.
 
 For example:
 
