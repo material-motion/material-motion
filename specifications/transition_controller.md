@@ -92,6 +92,10 @@ Example pseudo-code:
           self.transitionDidFinish()
         }
       }
+      
+      function transitionDidFinish() {
+        director.tearDown();
+      }
     }
 
 **System bridge**: Implement the necessary bridge for the platform's transitioning APIs.
