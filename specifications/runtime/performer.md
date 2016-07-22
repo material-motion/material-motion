@@ -80,13 +80,6 @@ Example pseudo-code if your language does not support anonymous functions:
       function delegatedExecutionDidFinish(performer, token)
     }
 
-Example pseudo-code if your language supports anonymous functions:
-
-    protocol DelegatedExecution {
-      var delegatedExecutionWillStart(performer) -> DelegatedPerformanceToken
-      var delegatedExecutionDidFinish(performer, token)
-    }
-
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
