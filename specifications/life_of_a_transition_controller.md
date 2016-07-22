@@ -27,3 +27,40 @@ A transition controller reacts to the initiation of new transitions by customizi
 
 > On iOS, for example, a transition controller is set as the `transitioningDelegate` property. This allows the controller to be informed when a new transition is about to start. The controller can then initiate the transition and, upon completion, hand control back to the platform.
 
+### Step 3: Initiate a transition
+
+Most platforms have a standard mechanism for initiating a transition. At this point our transition controller should take control of the transition.
+
+### Step 4: Create a runtime and a director
+
+To coordinate a transition, a transition controller must create a Material Motion Runtime and a director.
+
+For example:
+
+    transitionWillStart {
+      runtime = TransitionRuntime(new directorClass())
+      runtime.start()
+    }
+
+    class TransitionRuntime {
+      let scheduler
+      initWithDirector(director) {
+        scheduler = Scheduler()
+        transaction = Transaction()
+        director.setUp(transaction)
+        scheduler.commit(transaction)
+        
+        scheduler.addActivityStateObserver({
+          if scheduler.activityState == isIdle {
+            self.transitionDidComplete()
+          }
+        })
+      }
+    }
+
+### Step 5: Once the runtime idles, terminate the transition
+
+Once the transition controller detects that the runtime has entered an idle state, the transition controller should terminate the transition. How this is communicated will depend on the platform.
+
+> On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
+
