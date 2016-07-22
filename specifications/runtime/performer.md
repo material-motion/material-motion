@@ -69,7 +69,7 @@ Example pseudo-code if your language supports anonymous functions:
 
 The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
 
-Example pseudo-code if your language does not support anonymous functions:
+Example pseudo-code:
 
     protocol DelegatingPerformer {
       function setDelegatedExecutionCallback(callback)
