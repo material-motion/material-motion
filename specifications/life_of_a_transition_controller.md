@@ -63,4 +63,3 @@ For example:
 Once the transition controller detects that the runtime has entered an idle state, the transition controller should terminate the transition. How this is communicated will depend on the platform.
 
 > On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
-
