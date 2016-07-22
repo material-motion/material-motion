@@ -18,6 +18,6 @@ Our core libraries are written in Objective-C.
 
 `MDM` is our API prefix.
 
-Add this prefix to library code. E.g. anything in a `src/` directory.
+Add the prefix to any API included in one of our libraries. E.g. anything in a `src/` directory.
 
 Non-library code has no prefix. E.g. anything in a `examples/` or `tests/` directory.
