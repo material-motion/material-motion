@@ -20,7 +20,7 @@ Transition controllers can be created **lazily**. In the absence of a transition
 
 ### Step 2: Connect the transition controller to the platform
 
-A transition controller reacts to the initiation of new transitions by customizing the motion that occurs. How a transitioin controller reacts to new transitions differs on a platform-by-platform basis.
+A transition controller reacts to the initiation of new transitions by customizing the motion that occurs. How a transition controller reacts to new transitions differs on a platform-by-platform basis.
 
 > On iOS, for example, a transition controller is set as the `transitioningDelegate` property. This allows the controller to be informed when a new transition is about to start. The controller can then initiate the transition and, upon completion, hand control back to the platform.
 
