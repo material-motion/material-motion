@@ -15,9 +15,11 @@ Standard JavaScript:
 
 Community implementations
 
-- [anime-js](http://anime-js.com/)
+- [anime](http://anime-js.com/)
 - [mojs](http://mojs.io/)
-- [popmotion](https://popmotion.io/)
+- [Popmotion](https://popmotion.io/)
+- [TweenLite](http://greensock.com/tweenlite)
+- [Velocity](http://velocityjs.org//)
 
 ### [Gesture recognition](../specifications/primitives.md#gesture-recognition)
 
