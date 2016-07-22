@@ -63,6 +63,8 @@ Example pseudo-code if your language supports anonymous functions:
       var delegatedExecutionDidFinish(performer, name)
     }
 
+<a name="delegationv2"></a>
+
 **Delegated execution API v2 (draft)**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
