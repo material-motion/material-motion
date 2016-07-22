@@ -30,7 +30,9 @@ Most platforms have a standard mechanism for initiating a transition. At this po
 
 ### Step 4: Create a runtime and a director
 
-To coordinate a transition, a transition controller must create a scheduler and a director. The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition.
+To coordinate a transition, a transition controller must create a scheduler and a director.
+
+The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRuntime`.
 
 For example:
 
