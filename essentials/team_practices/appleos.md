@@ -13,3 +13,11 @@ We use a file system convention based on [Google's GOS-conventions.](https://git
 We use Swift 3 for all unit tests and examples.
 
 Our core libraries are written in Objective-C.
+
+## Prefixes
+
+`MDM` is our API prefix.
+
+Add this prefix to library code. E.g. anything in a `src/` directory.
+
+Non-library code has no prefix. E.g. anything in a `examples/` or `tests/` directory.
