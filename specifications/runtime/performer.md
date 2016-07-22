@@ -80,6 +80,8 @@ Example pseudo-code:
       function delegatedExecutionDidFinish(performer, token)
     }
 
+In English: the performer must implement a method that receives two functions. The first function declares that delegated work will begin and returns a token. The second function must be called once the delegated work has completed. Provide the token returned by the first function to this second function.
+
 <p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
