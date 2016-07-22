@@ -38,7 +38,6 @@ For example:
 
     transitionWillStart {
       runtime = TransitionRuntime(new directorClass())
-      runtime.start()
     }
 
     class TransitionRuntime {
