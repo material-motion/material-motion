@@ -20,7 +20,7 @@ Example pseudo-code:
 
 **One controller per transition**: Every transition has access to its own `TransitionController` instance.
 
-Note that a transition can have two directions. A single controller governs both the "present" and "dismiss" versions of the transition.
+Note that a transition can have two directions: present and dismiss. A single controller governs both the "present" and "dismiss" versions of the transition.
 
 **Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
