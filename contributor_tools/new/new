@@ -56,6 +56,10 @@ new_repo() {
       git checkout -b stable
       git checkout develop
     fi
+    
+    if [ -f "Podfile" ]; then
+      pod install
+    fi
   else
     echo "Updating existing git repo at the following location:"
     echo
