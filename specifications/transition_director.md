@@ -34,24 +34,29 @@ Example pseudo-code:
       }
     }
 
-**Left/right side APIs**: Provide storage for relevant information to the transition.
-
-Transition directors think in terms of left and right *sides* of the transition. Provide APIs for storing relevant information.
+**source/destination/direction APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
 
     MyTransitionDirector: TransitionDirector {
-      public var leftViewController
-      public var rightViewController
+      public var sourceViewController
+      public var destinationViewController
+      public var transitionDirection
     }
 
-**Transition direction type**: Provide a `TransitionDirection` type with two possible values: *to the left* and *to the right*.
+**Transition direction type**: Provide a `TransitionDirection` type with two opposite values.
+
+Many synonyms exist. Use that which applies best to your platform.
+
+- present/dismiss
+- push/pop
+- forward/back
 
 Example pseudo-code:
 
     enum TransitionDirection {
-      .ToTheRight
-      .ToTheLeft
+      .Present
+      .Dismiss
     }
 
 **Initial direction API**: Transition directors have a read-only `initialDirection` API.
