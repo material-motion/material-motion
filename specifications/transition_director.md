@@ -59,20 +59,20 @@ Example pseudo-code:
       .Dismiss
     }
 
-**Initial direction API**: Transition directors have a read-only `initialDirection` API.
+**Initial transition direction API**: Transition directors have a read-only `initialTransitionDirection` API.
 
-Provide the initial direction of the transition to the director's initializer.
+Provide the initial transition direction of the transition to the director's initializer.
 
 Example pseudo-code:
 
     enum TransitionDirection {
-      .ToTheRight
-      .ToTheLeft
+      .Present
+      .Dismiss
     }
     
     TransitionDirector {
-      readonly var initialDirection
-      init(initialDirection)
+      readonly var initialTransitionDirection
+      init(initialTransitionDirection)
     }
 
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
