@@ -28,7 +28,7 @@ A transition controller reacts to the initiation of new transitions by customizi
 
 Most platforms have a standard mechanism for initiating a transition. At this point our transition controller should take control of the transition.
 
-### Step 3.1: Create a runtime and a director
+#### Step 3.1: Create a runtime and a director
 
 To coordinate a transition, a transition controller must create a scheduler and a director.
 
