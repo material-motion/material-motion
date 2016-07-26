@@ -10,7 +10,7 @@ Printable tech tree/checklist:
 
 ---
 
-<p style="text-align:center"><tt>MVP</tt></p>
+<p id="mvp" style="text-align:center"><tt>MVP</tt></p>
 
 **Simple initializer**: A scheduler is cheap to create.
 
@@ -112,7 +112,7 @@ A scheduler is active if any of its performer instances are active.
 
 ---
 
-<p style="text-align:center"><tt>feature: activity state change event</tt></p>
+<p id="activity-state-change-event" style="text-align:center"><tt>feature: activity state change event</tt></p>
 
 Fire an observable event when the at rest/active state changes.
 
@@ -131,7 +131,7 @@ Fire an observable event when the at rest/active state changes.
 <p style="text-align:center"><tt>/feature: activity state change event</tt></p>
 
 ---
-<p style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
+<p id="garbage-collectable-performers" style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
 
@@ -149,7 +149,7 @@ The [JavaScript implementation](https://github.com/material-motion/material-moti
 
 ---
 
-<p style="text-align:center"><tt>feature: named plans</tt></p>
+<p id="named-plans" style="text-align:center"><tt>feature: named plans</tt></p>
 
 Schedulers support named plans. Named plans are plans with a name associated via the transaction.
 
@@ -197,7 +197,7 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: new target event</tt></p>
+<p id = "new-target-event" style="text-align:center"><tt>feature: new target event</tt></p>
 
 Fire an observable event when a new target is referenced.
 
