@@ -5,3 +5,8 @@ Usage: `mdm clone android`
 Usage: `mdm clone apple`
 
     Clone all Apple-related Material Motion GitHub repositories.
+
+Usage: `mdm clone temp <ref>`
+
+    Create a temporary clone of the current git repository at
+    the provided ref. The temporary path will be written to stdout.

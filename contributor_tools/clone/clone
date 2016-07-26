@@ -47,8 +47,34 @@ clone_apple() {
   done
 }
 
+clone_tmp() {
+  if [[ -z "$1" ]]; then
+    usage
+    exit 1
+  fi
+
+  ref=$(git rev-list -n 1 "$1" -- 2> /dev/null || echo "")
+
+  if [ -z "$ref" ]; then
+    echo "$1 is not a known ref."
+    exit 1
+  fi
+
+  tmp_path=$(mktemp -d)
+  git_root="$(git rev-parse --show-toplevel | tail -n1)";
+
+  git clone "$git_root" "$tmp_path" -q || { echo "ERROR: Failed to clone."; exit 1; }
+  pushd "$tmp_path" >> /dev/null
+  git fetch -q || { echo "ERROR: Failed to update repo."; exit 1; }
+  git checkout "$ref" -q
+  popd >> /dev/null
+
+  echo "$tmp_path"
+}
+
 case "$1" in
   android)  clone_android ;;
   apple)    clone_apple ;;
+  temp|tmp) clone_tmp "${@:2}" ;;
   *)        usage ;;
 esac
