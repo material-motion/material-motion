@@ -143,7 +143,7 @@ The [JavaScript implementation](https://github.com/material-motion/material-moti
 
 - 500ms is long enough that new plans in this sequence are unlikely, but short enough that the user is unlikely to be initiating new plans.
 
-> Under this strategy, it is especially important that performers can read the state that another performer may have set on a target.  Otherwise, when a performer is garbage collected an a new one takes its place, the new performer may reset the starting position of a target.  This would be jarring.
+> Under this strategy, it is especially important that performers can read the state that another performer may have set on a target.  Otherwise, when a performer is garbage collected and a new one takes its place, the new performer might reset the starting position of a target.  This would be jarring.
 
 <p style="text-align:center"><tt>/feature: garbage-collectable performers</tt></p>
 
