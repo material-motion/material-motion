@@ -72,9 +72,15 @@ clone_tmp() {
   echo "$tmp_path"
 }
 
+clone_repo_matching() {
+  for repo in $(repos | grep "$1"); do
+    clone_repo $repo
+  done
+}
+
 case "$1" in
   android)  clone_android ;;
   apple)    clone_apple ;;
   temp|tmp) clone_tmp "${@:2}" ;;
-  *)        usage ;;
+  *)        clone_repo_matching "${@:2}" ;;
 esac

@@ -6,6 +6,13 @@ Usage: `mdm clone apple`
 
     Clone all Apple-related Material Motion GitHub repositories.
 
+Usage: `mdm clone repo <filter>`
+
+    Clone all material-motion repos matching <filter>, where <filter>
+    is a `grep` filter.
+    
+    Example: `mdm clone repo milemarker`
+
 Usage: `mdm clone temp <ref>`
 
     Create a temporary clone of the current git repository at
