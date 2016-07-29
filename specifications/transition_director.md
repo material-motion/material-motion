@@ -34,13 +34,13 @@ Example pseudo-code:
       }
     }
 
-**source/destination/direction APIs**: Provide storage for information relevant to the transition.
+**from/to APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
 
     MyTransitionDirector: TransitionDirector {
-      public var sourceViewController
-      public var destinationViewController
+      public var fromViewController
+      public var toViewController
       public var transitionDirection
     }
 
