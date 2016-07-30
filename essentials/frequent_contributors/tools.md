@@ -55,4 +55,5 @@ Versions of software we use:
 
   Update your version:
 
+      xcode-select --install # May need to run this first
       sudo gem update psych
