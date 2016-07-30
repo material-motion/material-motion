@@ -32,6 +32,10 @@ install() {
   # arc
   run_installer arc
 
+  if [ "$(uname)" == "Darwin" ]; then
+    run_installer brew
+  fi
+
   # nodejs
   run_installer nodejs
 
@@ -53,7 +57,6 @@ install() {
 
   if [ "$(uname)" == "Darwin" ]; then
     echo "Installing mac-specific tools..."
-    run_installer brew
     run_installer clang-format
     run_installer cocoapods
 

@@ -44,3 +44,32 @@ if [ "$SHOULD_INSTALL" = true ]; then
   source ~/.nvm/nvm.sh
   nvm install "$REQUIRED_VERSION"
 fi
+
+# Install npm v2
+
+SHOULD_INSTALL=false
+REQUIRED_VERSION="2"
+VERSION=$(npm --version 2> /dev/null)
+
+if [[ $? -ne 0 ]]; then
+  echo "npm is not installed"
+  SHOULD_INSTALL=true
+else
+  echo "Found $VERSION"
+  MAJOR_VERSION="${VERSION:1:1}"
+
+  if [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
+    echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
+    SHOULD_INSTALL=true
+  else
+    echo "nodejs version $MAJOR_VERSION already installed."
+  fi
+fi
+
+if [ "$SHOULD_INSTALL" = true ]; then
+  echo "Installing npm..."
+
+  if [ "$(uname)" == "Darwin" ]; then
+    brew install npm
+  fi
+fi
