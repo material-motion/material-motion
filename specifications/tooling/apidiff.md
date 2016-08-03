@@ -14,8 +14,12 @@ From a git repo:
 
 `apidiff` accepts an old ref, new ref, and engine. It may also accept additional args that should be passed to the relevant engine. It outputs a JSON array of dictionaries.
 
+Example:
+
     apidiff v1.0.0 release-candidate apple --umbrella-header=src/MaterialMotionRuntime.h
 
 `diffreport` reads a JSON API diff from stdin. It outputs a formatted version of the API diff.
+
+Example:
 
     apidiff ... | diffreport markdown
