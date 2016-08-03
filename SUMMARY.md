@@ -36,6 +36,7 @@
        * [Motion Expression](specifications/expressions.md)
            * [Further considerations](specifications/expressions-addendum.md)
    * [Tooling](specifications/tooling/README.md)
+       * apidiff
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
    * [Android](community_index/android.md)
