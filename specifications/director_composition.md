@@ -1,3 +1,6 @@
+Status of this document:
+![](../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Director composition
 
 TODO: Describe how director composition is intended to work.
