@@ -59,6 +59,7 @@ install() {
     echo "Installing mac-specific tools..."
     run_installer clang-format
     run_installer cocoapods
+    run_installer sourcekitten
 
   elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     echo "Installing linux-specific tools..."
