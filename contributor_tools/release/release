@@ -157,6 +157,53 @@ abort_release() {
   git push origin :release-candidate
 }
 
+generate_release_notes() {
+  current_branch=$(current_branch)
+  if [ "$current_branch" != "release-candidate" ]; then
+    echo "This command must be run from the release-candidate branch."
+    echo
+    echo "Your current branch: $current_branch"
+    exit 1
+  fi
+
+  repo=$($parentcmd gh repo --whoami)
+
+  ref_log() {
+    git log \
+      --pretty="%H" \
+      --no-merges \
+      origin/stable..release-candidate
+  }
+
+  echo "## Source changes"
+  echo
+
+  ref_log | while read ref; do
+    if [[ $(git diff-tree --no-commit-id --name-only -r $ref | grep -e "^src/" -e "^tests/" -e "^library/src/") ]]; then
+      git log -1 --pretty="* [%s](https://github.com/$repo/commit/%H) (%an)" $ref
+    fi
+  done
+
+  echo
+  echo "## API changes"
+  echo
+
+  if [ -f "$rootdir/Podfile" ]; then
+    umbrella_header=$(cd $rootdir; ls src/MaterialMotion*)
+    "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate apple $umbrella_header
+  fi
+
+  echo
+  echo "## Non-source changes"
+  echo
+
+  ref_log | while read ref; do
+    if [[ ! $(git diff-tree --no-commit-id --name-only -r $ref | grep -e "^src/" -e "^tests/" -e "^library/src/") ]]; then
+      git log -1 --pretty="* [%s](https://github.com/$repo/commit/%H) (%an)" $ref
+    fi
+  done
+}
+
 merge_release() {
   version=${1#v}
   if [ -z "$version" ]; then
@@ -272,6 +319,7 @@ enforce_clean_state
 
 case "$1" in
   cut)     cut_release ${@:2} ;;
+  notes)   generate_release_notes ${@:2} ;;
   merge)   merge_release ${@:2} ;;
   publish) publish_release ${@:2} ;;
 

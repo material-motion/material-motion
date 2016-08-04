@@ -41,6 +41,10 @@ Things to include:
 - Bug fixes
 - Call out contributions from casual contributors
 
+Use the notes command to generate release notes.
+
+    mdm release notes
+
 ## Merge the release
 
 Once the release is tested, it is ready to be merged. By this point you should
@@ -66,6 +70,14 @@ Usage: `mdm release cut [--hotfix]`
     
     Options:
       --hotfix  Cuts the release candidate from `origin/stable`.
+
+Usage: `mdm release notes`
+
+    Generates release notes from the previous `origin/stable` branch to the head
+    of `release-candidate`.
+    
+    Prerequirements:
+    - Ran `mdm release cut`.
 
 Usage: `mdm release merge <version>`
 
