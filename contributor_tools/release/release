@@ -302,7 +302,7 @@ publish_release() {
   echo "    Edit the draft: $htmlurl"
   echo
   echo "Update the release's description with the following:${B}"
-  awk '/# / { print $0; while(getline > 0) {if (/# /) exit; print $0 }}' "$rootdir/CHANGELOG.md" | tail -n +2
+  awk '/# / { print $0; while(getline > 0) {if (/^# /) exit; print $0 }}' "$rootdir/CHANGELOG.md" | tail -n +2
   echo ${N}
 
   echo "Deleting remote release-candidate..."
