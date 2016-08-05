@@ -43,6 +43,13 @@ enforce_clean_state() {
   fi
 }
 
+enforce_release_cut() {
+  if [ ! $(git rev-parse --verify release-candidate 2> /dev/null) ]; then
+    echo "No release in progress."
+    exit 1
+  fi
+}
+
 enforce_changelog_version() {
   changelog_version=$(awk '/# (.+)/ { print $2; exit}' "$rootdir/CHANGELOG.md")
   if [ "$changelog_version" == "release-candidate" ]; then
@@ -141,10 +148,7 @@ cut_release() {
 }
 
 abort_release() {
-  if [ ! $(git rev-parse --verify release-candidate 2> /dev/null) ]; then
-    echo "No release in progress."
-    exit 0
-  fi
+  enforce_release_cut
 
   echo "${B}About to abort the release candidate.${N}"
   echo "${B}${U}This action is not easily reversible.${N}"
@@ -158,6 +162,8 @@ abort_release() {
 }
 
 generate_release_notes() {
+  enforce_release_cut
+
   current_branch=$(current_branch)
   if [ "$current_branch" != "release-candidate" ]; then
     echo "This command must be run from the release-candidate branch."
@@ -208,6 +214,8 @@ generate_release_notes() {
 }
 
 merge_release() {
+  enforce_release_cut
+
   version=${1#v}
   if [ -z "$version" ]; then
     echo "Must provide a ${U}version${N} argument."
