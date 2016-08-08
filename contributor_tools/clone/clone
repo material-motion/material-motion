@@ -82,5 +82,5 @@ case "$1" in
   android)  clone_android ;;
   apple)    clone_apple ;;
   temp|tmp) clone_tmp "${@:2}" ;;
-  *)        clone_repo_matching "${@:2}" ;;
+  *)        clone_repo_matching "${@:1}" ;;
 esac
