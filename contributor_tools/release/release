@@ -189,8 +189,11 @@ generate_release_notes() {
   echo
 
   if [ -f "$rootdir/Podfile" ]; then
-    umbrella_header=$(cd $rootdir; ls src/MaterialMotion*)
+    umbrella_header="$(cd $rootdir; ls src/MaterialMotion*)"
     "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate apple $umbrella_header
+  elif [ -f "$rootdir/build.gradle" ]; then
+    library="library"
+    "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate android $library
   fi
 
   echo
