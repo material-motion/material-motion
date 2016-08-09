@@ -31,6 +31,8 @@ else
   # Arc is not installed and we don't have a path to install it to.
   echo "Arc is not installed."
 
+  mkdir -p "${ARC_INSTALL_PATH}"
+
   # Install arc as requested.
   git -C "${ARC_INSTALL_PATH}" clone https://github.com/phacility/libphutil.git && \
   git -C "${ARC_INSTALL_PATH}" clone https://github.com/phacility/arcanist.git
