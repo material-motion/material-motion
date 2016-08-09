@@ -311,8 +311,13 @@ publish_release() {
   git checkout develop
 
   echo "Press enter to open the release draft url in your browser:"
-  read 
-  open $htmlurl
+  read
+
+  if [ "$(uname)" == "Darwin" ]; then
+    open $htmlurl
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    xdg-open $htmlurl
+  fi
 }
 
 enforce_clean_state
@@ -324,6 +329,6 @@ case "$1" in
   publish) publish_release ${@:2} ;;
 
   abort)   abort_release ${@:2} ;;
-  
+
   *)       usage ;;
 esac
