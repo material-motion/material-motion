@@ -16,6 +16,7 @@
 
 parentcmd=$(basename "${BASH_SOURCE[1]}")
 cmd=$(basename "${BASH_SOURCE[0]}")
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 usage() {
   $parentcmd help $cmd
@@ -161,6 +162,35 @@ abort_release() {
   git push origin :release-candidate
 }
 
+bump_release() {
+  if [ -z "$1" ]; then
+    echo "Missing desired version."
+    echo
+    echo "Usage: $parentcmd $cmd bump <desired version> [<old version>]"
+    echo
+    exit 1
+  fi
+
+  enforce_release_cut
+
+  new_version="$1"
+  new_version=${new_version#v}
+  new_version=$(echo "$new_version" | sed "s:\.:\\\\.:g")
+  
+  if [ -z "$2" ]; then
+    last_version=$(git describe --tags $(git rev-list --tags --max-count=1))
+  else
+    last_version="$2"
+  fi
+  last_version=${last_version#v}
+  last_version=$(echo "$last_version" | sed "s:\.:\\\\.:g")
+
+  grep -Ilr "$last_version" . | grep -v -f "$dir/versionignore" | while read line; do
+    sed -i.bak "s:$last_version:$new_version:g" $line
+    rm $line.bak
+  done
+}
+
 generate_release_notes() {
   enforce_release_cut
 
@@ -231,6 +261,15 @@ merge_release() {
   fi
 
   enforce_changelog_version
+
+  last_version=$(git describe --tags $(git rev-list --tags --max-count=1))
+  last_version=${last_version#v}
+  last_version=$(echo "$last_version" | sed "s:\.:\\\\.:g")
+  if grep -Ilr "$last_version" . | grep -v -f "$dir/versionignore"; then
+    echo "Old version $last_version found in the files above. Aborting release merge."
+    echo "Please run $parentcmd $cmd bump"
+    exit 1
+  fi
 
   echo "Merging release-candidate into stable and develop..."
 
@@ -335,6 +374,7 @@ enforce_clean_state
 
 case "$1" in
   cut)     cut_release ${@:2} ;;
+  bump)    bump_release ${@:2} ;;
   notes)   generate_release_notes ${@:2} ;;
   merge)   merge_release ${@:2} ;;
   publish) publish_release ${@:2} ;;

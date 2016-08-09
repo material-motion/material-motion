@@ -45,6 +45,12 @@ Use the notes command to generate release notes.
 
     mdm release notes
 
+## Bump version numbers
+
+Bump the version number throughout the repository.
+
+    mdm release bump <new version> [<old version>]
+
 ## Merge the release
 
 Once the release is tested, it is ready to be merged. By this point you should
@@ -75,6 +81,17 @@ Usage: `mdm release notes`
 
     Generates release notes from the previous `origin/stable` branch to the head
     of `release-candidate`.
+    
+    Prerequirements:
+    - Ran `mdm release cut`.
+
+Usage: `mdm release bump <new version> [<old version>]`
+
+    Updates all references to <old version> with <new version> in the repository.
+    If not provided, <old version> is inferred from the latest git tag.
+    
+    Will NOT modify files that match any of the regular expressions contained in
+    the versionignore file that lives beside the `release` command.
     
     Prerequirements:
     - Ran `mdm release cut`.
