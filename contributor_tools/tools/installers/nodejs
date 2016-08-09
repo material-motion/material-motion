@@ -50,13 +50,14 @@ fi
 SHOULD_INSTALL=false
 REQUIRED_VERSION="2"
 VERSION=$(npm --version 2> /dev/null)
+VERSION=${VERSION#v}
 
 if [[ $? -ne 0 ]]; then
   echo "npm is not installed"
   SHOULD_INSTALL=true
 else
   echo "Found $VERSION"
-  MAJOR_VERSION="${VERSION:1:1}"
+  MAJOR_VERSION="${VERSION:0:1}"
 
   if [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
     echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
