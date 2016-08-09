@@ -75,7 +75,7 @@ detect_profile() {
   fi
 }
 
-if [ "$command" == " --shell-profile" ]; then
+if [ "$command" == "--shell-profile" ]; then
   detect_profile
   exit 0
 fi
