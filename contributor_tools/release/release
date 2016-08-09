@@ -53,6 +53,7 @@ enforce_release_cut() {
 
 enforce_changelog_version() {
   changelog_version=$(awk '/# (.+)/ { print $2; exit}' "$rootdir/CHANGELOG.md")
+  changelog_version=$(version_for_platform $changelog_version)
   if [ "$changelog_version" == "release-candidate" ]; then
     echo "${B}You haven't updated CHANGELOG.md with the current version yet.${N}"
     echo "Please update CHANGELOG.md before running this command again."
@@ -65,6 +66,19 @@ enforce_changelog_version() {
     echo
     echo "Please edit CHANGELOG.md or change your version number."
     echo
+    exit 1
+  fi
+}
+
+version_for_platform() {
+  user_version="$1"
+
+  if [ -f "$rootdir/Podfile" ]; then
+    echo "v${user_version#v}"
+  elif [ -f "$rootdir/build.gradle" ]; then
+    echo "${user_version#v}"
+  else
+    echo "Could not determine platform." >&2
     exit 1
   fi
 }
@@ -176,7 +190,7 @@ bump_release() {
   new_version="$1"
   new_version=${new_version#v}
   new_version=$(echo "$new_version" | sed "s:\.:\\\\.:g")
-  
+
   if [ -z "$2" ]; then
     last_version=$(git describe --tags $(git rev-list --tags --max-count=1))
   else
@@ -246,7 +260,7 @@ generate_release_notes() {
 merge_release() {
   enforce_release_cut
 
-  version=${1#v}
+  version=$(version_for_platform $1)
   if [ -z "$version" ]; then
     echo "Must provide a ${U}version${N} argument."
     exit 1
@@ -289,7 +303,7 @@ merge_release() {
 }
 
 publish_release() {
-  version=${1#v}
+  version=$(version_for_platform $1)
   if [ -z "$version" ]; then
     echo "Must provide a ${U}version${N} argument."
     exit 1
@@ -320,14 +334,14 @@ publish_release() {
   fi
 
   curl -sH "Authorization: token $ghtoken" \
-    "https://api.github.com/repos/$version/releases/tags/v$version" \
+    "https://api.github.com/repos/$repopath/releases/tags/$version" \
     | grep -q 'message": "Not Found'
 
   if [ $? -ne 0 ]; then # Found the release
     echo "Release already cut."
     echo
-    echo "    Release URL: https://github.com/$repopath/releases/tag/v$version"
-    open "https://github.com/$repopath/releases/tag/v$version"
+    echo "    Release URL: https://github.com/$repopath/releases/tag/$version"
+    open "https://github.com/$repopath/releases/tag/$version"
     exit 0
   fi
 
@@ -339,7 +353,7 @@ publish_release() {
     -H "Authorization: token $ghtoken" \
     -H "Content-Type: application/json" \
     -X POST \
-    -d '{"tag_name":"v'$version'","target_commitish":"stable","name":"v'$version'","draft":true}' \
+    -d '{"tag_name":"'$version'","target_commitish":"stable","name":"'$version'","draft":true}' \
     "https://api.github.com/repos/$repopath/releases" > "$tmp_path/release"
 
   # TODO: Check failure.
