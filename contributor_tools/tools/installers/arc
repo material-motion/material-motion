@@ -43,7 +43,7 @@ else
   ARC_PATH="${ARC_BINARY_PATH}/arc"
 
   # Add arc to the user's startup paths if requested.
-  SHELL_STARTUP_PATH=$(detect_profile)
+  SHELL_STARTUP_PATH=$(mdm --shell-profile)
 
   # Check if it already exists.
   if grep --quiet "PATH=${ARC_BINARY_PATH}" "${SHELL_STARTUP_PATH}"; then
