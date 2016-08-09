@@ -20,6 +20,8 @@
 #
 # This is not required for anyone but core team members to conduct reviews.
 
+ARC_INSTALL_PATH="$HOME/.arc"
+
 # Figure out if arc is already installed.
 ARC_PATH=$(which arc)
 if [ $? -eq 0 ]; then
@@ -30,7 +32,6 @@ else
   echo "Arc is not installed."
 
   # Install arc as requested.
-  ARC_INSTALL_PATH="~/.arc"
   git -C "${ARC_INSTALL_PATH}" clone https://github.com/phacility/libphutil.git && \
   git -C "${ARC_INSTALL_PATH}" clone https://github.com/phacility/arcanist.git
   if [ $? -ne 0 ]; then
@@ -58,6 +59,17 @@ else
     echo "NOTE: To get arc in your path for *this* sesssion, re-source ${SHELL_STARTUP_PATH} or "
     echo "      otherwise re-initialize your shell's path."
   fi
+fi
+
+echo
+
+if [ ! -d "${ARC_INSTALL_PATH}/material-arc-tools" ]; then
+  echo "Installing arc tools..."
+  git -C "${ARC_INSTALL_PATH}" clone --recursive git@github.com:material-foundation/material-arc-tools.git
+else
+  echo "Updating arc tools..."
+  git -C "${ARC_INSTALL_PATH}/material-arc-tools" fetch
+  git -C "${ARC_INSTALL_PATH}/material-arc-tools" checkout origin/develop
 fi
 
 echo 
