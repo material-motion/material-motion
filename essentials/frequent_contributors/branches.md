@@ -1,8 +1,4 @@
-# Writing code
-
-This article defines the policies we expect implementations of the Starmap to follow.
-
-## Branches
+# Branches
 
 Primary development branch: **develop**
 
