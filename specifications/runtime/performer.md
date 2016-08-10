@@ -136,7 +136,7 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Composable plans</tt></p>
+<p name="composability" style="text-align:center"><tt>feature: Composable plans</tt></p>
 
 Performers can commit new plans to a Scheduler.
 
