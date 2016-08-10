@@ -13,14 +13,14 @@ Here's a list of tools we currently use as a team:
 
 ## Installing our tools
 
-We have a team command line tool that installs the different commands.
+Our team uses a custom tool called `mdm` to manage all of our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
-    git clone git@github.com:material-motion/material-motion-team.git
+    git clone --recursive git@github.com:material-motion/material-motion-team.git
     cd material-motion-team
     echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
-    
-This output should be added to your `~/.bashrc` or `~/.bash_profile`.
-    
+
+Add the output path to whichever file your shell uses to configure environment variables. This is often `~/.bash_profile` or `~/.bashrc`.
+
     # edit ~/.bash_profile
     source ~/.bash_profile
     mdm tools install
