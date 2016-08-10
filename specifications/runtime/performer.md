@@ -138,7 +138,7 @@ Example pseudo-code:
 
 <p id="composition" style="text-align:center"><tt>feature: Composition</tt></p>
 
-Performers can commit new plans to a Scheduler.
+Performers can commit new plans. This is a type of composition.
 
 **transact API**: A performer may be provided with a *transaction initiation function*.
 
