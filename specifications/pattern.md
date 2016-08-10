@@ -83,4 +83,4 @@ An ideal fulfillment will carefully balance the considerations of power consumpt
 
 ## A Motion Runtime
 
-This Starmap defines a novel system of fulfillment we'll call the "Motion Runtime".
+This Starmap defines a novel system of declarative motion which we'll call the "Motion Runtime".
