@@ -1,18 +1,5 @@
 # Tools
 
-As a regular contributor you may work with a variety of tools.
-
-Here's a list of tools we currently use as a team:
-
-- [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
-- GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
-- git for all version tracking
-- [Phabricator Differential](https://www.phacility.com/phabricator/differential/) for code-review
-- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline
-- [draw.io](https://www.draw.io) for SVG and flow-chart editing
-
-## Installing our tools
-
 Our team uses a custom tool called `mdm` to manage all of our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
     git clone --recursive git@github.com:material-motion/material-motion-team.git
