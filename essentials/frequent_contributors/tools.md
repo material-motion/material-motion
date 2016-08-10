@@ -21,6 +21,15 @@ Or the automated variant:
 
 ## Misc tooling notes
 
+Here's a list of tools we currently use as a team:
+
+- [GitBook](https://www.gitbook.com/) for document authoring (like this one!)
+- GitHub for code authoring ([material-motion](https://github.com/material-motion) is our org)
+- git for all version tracking
+- [Phabricator Differential](https://www.phacility.com/phabricator/differential/) for code-review
+- The [GitBook mac editor](https://www.gitbook.com/editor/osx) allows you to edit books offline
+- [draw.io](https://www.draw.io) for SVG and flow-chart editing
+
 ### GitHub
 
 - [Add SSH keys to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
