@@ -166,4 +166,6 @@ Consider the following pseudo-code of a performer generating new plans:
       }
     }
 
+<p style="text-align:center"><tt>/feature: Composable plans</tt></p>
+
 ---
