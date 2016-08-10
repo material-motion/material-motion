@@ -1,6 +1,6 @@
 # Tooling
 
-Our team uses a custom tool called `mdm` to manage all of our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
+Our team uses a custom tool called `mdm` to manage our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
     git clone --recursive git@github.com:material-motion/material-motion-team.git
     cd material-motion-team
