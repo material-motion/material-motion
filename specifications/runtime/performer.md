@@ -140,46 +140,30 @@ Example pseudo-code:
 
 Performers can commit new plans to a Scheduler.
 
-**transact API**: Performers can implement an add/remove function.
+**transact API**: A performer may be provided with a *transaction initiation function*.
 
->The Performer may choose not to implement this API.
+Example pseudo-code protocol:
 
-If one method is implemented, so must the other.
+    var transact // settable
 
-Example pseudo-code:
+The provided function implementation might resemble the following:
 
-    protocol NamedPlanExecution {
-      function addPlanWithName(plan, name)
-      function removePlanWithName(name)
+    var transact = function(work) {
+      transaction = Transaction()
+      work(transaction)
+      scheduler.commit(transaction)
     }
 
-<p style="text-align:center"><tt>/feature: Named plans</tt></p>
+The performer can now start a new transaction by invoking `transact`.
 
----
+Consider the following pseudo-code of a performer generating new plans:
 
-<p style="text-align:center"><tt>feature: Manual execution</tt></p>
-
-An Performer can choose to implement an update function that will be called many times per second.
-
-**Manual execution API**: Define an optional API that allows performers to implement an update function.
-
-> The Performer may choose not to implement this API.
-
-The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
-
-The method returns an activity state enumeration. This enumeration has two states: active and at rest.
-
-Example pseudo-code:
-
-    enum ActivityState {
-      .Active
-      .AtRest
+    function onGesture(gesture) {
+      if gesture.state == Ended {
+        self.transact(function(transaction) {
+          transaction.add(plan, self)
+        })
+      }
     }
-    
-    protocol ManuallyExecutingPerformer {
-      function update(millisecondsSinceLastUpdate) -> ActivityState
-    }
-
-<p style="text-align:center"><tt>/feature: Manual execution</tt></p>
 
 ---
