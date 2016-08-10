@@ -1,3 +1,3 @@
 # Life of a change
 
-**For frequent contributors**.
+**For frequent and core contributors**.
