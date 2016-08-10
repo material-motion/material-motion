@@ -16,6 +16,7 @@
 
 parentcmd=$(basename "${BASH_SOURCE[1]}")
 cmd=$(basename "${BASH_SOURCE[0]}")
+this_script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 usage() {
   $parentcmd help $cmd
@@ -26,13 +27,20 @@ if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
   exit 1
 fi
 
+kind=$2
+
+case "$kind" in
+  apple|android|javascript|tools) ;;
+  *) usage; exit 1 ;;
+esac
+
 rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
-if [ -z "$3" ]; then
+if [ -z "$4" ]; then
   reponame=$(basename $rootdir)
 else
-  reponame="$3"
+  reponame="$4"
 fi
-ownername=${2:material-motion}
+ownername=${3:-material-motion}
 
 if [ ! material-motion = $reponame* ] && [ -z "$2" ];then
   echo "No material-motion prefix detected. Please provide an owner."
@@ -41,8 +49,6 @@ if [ ! material-motion = $reponame* ] && [ -z "$2" ];then
 fi
 
 publish_github() {
-  # TODO: Check whether origin already points to something.
-
   url="https://github.com/$ownername/$reponame"
 
   echo "About to create a new GitHub repository."
@@ -53,16 +59,30 @@ publish_github() {
   echo
   echo -n "Press enter to continue..."
   read
-  
-  if [ $(mdm gh user -w) == "$ownername" ]; then
-    mdm gh repo -u $ownername --new $reponame || exit 1
+
+  git remote -v | grep "^origin\t" >> /dev/null
+  if [ $? -ne 0 ]; then # No remote named origin
+    if [ $(mdm gh user -w) == "$ownername" ]; then
+      mdm gh repo -u $ownername --new $reponame || exit 1
+    else
+      mdm gh repo -O $ownername --new $reponame || exit 1
+    fi
+
+    git remote add origin "git@github.com:$ownername/$reponame.git"
+    git push origin develop stable || exit 1
+
   else
-    mdm gh repo -O $ownername --new $reponame || exit 1
+    echo "NOTICE: A remote named origin already exists."
+    echo
+    echo "Please verify that it is correct before continuing:"
+    echo
+    git remote -v | grep "^origin\t" | grep fetch
+    echo
+    echo "Press enter to continue..."
+    read
   fi
 
-  git remote add origin "git@github.com:$ownername/$reponame.git"
-  git push origin develop stable || exit 1
-  mdm gh repo -u $ownername --edit $reponame --defaultbranch develop --haswiki false || exit 1
+  $this_script_dir/configure_repo $kind $ownername $reponame $(mdm gh user --token)
   mdm gh label templatize --template "$ROOT_DIR/labels.json" -u $ownername -r $reponame
 }
 

@@ -1,9 +1,10 @@
-Usage: `mdm publish github [owner] [name]`
+Usage: `mdm publish github [kind] [owner] [name]`
 
     Publishes the current git directory to GitHub.
     
     Must be run from a non-bare git repository.
     
+    [kind]  Required. Must be one of android, apple, javascript, or tools.
     [owner] Optional. Publish the repo under this owner.
     [name]  Optional. Use this name for the repo.
 
