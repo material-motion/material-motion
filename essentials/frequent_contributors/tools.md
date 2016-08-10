@@ -23,6 +23,13 @@ Add the output path to whichever file your shell uses to configure environment v
 
     # edit ~/.bash_profile
     source ~/.bash_profile
+
+You can now run the `mdm` tool installer like so:
+
+    mdm tools
+
+Or the automated variant:
+
     mdm tools install
 
 ### GitHub
