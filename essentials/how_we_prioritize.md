@@ -2,6 +2,12 @@
 
 Prioritization is how we choose what to work on for a given week or day. We make heavy use of GitHub and Discord to communicate our priorities. This allows us to minimize the number of team meetings and encourages autonomy.
 
+## Material Motion milemarker
+
+https://material-motion.github.io/milemarker/
+
+This website fetches every material-motion repo and shows their milestones. We use this website to get a high-level overview of the project's status on any given platform.
+
 ## What is a project?
 
 Projects == GitHub repos, usually.

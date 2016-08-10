@@ -10,3 +10,9 @@ Our general philosophy:
 - In the absence of existing solutions, build great ones.
 - Add more ideas to the Starmap as drafts, flesh them out, and then encourage their development across applicable platforms.
 - List solutions in the Starmap's [Community index](https://material-motion.gitbooks.io/material-motion-starmap/content/community_index/).
+
+Specific end goals:
+
+- Able to express interaction and motion consistently across platforms.
+- Elevate awareness of motion frameworks, tools, and education.
+- Provide languages of motion capable of expressing rich interactions.

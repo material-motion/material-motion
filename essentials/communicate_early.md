@@ -41,24 +41,3 @@ Explain how you got stuck, what alternatives you're considering, and whether you
 **Randomly**
 
 Random updates to the issue are a helpful way to let others know that the issue is being worked on. We encourage sharing emoji stories.
-
-## Label flow
-
-We use `flow:` labels to communicate the current state of an issue. See [our team repo's labels](https://github.com/material-motion/material-motion-team/labels).
-
-Flow labels move through the following process:
-
-![](../_assets/LabelFlow.svg)
-
-## Label type
-
-We also use labels to categorize the "type" of an issue. Types we use:
-
-- Bug
-- Documentation
-- Feature request
-- Internal cleanup
-- Process
-- Question
-- Visual bug
-- Working as intended
