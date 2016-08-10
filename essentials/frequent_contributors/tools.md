@@ -19,6 +19,8 @@ Or the automated variant:
 
     mdm tools install
 
+## Misc tooling notes
+
 ### GitHub
 
 - [Add SSH keys to your GitHub account](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
