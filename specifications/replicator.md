@@ -19,9 +19,11 @@ Example pseudo-code:
     protocol Replicator {
     }
 
-**Duplication API**: Provide an API for duplicating an element.
+**createReplica API**: Provide an API for replicating an element.
 
 This API should accept an element and return an element.
+
+Returning the provided element indicates that the element has not been replicated.
 
 Example pseudo-code:
 

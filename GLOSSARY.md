@@ -1,5 +1,9 @@
 # Glossary
 
+## at rest
+
+The state of a Scheduler or Performer when all of the plans that it's been provided have been performed.
+
 ## director
 
 An object created for the purposes of describing motion.

@@ -39,7 +39,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Delegated execution API v1**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
@@ -62,6 +62,27 @@ Example pseudo-code if your language supports anonymous functions:
       var delegatedExecutionWillStart(performer, name)
       var delegatedExecutionDidFinish(performer, name)
     }
+
+<a name="delegationv2"></a>
+
+**Delegated execution API v2 (draft)**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+
+> The performer may choose not to implement this API.
+
+The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
+
+Example pseudo-code:
+
+    protocol DelegatingPerformer {
+      function setDelegatedExecutionCallback(callback)
+    }
+    
+    class DelegatedExecutionCallback {
+      function delegatedExecutionWillStart(performer) -> DelegatedPerformanceToken
+      function delegatedExecutionDidFinish(performer, token)
+    }
+
+In English: the performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to this second function.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -98,13 +119,13 @@ An Performer can choose to implement an update function that will be called many
 
 The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
 
-The method returns an activity state enumeration. This enumeration has two states: active and idle.
+The method returns an activity state enumeration. This enumeration has two states: active and at rest.
 
 Example pseudo-code:
 
     enum ActivityState {
       .Active
-      .Idle
+      .AtRest
     }
     
     protocol ManuallyExecutingPerformer {

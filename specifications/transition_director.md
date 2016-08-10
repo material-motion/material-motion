@@ -34,51 +34,68 @@ Example pseudo-code:
       }
     }
 
-**Left/right side APIs**: Provide storage for relevant information to the transition.
-
-Transition directors think in terms of left and right *sides* of the transition. Provide APIs for storing relevant information.
+**from/to APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
 
     MyTransitionDirector: TransitionDirector {
-      public var leftViewController
-      public var rightViewController
+      public var fromViewController
+      public var toViewController
+      public var transitionDirection
     }
 
-**Transition direction type**: Provide a `TransitionDirection` type with two possible values: *to the left* and *to the right*.
+**Transition direction type**: Provide a `TransitionDirection` type with two opposite values.
+
+Many synonyms exist. Use that which applies best to your platform.
+
+- present/dismiss
+- push/pop
+- forward/back
 
 Example pseudo-code:
 
     enum TransitionDirection {
-      .ToTheRight
-      .ToTheLeft
+      .Present
+      .Dismiss
     }
 
-**Initial direction API**: Transition directors have a read-only `initialDirection` API.
+**Initial transition direction API**: Transition directors have a read-only `initialTransitionDirection` API.
 
-Provide the initial direction of the transition to the director's initializer.
+Provide the initial transition direction of the transition to the director's initializer.
 
 Example pseudo-code:
 
     enum TransitionDirection {
-      .ToTheRight
-      .ToTheLeft
+      .Present
+      .Dismiss
     }
     
     TransitionDirector {
-      readonly var initialDirection
-      init(initialDirection)
+      readonly var initialTransitionDirection
+      init(initialTransitionDirection)
     }
 
-**Duplicator API**: Transition directors have a read-only `duplicationController` API.
+**ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
-Provide the duplication controller to the director's initializer.
+Provide the replica controller to the director's initializer.
+
+This API is not accessible to sub-classes.
 
 Example pseudo-code:
 
     TransitionDirector {
-      readonly var duplicationController
-      init(duplicationController)
+      private readonly var replicaController
+      init(replicaController)
+    }
+
+**ReplicaControllerDelegate API**: Transition directors can assign a `replicaControllerDelegate`.
+
+Subclasses are expected to set a custom replica controller delegate using this API.
+
+Example pseudo-code:
+
+    TransitionDirector {
+      var replicaControllerDelegate
     }
 
 <p style="text-align:center"><tt>/MVP</tt></p>

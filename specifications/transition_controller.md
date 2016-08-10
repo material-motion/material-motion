@@ -20,6 +20,8 @@ Example pseudo-code:
 
 **One controller per transition**: Every transition has access to its own `TransitionController` instance.
 
+Note that a transition can have two directions: present and dismiss. A single controller governs both the "present" and "dismiss" versions of the transition.
+
 **Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
 The type must be a subclass of `TransitionDirector`.
@@ -30,20 +32,20 @@ Example pseudo-code:
       public var directorType: type(TransitionDirector)
     }
 
-**Runtime**: Store a single `Runtime` instance while the transition is active.
+**Scheduler**: Store a single `Scheduler` instance while the transition is active.
 
 Example pseudo-code:
 
     TransitionController {
-      private var runtime: Runtime
+      private var scheduler: Scheduler
     }
 
-**Duplication controller**: Store a single `DuplicationController` instance while the transition is active.
+**Replication controller**: Store a single `ReplicationController` instance while the transition is active.
 
 Example pseudo-code:
 
     TransitionController {
-      private var duplicationController: DuplicationController
+      private var replicationController: ReplicationController
     }
 
 **Transition director**: Store a single `TransitionDirector` instance while the transition is active.
@@ -65,18 +67,18 @@ Example pseudo-code:
     TransitionController {
       function transitionWillStart(initialDirection) {
         # Initialize the Director
-        duplicationController = DuplicationController()
-        duplicationController.duplicator = SystemDuplicator()
+        replicationController = ReplicationController()
+        replicationController.duplicator = SystemDuplicator()
         
-        director = self.directorType(initialDirection, duplicationController)
+        director = self.directorType(initialDirection, replicationController)
         
         # Phase: set up
         transaction = Transaction()
         director.setUp(transaction)
         
-        # Initialize the runtime
+        # Initialize the ruschedulerntime
         scheduler = Scheduler()
-        scheduler.addNewTargetObserver(duplicationController)
+        scheduler.addNewTargetObserver(replicationController)
         scheduler.addActivityStateObserver(self)
         scheduler.commit(transaction)
       }
@@ -91,6 +93,10 @@ Example pseudo-code:
         if scheduler.state == .Idle {
           self.transitionDidFinish()
         }
+      }
+      
+      function transitionDidFinish() {
+        director.tearDown();
       }
     }
 
