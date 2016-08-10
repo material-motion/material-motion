@@ -1,4 +1,6 @@
-# Life of a casual change
+# Life of a change
+
+**For casual contributors**.
 
 We encourage casual contributors to open GitHub pull requests to make changes.
 
