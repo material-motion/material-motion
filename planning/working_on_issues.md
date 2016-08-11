@@ -1,5 +1,7 @@
 # Working on issues
 
+Frequent communication is paramount when working in a distributed open source team. Because our team is not located in one geographical location, we make heavy use of **distributed** workflow principles.
+
 ## Assignment is ownership
 
 If an issue is assigned to you, it is assumed that you are actively working on the issue.
