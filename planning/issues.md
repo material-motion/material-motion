@@ -14,18 +14,6 @@ Flow labels move through the following process:
 
 We use `type:` labels to categorize issues.
 
-## Milestones and our roadmap
-
-We use GitHub milestones to plan our upcoming releases. We use our Discord channel to plan out longer-term roadmaps.
-
-Each project has a "Next release" milestone.
-
-### Next release
-
-The "Next release" milestone defines what we're focused on for the next release.
-
-- [View all issues planned for the next release](https://github.com/issues?utf8=%E2%9C%93&q=user%3Amaterial-motion+is%3Aopen+milestone%3A%22Next+release%22)
-
 ## Triaging issues
 
 - [View issues with no label](https://github.com/issues?utf8=%E2%9C%93&q=user%3Amaterial-motion+is%3Aopen+no%3Alabel)
