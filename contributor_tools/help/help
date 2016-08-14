@@ -54,10 +54,18 @@ function cmdhelp {
     $EDITOR "$HELPFILE"
   else
     echo
-    sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$HELPFILE" \
-      | perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" \
-      | sed -e "s/^    /      /" \
-      | sed -e "s/^Usage: /    /"
+    # Underline content between <> marks
+    sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$HELPFILE" | \
+      # Bold content between `` marks
+      perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" | \
+      # Indent code blocks by two
+      sed -e "s/^    /      /" | \
+      # Bold markdown headers
+      perl -pe "s/^#+ (.+)/${B}\1${N}/g" | \
+      # Strip "Usage:"
+      sed -e "s/^Usage: //" | \
+      # Indent all paragraphs
+      perl -pe "s:^(\S.+):    \1:g"
     echo
   fi
 }
