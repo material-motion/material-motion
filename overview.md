@@ -24,4 +24,4 @@ The Starmap is our forum for proposing and hashing out ideas.
 
 ## Learn more
 
-Learn more about our team and culture by reading our [team documentation](https://material-motion.gitbooks.io/material-motion-team/content/).
+Learn about the [Material Motion team](https://material-motion.gitbooks.io/material-motion-team/content/).
