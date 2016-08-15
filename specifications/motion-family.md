@@ -11,9 +11,15 @@ For a library to be called a motion family it must satisfy the following minimal
 * Depend on the Runtime.
 * Provide examples for every available Plan.
 
-## Compositional families
+## Composition families
 
-A compositional family is one that emits new plans in reaction to specific events.
+A composition family is one that emits new plans in reaction to specific events.
+
+## Delegation families
+
+A delegation family is one that delegates execution to an external system.
+
+A delegation family's performers are expected to conform to the DelegatingPerformer protocol.
 
 ## Platform-specific bridge families
 
