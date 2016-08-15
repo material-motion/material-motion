@@ -140,29 +140,29 @@ Example pseudo-code:
 
 Performers can emit transactions. This is a type of composition.
 
-**transactionEmitter API**: A performer may be provided with a *transaction initiation function*.
+**transactionEmitter API**: A performer may be provided with a transaction emitter object.
+
+A transaction emitter declaration might look like so:
+
+    protocol TransactionEmitter {
+      func emit(transaction: Transaction)
+    }
+
+A performer is provided with a transaction emitter entity.
 
 Example pseudo-code protocol:
 
-    var transact // settable
-
-The provided function implementation might resemble the following:
-
-    var transact = function(work) {
-      transaction = Transaction()
-      work(transaction)
-      scheduler.commit(transaction)
+    protocol ComposablePerforming {
+      func set(transactionEmitter: TransactionEmitter)
     }
 
-The performer can now start a new transaction by invoking `transact`.
-
-Consider the following pseudo-code of a performer generating new plans:
+Consider the following pseudo-code of a performer emitting new plans:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
-        self.transact(function(transaction) {
-          transaction.add(plan, self)
-        })
+        let transaction = Transaction()
+        transaction.add(plan: plan, to: self)
+        self.emitter.emit(transaction)
       }
     }
 
