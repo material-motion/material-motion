@@ -66,7 +66,9 @@ Example pseudo-code:
     # Remove any named plan from a target.
     transaction.remove(name, target)
 
-**Order**: Operation order also matters for named operations.
+**Order**: Operation order matters for named operations.
+
+Last-added wins.
 
 Store named operations in the same log as unnamed operations.
 
