@@ -31,7 +31,7 @@ Example pseudo-code:
 
 Operations are enumerated in the order in which they were recorded.
 
-**Copying plans**: When a plan is added to a transaction it must be copied. This ensures that subsequent modifications to the plan object do not "sneak" in to the transaction. For example:
+**Copying plans**: When a plan is added to a transaction it must be copied. This ensures that subsequent modifications to a plan object do not affect the transaction. For example:
 
 Example pseudo-code:
 
