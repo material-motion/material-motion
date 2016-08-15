@@ -41,7 +41,7 @@ Example pseudo-code:
     plan.fromValue = 5
     transaction.add(plan, target)
 
-Here's the log. Notice that each entry has a different `fromValue`.
+Notice that each entry has a different `fromValue` in the following log:
 
     [
       {action: 'add', plan: {..., fromValue = 0}}, 
