@@ -15,6 +15,8 @@ A motion family must satisfy the following minimal requirements:
 
 Existing animation and interaction systems can and should be bridged to Material Motion. These motion families will form the foundation upon which more abstract motion families can be constructed.
 
+Example pseudo-code implementation:
+
 ```
 extend SystemAnimation: conforms to Plan {
   func performerClass() {
@@ -24,6 +26,7 @@ extend SystemAnimation: conforms to Plan {
 
 SystemAnimationPerformer: Performer {
   func addPlan(plan) {
+    // Register the plan's active state with the runtime
     token = self.willStart()
     plan.addCompletionHandler {
       self.didEnd(token)
@@ -33,4 +36,6 @@ SystemAnimationPerformer: Performer {
   }
 }
 ```
+
+
 
