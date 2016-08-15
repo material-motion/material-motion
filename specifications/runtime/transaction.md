@@ -103,12 +103,10 @@ Serializable transactions can be sent over a wire or recorded to disk.
 Example pseudo-code:
 
     # Serialize the transaction
-    json = transaction.serialize()
+    data = transaction.serialize()
     
-    # Create a new transaction from json
-    transaction = Transaction(json)
-
-**JSON serialization**: A serialized transaction is represented in JSON.
+    # Create a new transaction from data
+    transaction = Transaction(data)
 
 Further reading: [Serialization](../serialization.md)
 
