@@ -3,7 +3,7 @@ Status of this document:
 
 # Serialization
 
-Serialization is what allows motion families to be transmitted over a pipe.
+Serialization is what allows motion families to be transmitted over a pipe.
 
 Applications of serialization:
 
@@ -14,7 +14,7 @@ Applications of serialization:
 
 * Tweak motion in a running application.
 
-Bob.
+
 
 | v from v \/ to =&gt; | Runtime | File | Inspection tool | Design tool |
 | --- | --- | --- | --- | --- |
@@ -40,6 +40,7 @@ Intended use cases:
 * Visualizing a motion system in real time.
 
 * Modifying a motion system in real time.
+
   * Able to register new Plans to a runtime.
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
