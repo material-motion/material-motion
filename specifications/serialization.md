@@ -3,7 +3,7 @@ Status of this document:
 
 # Serialization
 
-Serialization allows motion to be transmitted over a pipe. A pipe can be a file on disk or a network connection.
+Serialization allows motion to be transmitted over a pipe. A pipe can be a file or a network connection.
 
 Intended use cases:
 
