@@ -21,8 +21,6 @@ Families can be roughly categorized in two groups: delegation and composition.
 
 Delegates execution to an external system.
 
-A delegation family's performers are expected to conform to the DelegatingPerformer protocol.
-
 **Platform-specific bridge families**
 
 Existing animation and interaction systems should be bridged to Material Motion using bridge families.
