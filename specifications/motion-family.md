@@ -11,4 +11,7 @@ A motion family must satisfy the following minimal requirements:
 * Has a dependency on the Runtime.
 * Examples for every available Plan.
 
+## Platform-specific bridge families
+
+Existing animation and interaction systems can and should be bridged to Material Motion.
 
