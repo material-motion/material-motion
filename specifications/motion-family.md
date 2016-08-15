@@ -2,7 +2,7 @@
 
 A motion family is a software library that includes one or more Plans and Performer implementations.
 
-## Minimum viable requirements
+## Minimum requirements
 
 A motion family must satisfy the following minimal requirements:
 
