@@ -3,6 +3,7 @@ Status of this document:
 
 # Serialization
 
+
 Serialization includes the mechanisms by which motion is brought in to and out of a Material Motion system. For the purposes of this document we'll assume the primary point of view is a software engineer working on a production application.
 
 ## Dynamic serialization
