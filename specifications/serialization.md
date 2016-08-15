@@ -7,11 +7,19 @@ Serialization includes the mechanisms by which motion is brought in to and out o
 
 ## Dynamic serialization
 
+Intended use cases:
+
+* Visualizing a motion system in real time.
+* Modifying a motion system in real time.
+
 ## Static serialization
 
+Intended use cases:
 
+* Interop between other motion tools. E.g. "export from X to Material Motion"
+* Storage of motion in a binary format.
 
-Thoughts:
+## Thoughts
 
 * It's not clear that there is benefit to forcing a standard means of serialization across all plan types across all families. E.g. "Let's use json for everything".
 * It is clear that - within a given family - plans should be serializable across all platforms for which that family exists. For example, an abstract "Tween" family should be serializable across Android, Web, and iOS. A Core Animation family likely should not be. JSON might be the right thing for a family in this context, but it could be equally valid to use a binary format instead. The implementor of a family must be allowed to decide.
