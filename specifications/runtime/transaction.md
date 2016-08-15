@@ -108,6 +108,10 @@ Example pseudo-code:
     # Create a new transaction from data
     transaction = Transaction(data)
 
+Open questions:
+
+- How do we know which target to associate a given plan with?
+
 Further reading: [Serialization](../serialization.md)
 
 <p style="text-align:center"><tt>/feature: serialization</tt></p>
