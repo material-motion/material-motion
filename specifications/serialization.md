@@ -3,12 +3,12 @@ Status of this document:
 
 # Serialization
 
-Serialization includes the mechanisms by which motion is brought in to and out of a Material Motion system. For the purposes of this document we'll assume the primary point of view is a software engineer working on a production application.
+Serialization allows motion to be transmitted over a pipe. A pipe can be a file on disk or a network connection.
 
 Intended use cases:
 
-* Interchange from\/to other motion tools. E.g. "export from X to Material Motion".
-* Binary format for transmission of motion over a pipe.
+* Export motion from a design tool.
+* Inspect motion in a production application.
 
 Engineering requirements:
 
