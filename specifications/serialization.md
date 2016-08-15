@@ -5,6 +5,13 @@ Status of this document:
 
 Serialization allows motion to be transmitted over a pipe. Either side of the pipe might be a file on disk, a Runtime, a design tool, or an inspection tool.
 
+| v from v \/ to =&gt; | Runtime | File | Inspection tool | Design tool |
+| --- | --- | --- | --- | --- |
+| Runtime |  | Motion interchange | Transaction stream |  |
+| File | Motion interchange |  | Visualize motion | Import motion |
+| Inspection tool | Modification of state |  |  |  |
+| Design tool | Motion interchange | Motion interchange | Modification of state |  |
+
 Intended use cases:
 
 * Export motion from a design tool.
