@@ -156,7 +156,7 @@ Example pseudo-code protocol that a performer could conform to:
       func set(transactionEmitter: TransactionEmitter)
     }
 
-Consider the following pseudo-code of a performer emitting new plans:
+Pseudo-code of a performer emitting new plans:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
