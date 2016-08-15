@@ -25,7 +25,7 @@ Existing animation and interaction systems should be bridged to Material Motion 
 
 Bridge families form the foundation upon which compositional families can be constructed.
 
-Bridge families often use delegation.
+Bridge families often use delegation in order to connect the external system to the runtime's activity state.
 
 ## Composition families
 
