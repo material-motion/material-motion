@@ -21,31 +21,9 @@ A delegation family is one that delegates execution to an external system.
 
 A delegation family's performers are expected to conform to the DelegatingPerformer protocol.
 
-## Platform-specific bridge families
+### Platform-specific bridge families
 
-Existing animation and interaction systems can and should be bridged to Material Motion. These motion families will form the foundation upon which more abstract motion families can be constructed.
+Existing animation and interaction systems can and should be bridged to Material Motion. These motion families form the foundation upon which more abstract motion families can be constructed.
 
-Example pseudo-code implementation:
-
-```
-extend SystemAnimation: conforms to Plan {
-  func performerClass() {
-    return SystemAnimationPerformer.class
-  }
-}
-
-SystemAnimationPerformer: Performer {
-  func addPlan(plan) {
-    // Allow the runtime to know when the plan is active
-    token = self.willStart()
-    plan.addCompletionHandler {
-      self.didEnd(token)
-    }
-
-    target.addSystemAnimation(plan)
-  }
-}
-```
-
-## 
+Bridge families are delegation families.
 
