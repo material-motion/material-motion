@@ -2,7 +2,7 @@
 
 A motion family is a software library that includes one or more Plans and Performer implementations.
 
-Motion families focus on motion for a **single element**. Use Directors for motion concerning more than one element.
+Motion families focus on motion for a **single element**. Use [Directors](directors.md) for motion concerning more than one element.
 
 ## Minimum requirements
 
