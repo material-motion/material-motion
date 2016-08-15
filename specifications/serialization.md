@@ -15,7 +15,6 @@ Intended use cases:
 
 * Modifying a motion system in real time.
   * Able to register new Plans to a system.
-  * 
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
