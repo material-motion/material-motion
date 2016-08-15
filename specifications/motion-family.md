@@ -2,6 +2,8 @@
 
 A motion family is a software library that includes one or more Plans and Performer implementations.
 
+Motion families focus on motion for a **single element**. Use Directors for motion concerning more than one element.
+
 ## Minimum requirements
 
 For a library to be called a motion family it must satisfy the following minimal requirements:
@@ -11,10 +13,6 @@ For a library to be called a motion family it must satisfy the following minimal
 * Depend on the Runtime.
 * Provide examples for every available Plan.
 
-## Composition families
-
-A composition family is one that emits new plans in reaction to specific events.
-
 ## Delegation families
 
 A delegation family is one that delegates execution to an external system.
@@ -23,7 +21,15 @@ A delegation family's performers are expected to conform to the DelegatingPerfor
 
 ### Platform-specific bridge families
 
-Existing animation and interaction systems can and should be bridged to Material Motion. These motion families form the foundation upon which more abstract motion families can be constructed.
+Existing animation and interaction systems should be bridged to Material Motion using bridge families.
 
-Bridge families are delegation families.
+Bridge families form the foundation upon which compositional families can be constructed.
+
+Bridge families often use delegation.
+
+## Composition families
+
+A composition family is one that emits new plans in reaction to specific events.
+
+Composition families eventually reduce down to one or more delegation families.
 
