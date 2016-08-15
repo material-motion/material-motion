@@ -13,7 +13,7 @@ For a library to be called a motion family it must satisfy the following minimal
 
 ## Compositional families
 
-A compositional family is one that is able to commit new plans to the runtime. 
+A compositional family is one that emits new plans in reaction to specific events.
 
 ## Platform-specific bridge families
 
