@@ -150,7 +150,7 @@ A transaction emitter declaration might look like so:
 
 A performer is provided with a transaction emitter entity.
 
-Example pseudo-code protocol:
+Example pseudo-code protocol that a performer could conform to:
 
     protocol ComposablePerforming {
       func set(transactionEmitter: TransactionEmitter)
