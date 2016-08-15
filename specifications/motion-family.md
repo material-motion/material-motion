@@ -26,7 +26,7 @@ extend SystemAnimation: conforms to Plan {
 
 SystemAnimationPerformer: Performer {
   func addPlan(plan) {
-    // Register the plan's active state with the runtime
+    // Allow the runtime to know when the plan is active
     token = self.willStart()
     plan.addCompletionHandler {
       self.didEnd(token)
@@ -36,6 +36,4 @@ SystemAnimationPerformer: Performer {
   }
 }
 ```
-
-
 
