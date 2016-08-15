@@ -13,5 +13,24 @@ A motion family must satisfy the following minimal requirements:
 
 ## Platform-specific bridge families
 
-Existing animation and interaction systems can and should be bridged to Material Motion.
+Existing animation and interaction systems can and should be bridged to Material Motion. These motion families will form the foundation upon which more abstract motion families can be constructed.
+
+```
+extend SystemAnimation: conforms to Plan {
+  func performerClass() {
+    return SystemAnimationPerformer.class
+  }
+}
+
+SystemAnimationPerformer: Performer {
+  func addPlan(plan) {
+    token = self.willStart()
+    plan.addCompletionHandler {
+      self.didEnd(token)
+    }
+
+    target.addSystemAnimation(plan)
+  }
+}
+```
 
