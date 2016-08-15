@@ -7,10 +7,12 @@ Serialization is what allows motion families to be transmitted over a pipe.
 Serialization enables a wide variety of use cases:
 
 * Export motion from a design tool.
+
   * Export as code
   * Export as binary file format
 
 * Inspect motion in a production application.
+
 
 ![](../_assets/Inspector.svg)
 
@@ -20,6 +22,13 @@ Serialization enables a wide variety of use cases:
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
 
+## Motion family serialization
+
+```
+let serializer = MotionSerializer
+let transaction = serializer.transactionFromStream(stream)
+runtime.commit(transaction: transaction)
+```
 
 ---
 
