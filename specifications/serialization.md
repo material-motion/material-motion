@@ -9,8 +9,6 @@ Serialization includes the mechanisms by which motion is brought in to and out o
 
 Intended use cases:
 
-
-
 * Visualizing a motion system in real time.
 
 ![](../_assets/Inspector.svg)
