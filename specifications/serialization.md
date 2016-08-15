@@ -7,12 +7,11 @@ Serialization is what allows motion families to be transmitted over a pipe.
 
 ## Applications of serialization
 
-Serialization enables the creation of a wide variety of tools for creating motion:
+Serialization enables a wide variety of scenarios:
 
 * Export motion from a design tool.
   * Export as code
   * Export as binary file format
-
 * Inspect motion in a production application.
 
 ![](../_assets/Inspector.svg)
@@ -21,11 +20,6 @@ Serialization enables the creation of a wide variety of tools for creating motio
   * Able to register new Plans to a runtime.
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
-
-
-
-
-
 
 
 | v from v \/ to =&gt; | Runtime | File | Inspection tool | Design tool |
