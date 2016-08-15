@@ -19,12 +19,17 @@ Intended use cases:
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
 
+Engineering requirements:
+
+* Able to subscribe to a stream of transactions.
+* Able to query\/visualize state of any performer in the runtime.
+
 ## Static serialization
 
 Intended use cases:
 
-* Interop between other motion tools. E.g. "export from X to Material Motion"
-* Storage of motion in a binary format.
+* interchange from\/to other motion tools. E.g. "export from X to Material Motion".
+* Binary format for storage and retrieval of motion.
 
 ## Thoughts
 
