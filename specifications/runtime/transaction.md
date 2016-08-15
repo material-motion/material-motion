@@ -61,7 +61,7 @@ Transactions support named add/remove operations.
 Example pseudo-code:
 
     # Associate a named plan with a target.
-    transaction.add(plan, name, target)
+    transaction.add(plan, target, name)
     
     # Remove any named plan from a target.
     transaction.remove(name, target)
