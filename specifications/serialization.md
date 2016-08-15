@@ -3,7 +3,18 @@ Status of this document:
 
 # Serialization
 
-Serialization allows motion to be transmitted over a pipe. Either side of the pipe might be a file on disk, a Runtime, a design tool, or an inspection tool.
+Serialization is what allows motion families to be transmitted over a pipe.
+
+Applications of serialization:
+
+* Export motion from a design tool.
+* Inspect motion in a production application.
+
+![](../_assets/Inspector.svg)
+
+* Tweak motion in a running application.
+
+Bob.
 
 | v from v \/ to =&gt; | Runtime | File | Inspection tool | Design tool |
 | --- | --- | --- | --- | --- |
@@ -27,8 +38,6 @@ Engineering requirements:
 Intended use cases:
 
 * Visualizing a motion system in real time.
-
-![](../_assets/Inspector.svg)
 
 * Modifying a motion system in real time.
   * Able to register new Plans to a runtime.
