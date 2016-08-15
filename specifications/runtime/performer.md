@@ -148,7 +148,7 @@ A transaction emitter declaration might look like so:
       func emit(transaction: Transaction)
     }
 
-A performer is provided with a transaction emitter entity.
+A performer can be provided with a transaction emitter.
 
 Example pseudo-code protocol that a performer could conform to:
 
