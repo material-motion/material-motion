@@ -28,8 +28,11 @@ Serialization enables a wide variety of use cases:
 
 Plan types must be serializable to a binary format containing the following keys:
 
+* namespace: `String`
 * name: `String`
 * payload: `Data`
+
+A combination of `namespace` and `name` allows the Runtime to uniquely identify a plan in a given system.
 
 The following example serializes a specific Tween plan:
 
@@ -41,8 +44,8 @@ fadeIn.curve = .easeIn
 
 data = Runtime.toBinary(fadeIn)
 {
-  name: "Tween",
   namespace: "Tween",
+  name: "Tween",
   payload: {
     keyPath: "opacity"
     from: 0,
@@ -59,11 +62,17 @@ let fadeIn = FadeIn()
 
 data = Runtime.toBinary(fadeIn)
 {
-  name: "FadeIn",
   namespace: "Tween",
+  name: "FadeIn",
   payload: {}
 }
 ```
+
+### Payload contents
+
+Plans can choose any format for their payload.
+
+Plans should consider how they will handle future changes to their payload format.
 
 ### Transaction serialization
 
