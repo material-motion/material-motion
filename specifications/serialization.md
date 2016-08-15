@@ -13,10 +13,11 @@ Intended use cases:
 * Binary format for storage and retrieval of motion.
 
 Engineering requirements:
+
 * Able to read\/write Plans from a binary format on any platform.
 * Able to generate code from a binary format.
 
-## Dynamic serialization
+## Dynamic inspection
 
 Intended use cases:
 
