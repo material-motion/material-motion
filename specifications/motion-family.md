@@ -4,12 +4,16 @@ A motion family is a software library that includes one or more Plans and Perfor
 
 ## Minimum requirements
 
-A motion family must satisfy the following minimal requirements:
+For a library to be called a motion family it must satisfy the following minimal requirements:
 
-* At least one Plan and Performer type.
-* All Performer types are private to the library.
-* Has a dependency on the Runtime.
-* Examples for every available Plan.
+* Provide at least one Plan and Performer type.
+* Define all Performer types as private to the library.
+* Depend on the Runtime.
+* Provide examples for every available Plan.
+
+## Compositional families
+
+A compositional family is one that is able to commit new plans to the runtime. 
 
 ## Platform-specific bridge families
 
@@ -37,5 +41,5 @@ SystemAnimationPerformer: Performer {
 }
 ```
 
-
+## 
 
