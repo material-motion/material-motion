@@ -23,6 +23,9 @@ Engineering requirements:
 
 * Able to subscribe to a stream of transactions.
 * Able to query\/visualize state of any performer in the runtime.
+* Able to remotely commit new Plans to the runtime.
+* Able to modify active performer state. E.g. spring coefficients or easing curve.
+* Able to modify named variables in the system.
 
 ## Static serialization
 
