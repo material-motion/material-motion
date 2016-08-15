@@ -11,7 +11,7 @@ Intended use cases:
 
 * Visualizing a motion system in real time.
 
-
+![](../_assets/Inspector.svg)
 
 * Modifying a motion system in real time.
 
