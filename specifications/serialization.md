@@ -5,6 +5,17 @@ Status of this document:
 
 Serialization includes the mechanisms by which motion is brought in to and out of a Material Motion system. For the purposes of this document we'll assume the primary point of view is a software engineer working on a production application.
 
+## Static serialization
+
+Intended use cases:
+
+* interchange from\/to other motion tools. E.g. "export from X to Material Motion".
+* Binary format for storage and retrieval of motion.
+
+Engineering requirements:
+* Able to read\/write Plans from a binary format on any platform.
+* Able to generate code from a binary format.
+
 ## Dynamic serialization
 
 Intended use cases:
@@ -24,15 +35,8 @@ Engineering requirements:
 * Able to subscribe to a stream of transactions.
 * Able to query\/visualize state of any performer in the runtime.
 * Able to remotely commit new Plans to the runtime.
-* Able to modify active performer state. E.g. spring coefficients or easing curve.
+* Able to modify active performer state. E.g. spring coefficients or easing curve.
 * Able to modify named variables in the system.
-
-## Static serialization
-
-Intended use cases:
-
-* interchange from\/to other motion tools. E.g. "export from X to Material Motion".
-* Binary format for storage and retrieval of motion.
 
 ## Thoughts
 
