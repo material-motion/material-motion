@@ -12,6 +12,7 @@
         * [Performer](specifications/runtime/performer.md)
         * [Transaction](specifications/runtime/transaction.md)
         * [Scheduler](specifications/runtime/scheduler.md)
+    * [Motion family](specifications/motion-family.md)
     * [Directors](specifications/directors.md)
         * [Transitions](specifications/transitions.md)
             * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
