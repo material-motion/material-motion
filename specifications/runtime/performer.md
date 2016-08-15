@@ -161,7 +161,7 @@ Consider the following pseudo-code of a performer emitting new plans:
     function onGesture(gesture) {
       if gesture.state == Ended {
         let transaction = Transaction()
-        transaction.add(plan: plan, to: self)
+        transaction.add(plan: Spring(), to: self)
         self.emitter.emit(transaction)
       }
     }
