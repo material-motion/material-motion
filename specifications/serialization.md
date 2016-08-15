@@ -7,7 +7,7 @@ Serialization includes the mechanisms by which motion is brought in to and out o
 
 Intended use cases:
 
-* interchange from\/to other motion tools. E.g. "export from X to Material Motion".
+* Interchange from\/to other motion tools. E.g. "export from X to Material Motion".
 * Binary format for transmission of motion over a pipe.
 
 Engineering requirements:
