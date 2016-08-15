@@ -8,7 +8,9 @@ Let's walk through the life of a plan.
 
 Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one. We will make use of this object later.
 
-    scheduler = Scheduler()
+```
+scheduler = Scheduler()
+```
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
 
@@ -16,14 +18,16 @@ Schedulers are cheap and easy to create. Many schedulers may exist in an applica
 
 All motion in a runtime begins with a plan. Let's create four different types of plan:
 
-    animation = Tween()
-    animation.property = "opacity"
-    animation.from = 0
-    animation.to = 1
-    
-    draggable = Draggable()
-    pinchable = Pinchable()
-    rotatable = Rotatable()
+```
+animation = Tween()
+animation.property = "opacity"
+animation.from = 0
+animation.to = 1
+
+draggable = Draggable()
+pinchable = Pinchable()
+rotatable = Rotatable()
+```
 
 ![](../../_assets/LifeOfAPlan-step2.svg)
 
@@ -35,32 +39,40 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 First we must create a transaction.
 
-    transaction = Transaction()
+```
+transaction = Transaction()
+```
 
 Plans are associated to targets via the transaction.
 
-    transaction.add(animation, circleView)
-    transaction.add(draggable, squareView)
-    transaction.add(pinchable, "name1", squareView)
-    transaction.add(rotatable, "name2", squareView)
-    transaction.remove("name2", squareView)
-    transaction.add(draggable, circleView)
+```
+transaction.add(animation, circleView)
+transaction.add(draggable, squareView)
+transaction.add(pinchable, "name1", squareView)
+transaction.add(rotatable, "name2", squareView)
+transaction.remove("name2", squareView)
+transaction.add(draggable, circleView)
+```
 
 The transaction's log might resemble this:
 
-    > transaction.log
-    [
-      {action:"add",    target: circleView, plan: FadeIn                  },
-      {action:"add",    target: squareView, plan: Draggable               },
-      {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
-      {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
-      {action:"remove", target: squareView,                  name: "name2"},
-      {action:"add",    target: circleView, plan: Draggable               },
-    ]
+```
+> transaction.log
+[
+  {action:"add",    target: circleView, plan: FadeIn                  },
+  {action:"add",    target: squareView, plan: Draggable               },
+  {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
+  {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
+  {action:"remove", target: squareView,                  name: "name2"},
+  {action:"add",    target: circleView, plan: Draggable               },
+]
+```
 
 A transaction must be committed to a scheduler in order for it to take affect.
 
-    scheduler.commit(transaction)
+```
+scheduler.commit(transaction)
+```
 
 After committing the above transaction, the scheduler's internal state might resemble this:
 
@@ -76,19 +88,23 @@ The scheduler uses entities called **performers** to execute its plans. A perfor
 
 We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
-    function performerForPlan(Plan, target, existingPerformers) -> Performer
+```
+function performerForPlan(Plan, target, existingPerformers) -> Performer
+```
 
 Recall the transaction log we'd explored above:
 
-    > transaction.log
-    [
-      {action:'add",    target: circleView, plan: FadeIn                  },
-      {action:'add",    target: squareView, plan: Draggable               },
-      {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
-      {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
-      {action:'remove", target: squareView,                  name: "name2"},
-      {action:'add",    target: circleView, plan: Draggable               },
-    ]
+```
+> transaction.log
+[
+  {action:'add",    target: circleView, plan: FadeIn                  },
+  {action:'add",    target: squareView, plan: Draggable               },
+  {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
+  {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
+  {action:'remove", target: squareView,                  name: "name2"},
+  {action:'add",    target: circleView, plan: Draggable               },
+]
+```
 
 Recall that when we committed this transaction to the scheduler our scheduler had the following representation of the committed plans:
 
@@ -101,8 +117,8 @@ The scheduler now creates performers by calling our hypothetical `performerForPl
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
 > Why is there only one gesture performer for the squareView?
->
-> A single performer instance is created for each *type* of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
+> 
+> A single performer instance is created for each _type_ of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
 ### Step 5: Provide plans to performers
 
@@ -110,12 +126,12 @@ The scheduler now provides each plan instance to the relevant performer. This al
 
 ### Step 6: Performers execute plans
 
-Performers can execute their plans in countless ways. At a high level there are two categories of performer:
+A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: delegation and composition.
 
-**Manual execution**
+A performer that delegates its execution will
 
-Manual execution performers are notified each time the system will draw a new frame. The performer is expected to calculate and set its target's next state each time this notification is received.
+1. Acquire a token indicating that delegated work will start.
+2. Initiate the delegated work.
+3. Release the token upon completion of the delegated work.
 
-**Delegated execution**
-
-Delegated execution performers delegate their work to external systems, like Web Animations or  CoreAnimation. Such a performer is responsible for informing the scheduler of two things: when delegated execution will start, and when delegated execution has ended.
+A performer that composes its execution will emit new plans. These new plans may create performers that emit new plans. Eventually the plans will create performers that delegate their execution.
