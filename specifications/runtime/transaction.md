@@ -18,7 +18,7 @@ Example pseudo-code:
 
     transaction = Transaction()
 
-**Add operation API**: Provide an API for a basic add operation.
+**add API**: Provide an API for a basic add operation.
 
 This API must accept a plan and a target object.
 
@@ -52,11 +52,33 @@ Notice that each entry has a different `fromValue` in the following log:
 
 ---
 
-<p style="text-align:center"><tt>feature: named operations</tt></p>
+<p style="text-align:center"><tt>feature: named associations</tt></p>
 
 Transactions support named add/remove operations.
 
-**Named operations API**: Provide an API for add and remove with a name argument.
+**Named add API**: Provide an API for `add` and `remove` with a name argument.
+
+Example pseudo-code:
+
+    # Associate a named plan with a target.
+    transaction.add(plan, name, target)
+    
+    # Remove any named plan from a target.
+    transaction.remove(name, target)
+
+**Order**: Operation order also matters for named operations.
+
+Store named operations in the same log as unnamed operations.
+
+<p style="text-align:center"><tt>/feature: named operations</tt></p>
+
+---
+
+<p style="text-align:center"><tt>feature: target selector</tt></p>
+
+Transactions may receive target selectors.
+
+**Add API**: Provide an API for add and remove with a name argument.
 
 Example pseudo-code:
 
