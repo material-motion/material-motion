@@ -23,11 +23,11 @@ Delegates execution to an external system.
 
 **Platform-specific bridge families**
 
-Existing animation and interaction systems should be bridged to Material Motion using bridge families.
+A motion family that delegates to an existing animation or interaction system is called a **bridge family**.
+
+Bridge families are often the first families to be built for a platform.
 
 Bridge families form the foundation upon which compositional families can be constructed.
-
-Bridge families often use delegation in order to connect the external system to the runtime's activity state.
 
 ### Composition families
 
