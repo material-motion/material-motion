@@ -8,8 +8,6 @@ Printable tech tree/checklist:
 
 ![](../../_assets/TransactionTechTree.svg)
 
-Unlocks: [Scheduler](scheduler.md).
-
 ---
 
 <p style="text-align:center"><tt>MVP</tt></p>
