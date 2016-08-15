@@ -24,8 +24,6 @@ Serialization enables a wide variety of use cases:
 
 ## Motion family serialization
 
-### Plan serialization
-
 Plan types must be serializable to a binary format containing the following keys:
 
 * namespace: `String`
@@ -42,7 +40,7 @@ fadeIn.from = 0
 fadeIn.to = 1
 fadeIn.curve = .easeIn
 
-data = Runtime.toBinary(fadeIn)
+data = Serializer.toBinary(fadeIn)
 {
   namespace: "Tween",
   name: "Tween",
@@ -60,7 +58,7 @@ The following example serializes a more abstract FadeIn compositional plan:
 ```
 let fadeIn = FadeIn()
 
-data = Runtime.toBinary(fadeIn)
+data = Serializer.toBinary(fadeIn)
 {
   namespace: "Tween",
   name: "FadeIn",
@@ -68,13 +66,13 @@ data = Runtime.toBinary(fadeIn)
 }
 ```
 
-### Payload contents
+**Payload contents**
 
 Plans can choose any format for their payload.
 
 Plans should consider how they will handle future changes to their payload format.
 
-### Transaction serialization
+## Transaction serialization
 
 A serialized transaction contains plans and associated target selectors in a log.
 
