@@ -78,21 +78,17 @@ Last operation wins.
 
 Transactions may receive target selectors.
 
-**Add API**: Provide an API for add and remove with a name argument.
+**selector APIs**: All add/remove APIs may be provided with a TargetSelector instead of a direct target instead.
 
 Example pseudo-code:
 
     # Associate a named plan with a target.
-    transaction.add(plan, name, target)
+    transaction.add(plan, TargetSelector("#contextView"))
     
     # Remove any named plan from a target.
-    transaction.remove(name, target)
+    transaction.remove(name, TargetSelector("#contextView"))
 
-**Order**: Operation order also matters for named operations.
-
-Store named operations in the same log as unnamed operations.
-
-<p style="text-align:center"><tt>/feature: named operations</tt></p>
+<p style="text-align:center"><tt>/feature: target selector</tt></p>
 
 ---
 
