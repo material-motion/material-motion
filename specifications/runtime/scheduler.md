@@ -110,6 +110,10 @@ Pseudo-code example:
 
 A scheduler is active if any of its performer instances are active.
 
+## Features
+
+- [Named plans](named-plans.md)
+
 ---
 
 ## Experimental ideas
