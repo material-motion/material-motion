@@ -15,6 +15,7 @@
            * [Manual execution](specifications/runtime/performer-manual-execution.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
+           * Named associations
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
