@@ -45,27 +45,3 @@ This can be implemented in a variety of ways. We've included a few options below
 - Implement a copy or clone method on a reference type.
 
 <p style="text-align:center"><tt>/MVP</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: serialization</tt></p>
-
-Plans are serializable.
-
-Serializable plans can be sent over a wire or recorded to disk.
-
-**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
-
-Example pseudo-code:
-
-    # Serialize the plan
-    json = plan.serialize()
-    
-    # Create a new plan from json
-    plan = Plan(json)
-
-**JSON serialization**: A serialized plan is represented in JSON.
-
-Further reading: [Serialization](../serialization.md)
-
-<p style="text-align:center"><tt>/feature: serialization</tt></p>
