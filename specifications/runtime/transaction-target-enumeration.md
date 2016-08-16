@@ -1,3 +1,6 @@
+Status of this document:
+![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Transaction target enumeration specification
 
 Targets referenced in a transaction are enumerable.
