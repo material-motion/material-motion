@@ -15,5 +15,3 @@ Example pseudo-code:
     plan = Plan(data)
 
 A serialized plan is represented as a stream of bytes. These bytes can represent any format.
-
-Further reading: [Serialization](../serialization.md)
