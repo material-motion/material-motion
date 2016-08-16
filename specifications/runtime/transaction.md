@@ -48,12 +48,6 @@ Notice that each entry has a different `fromValue` in the following log:
 
 ---
 
-<p style="text-align:center"><tt>feature: named associations</tt></p>
-
-<p style="text-align:center"><tt>/feature: named operations</tt></p>
-
----
-
 <p style="text-align:center"><tt>feature: target selector</tt></p>
 
 Transactions may receive target selectors.
