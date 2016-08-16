@@ -25,7 +25,7 @@
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
                * [New target event](specifications/runtime/scheduler-event-new-target.md)
                * [Activity state change event](specifications/runtime/scheduler-event-activity-state-change.md)
-           * Garbage-collecting performers
+           * [Garbage-collecting performers](specifications/runtime/scheduler-garbage-collecting-performers.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
