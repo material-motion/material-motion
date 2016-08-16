@@ -24,6 +24,7 @@
        * [Named plans](specifications/runtime/named-plans.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
+           * Life of a serialized transaction
        * Families
            * [Gesturable](specifications/motion_family/gesturable.md)
    * [Directors](specifications/directors.md)
