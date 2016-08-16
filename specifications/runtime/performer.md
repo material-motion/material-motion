@@ -54,7 +54,7 @@ Example pseudo-code:
       function delegatedExecutionDidFinish(performer, token)
     }
 
-The performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to this second function.
+The performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to the second function.
 
 ## Features
 
