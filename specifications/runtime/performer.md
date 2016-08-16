@@ -55,3 +55,9 @@ Example pseudo-code:
     }
 
 In English: the performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to this second function.
+
+## Features
+
+- [Named plans](performer-named-plans.md
+- [Manual execution](performer-manual-execution.md)
+- [Composition](performer-composition.md))
