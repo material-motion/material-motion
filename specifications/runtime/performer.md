@@ -7,6 +7,14 @@ This is the engineering specification for the `Performer` abstract type.
 | First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 | Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | &nbsp; |
 
+## Features
+
+- [Named plans](named-plans.md)
+- [Manual execution](performer-manual-execution.md)
+- [Composition](performer-composition.md)
+
+## Overview
+
 Performers are the objects responsible for executing plans.
 
 Printable tech tree/checklist:
@@ -61,11 +69,7 @@ Example pseudo-code:
 
 The performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to the second function.
 
-## Features
-
-- [Named plans](named-plans.md)
-- [Manual execution](performer-manual-execution.md)
-- [Composition](performer-composition.md)
+---
 
 ## Proposed features
 
