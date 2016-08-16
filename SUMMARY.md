@@ -21,7 +21,7 @@
            * [Serialization](specifications/runtime/transaction-serialization.md)
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
-           * Target selectors
+           * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
