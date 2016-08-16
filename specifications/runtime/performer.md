@@ -69,6 +69,8 @@ The performer must implement a method that receives two functions. Invoking the 
 
 ## Proposed features
 
+### Manual execution
+
 A performer can choose to implement an update function that will be called many times per second.
 
 **Manual execution API**: Define an optional API that allows performers to implement an update function.
