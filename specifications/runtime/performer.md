@@ -63,7 +63,7 @@ The performer must implement a method that receives two functions. Invoking the 
 
 ## Features
 
-- [Named plans](performer-named-plans.md)
+- [Named plans](named-plans.md)
 - [Manual execution](performer-manual-execution.md)
 - [Composition](performer-composition.md)
 
