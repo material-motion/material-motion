@@ -50,8 +50,4 @@ Notice that each entry has a different `fromValue` in the following log:
 
 <p style="text-align:center"><tt>feature: optimized</tt></p>
 
-Transactions optimize their operations.
-
-TODO: Spec this out.
-
 <p style="text-align:center"><tt>/feature: optimized</tt></p>
