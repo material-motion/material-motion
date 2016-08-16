@@ -143,7 +143,9 @@ The following topics are open for discussion. They do not presently have a clear
 - When should performers be removed from a scheduler?
 - Should schedulers support target-less plans?
 
-### Proposed features
+---
+
+## Proposed features
 
 **Tear down API**: Provide an API to tear down a scheduler.
 
