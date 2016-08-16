@@ -45,9 +45,3 @@ Notice that each entry has a different `fromValue` in the following log:
       {action: 'add', plan: {..., fromValue = 0}}, 
       {action: 'add', plan: {..., fromValue = 5}}
     ]
-
----
-
-<p style="text-align:center"><tt>feature: optimized</tt></p>
-
-<p style="text-align:center"><tt>/feature: optimized</tt></p>
