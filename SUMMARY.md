@@ -11,7 +11,6 @@
        * [Plan](specifications/runtime/plan.md)
            * [Serialization](specifications/runtime/plan-serialization.md)
        * [Performer](specifications/runtime/performer.md)
-           * [Named plans](specifications/runtime/performer-named-plans.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
            * [Named plans](specifications/runtime/transaction-named-plans.md)
