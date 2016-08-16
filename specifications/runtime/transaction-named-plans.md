@@ -1,6 +1,6 @@
 # Transaction named plans specification
 
-*Related specifications: [Scheduler named plans](scheduler-named-plans.md).*
+*Related specifications: [Performer named plans](performer-named-plans.md), [Scheduler named plans](scheduler-named-plans.md).*
 
 Transactions support named add/remove operations.
 
