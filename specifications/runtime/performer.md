@@ -58,6 +58,6 @@ In English: the performer must implement a method that receives two functions. I
 
 ## Features
 
-- [Named plans](performer-named-plans.md
+- [Named plans](performer-named-plans.md)
 - [Manual execution](performer-manual-execution.md)
-- [Composition](performer-composition.md))
+- [Composition](performer-composition.md)
