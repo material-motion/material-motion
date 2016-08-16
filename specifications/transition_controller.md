@@ -1,3 +1,7 @@
+Status of this document:
+
+![](../_assets/under-construction-flashing-barracade-animation.gif)
+
 # TransitionController specification
 
 This is the engineering specification for the `TransitionController` object.
