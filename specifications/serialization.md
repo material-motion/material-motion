@@ -29,6 +29,17 @@ let transaction = serializer.transactionFromStream(stream)
 scheduler.commit(transaction: transaction)
 ```
 
+## Protocol
+
+Header:
+
+    Content-type: <e.g. json, proto>
+    Length: <# of bytes>
+
+Body:
+
+    Payload in content-type encoding
+
 ---
 
 Status of this document:
