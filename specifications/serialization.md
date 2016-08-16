@@ -21,7 +21,7 @@ Serialization enables a wide variety of use cases:
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
-## Motion family serialization
+## Plan serialization
 
 Plans must be serializable to a data format containing the following information:
 
