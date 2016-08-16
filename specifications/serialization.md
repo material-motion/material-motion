@@ -21,28 +21,6 @@ Serialization enables a wide variety of use cases:
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
-## Transaction serialization
-
-A serialized transaction contains plans and associated target selectors in a log.
-
-Example pseudo-data:
-
-```
-[
-  {
-    operation: "add",
-    plan: SerializedPlan,
-    targetSelector: "#contextView"
-  },
-  {
-    operation: "add",
-    name: "someName",
-    plan: SerializedPlan,
-    targetSelector: "Photo"
-  }
-]
-```
-
 Example pseudo-code reading a transaction from a stream and committing it to a scheduler:
 
 ```
