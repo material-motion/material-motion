@@ -1,5 +1,7 @@
 # Transaction named associations specification
 
+*Related specifications: [Scheduler named plans](scheduler-named-plans.md).*
+
 Transactions support named add/remove operations.
 
 **Named add API**: Provide an API for `add` and `remove` with a name argument.
