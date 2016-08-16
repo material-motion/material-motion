@@ -15,11 +15,15 @@ Contract: delta x and y from the gesture recognizer are added to the target's `p
 
 ### Pinchable
 
+Contract: scale x and y from the gesture recognizer are multiplied to the target's `scale.x` and `scale.y`.
+
     class Pinchable {
       var pinchGestureRecognizer?
     }
 
 ### Rotatable
+
+Contract: z rotation from the gesture recognizer is added to the target's `rotation.z`.
 
     class Rotatable {
       var rotationGestureRecognizer?
