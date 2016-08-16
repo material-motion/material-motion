@@ -14,3 +14,7 @@ Example pseudo-code:
       function addPlanWithName(plan, name)
       function removePlanWithName(name)
     }
+
+## Related specifications
+
+- [Scheduler named plans](scheduler-named-plans.md)
