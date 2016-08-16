@@ -18,7 +18,7 @@
            * [Named associations](specifications/runtime/transaction-named-associations.md)
            * [Target selectors](specifications/runtime/transaction-target-selectors.md)
            * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
-           * Serialization
+           * [Serialization](specifications/runtime/transaction-serialization.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
