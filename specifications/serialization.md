@@ -23,16 +23,15 @@ Serialization enables a wide variety of use cases:
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
-
 ## Motion family serialization
 
-Plan types must be serializable to a binary format containing the following keys:
+Plans must be serializable to a data format containing the following information:
 
 * namespace: `String`
 * name: `String`
 * payload: `Data`
 
-A combination of `namespace` and `name` allows the Runtime to uniquely identify a plan in a given system.
+A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
 
 The following example serializes a specific Tween plan:
 
@@ -73,6 +72,22 @@ data = Serializer.toBinary(fadeIn)
 Plans can choose any format for their payload.
 
 Plans should consider how they will handle future changes to their payload format.
+
+## Plan serialization
+
+Serializable plans can be sent over a wire or recorded to disk.
+
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
+
+Example pseudo-code:
+
+    # Serialize the plan
+    data = plan.serialize()
+    
+    # Create a new plan from data
+    plan = Plan(data)
+
+A serialized plan is represented as a stream of bytes. These bytes can represent any format.
 
 ## Transaction serialization
 
