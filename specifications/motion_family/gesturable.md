@@ -3,30 +3,49 @@ Status of this document:
 
 # Gesturable
 
+## Abstract types
+
+### Gesturable
+
+Contract: `wantsAnchorPointAdjustment` may be enabled to indicate that the target's anchor point should be manipulated when a gesture starts.
+
+    class Gesturable {
+      var wantsAnchorPointAdjustment: Bool = false
+    }
+
 ## Plans
 
 ### Draggable
 
 Contract: delta x and y from the given gesture recognizer are added to the target's `position.x` and `position.y`. If no gesture recognizer is provided, then one is created.
 
-    class Draggable {
+    class Draggable: Gesturable {
       var panGestureRecognizer?
+      
+      defaults:
+      wantsAnchorPointAdjustment = false
     }
 
 ### Pinchable
 
 Contract: scale x and y from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
 
-    class Pinchable {
+    class Pinchable: Gesturable {
       var pinchGestureRecognizer?
+      
+      defaults:
+      wantsAnchorPointAdjustment = true
     }
 
 ### Rotatable
 
 Contract: z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
 
-    class Rotatable {
+    class Rotatable: Gesturable {
       var rotationGestureRecognizer?
+      
+      defaults:
+      wantsAnchorPointAdjustment = true
     }
 
 ### ChangeAnchorPoint
