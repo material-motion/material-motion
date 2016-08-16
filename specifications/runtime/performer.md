@@ -8,9 +8,7 @@ Printable tech tree/checklist:
 
 ![](../../_assets/PerformerTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Abstract type**: `Performer` is a protocol, if your language has that concept.
 
@@ -57,8 +55,6 @@ Example pseudo-code:
     }
 
 In English: the performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to this second function.
-
-<p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
 
