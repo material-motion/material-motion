@@ -8,9 +8,9 @@ This is the engineering specification for the `Transaction` object.
 
 ## Features
 
-- [Target selectors](transaction-target-selectors.md)
 - [Target enumeration](transaction-enumeration.md)
 - [Optimized](transaction-optimized.md)
+- [Target selectors](target-selectors.md)
 - [Named plans](named-plans.md)
 - [Serialization](serialization.md)
 
