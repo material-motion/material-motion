@@ -24,11 +24,9 @@
         * [Interactions](specifications/interactions.md)
             * [Interaction Director](specifications/interaction_director.md)
             * [Interaction Controller](specifications/interaction_controller.md)
-
------
-* [Creating replica elements](specifications/replicas.md)
-    * [ReplicaController](specifications/replicator_controller.md)
-    * [ReplicaControllerDelegate](specifications/replicator.md)
+    * [Creating replica elements](specifications/replicas.md)
+      * [ReplicaController](specifications/replicator_controller.md)
+      * [ReplicaControllerDelegate](specifications/replicator.md)
 * [\(drafts\)](specifications/drafts.md)
     * [Director composition](specifications/director_composition.md)
     * [Condition elements](specifications/transient_views.md)
@@ -39,8 +37,6 @@
     * [Applications](specifications/applications.md)
     * [Motion Expression](specifications/expressions.md)
         * [Further considerations](specifications/expressions-addendum.md)
-
------
 * [Contributing](CONTRIBUTING.md)
 * [Community index](community_index/README.md)
     * [Android](community_index/android.md)
