@@ -25,8 +25,8 @@
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
            * [Plan serialization](specifications/plan_serialization.md)
-           * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
            * [Transaction serialization](specifications/transaction_serialization.md)
+           * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
        * Families
            * [Gesturable](specifications/motion_family/gesturable.md)
    * [Directors](specifications/directors.md)
