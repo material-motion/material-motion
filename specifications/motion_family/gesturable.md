@@ -9,7 +9,7 @@ The Gesturable motion family allows a motion engineer to describe gesture manipu
 
 ### Sticker editor
 
-Each sticker can be dragged, pinched, and rotated.
+Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinched, and rotated.
 
     class StickerInteraction: InteractionDirector {
       let sticker
