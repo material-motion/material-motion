@@ -4,7 +4,7 @@ This is the engineering specification for the `Performer` abstract type.
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
-| First introduced | [1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
 Performers are the objects responsible for executing plans.
 
