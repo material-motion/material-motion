@@ -28,4 +28,6 @@ Example pseudo-code:
       private var director: TransitionDirector
     }
 
+<p style="text-align:center"><tt>/MVP</tt></p>
 
+---
