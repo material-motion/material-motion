@@ -3,3 +3,60 @@ Status of this document:
 
 # Plan serialization
 
+Plans must be serializable to a data format containing the following information:
+
+* namespace: `String`
+* name: `String`
+* payload: `Data`
+
+A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
+
+The following example serializes a specific Tween plan:
+
+```
+let fadeIn = Tween(keyPath: "opacity")
+fadeIn.from = 0
+fadeIn.to = 1
+fadeIn.curve = .easeIn
+
+data = Serializer.toBinary(fadeIn)
+{
+  namespace: "Tween",
+  name: "Tween",
+  payload: {
+    keyPath: "opacity"
+    from: 0,
+    to: 1
+    curve: "easeIn"
+  }
+}
+```
+
+The following example serializes a more abstract FadeIn compositional plan:
+
+```
+let fadeIn = FadeIn()
+
+data = Serializer.toBinary(fadeIn)
+{
+  namespace: "Tween",
+  name: "FadeIn",
+  payload: {}
+}
+```
+
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
+
+Example pseudo-code:
+
+    # Serialize the plan
+    data = plan.serialize()
+    
+    # Create a new plan from data
+    plan = Plan(data)
+
+A serialized plan is represented as a stream of bytes. These bytes can represent any format.
+
+**Payload contents**: Plans can choose any format for their payload.
+
+Plans should consider how they will handle future changes to their payload format.
