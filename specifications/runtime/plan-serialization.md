@@ -1,1 +1,0 @@
-# Plan serialization specification
