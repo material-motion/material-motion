@@ -22,7 +22,7 @@
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
-           * Event stream
+           * [Event stream](specifications/runtime/scheduler-event-stream.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
