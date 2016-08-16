@@ -39,33 +39,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API v1**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
-
-> The performer may choose not to implement this API.
-
-The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
-
-Example pseudo-code if your language does not support anonymous functions:
-
-    protocol DelegatingPerformer {
-      function setDelegatedExecutionCallback(callback)
-    }
-    
-    class DelegatedExecutionCallback {
-      function delegatedExecutionWillStart(performer, name)
-      function delegatedExecutionDidFinish(performer, name)
-    }
-
-Example pseudo-code if your language supports anonymous functions:
-
-    protocol DelegatedExecution {
-      var delegatedExecutionWillStart(performer, name)
-      var delegatedExecutionDidFinish(performer, name)
-    }
-
-<a name="delegationv2"></a>
-
-**Delegated execution API v2 (draft)**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
