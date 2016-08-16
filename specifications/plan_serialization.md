@@ -7,7 +7,9 @@ Plans must be serializable to a data format containing the following information
 
 * namespace: `String`
 * name: `String`
-* payload: `Data`
+* properties: `Dictionary`
+
+
 
 A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
 
@@ -59,4 +61,4 @@ A serialized plan is represented as a stream of bytes. These bytes can represent
 
 **Payload contents**: Plans can choose any format for their payload.
 
-Plans should consider how they will handle future changes to their payload format.
+Plans must consider how they will handle future changes to their payload format.
