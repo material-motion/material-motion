@@ -28,8 +28,8 @@
                * [Activity state change event](specifications/runtime/scheduler-event-activity-state-change.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
-       * [Gesturable](specifications/motion_family/gesturable.md)
        * Families
+       * [Gesturable](specifications/motion_family/gesturable.md)
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
