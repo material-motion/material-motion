@@ -3,6 +3,22 @@ Status of this document:
 
 # Gesturable
 
+The Gesturable motion family allows a motion engineer to describe gesture manipulation.
+
+## Examples
+
+### Sticker editor
+
+    class StickerInteraction: InteractionDirector {
+      let sticker
+      
+      func setUp(transaction) {
+        transaction.add(plan: Draggable(), to: sticker)
+        transaction.add(plan: Pinchable(), to: sticker)
+        transaction.add(plan: Rotatable(), to: sticker)
+      }
+    }
+
 ## Abstract types
 
 ### Gesturable
