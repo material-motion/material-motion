@@ -50,22 +50,6 @@ Notice that each entry has a different `fromValue` in the following log:
 
 <p style="text-align:center"><tt>feature: named associations</tt></p>
 
-Transactions support named add/remove operations.
-
-**Named add API**: Provide an API for `add` and `remove` with a name argument.
-
-Example pseudo-code:
-
-    # Associate a named plan with a target.
-    transaction.add(plan, target, name)
-    
-    # Remove any named plan from a target.
-    transaction.remove(name, target)
-
-**Order**: Maintain order of named operations.
-
-Last operation wins.
-
 <p style="text-align:center"><tt>/feature: named operations</tt></p>
 
 ---
