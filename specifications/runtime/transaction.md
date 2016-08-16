@@ -45,3 +45,11 @@ Notice that each entry has a different `fromValue` in the following log:
       {action: 'add', plan: {..., fromValue = 0}}, 
       {action: 'add', plan: {..., fromValue = 5}}
     ]
+
+## Features
+
+- [Named associations](transaction-named-associations.md)
+- [Target selectors](transaction-target-selectors.md)
+- [Target enumeration](transaction-enumeration.md)
+- [Serialization](transaction-serialization.md)
+- [Optimized](transaction-optimized.md)
