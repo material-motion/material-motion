@@ -14,6 +14,6 @@ Example pseudo-code:
     # Create a new plan from json
     plan = Plan(json)
 
-**JSON serialization**: A serialized plan is represented in JSON.
+A serialized plan is represented as a stream of bytes. These bytes can represent any format.
 
 Further reading: [Serialization](../serialization.md)
