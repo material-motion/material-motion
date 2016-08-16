@@ -5,7 +5,7 @@ Status of this document:
 
 Plans must be serializable to a data format containing the following information:
 
-* namespace: `String`
+* motionFamily: `String`
 * name: `String`
 * properties: `Dictionary`
 
