@@ -31,7 +31,7 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
 
 ### ChangeAnchorPoint
 
-Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`.
+Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
     class ChangeAnchorPoint {
       var newAnchorPoint
