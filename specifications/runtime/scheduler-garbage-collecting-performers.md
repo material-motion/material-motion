@@ -1,4 +1,4 @@
-# Garbage-collecting performers
+# Scheduler garbage-collecting performers specification
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
 
