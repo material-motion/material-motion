@@ -16,7 +16,7 @@
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
            * [Named associations](specifications/runtime/transaction-named-associations.md)
-           * Target selectors
+           * [Target selectors](specifications/runtime/transaction-target-selectors.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
