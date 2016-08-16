@@ -22,7 +22,6 @@
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
-           * [Garbage-collecting performers](specifications/runtime/scheduler-garbage-collecting-performers.md)
            * [Named plans](specifications/runtime/scheduler-named-plans.md)
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
                * [New target event](specifications/runtime/scheduler-event-new-target.md)
