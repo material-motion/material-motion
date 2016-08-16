@@ -1,5 +1,7 @@
 # Performer named plans specification
 
+Related specifications: [Scheduler named plans](scheduler-named-plans.md).
+
 Performers can receive named plans.
 
 **Add/remove API**: Performers can implement an add/remove function.
@@ -15,6 +17,3 @@ Example pseudo-code:
       function removePlanWithName(name)
     }
 
-## Related specifications
-
-- [Scheduler named plans](scheduler-named-plans.md)
