@@ -6,6 +6,12 @@ This is the engineering specification for the `Scheduler` object.
 | ---------------- |:-------:|:-----:|
 | First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
+## Features
+
+- [Named plans](named-plans.md)
+
+## Overview
+
 A scheduler accepts transactions and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
 
 Printable tech tree/checklist:
@@ -109,10 +115,6 @@ Pseudo-code example:
     }
 
 A scheduler is active if any of its performer instances are active.
-
-## Features
-
-- [Named plans](named-plans.md)
 
 ---
 
