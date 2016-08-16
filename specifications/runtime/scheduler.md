@@ -183,6 +183,7 @@ This API is meant to be used by the `commit` implementation to resolve specific 
 <p style="text-align:center"><tt>/feature: target selectors</tt></p>
 
 ---
+
 <p id="garbage-collectable-performers" style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
@@ -246,8 +247,6 @@ Example pseudo-code:
     > true
 
 <p style="text-align:center"><tt>/feature: named plans</tt></p>
-
----
 
 ---
 
