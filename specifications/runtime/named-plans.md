@@ -1,4 +1,4 @@
-# Named plans
+# Runtime named plans specification
 
 Example use case: associating "behavior" with a target.
 
