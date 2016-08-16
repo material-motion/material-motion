@@ -14,7 +14,7 @@
            * [Named plans](specifications/runtime/performer-named-plans.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
-           * [Named plans](specifications/runtime/transaction-named-associations.md)
+           * [Named plans](specifications/runtime/transaction-named-plans.md)
            * [Target selectors](specifications/runtime/transaction-target-selectors.md)
            * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
            * [Serialization](specifications/runtime/transaction-serialization.md)
