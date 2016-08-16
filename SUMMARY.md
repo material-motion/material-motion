@@ -20,7 +20,7 @@
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
                * [New target event](specifications/runtime/scheduler-event-new-target.md)
                * [Activity state change event](specifications/runtime/scheduler-event-activity-state-change.md)
-       * Target selectors
+       * [Target selectors](specifications/runtime/target_selectors.md)
        * [Named plans](specifications/runtime/named-plans.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
