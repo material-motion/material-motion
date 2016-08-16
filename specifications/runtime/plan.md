@@ -15,9 +15,7 @@ Printable tech tree/checklist:
 
 ![](../../_assets/PlanTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Abstract type**: `Plan` is a protocol, if your language has that concept.
 
@@ -44,4 +42,6 @@ This can be implemented in a variety of ways. We've included a few options below
 - Value types.
 - Implement a copy or clone method on a reference type.
 
-<p style="text-align:center"><tt>/MVP</tt></p>
+## Features
+
+- [Serialization](plan-serialization.md)
