@@ -1,7 +1,7 @@
 Status of this document:
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Plan serialization
+# Plan serialization specification
 
 Plans must be serializable to a data format containing the following information:
 
