@@ -23,6 +23,7 @@
        * [Scheduler](specifications/runtime/scheduler.md)
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
+               * New target event
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
