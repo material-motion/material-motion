@@ -9,7 +9,7 @@ This is the engineering specification for the `Plan` abstract type.
 
 ## Features
 
-- [Serialization](plan-serialization.md)
+- [Serialization](../serialization.md)
 
 ## Overview
 
