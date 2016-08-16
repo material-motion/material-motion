@@ -9,6 +9,7 @@
    * [Motion runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
+           * Serialization
        * [Performer](specifications/runtime/performer.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Scheduler](specifications/runtime/scheduler.md)
