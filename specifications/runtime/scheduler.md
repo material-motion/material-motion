@@ -197,7 +197,7 @@ Example pseudo-code:
 
 ---
 
-<p id = "new-target-event" style="text-align:center"><tt>feature: new target event</tt></p>
+<p id="new-target-event" style="text-align:center"><tt>feature: new target event</tt></p>
 
 Fire an observable event when a new target is referenced.
 
