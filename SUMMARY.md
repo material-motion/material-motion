@@ -12,7 +12,6 @@
        * [Performer](specifications/runtime/performer.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
-           * [Target selectors](specifications/runtime/transaction-target-selectors.md)
            * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
