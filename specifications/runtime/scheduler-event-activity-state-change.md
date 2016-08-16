@@ -1,3 +1,6 @@
+Status of this document:
+![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Activity state change event
 
 Fire an observable event when the at rest/active state changes.
