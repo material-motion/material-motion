@@ -1,4 +1,4 @@
-# Serialization
+# Motion family serialization specification
 
 Serialization is what allows motion families to be transmitted over a pipe.
 
