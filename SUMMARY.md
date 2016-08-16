@@ -15,7 +15,7 @@
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * Tween
-       * Gesturable
+       * [Gesturable](specifications/motion_family/gesturable.md)
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
