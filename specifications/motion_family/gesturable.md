@@ -41,3 +41,8 @@ Contract: the anchor point of the view is immediately changed to the `newAnchorP
 
 ### GesturablePerformer
 
+Supported plans: `Draggable`, `Pinchable`, `Rotatable`.
+
+### AnchorPointPerformer
+
+Supported plans: `ChangeAnchorPoint`.
