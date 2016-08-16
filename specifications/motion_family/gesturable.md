@@ -7,6 +7,8 @@ Status of this document:
 
 ### Draggable
 
+Contract: delta x and y from the gesture recognizer are added to the target's `position.x` and `position.y`.
+
     class Draggable {
       var panGestureRecognizer?
     }
@@ -21,6 +23,12 @@ Status of this document:
 
     class Rotatable {
       var rotationGestureRecognizer?
+    }
+
+### ChangeAnchorPoint
+
+    class ChangeAnchorPoint {
+      var newAnchorPoint
     }
 
 ## Performers
