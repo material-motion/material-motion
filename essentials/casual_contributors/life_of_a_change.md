@@ -4,11 +4,17 @@
 
 We encourage casual contributors to open GitHub pull requests to make changes.
 
+## Fork the repository you're working on
+
+## Push your changes to a branch
+
+## Send a pull request
+
 Guides on pull requests:
 
 - [Using pull requests](https://help.github.com/articles/using-pull-requests/)
 
-## Code review
+## Participate in code review
 
 A frequent or core contributor will review your pull request. You may be asked to make changes to your pull request.
 
