@@ -1,4 +1,4 @@
-# Plan serialization
+# Plan serialization specification
 
 Plans are serializable.
 
