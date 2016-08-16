@@ -3,14 +3,27 @@ Status of this document:
 
 # Gesturable
 
-## Draggable
+## Plans
 
-    let draggable = Draggable()
+### Draggable
 
-## Pinchable
+    class Draggable {
+      var panGestureRecognizer?
+    }
 
-    let pinchable = Pinchable()
+### Pinchable
 
-## Rotatable
+    class Pinchable {
+      var pinchGestureRecognizer?
+    }
 
-    let rotatable = Rotatable()
+### Rotatable
+
+    class Rotatable {
+      var rotationGestureRecognizer?
+    }
+
+## Performers
+
+### GesturablePerformer
+
