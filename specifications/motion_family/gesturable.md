@@ -77,7 +77,7 @@ Contract: the anchor point of the view is immediately changed to the `newAnchorP
 
 Supported plans: `Draggable`, `Pinchable`, `Rotatable`.
 
-Emits: ChangeAnchorPoint on gesture begin if any gesture's `wantsAnchorPointAdjustment` is enabled.
+Emits: ChangeAnchorPoint on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
 
 ### AnchorPointPerformer
 
