@@ -11,7 +11,7 @@ This is the engineering specification for the `Transaction` object.
 - [Named plans](named-plans.md)
 - [Target selectors](transaction-target-selectors.md)
 - [Target enumeration](transaction-enumeration.md)
-- [Serialization](transaction-serialization.md)
+- [Serialization](serialization.md)
 - [Optimized](transaction-optimized.md)
 
 ## Overview
