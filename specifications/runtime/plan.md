@@ -3,7 +3,7 @@
 This is the engineering specification for the `Plan` abstract type.
 
 |                  | Android | Apple |
-| ---------------- | ------- | ----- |
+| ---------------- |:-------:|:-----:|
 | First introduced | [1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
 A plan is an object representing **what you want something to do** or **how you want it to behave**.
