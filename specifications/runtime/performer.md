@@ -10,7 +10,6 @@ This is the engineering specification for the `Performer` abstract type.
 ## Features
 
 - [Named plans](named-plans.md)
-- [Manual execution](performer-manual-execution.md)
 - [Composition](performer-composition.md)
 
 ## Overview
