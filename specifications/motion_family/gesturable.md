@@ -1,10 +1,10 @@
 # Gesturable
 
+The Gesturable motion family allows a motion engineer to describe gesture manipulation.
+
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
 | Milestone | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
-
-The Gesturable motion family allows a motion engineer to describe gesture manipulation.
 
 ## Examples
 
