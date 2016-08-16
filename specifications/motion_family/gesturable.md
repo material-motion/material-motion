@@ -3,3 +3,14 @@ Status of this document:
 
 # Gesturable
 
+## Draggable
+
+    let draggable = Draggable()
+
+## Pinchable
+
+    let pinchable = Pinchable()
+
+## Rotatable
+
+    let rotatable = Rotatable()
