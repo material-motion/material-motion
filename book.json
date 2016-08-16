@@ -3,7 +3,8 @@
         "edit-link",
         "emphasize",
         "ga",
-        "collapsible-chapters"
+        "collapsible-chapters",
+        "github"
     ],
     "pluginsConfig": {
         "edit-link": {
