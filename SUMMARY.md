@@ -13,7 +13,7 @@
        * [Performer](specifications/runtime/performer.md)
            * [Named plans](specifications/runtime/performer-named-plans.md)
            * [Manual execution](specifications/runtime/performer-manual-execution.md)
-           * Composition
+           * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
