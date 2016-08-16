@@ -19,3 +19,5 @@ Guides on pull requests:
 A frequent or core contributor will review your pull request. You may be asked to make changes to your pull request.
 
 Pull requests must be approved by at least one frequent or core contributor. The approver is responsible for squashing and merging the pull request into the **develop** branch. Your change will land in the next release when the develop branch is merged into the **stable** branch.
+
+## Your pull request (hopefully) gets merged
