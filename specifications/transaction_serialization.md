@@ -36,7 +36,3 @@ Example pseudo-data:
   }
 ]
 ```
-
-## Open questions
-
-- How do we know which target to associate a given plan with?
