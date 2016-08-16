@@ -6,3 +6,10 @@
 4. Read through the [contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/essentials/) guides.
 5. Look for good starter issues for your platform [on Milemarker](https://material-motion.github.io/material-motion-milemarker/newbie.html).
 6. Ask questions in Discord!
+
+## Roles
+
+As a frequent or core contributor you'll need to be added to the relevant **roles**.
+
+1. Ask a member of the core team to add you to the relevant [GitHub teams](https://github.com/orgs/material-motion/teams).
+2. Ask a member of the core team to add you to the relevant Discord teams.
