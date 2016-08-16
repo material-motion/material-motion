@@ -1,4 +1,4 @@
-# Transaction named associations specification
+# Transaction named plans specification
 
 *Related specifications: [Scheduler named plans](scheduler-named-plans.md).*
 
