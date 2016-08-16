@@ -1,5 +1,7 @@
 # Plan serialization specification
 
+Related specifications: [Motion family serialization](../serialization.md).
+
 Plans are serializable.
 
 Serializable plans can be sent over a wire or recorded to disk.
