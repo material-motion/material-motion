@@ -108,26 +108,6 @@ A scheduler is active if any of its performer instances are active.
 
 ---
 
-<p id="activity-state-change-event" style="text-align:center"><tt>feature: activity state change event</tt></p>
-
-Fire an observable event when the at rest/active state changes.
-
-**activity state changed API**: Provide a public API for registering an "activity state did change" listener.
-
-    Scheduler {
-      public function addActivityStateObserver(function)
-    }
-    
-    scheduler.addActivityStateObserver(function(newState) {
-      // React to state change
-    })
-
-**Many observers**: Allow many observers to be registered.
-
-<p style="text-align:center"><tt>/feature: activity state change event</tt></p>
-
----
-
 <p id="garbage-collectable-performers" style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
