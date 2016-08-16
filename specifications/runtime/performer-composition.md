@@ -4,6 +4,8 @@ Performers can emit transactions. This is a type of composition.
 
 **transactionEmitter API**: A performer may be provided with a transaction emitter object.
 
+> The Performer may choose not to implement this API.
+
 A transaction emitter declaration might look like so:
 
     protocol TransactionEmitter {
