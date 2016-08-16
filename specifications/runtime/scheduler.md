@@ -4,7 +4,7 @@ This is the engineering specification for the `Scheduler` object.
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
-| First introduced | [1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
 A scheduler accepts transactions and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
 
