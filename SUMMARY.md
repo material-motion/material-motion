@@ -24,6 +24,7 @@
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
                * [New target event](specifications/runtime/scheduler-event-new-target.md)
+               * Activity state change event
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
