@@ -1,6 +1,3 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Gesturable
 
 The Gesturable motion family allows a motion engineer to describe gesture manipulation.
