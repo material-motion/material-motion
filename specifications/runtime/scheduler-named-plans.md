@@ -41,3 +41,7 @@ Example pseudo-code:
     performer.setPlan(plan, withName: name)
     performerForName(name) == performer 
     > true
+
+## Related specifications
+
+- [Performer named plans](performer-named-plans.md)
