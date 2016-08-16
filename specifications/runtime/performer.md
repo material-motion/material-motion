@@ -58,27 +58,6 @@ In English: the performer must implement a method that receives two functions. I
 
 ---
 
-<p style="text-align:center"><tt>feature: Named plans</tt></p>
-
-Performers can receive named plans.
-
-**Add/remove API**: Performers can implement an add/remove function.
-
->The Performer may choose not to implement this API.
-
-If one method is implemented, so must the other.
-
-Example pseudo-code:
-
-    protocol NamedPlanExecution {
-      function addPlanWithName(plan, name)
-      function removePlanWithName(name)
-    }
-
-<p style="text-align:center"><tt>/feature: Named plans</tt></p>
-
----
-
 <p style="text-align:center"><tt>feature: Manual execution</tt></p>
 
 An Performer can choose to implement an update function that will be called many times per second.
