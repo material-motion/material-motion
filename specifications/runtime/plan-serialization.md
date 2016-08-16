@@ -1,6 +1,6 @@
 # Plan serialization specification
 
-Related specifications: [Motion family serialization](../serialization.md).
+*Related specifications: [Motion family serialization](../serialization.md).*
 
 Plans are serializable.
 
