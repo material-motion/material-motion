@@ -48,24 +48,6 @@ Notice that each entry has a different `fromValue` in the following log:
 
 ---
 
-<p style="text-align:center"><tt>feature: target selector</tt></p>
-
-Transactions may receive target selectors.
-
-**selector APIs**: All add/remove APIs may be provided with a TargetSelector instead of a direct target.
-
-Example pseudo-code:
-
-    # Associate a named plan with a target.
-    transaction.add(plan, TargetSelector("#contextView"))
-    
-    # Remove any named plan from a target.
-    transaction.remove(name, TargetSelector("#contextView"))
-
-<p style="text-align:center"><tt>/feature: target selector</tt></p>
-
----
-
 <p style="text-align:center"><tt>feature: target enumeration</tt></p>
 
 Targets referenced in a transaction are enumerable.
