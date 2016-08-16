@@ -9,9 +9,7 @@ Plans must be serializable to a data format containing the following information
 * name: `String`
 * properties: `Dictionary`
 
-
-
-A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
+**Identifying the plan**: A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
 
 The following example serializes a specific Tween plan:
 
