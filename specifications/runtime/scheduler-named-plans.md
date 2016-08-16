@@ -1,2 +1,2 @@
-# Named plans
+# Scheduler named plans specification
 
