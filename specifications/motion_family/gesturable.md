@@ -7,7 +7,7 @@ Status of this document:
 
 ### Gesturable
 
-Contract: `wantsAnchorPointAdjustment` may be enabled to indicate that the target's anchor point should be manipulated when a gesture starts.
+Contract: If any gesturable plan enables `wantsAnchorPointAdjustment` then the target's anchor point will be adjusted when gesturing begins.
 
     class Gesturable {
       var wantsAnchorPointAdjustment: Bool = false
