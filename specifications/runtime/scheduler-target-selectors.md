@@ -1,2 +1,2 @@
-# Target selectors
+# Scheduler target selectors specification
 
