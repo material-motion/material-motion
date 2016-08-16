@@ -29,30 +29,6 @@ Example pseudo-code:
       public var directorType: type(TransitionDirector)
     }
 
-**Scheduler**: Store a single `Scheduler` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var scheduler: Scheduler
-    }
-
-**Replication controller**: Store a single `ReplicationController` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var replicationController: ReplicationController
-    }
-
-**Transition director**: Store a single `TransitionDirector` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var director: TransitionDirector
-    }
-
 **Transition will start**: The following should occur when a transition is about to begin:
 
 1. Initialize the director
