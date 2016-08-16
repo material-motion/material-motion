@@ -8,9 +8,7 @@ Printable tech tree/checklist:
 
 ![](../../_assets/SchedulerTechTree.svg)
 
----
-
-<p id="mvp" style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Simple initializer**: A scheduler is cheap to create.
 
@@ -107,8 +105,6 @@ Pseudo-code example:
     }
 
 A scheduler is active if any of its performer instances are active.
-
-<p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
 
