@@ -18,7 +18,6 @@
            * [Serialization](specifications/runtime/transaction-serialization.md)
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
-           * [Named plans](specifications/runtime/scheduler-named-plans.md)
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
            * [Event stream](specifications/runtime/scheduler-event-stream.md)
                * [New target event](specifications/runtime/scheduler-event-new-target.md)
