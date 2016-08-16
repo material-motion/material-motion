@@ -2,9 +2,9 @@
 
 Performers can emit transactions. This is a type of composition.
 
-|                  | Android | Apple     |
-| ---------------- | ------- | --------- |
-| First introduced | N/A     | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/10) |
+|           | Android   | Apple     |
+| --------- | --------- | --------- |
+| Milestone | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/3) | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/10) |
 
 **transactionEmitter API**: A performer may be provided with a transaction emitter object.
 
