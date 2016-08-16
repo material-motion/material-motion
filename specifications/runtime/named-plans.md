@@ -1,5 +1,25 @@
 # Named plans
 
+Example use case: associating "behavior" with a target.
+
+Example pseudo-code:
+
+    # on drag
+    transaction1.add(
+      name: 'drag', 
+      plan: matchLocationOf(cursor), 
+      target
+    )
+    scheduler.commit(transaction1)
+
+    # on release
+    transaction2.add(
+      name: 'drag', 
+      plan: springToLocation(origin), 
+      target
+    )
+    scheduler.commit(transaction2)
+
 ## Performer specification
 
 Performers can receive named plans.
@@ -38,26 +58,6 @@ Last operation wins.
 # Scheduler specification
 
 Schedulers support named plans. Named plans are plans with a name associated via the transaction.
-
-Example use case: associating "behavior" with a target.
-
-Example pseudo-code:
-
-    # on drag
-    transaction1.add(
-      name: 'drag', 
-      plan: matchLocationOf(cursor), 
-      target
-    )
-    scheduler.commit(transaction1)
-
-    # on release
-    transaction2.add(
-      name: 'drag', 
-      plan: springToLocation(origin), 
-      target
-    )
-    scheduler.commit(transaction2)
 
 **Target-scoped names**: Names are scoped to the target.
 
