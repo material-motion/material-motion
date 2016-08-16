@@ -14,7 +14,6 @@
        * [Transaction](specifications/runtime/transaction.md)
            * [Target selectors](specifications/runtime/transaction-target-selectors.md)
            * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
-           * [Serialization](specifications/runtime/transaction-serialization.md)
            * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
            * [Target selectors](specifications/runtime/scheduler-target-selectors.md)
