@@ -52,7 +52,7 @@ Notice that each entry has a different `fromValue` in the following log:
 
 ## Features
 
-- [Named associations](transaction-named-associations.md)
+- [Named plans](named-plans.md)
 - [Target selectors](transaction-target-selectors.md)
 - [Target enumeration](transaction-enumeration.md)
 - [Serialization](transaction-serialization.md)
