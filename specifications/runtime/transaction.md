@@ -8,9 +8,7 @@ Printable tech tree/checklist:
 
 ![](../../_assets/TransactionTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Simple initializer**: A transaction is cheap to create.
 
@@ -47,8 +45,6 @@ Notice that each entry has a different `fromValue` in the following log:
       {action: 'add', plan: {..., fromValue = 0}}, 
       {action: 'add', plan: {..., fromValue = 5}}
     ]
-
-<p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
 
