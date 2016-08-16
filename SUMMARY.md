@@ -11,7 +11,7 @@
        * [Plan](specifications/runtime/plan.md)
            * [Serialization](specifications/runtime/plan-serialization.md)
        * [Performer](specifications/runtime/performer.md)
-           * Named plans
+           * [Named plans](specifications/runtime/performer-named-plans.md)
        * [Transaction](specifications/runtime/transaction.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
