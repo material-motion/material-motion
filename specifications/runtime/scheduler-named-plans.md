@@ -1,5 +1,7 @@
 # Scheduler named plans specification
 
+Related specifications: [Performer named plans](performer-named-plans.md).
+
 Schedulers support named plans. Named plans are plans with a name associated via the transaction.
 
 Example use case: associating "behavior" with a target.
@@ -41,7 +43,3 @@ Example pseudo-code:
     performer.setPlan(plan, withName: name)
     performerForName(name) == performer 
     > true
-
-## Related specifications
-
-- [Performer named plans](performer-named-plans.md)
