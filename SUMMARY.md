@@ -14,7 +14,6 @@
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
-       * [Tween](specifications/motion_family/tween.md)
        * [Gesturable](specifications/motion_family/gesturable.md)
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
