@@ -11,6 +11,24 @@ Plans must be serializable to a data format containing the following information
 
 **Identifying the plan**: A combination of `namespace` and `name` allows the runtime to uniquely identify a plan in a given system.
 
+**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
+
+Example pseudo-code:
+
+    # Serialize the plan
+    data = plan.serialize()
+    
+    # Create a new plan from data
+    plan = Plan(data)
+
+A serialized plan is represented as a stream of bytes. These bytes can represent any format.
+
+**Payload contents**: Plans can choose any format for their payload.
+
+Plans must consider how they will handle future changes to their payload format.
+
+## Examples
+
 The following example serializes a specific Tween plan:
 
 ```
@@ -44,19 +62,3 @@ data = Serializer.toBinary(fadeIn)
   payload: {}
 }
 ```
-
-**serialize/deserialize API**: Provide APIs for serializing and deserializing a plan.
-
-Example pseudo-code:
-
-    # Serialize the plan
-    data = plan.serialize()
-    
-    # Create a new plan from data
-    plan = Plan(data)
-
-A serialized plan is represented as a stream of bytes. These bytes can represent any format.
-
-**Payload contents**: Plans can choose any format for their payload.
-
-Plans must consider how they will handle future changes to their payload format.
