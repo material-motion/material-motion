@@ -12,7 +12,6 @@
            * [Serialization](specifications/runtime/plan-serialization.md)
        * [Performer](specifications/runtime/performer.md)
            * [Named plans](specifications/runtime/performer-named-plans.md)
-           * [Manual execution](specifications/runtime/performer-manual-execution.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
            * [Named associations](specifications/runtime/transaction-named-associations.md)
