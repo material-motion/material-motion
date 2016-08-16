@@ -1,2 +1,3 @@
-# Event stream
+# Scheduler event stream specification
+
 
