@@ -9,7 +9,7 @@
 
 ## Roles
 
-As a frequent or core contributor you'll need to be added to the relevant **roles**.
+As a frequent or core contributor you'll need to be added to the relevant **roles**. [Learn more about our community roles](../../community/governance.md).
 
 1. Ask a member of the core team to add you to the relevant [GitHub teams](https://github.com/orgs/material-motion/teams). This will allow you to create/update issues and push code.
 2. Ask a member of the core team to add you to the relevant Discord teams. This will give you some flair in the channel.
