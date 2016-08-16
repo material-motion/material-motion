@@ -1,2 +1,3 @@
-# Target enumeration
+# Transaction target enumeration specification
+
 
