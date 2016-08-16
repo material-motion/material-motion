@@ -9,7 +9,6 @@
    * [Motion runtime](specifications/runtime/README.md)
        * [Life of a plan](specifications/runtime/life_of_a_plan.md)
        * [Plan](specifications/runtime/plan.md)
-           * [Serialization](specifications/runtime/plan-serialization.md)
        * [Performer](specifications/runtime/performer.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Transaction](specifications/runtime/transaction.md)
