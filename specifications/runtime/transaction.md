@@ -6,6 +6,16 @@ This is the engineering specification for the `Transaction` object.
 | ---------------- |:-------:|:-----:|
 | First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
+## Features
+
+- [Named plans](named-plans.md)
+- [Target selectors](transaction-target-selectors.md)
+- [Target enumeration](transaction-enumeration.md)
+- [Serialization](transaction-serialization.md)
+- [Optimized](transaction-optimized.md)
+
+## Overview
+
 A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Scheduler](scheduler.md).
 
 Printable tech tree/checklist:
@@ -49,11 +59,3 @@ Notice that each entry has a different `fromValue` in the following log:
       {action: 'add', plan: {..., fromValue = 0}}, 
       {action: 'add', plan: {..., fromValue = 5}}
     ]
-
-## Features
-
-- [Named plans](named-plans.md)
-- [Target selectors](transaction-target-selectors.md)
-- [Target enumeration](transaction-enumeration.md)
-- [Serialization](transaction-serialization.md)
-- [Optimized](transaction-optimized.md)
