@@ -73,7 +73,7 @@ A performer can choose to implement an update function that will be called many 
 
 **Manual execution API**: Define an optional API that allows performers to implement an update function.
 
-> The Performer may choose not to implement this API.
+> The performer may choose not to implement this API.
 
 The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
 
