@@ -1,3 +1,6 @@
+Status of this document:
+![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
 # Runtime named plans specification
 
 Example use case: associating "behavior" with a target.
