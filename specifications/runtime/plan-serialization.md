@@ -9,10 +9,10 @@ Serializable plans can be sent over a wire or recorded to disk.
 Example pseudo-code:
 
     # Serialize the plan
-    json = plan.serialize()
+    data = plan.serialize()
     
-    # Create a new plan from json
-    plan = Plan(json)
+    # Create a new plan from data
+    plan = Plan(data)
 
 A serialized plan is represented as a stream of bytes. These bytes can represent any format.
 
