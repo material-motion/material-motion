@@ -126,31 +126,6 @@ Fire an observable event when the at rest/active state changes.
 
 <p style="text-align:center"><tt>/feature: activity state change event</tt></p>
 
-<p id="new-target-event" style="text-align:center"><tt>feature: new target event</tt></p>
-
-Fire an observable event when a new target is referenced.
-
-**new target API**: Provide a public API for adding a "new target" listener.
-
-    Scheduler {
-      public function addNewTargetObserver(function)
-    }
-    
-    scheduler.addNewTargetObserver(function(target) {
-      // Potentially clone the target
-      return clonedTarget
-    })
-
-**Replicas**: Allow the event receiver to return a replica instance.
-
-A replica instance is meant to be used in place of the original target.
-
-One common use of this feature is *element replication*. The replica element can safely be modified with little consequence.
-
-Performers are expected to act on the replica rather than the original target.
-
-<p style="text-align:center"><tt>/feature: new target event</tt></p>
-
 ---
 
 <p id="garbage-collectable-performers" style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
