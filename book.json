@@ -14,6 +14,9 @@
         "ga": {
             "token": "UA-80214706-1",
             "configuration": "auto"
+        },
+        "github": {
+            "url": "https://github.com/material-motion/material-motion-starmap"
         }
     }
 }
