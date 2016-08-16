@@ -1,6 +1,6 @@
 # Serialization
 
-Related specifications: [Plan serialization](runtime/plan-serialization.md).
+*Related specifications: [Plan serialization](runtime/plan-serialization.md).*
 
 Serialization is what allows motion families to be transmitted over a pipe.
 
