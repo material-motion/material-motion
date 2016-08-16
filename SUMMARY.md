@@ -19,7 +19,7 @@
            * [Target selectors](specifications/runtime/transaction-target-selectors.md)
            * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
            * [Serialization](specifications/runtime/transaction-serialization.md)
-           * Optimized
+           * [Optimized](specifications/runtime/transaction-optimized.md)
        * [Scheduler](specifications/runtime/scheduler.md)
    * [Motion family](specifications/motion-family.md)
        * [Serialization](specifications/serialization.md)
