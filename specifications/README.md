@@ -22,6 +22,25 @@ Tech is grouped into **focus areas**. Each focus area is represented by a colore
 
 ![](../_assets/Techstack.svg)
 
+# Roles
+
+We categorize users of Material Motion in the following groups:
+
+1. App creator
+2. Director creator
+3. Motion creator
+4. Runtime engineering
+
+Most app creators should only have to learn and understand Directors and transition/interaction controllers.
+
+If an app creator needs to create a new director, then they grow to the "director creator" group. This group understands how to use existing plans to create new directors.
+
+If a director creator needs to create new plans, then they grow to the "motion creator" group. This group understands how to create new plans and performers (motion families).
+
+Creators should rarely have to acquire an intimate understanding of the runtime engineering level.
+
+![](../_assets/Roles.svg)
+
 # Tech tree
 
 The following chart is a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) representation of the Starmap's engineering concepts. Dependencies are represented as arrows.
