@@ -14,7 +14,7 @@ Within the best of our ability the provided specifications are platform and lang
 
 # Tech stack
 
-The following chart is the tech stack for Material Motion. Lower items in the chart must be built before higher order items can be.
+The following chart is the tech stack for Material Motion. Lower items in the chart must be built before higher order items can be built.
 
 ![](../_assets/Techstack.svg)
 
