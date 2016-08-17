@@ -16,7 +16,7 @@ Within the best of our ability the provided specifications are platform and lang
 
 The following chart is the tech stack for Material Motion. Lower items in the chart must be built before higher order items can be built.
 
-Tech is separated into **tracks** that are owned by individuals.
+Tech is separated into vertical **tracks** that are owned by individuals.
 
 ![](../_assets/Techstack.svg)
 
