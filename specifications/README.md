@@ -12,6 +12,12 @@ Much of what we'll describe is not new. Some things we'll discuss have existed f
 
 Within the best of our ability the provided specifications are platform and language-agnostic. We assume that you're working with an object-oriented language. We're inspired by functional programming but apply a pragmatic approach to system design.
 
+# Tech stack
+
+The following chart is the tech stack for Material Motion. Lower items in the chart must be built before higher order items can be built.
+
+![](../_assets/Techstack.svg)
+
 # Tech tree
 
 The following chart is a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) representation of the Starmap's engineering concepts. Dependencies are represented as arrows.
