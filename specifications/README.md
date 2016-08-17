@@ -37,7 +37,7 @@ If an app creator needs to create a new director, then they grow to the "directo
 
 If a director creator needs to create new plans, then they grow to the "motion creator" group. This group understands how to create new plans and performers (motion families).
 
-Creators should rarely have to acquire an intimate understanding of the runtime engineering level.
+Creators should rarely, if ever, have to acquire an understanding of runtime engineering. The Starmap is written for the runtime engineering group.
 
 ![](../_assets/Roles.svg)
 
