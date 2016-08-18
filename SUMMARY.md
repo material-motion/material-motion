@@ -29,6 +29,7 @@
            * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
            * [Tween](specifications/motion_family/tween.md)
            * [Timeline tween](specifications/motion_family/timeline_tween.md)
+           * Physics
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
