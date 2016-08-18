@@ -31,6 +31,8 @@ We categorize users of Material Motion in the following groups:
 3. Motion creator
 4. Runtime engineering
 
+Each group in the list above requires more knowledge of the Material Motion ecosystem than the group preceding it.
+
 Most app creators should only have to learn and understand Directors and transition/interaction controllers.
 
 If an app creator needs to create a new director, then they grow to the "director creator" group. This group understands how to use existing plans to create new directors.
