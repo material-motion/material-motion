@@ -15,7 +15,7 @@ A simple bi-directional "fade" transition:
 
     class FadeTransition: TransitionDirector {
       func setUp(transaction) {
-        let timeline = Timeline()
+        let timeline = Timeline(self.initialDirection)
         let fadeIn = FadeIn(onTimeline: timeline)
         transaction.add(plan: fadeIn, to: forwardElement)
       }
@@ -25,7 +25,7 @@ A simple bi-directional "slide" transition:
 
     class SlideTransition: TransitionDirector {
       func setUp(transaction) {
-        let timeline = Timeline()
+        let timeline = Timeline(self.initialDirection)
         let shiftUp = Move(onTimeline: timeline,
                            from: bottomEdge,
                            to: topEdge)
