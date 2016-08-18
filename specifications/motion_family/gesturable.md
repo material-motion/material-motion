@@ -16,23 +16,34 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
       let sticker
       
       func setUp(transaction) {
-        transaction.add(plan: Draggable(), to: sticker)
-        transaction.add(plan: Pinchable(), to: sticker)
-        transaction.add(plan: Rotatable(), to: sticker)
+        transaction.add(plan: DirectlyManipulable(), to: sticker)
       }
     }
 
 ## Abstract types
 
-### Gesturable
+### AnchorPointAdjustable
 
-Contract: If any gesturable plan enables `wantsAnchorPointAdjustment` then the target's anchor point will be adjusted when gesturing begins.
+Contract: If a plan enables `wantsAnchorPointAdjustment` then the target's anchor point will be adjusted when gesturing begins.
 
     class Gesturable {
       var wantsAnchorPointAdjustment: Bool = false
     }
 
 ## Plans
+
+### DirectlyManipulable
+
+Contract: registers Draggable, Pinchable, and Rotatable to the given target.
+
+    class DirectlyManipulable: Gesturable {
+      var panGestureRecognizer?
+      var pinchGestureRecognizer?
+      var rotateGestureRecognizer?
+      
+      defaults:
+      wantsAnchorPointAdjustment = true
+    }
 
 ### Draggable
 
