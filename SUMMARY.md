@@ -27,9 +27,9 @@
            * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
        * Families
            * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
+           * [Physics](specifications/motion_family/physics.md)
            * [Tween](specifications/motion_family/tween.md)
            * [Timeline tween](specifications/motion_family/timeline_tween.md)
-           * [Physics](specifications/motion_family/physics.md)
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
