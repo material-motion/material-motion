@@ -1,6 +1,6 @@
 # Direct manipulation motion family
 
-The direct manipulation motion family allows a motion engineer to describe gesture manipulation of elements.
+The direct manipulation motion family allows a director to describe gesture manipulation of elements.
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
