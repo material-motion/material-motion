@@ -1,10 +1,10 @@
-# Gesturable
+# Direct manipulation
 
-The Gesturable motion family allows a motion engineer to describe gesture manipulation.
+The direct manipulation motion family allows a motion engineer to describe gesture manipulation of elements.
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
-| Milestone | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
+| Milestone | &nbsp;    | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
 
 ## Examples
 
