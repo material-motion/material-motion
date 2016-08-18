@@ -21,6 +21,18 @@ A simple bi-directional "fade" transition:
       }
     }
 
+A simple bi-directional "slide" transition:
+
+    class SlideTransition: TransitionDirector {
+      func setUp(transaction) {
+        let timeline = Timeline()
+        let shiftUp = Move(onTimeline: timeline,
+                           from: bottomEdge,
+                           to: topEdge)
+        transaction.add(plan: shiftUp, to: forwardElement)
+      }
+    }
+
 ## Abstract types
 
 ## Public plans
