@@ -39,7 +39,7 @@ A simple bi-directional "slide" transition:
 
 ## Public plans
 
-### TimelineTween
+### Tween
 
 ## Performers
 
@@ -49,9 +49,10 @@ A TimelineTweenPerformer is expected to generate Tween plans for the specified t
 
 For example, if TimelineTweenPerformer receives the following TimelineTween:
 
-    TimelineTween(property: "opacity",
-                  from: 0,
-                  to: 1)
+    Tween(onTimeline: timeline,
+          property: "opacity",
+          from: 0,
+          to: 1)
 
 And the direction is "forward", then this performer should emit the following plan:
 
