@@ -2,15 +2,25 @@
 
 This is the engineering specification for the `Performer` abstract type.
 
+|                  | Android | Apple |
+| ---------------- |:-------:|:-----:|
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+| Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | &nbsp; |
+
+## Features
+
+- [Named plans](named-plans.md)
+- [Composition](performer-composition.md)
+
+## Overview
+
 Performers are the objects responsible for executing plans.
 
 Printable tech tree/checklist:
 
 ![](../../_assets/PerformerTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Abstract type**: `Performer` is a protocol, if your language has that concept.
 
@@ -39,33 +49,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API v1**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
-
-> The performer may choose not to implement this API.
-
-The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
-
-Example pseudo-code if your language does not support anonymous functions:
-
-    protocol DelegatingPerformer {
-      function setDelegatedExecutionCallback(callback)
-    }
-    
-    class DelegatedExecutionCallback {
-      function delegatedExecutionWillStart(performer, planName)
-      function delegatedExecutionDidFinish(performer, planName)
-    }
-
-Example pseudo-code if your language supports anonymous functions:
-
-    protocol DelegatedExecution {
-      var delegatedExecutionWillStart(performer, planName)
-      var delegatedExecutionDidFinish(performer, planName)
-    }
-
-<a name="delegationv2"></a>
-
-**Delegated execution API v2 (draft)**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
@@ -82,40 +66,19 @@ Example pseudo-code:
       function delegatedExecutionDidFinish(performer, token)
     }
 
-In English: the performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to this second function.
-
-<p style="text-align:center"><tt>/MVP</tt></p>
+The performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to the second function.
 
 ---
 
-<p style="text-align:center"><tt>feature: Named plans</tt></p>
+## Proposed features
 
-Performers can receive named plans.
+### Manual execution
 
-**Add/remove API**: Performers can implement an add/remove function.
-
->The Performer may choose not to implement this API.
-
-If one method is implemented, so must the other.
-
-Example pseudo-code:
-
-    protocol NamedPlanExecution {
-      function addPlanWithName(plan, name)
-      function removePlanWithName(name)
-    }
-
-<p style="text-align:center"><tt>/feature: Named plans</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: Manual execution</tt></p>
-
-An Performer can choose to implement an update function that will be called many times per second.
+A performer can choose to implement an update function that will be called many times per second.
 
 **Manual execution API**: Define an optional API that allows performers to implement an update function.
 
-> The Performer may choose not to implement this API.
+> The performer may choose not to implement this API.
 
 The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
 
@@ -131,7 +94,3 @@ Example pseudo-code:
     protocol ManuallyExecutingPerformer {
       function update(millisecondsSinceLastUpdate) -> ActivityState
     }
-
-<p style="text-align:center"><tt>/feature: Manual execution</tt></p>
-
----

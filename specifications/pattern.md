@@ -13,7 +13,7 @@ Benefits of this separation:
 
 ## Examples of this separation
 
-Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](../primitives.md).
+Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](primitives.md).
 
 ![](../_assets/PatternMatches.svg)
 
@@ -69,7 +69,7 @@ Consider this pseudo-code:
 
 ### Fulfillment of a plan
 
-In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system**.
+In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system** other than that which declared the plan.
 
 For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
@@ -83,4 +83,4 @@ An ideal fulfillment will carefully balance the considerations of power consumpt
 
 ## A Motion Runtime
 
-This Starmap defines a novel system of fulfillment we'll call the "Motion Runtime".
+This Starmap defines a novel system of declarative motion which we'll call the "Motion Runtime".

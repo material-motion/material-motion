@@ -2,15 +2,24 @@
 
 This is the engineering specification for the `Scheduler` object.
 
+|                  | Android | Apple |
+| ---------------- |:-------:|:-----:|
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+
+## Features
+
+- [Named plans](named-plans.md)
+- [Target selectors](target-selectors.md)
+
+## Overview
+
 A scheduler accepts transactions and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
 
 Printable tech tree/checklist:
 
 ![](../../_assets/SchedulerTechTree.svg)
 
----
-
-<p id="mvp" style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Simple initializer**: A scheduler is cheap to create.
 
@@ -108,120 +117,6 @@ Pseudo-code example:
 
 A scheduler is active if any of its performer instances are active.
 
-<p style="text-align:center"><tt>/MVP</tt></p>
-
----
-
-<p id="activity-state-change-event" style="text-align:center"><tt>feature: activity state change event</tt></p>
-
-Fire an observable event when the at rest/active state changes.
-
-**activity state changed API**: Provide a public API for registering an "activity state did change" listener.
-
-    Scheduler {
-      public function addActivityStateObserver(function)
-    }
-    
-    scheduler.addActivityStateObserver(function(newState) {
-      // React to state change
-    })
-
-**Many observers**: Allow many observers to be registered.
-
-<p style="text-align:center"><tt>/feature: activity state change event</tt></p>
-
----
-<p id="garbage-collectable-performers" style="text-align:center"><tt>feature: garbage-collectable performers</tt></p>
-
-To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
-
-The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) removes references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
-
-- According to the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) pattern, users are unlikely to notice a slow first frame in an animation.  This makes the first frame a good time to instantiate new objects.
-
-- The delay ensures that plans can be committed to the scheduler one-frame-at-a-time without triggering garbage collection.
-
-- 500ms is long enough that new plans in this sequence are unlikely, but short enough that the user is unlikely to be initiating new plans.
-
-> Under this strategy, it is especially important that performers can read the state that another performer may have set on a target.  Otherwise, when a performer is garbage collected and a new one takes its place, the new performer might reset the starting position of a target.  This would be jarring.
-
-<p style="text-align:center"><tt>/feature: garbage-collectable performers</tt></p>
-
----
-
-<p id="named-plans" style="text-align:center"><tt>feature: named plans</tt></p>
-
-Schedulers support named plans. Named plans are plans with a name associated via the transaction.
-
-Example use case: associating "behavior" with a target.
-
-Example pseudo-code:
-
-    # on drag
-    transaction1.add(
-      name: 'drag', 
-      plan: matchLocationOf(cursor), 
-      target
-    )
-    scheduler.commit(transaction1)
-
-    # on release
-    transaction2.add(
-      name: 'drag', 
-      plan: springToLocation(origin), 
-      target
-    )
-    scheduler.commit(transaction2)
-
-**Target-scoped names**: Names are scoped to the target.
-
-**Remove-then-add**: Two things must happen when a named plan is committed:
-
-1. Remove any previously committed plan with the same name from the target's performers. 
-
-   _Note:_ This may be on a different performer instance. In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
-2. Provide the relevant performer with the new named plan.
-
-Example pseudo-code:
-
-    # Step 1
-    performerForName(name).removePlanWithName(name)
-    
-    # Step 2
-    performer = performerForPlan(plan)
-    performer.setPlan(plan, withName: name)
-    performerForName(name) == performer 
-    > true
-
-<p style="text-align:center"><tt>/feature: named plans</tt></p>
-
----
-
-<p id = "new-target-event" style="text-align:center"><tt>feature: new target event</tt></p>
-
-Fire an observable event when a new target is referenced.
-
-**new target API**: Provide a public API for adding a "new target" listener.
-
-    Scheduler {
-      public function addNewTargetObserver(function)
-    }
-    
-    scheduler.addNewTargetObserver(function(target) {
-      // Potentially clone the target
-      return clonedTarget
-    })
-
-**Replicas**: Allow the event receiver to return a replica instance.
-
-A replica instance is meant to be used in place of the original target.
-
-One common use of this feature is *element replication*. The replica element can safely be modified with little consequence.
-
-Performers are expected to act on the replica rather than the original target.
-
-<p style="text-align:center"><tt>/feature: new target event</tt></p>
-
 ---
 
 ## Experimental ideas
@@ -259,7 +154,9 @@ The following topics are open for discussion. They do not presently have a clear
 - When should performers be removed from a scheduler?
 - Should schedulers support target-less plans?
 
-### Proposed features
+---
+
+## Proposed features
 
 **Tear down API**: Provide an API to tear down a scheduler.
 
@@ -270,3 +167,18 @@ It's unclear if this is a necessary feature.
 Example pseudo-code:
 
     scheduler.tearDown()
+
+**Garbage-collecting performers**
+
+To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
+
+The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) removes references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
+
+- According to the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) pattern, users are unlikely to notice a slow first frame in an animation.  This makes the first frame a good time to instantiate new objects.
+
+- The delay ensures that plans can be committed to the scheduler one-frame-at-a-time without triggering garbage collection.
+
+- 500ms is long enough that new plans in this sequence are unlikely, but short enough that the user is unlikely to be initiating new plans.
+
+> Under this strategy, it is especially important that performers can read the state that another performer may have set on a target.  Otherwise, when a performer is garbage collected and a new one takes its place, the new performer might reset the starting position of a target.  This would be jarring.
+

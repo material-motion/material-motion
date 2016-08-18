@@ -12,6 +12,47 @@ Much of what we'll describe is not new. Some things we'll discuss have existed f
 
 Within the best of our ability the provided specifications are platform and language-agnostic. We assume that you're working with an object-oriented language. We're inspired by functional programming but apply a pragmatic approach to system design.
 
+# Tech stack
+
+The following chart is the tech stack for Material Motion. Lower items in the chart must be built before higher order items can be built.
+
+Each platform has its own implementation of this tech stack.
+
+Tech is grouped into **focus areas**. Each focus area is represented by a colored region in the diagram.
+
+![](../_assets/Techstack.svg)
+
+# Education groups
+
+We categorize the education of Material Motion into the following groups:
+
+1. App creator
+2. Director creator
+3. Motion creator
+4. Runtime engineering
+
+Each group in the list above requires more knowledge of the Material Motion ecosystem than the group preceding it.
+
+## Knowledge expectations
+
+**App creator**: knows how to use and compose Directors.
+
+**Director creator**: also knows how to create Directors and use Plans.
+
+**Motion creator**: also knows how to create Plans/Performers.
+
+**Runtime engineer**: also knows how to modify the runtime.
+
+Creators should rarely, if ever, have to acquire an understanding of runtime engineering.
+
+The Starmap is written for the runtime engineering group.
+
+## Knowledge iceberg
+
+The following diagram shows the required amount of knowledge for each group.
+
+![](../_assets/Roles.svg)
+
 # Tech tree
 
 The following chart is a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) representation of the Starmap's engineering concepts. Dependencies are represented as arrows.

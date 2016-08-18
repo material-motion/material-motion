@@ -1,4 +1,5 @@
 Status of this document:
+
 ![](../_assets/under-construction-flashing-barracade-animation.gif)
 
 # TransitionController specification
@@ -20,7 +21,7 @@ Example pseudo-code:
 
 **One controller per transition**: Every transition has access to its own `TransitionController` instance.
 
-Note that a transition can have two directions: present and dismiss. A single controller governs both the "present" and "dismiss" versions of the transition.
+A transition can represent two directions. For example, present and dismiss are two directions of a single transition.
 
 **Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
 
@@ -30,30 +31,6 @@ Example pseudo-code:
 
     TransitionController {
       public var directorClass: typeof(TransitionDirector)
-    }
-
-**Scheduler**: Store a single `Scheduler` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var scheduler: Scheduler
-    }
-
-**Replication controller**: Store a single `ReplicationController` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var replicationController: ReplicationController
-    }
-
-**Transition director**: Store a single `TransitionDirector` instance while the transition is active.
-
-Example pseudo-code:
-
-    TransitionController {
-      private var director: TransitionDirector
     }
 
 **Transition will start**: The following should occur when a transition is about to begin:

@@ -10,12 +10,12 @@ An object created for the purposes of describing motion.
 
 ## element
 
-A node in a hierarchical layout/compositing system.
+A node in a hierarchical layout\/compositing system.
 
 Examples:
 
-- [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) (iOS)
-- DOM element (web)
+* [UIView](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIView_Class/) \(iOS\)
+* DOM element \(web\)
 
 ## execution
 
@@ -27,16 +27,12 @@ An **Executor**'s sole responsibility is to fulfill the contract defined by one 
 
 Similar concepts:
 
-- [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) (Unity)
-- [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) (UIKit for iOS)
+* [Behavior](http://docs.unity3d.com/ScriptReference/Behaviour.html) \(Unity\)
+* [UIDynamicBehavior](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDynamicBehavior_Class/) \(UIKit for iOS\)
 
 ## expression
 
 Functional, syntactic sugar for the creation and configuration of plans.
-
-## family
-
-The beginning of an expression.
 
 ## plan
 
@@ -44,7 +40,7 @@ A plan is **what you want something to do**.
 
 Examples:
 
-- [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) (iOS)
+* [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) \(iOS\)
 
 In relation to a Runtime, a Plan is a concrete object that can be associated with a target.
 
@@ -54,17 +50,17 @@ An operating system or a cross-platform abstraction layer.
 
 Examples:
 
-- iOS
-- Android
-- Unity
-- Web (Chrome)
-- Web (Safari)
+* iOS
+* Android
+* Unity
+* Web \(Chrome\)
+* Web \(Safari\)
 
 ## protocol
 
-The contract/shape/blueprint an object is expected to conform to in order to interoperate with other objects in the system.
+The contract\/shape\/blueprint an object is expected to conform to in order to interoperate with other objects in the system.
 
-In some languages (like Java and ActionScript), this is called an `interface`.
+In some languages \(like Java and ActionScript\), this is called an `interface`.
 
 ## runtime
 
@@ -86,10 +82,11 @@ A mechanism by which new Plans are committed to a Runtime.
 
 The update event is called on an Executor many times per second. These events are usually synchronized to the current display's refresh rate: 60 times per second being common, 90 times per second being recommended for VR.
 
-We've listed technologies/APIs that provide this type of event for a variety of platforms below:
+We've listed technologies\/APIs that provide this type of event for a variety of platforms below:
 
-- Android: `Choreographer.FrameCallback`
-- Core Animation: CADisplayLink's selector calls
-- GLUT (OpenGL): `glutDisplayFunc()`
-- Unity: Update event on a Behavior
-- Web: `window.requestAnimationFrame`
+* Android: `Choreographer.FrameCallback`
+* Core Animation: CADisplayLink's selector calls
+* GLUT \(OpenGL\): `glutDisplayFunc()`
+* Unity: Update event on a Behavior
+* Web: `window.requestAnimationFrame`
+
