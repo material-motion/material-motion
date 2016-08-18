@@ -49,6 +49,8 @@ The Starmap is written for the runtime engineering group.
 
 ## Knowledge iceberg
 
+The following diagram shows the required amount of knowledge for each group.
+
 ![](../_assets/Roles.svg)
 
 # Tech tree
