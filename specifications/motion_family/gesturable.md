@@ -75,6 +75,18 @@ Contract: the anchor point of the view is immediately changed to the `newAnchorP
       var newAnchorPoint
     }
 
+## Performers
+
+### GesturablePerformer
+
+Supported plans: `Draggable`, `Pinchable`, `Rotatable`.
+
+Emits: ChangeAnchorPoint on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
+
+### AnchorPointPerformer
+
+Supported plans: `ChangeAnchorPoint`.
+
 The following diagram shows the desired effect of changing the anchor point of an element:
 
 ![](../../_assets/AnchorPoint.svg)
@@ -92,15 +104,3 @@ In pseudo-code:
       element.anchorPoint = desiredAnchorPoint
       element.position += gesturePositionInElement - originalPositionInElement
     }
-
-## Performers
-
-### GesturablePerformer
-
-Supported plans: `Draggable`, `Pinchable`, `Rotatable`.
-
-Emits: ChangeAnchorPoint on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
-
-### AnchorPointPerformer
-
-Supported plans: `ChangeAnchorPoint`.
