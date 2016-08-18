@@ -47,6 +47,8 @@ Creators should rarely, if ever, have to acquire an understanding of runtime eng
 
 The Starmap is written for the runtime engineering group.
 
+## Knowledge iceberg
+
 ![](../_assets/Roles.svg)
 
 # Tech tree
