@@ -30,7 +30,7 @@ Contract: If a plan enables `wantsAnchorPointAdjustment` then the target's ancho
       var wantsAnchorPointAdjustment: Bool = false
     }
 
-## Plans
+## Public plans
 
 ### DirectlyManipulable
 
@@ -78,7 +78,11 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
       wantsAnchorPointAdjustment = true
     }
 
-### Private plan: ChangeAnchorPoint
+## Private plans
+
+Plans that are only accessible within this motion family.
+
+### ChangeAnchorPoint
 
 Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
