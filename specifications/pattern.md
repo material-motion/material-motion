@@ -69,7 +69,7 @@ Consider this pseudo-code:
 
 ### Fulfillment of a plan
 
-In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system**.
+In a declarative motion system, exactly **how** a plan is executed is less important than that it is **fulfilled by some other system** other than that which declared the plan.
 
 For example, a plan of "fade in" could reasonably be fulfilled by a built-in animation system. The same plan could also be fulfilled by a custom function executed.
 
