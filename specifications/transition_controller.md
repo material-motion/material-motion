@@ -6,7 +6,7 @@ Status of this document:
 
 This is the engineering specification for the `TransitionController` object.
 
-`TransitionController` is the bridge between the platform's transitioning architecture and the `TransitionDirector` type.
+The `TransitionController` is the bridge between the platform's transitioning architecture and the `TransitionDirector` type. Note that a `TransitionController` can make use of a `TransitionRunner`, an object that handles the director and the scheduler, to just focus on the the platform's transitioning API. This document assumes no such object is being used.
 
 ---
 
@@ -30,7 +30,7 @@ The type must be a subclass of `TransitionDirector`.
 Example pseudo-code:
 
     TransitionController {
-      public var directorType: type(TransitionDirector)
+      public var directorClass: typeof(TransitionDirector)
     }
 
 **Transition will start**: The following should occur when a transition is about to begin:
@@ -46,14 +46,13 @@ Example pseudo-code:
         # Initialize the Director
         replicationController = ReplicationController()
         replicationController.duplicator = SystemDuplicator()
-        
-        director = self.directorType(initialDirection, replicationController)
+        director = self.directorClass(initialDirection, replicationController)
         
         # Phase: set up
         transaction = Transaction()
         director.setUp(transaction)
         
-        # Initialize the ruschedulerntime
+        # Initialize the scheduler
         scheduler = Scheduler()
         scheduler.addNewTargetObserver(replicationController)
         scheduler.addActivityStateObserver(self)

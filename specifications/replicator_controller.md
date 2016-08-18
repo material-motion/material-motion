@@ -58,7 +58,7 @@ Example pseudo-code:
         if disabledElements.contains(element) {
           return null
         }
-        return replicator.createReplica(element)
+        return delegate.createReplica(element)
       }
     }
 

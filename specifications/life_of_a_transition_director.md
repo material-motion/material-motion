@@ -67,9 +67,7 @@ An instance of this type might be lazily available for any transition on our pla
 
 Provide the `FadeTransitionDirector` type to the transition controller.
 
-```
-transitionController.directorType = typeof(FadeTransitionDirector)
-```
+    transitionController.directorClass = typeof(FadeTransitionDirector)
 
 ### Step 5: Initiate the transition
 

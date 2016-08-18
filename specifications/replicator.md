@@ -2,7 +2,7 @@
 
 This is the engineering specification for the `ReplicaControllerDelegate` abstract type.
 
-A instance of a `Replicator` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
+A instance of a `ReplicaControllerDelegate` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
 Printable tech tree/checklist:
 
@@ -12,11 +12,11 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Abstract type**: `Replicator` is a protocol, if your language has that concept.
+**Abstract type**: `ReplicaControllerDelegate` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
-    protocol Replicator {
+    protocol ReplicaControllerDelegate {
     }
 
 **createReplica API**: Provide an API for replicating an element.
@@ -27,7 +27,7 @@ Returning the provided element indicates that the element has not been replicate
 
 Example pseudo-code:
 
-    protocol Replicator {
+    protocol ReplicaControllerDelegate {
       function createReplica(Element element) -> Element
     }
 
