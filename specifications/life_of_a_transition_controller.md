@@ -32,15 +32,15 @@ Most platforms have a standard mechanism for initiating a transition. At this po
 
 To coordinate a transition, a transition controller must create a scheduler and a director.
 
-The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRuntime`.
+The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRunner`.
 
 For example:
 
-    transitionWillStart {
-      runtime = TransitionRuntime(new directorClass())
+    transitionWillStart(initialDirection) {
+      runner = TransitionRunner(directorClass(initialDirection))
     }
 
-    class TransitionRuntime {
+    class TransitionRunner {
       let scheduler
       initWithDirector(director) {
         scheduler = Scheduler()
@@ -62,4 +62,4 @@ Once the transition controller detects that the scheduler activity has idled, th
 
 > On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
 
-At this point the transition controller might throw away its `TransitionRuntime` instance.
+At this point the transition controller might throw away its `TransitionRunner` instance.

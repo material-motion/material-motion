@@ -52,15 +52,15 @@ Example pseudo-code if your language does not support anonymous functions:
     }
     
     class DelegatedExecutionCallback {
-      function delegatedExecutionWillStart(performer, name)
-      function delegatedExecutionDidFinish(performer, name)
+      function delegatedExecutionWillStart(performer, planName)
+      function delegatedExecutionDidFinish(performer, planName)
     }
 
 Example pseudo-code if your language supports anonymous functions:
 
     protocol DelegatedExecution {
-      var delegatedExecutionWillStart(performer, name)
-      var delegatedExecutionDidFinish(performer, name)
+      var delegatedExecutionWillStart(performer, planName)
+      var delegatedExecutionDidFinish(performer, planName)
     }
 
 <a name="delegationv2"></a>
