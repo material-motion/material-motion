@@ -22,9 +22,9 @@ Tech is grouped into **focus areas**. Each focus area is represented by a colore
 
 ![](../_assets/Techstack.svg)
 
-# Roles
+# Education groups
 
-We categorize users of Material Motion in the following groups:
+We categorize the education of Material Motion into the following groups:
 
 1. App creator
 2. Director creator
@@ -33,13 +33,19 @@ We categorize users of Material Motion in the following groups:
 
 Each group in the list above requires more knowledge of the Material Motion ecosystem than the group preceding it.
 
-Most app creators should only have to learn and understand Directors and transition/interaction controllers.
+## Knowledge expectations
 
-If an app creator needs to create a new director, then they grow to the "director creator" group. This group understands how to use existing plans to create new directors.
+**App creator**: knows how to use and compose Directors.
 
-If a director creator needs to create new plans, then they grow to the "motion creator" group. This group understands how to create new plans and performers (motion families).
+**Director creator**: also knows how to create Directors and use Plans.
 
-Creators should rarely, if ever, have to acquire an understanding of runtime engineering. The Starmap is written for the runtime engineering group.
+**Motion creator**: also knows how to create Plans/Performers.
+
+**Runtime engineer**: also knows how to modify the runtime.
+
+Creators should rarely, if ever, have to acquire an understanding of runtime engineering.
+
+The Starmap is written for the runtime engineering group.
 
 ![](../_assets/Roles.svg)
 
