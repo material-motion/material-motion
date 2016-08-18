@@ -1,4 +1,4 @@
-# Direct manipulation
+# Direct manipulation motion family
 
 The direct manipulation motion family allows a motion engineer to describe gesture manipulation of elements.
 
