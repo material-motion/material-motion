@@ -3,7 +3,7 @@ Status of this document:
 
 # Tween motion family
 
-The tween motion family allows a motion engineer to describe tween animations for properties on an element.
+The tween motion family allows a director to describe tween animations for properties on an element.
 
 ## Examples
 
