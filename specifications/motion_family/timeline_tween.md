@@ -59,19 +59,19 @@ And the direction is "forward", then this performer should emit the following pl
     let delay = timelineTween.start * timeline.duration
     let duration = (timelineTween.end - timelineTween.start) * timeline.duration
     
-    Tween(property: timelineTween.property,
-          from: timelineTween.from,
-          to: timelineTween.to,
-          delay: delay
-          duration: duration)
+    emit Tween(property: timelineTween.property,
+               from: timelineTween.from,
+               to: timelineTween.to,
+               delay: delay
+               duration: duration)
 
 If the direction is "backward", then this performer should emit the following plan:
 
     let delay = (1 - timelineTween.end) * timeline.duration
     let duration = (timelineTween.end - timelineTween.start) * timeline.duration
     
-    Tween(property: timelineTween.property,
-          from: timelineTween.to,
-          to: timelineTween.from,
-          delay: delay
-          duration: duration)
+    emit Tween(property: timelineTween.property,
+               from: timelineTween.to,
+               to: timelineTween.from,
+               delay: delay
+               duration: duration)
