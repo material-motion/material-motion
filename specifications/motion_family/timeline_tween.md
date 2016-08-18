@@ -11,6 +11,9 @@ The timeline tween motion family's primary utility is in defining **transitions*
 
 ## Examples
 
+    class FadeInTransition: TransitionDirector {
+    }
+
 ## Abstract types
 
 ## Public plans
