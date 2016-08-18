@@ -78,7 +78,7 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
       wantsAnchorPointAdjustment = true
     }
 
-### ChangeAnchorPoint
+### Private plan: ChangeAnchorPoint
 
 Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
@@ -92,7 +92,13 @@ Contract: the anchor point of the view is immediately changed to the `newAnchorP
 
 Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`.
 
-Emits: ChangeAnchorPoint on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
+`Draggable`, `Pinchable`, `Rotatable` emit:
+
+- `ChangeAnchorPoint` on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
+
+`DirectlyManipulable` emits:
+
+- `Draggable`, `Pinchable`, `Rotatable` when the plan is added.
 
 ### AnchorPointPerformer
 
