@@ -5,6 +5,8 @@ Status of this document:
 
 The timeline tween motion family allows a director to describe tween animations that are placed on a normalized timeline for properties on an element.
 
+The timeline tween motion family's primary utility is in defining transitions. A given transition has two directions; we'll use the terms forward and backward to refer to them. If a timeline tween is described as "fade in" during the forward transition, then that same tween will "fade out" on the backward transition.
+
 ## Examples
 
 ## Abstract types
