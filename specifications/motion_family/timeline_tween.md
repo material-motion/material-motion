@@ -11,7 +11,7 @@ The timeline tween motion family's primary utility is in defining **transitions*
 
 ## Examples
 
-A simple bi-directional "fade" transition.
+A simple bi-directional "fade" transition:
 
     class FadeInTransition: TransitionDirector {
       func setUp(transaction) {
