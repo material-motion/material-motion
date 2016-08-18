@@ -35,18 +35,6 @@ clone_repo() {
   fi
 }
 
-clone_android() {
-  for repo in $(repos | grep "\-android"); do
-    clone_repo $repo
-  done
-}
-
-clone_apple() {
-  for repo in $(repos | grep "\-objc\|\-swift"); do
-    clone_repo $repo
-  done
-}
-
 clone_tmp() {
   if [[ -z "$1" ]]; then
     usage
@@ -79,8 +67,6 @@ clone_repo_matching() {
 }
 
 case "$1" in
-  android)  clone_android ;;
-  apple)    clone_apple ;;
   temp|tmp) clone_tmp "${@:2}" ;;
   *)        clone_repo_matching "${@:1}" ;;
 esac
