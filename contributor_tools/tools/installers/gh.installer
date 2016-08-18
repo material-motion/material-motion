@@ -14,18 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Links our yeoman generators for use. Run yo --help to list the available generators.
+# Install gh.
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-readonly ROOT_DIR=$( cd "$dir/../../.." && pwd )
-
-for file in $ROOT_DIR/generators/*; do
-  name=$( basename "$file" | sed "s/generator-//" )
-  cd $file
-  npm install
-  if [[ ! $( yo --generators | grep "^ *$name$" ) ]]; then
-    echo "Linking $(basename $file) for yo..."
-    npm link
-  fi
-done
+pushd $ROOT_DIR/third_party/gh >> /dev/null
+npm install || { \
+  echo "npm install failed, requesting sudo to run npm install in $ROOT_DIR/third_party/gh..."; \
+  sudo npm install; \
+}
+popd >> /dev/null

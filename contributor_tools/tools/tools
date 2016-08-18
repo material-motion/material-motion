@@ -17,65 +17,82 @@
 cmd=$(basename "${BASH_SOURCE[0]}" | rev | cut -d'.' -f2- | rev)
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-run_installer() {
-  echo "Running installer: $1"
-  "$dir/installers/$1"
+OPERATION="$1"
+
+check_tool() {
+  tool="$1"
+  if which $tool >> /dev/null; then
+    echo "✓ ${B}$tool${N}"
+  else
+    echo "☐ ${B}$tool${N}"
+
+    if [ "$OPERATION" == "status" ]; then
+      return
+    fi
+
+    if [ "$OPERATION" == "install" ]; then
+      "$dir/installers/$tool.installer"
+    else
+      echo
+      echo "${B}Installation instructions${N}"
+      echo
+      sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$dir/installers/$tool.md" \
+        | perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" \
+        | sed -e "s:\$installer_path:$dir/installers:"
+      echo
+    fi
+  fi
 }
 
-install() {
+check_all_tools() {
   pushd $ROOT_DIR >> /dev/null
   echo "Updating submodules..."
-  git submodule init
-  git submodule update
+  git submodule update --init --recursive
   popd >> /dev/null
 
-  # arc
-  run_installer arc
+  check_tool arc
 
   if [ "$(uname)" == "Darwin" ]; then
-    run_installer brew
+    check_tool brew
   fi
 
-  # nodejs
-  run_installer nodejs
-
-  # gh
-  pushd $ROOT_DIR/third_party/gh >> /dev/null
-  npm install || { \
-    echo "npm install failed, requesting sudo to run npm install in $ROOT_DIR/third_party/gh..."; \
-    sudo npm install; \
-  }
-  popd >> /dev/null
-
-  # Yeoman tools
-  run_installer yo
-  run_installer generators
-
-  # PIP-based installers
-  run_installer pip
-  run_installer proselint
+  check_tool node
+  check_tool gh
+  check_tool yo
+  check_tool pip
+  check_tool proselint
 
   if [ "$(uname)" == "Darwin" ]; then
-    echo "Installing mac-specific tools..."
-    run_installer clang-format
-    run_installer cocoapods
-    run_installer sourcekitten
-
-  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-    echo "Installing linux-specific tools..."
-
+    check_tool clang-format
+    check_tool pod
+    check_tool sourcekitten
   fi
-}
 
-list() {
-  for file in $dir/installers/*; do
-    echo "$( basename "$file" )"
+  for file in $ROOT_DIR/generators/*; do
+    name=$( basename "$file" | sed "s/generator-//" )
+    if [[ ! $( yo --generators | grep "^ *$name$" ) ]]; then
+      echo "☐ ${B}yo $name${N}"
+
+      if [ "$OPERATION" == "status" ]; then
+        continue
+      fi
+
+      if [ "$OPERATION" == "install" ]; then
+        cd $file
+        npm install
+        echo "Linking $(basename $file) for yo..."
+        npm link
+      else
+        echo "Please run the following:"
+        echo
+        echo "    cd $file"
+        echo "    npm install"
+        echo "    npm link"
+      fi
+    else
+      echo "✓ ${B}yo $name${N}"
+    fi
   done
 }
 
-case "$1" in
-  install)  install "${@:2}" ;;
-  list)     list "${@:2}" ;;
-
-  *) echo "Usage: $cmd [install|list]"; exit 1 ;;
-esac
+check_all_tools "${@:2}"
