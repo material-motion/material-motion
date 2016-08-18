@@ -3,7 +3,7 @@ Status of this document:
 
 # Timeline tween motion family
 
-The timeline tween motion family allows a director to describe tween animations for properties on an element.
+The timeline tween motion family allows a director to describe tween animations that are placed on a normalized timeline for properties on an element.
 
 ## Examples
 
