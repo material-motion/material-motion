@@ -1,3 +1,3 @@
 Please run:
 
-    $installer_path/arc
+    $installer_path/arc.installer

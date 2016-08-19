@@ -1,3 +1,3 @@
 Please run:
 
-    $installer_path/node
+    $installer_path/node.installer
