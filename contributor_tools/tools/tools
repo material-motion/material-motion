@@ -19,28 +19,46 @@ dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 OPERATION="$1"
 
+instructions() {
+  tool="$1"
+  echo
+  echo "${B}Installation instructions${N}"
+  echo
+  # Underline content between <> marks
+  sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$dir/installers/$tool.md" | \
+    # Bold content between `` marks
+    perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" | \
+    # Replace instances of "$installer_path" with the installer's path.
+    sed -e "s:\$installer_path:$dir/installers:"
+  echo
+}
+
+missing_tool() {
+  tool="$1"
+  echo "☐ ${B}$tool${N}"
+
+  if [ "$OPERATION" == "status" ]; then
+    return
+  fi
+
+  if [ "$OPERATION" == "install" ]; then
+    "$dir/installers/$tool.installer"
+  else
+    instructions $tool
+  fi
+}
+
+found_tool() {
+  tool="$1"
+  echo "✓ ${B}$tool${N}"
+}
+
 check_tool() {
   tool="$1"
   if which $tool >> /dev/null; then
-    echo "✓ ${B}$tool${N}"
+    found_tool $tool
   else
-    echo "☐ ${B}$tool${N}"
-
-    if [ "$OPERATION" == "status" ]; then
-      return
-    fi
-
-    if [ "$OPERATION" == "install" ]; then
-      "$dir/installers/$tool.installer"
-    else
-      echo
-      echo "${B}Installation instructions${N}"
-      echo
-      sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$dir/installers/$tool.md" \
-        | perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" \
-        | sed -e "s:\$installer_path:$dir/installers:"
-      echo
-    fi
+    missing_tool $tool
   fi
 }
 
@@ -57,7 +75,13 @@ check_all_tools() {
   fi
 
   check_tool node
-  check_tool gh
+
+  if [ ! -d "$ROOT_DIR/third_party/gh/node_modules" ]; then
+    missing_tool gh
+  else
+    found_tool gh
+  fi
+
   check_tool yo
   check_tool pip
   check_tool proselint

@@ -16,6 +16,9 @@
 
 # Install gh.
 
+THIS_DIR="$( cd $( dirname ${BASH_SOURCE[0]} ) && pwd )"
+ROOT_DIR="$( cd $THIS_DIR/../../.. && pwd )"
+
 pushd $ROOT_DIR/third_party/gh >> /dev/null
 npm install || { \
   echo "npm install failed, requesting sudo to run npm install in $ROOT_DIR/third_party/gh..."; \

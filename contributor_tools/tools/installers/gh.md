@@ -1,3 +1,3 @@
 Please run:
 
-    $installer_path/gh
+    $installer_path/gh.installer
