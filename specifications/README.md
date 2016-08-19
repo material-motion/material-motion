@@ -53,6 +53,19 @@ The following diagram shows the required amount of knowledge for each group.
 
 ![](../_assets/Roles.svg)
 
+# The design/engineering handoff
+
+One hopeful outcome of the Material Motion project is to remove the design/engineering "hand off". By encouring both designers and engineers to think of motion in a common language, we hope to see the line blur between what is motion design and what is engineering.
+
+**Guaranteed near future**: not far from the status quo.
+
+![](../_assets/Handoff-v1.svg)
+
+**The ideal future**: design/engineering working in tandem to create interactive, production-ready experiences.
+
+![](../_assets/Handoff-v2.svg)
+
+
 # Tech tree
 
 The following chart is a [tech tree](https://en.wikipedia.org/wiki/Technology_tree) representation of the Starmap's engineering concepts. Dependencies are represented as arrows.
