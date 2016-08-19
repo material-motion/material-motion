@@ -20,29 +20,24 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
       }
     }
 
-## Abstract types
-
-### AnchorPointAdjustable
-
-Contract: If a plan enables `wantsAnchorPointAdjustment` then the target's anchor point will be adjusted when gesturing begins.
-
-    class Gesturable {
-      var wantsAnchorPointAdjustment: Bool = false
-    }
-
 ## Public plans
 
 ### DirectlyManipulable
 
-Contract: registers Draggable, Pinchable, and Rotatable to the given target.
+Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
 
     class DirectlyManipulable: Gesturable {
       var panGestureRecognizer?
       var pinchGestureRecognizer?
       var rotateGestureRecognizer?
-      
-      defaults:
-      wantsAnchorPointAdjustment = true
+    }
+
+### AnchorPointAdjustable
+
+Contract: If `shouldAdjustAnchorPointOnGestureStart` is true, then the anchor point of the target will be set to the centroid of the gesture recognizer when a gesture initiates. If `shouldAdjustAnchorPointOnGestureStart` is false, then the anchor point will not be manipulated.
+
+    class Gesturable {
+      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ### Draggable
