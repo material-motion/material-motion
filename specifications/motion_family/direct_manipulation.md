@@ -58,7 +58,7 @@ Contract: delta x and y from the given gesture recognizer are added to the targe
 
 ### Pinchable
 
-Contract: scale x and y from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
+Contract: scale amount from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
 
     class Pinchable: Gesturable {
       var pinchGestureRecognizer?
