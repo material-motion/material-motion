@@ -46,9 +46,6 @@ Contract: delta x and y from the given gesture recognizer are added to the targe
 
     class Draggable: Gesturable {
       var panGestureRecognizer?
-      
-      defaults:
-      wantsAnchorPointAdjustment = false
     }
 
 ### Pinchable
@@ -57,9 +54,6 @@ Contract: scale amount from the given gesture recognizer are multiplied to the t
 
     class Pinchable: Gesturable {
       var pinchGestureRecognizer?
-      
-      defaults:
-      wantsAnchorPointAdjustment = true
     }
 
 ### Rotatable
@@ -68,9 +62,6 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
 
     class Rotatable: Gesturable {
       var rotationGestureRecognizer?
-      
-      defaults:
-      wantsAnchorPointAdjustment = true
     }
 
 ## Private plans
