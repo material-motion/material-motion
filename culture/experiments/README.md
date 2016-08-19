@@ -14,3 +14,5 @@ Each platform and language has an `experiments` GitHub repo. We use these repos 
 You can now begin working within your new experimental folder.
 
 We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
+
+Next: [odds and ends](./assorted.html)
