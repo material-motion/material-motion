@@ -1,16 +1,5 @@
-# Experiments
+# Assorted Experiments
 
-Experimentation is an important part of our team's culture. We use experiments to inform decisions, to explore new ideas, and to have a safe place to fail.
+This is an index of various experiments and proofs-of-concept we've created on the road to Material Motion.  It's not exhaustive, definitive, or even guaranteed to be here tomorrow.  It's merely a place to remember old stuff we worked on until we find a better home for it.
 
-Each platform and language has an `experiments` GitHub repo. We use these repos to house code that isn't ready for production use. This means that APIs are subject to change at **any point in time** without warning.
-
-## Starting an experiment
-
-    git clone git@github.com:material-motion/material-motion-experiments-<yourproject>.git
-    cd material-motion-experiments-<yourproject>
-    
-    mkdir -p material-motion-experiments-/<some name>
-
-You can now begin working within your new experimental folder.
-
-We recommend creating a README.md in your experimental folder outlining the scope of the experiment.
+- [Comparing reversability in tweens and springs](http://codepen.io/appsforartists/pen/JKVKXj)
