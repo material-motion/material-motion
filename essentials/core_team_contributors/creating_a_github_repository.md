@@ -25,7 +25,7 @@ To publish the repo to GitHub:
 
 ## Publish the repo to codereview.cc
 
-This command must be run by an admin of codereview.cc.
+This command must be run by an admin of codereview.cc. [View the list of admins](http://codereview.cc/project/members/2/).
 
     cd $(mdm dir material-motion-thing)
     mdm publish phabricator <repo kind> <org> <repo-name>
