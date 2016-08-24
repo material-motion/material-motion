@@ -3,6 +3,11 @@ Status of this document:
 
 # Arc move motion family
 
+Things to focus on:
+
+- Describing arc move tweens from point a to point b.
+- Handing gestures off to an arc move motion.
+
 ## Examples
 
 ## Abstract types
