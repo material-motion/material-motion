@@ -26,6 +26,7 @@
            * [Physics](specifications/motion_family/physics.md)
            * [Tween](specifications/motion_family/tween.md)
            * [Timeline tween](specifications/motion_family/timeline_tween.md)
+           * Arc move
        * [Serialization](specifications/serialization.md)
            * [Plan serialization](specifications/plan_serialization.md)
            * [Transaction serialization](specifications/transaction_serialization.md)
