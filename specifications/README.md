@@ -10,7 +10,6 @@ Throughout this chapter we write statements as simple facts. All are open for de
 
 Much of what we'll describe is not new. Some things we'll discuss have existed for decades. Where applicable, we've included links to both ours and others' work in the field.
 
-
 Within the best of our ability the provided specifications are platform and language-agnostic. We assume that you're working with an object-oriented language. We're inspired by functional programming but apply a pragmatic approach to system design.
 
 # Tech stack
