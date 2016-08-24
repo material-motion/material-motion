@@ -51,6 +51,10 @@ The Starmap is written for the runtime engineering group.
 
 Provide two categories of educational material: **using** material motion and **extending** material motion.
 
+Using material motion will target app creators.
+
+Extending material motion will target director/motion creators.
+
 ## Knowledge iceberg
 
 The following diagram shows the required amount of knowledge for each group.
