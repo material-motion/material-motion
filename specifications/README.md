@@ -47,6 +47,10 @@ Creators should rarely, if ever, have to acquire an understanding of runtime eng
 
 The Starmap is written for the runtime engineering group.
 
+## Methods of positioning these expectations
+
+Provide two categories of educational material: **using** material motion and **extending** material motion.
+
 ## Knowledge iceberg
 
 The following diagram shows the required amount of knowledge for each group.
