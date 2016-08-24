@@ -3,3 +3,15 @@ Status of this document:
 
 # Arc move motion family
 
+
+## Examples
+
+## Abstract types
+
+## Public plans
+
+### ArcMove
+
+## Performers
+
+### ArcMovePerformer
