@@ -22,11 +22,11 @@
        * [Named plans](specifications/runtime/named-plans.md)
    * [Motion family](specifications/motion-family.md)
        * Families
+           * [Arc move](specifications/motion_family/arc_move.md)
            * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
            * [Physics](specifications/motion_family/physics.md)
            * [Tween](specifications/motion_family/tween.md)
            * [Timeline tween](specifications/motion_family/timeline_tween.md)
-           * [Arc move](specifications/motion_family/arc_move.md)
        * [Serialization](specifications/serialization.md)
            * [Plan serialization](specifications/plan_serialization.md)
            * [Transaction serialization](specifications/transaction_serialization.md)
