@@ -6,7 +6,7 @@ Status of this document:
 Things to focus on:
 
 - Describing arc move tweens from point a to point b.
-- Handing gestures off to an arc move motion.
+- Handing gestural velocity off to an arc move motion.
 
 ## Examples
 
