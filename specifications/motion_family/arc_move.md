@@ -1,2 +1,2 @@
-# Arc move
+# Arc move motion family
 
