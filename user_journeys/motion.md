@@ -21,6 +21,8 @@ Productionize a motion concept.
 7. The engineer and motion designer iterate on the implementation. 
 8. The implementation reaches a satisfactory point and is shipped. 
 
+![](../_assets/Handoff-v1.svg)
+
 #### “V2” ideal journey
 
 Goal is to completely remove the design/engineering handoff.
@@ -29,3 +31,5 @@ Goal is to completely remove the design/engineering handoff.
 2. The person uses Material Motion languages to prototype the concept either within the context of an existing app or in a playground. 
 3. The person gets design and engineering feedback and iterates. 
 4. The implementation reaches a satisfactory point and is shipped.
+
+![](../_assets/Handoff-v2.svg)
