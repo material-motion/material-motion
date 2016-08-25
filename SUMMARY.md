@@ -56,6 +56,7 @@
        * [Further considerations](specifications/expressions-addendum.md)
 * [User journeys](user_journeys/README.md)
    * Motion
+   * Engineering
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
 
