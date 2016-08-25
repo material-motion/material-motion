@@ -57,7 +57,7 @@
 * [User journeys](user_journeys/README.md)
    * [Motion](user_journeys/motion.md)
    * [Engineering](user_journeys/engineering.md)
-   * Design
+   * [Design](user_journeys/design.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
 
