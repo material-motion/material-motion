@@ -2,6 +2,8 @@
 
 ### Knowledge levels
 
+![](../_assets/Roles.svg)
+
 #### L1: App Creator
 
 Wants a one-liner use case for adding Material Motion to their app. For example:
