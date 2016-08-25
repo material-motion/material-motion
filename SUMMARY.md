@@ -55,7 +55,7 @@
    * [Motion Expression](specifications/expressions.md)
        * [Further considerations](specifications/expressions-addendum.md)
 * [User journeys](user_journeys/README.md)
-   * Motion
+   * [Motion](user_journeys/motion.md)
    * Engineering
    * Design
 * [Contributing](CONTRIBUTING.md)
