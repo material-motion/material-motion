@@ -56,4 +56,5 @@
        * [Further considerations](specifications/expressions-addendum.md)
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
+* User journeys
 
