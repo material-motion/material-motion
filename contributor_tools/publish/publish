@@ -60,18 +60,7 @@ publish_github() {
   echo -n "Press enter to continue..."
   read
 
-  git remote -v | grep "^origin\t" >> /dev/null
-  if [ $? -ne 0 ]; then # No remote named origin
-    if [ $(mdm gh user -w) == "$ownername" ]; then
-      mdm gh repo -u $ownername --new $reponame || exit 1
-    else
-      mdm gh repo -O $ownername --new $reponame || exit 1
-    fi
-
-    git remote add origin "git@github.com:$ownername/$reponame.git"
-    git push origin develop stable || exit 1
-
-  else
+  if git remote -v | grep "^origin\t" >> /dev/null; then
     echo "NOTICE: A remote named origin already exists."
     echo
     echo "Please verify that it is correct before continuing:"
@@ -80,6 +69,15 @@ publish_github() {
     echo
     echo "Press enter to continue..."
     read
+  else # No remote named origin
+    if [ $(mdm gh user -w) == "$ownername" ]; then
+      mdm gh repo -u $ownername --new $reponame || exit 1
+    else
+      mdm gh repo -O $ownername --new $reponame || exit 1
+    fi
+
+    git remote add origin "git@github.com:$ownername/$reponame.git"
+    git push origin develop stable || exit 1
   fi
 
   $this_script_dir/configure_repo $kind $ownername $reponame $(mdm gh user --token)
