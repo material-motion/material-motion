@@ -31,8 +31,17 @@ find_path() {
   done
 
   if [[ "${#matches[@]}" -eq "0" ]]; then
-    echo "No matches found." >&2
-    exit 1
+    # No exact matches, look for fuzzy matches.
+    if [[ $(ls $parent_dir | grep $short_reponame | wc -l) -eq "1" ]]; then
+      echo "$parent_dir/$(ls $parent_dir | grep $short_reponame)"
+    elif [[ $(ls $parent_dir | grep $short_reponame | wc -l) -gt "1" ]]; then
+      echo "Ambiguous matches, please provide a more specific query. Found:" >&2
+      ls $parent_dir | grep $short_reponame >&2
+      exit 1
+    else
+      echo "No matches found." >&2
+      exit 1
+    fi
   elif [[ "${#matches[@]}" -eq "1" ]]; then
     echo "${matches[0]}"
   else
