@@ -27,28 +27,29 @@ if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
   exit 1
 fi
 
-kind=$2
-
-case "$kind" in
-  apple|android|javascript|tools) ;;
-  *) usage; exit 1 ;;
-esac
-
-rootdir=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
-if [ -z "$4" ]; then
-  reponame=$(basename $rootdir)
-else
-  reponame="$4"
-fi
-ownername=${3:-material-motion}
-
-if [ ! material-motion = $reponame* ] && [ -z "$2" ];then
-  echo "No material-motion prefix detected. Please provide an owner."
-  usage
-  exit 1
-fi
+GIT_ROOT_DIR=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
 
 publish_github() {
+  kind=$1
+
+  case "$kind" in
+    apple|android|javascript|tools) ;;
+    *) usage; exit 1 ;;
+  esac
+
+  if [ -z "$3" ]; then
+    reponame="$(basename $GIT_ROOT_DIR)"
+  else
+    reponame="$3"
+  fi
+  ownername="${2:-material-motion}"
+
+  if [ ! material-motion = $reponame* ] && [ -z "$2" ]; then
+    echo "No owner prefix detected. Please provide an owner."
+    usage
+    exit 1
+  fi
+
   url="https://github.com/$ownername/$reponame"
 
   echo "About to create a new GitHub repository."
@@ -107,7 +108,18 @@ CODE
 }
 
 publish_phabricator() {
-  # TODO: Check whether origin already points to something.
+  if [ -z "$2" ]; then
+    reponame=$(basename $GIT_ROOT_DIR)
+  else
+    reponame="$2"
+  fi
+  ownername=${1:-material-motion}
+
+  if [ ! material-motion = $reponame* ] && [ -z "$2" ]; then
+    echo "No owner prefix detected. Please provide an owner."
+    usage
+    exit 1
+  fi
 
   url="https://github.com/$ownername/$reponame.git"
 
