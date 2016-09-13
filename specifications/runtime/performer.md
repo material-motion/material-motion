@@ -49,7 +49,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler. This allows performers to indicate to the scheduler that an asynchronous operation is in play, such as Web Animations or CoreAnimation.
+**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler. Performers can use this API to ensure that a scheduler sticks around until active animations or gestures have completed.
 
 > The performer may choose not to implement this API.
 
