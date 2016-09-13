@@ -60,7 +60,7 @@ An active state performer is responsible for requesting a token and then releasi
 
 Example pseudo-code:
 
-    protocol DelegatingPerformer {
+    protocol ActivePerformer {
       function setDelegatedExecutionCallback(callback)
     }
     
