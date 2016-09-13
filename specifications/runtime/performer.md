@@ -51,7 +51,6 @@ Example pseudo-code:
 
 **Active State API**: Define an optional API that allows performers to affect the active state of the scheduler.
 
-
 > The performer may choose not to implement this API.
 
 An active state performer is responsible for requesting a token and then releasing it once no longer needed. Consider the following examples:
