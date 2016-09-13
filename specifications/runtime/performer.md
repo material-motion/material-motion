@@ -49,18 +49,18 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler.
+**Continous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
 > The performer may choose not to implement this API.
 
-An active state performer is responsible for requesting a token and then releasing it once no longer needed. Consider the following examples:
+A continous performer is responsible for requesting a token and then releasing it once no longer needed. Consider the following examples:
 
 - Request a token before an animation begins and release the token when the animation completes.
 - Request a token when a gesture begins and release the token when the gesture completes.
 
 Example pseudo-code:
 
-    protocol ActivePerforming {
+    protocol ContinousPerforming {
       function setActiveTokenVendor(tokenVendor)
     }
     
