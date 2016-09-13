@@ -49,7 +49,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Delegated execution API**: Define an optional API that allows performers to delegate their work to an external system, like Web Animations or CoreAnimation.
+**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler. This allows performers to indicate to the scheduler that an asynchronous operation is in play, such as Web Animations or CoreAnimation.
 
 > The performer may choose not to implement this API.
 
