@@ -53,7 +53,10 @@ Example pseudo-code:
 
 > The performer may choose not to implement this API.
 
-The performer would be responsible for informing of two things: when delegated execution will start, and when delegated execution has ended.
+An active state performer is responsible for requesting a token and then releasing it once no longer needed. Consider the following examples:
+
+- Request a token before an animation begins and release the token when the animation completes.
+- Request a token when a gesture begins and release the token when the gesture completes.
 
 Example pseudo-code:
 
