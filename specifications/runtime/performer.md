@@ -60,16 +60,17 @@ An active state performer is responsible for requesting a token and then releasi
 
 Example pseudo-code:
 
-    protocol ActivePerformer {
-      function setDelegatedExecutionCallback(callback)
+    protocol ActivePerforming {
+      function setActiveTokenVendor(tokenVendor)
     }
     
-    class DelegatedExecutionCallback {
-      function delegatedExecutionWillStart(performer) -> DelegatedPerformanceToken
-      function delegatedExecutionDidFinish(performer, token)
+    class ActiveTokenVendor {
+      function activeStateWillStart() -> ActiveToken
     }
-
-The performer must implement a method that receives two functions. Invoking the first function indicates that some unit of delegated work will begin. This function returns a token. The second function must be invoked once the delegated work has completed. Provide the token returned by the first function to the second function.
+    
+    class ActiveToken {
+      function didEnd()
+    }
 
 ---
 
