@@ -49,7 +49,7 @@ Example pseudo-code:
       function addPlan(plan)
     }
 
-**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler. Performers can use this API to indicate to a scheduler that there is some active animation or gesture, for example.
+**Active State API**: Define an optional API that allows performers to affect the active state of the scheduler.
 
 > The performer may choose not to implement this API.
 
