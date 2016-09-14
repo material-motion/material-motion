@@ -36,7 +36,7 @@ Goal is to enable more collaboration between motion design and engineering.
 
 #### “V3” ideal journey
 
-Goal is to completely remove the design/engineering handoff.
+Goal is to completely remove the design/engineering hand-off.
 
 1. A person conceives of a motion concept and creates a director in a tool. 
 2. The person uses Material Motion languages to prototype the concept either within the context of an existing app or in a playground. 
