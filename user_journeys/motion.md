@@ -10,7 +10,6 @@ Two groups are primarily involved: motion designers and motion engineers. Both a
 
 Productionize a motion concept.
 
-
 #### “V1” ideal journey
 
 1. Motion designer conceives of a motion concept to satisfy product need. 
