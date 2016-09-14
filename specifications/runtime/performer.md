@@ -54,8 +54,8 @@ Example pseudo-code:
 
 A continous performer is responsible for requesting an is-active token and then terminating it once no longer needed. Consider the following examples:
 
-- Request a token before an animation begins and release the token when the animation completes.
-- Request a token when a gesture begins and release the token when the gesture completes.
+- Generate a token before an animation begins and terminate the token when the animation completes.
+- Generate a token when a gesture begins and terminate the token when the gesture completes.
 
 Example pseudo-code:
 
