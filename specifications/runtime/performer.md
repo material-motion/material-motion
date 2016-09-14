@@ -50,6 +50,8 @@ Example pseudo-code:
 
 **Continous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
+The scheduler uses the existence of any non-terminate is-active tokens to define its active/idle state.
+
 > The performer may choose not to implement this API.
 
 A continous performer is responsible for requesting an is-active token and then terminating it once no longer needed. Consider the following examples:
