@@ -70,10 +70,10 @@ Plans that are private to this motion family.
 
 ### ChangeAnchorPoint
 
-Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
+Contract: the anchor point of the view is changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
     class ChangeAnchorPoint {
-      var newAnchorPoint
+      var newAnchorPoint: Point
     }
 
 ## Performers
