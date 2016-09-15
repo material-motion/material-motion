@@ -62,7 +62,7 @@ A continous performer is responsible for requesting an is-active token and then 
 Example pseudo-code:
 
     protocol ContinousPerforming {
-      function setIsActiveTokenVendor(tokenVendor)
+      function setIsActiveTokenGenerator(tokenGenerator)
     }
     
     class IsActiveTokenGenerator {
