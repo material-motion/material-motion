@@ -37,6 +37,10 @@ Example pseudo-code:
       function removePlanWithName(name)
     }
 
+**NamedPlan type**: Provide a NamedPlan type.
+
+Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
+
 ## Transaction specification
 
 Transactions support named add/remove operations.
