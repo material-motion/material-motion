@@ -1,4 +1,4 @@
-# Runtime named plans specification
+# Named plans specification
 
 This is the engineering specification for **named plans**.
 
