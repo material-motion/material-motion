@@ -22,6 +22,8 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 ## Public plans
 
+Note that the `shouldAdjustAnchorPoint` property on each of the plans below indicates whether the anchor point should be modified at the beginning of a gestural interaction. If `shouldAdjustAnchorPoint` is true for any plan, then the anchor point should be manipulated even if the other plans' `shouldAdjustAnchorPoint` is false.
+
 ### DirectlyManipulable
 
 Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
@@ -32,20 +34,14 @@ Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable t
       var rotateGestureRecognizer?
     }
 
-### AnchorPointAdjustable
-
-Contract: If `shouldAdjustAnchorPointOnGestureStart` is true, then the anchor point of the target will be set to the centroid of the gesture recognizer when a gesture initiates. If `shouldAdjustAnchorPointOnGestureStart` is false, then the anchor point will not be manipulated.
-
-    class Gesturable {
-      var shouldAdjustAnchorPointOnGestureStart: Bool = true
-    }
-
 ### Draggable
 
 Contract: delta x and y from the given gesture recognizer are added to the target's `position.x` and `position.y`. If no gesture recognizer is provided, then one is created.
 
     class Draggable: Gesturable {
       var panGestureRecognizer?
+      
+      var shouldAdjustAnchorPoint = false
     }
 
 ### Pinchable
@@ -54,6 +50,8 @@ Contract: scale amount from the given gesture recognizer are multiplied to the t
 
     class Pinchable: Gesturable {
       var pinchGestureRecognizer?
+      
+      var shouldAdjustAnchorPoint = true
     }
 
 ### Rotatable
@@ -62,6 +60,8 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
 
     class Rotatable: Gesturable {
       var rotationGestureRecognizer?
+      
+      var shouldAdjustAnchorPoint = true
     }
 
 ## Private plans
