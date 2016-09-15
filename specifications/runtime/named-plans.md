@@ -69,6 +69,8 @@ Schedulers support named plans. Named plans are plans with a name associated via
 
 **Target-scoped names**: Names are scoped to the target.
 
+Imagine there are two targets, Apple and Orange. We can add an Eat plan named "action" to Apple and a Peel plan named "action" to Orange.
+
 **Remove-then-add**: Two things must happen when a named plan is committed:
 
 1. Remove any previously committed plan with the same name from the target's performers. 
