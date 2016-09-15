@@ -1,6 +1,6 @@
 # Named plans specification
 
-This is the engineering specification for **named plans**. This specification affects the Transaction, Performer, Plan, and Scheduler types.
+This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Scheduler types.
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
