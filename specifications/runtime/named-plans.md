@@ -48,6 +48,11 @@ Transactions support named add/remove operations.
 
 Example pseudo-code:
 
+    class Transaction {
+      function add(plan: Plan, to: Target, withName: String)
+      function removePlan(named: String, fromTarget: Target)
+    }
+    
     # Associate a named plan with a target.
     transaction.add(plan, target, name)
     
