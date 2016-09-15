@@ -14,7 +14,7 @@ Printable tech tree/checklist:
 
 ![](../../_assets/NamedPlansTechTree.svg)
 
-Example use case: associating "behavior" with a target.
+Example use case: associating a behavior with a target.
 
 Example pseudo-code:
 
