@@ -66,7 +66,7 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
 
 ## Private plans
 
-Plans that are only accessible within this motion family.
+Plans that are private to this motion family.
 
 ### ChangeAnchorPoint
 
