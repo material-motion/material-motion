@@ -1,5 +1,17 @@
 # Runtime named plans specification
 
+This is the engineering specification for the `Plan` abstract type.
+
+|                  | Android | Apple |
+| ---------------- |:-------:|:-----:|
+| MVP milestones | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/4) |
+
+## Overview
+
+This feature enables the registration of *named plans* to a scheduler. Named plans can be added and remove by name, enabling fine configuration of a performer's behavior.
+
+Printable tech tree/checklist:
+
 ![](../../_assets/NamedPlansTechTree.svg)
 
 Example use case: associating "behavior" with a target.
