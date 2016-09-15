@@ -29,13 +29,13 @@ Performers can receive named plans.
 
 **Add/remove API**: Performers can implement an add/remove function.
 
->The Performer may choose not to implement this API.
+> Performers may choose not to implement this API.
 
-If one method is implemented, so must the other.
+If one method is implemented, the other must be implemented as well.
 
 Example pseudo-code:
 
-    protocol NamedPlanExecution {
+    protocol NamedPlanPerforming {
       function addPlanWithName(plan, name)
       function removePlanWithName(name)
     }
