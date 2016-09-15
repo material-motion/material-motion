@@ -1,6 +1,6 @@
 # Runtime named plans specification
 
-This is the engineering specification for the `Plan` abstract type.
+This is the engineering specification for **named plans**.
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
