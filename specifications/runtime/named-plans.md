@@ -1,5 +1,7 @@
 # Runtime named plans specification
 
+![](../../_assets/NamedPlansTechTree.svg)
+
 Example use case: associating "behavior" with a target.
 
 Example pseudo-code:
