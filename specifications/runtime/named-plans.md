@@ -61,7 +61,7 @@ Example pseudo-code:
 
 **Order**: Maintain order of named operations.
 
-Last operation wins.
+Last operation wins in a given transaction.
 
 # Scheduler specification
 
