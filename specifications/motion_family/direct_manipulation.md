@@ -26,7 +26,7 @@ Note that the `shouldAdjustAnchorPoint` property on each of the plans below indi
 
 ### DirectlyManipulable
 
-Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
+Contract: registers Draggable, Pinchable, Rotatable to the given target.
 
     class DirectlyManipulable: Gesturable {
       var panGestureRecognizer?
@@ -80,7 +80,7 @@ Contract: the anchor point of the view is changed to the `newAnchorPoint`. The t
 
 ### DirectManipulationPerformer
 
-Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable`.
+Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`.
 
 `Draggable`, `Pinchable`, `Rotatable` emit:
 
@@ -88,11 +88,7 @@ Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`, `
 
 `DirectlyManipulable` emits:
 
-- `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable` when the plan is added.
-
-`AnchorPointAdjustable` emits:
-
-- `ChangeAnchorPoint` when the first gesture recognizer initiates if `shouldAdjustAnchorPointOnGestureStart` is true.
+- `Draggable`, `Pinchable`, `Rotatable` when the plan is added.
 
 ### AnchorPointPerformer
 
