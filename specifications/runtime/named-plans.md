@@ -43,7 +43,7 @@ Transactions support named add/remove operations.
 
 **Named add API**: Provide an API for `add` and `remove` with a name argument.
 
-Note that the plan type should be a `NamedPlan`. This allows motion family designers to clearly indicate which plans support being named.
+Note that the plan type should be a `NamedPlan`. Motion family designers use this type to indicate which plans support being named.
 
 Example pseudo-code:
 
