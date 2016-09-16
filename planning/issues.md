@@ -2,17 +2,9 @@
 
 We host all of our issues on GitHub.
 
-## Labels
+## Projects
 
-We use two categories of label: `flow` and `type`.
-
-We use `flow:` labels to communicate the current state of an issue. See [our team repo's labels](https://github.com/material-motion/material-motion-team/labels).
-
-Flow labels move through the following process:
-
-![](../_assets/LabelFlow.svg)
-
-We use `type:` labels to categorize issues.
+As a team we are exploring use of GitHub's new Projects features to implement kanban-style boards. This is still highly experimental and subject to change.
 
 ## Triaging issues
 
