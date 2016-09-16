@@ -19,6 +19,8 @@ Or the automated variant:
 
     mdm tools install
 
+Learn more about each `mdm` command by running `mdm help` or by [reading the docs on GitHub](https://github.com/material-motion/material-motion-team/tree/develop/contributor_tools).
+
 ## Misc tooling notes
 
 Here's a list of tools we currently use as a team:
