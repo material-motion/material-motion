@@ -47,10 +47,9 @@ Versions of software we use:
 
 Versions of software we use:
 
-- Objective-C: 
-  - Xcode 7.3.1.
+- Objective-C:
 - Swift 3.0: 
-  - Xcode 8 beta
+  - Xcode 8
 - Cocoapods 1.0.1
 - psych 2.1.0
 
