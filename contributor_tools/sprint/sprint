@@ -51,8 +51,25 @@ current_sprint() {
   fi
 }
 
+start_sprint() {
+  set +e # Disable exit on command failure.
+
+  sprint_path=$(current_sprint)
+  if [ $? -eq 0 ]; then
+    echo "Already in a sprint."
+    exit 1
+  fi
+
+  repo=$(mdm gh repo --whoami)
+  token=$(mdm gh user --token)
+  php "$THIS_SCRIPT_DIR/start_sprint.php" $repo $token
+
+  open_sprint
+}
+
 case "$1" in
   open)         open_sprint ;;
   current)      current_sprint ;;
+  start)        start_sprint ;;
   *)            usage ;;
 esac

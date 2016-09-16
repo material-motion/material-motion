@@ -18,10 +18,9 @@ function createCurlRequest($query) {
   return $ch;
 }
 
-function createPutRequest($query, $data) {
+function createDataRequest($query, $data) {
   $json = json_encode($data);
   $ch = createCurlRequest($query);
-  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
   curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
   return $ch;
 }
