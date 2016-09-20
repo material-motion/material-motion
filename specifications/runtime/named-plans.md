@@ -92,7 +92,7 @@ Imagine there are two targets, Apple and Orange. We can add an Eat plan named "a
 
 1. Remove any previously committed plan with the same name from the target's performers. 
 
-   _Note:_ This may be on a different performer instance on the same target. In the above example, perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
+   _Note:_ This may be on a different performer instance on the same target. In the example above perhaps a PhysicsPerformer is needed for the second transaction, but not for the first.
 2. Provide the relevant performer with the new named plan.
 
 Example pseudo-code:
