@@ -71,10 +71,10 @@ Example pseudo-code:
     }
     
     # Associate a named plan with a target.
-    transaction.add(plan, target, name)
+    transaction.add(plan: plan, withName: name, to: target)
     
     # Remove any named plan from a target.
-    transaction.remove(name, target)
+    transaction.removePlan(named: name, fromTarget: target)
 
 **Order**: Maintain order of named operations.
 
@@ -102,6 +102,6 @@ Example pseudo-code:
     
     # Step 2
     performer = performerForPlan(plan)
-    performer.setPlan(plan, withName: name)
+    performer.add(plan: plan, withName: name)
     performerForName(name) == performer 
     > true
