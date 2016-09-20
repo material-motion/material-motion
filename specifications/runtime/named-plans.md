@@ -66,7 +66,7 @@ Note that the plan type should be a `NamedPlan`. Motion family designers use thi
 Example pseudo-code:
 
     class Transaction {
-      function add(plan: NamedPlan, to: Target, withName: String)
+      function add(plan: NamedPlan, withName: String, to: Target)
       function removePlan(named: String, fromTarget: Target)
     }
     
