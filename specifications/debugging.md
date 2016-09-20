@@ -11,4 +11,8 @@ TODO: Discuss debugging tools.
 - Scrubbing through animations.
 - Direct tool integrations.
 
+Mockup of debugging tool:
+
+![](../_assets/MaterialMotionDebugger.svg)
+
 Related to the Server in many ways. Likely a good deal of overlapping inspection tools.
