@@ -98,7 +98,7 @@ Imagine there are two targets, Apple and Orange. We can add an Eat plan named "a
 Example pseudo-code:
 
     # Step 1
-    performerForName(name).removePlanWithName(name)
+    performerForName(name).removePlan(named: name)
     
     # Step 2
     performer = performerForPlan(plan)
