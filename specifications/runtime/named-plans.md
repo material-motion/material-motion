@@ -47,7 +47,7 @@ If one method is implemented, the other must be implemented as well.
 Example pseudo-code:
 
     protocol NamedPlanPerforming {
-      function add(plan: Plan, withName: String, to: Target)
+      function add(plan: NamedPlan, withName: String, to: Target)
       function removePlan(withName: String)
     }
 
