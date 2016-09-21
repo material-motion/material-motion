@@ -23,8 +23,5 @@ Click a 🎯 to view the sprint.
 
 | Catalog | Apple  | Android | Web    |
 |:-------:|:------:|:-------:|:------:|
-|  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-|  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-|  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-|  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-|  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+|  Sparkly Dialog | [🎯](https://github.com/material-motion/material-motion-catalog-swift/projects/1) |  &nbsp; | &nbsp; |
+|  Color interpolation | &nbsp; |  🎯 | &nbsp; |
