@@ -19,7 +19,7 @@ Click a 🎯 to view the sprint.
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 
-| Catalog | Apple  | Android | Web    |
-|:-------:|:------:|:-------:|:------:|
-|  Color interpolation | &nbsp; | &nbsp; | &nbsp; |
-|  Sparkle Dialog | [🎯](https://github.com/material-motion/material-motion-catalog-swift/projects/1) |  &nbsp; | &nbsp; |
+| Catalog | Starmap | Apple  | Android | Web    |
+|:-------:|:------:|:------:|:-------:|:------:|
+|  Color interpolation | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+|  Sparkle Dialog | [🎯](https://github.com/material-motion/material-motion-starmap/projects/1) | [🎯](https://github.com/material-motion/material-motion-catalog-swift/projects/1) |  &nbsp; | &nbsp; |
