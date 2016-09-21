@@ -22,16 +22,22 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 ## Public plans
 
-Note that the `shouldAdjustAnchorPoint` property on each of the plans below indicates whether the anchor point should be modified at the beginning of a gestural interaction. If `shouldAdjustAnchorPoint` is true for any plan, then the anchor point should be manipulated even if the other plans' `shouldAdjustAnchorPoint` is false.
-
 ### DirectlyManipulable
 
-Contract: registers Draggable, Pinchable, Rotatable to the given target.
+Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
 
     class DirectlyManipulable: Gesturable {
       var panGestureRecognizer?
       var pinchGestureRecognizer?
       var rotateGestureRecognizer?
+    }
+
+### AnchorPointAdjustable
+
+Contract: If `shouldAdjustAnchorPointOnGestureStart` is true, then the anchor point of the target will be set to the centroid of the gesture recognizer when a gesture initiates. If `shouldAdjustAnchorPointOnGestureStart` is false, then the anchor point will not be manipulated.
+
+    class Gesturable {
+      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ### Draggable
@@ -40,8 +46,6 @@ Contract: delta x and y from the given gesture recognizer are added to the targe
 
     class Draggable: Gesturable {
       var panGestureRecognizer?
-      
-      var shouldAdjustAnchorPoint = false
     }
 
 ### Pinchable
@@ -50,8 +54,6 @@ Contract: scale amount from the given gesture recognizer are multiplied to the t
 
     class Pinchable: Gesturable {
       var pinchGestureRecognizer?
-      
-      var shouldAdjustAnchorPoint = true
     }
 
 ### Rotatable
@@ -60,27 +62,25 @@ Contract: z rotation from the given gesture recognizer is added to the target's 
 
     class Rotatable: Gesturable {
       var rotationGestureRecognizer?
-      
-      var shouldAdjustAnchorPoint = true
     }
 
 ## Private plans
 
-Plans that are private to this motion family.
+Plans that are only accessible within this motion family.
 
 ### ChangeAnchorPoint
 
-Contract: the anchor point of the view is changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
+Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
     class ChangeAnchorPoint {
-      var newAnchorPoint: Point
+      var newAnchorPoint
     }
 
 ## Performers
 
 ### DirectManipulationPerformer
 
-Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`.
+Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable`.
 
 `Draggable`, `Pinchable`, `Rotatable` emit:
 
@@ -88,7 +88,11 @@ Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`.
 
 `DirectlyManipulable` emits:
 
-- `Draggable`, `Pinchable`, `Rotatable` when the plan is added.
+- `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable` when the plan is added.
+
+`AnchorPointAdjustable` emits:
+
+- `ChangeAnchorPoint` when the first gesture recognizer initiates if `shouldAdjustAnchorPointOnGestureStart` is true.
 
 ### AnchorPointPerformer
 
