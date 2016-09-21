@@ -2,6 +2,8 @@
 
 ## Focus
 
+The team's focus for the current sprint. Click a 🎯 to view the sprint. 🚩 means the feature has hit some stable milestone but isn't currently a focus.
+
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
 | [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | 🚩      | 🚩     | 🚩      | &nbsp; |
