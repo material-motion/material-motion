@@ -1,5 +1,7 @@
 # Stability
 
+Current stability status of each feature.
+
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
 | [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp; | [v3.0.1](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v3.0.1) | [v2.0.0](https://github.com/material-motion/material-motion-runtime-android/releases/tag/2.0.0) | [MVP](https://github.com/material-motion/material-motion-experiments-js/tree/develop/src) |
