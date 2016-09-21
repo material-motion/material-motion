@@ -1,6 +1,6 @@
 # Current focus
 
-The team's focus for the current sprint.
+The team's focus for the current sprint. This document is updated each wednesday during our team's sprint planning.
 
 Click a 🎯 to view the sprint.
 
