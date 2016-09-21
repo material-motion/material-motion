@@ -38,6 +38,7 @@ function checkCurlResponse($server_output) {
   }
   if (array_key_exists('message', $result)) {
     echo "github: API request failed with message ".$result['message']."\n";
+    print_r($result);
     return false;
   }
   return true;
