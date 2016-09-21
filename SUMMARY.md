@@ -26,6 +26,7 @@
        * [Physics](specifications/motion_family/physics.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
+       * Springs
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
