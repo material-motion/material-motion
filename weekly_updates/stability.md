@@ -1,6 +1,6 @@
 # Stability
 
-Current stability status of each feature. Empty rows imply that the feature is not stable.
+Current stability status of each feature. Empty rows imply that the feature is not stable. This document is updated each time something is launched.
 
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
