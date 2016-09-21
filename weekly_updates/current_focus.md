@@ -1,4 +1,4 @@
-# Current focus
+# Current sprint
 
 The team's focus for the current sprint. This document is updated each wednesday during our team's sprint planning.
 
