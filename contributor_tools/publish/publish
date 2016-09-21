@@ -115,7 +115,7 @@ publish_phabricator() {
   fi
   ownername=${1:-material-motion}
 
-  if [ ! material-motion = $reponame* ] && [ -z "$2" ]; then
+  if [ ! material-motion = $reponame* ] && [ -z "$1" ]; then
     echo "No owner prefix detected. Please provide an owner."
     usage
     exit 1
