@@ -9,10 +9,10 @@
 | [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions.html)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-| [Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)       | Starmap | Apple | Android | Web |
-|:-------------------:|:-------:|:-----:|:-------:|:---:|
-| [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)       | Starmap | Apple  | Android | Web    |
+|:-------------------:|:-------:|:------:|:-------:|:------:|
+| [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
