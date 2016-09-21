@@ -4,7 +4,7 @@ The direct manipulation motion family allows a director to describe gesture mani
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
-| Milestone | &nbsp;    | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
+| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
 
 ## Examples
 
