@@ -1,6 +1,4 @@
-# Roadmap
-
-## Focus
+# Current focus
 
 The team's focus for the current sprint. Click a 🎯 to view the sprint. 🚩 means the feature has hit some stable milestone but isn't currently a focus.
 
