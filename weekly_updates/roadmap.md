@@ -15,7 +15,7 @@ The team's focus for the current sprint. Click a 🎯 to view the sprint. 🚩 m
 |:-------------------:|:-------:|:------:|:-------:|:------:|
 | [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  🚩 | [🎯](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/projects/2) |  [🎯](https://github.com/material-motion/material-motion-family-direct-manipulation-android/projects/1) | &nbsp; |
-| [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  🎯 | 🎯 |  🎯 | &nbsp; |
+| [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  🎯 | [🎯](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) |  🎯 | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 
