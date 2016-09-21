@@ -24,7 +24,7 @@
        * [Arc move](specifications/motion_family/arc_move.md)
        * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
        * [Physics](specifications/motion_family/physics.md)
-       * [Springs](specifications/springs.md)
+       * [Springs](specifications/motion_family/springs.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
    * [Directors](specifications/directors.md)
