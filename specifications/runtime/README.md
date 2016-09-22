@@ -7,7 +7,6 @@ A runtime serves two primary purposes:
 - Provide an abstraction layer between the application engineer and the performance of motion.
 - Coordinate the expression of diverse types of motion and interaction.
 
-
 The following diagram shows where the runtime lives in relation to a platform like iOS.
 
 ![](../../_assets/Abstraction.svg)
