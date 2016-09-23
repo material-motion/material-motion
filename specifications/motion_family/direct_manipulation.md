@@ -24,7 +24,7 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 ### DirectlyManipulable
 
-Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
+Contract: registers Draggable, Pinchable, and Rotatable to the given target.
 
     class DirectlyManipulable {
       var panGestureRecognizer?
@@ -38,7 +38,7 @@ Contract: delta x and y from the given gesture recognizer are added to the targe
 
     class Draggable {
       var panGestureRecognizer?
-      var shouldAdjustAnchorPointOnGestureStart: Bool = true
+      var shouldAdjustAnchorPointOnGestureStart: Bool = false
     }
 
 ### Pinchable
