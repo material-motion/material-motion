@@ -1,6 +1,6 @@
-# Springs motion family
+# Momentum conservation motion family
 
-The springs motion family allows a director to attach simulated one-dimensional springs to properties on an element.
+The momentum conservation family allows momentum to be preserved when the desired destination of a property changes.
 
 > Note that this motion family can/should compose out to a bridge motion family for a given platform if a reasonable spring solution already exists.
 
