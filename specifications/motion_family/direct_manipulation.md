@@ -75,19 +75,11 @@ Contract: the anchor point of the view is immediately changed to the `newAnchorP
 
 ### DirectManipulationPerformer
 
-Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable`.
+Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, and `Rotatable`.
 
-`Draggable`, `Pinchable`, `Rotatable` emit:
+`DirectlyManipulable` emits `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable` when the plan is added.
 
-- `ChangeAnchorPoint` on gesture begin event if any gesture's `wantsAnchorPointAdjustment` is enabled.
-
-`DirectlyManipulable` emits:
-
-- `Draggable`, `Pinchable`, `Rotatable`, `AnchorPointAdjustable` when the plan is added.
-
-`AnchorPointAdjustable` emits:
-
-- `ChangeAnchorPoint` when the first gesture recognizer initiates if `shouldAdjustAnchorPointOnGestureStart` is true.
+If any registered plan's `shouldAdjustAnchorPointOnGestureStart` is true, then `ChangeAnchorPoint` is emitted when the first gesture recognizer starts.
 
 ### AnchorPointPerformer
 
