@@ -51,3 +51,5 @@ Use springs to pull the target property's current value towards the last-provide
 Create state required to simulate a spring when an `AnchoredSpring` is provided for a new property.
 
 Preserve velocity when a property's destination changes.
+
+`ConfigureSpring` changes the behavior of any active or future springs.
