@@ -43,6 +43,7 @@ Contract: configure the behavior of the spring associated with a given property.
     enum SpringBounciness {
       case Bouncy(scalar)
       case NotBouncy
+      case Exponential
     }
 
     enum SpringSpeed {
