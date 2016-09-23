@@ -26,42 +26,37 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 Contract: registers Draggable, Pinchable, Rotatable, and AnchorPointAdjustable to the given target.
 
-    class DirectlyManipulable: Gesturable {
+    class DirectlyManipulable {
       var panGestureRecognizer?
       var pinchGestureRecognizer?
       var rotateGestureRecognizer?
-    }
-
-### AnchorPointAdjustable
-
-Contract: If `shouldAdjustAnchorPointOnGestureStart` is true, then the anchor point of the target will be set to the centroid of the gesture recognizer when a gesture initiates. If `shouldAdjustAnchorPointOnGestureStart` is false, then the anchor point will not be manipulated.
-
-    class Gesturable {
-      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ### Draggable
 
 Contract: delta x and y from the given gesture recognizer are added to the target's `position.x` and `position.y`. If no gesture recognizer is provided, then one is created.
 
-    class Draggable: Gesturable {
+    class Draggable {
       var panGestureRecognizer?
+      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ### Pinchable
 
 Contract: scale amount from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
 
-    class Pinchable: Gesturable {
+    class Pinchable {
       var pinchGestureRecognizer?
+      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ### Rotatable
 
 Contract: z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
 
-    class Rotatable: Gesturable {
+    class Rotatable {
       var rotationGestureRecognizer?
+      var shouldAdjustAnchorPointOnGestureStart: Bool = true
     }
 
 ## Private plans
