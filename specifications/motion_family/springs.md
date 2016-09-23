@@ -36,8 +36,18 @@ Contract: configure the behavior of the spring associated with a given property.
 
     class ConfigureSpring {
       var property
-      var bounciness
-      var speed
+      var bounciness: SpringBounciness
+      var speed: SpringSpeed
+    }
+
+    enum SpringBounciness {
+      case Bouncy(scalar)
+      case NotBouncy
+    }
+
+    enum SpringSpeed {
+      case Fast(scalar)
+      case Slow(scalar)
     }
 
 ## Performers
