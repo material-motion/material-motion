@@ -32,11 +32,12 @@ Contract: one or more one-dimensional springs pull a property's current value to
 
 ### ConfigureSpring
 
-Contract: one or more one-dimensional springs pull a property's current value to a provided `toValue`.
+Contract: configure the behavior of the spring associated with a given property.
 
-    class AnchoredSpring {
+    class ConfigureSpring {
       var property
-      var toValue
+      var bounciness
+      var speed
     }
 
 ## Performers
