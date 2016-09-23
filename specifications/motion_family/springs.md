@@ -1,6 +1,6 @@
 # Momentum conservation motion family
 
-The momentum conservation family allows momentum to be preserved when the desired destination of a property changes.
+The momentum conservation family allows momentum to be preserved when the desired destination of a property changes. In practice this often means using springs.
 
 > Note that this motion family can/should compose out to a bridge motion family for a given platform if a reasonable spring solution already exists.
 
