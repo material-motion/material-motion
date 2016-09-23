@@ -50,4 +50,4 @@ This performer uses springs to pull the target property's current value towards 
 
 When an `AnchoredSpring` is provided for a new property the performer creates state required to simulate the spring.
 
-Preserve existing velocity when an `AnchoredSpring` is provided for a property again.
+Preserve velocity when a property's destination changes.
