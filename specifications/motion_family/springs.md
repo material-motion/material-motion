@@ -12,9 +12,9 @@ To animate a rounded-corners square to a new dimension:
       let roundedCornerShape
       
       func setUp(transaction) {
-        transaction.add(plan: AnchoredSpring(.layerBounds, to: bounds),
+        transaction.add(plan: SpringTo(.layerBounds, to: bounds),
                         to: roundedCornerShape)
-        transaction.add(plan: AnchoredSpring(.layerCornerRadius, to: radius),
+        transaction.add(plan: SpringTo(.layerCornerRadius, to: radius),
                         to: roundedCornerShape)
       }
     }
