@@ -25,3 +25,11 @@ Contract: one or more one-dimensional springs pull a property's current value to
 ## Performers
 
 ### SpringPerformer
+
+Supported plans: `AnchoredSpring`.
+
+This performer is expected to use springs to perform the requested simulation defined by any provided `AnchoredSpring` plan.
+
+When an `AnchoredSpring` is provided for a new property the performer creates state required to simulate the spring.
+
+Preserve existing velocity when an `AnchoredSpring` is provided for a property again.
