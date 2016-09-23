@@ -8,8 +8,16 @@ The springs motion family allows a director to attach simulated one-dimensional 
 
 To animate a rounded-corners square to a new dimension:
 
-    AnchoredSpring(.layerBounds, to: bounds)
-    AnchoredSpring(.layerCornerRadius, to: radius)
+    class MorphingInteraction: InteractionDirector {
+      let roundedCornerShape
+      
+      func setUp(transaction) {
+        transaction.add(plan: AnchoredSpring(.layerBounds, to: bounds),
+                        to: roundedCornerShape)
+        transaction.add(plan: AnchoredSpring(.layerCornerRadius, to: radius),
+                        to: roundedCornerShape)
+      }
+    }
 
 ## Public plans
 
