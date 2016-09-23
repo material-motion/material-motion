@@ -43,7 +43,7 @@ Contract: one or more one-dimensional springs pull a property's current value to
 
 ### SpringPerformer
 
-Supported plans: `AnchoredSpring`.
+Supported plans: `SpringTo`, `ConfigureSpring`.
 
 This performer is expected to use springs to perform the requested simulation defined by any provided `AnchoredSpring` plan.
 
