@@ -21,7 +21,16 @@ To animate a rounded-corners square to a new dimension:
 
 ## Public plans
 
-### AnchoredSpring
+### SpringTo
+
+Contract: one or more one-dimensional springs pull a property's current value to a provided `toValue`.
+
+    class AnchoredSpring {
+      var property
+      var toValue
+    }
+
+### ConfigureSpring
 
 Contract: one or more one-dimensional springs pull a property's current value to a provided `toValue`.
 
