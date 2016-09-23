@@ -46,7 +46,7 @@ Contract: configure the behavior of the spring associated with a given property.
 
 Supported plans: `SpringTo`, `ConfigureSpring`.
 
-This performer is expected to use springs to perform the requested simulation defined by any provided `AnchoredSpring` plan.
+This performer uses springs to pull the target property's current value towards the last-provided destination.
 
 When an `AnchoredSpring` is provided for a new property the performer creates state required to simulate the spring.
 
