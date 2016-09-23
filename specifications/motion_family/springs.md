@@ -11,12 +11,19 @@ The springs motion family allows a director to attach simulated one-dimensional 
 
 To animate a rounded-corners square to a new dimension:
 
-    SpringPlan(.layerBounds, to: bounds)
-    SpringPlan(.layerCornerRadius, to: radius)
+    AnchoredSpring(.layerBounds, to: bounds)
+    AnchoredSpring(.layerCornerRadius, to: radius)
 
 ## Public plans
 
-### SpringPlan
+### AnchoredSpring
+
+Contract: one or more one-dimensional springs pull a property's current value to a provided `toValue`.
+
+    class AnchoredSpring {
+      var property
+      var toValue
+    }
 
 ## Performers
 
