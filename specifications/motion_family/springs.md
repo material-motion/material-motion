@@ -23,7 +23,7 @@ To animate a rounded-corners square to a new dimension:
 
 ### SpringTo
 
-Contract: one or more one-dimensional springs pull a property's current value to a provided `toValue`.
+Contract: one or more one-dimensional springs pull a property's current value to a provided `destination`.
 
     class AnchoredSpring {
       var property
