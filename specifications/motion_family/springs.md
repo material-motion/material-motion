@@ -27,7 +27,7 @@ Contract: one or more one-dimensional springs pull a property's current value to
 
     class AnchoredSpring {
       var property
-      var toValue
+      var destination
     }
 
 ### ConfigureSpring
