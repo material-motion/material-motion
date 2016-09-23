@@ -1,6 +1,3 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Springs motion family
 
 The springs motion family allows a director to attach simulated one-dimensional springs to properties on an element.
