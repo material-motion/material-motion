@@ -48,6 +48,6 @@ Supported plans: `SpringTo`, `ConfigureSpring`.
 
 This performer uses springs to pull the target property's current value towards the last-provided destination.
 
-When an `AnchoredSpring` is provided for a new property the performer creates state required to simulate the spring.
+Create state required to simulate a spring when an `AnchoredSpring` is provided for a new property.
 
 Preserve velocity when a property's destination changes.
