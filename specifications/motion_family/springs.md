@@ -16,7 +16,7 @@ To animate a rounded-corners square to a new dimension:
 
 ## Public plans
 
-### Spring
+### SpringPlan
 
 ## Performers
 
