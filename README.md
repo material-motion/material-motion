@@ -1,5 +1,5 @@
 <p class="github-only">This book is best-formatted on GitBook. <a href="https://material-motion.gitbooks.io/material-motion-starmap/content/">Read it there</a>.</p>
-# Material Motion 🌟 Starmap 📜
+# Material Motion Starmap
 
 This document describes a system that will empower creators with the language and tools needed to describe and implement rich, interactive motion on any platform. Within, we explore [essential primitives](specifications/primitives.md), [software design patterns](specifications/pattern.md), [motion runtimes](specifications/runtime/), and more. Initially, we will be supporting Android, iOS, and the web, with variants and styles appropriate to each platform.
 
