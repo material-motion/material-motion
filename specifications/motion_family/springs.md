@@ -64,8 +64,3 @@ Create state required to simulate a spring when an `AnchoredSpring` is provided 
 Preserve velocity when a property's destination changes.
 
 `ConfigureSpring` changes the behavior of any active or future springs.
-
-The default behavior for all springs:
-
-- springiness = 15
-- bounciness = 5
