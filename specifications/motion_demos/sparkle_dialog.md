@@ -1,5 +1,7 @@
 # Sparkle dialog demo
 
+![](../../_assets/sparkledialog.gif)
+
 ## Element hierarchy
 
 - `SparkleDialog`
