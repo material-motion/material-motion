@@ -2,7 +2,7 @@
 
 The team's focus for the current sprint. This document is updated each wednesday during our team's sprint planning.
 
-Click a 🎯 to view the sprint.
+Click a name to view the sprint.
 
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
@@ -14,10 +14,10 @@ Click a 🎯 to view the sprint.
 | [Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)       | Starmap | Apple  | Android | Web    |
 |:-------------------:|:-------:|:------:|:-------:|:------:|
 | [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            |  &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | &nbsp; | &nbsp;| [🎯](https://github.com/material-motion/material-motion-experiments-js/projects/1) |
-| [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/springs.html) | &nbsp; | [🎯](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) | &nbsp; | &nbsp; |
+| [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | &nbsp; | &nbsp;| [appsforartists](https://github.com/material-motion/material-motion-experiments-js/projects/1) |
+| [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/springs.html) | &nbsp; | [featherless](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) | &nbsp; | &nbsp; |
 | [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  [🎯](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html) | [🎯](https://github.com/material-motion/material-motion-family-coreanimation-swift/projects/1) |  &nbsp; | &nbsp; |
+| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  [featherless](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html) | [featherless](https://github.com/material-motion/material-motion-family-coreanimation-swift/projects/1) |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 
 | Catalog | Starmap | Apple  | Android | Web    |
