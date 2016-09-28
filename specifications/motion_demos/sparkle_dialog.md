@@ -45,7 +45,7 @@
                                            to: dialogView.titleLabel.layer.position.y + 5)
         make[titleLabel].spring(.layerOpacity, to: 1)
         make[detaillabel].spring(.layerPositionY,
-                                            to: dialogView.detaillabel.layer.position.y + 5)
+                                 to: dialogView.detaillabel.layer.position.y + 5)
         make[detaillabel].spring(.layerOpacity, to: 1)
 
         let xOffset: [CGFloat] = [-20, 0, 20]
