@@ -39,7 +39,7 @@
       when(.expanded) { make in
         make[contentView].spring(.layerOpacity, to: 1)
         make[scrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
-                                                                 height: size.height + 20))
+                                                      height: size.height + 20))
 
         make[titleLabel].spring(.layerPositionY,
                                 to: titleLabel.layer.position.y + 5)
