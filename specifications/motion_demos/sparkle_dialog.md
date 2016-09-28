@@ -16,11 +16,11 @@
 ## Director
 
     func setUp(withDialogView dialogView: SparkleDialogView) {
-      let size = dialogView.skrimView.bounds.size
+      let size = scrimView.bounds.size
 
       when(.collapsed) { make in
         make[contentView].spring(.layerOpacity, to: contentView.layer.opacity)
-        make[skrimView].spring(.layerSize, to: size)
+        make[scrimView].spring(.layerSize, to: size)
 
         make[titleLabel].spring(.layerPositionY,
                                 to: titleLabel.layer.position.y)
@@ -38,7 +38,7 @@
 
       when(.expanded) { make in
         make[contentView].spring(.layerOpacity, to: 1)
-        make[skrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
+        make[scrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
                                                                  height: size.height + 20))
 
         make[titleLabel].spring(.layerPositionY,
