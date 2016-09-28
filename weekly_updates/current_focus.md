@@ -23,4 +23,4 @@ Click a 🎯 to view the sprint.
 | Catalog | Starmap | Apple  | Android | Web    |
 |:-------:|:------:|:------:|:-------:|:------:|
 |  Color interpolation | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-|  Sparkle Dialog | [🎯](https://github.com/material-motion/material-motion-starmap/projects/1) | [🎯](https://github.com/material-motion/material-motion-catalog-swift/projects/1) |  &nbsp; | &nbsp; |
+|  Sparkle Dialog | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
