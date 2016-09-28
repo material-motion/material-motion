@@ -19,41 +19,41 @@
       let size = dialogView.skrimView.bounds.size
 
       when(.collapsed) { make in
-        make[dialogView.contentView].spring(kPOPLayerOpacity, to: dialogView.contentView.layer.opacity)
-        make[dialogView.skrimView].spring(kPOPLayerSize, to: size)
+        make[dialogView.contentView].spring(.layerOpacity, to: dialogView.contentView.layer.opacity)
+        make[dialogView.skrimView].spring(.layerSize, to: size)
 
-        make[dialogView.titleLabel].spring(kPOPLayerPositionY,
+        make[dialogView.titleLabel].spring(.layerPositionY,
                                            to: dialogView.titleLabel.layer.position.y)
-        make[dialogView.titleLabel].spring(kPOPLayerOpacity, to: 0)
-        make[dialogView.detaillabel].spring(kPOPLayerPositionY,
+        make[dialogView.titleLabel].spring(.layerOpacity, to: 0)
+        make[dialogView.detaillabel].spring(.layerPositionY,
                                             to: dialogView.detaillabel.layer.position.y)
-        make[dialogView.detaillabel].spring(kPOPLayerOpacity, to: 0)
+        make[dialogView.detaillabel].spring(.layerOpacity, to: 0)
 
         for card in dialogView.cards {
-          make[card].spring(kPOPLayerRotation, to: 0)
-          make[card].spring(kPOPLayerPositionY, to: card.layer.position.y)
-          make[card].spring(kPOPLayerPositionX, to: card.layer.position.x)
+          make[card].spring(.layerRotation, to: 0)
+          make[card].spring(.layerPositionX, to: card.layer.position.x)
+          make[card].spring(.layerPositionY, to: card.layer.position.y)
         }
       }
 
       when(.expanded) { make in
-        make[dialogView.contentView].spring(kPOPLayerOpacity, to: 1)
-        make[dialogView.skrimView].spring(kPOPLayerSize, to: CGSize(width: size.width + 20,
-                                                                    height: size.height + 20))
+        make[dialogView.contentView].spring(.layerOpacity, to: 1)
+        make[dialogView.skrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
+                                                                 height: size.height + 20))
 
-        make[dialogView.titleLabel].spring(kPOPLayerPositionY,
+        make[dialogView.titleLabel].spring(.layerPositionY,
                                            to: dialogView.titleLabel.layer.position.y + 5)
-        make[dialogView.titleLabel].spring(kPOPLayerOpacity, to: 1)
-        make[dialogView.detaillabel].spring(kPOPLayerPositionY,
+        make[dialogView.titleLabel].spring(.layerOpacity, to: 1)
+        make[dialogView.detaillabel].spring(.layerPositionY,
                                             to: dialogView.detaillabel.layer.position.y + 5)
-        make[dialogView.detaillabel].spring(kPOPLayerOpacity, to: 1)
+        make[dialogView.detaillabel].spring(.layerOpacity, to: 1)
 
         let xOffset: [CGFloat] = [-20, 0, 20]
         let rotations: [Double] = [-45, 0, 45]
         for (i, card) in dialogView.cards.enumerated() {
-          make[card].spring(kPOPLayerRotation, to: rotations[i] * M_PI / 180)
-          make[card].spring(kPOPLayerPositionY, to: card.layer.position.y - 20)
-          make[card].spring(kPOPLayerPositionX, to: card.layer.position.x + xOffset[i])
+          make[card].spring(.layerRotation, to: rotations[i] * M_PI / 180)
+          make[card].spring(.layerPositionX, to: card.layer.position.x + xOffset[i])
+          make[card].spring(.layerPositionY, to: card.layer.position.y - 20)
         }
       }
 
