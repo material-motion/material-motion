@@ -27,6 +27,7 @@
        * [Physics](specifications/motion_family/physics.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
+   * Motion demos
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
@@ -44,7 +45,6 @@
        * [Plan serialization](specifications/plan_serialization.md)
        * [Transaction serialization](specifications/transaction_serialization.md)
        * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
-   * Motion demos
 * [User journeys](user_journeys/README.md)
    * [Motion](user_journeys/motion.md)
    * [Engineering](user_journeys/engineering.md)
