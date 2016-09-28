@@ -17,7 +17,7 @@ Click a 🎯 to view the sprint.
 | [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | &nbsp; | &nbsp;| [🎯](https://github.com/material-motion/material-motion-experiments-js/projects/1) |
 | [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/springs.html) | &nbsp; | [🎯](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) | &nbsp; | &nbsp; |
 | [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  [🎯](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html) | [🎯](https://github.com/material-motion/material-motion-family-coreanimation-swift/projects/1) |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 
 | Catalog | Starmap | Apple  | Android | Web    |
