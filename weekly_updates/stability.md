@@ -21,4 +21,4 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | Catalog | Starmap | Apple  | Android | Web    |
 |:-------:|:------:|:------:|:-------:|:------:|
 |  Color interpolation | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-|  Sparkle Dialog | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+|  Sparkle Dialog | Stable | &nbsp; |  &nbsp; | &nbsp; |
