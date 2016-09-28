@@ -1,2 +1,2 @@
-# Sparkle dialog
+# Sparkle dialog demo
 
