@@ -19,15 +19,15 @@
       let size = dialogView.skrimView.bounds.size
 
       when(.collapsed) { make in
-        make[dialogView.contentView].spring(.layerOpacity, to: dialogView.contentView.layer.opacity)
-        make[dialogView.skrimView].spring(.layerSize, to: size)
+        make[contentView].spring(.layerOpacity, to: contentView.layer.opacity)
+        make[skrimView].spring(.layerSize, to: size)
 
-        make[dialogView.titleLabel].spring(.layerPositionY,
-                                           to: dialogView.titleLabel.layer.position.y)
-        make[dialogView.titleLabel].spring(.layerOpacity, to: 0)
-        make[dialogView.detaillabel].spring(.layerPositionY,
+        make[titleLabel].spring(.layerPositionY,
+                                           to: titleLabel.layer.position.y)
+        make[titleLabel].spring(.layerOpacity, to: 0)
+        make[detaillabel].spring(.layerPositionY,
                                             to: dialogView.detaillabel.layer.position.y)
-        make[dialogView.detaillabel].spring(.layerOpacity, to: 0)
+        make[detaillabel].spring(.layerOpacity, to: 0)
 
         for card in dialogView.cards {
           make[card].spring(.layerRotation, to: 0)
@@ -37,16 +37,16 @@
       }
 
       when(.expanded) { make in
-        make[dialogView.contentView].spring(.layerOpacity, to: 1)
-        make[dialogView.skrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
+        make[contentView].spring(.layerOpacity, to: 1)
+        make[skrimView].spring(.layerSize, to: CGSize(width: size.width + 20,
                                                                  height: size.height + 20))
 
-        make[dialogView.titleLabel].spring(.layerPositionY,
+        make[titleLabel].spring(.layerPositionY,
                                            to: dialogView.titleLabel.layer.position.y + 5)
-        make[dialogView.titleLabel].spring(.layerOpacity, to: 1)
-        make[dialogView.detaillabel].spring(.layerPositionY,
+        make[titleLabel].spring(.layerOpacity, to: 1)
+        make[detaillabel].spring(.layerPositionY,
                                             to: dialogView.detaillabel.layer.position.y + 5)
-        make[dialogView.detaillabel].spring(.layerOpacity, to: 1)
+        make[detaillabel].spring(.layerOpacity, to: 1)
 
         let xOffset: [CGFloat] = [-20, 0, 20]
         let rotations: [Double] = [-45, 0, 45]
