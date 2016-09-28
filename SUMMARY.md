@@ -28,7 +28,7 @@
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
    * Motion demos
-       * Sparkle dialog
+       * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
        * [Transitions](specifications/transitions.md)
            * [Life of a transition director](specifications/life_of_a_transition_director.md)
