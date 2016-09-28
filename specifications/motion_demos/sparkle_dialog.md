@@ -23,10 +23,10 @@
         make[skrimView].spring(.layerSize, to: size)
 
         make[titleLabel].spring(.layerPositionY,
-                                           to: titleLabel.layer.position.y)
+                                to: titleLabel.layer.position.y)
         make[titleLabel].spring(.layerOpacity, to: 0)
         make[detaillabel].spring(.layerPositionY,
-                                            to: dialogView.detaillabel.layer.position.y)
+                                 to: dialogView.detaillabel.layer.position.y)
         make[detaillabel].spring(.layerOpacity, to: 0)
 
         for card in dialogView.cards {
@@ -42,7 +42,7 @@
                                                                  height: size.height + 20))
 
         make[titleLabel].spring(.layerPositionY,
-                                           to: dialogView.titleLabel.layer.position.y + 5)
+                                to: dialogView.titleLabel.layer.position.y + 5)
         make[titleLabel].spring(.layerOpacity, to: 1)
         make[detaillabel].spring(.layerPositionY,
                                  to: dialogView.detaillabel.layer.position.y + 5)
