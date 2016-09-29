@@ -1,6 +1,6 @@
 # Performer composition specification
 
-Performers can emit plans. This is a type of composition.
+Performers can emit new plans. This is a type of composition.
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
