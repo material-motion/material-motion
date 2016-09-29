@@ -118,34 +118,6 @@ A scheduler is active if any of its performer instances are active.
 
 ---
 
-## Experimental ideas
-
-**Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
-
-This is a more focused event than the "scheduler activity state did change".
-
-This event enables reactionary plans, i.e. registering new plans once a target has entered an idle state.
-
-    Transaction {
-      function addActivityStateObserverForTarget(target, function)
-    }
-    
-    transaction.addActivityStateObserverForTarget(target, function(newState) {
-      // Start a new transaction and commit it to the scheduler...
-    })
-
-NOTE: It may be more valuable to have performer-level idling. Target-level idling may not be helpful. It's unclear how performer-level idling would work, given that the outside system should generally be unaware of performers.
-
-    Transaction {
-      function addActivityStateObserverForPlan(plan, function)
-    }
-    
-    transaction.addActivityStateObserverForPlan(plan, function(newState) {
-      // Start a new transaction and commit it to the scheduler...
-    })
-
----
-
 ## Open topics
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
