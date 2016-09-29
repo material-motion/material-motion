@@ -66,21 +66,18 @@ We'll assume a function exists that returns a performer capable of executing a t
 function performerForPlan(Plan, target, existingPerformers) -> Performer
 ```
 
-Recall the transaction log we'd explored above:
+Recall the associations we made above:
 
 ```
-> transaction.log
-[
-  {action:'add",    target: circleView, plan: FadeIn                  },
-  {action:'add",    target: squareView, plan: Draggable               },
-  {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
-  {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
-  {action:'remove", target: squareView,                  name: "name2"},
-  {action:'add",    target: circleView, plan: Draggable               },
-]
+scheduler.addPlan(animation, to: circleView)
+scheduler.addPlan(draggable, to: squareView)
+scheduler.addPlan(pinchable, named: "name1", to: squareView)
+scheduler.addPlan(rotatable, named: "name2", to: squareView)
+scheduler.removePlan(named: "name2", from: squareView)
+scheduler.addPlan(draggable, to: circleView)
 ```
 
-Recall that when we committed this transaction to the scheduler our scheduler had the following representation of the committed plans:
+Our scheduler had the following representation of the committed plans:
 
 ![](../../_assets/TargetManagers.svg)
 
