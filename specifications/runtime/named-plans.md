@@ -10,6 +10,8 @@ This is the engineering specification for **named plans**. This specification re
 
 This feature enables the registration of *named plans* to a scheduler. Named plans can be added and removed by name, enabling fine configuration of a performer's behavior.
 
+> A named plan cannot have `null` or an empty string as its name.
+
 Printable tech tree/checklist:
 
 ![](../../_assets/NamedPlansTechTree.svg)
