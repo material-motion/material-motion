@@ -40,14 +40,12 @@ Example pseudo-code:
 
 ![](../../_assets/OnePerformer.svg)
 
-> Consider the following pseudo-code transaction involving physical simulation:
+> Consider the following pseudo-code involving physical simulation:
 > 
->     transaction = Transaction()
->     transaction.add(Friction(), circleView)
->     transaction.add(AnchoredSpringAtLocation(x, y), circleView)
->     scheduler.commit(transaction)
+>     scheduler.addPlan(Friction(), to: circleView)
+>     scheduler.addPlan(AnchoredSpringAtLocation(x, y), to: circleView)
 > 
-> `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans are provided to the performer instance.
+> `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans have been provided to the performer instance.
 > 
 > The performer knows the following:
 > 
