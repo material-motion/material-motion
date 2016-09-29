@@ -8,7 +8,7 @@ Performers can emit new plans. This is a type of composition.
 
 Composition enables the creation of higher-order plans. For example, a "Tossable" plan's performer might generate a "Draggable" and "AttachedSpring" plan. Or more simply, a "FadeIn" plan might compose out to a more general-purpose "Tween" plan.
 
-Composition is what will enable code reuse in the Material Motion ecosystem.
+Composition enables code reuse in the Material Motion ecosystem.
 
 ---
 
