@@ -8,7 +8,7 @@ This is the engineering specification for **named plans**. This specification re
 
 ## Overview
 
-This feature enables the registration of *named plans* to a scheduler. Named plans can be added and remove by name, enabling fine configuration of a performer's behavior.
+This feature enables the registration of *named plans* to a scheduler. Named plans can be added and removed by name, enabling fine configuration of a performer's behavior.
 
 Printable tech tree/checklist:
 
