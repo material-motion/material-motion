@@ -26,7 +26,7 @@ To answer the first question we introduce our first type: `Plan`.
 
 To answer the second question we introduce two more types: the `Performer` and the `Scheduler`.
 
-> An performer's sole responsibility is to fulfill the contract defined by one or more plans. A scheduler is the entity that creates performers.
+> A performer's sole responsibility is to fulfill the contract defined by one or more plans. A scheduler is the entity that creates performers.
 
 Here's how these objects fit together:
 
