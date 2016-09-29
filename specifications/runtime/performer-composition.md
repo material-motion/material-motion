@@ -12,14 +12,14 @@ Composition enables code reuse in the Material Motion ecosystem.
 
 ---
 
-**transactionEmitter API**: A performer may be provided with a transaction emitter object.
+**PlanEmitter API**: A performer may be provided with a plan emitter object.
 
-> The Performer may choose not to implement this API.
+> The Performer may choose not to receive such an object.
 
-A transaction emitter declaration might look like so:
+A plan emitter declaration might look like so:
 
-    protocol TransactionEmitter {
-      func emit(transaction: Transaction)
+    protocol PlanEmitter {
+      func addPlan(plan)
     }
 
 A performer can be provided with a transaction emitter.
