@@ -34,11 +34,10 @@ Example use case: removing a behavior from a target.
 
 Example pseudo-code:
 
-    # on drag
     transaction1.addPlan(springToLocation(origin), named: 'spring', to: target)
     scheduler.commit(transaction1)
 
-    # on release
+    # later on
     transaction2.removePlan(named: 'spring', from: target)
     scheduler.commit(transaction2)
 
