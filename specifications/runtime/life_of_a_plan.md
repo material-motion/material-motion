@@ -52,7 +52,7 @@ After executing the above code, the scheduler's internal state might resemble th
 
 ![](../../_assets/TargetManagers.svg)
 
-> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
+> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2".
 
 The scheduler is now expected to fulfill the committed plans.
 
