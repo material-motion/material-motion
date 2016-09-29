@@ -1,6 +1,6 @@
 # Performer composition specification
 
-Performers can emit transactions. This is a type of composition.
+Performers can emit plans. This is a type of composition.
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
