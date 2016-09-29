@@ -20,9 +20,9 @@ This sentence introduces two important questions:
 1. How are plans provided to a runtime?
 1. How does a runtime know how to perform plans?
 
-To answer the first question we introduce two new types into the system: `Plan` and `Transaction`.
+To answer the first question we introduce our first type: `Plan`.
 
-> A plan is an object representing **what you want something to do**. A transaction aggregates requests for plan-target associations.
+> A plan is an object representing **what you want something to do**.
 
 To answer the second question we introduce two more types: the `Performer` and the `Scheduler`.
 
