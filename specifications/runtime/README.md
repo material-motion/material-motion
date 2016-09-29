@@ -30,9 +30,9 @@ To answer the second question we introduce two more types: the `Performer` and t
 
 Here's how these objects fit together:
 
-1. Plans are added to transactions.
-2. Transactions are committed to a scheduler.
-3. Schedulers create performers.
+1. Plans are added to a scheduler.
+2. Schedulers create performers.
+3. Performers fulfill the plans.
 
 In visual form:
 
