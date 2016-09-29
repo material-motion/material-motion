@@ -16,7 +16,7 @@ This is the engineering specification for the `Transaction` object.
 
 ## Overview
 
-A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Scheduler](scheduler.md).
+A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Scheduler](scheduler.md). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
 
 Printable tech tree/checklist:
 
