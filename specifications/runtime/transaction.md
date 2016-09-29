@@ -39,6 +39,12 @@ Example pseudo-code:
     # Associate a plan with a target.
     transaction.add(plan, target)
 
+**commit API**: Provide an API for committing a transaction to a scheduler.
+
+Example pseudo-code:
+
+    transaction.commitToScheduler(scheduler)
+
 **Operation enumeration**: Operations recorded to a transaction are enumerable.
 
 Operations are enumerated in the order in which they were recorded.
