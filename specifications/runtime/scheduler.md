@@ -13,7 +13,7 @@ This is the engineering specification for the `Scheduler` object.
 
 ## Overview
 
-A scheduler receives plans and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
+A scheduler receives plans and creates performers. The scheduler generates relevant events for performers and monitors activity.
 
 Printable tech tree/checklist:
 
