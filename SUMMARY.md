@@ -12,7 +12,6 @@
        * [Performer](specifications/runtime/performer.md)
            * [Composition](specifications/runtime/performer-composition.md)
        * [Scheduler](specifications/runtime/scheduler.md)
-           * [Event stream](specifications/runtime/scheduler-event-stream.md)
        * [Target selectors](specifications/runtime/target_selectors.md)
        * [Named plans](specifications/runtime/named-plans.md)
    * [Motion family](specifications/motion-family.md)
