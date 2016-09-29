@@ -19,7 +19,7 @@ Composition enables code reuse in the Material Motion ecosystem.
 A plan emitter declaration might look like so:
 
     protocol PlanEmitter {
-      func addPlan(plan)
+      func addPlan(Plan)
     }
 
 A performer can be provided with a transaction emitter.
