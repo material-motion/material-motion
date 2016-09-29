@@ -27,7 +27,7 @@ Example pseudo-code:
 
     scheduler = Scheduler()
 
-**add API**: Provide an API for adding an association of a plan with a target.
+**addPlan API**: Provide an API for adding an association of a plan with a target.
 
 This API must accept a plan and a target object.
 
