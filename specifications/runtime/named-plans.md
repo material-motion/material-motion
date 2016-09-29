@@ -27,10 +27,29 @@ Example pseudo-code:
     scheduler.commit(transaction1)
 
     # on release
-    transaction2.add(
-      plan: springToLocation(origin), 
+    transaction2.addPlan(
+      springToLocation(origin), 
       named: 'drag', 
       to: target
+    )
+    scheduler.commit(transaction2)
+
+Example use case: removing a behavior from a target.
+
+Example pseudo-code:
+
+    # on drag
+    transaction1.addPlan(
+      springToLocation(origin),
+      named: 'spring',
+      to: target
+    )
+    scheduler.commit(transaction1)
+
+    # on release
+    transaction2.removePlan(
+      named: 'spring',
+      from: target
     )
     scheduler.commit(transaction2)
 
