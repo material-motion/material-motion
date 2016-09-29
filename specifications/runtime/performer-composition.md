@@ -4,7 +4,7 @@ Performers can emit new plans. This is a type of composition.
 
 |           | Android   | Apple     |
 | --------- |:---------:|:---------:|
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/3) | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/10) |
+| First introduced | [Runtime 2.0.0](https://github.com/material-motion/material-motion-runtime-android/releases/tag/2.0.0) | [Runtime 3.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v3.0.0) |
 
 Composition enables the creation of higher-order plans. For example, a "Tossable" plan's performer might generate a "Draggable" and "AttachedSpring" plan. Or more simply, a "FadeIn" plan might compose out to a more general-purpose "Tween" plan.
 
