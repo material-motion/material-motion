@@ -4,7 +4,7 @@ This is the engineering specification for **named plans**. This specification re
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
-| MVP milestones | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/4) |
+| MVP milestones | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/5) | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/4) |
 
 ## Overview
 
