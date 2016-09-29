@@ -27,13 +27,14 @@ Example pseudo-code:
 
     scheduler = Scheduler()
 
-**commit API**: Provide an API to commit transactions to a scheduler.
+**add API**: Provide an API for adding an association of a plan with a target.
+
+This API must accept a plan and a target object.
 
 Example pseudo-code:
 
-    scheduler.commit(transaction)
-
-Requires: [Transaction](transaction.md)
+    # Associate a plan with a target.
+    scheduler.addPlan(plan, to: target)
 
 **One instance of a performer type per target**: Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
