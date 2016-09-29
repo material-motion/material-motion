@@ -20,17 +20,17 @@ Example pseudo-code:
 
     # on drag
     transaction1.add(
-      name: 'drag', 
       plan: matchLocationOf(cursor), 
-      target
+      named: 'drag', 
+      to: target
     )
     scheduler.commit(transaction1)
 
     # on release
     transaction2.add(
-      name: 'drag', 
       plan: springToLocation(origin), 
-      target
+      named: 'drag', 
+      to: target
     )
     scheduler.commit(transaction2)
 
