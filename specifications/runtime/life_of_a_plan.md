@@ -31,50 +31,24 @@ rotatable = Rotatable()
 
 ![](../../_assets/LifeOfAPlan-step2.svg)
 
-### Step 3: Start a transaction and commit it
+### Step 3: Add the plans to the scheduler
 
 Let's say we have two targets - a circle and a square - to which we want to associate our plans.
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create a transaction.
+Plans are associated to targets:
 
 ```
-transaction = Transaction()
+scheduler.addPlan(animation, to: circleView)
+scheduler.addPlan(draggable, to: squareView)
+scheduler.addPlan(pinchable, named: "name1", to: squareView)
+scheduler.addPlan(rotatable, named: "name2", to: squareView)
+scheduler.removePlan(named: "name2", from: squareView)
+scheduler.addPlan(draggable, to: circleView)
 ```
 
-Plans are associated to targets via the transaction.
-
-```
-transaction.add(animation, circleView)
-transaction.add(draggable, squareView)
-transaction.add(pinchable, "name1", squareView)
-transaction.add(rotatable, "name2", squareView)
-transaction.remove("name2", squareView)
-transaction.add(draggable, circleView)
-```
-
-The transaction's log might resemble this:
-
-```
-> transaction.log
-[
-  {action:"add",    target: circleView, plan: FadeIn                  },
-  {action:"add",    target: squareView, plan: Draggable               },
-  {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
-  {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
-  {action:"remove", target: squareView,                  name: "name2"},
-  {action:"add",    target: circleView, plan: Draggable               },
-]
-```
-
-A transaction must be committed to a scheduler in order for it to take affect.
-
-```
-scheduler.commit(transaction)
-```
-
-After committing the above transaction, the scheduler's internal state might resemble this:
+After executing the above code, the scheduler's internal state might resemble this:
 
 ![](../../_assets/TargetManagers.svg)
 
