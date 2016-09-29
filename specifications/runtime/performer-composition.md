@@ -22,20 +22,18 @@ A plan emitter declaration might look like so:
       func addPlan(Plan)
     }
 
-A performer can be provided with a transaction emitter.
+A performer can be provided with a plan emitter.
 
 Example pseudo-code protocol that a performer could conform to:
 
     protocol ComposablePerforming {
-      func set(transactionEmitter: TransactionEmitter)
+      func set(planEmitter: PlanEmitter)
     }
 
 Pseudo-code of a performer emitting new plans:
 
     function onGesture(gesture) {
       if gesture.state == Ended {
-        let transaction = Transaction()
-        transaction.add(plan: Spring(), to: self)
-        self.emitter.emit(transaction)
+        planEmitter.addPlan(Spring())
       }
     }
