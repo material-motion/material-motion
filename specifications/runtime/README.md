@@ -43,6 +43,5 @@ Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.
 Or dive in to the engineering specifications:
 
 - [Plan](plan.md)
-- [Transaction](transaction.md)
 - [Performer](performer.md)
 - [Scheduler](scheduler.md)
