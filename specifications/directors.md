@@ -18,15 +18,15 @@ Printable tech tree/checklist:
 
 Example pseudo-code definition:
 
-    function setUp(transaction)
+    function setUp(planEmitter)
 
 Directors are expected to commit plans to `setUp`'s provided transaction .
 
 Example pseudo-code implementation:
 
-    function setUp(transaction) {
-      transaction.add(plan, targetA)
-      transaction.add(plan, targetB)
+    function setUp(planEmitter) {
+      planEmitter.addPlan(plan, to: targetA)
+      planEmitter.addPlan(plan, to: targetB)
       ...
     }
 
