@@ -12,10 +12,10 @@ Transactions may receive target selectors.
 Example pseudo-code:
 
     # Associate a named plan with a target.
-    transaction.add(plan, TargetSelector("#contextView"))
+    scheduler.addPlan(plan, to: TargetSelector("#contextView"))
     
-    # Remove any named plan from a target.
-    transaction.remove(name, TargetSelector("#contextView"))
+    # Remove a named plan from a target.
+    scheduler.removePlan(named: name, from: TargetSelector("#contextView"))
 
 ## Scheduler specification
 
