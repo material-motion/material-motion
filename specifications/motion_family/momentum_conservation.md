@@ -11,11 +11,11 @@ To animate a rounded-corners square to a new dimension:
     class MorphingInteraction: InteractionDirector {
       let roundedCornerShape
       
-      func setUp(transaction) {
-        transaction.add(plan: SpringTo(.layerBounds, destination: bounds),
-                        to: roundedCornerShape)
-        transaction.add(plan: SpringTo(.layerCornerRadius, destination: radius),
-                        to: roundedCornerShape)
+      func setUp(planEmitter) {
+        planEmitter.addPlan(SpringTo(.layerBounds, destination: bounds),
+                            to: roundedCornerShape)
+        planEmitter.addPlan(SpringTo(.layerCornerRadius, destination: radius),
+                            to: roundedCornerShape)
       }
     }
 
