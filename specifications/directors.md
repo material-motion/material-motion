@@ -14,7 +14,7 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a transaction instance.
+**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a planEmitter instance.
 
 Example pseudo-code definition:
 
