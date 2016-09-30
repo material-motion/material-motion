@@ -6,7 +6,7 @@ The tween motion family allows a director to describe tween animations for prope
 
 ## Examples
 
-    class FadingInteraction: InteractionDirector {
+    Transition Fade {
       func setUp(planEmitter) {
         planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut), to: target)
       }
