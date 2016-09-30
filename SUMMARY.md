@@ -28,6 +28,7 @@
             * [Life of a transition director](specifications/life_of_a_transition_director.md)
             * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
             * [TransitionDirector](specifications/transition_director.md)
+                * [Feature: context element](specifications/feature-context-element.md)
             * [TransitionController](specifications/transition_controller.md)
             * [TransitionDriver](specifications/transitiondriver.md)
         * [Interactions](specifications/interactions.md)
