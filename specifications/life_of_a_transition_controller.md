@@ -69,10 +69,11 @@ The TransitionRunner is responsible for invoking `tearDown` on the director.
 
 ```
 class TransitionRunner {
- function transitionDidFinish() {
-   director.tearDown()
- }
+  function transitionDidFinish() {
+    director.tearDown()
+  }
 }
 ```
 
-At this point the transition controller might throw away its `TransitionRunner` instance. 
+At this point the transition controller might throw away its `TransitionRunner` instance.
+
