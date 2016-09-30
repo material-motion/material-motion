@@ -48,8 +48,8 @@ If one method is implemented, the other must be implemented as well.
 Example pseudo-code:
 
     protocol NamedPlanPerforming {
-      function add(plan: NamedPlan, withName: String)
-      function removePlan(withName: String)
+      function addPlan(NamedPlan, named: String)
+      function removePlan(named: String)
     }
 
 **NamedPlan type**: Provide a NamedPlan type.
