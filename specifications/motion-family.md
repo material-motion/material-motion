@@ -17,9 +17,9 @@ For a library to be called a motion family it must satisfy the following minimal
 
 Families can be roughly categorized in two groups: delegation and composition.
 
-### Delegation families
+### Continuous families
 
-Delegates execution to an external system.
+Continuous execution via an external system.
 
 **Platform-specific bridge families**
 
