@@ -10,7 +10,7 @@
         * [Life of a plan](specifications/runtime/life_of_a_plan.md)
         * [Plan](specifications/runtime/plan.md)
         * [Performer](specifications/runtime/performer.md)
-            * [Composition](specifications/runtime/performer-composition.md)
+            * [Feature: composition](specifications/runtime/performer-composition.md)
         * [Scheduler](specifications/runtime/scheduler.md)
         * [Feature: named plans](specifications/runtime/named-plans.md)
         * [Feature: target selectors](specifications/runtime/target_selectors.md)
