@@ -8,7 +8,7 @@ The tween motion family allows a director to describe tween animations for prope
 
     class FadingInteraction: InteractionDirector {
       func setUp(planEmitter) {
-        planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut))
+        planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut), to: target)
       }
     }
 
