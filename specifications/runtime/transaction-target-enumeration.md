@@ -1,7 +1,7 @@
 Status of this document:
 ![](../../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Transaction target enumeration specification
+# Transaction target enumeration feature specification
 
 Targets referenced in a transaction are enumerable.
 
@@ -9,9 +9,11 @@ Targets referenced in a transaction are enumerable.
 
 Example pseudo-code:
 
-    > transaction.targets
-    [
-      circleView,
-      squareView
-    ]
+```
+> transaction.targets
+[
+  circleView,
+  squareView
+]
+```
 
