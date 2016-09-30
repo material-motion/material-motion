@@ -13,7 +13,7 @@ TransitionDirector Fade {
 }
 ```
 
-### Step 2: Store the planEmitter
+### Step 2: Store the plan emitter
 
 ```
 TransitionDirector Fade {
@@ -30,7 +30,7 @@ Our `setUp` will use a simple tween plan:
 
 ```
 function setUp() {
-  var tween = Tween(property: "opacity")
+  var tween = Tween(.opacity)
   tween.duration = 0.3
   if self.direction == FORWARD {
     tween.from = 0
@@ -39,7 +39,7 @@ function setUp() {
     tween.from = 1
     tween.to = 0
   }
-  transaction.add(tween, target: rightElement)
+  planEmitter.addPlan(tween, to: rightElement)
 }
 ```
 
@@ -47,12 +47,12 @@ Or if our plans have a concept of direction:
 
 ```
 function setUp(transaction) {
-  var tween = Tween(property: "opacity")
+  var tween = Tween(.opacity)
   tween.duration = 0.3
   tween.start = 0
   tween.end = 1
   tween.direction = self.initialDirection
-  transaction.add(tween, target: rightElement)
+  planEmitter.addPlan(tween, to: rightElement)
 }
 ```
 
