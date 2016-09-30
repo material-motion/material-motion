@@ -8,9 +8,14 @@ A `TransitionDirector` provides essential scaffolding for managing a transition.
 
 `TransitionDirector` conforms to the `Director` protocol.
 
-Printable tech tree/checklist:
+Printable tech tree\/checklist:
 
 ![](../_assets/TransitionDirectorTechTree.svg)
+
+## Features
+
+* [Context element](feature-context-element.md)
+* [Transition preconditions](feature-transition-preconditions.md)
 
 ## MVP
 
@@ -18,9 +23,11 @@ Printable tech tree/checklist:
 
 Example pseudo-code:
 
-    TransitionDirector {
-      function setUp()
-    }
+```
+TransitionDirector {
+  function setUp()
+}
+```
 
 **Subclassing**: This class is designed to be subclassed.
 
@@ -28,36 +35,42 @@ The sub-class is expected to implement the functions specified in the `Director`
 
 Example pseudo-code:
 
-    MyTransitionDirector: TransitionDirector {
-      function setUp() {
-        // Perform set up operations
-      }
-    }
+```
+MyTransitionDirector: TransitionDirector {
+  function setUp() {
+    // Perform set up operations
+  }
+}
+```
 
-**from/to APIs**: Provide storage for information relevant to the transition.
+**from\/to APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
 
-    MyTransitionDirector: TransitionDirector {
-      public var fromViewController
-      public var toViewController
-      public var transitionDirection
-    }
+```
+MyTransitionDirector: TransitionDirector {
+  public var fromViewController
+  public var toViewController
+  public var transitionDirection
+}
+```
 
 **Transition direction type**: Provide a `TransitionDirection` type with two opposite values.
 
 Many synonyms exist. Use that which applies best to your platform.
 
-- present/dismiss
-- push/pop
-- forward/back
+* present\/dismiss
+* push\/pop
+* forward\/back
 
 Example pseudo-code:
 
-    enum TransitionDirection {
-      .Present
-      .Dismiss
-    }
+```
+enum TransitionDirection {
+  .Present
+  .Dismiss
+}
+```
 
 **Initial transition direction API**: Transition directors have a read-only `initialTransitionDirection` API.
 
@@ -65,15 +78,17 @@ Provide the initial transition direction of the transition to the director's ini
 
 Example pseudo-code:
 
-    enum TransitionDirection {
-      .Present
-      .Dismiss
-    }
-    
-    TransitionDirector {
-      readonly var initialTransitionDirection
-      init(initialTransitionDirection)
-    }
+```
+enum TransitionDirection {
+  .Present
+  .Dismiss
+}
+
+TransitionDirector {
+  readonly var initialTransitionDirection
+  init(initialTransitionDirection)
+}
+```
 
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
@@ -83,10 +98,12 @@ This API is not accessible to sub-classes.
 
 Example pseudo-code:
 
-    TransitionDirector {
-      private readonly var replicaController
-      init(replicaController)
-    }
+```
+TransitionDirector {
+  private readonly var replicaController
+  init(replicaController)
+}
+```
 
 **ReplicaControllerDelegate API**: Transition directors can assign a `replicaControllerDelegate`.
 
@@ -94,12 +111,15 @@ Subclasses are expected to set a custom replica controller delegate using this A
 
 Example pseudo-code:
 
-    TransitionDirector {
-      var replicaControllerDelegate
-    }
+```
+TransitionDirector {
+  var replicaControllerDelegate
+}
+```
 
-## Open Questions ##
+## Open Questions
 
-- How might we avoid subclassing this type?
-- Should we provide `TransitionDirector` with a timeline?
-- How does the `TransitionDirector` change the direction of the transition?
+* How might we avoid subclassing this type?
+* Should we provide `TransitionDirector` with a timeline?
+* How does the `TransitionDirector` change the direction of the transition?
+
