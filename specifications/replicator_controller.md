@@ -2,15 +2,15 @@
 
 This is the engineering specification for the `ReplicatorController` object.
 
+## Overview
+
 A replicator controller makes use of a `Replicator` instance to create replicas of elements. `ReplicatorController` provides APIs for configuring when replication should and should not occur.
 
 Printable tech tree/checklist:
 
 ![](../_assets/ReplicatorControllerTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Concrete object**: A `ReplicatorController` is a concrete object.
 
@@ -61,7 +61,3 @@ Example pseudo-code:
         return delegate.createReplica(element)
       }
     }
-
-<p style="text-align:center"><tt>/MVP</tt></p>
-
----
