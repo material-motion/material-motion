@@ -18,7 +18,7 @@ The tween motion family allows a director to describe tween animations for prope
 
 Contract: linearly interpolate a target's property from one value to another using a timing function for velocity.
 
-    class Tween {
+    Plan Tween {
       var property
       var from
       var to
