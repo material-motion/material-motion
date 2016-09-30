@@ -98,8 +98,6 @@ Example pseudo-code:
       var replicaControllerDelegate
     }
 
-<p style="text-align:center"><tt>/MVP</tt></p>
-
 ---
 
 <p style="text-align:center"><tt>feature: Context element</tt></p>
