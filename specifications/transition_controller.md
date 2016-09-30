@@ -82,14 +82,6 @@ This differs greatly from platform to platform.
 
 ---
 
-<p style="text-align:center"><tt>feature: director stack</tt></p>
-
-TODO: Discuss director stack.
-
-<p style="text-align:center"><tt>/feature: director stack</tt></p>
-
----
-
 <p style="text-align:center"><tt>feature: cancelable transitions</tt></p>
 
 TODO: Discuss transitions whose direction can change, i.e. "are cancelable". Will need to read the director's final transition when the transition finishes.
