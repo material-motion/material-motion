@@ -32,14 +32,14 @@ Our `setUp` will use a simple tween plan:
 function setUp() {
   var tween = Tween(.opacity)
   tween.duration = 0.3
-  if direction == .forward {
+  if initialDirection == .forward {
     tween.from = 0
     tween.to = 1
   } else {
     tween.from = 1
     tween.to = 0
   }
-  planEmitter.addPlan(tween, to: rightElement)
+  planEmitter.addPlan(tween, to: forwardElement)
 }
 ```
 
@@ -51,8 +51,8 @@ function setUp(transaction) {
   tween.duration = 0.3
   tween.start = 0
   tween.end = 1
-  tween.direction = self.initialDirection
-  planEmitter.addPlan(tween, to: rightElement)
+  tween.direction = initialDirection
+  planEmitter.addPlan(tween, to: forwardElement)
 }
 ```
 
