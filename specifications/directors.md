@@ -14,17 +14,25 @@ Printable tech tree/checklist:
 
 <p style="text-align:center"><tt>MVP</tt></p>
 
-**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once. This function accepts a planEmitter instance.
+**planEmitter API**: A director may be provided with a PlanEmitter instance.
+
+Directors must use a PlanEmitter instance in order to register new plans with a scheduler.
 
 Example pseudo-code definition:
 
-    function setUp(planEmitter)
+    function setPlanEmitter(PlanEmitter)
+
+**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once.
+
+Example pseudo-code definition:
+
+    function setUp()
 
 Directors are expected to commit plans to `setUp`'s provided transaction .
 
 Example pseudo-code implementation:
 
-    function setUp(planEmitter) {
+    function setUp() {
       planEmitter.addPlan(plan, to: targetA)
       planEmitter.addPlan(plan, to: targetB)
       ...
@@ -33,6 +41,11 @@ Example pseudo-code implementation:
 **No access to the scheduler**: Directors do not have direct access to a scheduler.
 
 The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
+
+**API invocation order**: The director's methods must be invoked in the following order over the lifetime of the director:
+
+1. `setPlanEmitter`
+2. `setUp`
 
 <p style="text-align:center"><tt>/MVP</tt></p>
 
@@ -58,7 +71,7 @@ Pseudo-code example:
 
 Directors may wish to register new plans after `setUp` has been invoked.
 
-**Transact API**: A director may be provided with a *transaction initiation function*.
+**Transact API**: A director may be provided with a *planEmitter*.
 
 Example pseudo-code protocol:
 
