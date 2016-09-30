@@ -40,7 +40,7 @@ Example pseudo-code:
 
 ```
 # Associate a plan with a target.
-transaction.add(plan, target)
+transaction.addPlan(plan, to: target)
 ```
 
 **commit API**: Provide an API for committing a transaction to a scheduler.
