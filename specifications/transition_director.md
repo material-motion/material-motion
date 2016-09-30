@@ -2,6 +2,8 @@
 
 This is the engineering specification for the `TransitionDirector` object.
 
+## Overview
+
 A `TransitionDirector` provides essential scaffolding for managing a transition. A `TransitionDirector` class is instantiated by a `TransitionController`.
 
 `TransitionDirector` conforms to the `Director` protocol.
@@ -10,9 +12,7 @@ Printable tech tree/checklist:
 
 ![](../_assets/TransitionDirectorTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Concrete type**: A `TransitionDirector` is a concrete type that adheres to the informal Director APIs.
 
