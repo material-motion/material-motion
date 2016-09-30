@@ -56,38 +56,30 @@ Example pseudo-code:
 
 Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
 
-## Transaction specification
-
-Transactions support named add/remove operations.
-
-**Named add API**: Provide an API for `add` and `remove` with a name argument.
-
-Note that the plan type should be a `NamedPlan`. Motion family designers use this type to indicate which plans support being named.
-
-Example pseudo-code:
-
-    class Transaction {
-      function add(plan: NamedPlan, withName: String, to: Target)
-      function removePlan(named: String, fromTarget: Target)
-    }
-    
-    # Associate a named plan with a target.
-    transaction.add(plan: plan, withName: name, to: target)
-    
-    # Remove any named plan from a target.
-    transaction.removePlan(named: name, fromTarget: target)
-
-**Order**: Maintain order of named operations.
-
-Last operation wins in a given transaction.
-
 # Scheduler specification
 
 Schedulers support named plans. Named plans are plans with a name associated via the transaction.
 
-**Target-scoped names**: Names are scoped to the target.
+**Named APIs**: Provide an `addPlan` and `removePlan` API with a name argument.
 
-Imagine there are two targets, Apple and Orange. We can add an Eat plan named "action" to Apple and a Peel plan named "action" to Orange.
+Note that the plan type must be a `NamedPlan`. Motion family designers use this type to indicate which plans support being named.
+
+Example pseudo-code:
+
+    class Scheduler {
+      function addPlan(NamedPlan, named: String, to: Target)
+      function removePlan(named: String, from: Target)
+    }
+    
+    # Associate a named plan with a target.
+    scheduler.addPlan(plan, named: name, to: target)
+    
+    # Remove any named plan from a target.
+    scheduler.removePlan(named: name, from: target)
+
+**Target-scoped names**: Names are scoped to a target.
+
+The scheduler maintains a separate named plan mapping for each target.
 
 **Remove-then-add**: Two things happen when a named plan is committed:
 
