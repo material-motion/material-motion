@@ -97,12 +97,12 @@ The scheduler now provides each plan instance to the relevant performer. This al
 
 ### Step 6: Performers execute plans
 
-A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: delegation and composition.
+A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: continuously and via composition.
 
-A performer that delegates its execution will
+A continuous performer will
 
-1. Acquire a token indicating that delegated work will start.
-2. Initiate the delegated work.
-3. Release the token upon completion of the delegated work.
+1. acquire a token indicating that continuous work will start,
+2. initiate the continuous work, and then
+3. release the token upon completion of the continuous work.
 
-A performer that composes its execution will emit new plans. These new plans may create performers that emit new plans. Eventually the plans will create performers that delegate their execution.
+A performer that composes its execution will emit new plans. These new plans may create performers that emit new plans, and so on.
