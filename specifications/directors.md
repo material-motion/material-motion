@@ -44,10 +44,6 @@ function setUp() {
 }
 ```
 
-**No access to the scheduler**: Directors do not have direct access to a scheduler.
-
-The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
-
 **Tear down API**: The `tearDown` function, if implemented, is invoked when the director's corresponding scheduler is about to terminate.
 
 Pseudo-code example:
@@ -63,4 +59,8 @@ function tearDown() {
 1. `setPlanEmitter`
 2. `setUp`
 3. `tearDown`
+
+**No access to the scheduler**: Directors do not have direct access to a scheduler.
+
+The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
 
