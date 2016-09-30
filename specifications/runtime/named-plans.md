@@ -21,27 +21,19 @@ Example use case: associating a behavior with a target.
 Example pseudo-code:
 
     # on drag
-    transaction1.add(
-      plan: matchLocationOf(cursor), 
-      named: 'drag', 
-      to: target
-    )
-    scheduler.commit(transaction1)
+    scheduler.addPlan(matchLocationOf(cursor), named: "drag", to: target)
 
     # on release
-    transaction2.addPlan(springToLocation(origin), named: 'drag', to: target)
-    scheduler.commit(transaction2)
+    scheduler.addPlan(springToLocation(origin), named: "drag", to: target)
 
 Example use case: removing a behavior from a target.
 
 Example pseudo-code:
 
-    transaction1.addPlan(springToLocation(origin), named: 'spring', to: target)
-    scheduler.commit(transaction1)
+    scheduler.addPlan(springToLocation(origin), named: 'spring', to: target)
 
     # later on
-    transaction2.removePlan(named: 'spring', from: target)
-    scheduler.commit(transaction2)
+    scheduler.removePlan(named: 'spring', from: target)
 
 ## Performer specification
 
