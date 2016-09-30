@@ -5,18 +5,15 @@
 * [Engineering spec](specifications/README.md)
   * [Motion primitives](specifications/primitives.md)
     * [How to connect primitives](specifications/how_to_connect_primitives.md)
-
   * [Declarative motion](specifications/pattern.md)
   * [Motion runtime](specifications/runtime/README.md)
     * [Life of a plan](specifications/runtime/life_of_a_plan.md)
     * [Plan](specifications/runtime/plan.md)
     * [Performer](specifications/runtime/performer.md)
       * [Feature: composition](specifications/runtime/performer-composition.md)
-
     * [Scheduler](specifications/runtime/scheduler.md)
     * [Feature: named plans](specifications/runtime/named-plans.md)
     * [Feature: target selectors](specifications/runtime/target_selectors.md)
-
   * [Motion family](specifications/motion-family.md)
     * [Arc move](specifications/motion_family/arc_move.md)
     * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
@@ -24,10 +21,8 @@
     * [Physics](specifications/motion_family/physics.md)
     * [Tween](specifications/motion_family/tween.md)
     * [Timeline tween](specifications/motion_family/timeline_tween.md)
-
   * [Motion demos](specifications/motion-demos.md)
     * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
-
   * [Directors](specifications/directors.md)
     * [Transitions](specifications/transitions.md)
       * [Life of a transition director](specifications/life_of_a_transition_director.md)
@@ -35,36 +30,27 @@
       * [TransitionDirector](specifications/transition_director.md)
         * [Feature: context element](specifications/feature-context-element.md)
         * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
-
       * [TransitionController](specifications/transition_controller.md)
         * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
         * [Feature: director stack](specifications/feature-director-stack.md)
-
       * [TransitionDriver](specifications/transitiondriver.md)
-
     * [Interactions](specifications/interactions.md)
       * [Interaction Director](specifications/interaction_director.md)
       * [Interaction Controller](specifications/interaction_controller.md)
-
-
   * [Creating replica elements](specifications/replicas.md)
     * [ReplicaController](specifications/replicator_controller.md)
     * [ReplicaControllerDelegate](specifications/replicator.md)
-
   * [Serialization](specifications/serialization.md)
     * [Transaction](specifications/runtime/transaction.md)
         * [Target enumeration](specifications/runtime/transaction-target-enumeration.md)
         * [Optimized](specifications/runtime/transaction-optimized.md)
-
     * [Plan serialization](specifications/plan_serialization.md)
     * [Transaction serialization](specifications/transaction_serialization.md)
     * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
-
 * [User journeys](user_journeys/README.md)
   * [Motion](user_journeys/motion.md)
   * [Engineering](user_journeys/engineering.md)
   * [Design](user_journeys/design.md)
-
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
 * [\(drafts\)](specifications/drafts.md)
