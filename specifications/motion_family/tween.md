@@ -30,3 +30,7 @@ For platforms that support a model/presentation layer separation, the `from` and
 ## Performers
 
 ### TweenPerformer
+
+Supported plans: `Tween`.
+
+Fulfills each provided Tween animation. If multiple tweens are added for the same property then the latest tween is used.
