@@ -51,21 +51,20 @@
   * [Motion](user_journeys/motion.md)
   * [Engineering](user_journeys/engineering.md)
   * [Design](user_journeys/design.md)
-
-## Misc
-
 * [Contributing](CONTRIBUTING.md)
 * [Glossary](GLOSSARY.md)
-* [\(drafts\)](specifications/drafts.md)
-  * [Director composition](specifications/director_composition.md)
-  * [Condition elements](specifications/transient_views.md)
-  * [Server](specifications/server.md)
-  * [Debugging](specifications/debugging.md)
-  * [REPL](specifications/repl.md)
-  * [A consultation interface](specifications/a_consultation_interface.md)
-  * [Applications](specifications/applications.md)
-  * [Motion Expression](specifications/expressions.md)
-    * [Further considerations](specifications/expressions-addendum.md)
+
+## Drafts
+
+* [Director composition](specifications/director_composition.md)
+* [Condition elements](specifications/transient_views.md)
+* [Server](specifications/server.md)
+* [Debugging](specifications/debugging.md)
+* [REPL](specifications/repl.md)
+* [A consultation interface](specifications/a_consultation_interface.md)
+* [Applications](specifications/applications.md)
+* [Motion Expression](specifications/expressions.md)
+  * [Further considerations](specifications/expressions-addendum.md)
 
 
 
