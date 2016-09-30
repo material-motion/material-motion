@@ -8,7 +8,7 @@ The momentum conservation family allows momentum to be preserved when the desire
 
 To animate a rounded-corners square to a new dimension:
 
-    class MorphingInteraction: InteractionDirector {
+    Interaction Morphing {
       let roundedCornerShape
       
       func setUp(planEmitter) {
@@ -25,7 +25,7 @@ To animate a rounded-corners square to a new dimension:
 
 Contract: one or more one-dimensional springs pull a property's current value to a provided `destination`.
 
-    class AnchoredSpring {
+    Plan AnchoredSpring {
       var property
       var destination
     }
@@ -34,7 +34,7 @@ Contract: one or more one-dimensional springs pull a property's current value to
 
 Contract: configure the behavior of the spring associated with a given property.
 
-    class ConfigureSpring {
+    Plan ConfigureSpring {
       var property
       var bounciness: SpringBounciness
       var speed: SpringSpeed
