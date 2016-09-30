@@ -65,5 +65,14 @@ Once the transition controller detects that the scheduler activity has idled, th
 
 > On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
 
-At this point the transition controller might throw away its `TransitionRunner` instance.
+The TransitionRunner is responsible for invoking `tearDown` on the director.
 
+```
+class TransitionRunner {
+ function transitionDidFinish() {
+   director.tearDown()
+ }
+}
+```
+
+At this point the transition controller might throw away its `TransitionRunner` instance. 
