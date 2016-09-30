@@ -8,7 +8,9 @@
 
 Wants a one-liner use case for adding Material Motion to their app. For example:
 
-    transitionController.director = PhotoTransition.
+```
+transitionController.director = PhotoTransition
+```
 
 Will generally just use — and potentially compose — pre-built directors in order to describe interactions. The pre-built directors might come from the material motion catalog or from elsewhere.
 
@@ -18,11 +20,11 @@ May be an App Creator who was unable to express their desired interaction with t
 
 #### L3: Motion Creator
 
-May be a Director Creator who was unable to express their desired interaction with the pre-packaged plans. A Motion Creator must now learn how to create new motion families (plans/performers) that can describe the types of motion they desire. The resulting motion families will be used by Director Creators.
+May be a Director Creator who was unable to express their desired interaction with the pre-packaged plans. A Motion Creator must now learn how to create new motion families \(plans\/performers\) that can describe the types of motion they desire. The resulting motion families will be used by Director Creators.
 
 #### L4: Runtime engineering
 
-The Creator has decided that there is some functionality missing from all of the above knowledge areas, and has now decided to make modifications to the Runtime. This may result in modifications to the Scheduler, the Plan/Performer protocols, or other aspects of the Runtime as a whole.
+The Creator has decided that there is some functionality missing from all of the above knowledge areas, and has now decided to make modifications to the Runtime. This may result in modifications to the Scheduler, the Plan\/Performer protocols, or other aspects of the Runtime as a whole.
 
 ### Pivotal journey: First use of Material Motion in an existing app
 
@@ -34,7 +36,7 @@ The person is familiar with their platform and their platform’s dominant packa
 
 Material Motion transition or interaction integrated into an existing app.
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 1. Visit &lt;material motion website&gt;. 
 2. Select a platform. 
@@ -53,10 +55,10 @@ The person is familiar with Material Motion’s concept of “directors”.
 
 Create a new transition or interaction director and use it in an app.
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 1. Visit &lt;material motion website&gt;. 
-2. Visit &lt;guides | tutorials&gt;. 
+2. Visit &lt;guides \| tutorials&gt;. 
 3. Read a one-pager on creating a new director. 
 4. Create a new director in code. 
 5. Add dependencies for needed motion families. 
@@ -73,12 +75,12 @@ The person is familiar with Material Motion’s concept of “motion families”
 
 Create a new motion family and use it in a director.
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 1. Visit &lt;material motion website&gt;. 
-2. Visit &lt;guides | tutorials&gt;. 
+2. Visit &lt;guides \| tutorials&gt;. 
 3. Read a one-pager on creating a new motion family. 
-4. Create new plan/performer types. 
+4. Create new plan\/performer types. 
 5. Use the new plans in a director. 
 6. Integrate the director in the app. 
 7. Build and run the app. 
@@ -93,7 +95,7 @@ The person has already made some minor contributions to the project or is intend
 
 All code review tooling installed and ready to use. Able to run arc diff successfully.
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 1. Visit &lt;material motion website&gt;. 
 2. Visit &lt;Contributing?&gt;. 
@@ -122,7 +124,7 @@ Publish a local change to the GitHub repository’s develop branch.
 3. Receives feedback from peers. 
 4. Iterates on local changes. Runs arc diff again to update the diff. 
 5. Receives an LGTM from a peer. 
-6. Lands the diff onto origin/develop with arc land. 
+6. Lands the diff onto origin\/develop with arc land. 
 
 ### Toothbrush journey: Send a pull request
 
@@ -138,7 +140,7 @@ Publish a local change to the GitHub repository’s develop branch.
 
 #### End-goal
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 #### Journey
 
@@ -148,6 +150,7 @@ Publish a local change to the GitHub repository’s develop branch.
 
 #### End-goal
 
-#### Ideal journey (does not exist yet)
+#### Ideal journey \(does not exist yet\)
 
 ### Journey
+
