@@ -15,8 +15,8 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
     class StickerInteraction: InteractionDirector {
       let sticker
       
-      func setUp(transaction) {
-        transaction.add(plan: DirectlyManipulable(), to: sticker)
+      func setUp(planEmitter) {
+        planEmitter.addPlan(DirectlyManipulable(), to: sticker)
       }
     }
 
