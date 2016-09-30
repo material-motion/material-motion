@@ -100,22 +100,6 @@ Example pseudo-code:
 
 ---
 
-<p style="text-align:center"><tt>feature: Context element</tt></p>
-
-The context element is what that the user interacted with in order to initiate the transition.
-
-**Context element API**: Provide an API for retrieving the transition's context element.
-
-Example pseudo-code:
-
-    TransitionDirector {
-      readonly var contextElement
-    }
-
-<p style="text-align:center"><tt>/feature: Context</tt></p>
-
----
-
 <p style="text-align:center"><tt>feature: Transition preconditions</tt></p>
 
 A transition can register certain pre-conditions. If any pre-condition fails, the director will not be selected for use in the transition.
