@@ -14,24 +14,24 @@ The timeline tween motion family's primary utility is in defining **transitions*
 A simple bi-directional "fade" transition:
 
     class FadeTransition: TransitionDirector {
-      func setUp(transaction) {
+      func setUp(planEmitter) {
         let timeline = Timeline(self.initialDirection,
                                 duration: self.duration)
         let fadeIn = FadeIn(onTimeline: timeline)
-        transaction.add(plan: fadeIn, to: forwardElement)
+        planEmitter.addPlan(fadeIn, to: forwardElement)
       }
     }
 
 A simple bi-directional "slide" transition:
 
     class SlideTransition: TransitionDirector {
-      func setUp(transaction) {
+      func setUp(planEmitter) {
         let timeline = Timeline(self.initialDirection,
                                 duration: self.duration)
         let shiftUp = Move(onTimeline: timeline,
                            from: bottomEdge,
                            to: topEdge)
-        transaction.add(plan: shiftUp, to: forwardElement)
+        planEmitter.addPlan(shiftUp, to: forwardElement)
       }
     }
 
