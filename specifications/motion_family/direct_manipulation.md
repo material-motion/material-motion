@@ -2,23 +2,25 @@
 
 The direct manipulation motion family allows a director to describe gesture manipulation of elements.
 
-|           | Android   | Apple     |
-| --------- |:---------:|:---------:|
+|  | Android | Apple |
+| --- | --- | --- |
 | Milestone | [Milestone](https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
 
 ## Examples
 
 ### Sticker editor
 
-Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinched, and rotated.
+Scenario: Placing stickers on a photo\/video. Each sticker can be dragged, pinched, and rotated.
 
-    class StickerInteraction: InteractionDirector {
-      let sticker
-      
-      func setUp(planEmitter) {
-        planEmitter.addPlan(DirectlyManipulable(), to: sticker)
-      }
-    }
+```
+Interaction Sticker {
+  let sticker
+
+  func setUp(planEmitter) {
+    planEmitter.addPlan(DirectlyManipulable(), to: sticker)
+  }
+}
+```
 
 ## Public plans
 
@@ -26,38 +28,46 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 Contract: registers Draggable, Pinchable, and Rotatable to the given target.
 
-    class DirectlyManipulable {
-      var panGestureRecognizer?
-      var pinchGestureRecognizer?
-      var rotateGestureRecognizer?
-    }
+```
+Plan DirectlyManipulable {
+  var panGestureRecognizer?
+  var pinchGestureRecognizer?
+  var rotateGestureRecognizer?
+}
+```
 
 ### Draggable
 
 Contract: delta x and y from the given gesture recognizer are added to the target's `position.x` and `position.y`. If no gesture recognizer is provided, then one is created.
 
-    class Draggable {
-      var panGestureRecognizer?
-      var shouldAdjustAnchorPointOnGestureStart = false
-    }
+```
+Plan Draggable {
+  var panGestureRecognizer?
+  var shouldAdjustAnchorPointOnGestureStart = false
+}
+```
 
 ### Pinchable
 
 Contract: scale amount from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
 
-    class Pinchable {
-      var pinchGestureRecognizer?
-      var shouldAdjustAnchorPointOnGestureStart = true
-    }
+```
+Plan Pinchable {
+  var pinchGestureRecognizer?
+  var shouldAdjustAnchorPointOnGestureStart = true
+}
+```
 
 ### Rotatable
 
 Contract: z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
 
-    class Rotatable {
-      var rotationGestureRecognizer?
-      var shouldAdjustAnchorPointOnGestureStart = true
-    }
+```
+Plan Rotatable {
+  var rotationGestureRecognizer?
+  var shouldAdjustAnchorPointOnGestureStart = true
+}
+```
 
 ## Private plans
 
@@ -67,9 +77,11 @@ Plans that are only accessible within this motion family.
 
 Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
-    class ChangeAnchorPoint {
-      var newAnchorPoint
-    }
+```
+Plan ChangeAnchorPoint {
+  var newAnchorPoint
+}
+```
 
 ## Performers
 
@@ -91,14 +103,17 @@ The following diagram shows the desired effect of changing the anchor point of a
 
 In pseudo-code:
 
-    func onGestureInitiated() {
-      let initialPositionInElement = Point(element.anchorPoint.x * element.width,
-                                           element.anchorPoint.x * element.height)
+```
+func onGestureInitiated() {
+  let initialPositionInElement = Point(element.anchorPoint.x * element.width,
+                                       element.anchorPoint.x * element.height)
 
-      let gesturePositionInElement = gesture.positionInElement(element)
-      let desiredAnchorPoint = Point(gesturePositionInElement.x / element.width,
-                                     gesturePositionInElement.y / height)
+  let gesturePositionInElement = gesture.positionInElement(element)
+  let desiredAnchorPoint = Point(gesturePositionInElement.x / element.width,
+                                 gesturePositionInElement.y / height)
 
-      element.anchorPoint = desiredAnchorPoint
-      element.position += gesturePositionInElement - originalPositionInElement
-    }
+  element.anchorPoint = desiredAnchorPoint
+  element.position += gesturePositionInElement - originalPositionInElement
+}
+```
+
