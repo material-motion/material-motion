@@ -81,7 +81,7 @@ Example pseudo-code:
 
 The scheduler maintains a separate named plan mapping for each target.
 
-**Remove-then-add**: Two things happen when a named plan is committed:
+**Remove-then-add**: Two things happen when a named plan is added:
 
 1. Remove any previously committed plan with the same name from the target's performers. 
 
