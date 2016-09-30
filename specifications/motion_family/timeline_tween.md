@@ -13,7 +13,7 @@ The timeline tween motion family's primary utility is in defining **transitions*
 
 A simple bi-directional "fade" transition:
 
-    class FadeTransition: TransitionDirector {
+    Transition Fade {
       func setUp(planEmitter) {
         let timeline = Timeline(self.initialDirection,
                                 duration: self.duration)
@@ -24,7 +24,7 @@ A simple bi-directional "fade" transition:
 
 A simple bi-directional "slide" transition:
 
-    class SlideTransition: TransitionDirector {
+    Transition Slide {
       func setUp(planEmitter) {
         let timeline = Timeline(self.initialDirection,
                                 duration: self.duration)
