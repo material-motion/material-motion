@@ -31,7 +31,7 @@
                 * [Feature: context element](specifications/feature-context-element.md)
                 * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
             * [TransitionController](specifications/transition_controller.md)
-                * Feature: cancelable transitions
+                * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
                 * [Feature: director stack](specifications/feature-director-stack.md)
             * [TransitionDriver](specifications/transitiondriver.md)
         * [Interactions](specifications/interactions.md)
