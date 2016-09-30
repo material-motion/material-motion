@@ -4,9 +4,7 @@ Status of this document:
 
 # TransitionDriver
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Scheduler**: Store a single `Scheduler` instance while the transition is active.
 
@@ -31,7 +29,3 @@ Example pseudo-code:
     TransitionController {
       private var director: TransitionDirector
     }
-
-<p style="text-align:center"><tt>/MVP</tt></p>
-
----
