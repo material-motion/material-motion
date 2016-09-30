@@ -62,5 +62,5 @@ function tearDown() {
 
 **No access to the scheduler**: Directors do not have direct access to a scheduler.
 
-The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
+The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. The planEmitter is the preferred bridge between a director and its scheduler.
 
