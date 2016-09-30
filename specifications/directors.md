@@ -40,17 +40,6 @@ Example pseudo-code implementation:
 
 The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. A transaction is the preferred bridge between a director and a scheduler.
 
-**API invocation order**: The director's methods must be invoked in the following order over the lifetime of the director:
-
-1. `setPlanEmitter`
-2. `setUp`
-
----
-
-<p style="text-align:center"><tt>feature: tear-down</tt></p>
-
-Directors may implement a `tearDown` function. This function is invoked when the associated scheduler is about to terminate.
-
 **Tear down API**: The `tearDown` function, if implemented, is invoked when the director's corresponding scheduler is about to terminate.
 
 Pseudo-code example:
@@ -59,40 +48,8 @@ Pseudo-code example:
       // Perform any cleanup work
     }
 
-<p style="text-align:center"><tt>/feature: tear-down</tt></p>
+**API invocation order**: The director's methods must be invoked in the following order over the lifetime of the director:
 
----
-
-<p style="text-align:center"><tt>feature: post-setup transactions</tt></p>
-
-Directors may wish to register new plans after `setUp` has been invoked.
-
-**Transact API**: A director may be provided with a *planEmitter*.
-
-Example pseudo-code protocol:
-
-    var transact // settable
-
-The provided function implementation might resemble the following:
-
-    var transact = function(work) {
-      transaction = Transaction()
-      work(transaction)
-      scheduler.commit(transaction)
-    }
-
-The director can now start a new transaction by invoking `transact`.
-
-Consider the following pseudo-code of a director responding to a gesture recognition event:
-
-    function onGesture(gesture) {
-      if gesture.state == Ended {
-        self.transact(function(transaction) {
-          transaction.add(plan, targetA)
-        })
-      }
-    }
-
-<p style="text-align:center"><tt>/feature: post-setup transactions</tt></p>
-
----
+1. `setPlanEmitter`
+2. `setUp`
+3. `tearDown`
