@@ -30,6 +30,16 @@ Plan Tween {
 }
 ```
 
+`property` is any animatable value on the target object.
+
+`from` is a value whose types matches that of the property.
+
+`to` is a value whose types matches that of the property.
+
+`timingFunction` is a cubic-bezier timing function.
+
+`duration` is the length of time over which the animation should occur, expressed in seconds as a floating point number \(e.g. 0.3 seconds\).
+
 For platforms that support a model\/presentation layer separation, the `from` and `to` values can be optional. Consider the following situations:
 
 * Both `from` and `to` are provided. Interpolates between `from` and `to`.
