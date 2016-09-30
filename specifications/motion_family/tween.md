@@ -6,11 +6,26 @@ The tween motion family allows a director to describe tween animations for prope
 
 ## Examples
 
-## Abstract types
-
 ## Public plans
 
 ### Tween
+
+Contract: linearly interpolate a target's property from one value to another using a timing function for velocity.
+
+    class Tween {
+      var property
+      var from
+      var to
+      var timingFunction
+    }
+
+For platforms that support a model/presentation layer separation, the `from` and `to` values can be optional. Consider the following situations:
+
+- Both `from` and `to` are provided. Interpolates between `from` and `to`.
+
+- Only `from` is provided. Interpolates between `from` and the current presentation value of the property.
+
+- Only `to` is provided. Interpolates between the current value of the property and `to`.
 
 ## Performers
 
