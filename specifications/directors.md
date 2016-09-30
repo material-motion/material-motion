@@ -10,9 +10,7 @@ Printable tech tree/checklist:
 
 ![](../_assets/DirectorTechTree.svg)
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **planEmitter API**: A director may be provided with a PlanEmitter instance.
 
@@ -46,8 +44,6 @@ The primary goal of this restriction is to minimize the number of novel APIs a d
 
 1. `setPlanEmitter`
 2. `setUp`
-
-<p style="text-align:center"><tt>/MVP</tt></p>
 
 ---
 
