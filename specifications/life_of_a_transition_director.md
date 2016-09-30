@@ -4,12 +4,23 @@ Let's walk through the life of a simple fade transition director.
 
 > Remember, any code you see here is pseudo-code.
 
-### Step 1: Create a new TransitionDirector subclass
+### Step 1: Create a new TransitionDirector type
 
 This object will provide transition-specific plans.
 
 ```
-FadeTransitionDirector: TransitionDirector {
+TransitionDirector Fade {
+}
+```
+
+### Step 2: Store the planEmitter
+
+```
+TransitionDirector Fade {
+  PlanEmitter planEmitter
+  function setPlanEmitter(planEmitter) {
+    self.planEmitter = planEmitter
+  }
 }
 ```
 
@@ -18,7 +29,7 @@ FadeTransitionDirector: TransitionDirector {
 Our `setUp` will use a simple tween plan:
 
 ```
-function setUp(transaction) {
+function setUp() {
   var tween = Tween(property: "opacity")
   tween.duration = 0.3
   if self.direction == FORWARD {
@@ -67,7 +78,9 @@ An instance of this type might be lazily available for any transition on our pla
 
 Provide the `FadeTransitionDirector` type to the transition controller.
 
-    transitionController.directorClass = typeof(FadeTransitionDirector)
+```
+transitionController.directorClass = typeof(FadeTransitionDirector)
+```
 
 ### Step 5: Initiate the transition
 
