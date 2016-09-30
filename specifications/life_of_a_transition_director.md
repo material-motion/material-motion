@@ -32,7 +32,7 @@ Our `setUp` will use a simple tween plan:
 function setUp() {
   var tween = Tween(.opacity)
   tween.duration = 0.3
-  if self.direction == FORWARD {
+  if direction == .forward {
     tween.from = 0
     tween.to = 1
   } else {
