@@ -10,7 +10,9 @@ Generally speaking, every "page" in an application should have its own transitio
 
 For example, assume our platform has some concept of a "page":
 
-    page.transitionController.directorClass = SlideInTransitionDirector
+```
+page.transitionController.directorClass = SlideInTransitionDirector
+```
 
 In the above example we've declared that this page should slide in when it is presented and slide out when it is dismissed.
 
@@ -28,7 +30,7 @@ A transition controller reacts to the initiation of new transitions by customizi
 
 Most platforms have a standard mechanism for initiating a transition. At this point our transition controller should take control of the transition.
 
-#### Step 3.1: Create a runtime and a director
+#### Step 3.1: Create a scheduler and a director
 
 To coordinate a transition, a transition controller must create a scheduler and a director.
 
@@ -36,25 +38,26 @@ The transition controller may hold on to an object that stores both the schedule
 
 For example:
 
-    transitionWillStart(initialDirection) {
-      runner = TransitionRunner(directorClass(initialDirection))
-    }
+```
+transitionWillStart(initialDirection) {
+  runner = TransitionRunner(directorClass(initialDirection))
+}
 
-    class TransitionRunner {
-      let scheduler
-      initWithDirector(director) {
-        scheduler = Scheduler()
-        transaction = Transaction()
-        director.setUp(transaction)
-        scheduler.commit(transaction)
-        
-        scheduler.addActivityStateObserver({
-          if scheduler.activityState == isIdle {
-            self.transitionDidComplete()
-          }
-        })
+class TransitionRunner {
+  let scheduler
+  initWithDirector(director) {
+    scheduler = Scheduler()
+    director.setPlanEmitter(scheduler)
+    director.setUp()
+
+    scheduler.addActivityStateObserver({
+      if scheduler.activityState == isIdle {
+        self.transitionDidComplete()
       }
-    }
+    })
+  }
+}
+```
 
 ### Step 4: Once the runtime idles, terminate the transition
 
@@ -63,3 +66,4 @@ Once the transition controller detects that the scheduler activity has idled, th
 > On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
 
 At this point the transition controller might throw away its `TransitionRunner` instance.
+
