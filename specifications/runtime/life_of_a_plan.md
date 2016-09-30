@@ -93,7 +93,7 @@ We've created three performers in total. `circleView` has two performers. `squar
 
 ### Step 5: Provide plans to performers
 
-The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans in to actionable logic.
+The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
 
 ### Step 6: Performers execute plans
 
