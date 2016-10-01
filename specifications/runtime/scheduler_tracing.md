@@ -1,2 +1,2 @@
-# Feature: tracing
+# Scheduler tracing feature specification
 
