@@ -9,7 +9,17 @@ The tween motion family allows a director to describe tween animations for prope
 ```
 Transition Fade {
   func setUp(planEmitter) {
-    planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut, duration: 300, delay: 0), to: target)
+    planEmitter.addPlan(
+      Tween(
+        .opacity, 
+        from: 0, 
+        to: 1, 
+        withTimingFunction: .easeInOut, 
+        duration: 300, 
+        delay: 0,
+      ), 
+      to: target
+    )
   }
 }
 ```
