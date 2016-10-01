@@ -9,7 +9,7 @@ The tween motion family allows a director to describe tween animations for prope
 ```
 Transition Fade {
   func setUp(planEmitter) {
-    planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut, duration: 300), to: target)
+    planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut, duration: 300, delay: 0), to: target)
   }
 }
 ```
@@ -27,6 +27,7 @@ Plan Tween {
   var to
   var timingFunction
   var duration
+  var delay
 }
 ```
 
@@ -39,6 +40,10 @@ Plan Tween {
 `timingFunction` is a cubic-bezier timing function.
 
 `duration` is the length of time over which the animation should occur, expressed in milliseconds (e.g. 300 milliseconds).
+
+`delay` is the number of milliseconds that should elapse before a tween begins.
+
+-----
 
 For platforms that support a model/presentation layer separation, the `from` and `to` values can be optional. Consider the following situations:
 
