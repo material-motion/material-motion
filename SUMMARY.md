@@ -12,7 +12,7 @@
        * [Performer](specifications/runtime/performer.md)
            * [Feature: composition](specifications/runtime/performer-composition.md)
        * [Scheduler](specifications/runtime/scheduler.md)
-           * Feature: tracing
+           * [Feature: tracing](specifications/runtime/scheduler_tracing.md)
        * [Feature: named plans](specifications/runtime/named-plans.md)
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
    * [Motion family](specifications/motion-family.md)
