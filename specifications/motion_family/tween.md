@@ -2,14 +2,14 @@
 
 The tween motion family allows a director to describe tween animations for properties on an element.
 
-> Note that this motion family can\/should compose out to a bridge motion family for a given platform if a reasonable tween system already exists.
+> Note that this motion family can/should compose out to a bridge motion family for a given platform if a reasonable tween system already exists.
 
 ## Examples
 
 ```
 Transition Fade {
   func setUp(planEmitter) {
-    planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut, duration: 0.3), to: target)
+    planEmitter.addPlan(Tween(.opacity, from: 0, to: 1, withTimingFunction: .easeInOut, duration: 300), to: target)
   }
 }
 ```
@@ -38,9 +38,9 @@ Plan Tween {
 
 `timingFunction` is a cubic-bezier timing function.
 
-`duration` is the length of time over which the animation should occur, expressed in seconds as a floating point number \(e.g. 0.3 seconds\).
+`duration` is the length of time over which the animation should occur, expressed in milliseconds (e.g. 300 milliseconds).
 
-For platforms that support a model\/presentation layer separation, the `from` and `to` values can be optional. Consider the following situations:
+For platforms that support a model/presentation layer separation, the `from` and `to` values can be optional. Consider the following situations:
 
 * Both `from` and `to` are provided. Interpolates between `from` and `to`.
 
