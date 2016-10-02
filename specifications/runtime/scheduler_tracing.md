@@ -36,12 +36,22 @@ Tracer {
 }
 ```
 
-**didCreatePerformer event**: The Tracer type can optionally implement a didCreatePerformer event.
+**didAddPlan event**: The Tracer type can optionally implement a `didAddPlan` event.
 
 Example pseudo-code:
 
 ```
 Tracer {
-  optional function didCreatePerformer(Performer)
+  optional function didAddPlan(Plan, to: Target)
+}
+```
+
+**didCreatePerformer event**: The Tracer type can optionally implement a `didCreatePerformer` event.
+
+Example pseudo-code:
+
+```
+Tracer {
+  optional function didCreatePerformer(Performer, for: Target)
 }
 ```
