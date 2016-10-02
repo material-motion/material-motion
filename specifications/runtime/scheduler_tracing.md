@@ -33,5 +33,13 @@ We should provide a default tracer that simply allows you to enumerate all of th
 
 **AddTracer API**: The scheduler should provide an API for registering a new tracer instance.
 
+Example pseudo-code:
+
+```
+class Scheduler {
+  function addTracer(Tracer)
+}
+```
+
 
 
