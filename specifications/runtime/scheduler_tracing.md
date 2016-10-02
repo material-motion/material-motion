@@ -36,4 +36,12 @@ Tracer {
 }
 ```
 
+**didCreatePerformer event**: The Tracer type can optionally implement a didCreatePerformer event.
 
+Example pseudo-code:
+
+```
+Tracer {
+  optional function didCreatePerformer(Performer)
+}
+```
