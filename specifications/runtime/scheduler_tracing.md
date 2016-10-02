@@ -3,7 +3,13 @@ Status of this document:
 
 # Scheduler tracing feature specification
 
+This is the engineering specification for the `Tracer` abstract type.
+
 ## Overview
+
+Tracing is a form of logging in which information is recorded about a program's execution. Tracing can be used for debugging code, writing unit tests, and building user interfaces representing the current state of a system.
+
+Tracing can be enabled on a scheduler by providing an instance of an object that conforms to the `Tracer` type.
 
 This tracer protocol should methods like so:
 
@@ -25,4 +31,5 @@ We should provide a default tracer that simply allows you to enumerate all of th
 
 ## MVP
 
-TODO.
+
+
