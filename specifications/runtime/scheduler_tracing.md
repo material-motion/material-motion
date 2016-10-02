@@ -29,5 +29,11 @@ class Scheduler {
 
 **Abstract type**: Provide an abstract type named `Tracer`.
 
+Example pseudo-code:
+
+```
+Tracer {
+}
+```
 
 
