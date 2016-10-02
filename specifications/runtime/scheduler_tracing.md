@@ -12,13 +12,14 @@ Tracing can be enabled on a scheduler by providing an instance of an object that
 
 ### Scheduler
 
-**AddTracer API**: The scheduler should provide an API for registering a new tracer instance.
+**AddTracer and RemoveTracer APIs**: The scheduler should provide a APIs for adding and removing tracer instances.
 
 Example pseudo-code:
 
 ```
 class Scheduler {
   function addTracer(Tracer)
+  function removeTracer(Tracer)
 }
 ```
 
