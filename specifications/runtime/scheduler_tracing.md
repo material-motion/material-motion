@@ -1,6 +1,3 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Scheduler tracing feature specification
 
 This is the engineering specification for the `Tracer` abstract type.
@@ -36,7 +33,9 @@ Tracer {
 }
 ```
 
-**didAddPlan event**: The Tracer type can optionally implement a `didAddPlan` event.
+**didAddPlan event**: The Tracer type can optionally implement a `didAddPlan` function.
+
+Invoked by the scheduler when `addPlan` is about to return from its execution.
 
 Example pseudo-code:
 
@@ -46,7 +45,9 @@ Tracer {
 }
 ```
 
-**didCreatePerformer event**: The Tracer type can optionally implement a `didCreatePerformer` event.
+**didCreatePerformer event**: The Tracer type can optionally implement a `didCreatePerformer` function.
+
+Invoked by the scheduler after a new performer instance has been created.
 
 Example pseudo-code:
 
@@ -55,3 +56,4 @@ Tracer {
   optional function didCreatePerformer(Performer, for: Target)
 }
 ```
+
