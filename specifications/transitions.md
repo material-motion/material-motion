@@ -6,17 +6,15 @@ Status of this document:
 
 A transition causes a visual change from one element hierarchy to another.
 
-## Drill down transitions
+## Directionality
 
-We primarily think in terms of "drill down" transitions.
-
-For example, consider we had the following potential states in our application:
+Consider the following potential screens in an application:
 
 ```
 A    B    C
 ```
 
-Our application likely starts at state A. The user can enter state B, then state C, then move back to state B. Each change in state can be represented by a transition. Writing out the three transitions:
+Our application likely starts at screen A. The user can enter screen B, then screen C, then move back to screen B. Each screen change can be represented by a transition. Writing out the three transitions:
 
 ```
 A => B
