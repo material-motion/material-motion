@@ -1,6 +1,6 @@
 # Tween motion family
 
-The tween motion family allows a director to describe tween animations for properties on a target.
+The tween motion family enables tween animations for properties on a target.
 
 > Note that this motion family can/should compose out to a bridge motion family for a given platform if a reasonable tween system already exists.
 
