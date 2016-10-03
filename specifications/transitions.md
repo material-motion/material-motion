@@ -22,7 +22,7 @@ B => C
 B <= C
 ```
 
-Note that the final transition's arrow is pointed to the left. We always keep states on the same "side" of the transition, regardless of whether we're drilling into or out of a state.
+Note that the final transition's arrow is pointed to the left. We always keep screens on the same named "side" of the transition, regardless of direction.
 
 The left side of the transition is the "back" side.
 
