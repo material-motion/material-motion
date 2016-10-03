@@ -4,7 +4,8 @@
         "emphasize",
         "ga",
         "collapsible-chapters",
-        "github"
+        "github",
+        "nocache"
     ],
     "pluginsConfig": {
         "edit-link": {
