@@ -51,29 +51,18 @@ Example pseudo-code:
 MyTransitionDirector: TransitionDirector {
   public var foreViewController
   public var backViewController
-  public var transitionDirection: Direction
-}
-
-enum Direction {
-  case forward:
-  case backward:
+  public var transitionDirection: TransitionDirection
 }
 ```
 
-**Transition direction type**: Provide a `TransitionDirection` type with two opposite values.
-
-Many synonyms exist. Use that which applies best to your platform.
-
-* present\/dismiss
-* push\/pop
-* forward\/back
+**TransitionDirection type**: Provide a `TransitionDirection` type with two opposite values.
 
 Example pseudo-code:
 
 ```
 enum TransitionDirection {
-  .Present
-  .Dismiss
+  case forward
+  case backward
 }
 ```
 
