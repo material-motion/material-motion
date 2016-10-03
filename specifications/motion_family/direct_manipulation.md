@@ -1,10 +1,10 @@
 # Direct manipulation motion family
 
-The direct manipulation motion family allows a director to describe gesture manipulation of elements.
-
 |  | Android | Apple |
 | --- | --- | --- |
 | Milestone | [Milestone](https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) |
+
+The direct manipulation motion family allows a director to describe gesture manipulation of elements.
 
 ## Examples
 
