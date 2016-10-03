@@ -1,10 +1,12 @@
 # Tween motion family
 
-The tween motion family enables tween animations for properties on a target.
-
 |  | Android | Apple |
 | --- | --- | --- |
 | Milestone | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-family-coreanimation-swift/milestone/2) |
+
+## Overview
+
+The tween motion family enables tween animations for properties on a target.
 
 > Note that this motion family can/should compose out to an existing tween system for a given platform if a reasonable tween system already exists.
 
