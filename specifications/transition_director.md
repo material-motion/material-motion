@@ -73,13 +73,8 @@ Provide the initial transition direction of the transition to the director's ini
 Example pseudo-code:
 
 ```
-enum TransitionDirection {
-  .Present
-  .Dismiss
-}
-
 TransitionDirector {
-  readonly var initialTransitionDirection
+  readonly var initialTransitionDirection: TransitionDirection
   init(initialTransitionDirection)
 }
 ```
