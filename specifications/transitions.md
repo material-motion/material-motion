@@ -20,11 +20,17 @@ Our application likely starts at state A. The user can enter state B, then state
 
 ```
 A => B
-     B => C
-     B <= C
+B => C
+B <= C
 ```
 
 Note that the final transition's arrow is pointed to the left. We always keep states on the same "side" of the transition, regardless of whether we're drilling into or out of a state.
+
+The left side of the transition is the "back" side.
+
+The right side of the transition is the "fore" side.
+
+A transition can either go **forward** or **backward**.
 
 This is an intentional departure from the conventional terminology of _source_ and _destination_.
 
