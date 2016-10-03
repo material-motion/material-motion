@@ -4,7 +4,7 @@
 
 The Material Motion team spans platforms, languages, personalities, and skill sets. We're driven by a common desire to improve the state of the art in interactive application design.
 
-The Starmap is our forum for proposing and hashing out ideas. It allows us to converge on shared ideas and to discuss long-term goals.
+The Starmap is our forum for proposing and hashing out ideas. It allows us to converge on shared considerations and to discuss long-term goals.
 
 ## Our goals
 
