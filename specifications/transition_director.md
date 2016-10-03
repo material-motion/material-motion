@@ -8,7 +8,7 @@ A `TransitionDirector` provides essential scaffolding for managing a transition.
 
 `TransitionDirector` conforms to the `Director` protocol.
 
-Printable tech tree\/checklist:
+Printable tech tree/checklist:
 
 ![](../_assets/TransitionDirectorTechTree.svg)
 
