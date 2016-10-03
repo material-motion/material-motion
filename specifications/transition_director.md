@@ -51,7 +51,12 @@ Example pseudo-code:
 MyTransitionDirector: TransitionDirector {
   public var foreViewController
   public var backViewController
-  public var transitionDirection
+  public var transitionDirection: Direction
+}
+
+enum Direction {
+  case forward:
+  case backward:
 }
 ```
 
