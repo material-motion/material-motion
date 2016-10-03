@@ -20,7 +20,7 @@ A plan emitter declaration might look like so:
 
 ```
 protocol PlanEmitter {
-  func addPlan(Plan)
+  func emitPlan(Plan)
 }
 ```
 
@@ -39,7 +39,7 @@ Pseudo-code of a performer emitting new plans:
 ```
 function onGesture(gesture) {
   if gesture.state == Ended {
-    planEmitter.addPlan(Spring())
+    planEmitter.emitPlan(Spring())
   }
 }
 ```
