@@ -43,14 +43,14 @@ MyTransitionDirector: TransitionDirector {
 }
 ```
 
-**from\/to APIs**: Provide storage for information relevant to the transition.
+**fore/back APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
 
 ```
 MyTransitionDirector: TransitionDirector {
-  public var fromViewController
-  public var toViewController
+  public var foreViewController
+  public var backViewController
   public var transitionDirection
 }
 ```
