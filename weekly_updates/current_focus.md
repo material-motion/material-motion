@@ -7,7 +7,7 @@ Click a name to view the sprint.
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
 | [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp;  | seanoshea ([named plans](https://github.com/material-motion/material-motion-runtime-objc/projects/4)) | &nbsp; | appsforartists ([TypeScript MVP](https://github.com/material-motion/material-motion-experiments-js/milestone/11)) |
-| [Transitions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/transitions.html)   | &nbsp; | featherless (MVP) | &nbsp; | &nbsp; |
+| [Transitions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/transitions.html)   | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions.html)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
