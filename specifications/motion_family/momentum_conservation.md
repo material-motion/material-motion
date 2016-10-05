@@ -45,9 +45,9 @@ Contract: configure the behavior of the spring associated with a given property.
       
       var bounciness: SpringBounciness
       var speed: SpringSpeed
-
-      var friction: float
-      var tension: float
+    
+      var friction: float = 30
+      var tension: float = 342
     }
 
     enum SpringBounciness {
