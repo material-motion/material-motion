@@ -2,8 +2,6 @@
 
 The team's focus for the current sprint. This document is updated each wednesday during our team's sprint planning.
 
-Click a name to view the sprint.
-
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
 | [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp;  | seanoshea ([named plans](https://github.com/material-motion/material-motion-runtime-objc/projects/4)) | &nbsp; | appsforartists ([TypeScript MVP](https://github.com/material-motion/material-motion-experiments-js/milestone/11)) |
