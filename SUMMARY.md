@@ -19,7 +19,6 @@
        * [Arc move](specifications/motion_family/arc_move.md)
        * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
        * [Momentum conservation](specifications/motion_family/momentum_conservation.md)
-       * [Physics](specifications/motion_family/physics.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
    * [Motion demos](specifications/motion-demos.md)
