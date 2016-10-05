@@ -42,8 +42,12 @@ Contract: configure the behavior of the spring associated with a given property.
 
     Plan ConfigureSpring {
       var property
+      
       var bounciness: SpringBounciness
       var speed: SpringSpeed
+
+      var friction: float
+      var tension: float
     }
 
     enum SpringBounciness {
