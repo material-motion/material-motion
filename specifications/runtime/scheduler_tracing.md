@@ -46,7 +46,7 @@ Tracer {
 }
 ```
 
-**didAddPlan:named: event**: The Tracer type can optionally implement a `didAddPlan:named:` function.
+**didAddPlan:named event**: The Tracer type can optionally implement a `didAddPlan:named:` function.
 
 Invoked by the scheduler when `addPlan:named:` is about to return from its execution.
 
@@ -55,6 +55,18 @@ Example pseudo-code:
 ```
 Tracer {
   optional function didAddPlan(Plan, named: String, to: Target)
+}
+```
+
+**didRemovePlanNamed event**: The Tracer type can optionally implement a `didAddPlan:named:` function.
+
+Invoked by the scheduler when `removePlanNamed` is about to return from its execution.
+
+Example pseudo-code:
+
+```
+Tracer {
+  optional function didRemovePlanNamed(String, from: Target)
 }
 ```
 
