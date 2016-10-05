@@ -15,8 +15,7 @@ Click a name to view the sprint.
 |:-------------------:|:-------:|:------:|:-------:|:------:|
 | [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            |  &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | &nbsp; | &nbsp;| &nbsp; |
-| [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | &nbsp; | [featherless](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) (MVP) | &nbsp; | &nbsp; |
-| [Physics](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/physics.html)             |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | &nbsp; | [featherless](https://github.com/material-motion/material-motion-family-pop-swift/projects/1) (MVP) | pingpongboss ([MVP](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1)) | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  [featherless](https://github.com/material-motion/material-motion-starmap/projects/1) (spec) | [featherless](https://github.com/material-motion/material-motion-family-coreanimation-swift/projects/1) (MVP) |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 
