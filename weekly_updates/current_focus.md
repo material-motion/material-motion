@@ -17,7 +17,7 @@ Click a name to view the sprint.
 | [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  &nbsp; | rcameron (MVP) | &nbsp;| &nbsp; |
 | [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | &nbsp; | featherless ([MVP](https://github.com/material-motion/material-motion-family-pop-swift/projects/1)) | pingpongboss ([MVP](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1)) | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               | featherless ([spec](https://github.com/material-motion/material-motion-starmap/projects/1)) | featherless ([MVP](https://github.com/material-motion/material-motion-family-coreanimation-swift/projects/1)) |  pingpongboss ([MVP](https://github.com/material-motion/material-motion-family-tween-android/milestone/1)) | &nbsp; |
-| [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | featherless |  &nbsp; | &nbsp; |
+| [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  featherless (spec) | featherless (MVP) |  &nbsp; | &nbsp; |
 
 | Catalog | Starmap | Apple  | Android | Web    |
 |:-------:|:------:|:------:|:-------:|:------:|
