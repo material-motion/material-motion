@@ -8,9 +8,7 @@ Tracing is a form of logging in which information is recorded about a program's 
 
 Tracing can be enabled on a scheduler by providing an instance of an object that conforms to the `Tracer` type.
 
-## MVP
-
-### Scheduler
+## Scheduler
 
 **AddTracer and RemoveTracer APIs**: The scheduler should provide a APIs for adding and removing tracer instances.
 
@@ -23,7 +21,7 @@ class Scheduler {
 }
 ```
 
-### Tracer
+## Tracer
 
 **Abstract type**: Provide an abstract type named `Tracer`.
 
