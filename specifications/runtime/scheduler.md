@@ -143,7 +143,7 @@ Example pseudo-code:
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
 
-The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) removes references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
+The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) is considering removing references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
 
 - According to the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) pattern, users are unlikely to notice a slow first frame in an animation.  This makes the first frame a good time to instantiate new objects.
 
