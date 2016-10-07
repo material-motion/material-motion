@@ -88,19 +88,6 @@ This lookup can be implemented in many ways:
       performerType = plan.performerType()
       performer = performerType()
 
-- Map performer type to plan type with look-up table.
-
-  Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
-  
-  Example pseudo-code:
-  
-      # In some initialization step...
-      scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
-      
-      # In the scheduler...
-      performerType = plan.performerTypeForPlan(plan)
-      performer = performerType()
-
 **Activity state**: Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
 
 Pseudo-code example:
@@ -128,6 +115,20 @@ The following topics are open for discussion. They do not presently have a clear
 ---
 
 ## Proposed features
+
+**Dynamic Plan ↔ Performer map** Map performer type to plan type with look-up table.
+
+Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
+
+Example pseudo-code:
+  
+    # In some initialization step...
+    scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
+    
+    # In the scheduler...
+    performerType = plan.performerTypeForPlan(plan)
+    performer = performerType()
+
 
 **Tear down API**: Provide an API to tear down a scheduler.
 
