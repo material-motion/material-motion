@@ -68,25 +68,19 @@ Note that "one performer per type of plan" does not resolve the problem of shari
 
 **Plan ↔ performer association**: The scheduler must be able to translate plans into performers.
 
-This lookup can be implemented in many ways:
+Plans define their performer type explicitly.
 
-- Plans define their performer type
-
-  This requires plans to be aware of their performers, which is not ideal. It does, however, avoid a class of problems that exist if performers can define which plans they fulfill.
+Example pseudo-code:
   
-  > This is the simpler approach, and may be used for MVPs.
-  
-  Example pseudo-code:
-  
-      class SomePlan {
-        function performerType() {
-          return SomePerformer.type
-        }
+    class SomePlan {
+      function performerType() {
+        return SomePerformer.type
       }
-      
-      # In the scheduler...
-      performerType = plan.performerType()
-      performer = performerType()
+    }
+    
+    # In the scheduler...
+    performerType = plan.performerType()
+    performer = performerType()
 
 **Activity state**: Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
 
