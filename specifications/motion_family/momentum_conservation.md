@@ -69,12 +69,10 @@ Contract: configure the behavior of a SpringTo plan.
 
 ### SpringPerformer
 
-Supported plans: `SpringTo`, `ConfigureSpring`.
+Supported plans: `SpringTo`.
 
 Use springs to pull the target property's current value towards the last-provided destination.
 
 Create state required to simulate a spring when `SpringTo` is provided for a new property.
 
 Preserve velocity when a property's destination changes.
-
-`ConfigureSpring` changes the behavior of any active or future springs.
