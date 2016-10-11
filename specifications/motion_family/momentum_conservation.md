@@ -31,6 +31,8 @@ To animate a rounded-corners square to a new dimension:
 
 Contract: one or more one-dimensional springs pull a property's current value to a provided `destination`.
 
+If a `configuration` is provided then the associated spring's configuration should be updated to match the provided values.
+
     Plan SpringTo {
       property
       destination
