@@ -32,24 +32,28 @@ To animate a rounded-corners square to a new dimension:
 Contract: one or more one-dimensional springs pull a property's current value to a provided `destination`.
 
     Plan SpringTo {
-      var property
-      var destination
+      property
+      destination
+      configuration (optional)
     }
 
-### ConfigureSpring
+## Types
 
-Contract: configure the behavior of the spring associated with a given property.
+### SpringConfiguration
 
-    Plan ConfigureSpring {
-      var property
-      
-      var bounciness: SpringBounciness
-      var speed: SpringSpeed
+Contract: configure the behavior of a SpringTo plan.
+
+    // MVP
+    SpringConfiguration {
+      friction: float = 30
+      tension: float = 342
+    }
     
-      var friction: float = 30
-      var tension: float = 342
+    // Feature: bounciness/speed configuration
+    SpringConfiguration {
+      bounciness: SpringBounciness
+      speed: SpringSpeed
     }
-
     enum SpringBounciness {
       case Bouncy(scalar)
       case NotBouncy
