@@ -37,10 +37,12 @@ Pseudo-code example:
 
 **Performer type API**: Provide an API that returns an instantiable type of performer that can execute this plan.
 
+Emphasis: performerType must **not** be an instance of an object. It must be a type of object that can be instantiated at a later time.
+
 Pseudo-code example:
 
     protocol Plan {
-      var performerType
+      performerType: Class
     }
 
 **Copyable**: Plans can be copied.
