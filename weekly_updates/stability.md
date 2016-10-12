@@ -15,8 +15,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | Stable | &nbsp; | &nbsp; | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  Stable | &nbsp; |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-
-| Catalog | Starmap | Apple  | Android | Web    |
-|:-------:|:------:|:------:|:-------:|:------:|
+| - | - | - | - | - |
+| **Catalog** | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 |  Sparkle Dialog | Stable | &nbsp; |  &nbsp; | &nbsp; |
