@@ -4,7 +4,7 @@ The team's focus for the current sprint. This document is updated each wednesday
 
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
-| [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp;  | seanoshea ([named plans](https://github.com/material-motion/material-motion-runtime-objc/projects/4))<br/>featherless ([tracing](https://github.com/material-motion/material-motion-runtime-objc/issues/92)) | Remove Transaction (MVP?)<br/><br/>Named plans (MVP?) | appsforartists ([TypeScript MVP](https://github.com/material-motion/material-motion-experiments-js/milestone/11)) |
+| [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp;  | Removing named plans tracing (milestone?)<br/><br/>v4 release cut (milestone?) | Remove Transaction (MVP?)<br/><br/>Named plans (MVP?) | appsforartists ([TypeScript MVP](https://github.com/material-motion/material-motion-experiments-js/milestone/11)) |
 | [Transitions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/transitions.html)   | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions.html)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
