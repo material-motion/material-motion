@@ -239,8 +239,14 @@ generate_release_notes() {
   echo
 
   if [ -f "$rootdir/Podfile" ]; then
-    umbrella_header="$(cd $rootdir; ls src/MaterialMotion*)"
-    "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate apple $umbrella_header
+    if [ $(cd $rootdir; ls src/MaterialMotion* 2> /dev/null) ]; then
+      umbrella_header="$(cd $rootdir; ls src/MaterialMotion*)"
+      "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate objc "$umbrella_header"
+    else
+      podspec_name="$(cd $rootdir; ls MaterialMotion*.podspec)"
+      library_name="$(echo $podspec_name | cut -d'.' -f1)"
+      "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate swift "$library_name.xcworkspace" "$library_name"
+    fi
   elif [ -f "$rootdir/build.gradle" ]; then
     library="library"
     "$ROOT_DIR/third_party/apidiff/src/apidiff" origin/stable release-candidate android $library
