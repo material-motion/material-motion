@@ -21,13 +21,17 @@ Printable tech tree/checklist:
 
 ## MVP
 
-**Simple initializer**: A scheduler is cheap to create.
+### Simple initializer
+
+A scheduler is cheap to create.
 
 Example pseudo-code:
 
     scheduler = Scheduler()
 
-**addPlan API**: Provide an API for adding an association of a plan with a target.
+### addPlan API
+
+#### Provide an API for adding an association of a plan with a target.
 
 This API must accept a plan and a target object.
 
@@ -36,7 +40,9 @@ Example pseudo-code:
     # Associate a plan with a target.
     scheduler.addPlan(plan, to: target)
 
-**One instance of a performer type per target**: Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
+#### One instance of a performer type per target
+
+Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
 ![](../../_assets/OnePerformer.svg)
 
@@ -66,7 +72,9 @@ Example pseudo-code:
 
 Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of plans. This is an open problem.
 
-**Plan ↔ performer association**: The scheduler must be able to translate plans into performers.
+#### Plan ↔ performer association
+
+The scheduler must be able to translate plans into performers.
 
 Plans define their performer type explicitly.
 
@@ -82,7 +90,13 @@ Example pseudo-code:
     performerType = plan.performerType()
     performer = performerType()
 
-**Activity state**: Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
+#### Unit Tests
+
+- [JavaScript](https://github.com/material-motion/material-motion-experiments-js/blob/develop/packages/runtime/src/__tests__/Scheduler-addPlan.test.ts)
+
+### Activity state
+
+Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
 
 Pseudo-code example:
 
@@ -110,7 +124,9 @@ The following topics are open for discussion. They do not presently have a clear
 
 ## Proposed features
 
-**Dynamic Plan ↔ Performer map** Map performer type to plan type with look-up table.
+### Dynamic Plan ↔ Performer map
+
+#### Map performer type to plan type with look-up table.
 
 Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
 
@@ -124,7 +140,9 @@ Example pseudo-code:
     performer = performerType()
 
 
-**Tear down API**: Provide an API to tear down a scheduler.
+### Tear down API
+
+####Provide an API to tear down a scheduler.
 
 This API would terminate all active performers and remove all registered plans.
 
@@ -134,7 +152,7 @@ Example pseudo-code:
 
     scheduler.tearDown()
 
-**Garbage-collecting performers**
+### Garbage-collecting performers
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
 
