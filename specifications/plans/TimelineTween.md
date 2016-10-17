@@ -36,8 +36,8 @@ Plan TimelineTween {
   var fore
   var forwardTimingFunction
   var backwardTimingFunction
-  var segment
-  var timeline
+  var segment: TimelineSegment
+  var timeline: Timeline
 }
 ```
 
