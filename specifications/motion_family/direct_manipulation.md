@@ -8,19 +8,6 @@
 
 The direct manipulation motion family allows a director to describe gesture manipulation of elements.
 
-## Public plans
-
-### Rotatable
-
-Contract: z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
-
-```
-Plan Rotatable {
-  var rotationGestureRecognizer?
-  var shouldAdjustAnchorPointOnGestureStart = true
-}
-```
-
 ## Private plans
 
 Plans that are only accessible within this motion family.
