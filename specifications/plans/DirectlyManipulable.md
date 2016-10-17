@@ -33,3 +33,7 @@ Plan DirectlyManipulable {
   GestureRecognizer rotateGestureRecognizer?
 }
 ```
+
+## Performer considerations
+
+Always emits a `ChangeAnchorPoint` plan when the first gesture recognizer starts.
