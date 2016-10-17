@@ -11,7 +11,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | - | - | - | - | - |
 | **[Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)**       | **Starmap** | **Apple**  | **Android** | **Web**    |
 | [ArcMove](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ArcMove.html)            |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html) |  Stable | &nbsp; |  &nbsp; | &nbsp; |
+| [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/tween.html)               |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
 | [Timeline tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/timeline_tween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
