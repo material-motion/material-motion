@@ -8,59 +8,35 @@ This is the engineering specification for the **Timeline** type.
 
 ## Overview
 
-This feature enables the registration of _named plans_ to a scheduler. Named plans can be added and removed by name, enabling fine configuration of a performer's behavior.
+This feature enables the description of motion along a *normalized* segment of time.
 
-> A named plan cannot have `null` or an empty string as its name.
+## Specification
 
-Printable tech tree\/checklist:
+**Direction type**: Timelines can move in one of two directions: forward or backward.
 
-![](../../_assets/NamedPlansTechTree.svg)
-
-Example use case: associating a behavior with a target.
-
-Example pseudo-code:
+Define a direction type that includes both possible directions.
 
 ```
-# on drag
-scheduler.addPlan(matchLocationOf(cursor), named: "drag", to: target)
-
-# on release
-scheduler.addPlan(springToLocation(origin), named: "drag", to: target)
-```
-
-Example use case: removing a behavior from a target.
-
-Example pseudo-code:
-
-```
-scheduler.addPlan(springToLocation(origin), named: 'spring', to: target)
-
-# later on
-scheduler.removePlan(named: 'spring', from: target)
-```
-
-## Performer specification
-
-Performers can receive named plans.
-
-**Add\/remove API**: Performers can implement an add\/remove function.
-
-> Performers may choose not to implement this API.
-
-If one method is implemented, the other must be implemented as well.
-
-Example pseudo-code:
-
-```
-protocol NamedPlanPerforming {
-  function addPlan(NamedPlan, named: String)
-  function removePlan(named: String)
+TimelineDirection {
+  .forward:
+  .backward:
 }
 ```
 
-**NamedPlan type**: Provide a NamedPlan type.
+**Object type**: A timeline is an object.
 
-Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
+```
+class Timeline {
+}
+```
+
+**Initial direction API**: A timeline is aware of its initial direction.
+
+```
+class Timeline {
+  TimelineDirection initialDirection
+}
+```
 
 # Scheduler specification
 
