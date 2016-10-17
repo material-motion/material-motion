@@ -25,4 +25,4 @@ The team's focus for the current sprint. This document is updated each wednesday
 |  Sparkle Dialog | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | - | - | - | - | - |
 | **Tools** | **Starmap** | **Apple** | **Android** | **Web** |
-|  apidiff | N/A | featherless ([v1.0.0](https://github.com/material-motion/material-motion-apidiff)) | featherless/pingpongboss ([v1.0.0](https://github.com/material-motion/material-motion-apidiff)) | &nbsp; |
+|  apidiff | N/A | featherless ([v1.0.0](https://github.com/material-motion/material-motion-apidiff)) | pingpongboss ([v1.0.0](https://github.com/material-motion/material-motion-apidiff)) | &nbsp; |
