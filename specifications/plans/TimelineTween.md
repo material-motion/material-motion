@@ -29,7 +29,30 @@ TimelineTween's primary utility is in defining **transitions**.
 
 ## Contract
 
-TODO.
+```
+Plan TimelineTween {
+  var property
+  var back
+  var fore
+  var forwardTimingFunction
+  var backwardTimingFunction
+  var segment
+  var timeline
+}
+```
+
+`property` is any animatable value on the target object.
+
+`from` is a value whose types matches that of the property.
+
+`to` is a value whose types matches that of the property.
+
+`timingFunction` is a cubic-bezier timing function.
+
+`duration` is the length of time over which the animation should occur, expressed in milliseconds (e.g. 300 milliseconds).
+
+`delay` is the number of milliseconds that should elapse before a tween begins.
+
 
 ## Performer considerations
 
