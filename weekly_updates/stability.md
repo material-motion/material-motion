@@ -19,3 +19,6 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | **Catalog** | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 |  Sparkle Dialog | Stable | &nbsp; |  &nbsp; | &nbsp; |
+| - | - | - | - | - |
+| **Tools** | **Starmap** | **Apple** | **Android** | **Web** |
+|  apidiff | N/A | [v1.0.0](https://github.com/material-motion/material-motion-apidiff/releases/tag/v1.0.0) | [v1.0.0](https://github.com/material-motion/material-motion-apidiff/releases/tag/v1.0.0) | &nbsp; |
