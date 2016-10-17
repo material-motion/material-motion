@@ -8,20 +8,6 @@
 
 The direct manipulation motion family allows a director to describe gesture manipulation of elements.
 
-## Private plans
-
-Plans that are only accessible within this motion family.
-
-### ChangeAnchorPoint
-
-Contract: the anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
-
-```
-Plan ChangeAnchorPoint {
-  var newAnchorPoint
-}
-```
-
 ## Performers
 
 ### DirectManipulationPerformer
