@@ -23,7 +23,6 @@
        * [Pinchable](specifications/plans/Pinchable.md)
        * [Rotatable](specifications/plans/Rotatable.md)
        * [SpringTo](specifications/plans/SpringTo.md)
-       * Timeline
        * [TimelineTween](specifications/plans/TimelineTween.md)
        * [Tween](specifications/plans/Tween.md)
    * [Motion demos](specifications/motion-demos.md)
