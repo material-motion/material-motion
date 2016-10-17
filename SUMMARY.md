@@ -15,7 +15,7 @@
            * [Feature: tracing](specifications/runtime/scheduler_tracing.md)
        * [Feature: named plans](specifications/runtime/named-plans.md)
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
-   * [Motion family](specifications/motion-family.md)
+   * [Motion language](specifications/motion-family.md)
        * [Arc move](specifications/motion_family/arc_move.md)
        * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
        * [Momentum conservation](specifications/motion_family/momentum_conservation.md)
