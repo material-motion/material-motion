@@ -1,17 +1,15 @@
 Status of this document:
 ![](../../_assets/under-construction-flashing-barracade-animation.gif)
 
-# Timeline tween motion family
+# TimelineTween
 
-The timeline tween motion family allows a director to describe tween animations that are placed on a normalized timeline for properties on an element.
+TimelineTween describes tween animations that are placed on a normalized timeline.
 
-The timeline tween motion family's primary utility is in defining **transitions**. A given transition has two directions; we'll use the terms forward and backward to refer to them. If a timeline tween is described as "fade in" during the forward transition, then that same tween will "fade out" on the backward transition.
+TimelineTween's primary utility is in defining **transitions**.
 
-> Note that this motion family can/should compose to the Tween motion family.
+> Note that this motion family can/should compose to [`Tween`](Tween.md).
 
-## Examples
-
-A simple bi-directional "fade" transition:
+## Example: Fade transition
 
     Transition Fade {
       func setUp(planEmitter) {
@@ -22,7 +20,7 @@ A simple bi-directional "fade" transition:
       }
     }
 
-A simple bi-directional "slide" transition:
+## Example: Slide transition
 
     Transition Slide {
       func setUp(planEmitter) {
@@ -35,15 +33,11 @@ A simple bi-directional "slide" transition:
       }
     }
 
-## Abstract types
+## Contract
 
-## Public plans
+TODO.
 
-### Tween
-
-## Performers
-
-### TimelineTweenPerformer
+## Performer considerations
 
 A TimelineTweenPerformer is expected to generate Tween plans for the specified transition direction.
 
