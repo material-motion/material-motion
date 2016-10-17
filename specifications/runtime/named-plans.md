@@ -4,6 +4,7 @@ This is the engineering specification for **named plans**. This specification re
 
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
+| First introduced | &nbsp; | [Runtime 4.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v4.0.0) | &nbsp; |
 | MVP milestones | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/5) | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/4) | &nbsp; |
 
 ## Overview
