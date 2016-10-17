@@ -24,7 +24,7 @@ Interaction Sticker {
 
 ## Contract
 
-Registers Draggable, Pinchable, and Rotatable to the given target. May be provided with pre-configured gesture recognizer instances. If no gesture recognizer is provided, one will be created on the target.
+Registers [`Draggable`](Draggable.md), [`Pinchable`](Pinchable.md), and [`Rotatable`](Rotatable.md) to the given target. May be provided with pre-configured gesture recognizer instances. If no gesture recognizer is provided, one will be created on the target.
 
 ```
 Plan DirectlyManipulable {
