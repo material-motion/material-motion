@@ -11,7 +11,7 @@ TimelineTween's primary utility is in defining **transitions**.
 
 ## Example: Fade transition
 
-    Transition Fade {
+    TransitionDirector Fade {
       func setUp() {
         let fadeIn = TimelineTween("opacity", timeline: timeline, back: 0, fore: 1)
         addPlan(fadeIn, to: forwardElement)
