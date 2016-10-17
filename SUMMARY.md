@@ -18,10 +18,10 @@
    * [Motion language](specifications/motion-family.md)
        * [Arc move](specifications/motion_family/arc_move.md)
        * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
+       * DirectlyManipulable
        * [Momentum conservation](specifications/motion_family/momentum_conservation.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
-       * DirectlyManipulable
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
