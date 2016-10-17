@@ -20,14 +20,10 @@ TimelineTween's primary utility is in defining **transitions**.
 
 ## Example: Slide transition
 
-    Transition Slide {
-      func setUp(planEmitter) {
-        let timeline = Timeline(self.initialDirection,
-                                duration: self.duration)
-        let shiftUp = Move(onTimeline: timeline,
-                           from: bottomEdge,
-                           to: topEdge)
-        planEmitter.addPlan(shiftUp, to: forwardElement)
+    TransitionDirector Slide {
+      func setUp() {
+        let shiftUp = TimelineTween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
+        addPlan(shiftUp, to: forwardElement)
       }
     }
 
