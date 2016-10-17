@@ -9,7 +9,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions.html)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | - | - | - | - | - |
-| [Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)       | **Starmap** | **Apple**  | **Android** | **Web**    |
+| **[Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)**       | **Starmap** | **Apple**  | **Android** | **Web**    |
 | [Arc move](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/arc_move.html)            |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Direct manipulation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/direct_manipulation.html) |  Stable | &nbsp; |  &nbsp; | &nbsp; |
 | [Momentum conservation](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion_family/momentum_conservation.html) | Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; | &nbsp; |
