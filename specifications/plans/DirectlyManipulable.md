@@ -28,8 +28,8 @@ Registers Draggable, Pinchable, and Rotatable to the given target. May be provid
 
 ```
 Plan DirectlyManipulable {
-  var panGestureRecognizer?
-  var pinchGestureRecognizer?
-  var rotateGestureRecognizer?
+  GestureRecognizer panGestureRecognizer?
+  GestureRecognizer pinchGestureRecognizer?
+  GestureRecognizer rotateGestureRecognizer?
 }
 ```
