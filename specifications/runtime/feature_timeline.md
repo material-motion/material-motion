@@ -42,7 +42,7 @@ class Timeline {
 
 ```
 class Timeline {
-  TimelineDirection initialDirection
+  TimelineDirection currentDirection
 }
 ```
 
