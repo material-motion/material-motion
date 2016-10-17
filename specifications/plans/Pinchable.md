@@ -18,3 +18,7 @@ Plan Pinchable {
   Bool shouldAdjustAnchorPointOnGestureStart = true
 }
 ```
+
+## Performer considerations
+
+If `shouldAdjustAnchorPointOnGestureStart` is true, then `ChangeAnchorPoint` is emitted when the gesture recognizer starts.
