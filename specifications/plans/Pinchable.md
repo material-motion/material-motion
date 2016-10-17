@@ -6,6 +6,6 @@
 
 ## Overview
 
-Enables an element to be scaled using a pinch gesture.
+Enables an element's size to be scaled using a pinch gesture.
 
 ## Contract
