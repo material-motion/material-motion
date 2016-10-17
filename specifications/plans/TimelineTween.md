@@ -43,6 +43,18 @@ Plan TimelineTween {
 
 `property` is any animatable value on the target object.
 
+`back` is the destination value when the direction is backward.
+
+`fore` is the destination value when the direction is forward.
+
+`forwardTimingFunction` is the timing function to use when initially animating forward.
+
+`backwardTimingFunction` is the timing function to use when initially animating backward.
+
+`segment` is the portion of the timeline in which the animation should occur.
+
+`timelin` is the timeline to which the `segment` applies.
+
 ## Performer considerations
 
 A TimelineTweenPerformer is expected to generate Tween plans for the timeline's initial direction.
