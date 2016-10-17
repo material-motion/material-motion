@@ -11,7 +11,7 @@ KeyframeTween describes tween animations that are have more than two distinct fr
 Plan KeyframeTween {
   var property
   var values
-  var keyTimes
+  var keyPositions
   var interTimingFunctions
   var timingFunction
 }
