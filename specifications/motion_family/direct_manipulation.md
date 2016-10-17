@@ -18,7 +18,3 @@ Supported plans: `DirectlyManipulable`, `Draggable`, `Pinchable`, and `Rotatable
 
 If any registered plan's `shouldAdjustAnchorPointOnGestureStart` is true, then `ChangeAnchorPoint` is emitted when the first gesture recognizer starts.
 
-### AnchorPointPerformer
-
-Supported plans: `ChangeAnchorPoint`.
-
