@@ -21,7 +21,7 @@
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [Draggable](specifications/plans/Draggable.md)
-       * KeyframeTween
+       * [KeyframeTween](specifications/plans/KeyframeTween.md)
        * [Pinchable](specifications/plans/Pinchable.md)
        * [Rotatable](specifications/plans/Rotatable.md)
        * [SpringTo](specifications/plans/SpringTo.md)
