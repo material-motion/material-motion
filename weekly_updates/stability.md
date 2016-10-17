@@ -14,6 +14,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [DirectlyManipulable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/DirectlyManipulable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [Draggable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Draggable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
+| [KeyframeTween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/KeyframeTween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [SpringTo](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/SpringTo.html) | Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; | &nbsp; |
