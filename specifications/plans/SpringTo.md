@@ -1,16 +1,10 @@
-# Momentum conservation motion family
+# SpringTo
 
-|  | Android | Apple |
-| --- | --- | --- |
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-pop-swift/milestone/1) |
+|  | Android | Apple | Web |
+| --- | --- | --- | --- |
+| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-pop-swift/milestone/1) | &nbsp; |
 
-## Overview
-
-The momentum conservation family allows momentum to be preserved when the desired destination of a property changes. In practice this often means using springs.
-
-> Note that this motion family can/should compose out to a bridge motion family for a given platform if a reasonable spring solution already exists.
-
-## Examples
+## Example: Rounded corners
 
 To animate a rounded-corners square to a new dimension:
 
@@ -25,11 +19,9 @@ To animate a rounded-corners square to a new dimension:
       }
     }
 
-## Public plans
+## Contract
 
-### SpringTo
-
-Contract: one or more one-dimensional springs pull a property's current value to a provided `destination`.
+One or more one-dimensional springs pull a property's current value to a provided `destination`.
 
 If a `configuration` is provided then the associated spring's configuration should be updated to match the provided values.
 
@@ -67,11 +59,7 @@ Contract: configure the behavior of a SpringTo plan.
       case Slow(scalar)
     }
 
-## Performers
-
-### SpringPerformer
-
-Supported plans: `SpringTo`.
+## Performer considerations
 
 Use springs to pull the target property's current value towards the last-provided destination.
 
