@@ -6,7 +6,7 @@
 
 ## Overview
 
-The direct manipulation motion family allows a director to describe gesture manipulation of elements.
+Enables an element to be manipulated with multiple simultaneous touch interactions in a natural manner.
 
 ## Examples
 
