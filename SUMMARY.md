@@ -16,7 +16,7 @@
        * [Feature: named plans](specifications/runtime/named-plans.md)
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
    * [Motion language](specifications/motion-family.md)
-       * [Arc move](specifications/motion_family/arc_move.md)
+       * [ArcMove](specifications/motion_family/arc_move.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [Draggable](specifications/plans/Draggable.md)
