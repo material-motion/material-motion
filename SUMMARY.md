@@ -24,7 +24,7 @@
        * [Momentum conservation](specifications/motion_family/momentum_conservation.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
-       * Rotatable
+       * [Rotatable](specifications/plans/Rotatable.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
