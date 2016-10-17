@@ -46,3 +46,5 @@ Plan TimelineTween {
 ## Performer considerations
 
 A TimelineTweenPerformer is expected to generate Tween plans for the specified transition direction.
+
+TODO: Add pseudo-code for generating Tweens based on the initialDirection.
