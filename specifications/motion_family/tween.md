@@ -1,16 +1,10 @@
-# Tween motion family
+# Tween
 
-|  | Android | Apple |
-| --- | --- | --- |
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-coreanimation-swift/milestone/2) |
+|  | Android | Apple | Web |
+| --- | --- | --- | --- |
+| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-coreanimation-swift/milestone/2) | &nbsp; |
 
-## Overview
-
-The tween motion family enables tween animations for properties on a target.
-
-> Note that this motion family can/should compose out to an existing tween system for a given platform if a reasonable tween system already exists.
-
-## Examples
+## Example: Fade in
 
 ```
 Transition Fade {
@@ -30,11 +24,9 @@ Transition Fade {
 }
 ```
 
-## Public plans
+## Contract
 
-### Tween
-
-Contract: linearly interpolate a target's property from one value to another using a timing function for velocity.
+Linearly interpolate a target's property from one value to another using a timing function for velocity.
 
 ```
 Plan Tween {
@@ -69,12 +61,6 @@ For platforms that support a model/presentation layer separation, the `from` and
 
 * Only `to` is provided. Interpolates between the current value of the property and `to`.
 
+## Performer considerations
 
-## Performers
-
-### TweenPerformer
-
-Supported plans: `Tween`.
-
-Fulfills each provided Tween animation. If multiple tweens are added for the same property then the latest tween is used.
-
+If multiple Tweens are added for the same property then the latest tween is used.
