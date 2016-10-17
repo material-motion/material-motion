@@ -84,7 +84,7 @@ Assertions:
 **Pre-defined segments**: Provide the following set of pre-defined segments.
 
 | name | from | to |
-|:----:|:----:|:--
+|:---- |:---- |:-- |
 | entire | 0 | 1 |
 | firstHalf | 0 | 0.5 |
 | middleHalf | 0.25 | 0.75 |
@@ -95,6 +95,3 @@ Assertions:
 | fourthQuarter | 0.75 | 1 |
 | firstThreeQuarters | 0 | 0.75 |
 | lastThreeQuarters | 0.25 | 1 |
-
-- entire: `0...1`
-- firstHalf: `0...0.5`
