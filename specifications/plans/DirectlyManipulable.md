@@ -24,7 +24,7 @@ Interaction Sticker {
 
 ## Contract
 
-Contract: registers Draggable, Pinchable, and Rotatable to the given target.
+Registers Draggable, Pinchable, and Rotatable to the given target.
 
 ```
 Plan DirectlyManipulable {
