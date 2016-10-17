@@ -18,3 +18,7 @@ Plan Draggable {
   Bool shouldAdjustAnchorPointOnGestureStart = false
 }
 ```
+
+## Performer considerations
+
+If `shouldAdjustAnchorPointOnGestureStart` is true, then `ChangeAnchorPoint` is emitted when the gesture recognizer starts.
