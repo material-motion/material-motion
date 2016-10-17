@@ -63,3 +63,20 @@ class Timeline {
   TimelineDirection currentDirection
 }
 ```
+
+**Segment type**: A Timeline Segment represents a specific part of a timeline.
+
+Define a direction type that includes both possible directions.
+
+```
+Segment {
+  var position
+  var length
+}
+```
+
+Assertions:
+
+- `0 <= position <= 1`
+- `0 <= length <= 1`
+- `0 <= position + length <= 1`
