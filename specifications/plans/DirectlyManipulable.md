@@ -36,4 +36,4 @@ Plan DirectlyManipulable {
 
 ## Performer considerations
 
-Always emits a `ChangeAnchorPoint` plan when the first gesture recognizer starts.
+Always emits [`ChangeAnchorPoint`](ChangeAnchorPoint.md) when the first gesture recognizer starts.
