@@ -18,7 +18,7 @@ Plan ChangeAnchorPoint {
 }
 ```
 
-`newAnchorPoint` should be relative to the target's dimensions. E.g. an anchor point of 0,0 means the top-left corner of the target should be the new anchor point.
+`newAnchorPoint` should be relative to the target's dimensions. E.g. an anchor point of 0,0 means the corner of the target should be the new anchor point.
 
 ## Performer considerations
 
