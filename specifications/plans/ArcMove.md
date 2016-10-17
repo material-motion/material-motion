@@ -10,12 +10,6 @@ Things to focus on:
 
 ## Examples
 
-## Abstract types
+## Contract
 
-## Public plans
-
-### ArcMove
-
-## Performers
-
-### ArcMovePerformer
+## Performer considerations
