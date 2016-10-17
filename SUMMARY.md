@@ -22,7 +22,7 @@
        * [Draggable](specifications/plans/Draggable.md)
        * [Pinchable](specifications/plans/Pinchable.md)
        * [Rotatable](specifications/plans/Rotatable.md)
-       * [Momentum conservation](specifications/motion_family/momentum_conservation.md)
+       * [SpringTo](specifications/motion_family/momentum_conservation.md)
        * [Tween](specifications/motion_family/tween.md)
        * [Timeline tween](specifications/motion_family/timeline_tween.md)
    * [Motion demos](specifications/motion-demos.md)
