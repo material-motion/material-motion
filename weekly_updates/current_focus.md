@@ -19,3 +19,6 @@ The team's focus for the current sprint. This document is updated each wednesday
 | **Catalog** | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 |  Sparkle Dialog | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| - | - | - | - | - |
+| **Tools** | **Starmap** | **Apple** | **Android** | **Web** |
+|  apidiff | N/A | &nbsp; | &nbsp; | &nbsp; |
