@@ -46,6 +46,14 @@ class Timeline {
 }
 ```
 
+**Initialization API**: A timeline must be created with an initial direction and duration.
+
+```
+class Timeline {
+  init(duration, initialDirection)
+}
+```
+
 **Current direction API**: A timeline is aware of its current direction.
 
 This should be initialized with the value of `initialDirection`.
