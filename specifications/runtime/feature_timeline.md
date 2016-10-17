@@ -87,7 +87,8 @@ Assertions:
 |:----:|:----:|:--
 | entire | 0 | 1 |
 | firstHalf | 0 | 0.5 |
-| secondHalf | 0.5 | 1 |:|
+| middleHalf | 0.25 | 0.75 |
+| latterHalf | 0.5 | 1 |
 | firstQuarter | 0 | 0.25 |
 | secondQuarter | 0.25 | 0.5 |
 | thirdQuarter | 0.5 | 0.75 |
