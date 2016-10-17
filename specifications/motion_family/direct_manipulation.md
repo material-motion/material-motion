@@ -10,17 +10,6 @@ The direct manipulation motion family allows a director to describe gesture mani
 
 ## Public plans
 
-### Pinchable
-
-Contract: scale amount from the given gesture recognizer are multiplied to the target's `scale.x` and `scale.y`. If no gesture recognizer is provided, then one is created.
-
-```
-Plan Pinchable {
-  var pinchGestureRecognizer?
-  var shouldAdjustAnchorPointOnGestureStart = true
-}
-```
-
 ### Rotatable
 
 Contract: z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
