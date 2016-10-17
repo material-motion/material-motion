@@ -40,6 +40,8 @@ class Timeline {
 
 **Current direction API**: A timeline is aware of its current direction.
 
+This is initially the value of `initialDirection`.
+
 ```
 class Timeline {
   TimelineDirection currentDirection
