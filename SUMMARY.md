@@ -15,6 +15,7 @@
            * [Feature: tracing](specifications/runtime/scheduler_tracing.md)
        * [Feature: named plans](specifications/runtime/named-plans.md)
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
+       * Feature: Timeline
    * [Motion language](specifications/motion-family.md)
        * [ArcMove](specifications/plans/ArcMove.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
