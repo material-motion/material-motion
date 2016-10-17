@@ -30,6 +30,14 @@ class Timeline {
 }
 ```
 
+**Duration API**: A timeline is aware of its duration in time units.
+
+```
+class Timeline {
+  Time duration
+}
+```
+
 **Initial direction API**: A timeline is aware of its initial direction.
 
 ```
