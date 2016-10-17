@@ -38,6 +38,14 @@ class Timeline {
 }
 ```
 
+**Current direction API**: A timeline is aware of its current direction.
+
+```
+class Timeline {
+  TimelineDirection initialDirection
+}
+```
+
 # Scheduler specification
 
 Schedulers support named plans. Named plans are plans with a name associated via the transaction.
