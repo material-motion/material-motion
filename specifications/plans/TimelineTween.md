@@ -13,7 +13,7 @@ TimelineTween's primary utility is in defining **transitions**.
 
     Transition Fade {
       func setUp(planEmitter) {
-        let fadeIn = TimelineTween("opacity", timeline: timeline)
+        let fadeIn = TimelineTween("opacity", timeline: timeline, back: 0, fore: 1)
         planEmitter.addPlan(fadeIn, to: forwardElement)
       }
     }
