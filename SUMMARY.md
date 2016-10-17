@@ -17,7 +17,6 @@
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
    * [Motion language](specifications/motion-family.md)
        * [Arc move](specifications/motion_family/arc_move.md)
-       * [Direct manipulation](specifications/motion_family/direct_manipulation.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [Draggable](specifications/plans/Draggable.md)
