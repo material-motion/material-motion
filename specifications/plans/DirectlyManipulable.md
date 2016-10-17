@@ -10,7 +10,7 @@ Enables an element to be manipulated with multiple simultaneous touch interactio
 
 ## Example: Sticker editor
 
-Scenario: Placing stickers on a photo\/video. Each sticker can be dragged, pinched, and rotated.
+Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinched, and rotated.
 
 ```
 Interaction Sticker {
