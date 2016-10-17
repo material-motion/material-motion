@@ -6,6 +6,6 @@ The anchor point of the view is immediately changed to the `newAnchorPoint`. The
 
 ```
 Plan ChangeAnchorPoint {
-  var newAnchorPoint
+  Position newAnchorPoint
 }
 ```
