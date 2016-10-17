@@ -24,8 +24,8 @@
        * [Rotatable](specifications/plans/Rotatable.md)
        * [SpringTo](specifications/plans/SpringTo.md)
        * Timeline
-       * [Tween](specifications/plans/Tween.md)
        * [TimelineTween](specifications/plans/TimelineTween.md)
+       * [Tween](specifications/plans/Tween.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
