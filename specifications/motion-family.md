@@ -1,4 +1,6 @@
-# Motion family
+# Motion language
+
+The material motion language consists of a variety of high-level plan types. These plan types can be grouped together in a library, called a motion family.
 
 A motion family is a software library that includes one or more Plan and Performer implementations.
 
