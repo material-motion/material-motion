@@ -27,7 +27,7 @@
        * [SpringTo](specifications/plans/SpringTo.md)
        * [TimelineTween](specifications/plans/TimelineTween.md)
        * [Tween](specifications/plans/Tween.md)
-       * ScrollReactor
+       * [ScrollReactor](specifications/plans/ScrollReactor.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
