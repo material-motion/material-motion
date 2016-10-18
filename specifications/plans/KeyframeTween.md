@@ -3,7 +3,7 @@ Status of this document:
 
 # KeyframeTween
 
-KeyframeTween describes tween animations that are have more than two distinct frames of animation.
+KeyframeTween describes an animation that consists of more than two distinct frames of animation.
 
 ## Contract
 
