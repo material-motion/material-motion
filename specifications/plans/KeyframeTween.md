@@ -2,7 +2,7 @@
 
 | Discussion Thread | Status |
 |:------------------|:-------|
-| [Discussion thread](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI) | In review |
+| [KeyframeTween on material-motion@](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI) | In review |
 
 KeyframeTween describes an animation that consists of more than two distinct frames of animation.
 
