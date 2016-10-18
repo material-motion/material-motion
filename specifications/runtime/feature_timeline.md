@@ -30,14 +30,6 @@ class Timeline {
 }
 ```
 
-**Duration API**: A timeline is aware of its duration in time units.
-
-```
-class Timeline {
-  Time duration
-}
-```
-
 **Initial direction API**: A timeline is aware of its initial direction.
 
 ```
@@ -46,11 +38,11 @@ class Timeline {
 }
 ```
 
-**Initialization API**: A timeline must be created with an initial direction and duration.
+**Initialization API**: A timeline must be created with an initial direction.
 
 ```
 class Timeline {
-  init(duration, initialDirection)
+  init(initialDirection)
 }
 ```
 
