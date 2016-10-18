@@ -14,7 +14,7 @@ KeyframeTween describes an animation that consists of more than two distinct fra
 Plan KeyframeTween {
   var property
   var values: [Any]
-  var keyPositions: [Float]?
+  var offsets: [Float]?
   var interTimingFunctions: [TimingFunction]?
   var timingFunction: TimingFunction?
 }
@@ -24,7 +24,7 @@ Plan KeyframeTween {
 
 `values` is an array of objects that each define a single frame of the animation.
 
-`keyPositions` optionally defines the pacing of the animation. Each position corresponds to its identically-indexed value in the `values` array. Each position is a floating point number in the range of `[0,1]`. If not provided, each value is assumed to be evenly spaced.
+`offsets` optionally defines the pacing of the animation. Each offset corresponds to its identically-indexed value in the `values` array. Each offset is a floating point number in the range of `[0,1]`. If not provided, each value is assumed to be evenly spaced.
 
 `interTimingFunctions` optionally defines the timing functions to be used between any two values. If `values` is of length `n`, then `interTimingFunctions` should be of length `n-1`. If not provided, each timing function is assumed to be linear.
 
