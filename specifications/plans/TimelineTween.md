@@ -8,7 +8,7 @@ TimelineTween describes tween animations that are placed on a normalized timelin
 
 TimelineTween's primary utility is in defining **transitions**.
 
-> Note that this motion family can/should compose to [`Tween`](Tween.md).
+> Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
 ## Example: Fade transition
 
