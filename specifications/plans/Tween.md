@@ -6,8 +6,7 @@
 
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
-| First introduced | &nbsp; | [Core Animation Family 1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) | &nbsp; |
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | Released | &nbsp; |
+| Stability | [Milestone](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | [Core Animation Family 1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) | &nbsp; |
 
 ## Example: Fade in
 
