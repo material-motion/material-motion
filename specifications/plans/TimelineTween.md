@@ -1,7 +1,8 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
-
 # TimelineTween
+
+| Discussion thread | Status |
+|:------------------|:-------|
+| None | Drafting |
 
 TimelineTween describes tween animations that are placed on a normalized timeline.
 
