@@ -4,9 +4,10 @@
 |:------------------|:-------|
 | N/A | Stable |
 
+
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-pop-swift/milestone/1) | &nbsp; |
+| Stability | [MVP Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [POP v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; |
 
 ## Example: Rounded corners
 
