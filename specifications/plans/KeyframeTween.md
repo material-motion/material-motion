@@ -19,4 +19,6 @@ Plan KeyframeTween {
 
 `property` is any animatable value on the target object.
 
+`values` is an array of objects that each define a single frame of the animation.
+
 ## Performer considerations
