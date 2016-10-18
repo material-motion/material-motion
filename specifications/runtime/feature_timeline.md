@@ -81,7 +81,9 @@ Assertions:
 - `0 <= length <= 1`
 - `0 <= position + length <= 1`
 
-**Pre-defined segments**: Provide the following set of pre-defined segments.
+### Feature: Pre-defined segments
+
+Provide the following set of pre-defined segments.
 
 | name | from | to |
 |:---- |:---- |:-- |
