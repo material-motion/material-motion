@@ -2,6 +2,8 @@
 
 KeyframeTween describes an animation that consists of more than two distinct frames of animation.
 
+- [Discussion thread](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI)
+
 ## Contract
 
 ```
