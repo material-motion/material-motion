@@ -10,7 +10,7 @@ This is the engineering specification for the **Timeline** type.
 
 This feature enables the description of motion along a *normalized* segment of time.
 
-## Specification
+## MVP Specification
 
 **Direction type**: Timelines can move in one of two directions: forward or backward.
 
