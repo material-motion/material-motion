@@ -1,5 +1,9 @@
 # Tween
 
+| Discussion thread | Status |
+|:------------------|:-------|
+| N/A | Stable |
+
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
 | First introduced | &nbsp; | [Core Animation Family 1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) | &nbsp; |
