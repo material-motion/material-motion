@@ -1,6 +1,3 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
-
 # KeyframeTween
 
 KeyframeTween describes an animation that consists of more than two distinct frames of animation.
@@ -26,5 +23,3 @@ Plan KeyframeTween {
 `interTimingFunctions` optionally defines the timing functions to be used between any two values. If `values` is of length `n`, then `interTimingFunctions` should be of length `n-1`. If not provided, each timing function is assumed to be linear.
 
 `timingFunction` optionally defines the timing function that governs the overall pacing of the animation. If not provided, the default pacing is `linear`.
-
-## Performer considerations
