@@ -10,24 +10,6 @@ TimelineTween's primary utility is in defining **transitions**.
 
 > Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
-## Example: Fade transition
-
-    TransitionDirector Fade {
-      func setUp() {
-        let fade = TimelineTween("opacity", timeline: timeline, back: 0, fore: 1)
-        addPlan(fadeIn, to: forwardElement)
-      }
-    }
-
-## Example: Slide transition
-
-    TransitionDirector Slide {
-      func setUp() {
-        let shiftUp = TimelineTween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
-        addPlan(shiftUp, to: forwardElement)
-      }
-    }
-
 ## Contract
 
 ```
@@ -55,6 +37,24 @@ Plan TimelineTween {
 `segment` is the portion of the timeline in which the animation should occur.
 
 `timelin` is the timeline to which the `segment` applies.
+
+## Example: Fade transition
+
+    TransitionDirector Fade {
+      func setUp() {
+        let fade = TimelineTween("opacity", timeline: timeline, back: 0, fore: 1)
+        addPlan(fadeIn, to: forwardElement)
+      }
+    }
+
+## Example: Slide transition
+
+    TransitionDirector Slide {
+      func setUp() {
+        let shiftUp = TimelineTween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
+        addPlan(shiftUp, to: forwardElement)
+      }
+    }
 
 ## Performer considerations
 
