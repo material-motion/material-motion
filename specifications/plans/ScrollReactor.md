@@ -7,3 +7,8 @@ Status of this document:
 |:------------------|:-------|
 | None | Drafting |
 
+Open questions:
+
+- Could this be a ValueReactor?
+- What does the API look like for mapping input values to other values?
+- Example usage: mapping scroll position to opacity of an element.
