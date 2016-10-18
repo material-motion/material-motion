@@ -60,4 +60,5 @@ Plan TimelineTween {
 
 A TimelineTweenPerformer is expected to generate Tween plans for the timeline's initial direction.
 
-TODO: Add pseudo-code for generating Tweens based on the initialDirection.
+If `segment.length == 1` then the performer can simply emit a [`Tween`](Tween.md) plan.
+
