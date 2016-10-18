@@ -7,7 +7,7 @@
 
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
-| Stability | [MVP Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [POP v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; |
+| Stability | [MVP Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [family-pop-swift v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; |
 
 ## Example: Rounded corners
 
