@@ -1,8 +1,10 @@
 # KeyframeTween
 
-KeyframeTween describes an animation that consists of more than two distinct frames of animation.
+| Discussion Thread | Status |
+|:------------------|:-------|
+| [Discussion thread](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI) | In review |
 
-- [Discussion thread](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI)
+KeyframeTween describes an animation that consists of more than two distinct frames of animation.
 
 ## Contract
 
