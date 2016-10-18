@@ -38,11 +38,21 @@ class Timeline {
 }
 ```
 
-**Initialization API**: A timeline must be created with an initial direction.
+**Duration API**: A timeline is aware of its duration in time.
+
+The unit of time is platform-dependent.
 
 ```
 class Timeline {
-  init(initialDirection)
+  TimeInterval duration
+}
+```
+
+**Initialization API**: A timeline must be created with an initial direction and duration.
+
+```
+class Timeline {
+  init(initialDirection, duration)
 }
 ```
 
