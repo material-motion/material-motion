@@ -1,6 +1,6 @@
 # KeyframeTween
 
-| Discussion Thread | Status |
+| Discussion thread | Status |
 |:------------------|:-------|
 | [KeyframeTween on material-motion@](https://groups.google.com/forum/#!topic/material-motion/rkHX7O_UvyI) | In review |
 
