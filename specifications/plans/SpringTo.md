@@ -1,5 +1,9 @@
 # SpringTo
 
+| Discussion thread | Status |
+|:------------------|:-------|
+| N/A | Stable |
+
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
 | Milestone | [Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-pop-swift/milestone/1) | &nbsp; |
