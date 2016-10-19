@@ -25,12 +25,12 @@ A transition window has a numerical **position** expressed in the range `[0,1]`.
 
 ## MVP Specification
 
-**Direction type**: Timelines can move in one of two directions: forward or backward.
+**Direction type**: The position in a transition window can move in one of two directions: forward or backward.
 
 Define a direction type that includes both possible directions.
 
 ```
-TimelineDirection {
+TransitionWindowDirection {
   .forward:
   .backward:
 }
