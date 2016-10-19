@@ -8,7 +8,16 @@ This is the engineering specification for the **TransitionWindow** type.
 
 ## Overview
 
-This feature enables the description of a transition between two states.
+This feature enables the description of a transition between two fixed states.
+
+```
+A         B         C
+|---------|---------|
+           \_______/
+               ^- transition window
+```
+
+A transition window has two fixed sides: **back** and **fore**. In the example above, B is *back* and C is *fore*.
 
 ## MVP Specification
 
