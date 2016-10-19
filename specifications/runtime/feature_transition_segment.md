@@ -15,8 +15,8 @@ This feature enables the description of motion between two distinct states.
 ```
 let tween = TransitionTween("opacity",
                             during: .entireSegment,
-                            back: 0,
-                            fore: 1)
+                            backValue: 0,
+                            foreValue: 1)
 ```
 
 ## MVP Specification
