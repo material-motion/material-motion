@@ -19,6 +19,10 @@ A         B         C
 
 A transition window has two fixed sides: **back** and **fore**. In the example above, B is *back* and C is *fore*.
 
+A transition window has an initial and current direction that can be either **forward** or **backward**. The initial direction cannot be changed after initialization. The current direction can be changed at will.
+
+A transition window has a **position** expressed in the range `[0,1]`.
+
 ## MVP Specification
 
 **Direction type**: Timelines can move in one of two directions: forward or backward.
