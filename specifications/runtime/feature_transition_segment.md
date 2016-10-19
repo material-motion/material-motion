@@ -13,7 +13,10 @@ This feature enables the description of motion between two distinct states.
 ## Example: TransitionTween
 
 ```
-let tween = TransitionTween("opacity", during: .entireSegment, back: 0, fore: 1)
+let tween = TransitionTween("opacity",
+                            during: .entireSegment,
+                            back: 0,
+                            fore: 1)
 ```
 
 ## MVP Specification
