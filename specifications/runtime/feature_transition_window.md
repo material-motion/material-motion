@@ -80,3 +80,17 @@ class TransitionWindow {
   TimelineDirection currentDirection
 }
 ```
+
+**Position API**: A transition window has a current position.
+
+This numerical value should be bounded to `[0,1]`.
+
+When initialized with an initial direction of **forward**, position should initially be `0`.
+
+When initialized with an initial direction of **backward**, position should initially be `1`.
+
+```
+class TransitionWindow {
+  Double position
+}
+```
