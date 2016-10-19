@@ -30,43 +30,43 @@ class TransitionWindow {
 }
 ```
 
-**Initial direction API**: A timeline is aware of its initial direction.
+**Initial direction API**: A transition window is aware of its initial direction.
 
 ```
-class Timeline {
-  TimelineDirection initialDirection
+class TransitionWindow {
+  TransitionWindowDirection initialDirection
 }
 ```
 
-**Duration API**: A timeline is aware of its duration in time.
+**Duration API**: A transition window is aware of its overall time duration.
 
 The unit of time is platform-dependent.
 
 ```
-class Timeline {
+class TransitionWindow {
   TimeInterval duration
 }
 ```
 
-**Initialization API**: A timeline must be created with an initial direction and duration.
+**Initialization API**: A transition window must be created with an initial direction and duration.
 
 ```
-class Timeline {
+class TransitionWindow {
   init(initialDirection, duration)
 }
 ```
 
-**Current direction API**: A timeline is aware of its current direction.
+**Current direction API**: A transition window is aware of its current direction.
 
 This should be initialized with the value of `initialDirection`.
 
 ```
-class Timeline {
-  TimelineDirection currentDirection
+class TransitionWindow {
+  TransitionWindowDirection currentDirection
 }
 ```
 
-**Segment type**: A Timeline Segment represents a specific part of a timeline.
+**Segment type**: A transition window segment represents a specific part of a transition window.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
