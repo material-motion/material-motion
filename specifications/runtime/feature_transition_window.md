@@ -21,6 +21,8 @@ A transition window has two fixed sides: **back** and **fore**. In the example a
 
 A transition window has an initial and current direction that can be either **forward** or **backward**. The initial direction cannot be changed after initialization. The current direction can be changed at will.
 
+A transition window has an expected **duration**, expressed in units of time.
+
 A transition window has a numerical **position** expressed in the range `[0,1]`. `0` refers to the back side of the transition, while `1` refers to the front side.
 
 ## MVP Specification
@@ -36,18 +38,18 @@ TransitionWindowDirection {
 }
 ```
 
-**Object type**: A timeline is an object.
+**Object type**: A transition window is an object.
 
 ```
-class Timeline {
+class TransitionWindow {
 }
 ```
 
-**Initial direction API**: A timeline is aware of its initial direction.
+**Initial direction API**: A transition window is aware of its initial direction.
 
 ```
-class Timeline {
-  TimelineDirection initialDirection
+class TransitionWindow {
+  TransitionWindowDirection initialDirection
 }
 ```
 
@@ -56,7 +58,7 @@ class Timeline {
 The unit of time is platform-dependent.
 
 ```
-class Timeline {
+class TransitionWindow {
   TimeInterval duration
 }
 ```
@@ -64,7 +66,7 @@ class Timeline {
 **Initialization API**: A timeline must be created with an initial direction and duration.
 
 ```
-class Timeline {
+class TransitionWindow {
   init(initialDirection, duration)
 }
 ```
