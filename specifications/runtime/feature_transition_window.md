@@ -61,7 +61,7 @@ class TransitionWindow {
 }
 ```
 
-**Duration API**: A transition window is aware of its duration in time.
+**Duration API**: A transition window is aware of its expected duration.
 
 The unit of time is platform-dependent.
 
