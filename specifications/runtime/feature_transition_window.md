@@ -1,10 +1,10 @@
-# Feature: state transition
+# Feature: transition window
 
 | Proposals | Status |
 |:------------------|:-------|
 | Current status | Draft |
 
-This is the engineering specification for the **StateTransition** type.
+This is the engineering specification for the **TransitionWindow** type.
 
 ## Overview
 
