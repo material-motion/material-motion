@@ -45,6 +45,14 @@ class TransitionWindow {
 }
 ```
 
+**Initialization API**: A transition window must be created with an initial direction and duration.
+
+```
+class TransitionWindow {
+  init(initialDirection, duration)
+}
+```
+
 **Initial direction API**: A transition window is aware of its initial direction.
 
 ```
@@ -63,20 +71,12 @@ class TransitionWindow {
 }
 ```
 
-**Initialization API**: A transition window must be created with an initial direction and duration.
-
-```
-class TransitionWindow {
-  init(initialDirection, duration)
-}
-```
-
 **Current direction API**: A transition window is aware of its current direction.
 
 This should be initialized with the value of `initialDirection`.
 
 ```
-class Timeline {
+class TransitionWindow {
   TimelineDirection currentDirection
 }
 ```
