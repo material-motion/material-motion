@@ -16,7 +16,7 @@
        * [Feature: named plans](specifications/runtime/named-plans.md)
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
-       * [Feature: transition window](specifications/runtime/feature_transition_window.md)
+       * [Feature: transition segment](specifications/runtime/feature_transition_window.md)
    * [Motion language](specifications/motion-family.md)
        * [ArcMove](specifications/plans/ArcMove.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
