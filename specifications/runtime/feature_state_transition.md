@@ -8,7 +8,7 @@ This is the engineering specification for the **StateTransition** type.
 
 ## Overview
 
-This feature enables the description of motion along a *normalized* segment of time.
+This feature enables the description of a transition between two states.
 
 ## MVP Specification
 
