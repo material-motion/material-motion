@@ -17,7 +17,7 @@ This feature enables the description of motion between two distinct states.
 Define a direction type that includes both possible directions.
 
 ```
-TimelineDirection {
+TransitionWindowDirection {
   .forward:
   .backward:
 }
