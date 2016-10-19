@@ -14,10 +14,10 @@
        * [Scheduler](specifications/runtime/scheduler.md)
            * [Feature: tracing](specifications/runtime/scheduler_tracing.md)
        * [Feature: named plans](specifications/runtime/named-plans.md)
+       * Feature: state transition
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
        * [Feature: transition segment](specifications/runtime/feature_transition_segment.md)
-       * Feature: state transition
    * [Motion language](specifications/motion-family.md)
        * [ArcMove](specifications/plans/ArcMove.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
