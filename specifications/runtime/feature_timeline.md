@@ -1,10 +1,10 @@
 # Feature: timeline
 
-This is the engineering specification for the **Timeline** type.
+| Proposals | Status |
+|:------------------|:-------|
+| Current status | Draft |
 
-|  | Android | Apple | Web |
-| --- | --- | --- | --- |
-| MVP milestones | &nbsp; | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/14) | &nbsp; |
+This is the engineering specification for the **Timeline** type.
 
 ## Overview
 
