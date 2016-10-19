@@ -8,7 +8,7 @@ This is the engineering specification for the **TransitionWindow** type.
 
 ## Overview
 
-This feature enables the description of motion along a *normalized* segment of time.
+This feature enables the description of motion between two distinct states.
 
 ## MVP Specification
 
