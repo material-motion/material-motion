@@ -10,6 +10,12 @@ This is the engineering specification for the **TransitionSegment** type.
 
 This feature enables the description of motion between two distinct states.
 
+## Example: TransitionTween
+
+```
+let tween = TransitionTween("opacity", during: .entireSegment, back: 0, fore: 1)
+```
+
 ## MVP Specification
 
 **Struct type**: A transition segment represents a specific part of a transition.
