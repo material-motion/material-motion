@@ -12,21 +12,10 @@ This feature enables the description of motion between two distinct states.
 
 ## MVP Specification
 
-**Direction type**: Timelines can move in one of two directions: forward or backward.
-
-Define a direction type that includes both possible directions.
+**Object type**: A transition window is an object.
 
 ```
-TimelineDirection {
-  .forward:
-  .backward:
-}
-```
-
-**Object type**: A timeline is an object.
-
-```
-class Timeline {
+class TransitionWindow {
 }
 ```
 
