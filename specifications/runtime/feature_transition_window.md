@@ -21,7 +21,7 @@ A transition window has two fixed sides: **back** and **fore**. In the example a
 
 A transition window has an initial and current direction that can be either **forward** or **backward**. The initial direction cannot be changed after initialization. The current direction can be changed at will.
 
-A transition window has a **position** expressed in the range `[0,1]`.
+A transition window has a numerical **position** expressed in the range `[0,1]`. `0` refers to the back side of the transition, while `1` refers to the front side.
 
 ## MVP Specification
 
