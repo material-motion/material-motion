@@ -1,4 +1,4 @@
-# Feature: transition window
+# Feature: transition segment
 
 | Proposals | Status |
 |:------------------|:-------|
@@ -12,7 +12,7 @@ This feature enables the description of motion between two distinct states.
 
 ## MVP Specification
 
-**Segment type**: A transition window segment represents a specific part of a transition window.
+**Struct type**: A transition segment represents a specific part of a transition.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
