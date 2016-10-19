@@ -13,7 +13,7 @@ This feature enables the description of a transition between two fixed states.
 ```
 A         B         C
 |---------|---------|
-           \_______/
+           \__|____/
                ^- transition window
 ```
 
