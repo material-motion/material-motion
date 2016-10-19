@@ -4,67 +4,13 @@
 |:------------------|:-------|
 | Current status | Draft |
 
-This is the engineering specification for the **TransitionWindow** type.
+This is the engineering specification for the **TransitionWindowSegment** type.
 
 ## Overview
 
 This feature enables the description of motion between two distinct states.
 
 ## MVP Specification
-
-**Direction type**: The scrubber in a transition window can move in one of two directions: forward or backward.
-
-Define a direction type that includes both possible directions.
-
-```
-TransitionWindowDirection {
-  .forward:
-  .backward:
-}
-```
-
-**Object type**: A transition window is an object.
-
-```
-class TransitionWindow {
-}
-```
-
-**Initial direction API**: A transition window is aware of its initial direction.
-
-```
-class TransitionWindow {
-  TransitionWindowDirection initialDirection
-}
-```
-
-**Duration API**: A transition window is aware of its overall time duration.
-
-The unit of time is platform-dependent.
-
-```
-class TransitionWindow {
-  TimeInterval duration
-}
-```
-
-**Initialization API**: A transition window must be created with an initial direction and duration.
-
-```
-class TransitionWindow {
-  init(initialDirection, duration)
-}
-```
-
-**Current direction API**: A transition window is aware of its current direction.
-
-This should be initialized with the value of `initialDirection`.
-
-```
-class TransitionWindow {
-  TransitionWindowDirection currentDirection
-}
-```
 
 **Segment type**: A transition window segment represents a specific part of a transition window.
 
