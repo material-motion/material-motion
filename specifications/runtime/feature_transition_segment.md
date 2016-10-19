@@ -29,6 +29,14 @@ Assertions:
 - `0 <= length <= 1`
 - `0 <= position + length <= 1`
 
+For transitions that use the `back/fore` terminology, `0` refers to `back` while `1` refers to `fore`.
+
+```
+back   fore
+|---------|
+0         1
+```
+
 ### Feature: Pre-defined segments
 
 Provide the following set of pre-defined segments.
