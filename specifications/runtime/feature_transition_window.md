@@ -4,7 +4,7 @@
 |:------------------|:-------|
 | Current status | Draft |
 
-This is the engineering specification for the **TransitionWindowSegment** type.
+This is the engineering specification for the **TransitionSegment** type.
 
 ## Overview
 
