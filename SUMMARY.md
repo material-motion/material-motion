@@ -28,7 +28,6 @@
        * [Rotatable](specifications/plans/Rotatable.md)
        * [ScrollReactor](specifications/plans/ScrollReactor.md)
        * [SpringTo](specifications/plans/SpringTo.md)
-       * [TimelineTween](specifications/plans/TimelineTween.md)
        * [Tween](specifications/plans/Tween.md)
        * [TweenBetween](specifications/plans/TweenBetween.md)
    * [Motion demos](specifications/motion-demos.md)
