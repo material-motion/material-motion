@@ -4,9 +4,7 @@
 |:------------------|:-------|
 | None | Drafting |
 
-TweenBetween describes tween animations that are placed on a normalized timeline.
-
-TweenBetween's primary utility is in defining **transitions**.
+TweenBetween describes tween animations that occur during a transition between two states.
 
 > Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
