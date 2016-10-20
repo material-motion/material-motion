@@ -17,8 +17,8 @@ Plan TweenBetween {
   var fore
   var forwardTimingFunction
   var backwardTimingFunction
-  var segment: TimelineSegment
-  var timeline: Timeline
+  var segment: TransitionSegment
+  var window: TransitionWindow
 }
 ```
 
