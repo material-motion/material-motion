@@ -64,7 +64,30 @@ Plan TweenBetween {
 
 ## Performer considerations
 
-A TweenBetweenPerformer is expected to generate Tween plans for the timeline's initial direction.
+A TweenBetweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
 
-If `segment.length == 1` then the performer should emit a [`Tween`](Tween.md) plan.
+```
+window = TransitionWindow(duration: 0.4s)
+TweenBetween("opacity",
+             window: window,
+             segment: .init(position: 0, length: 0.25)
+             back: 0,
+             fore: 1)
+```
 
+When initial direction == forward:
+
+```
+let forwardTween = Tween("opacity", duration: 0.1s)
+forwardTween.from = 0
+forwardTween.to = 1
+```
+
+When initial direction == backward:
+
+```
+let backwardTween = Tween("opacity", duration: 0.1s)
+backwardTween.delay = 0.3s
+backwardTween.from = 1
+backwardTween.to = 0
+```
