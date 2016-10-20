@@ -32,9 +32,9 @@ Plan TweenBetween {
 
 `backwardTimingFunction` is the timing function to use when initially animating backward.
 
-`segment` is the portion of the timeline in which the animation should occur.
+`segment` is the portion of the transition window in which the animation should occur.
 
-`timelin` is the timeline to which the `segment` applies.
+`window` is the transition window within which the `segment` applies.
 
 ## Example: Fade transition
 
