@@ -18,7 +18,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [SpringTo](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/SpringTo.html) | Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; | &nbsp; |
-| [TimelineTween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TimelineTween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [TweenBetween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html)               |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
 | - | - | - | - | - |
 | **Catalog** | **Starmap** | **Apple** | **Android** | **Web** |
