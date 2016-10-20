@@ -4,16 +4,16 @@
 |:------------------|:-------|
 | None | Drafting |
 
-TimelineTween describes tween animations that are placed on a normalized timeline.
+TweenBetween describes tween animations that are placed on a normalized timeline.
 
-TimelineTween's primary utility is in defining **transitions**.
+TweenBetween's primary utility is in defining **transitions**.
 
 > Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
 ## Contract
 
 ```
-Plan TimelineTween {
+Plan TweenBetween {
   var property
   var back
   var fore
@@ -42,7 +42,7 @@ Plan TimelineTween {
 
     TransitionDirector Fade {
       func setUp() {
-        let fade = TimelineTween("opacity", timeline: timeline, back: 0, fore: 1)
+        let fade = TweenBetween("opacity", timeline: timeline, back: 0, fore: 1)
         addPlan(fadeIn, to: forwardElement)
       }
     }
@@ -51,14 +51,14 @@ Plan TimelineTween {
 
     TransitionDirector Slide {
       func setUp() {
-        let shiftUp = TimelineTween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
+        let shiftUp = TweenBetween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
         addPlan(shiftUp, to: forwardElement)
       }
     }
 
 ## Performer considerations
 
-A TimelineTweenPerformer is expected to generate Tween plans for the timeline's initial direction.
+A TweenBetweenPerformer is expected to generate Tween plans for the timeline's initial direction.
 
 If `segment.length == 1` then the performer should emit a [`Tween`](Tween.md) plan.
 
