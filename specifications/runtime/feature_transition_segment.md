@@ -48,6 +48,12 @@ back   fore
 
 If a transition uses different terminology then it is up to the user to assign meaning to `0` and `1`.
 
+**Epsilon**: Include an epsilon constant.
+
+```
+let TransitionSegmentEpsilon = 0.00001
+```
+
 ### Feature: Pre-defined segments
 
 Provide the following set of pre-defined segments.
