@@ -40,7 +40,11 @@ Plan TweenBetween {
 
     TransitionDirector Fade {
       func setUp() {
-        let fade = TweenBetween("opacity", timeline: timeline, back: 0, fore: 1)
+        let fade = TweenBetween("opacity",
+                                window: window,
+                                segment: .init(position: 0, length: 1)
+                                back: 0,
+                                fore: 1)
         addPlan(fadeIn, to: forwardElement)
       }
     }
@@ -49,7 +53,11 @@ Plan TweenBetween {
 
     TransitionDirector Slide {
       func setUp() {
-        let shiftUp = TweenBetween("position", timeline: timeline, back: bottomEdge, fore: topEdge)
+        let shiftUp = TweenBetween("position",
+                                   window: window,
+                                   segment: .init(position: 0, length: 1)
+                                   back: bottomEdge,
+                                   fore: topEdge)
         addPlan(shiftUp, to: forwardElement)
       }
     }
