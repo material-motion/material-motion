@@ -25,8 +25,7 @@ Printable tech tree/checklist:
 
 Example pseudo-code:
 
-    protocol Performer {
-    }
+    protocol Performer {}
 
 **Not directly configurable**: Performers do not provide direct configuration methods.
 
@@ -38,15 +37,12 @@ Example pseudo-code:
 
     performer = Performer(target)
 
-**Add plan API**: Define an optional API that allows performers to receive plans.
+**Add plan API**: Define an API that allows performers to receive plans.
 
-> If a performer cannot be configured, it will not expose this API.
 
 Example pseudo-code:
 
-    protocol PlanPerforming {
-      function addPlan(plan)
-    }
+    function addPlan(plan)
 
 **Continuous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
@@ -96,6 +92,6 @@ Example pseudo-code:
       .AtRest
     }
     
-    protocol ManuallyExecutingPerformer {
+    protocol ManualPerforming {
       function update(millisecondsSinceLastUpdate) -> ActivityState
     }
