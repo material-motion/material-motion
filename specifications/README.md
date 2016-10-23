@@ -2,7 +2,7 @@
 
 This section of the book defines engineering specifications and concepts.
 
-The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
+The tone is meant to be both **aspirational** and **educational**.
 
 The audience is software engineers interested in building motion and interaction systems.
 
