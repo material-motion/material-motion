@@ -3,7 +3,7 @@
 
 This document describes a system that will empower creators with the language and tools needed to describe and implement rich, interactive motion on any platform. Within, we explore [essential primitives](specifications/primitives.md), [software design patterns](specifications/pattern.md), [motion runtimes](specifications/runtime/), and more. Initially, we will be supporting Android, iOS, and the web, with variants and styles appropriate to each platform.
 
-This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [Community index](community_index/) links to implementations for specific platforms and languages. [Join our Discord channel](https://discord.gg/ZJyGXza) to chat with the team.
+This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. Our [team stability doc](https://material-motion.gitbooks.io/material-motion-team/content/weekly_updates/stability.html) links to implementations for specific platforms and languages. [Join our Discord channel](https://discord.gg/ZJyGXza) to chat with the team.
 
 **The Starmap will evolve over time.**
 
