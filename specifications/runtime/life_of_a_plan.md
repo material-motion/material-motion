@@ -50,13 +50,9 @@ scheduler.addPlan(draggable, to: circleView)
 
 After executing the above code, the scheduler's internal state might resemble this:
 
-![](../../_assets/TargetManagers.svg)
+![](../../_assets/LifeOfAPlan-step4.svg)
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2".
-
-The scheduler is now expected to fulfill the committed plans.
-
-### Step 4: Scheduler creates performers
 
 The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its fulfillment.
 
@@ -66,24 +62,7 @@ We'll assume a function exists that returns a performer capable of executing a t
 function performerForPlan(Plan, target, existingPerformers) -> Performer
 ```
 
-Recall the associations we made above:
-
-```
-scheduler.addPlan(animation, to: circleView)
-scheduler.addPlan(draggable, to: squareView)
-scheduler.addPlan(pinchable, named: "name1", to: squareView)
-scheduler.addPlan(rotatable, named: "name2", to: squareView)
-scheduler.removePlan(named: "name2", from: squareView)
-scheduler.addPlan(draggable, to: circleView)
-```
-
-Our scheduler had the following representation of the committed plans:
-
-![](../../_assets/TargetManagers.svg)
-
-The scheduler now creates performers by calling our hypothetical `performerForPlan` on each target's plans.
-
-![](../../_assets/LifeOfAPlan-step4.svg)
+The scheduler creates performers by calling our hypothetical `performerForPlan` on each provided plan.
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
@@ -91,11 +70,11 @@ We've created three performers in total. `circleView` has two performers. `squar
 > 
 > A single performer instance is created for each _type_ of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
-### Step 5: Provide plans to performers
+### Step 3a: Provide plans to performers
 
-The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
+The scheduler passes each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
 
-### Step 6: Performers execute plans
+### Step 4: Performers execute plans
 
 A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: continuously and via composition.
 
