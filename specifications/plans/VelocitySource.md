@@ -4,7 +4,7 @@
 |:------------------|:-------|
 | N/A | Drafting |
 
-## Example: Fade in
+## Example: Tossable elements
 
 ```
 Transition TossableElements {
