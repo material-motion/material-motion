@@ -16,11 +16,10 @@ Transition TossableElements {
 
 ## Contract
 
-Upon successfull completion of a gesture recognizer, adds the velocity to a property's current velocity.
+Removes any active spring from the given target's property.
 
 ```
-Plan VelocitySource {
-  var gestureRecognizer
+Plan RemoveSpring {
   var property
 }
 ```
