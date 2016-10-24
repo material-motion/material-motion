@@ -4,16 +4,12 @@
 |:------------------|:-------|
 | N/A | Drafting |
 
-## Example: Fade in
+## Example: Tossable elements
 
 ```
 Transition TossableElements {
-  func setUp() {
-    let gestureRecognizer = PanGestureRecognizer()
-    addPlan(Draggable(withGestureRecognizer: gestureRecognizer), 
-            to: target)
-    addPlan(VelocitySource(gestureRecognizer, appliedTo: .layerPosition), 
-            to: target)
+  func gestureDidStart() {
+    addPlan(RemoveSpring(from: .layerPosition), to: target)
   }
 }
 ```
