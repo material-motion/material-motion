@@ -90,7 +90,7 @@ scheduler.removePlan(named: name, from: target)
 
 The scheduler maintains a separate named plan mapping for each target.
 
-**Remove-then-add**: Two things happen when a named plan is added:
+**Remove-then-add**: Two things happen when a named plan is added.
 
 1. Remove any previously committed plan with the same name from the target's performers.
 
@@ -110,4 +110,38 @@ performer.add(plan: plan, withName: name)
 performerForName(name) == performer 
 > true
 ```
+
+**API contract**: Here are the Performer's expectations for this API.
+
+*Removing a name which was never added before:*
+
+```
+Scheduler scheduler = new Scheduler();
+scheduler.removeNamedPlan("foo");
+```
+ 
+* Nothing happens. No performer is created.
+
+*Adding a name which was never added before:*
+
+```
+Scheduler scheduler = new Scheduler();
+scheduler.addNamedPlan(plan, "foo");
+```
+
+* A performer is created for plan. 
+* The performer's `addNamedPlan(plan, "foo")` is called.
+
+*Adding a name which was added before:*
+
+```
+Scheduler scheduler = new Scheduler();
+scheduler.addNamedPlan(plan, "foo");
+scheduler.addNamedPlan(plan2, "foo");
+```
+
+* A performer is created for plan. 
+* The performer's `addNamedPlan(plan, "foo")` is called.
+* The performer's `removeNamedPlan("foo")` is called.
+* The performer's `addNamedPlan(plan2, "foo")` is called.
 
