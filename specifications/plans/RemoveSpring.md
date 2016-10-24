@@ -24,8 +24,6 @@ Plan RemoveSpring {
 }
 ```
 
-`gestureRecognizer` is the gesture recognizer from which the velocity should be read.
-
 `property` is any animatable value on the target object.
 
 ## Performer considerations
