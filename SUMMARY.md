@@ -30,7 +30,7 @@
        * [SpringTo](specifications/plans/SpringTo.md)
        * [Tween](specifications/plans/Tween.md)
        * [TweenBetween](specifications/plans/TweenBetween.md)
-       * VelocitySource
+       * [VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Directors](specifications/directors.md)
