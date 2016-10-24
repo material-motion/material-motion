@@ -46,14 +46,14 @@ Example pseudo-code:
 
 **Continuous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
-The scheduler uses the existence of any non-terminate is-active tokens to define its active/idle state.
-
 > The performer may choose not to implement this API.
 
 A continuous performer is responsible for requesting an is-active token and then terminating it once no longer needed. Consider the following examples:
 
 - Generate a token before an animation begins and terminate the token when the animation completes.
 - Generate a token when a gesture begins and terminate the token when the gesture completes.
+
+The scheduler uses the existence of a non-terminated is-active tokens to define its active/idle state.
 
 Example pseudo-code:
 
