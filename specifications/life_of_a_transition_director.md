@@ -15,7 +15,7 @@ TransitionDirector Fade {
 
 ### Step 2: Implement the director's setUp method
 
-Our `setUp` will use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
+Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
 function setUp() {
@@ -32,7 +32,7 @@ function setUp() {
 }
 ```
 
-Or if our plans have a concept of direction:
+Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
 
 ```
 function setUp(transaction) {
