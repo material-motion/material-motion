@@ -1,4 +1,4 @@
-# TransitionDirector specification
+# ContextTransitionDirector specification
 
 This is the engineering specification for the `TransitionDirector` type.
 
