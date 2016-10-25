@@ -9,7 +9,7 @@ Let's walk through the life of a simple fade context transition director.
 This object will provide transition-specific plans.
 
 ```
-class Fade: TransitionDirector {
+class FadeContextTransitionDirector: ContextTransitionDirector {
   let transition: ContextTransition
   init(transition: ContextTransition) {
     self.transition = transition
@@ -50,7 +50,7 @@ function setUp() {
 }
 ```
 
-### Step 3: Associate the director with a context transition
+### Step 3: Associate the director with a transition controller
 
 This step is platform-specific.
 
