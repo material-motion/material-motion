@@ -6,7 +6,11 @@ The following contexts exist in a hypothetical application:
 A    B    C
 ```
 
-Our application starts at context A. The user can change to context B, then context C, then back to context B. Each context change can be represented by a **context transition**.
+Our application starts at context A. The user then performs the following transitions:
+
+1. A to B.
+2. B to C.
+3. C to A.
 
 There are two ways to think about how we move between contexts: **from/to** and **back/fore**.
 
@@ -14,15 +18,11 @@ There are two ways to think about how we move between contexts: **from/to** and 
 
 In the traditional from/to model of transitions, the above context changes would have the following variable values:
 
-| `from` | `to` |
-|:------:|:------:|
-| `A` | `B` |
-| `B` | `C` |
-| `C` | `B` |
-
-1. **from** `A` **to** `B`
-2. **from** `B` **to** `C`
-3. **from** `C` **to** `B`
+| Transition # | `from` | `to` |
+|-------------:|:------:|:------:|
+| 1. | `A` | `B` |
+| 2. | `B` | `C` |
+| 3. | `C` | `B` |
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
