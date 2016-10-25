@@ -12,11 +12,11 @@ There are two ways to think about how we move between contexts: **from/to** and 
 
 ## Traditional from/to transitions
 
-In the traditional from/to model of transitions, the above context changes would look like so:
+In the traditional from/to model of transitions, the above context changes would have the following variable values:
 
-- Transition **from** `A` **to** `B`. Direction is forward.
-- Transition **from** `B` **to** `C`. Direction is forward.
-- Transition **from** `C` **to** `B`. Direction is backward.
+- **from** `A` **to** `B`
+- **from** `B` **to** `C`
+- **from** `C` **to** `B`
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
@@ -26,11 +26,11 @@ In practice, the B/C and C/B transitions are often mirror images of one another.
 
 In a back/fore transition, the above context changes would look like so:
 
-- Transition forward. **back**: `A` **fore**: `B`.
-- Transition forward. **back**: `B` **fore**: `C`.
-- Transition backward. **back**: `B` **fore**: `C`.
+- **Direction**: `forward` **back**: `A` **fore**: `B`
+- **Direction**: `forward` **back**: `B` **fore**: `C`
+- **Direction**: `backward` **back**: `B` **fore**: `C`
 
-
+Note that our `back` and `fore` variables now has just two distinct permutations. Combined with the transition
 
 Note that the final transition's arrow is pointed to the left. We always keep contexts on the same named "side" of the transition, regardless of direction.
 
