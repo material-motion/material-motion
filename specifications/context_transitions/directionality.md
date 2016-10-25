@@ -6,13 +6,15 @@ The following contexts exist in a hypothetical application:
 A    B    C
 ```
 
-Our application starts at context A. The user can change to context B, then context C, then back to context B. Each context change can be represented by a **context transition**. Writing out the three transitions:
+Our application starts at context A. The user can change to context B, then context C, then back to context B. Each context change can be represented by a **context transition**.
 
-```
-A => B
-B => C
-B <= C
-```
+There are two ways to think about how we move between contexts: from/to and back/fore.
+
+From/to is the traditional model. The above transitions would look like so:
+
+- Transition **from** `A` **to** `B`.
+- Transition **from** `B` **to** `C`.
+- Transition **from** `C` **to** `B`.
 
 Note that the final transition's arrow is pointed to the left. We always keep contexts on the same named "side" of the transition, regardless of direction.
 
