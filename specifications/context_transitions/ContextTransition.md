@@ -4,7 +4,7 @@ This is the engineering specification for the `ContextTransition` concrete type.
 
 ## Overview
 
-A `ContextTransition` defines the essential information required by a `TransitionDirector`.
+A `ContextTransition` defines the essential information required by a `ContextTransitionDirector`.
 
 ## Features
 
