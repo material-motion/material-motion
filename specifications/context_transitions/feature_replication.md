@@ -1,4 +1,4 @@
-# Feature: replication
+# ContextTransitionDirector replication feature specification
 
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
