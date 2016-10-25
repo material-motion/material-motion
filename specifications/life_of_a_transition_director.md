@@ -13,24 +13,13 @@ TransitionDirector Fade {
 }
 ```
 
-### Step 2: Store the plan emitter
-
-```
-TransitionDirector Fade {
-  PlanEmitter planEmitter
-  function setPlanEmitter(planEmitter) {
-    self.planEmitter = planEmitter
-  }
-}
-```
-
 ### Step 2: Implement the director's setUp method
 
 Our `setUp` will use a simple tween plan:
 
 ```
 function setUp() {
-  var tween = Tween(.opacity)
+  var tween = Tween(.opacity, duration: transitionDuration())
   tween.duration = 0.3
   if initialDirection == .forward {
     tween.from = 0
@@ -39,7 +28,7 @@ function setUp() {
     tween.from = 1
     tween.to = 0
   }
-  planEmitter.addPlan(tween, to: forwardElement)
+  addPlan(tween, to: forwardElement)
 }
 ```
 
