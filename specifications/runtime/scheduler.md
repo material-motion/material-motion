@@ -13,7 +13,7 @@ This is the engineering specification for the `Scheduler` object.
 
 ## Overview
 
-A scheduler accepts transactions and creates performers. The scheduler generates relevant events for performers and observers and monitors activity.
+A scheduler receives plans and creates performers. The scheduler generates relevant events for performers and monitors activity.
 
 Printable tech tree/checklist:
 
@@ -21,32 +21,37 @@ Printable tech tree/checklist:
 
 ## MVP
 
-**Simple initializer**: A scheduler is cheap to create.
+### Simple initializer
+
+A scheduler is cheap to create.
 
 Example pseudo-code:
 
     scheduler = Scheduler()
 
-**commit API**: Provide an API to commit transactions to a scheduler.
+### addPlan API
+
+#### Provide an API for adding an association of a plan with a target.
+
+This API must accept a plan and a target object.
 
 Example pseudo-code:
 
-    scheduler.commit(transaction)
+    # Associate a plan with a target.
+    scheduler.addPlan(plan, to: target)
 
-Requires: [Transaction](transaction.md)
+#### One instance of a performer type per target
 
-**One instance of a performer type per target**: Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
+Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
 ![](../../_assets/OnePerformer.svg)
 
-> Consider the following pseudo-code transaction involving physical simulation:
+> Consider the following pseudo-code involving physical simulation:
 > 
->     transaction = Transaction()
->     transaction.add(Friction(), circleView)
->     transaction.add(AnchoredSpringAtLocation(x, y), circleView)
->     scheduler.commit(transaction)
+>     scheduler.addPlan(Friction(), to: circleView)
+>     scheduler.addPlan(AnchoredSpringAtLocation(x, y), to: circleView)
 > 
-> `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans are provided to the performer instance.
+> `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans have been provided to the performer instance.
 > 
 > The performer knows the following:
 > 
@@ -67,42 +72,31 @@ Requires: [Transaction](transaction.md)
 
 Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of plans. This is an open problem.
 
-**Plan ↔ performer association**: The scheduler must be able to translate plans into performers.
+#### Plan ↔ performer association
 
-This lookup can be implemented in many ways:
+The scheduler must be able to translate plans into performers.
 
-- Plans define their performer type
+Plans define their performer type explicitly.
 
-  This requires plans to be aware of their performers, which is not ideal. It does, however, avoid a class of problems that exist if performers can define which plans they fulfill.
+Example pseudo-code:
   
-  > This is the simpler approach, and may be used for MVPs.
-  
-  Example pseudo-code:
-  
-      class SomePlan {
-        function performerType() {
-          return SomePerformer.type
-        }
+    class SomePlan {
+      function performerType() {
+        return SomePerformer.type
       }
-      
-      # In the scheduler...
-      performerType = plan.performerType()
-      performer = performerType()
+    }
+    
+    # In the scheduler...
+    performerType = plan.performerType()
+    performer = performerType()
 
-- Map performer type to plan type with look-up table.
+#### Unit Tests
 
-  Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
-  
-  Example pseudo-code:
-  
-      # In some initialization step...
-      scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
-      
-      # In the scheduler...
-      performerType = plan.performerTypeForPlan(plan)
-      performer = performerType()
+- [JavaScript](https://github.com/material-motion/material-motion-experiments-js/blob/develop/packages/runtime/src/__tests__/Scheduler-addPlan.test.ts)
 
-**Activity state**: Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
+### Activity state
+
+Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
 
 Pseudo-code example:
 
@@ -119,34 +113,6 @@ A scheduler is active if any of its performer instances are active.
 
 ---
 
-## Experimental ideas
-
-**Event: target activity state did change**: Any time a specific target changes its idle/active state it should fire an observable event.
-
-This is a more focused event than the "scheduler activity state did change".
-
-This event enables reactionary plans, i.e. registering new plans once a target has entered an idle state.
-
-    Transaction {
-      function addActivityStateObserverForTarget(target, function)
-    }
-    
-    transaction.addActivityStateObserverForTarget(target, function(newState) {
-      // Start a new transaction and commit it to the scheduler...
-    })
-
-NOTE: It may be more valuable to have performer-level idling. Target-level idling may not be helpful. It's unclear how performer-level idling would work, given that the outside system should generally be unaware of performers.
-
-    Transaction {
-      function addActivityStateObserverForPlan(plan, function)
-    }
-    
-    transaction.addActivityStateObserverForPlan(plan, function(newState) {
-      // Start a new transaction and commit it to the scheduler...
-    })
-
----
-
 ## Open topics
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
@@ -158,7 +124,25 @@ The following topics are open for discussion. They do not presently have a clear
 
 ## Proposed features
 
-**Tear down API**: Provide an API to tear down a scheduler.
+### Dynamic Plan ↔ Performer map
+
+#### Map performer type to plan type with look-up table.
+
+Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
+
+Example pseudo-code:
+  
+    # In some initialization step...
+    scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
+    
+    # In the scheduler...
+    performerType = plan.performerTypeForPlan(plan)
+    performer = performerType()
+
+
+### Tear down API
+
+####Provide an API to tear down a scheduler.
 
 This API would terminate all active performers and remove all registered plans.
 
@@ -168,11 +152,11 @@ Example pseudo-code:
 
     scheduler.tearDown()
 
-**Garbage-collecting performers**
+### Garbage-collecting performers
 
 To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
 
-The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) removes references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
+The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) is considering removing references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
 
 - According to the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) pattern, users are unlikely to notice a slow first frame in an animation.  This makes the first frame a good time to instantiate new objects.
 

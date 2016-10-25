@@ -4,6 +4,10 @@
 
 The state of a Scheduler or Performer when all of the plans that it's been provided have been performed.
 
+## bridge motion family
+
+A motion family that delegates out to a platform primitive or external library.  It's effectively a wrapper that allows a 3rd-party tool to be used in the Material Motion ecosystem.
+
 ## director
 
 An object created for the purposes of describing motion.

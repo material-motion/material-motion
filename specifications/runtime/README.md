@@ -20,19 +20,19 @@ This sentence introduces two important questions:
 1. How are plans provided to a runtime?
 1. How does a runtime know how to perform plans?
 
-To answer the first question we introduce two new types into the system: `Plan` and `Transaction`.
+To answer the first question we introduce our first type: `Plan`.
 
-> A plan is an object representing **what you want something to do**. A transaction aggregates requests for plan-target associations.
+> A plan is an object representing **what you want something to do**.
 
 To answer the second question we introduce two more types: the `Performer` and the `Scheduler`.
 
-> An performer's sole responsibility is to fulfill the contract defined by one or more plans. A scheduler is the entity that creates performers.
+> A performer's sole responsibility is to fulfill the contract defined by one or more plans. A scheduler is the entity that creates performers.
 
 Here's how these objects fit together:
 
-1. Plans are added to transactions.
-2. Transactions are committed to a scheduler.
-3. Schedulers create performers.
+1. Plans are added to a scheduler.
+2. Schedulers create performers.
+3. Performers fulfill the plans.
 
 In visual form:
 
@@ -43,6 +43,5 @@ Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.
 Or dive in to the engineering specifications:
 
 - [Plan](plan.md)
-- [Transaction](transaction.md)
 - [Performer](performer.md)
 - [Scheduler](scheduler.md)

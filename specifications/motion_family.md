@@ -1,6 +1,6 @@
 # Motion family
 
-A motion family is a software library that includes one or more Plan and Performer implementations.
+A **motion family** is a software library that includes one or more Plan and Performer implementations.
 
 Motion families focus on motion for a **single element**. Use [Directors](directors.md) for motion concerning more than one element.
 
@@ -17,9 +17,9 @@ For a library to be called a motion family it must satisfy the following minimal
 
 Families can be roughly categorized in two groups: delegation and composition.
 
-### Delegation families
+### Continuous families
 
-Delegates execution to an external system.
+Continuous execution via an external system.
 
 **Platform-specific bridge families**
 

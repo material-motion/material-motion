@@ -1,42 +1,46 @@
-# Performer composition specification
+# Performer composition feature specification
 
-Performers can emit transactions. This is a type of composition.
+Performers can emit new plans. This is a type of composition.
 
-|           | Android   | Apple     |
-| --------- |:---------:|:---------:|
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/3) | [Milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/10) |
-| Concerns |  | Emitter overlaps with particle emitter terminology |
+|  | Android | Apple |
+| --- | --- | --- |
+| First introduced | [Runtime 2.0.0](https://github.com/material-motion/material-motion-runtime-android/releases/tag/2.0.0) | [Runtime 3.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v3.0.0) |
 
 Composition enables the creation of higher-order plans. For example, a "Tossable" plan's performer might generate a "Draggable" and "AttachedSpring" plan. Or more simply, a "FadeIn" plan might compose out to a more general-purpose "Tween" plan.
 
-Composition is what will enable code reuse in the Material Motion ecosystem.
+Composition enables code reuse in the Material Motion ecosystem.
 
----
+## MVP
 
-**transactionEmitter API**: A performer may be provided with a transaction emitter object.
+**PlanEmitter API**: A performer may be provided with a plan emitter object.
 
-> The Performer may choose not to implement this API.
+> The Performer may choose not to receive such an object.
 
-A transaction emitter declaration might look like so:
+A plan emitter declaration might look like so:
 
-    protocol TransactionEmitter {
-      func emit(transaction: Transaction)
-    }
+```
+protocol PlanEmitter {
+  func emitPlan(Plan)
+}
+```
 
-A performer can be provided with a transaction emitter.
+A performer can be provided with a plan emitter.
 
 Example pseudo-code protocol that a performer could conform to:
 
-    protocol ComposablePerforming {
-      func set(transactionEmitter: TransactionEmitter)
-    }
+```
+protocol ComposablePerforming {
+  func set(planEmitter: PlanEmitter)
+}
+```
 
 Pseudo-code of a performer emitting new plans:
 
-    function onGesture(gesture) {
-      if gesture.state == Ended {
-        let transaction = Transaction()
-        transaction.add(plan: Spring(), to: self)
-        self.emitter.emit(transaction)
-      }
-    }
+```
+function onGesture(gesture) {
+  if gesture.state == Ended {
+    planEmitter.emitPlan(Spring())
+  }
+}
+```
+

@@ -6,11 +6,11 @@ Status of this document:
 
 This is the engineering specification for the `TransitionController` object.
 
+## Overview
+
 The `TransitionController` is the bridge between the platform's transitioning architecture and the `TransitionDirector` type. Note that a `TransitionController` can make use of a `TransitionRunner`, an object that handles the director and the scheduler, to just focus on the the platform's transitioning API. This document assumes no such object is being used.
 
----
-
-<p style="text-align:center"><tt>MVP</tt></p>
+## MVP
 
 **Concrete type**: A `TransitionController` is a concrete type.
 
@@ -80,26 +80,6 @@ Example pseudo-code:
 
 This differs greatly from platform to platform.
 
-<p style="text-align:center"><tt>/MVP</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: director stack</tt></p>
-
-TODO: Discuss director stack.
-
-<p style="text-align:center"><tt>/feature: director stack</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: cancelable transitions</tt></p>
-
-TODO: Discuss transitions whose direction can change, i.e. "are cancelable". Will need to read the director's final transition when the transition finishes.
-
-<p style="text-align:center"><tt>/feature: director stack</tt></p>
-
----
-
-## Open Questions ##
+## Open Questions
 
 - How do we handle directors that never enter the .Active state?

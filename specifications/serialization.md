@@ -21,24 +21,29 @@ Serialization enables a wide variety of use cases:
   * Able to modify parameters of existing Plans and see changes immediately.
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
+
 Example pseudo-code reading a transaction from a stream and committing it to a scheduler:
 
 ```
 let serializer = MotionSerializer
 let transaction = serializer.transactionFromStream(stream)
-scheduler.commit(transaction: transaction)
+transaction.commitToScheduler(scheduler)
 ```
 
 ## Protocol
 
 Header:
 
-    Content-type: <e.g. json, proto>
-    Length: <# of bytes>
+```
+Content-type: <e.g. json, proto>
+Length: <# of bytes>
+```
 
 Body:
 
-    Payload in content-type encoding
+```
+Payload in content-type encoding
+```
 
 ---
 

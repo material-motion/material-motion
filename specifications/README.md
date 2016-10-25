@@ -2,7 +2,7 @@
 
 This section of the book defines engineering specifications and concepts.
 
-The tone is meant to be both 🌟 aspirational 🌟 and 📚 educational 📚.
+The tone is meant to be both **aspirational** and **educational**.
 
 The audience is software engineers interested in building motion and interaction systems.
 
@@ -47,11 +47,32 @@ Creators should rarely, if ever, have to acquire an understanding of runtime eng
 
 The Starmap is written for the runtime engineering group.
 
+## Methods of positioning these expectations
+
+Provide two categories of educational material: **using** material motion and **extending** material motion.
+
+Using material motion will target app creators.
+
+Extending material motion will target director/motion creators.
+
 ## Knowledge iceberg
 
 The following diagram shows the required amount of knowledge for each group.
 
 ![](../_assets/Roles.svg)
+
+# The design/engineering handoff
+
+One hopeful outcome of the Material Motion project is to remove the design/engineering "hand off". By encouring both designers and engineers to think of motion in a common language, we hope to see the line blur between what is motion design and what is engineering.
+
+**Guaranteed near future**: not far from the status quo.
+
+![](../_assets/Handoff-v1.svg)
+
+**The ideal future**: design/engineering working in tandem to create interactive, production-ready experiences.
+
+![](../_assets/Handoff-v2.svg)
+
 
 # Tech tree
 

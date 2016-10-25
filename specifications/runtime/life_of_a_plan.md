@@ -31,58 +31,28 @@ rotatable = Rotatable()
 
 ![](../../_assets/LifeOfAPlan-step2.svg)
 
-### Step 3: Start a transaction and commit it
+### Step 3: Add the plans to the scheduler
 
 Let's say we have two targets - a circle and a square - to which we want to associate our plans.
 
 ![](../../_assets/LifeOfAPlan-step3-targets.svg)
 
-First we must create a transaction.
+Plans are associated to targets:
 
 ```
-transaction = Transaction()
+scheduler.addPlan(animation, to: circleView)
+scheduler.addPlan(draggable, to: squareView)
+scheduler.addPlan(pinchable, named: "name1", to: squareView)
+scheduler.addPlan(rotatable, named: "name2", to: squareView)
+scheduler.removePlan(named: "name2", from: squareView)
+scheduler.addPlan(draggable, to: circleView)
 ```
 
-Plans are associated to targets via the transaction.
+After executing the above code, the scheduler's internal state might resemble this:
 
-```
-transaction.add(animation, circleView)
-transaction.add(draggable, squareView)
-transaction.add(pinchable, "name1", squareView)
-transaction.add(rotatable, "name2", squareView)
-transaction.remove("name2", squareView)
-transaction.add(draggable, circleView)
-```
+![](../../_assets/LifeOfAPlan-step4.svg)
 
-The transaction's log might resemble this:
-
-```
-> transaction.log
-[
-  {action:"add",    target: circleView, plan: FadeIn                  },
-  {action:"add",    target: squareView, plan: Draggable               },
-  {action:"add",    target: squareView, plan: Pinchable, name: "name1"},
-  {action:"add",    target: squareView, plan: Rotatable, name: "name2"},
-  {action:"remove", target: squareView,                  name: "name2"},
-  {action:"add",    target: circleView, plan: Draggable               },
-]
-```
-
-A transaction must be committed to a scheduler in order for it to take affect.
-
-```
-scheduler.commit(transaction)
-```
-
-After committing the above transaction, the scheduler's internal state might resemble this:
-
-![](../../_assets/TargetManagers.svg)
-
-> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2" in this transaction.
-
-The scheduler is now expected to fulfill the committed plans.
-
-### Step 4: Scheduler creates performers
+> Note that `Rotatable` is not listed. This is because we also removed any plan named "name2".
 
 The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its fulfillment.
 
@@ -92,27 +62,7 @@ We'll assume a function exists that returns a performer capable of executing a t
 function performerForPlan(Plan, target, existingPerformers) -> Performer
 ```
 
-Recall the transaction log we'd explored above:
-
-```
-> transaction.log
-[
-  {action:'add",    target: circleView, plan: FadeIn                  },
-  {action:'add",    target: squareView, plan: Draggable               },
-  {action:'add",    target: squareView, plan: Pinchable, name: "name1"},
-  {action:'add",    target: squareView, plan: Rotatable, name: "name2"},
-  {action:'remove", target: squareView,                  name: "name2"},
-  {action:'add",    target: circleView, plan: Draggable               },
-]
-```
-
-Recall that when we committed this transaction to the scheduler our scheduler had the following representation of the committed plans:
-
-![](../../_assets/TargetManagers.svg)
-
-The scheduler now creates performers by calling our hypothetical `performerForPlan` on each target's plans.
-
-![](../../_assets/LifeOfAPlan-step4.svg)
+The scheduler creates performers by calling our hypothetical `performerForPlan` on each provided plan.
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
@@ -120,18 +70,18 @@ We've created three performers in total. `circleView` has two performers. `squar
 > 
 > A single performer instance is created for each _type_ of plan registered to a target. This allows performers to maintain coherent state even when multiple plans have been committed.
 
-### Step 5: Provide plans to performers
+### Step 3a: Provide plans to performers
 
-The scheduler now provides each plan instance to the relevant performer. This allows each performer to translate plans in to actionable logic.
+The scheduler passes each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
 
-### Step 6: Performers execute plans
+### Step 4: Performers execute plans
 
-A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: delegation and composition.
+A performer is expected to fulfill the contract defined by its plan. Performers can fulfill their contract in two ways: continuously and via composition.
 
-A performer that delegates its execution will
+A continuous performer will
 
-1. Acquire a token indicating that delegated work will start.
-2. Initiate the delegated work.
-3. Release the token upon completion of the delegated work.
+1. acquire a token indicating that continuous work will start,
+2. initiate the continuous work, and then
+3. release the token upon completion of the continuous work.
 
-A performer that composes its execution will emit new plans. These new plans may create performers that emit new plans. Eventually the plans will create performers that delegate their execution.
+A performer that composes its execution will emit new plans. These new plans may create performers that emit new plans, and so on.

@@ -1,63 +1,76 @@
-# TransitionDirector specification
+# ContextTransitionDirector specification
 
-This is the engineering specification for the `TransitionDirector` object.
+This is the engineering specification for the `ContextTransitionDirector` type.
 
-A `TransitionDirector` provides essential scaffolding for managing a transition. A `TransitionDirector` class is instantiated by a `TransitionController`.
+## Overview
 
-`TransitionDirector` conforms to the `Director` protocol.
+A `ContextTransitionDirector` creates the plans that shape a transition's motion and interaction.
 
-Printable tech tree/checklist:
+## Features
 
-![](../_assets/TransitionDirectorTechTree.svg)
+* [Context element](feature-context-element.md)
+* [Transition preconditions](feature-transition-preconditions.md)
 
----
+## MVP
 
-<p style="text-align:center"><tt>MVP</tt></p>
-
-**Concrete type**: A `TransitionDirector` is a concrete type that adheres to the informal Director APIs.
-
-Example pseudo-code:
-
-    TransitionDirector {
-      function setUp()
-    }
-
-**Subclassing**: This class is designed to be subclassed.
-
-The sub-class is expected to implement the functions specified in the `Director` protocol.
+**Abstract type**: `ContextTransitionDirector` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
-    MyTransitionDirector: TransitionDirector {
-      function setUp() {
-        // Perform set up operations
-      }
-    }
+```
+protocol ContextTransitionDirector {}
+```
 
-**from/to APIs**: Provide storage for information relevant to the transition.
+**TransitionContext type**: Provide a concrete type that includes important transition information.
 
-Example pseudo-code:
+```
+class ContextTransitionDirector {
+  let initialDirection: TransitionDirection
+}
+```
 
-    MyTransitionDirector: TransitionDirector {
-      public var fromViewController
-      public var toViewController
-      public var transitionDirection
-    }
-
-**Transition direction type**: Provide a `TransitionDirection` type with two opposite values.
-
-Many synonyms exist. Use that which applies best to your platform.
-
-- present/dismiss
-- push/pop
-- forward/back
+**Initialization API**: Define a required API that allows a director to receive a `TransitionContext`.
 
 Example pseudo-code:
 
-    enum TransitionDirection {
-      .Present
-      .Dismiss
-    }
+```
+protocol ContextTransitionDirector {
+  init(TransitionContext)
+}
+```
+
+**setUp API**: Define a required API that allows a director to set up its initial plans.
+
+Example pseudo-code:
+
+```
+protocol ContextTransitionDirector {
+  function setUp()
+}
+```
+
+**fore/back APIs**: Provide storage for information relevant to the transition.
+
+Example pseudo-code:
+
+```
+ContextTransitionDirector MyTransitionDirector {
+  public var foreViewController
+  public var backViewController
+  public var transitionDirection: TransitionDirection
+}
+```
+
+**TransitionDirection type**: Provide a `TransitionDirection` type with two opposite values.
+
+Example pseudo-code:
+
+```
+enum TransitionDirection {
+  case forward
+  case backward
+}
+```
 
 **Initial transition direction API**: Transition directors have a read-only `initialTransitionDirection` API.
 
@@ -65,15 +78,12 @@ Provide the initial transition direction of the transition to the director's ini
 
 Example pseudo-code:
 
-    enum TransitionDirection {
-      .Present
-      .Dismiss
-    }
-    
-    TransitionDirector {
-      readonly var initialTransitionDirection
-      init(initialTransitionDirection)
-    }
+```
+TransitionDirector {
+  readonly var initialTransitionDirection: TransitionDirection
+  init(initialTransitionDirection)
+}
+```
 
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
@@ -83,10 +93,12 @@ This API is not accessible to sub-classes.
 
 Example pseudo-code:
 
-    TransitionDirector {
-      private readonly var replicaController
-      init(replicaController)
-    }
+```
+TransitionDirector {
+  private readonly var replicaController
+  init(replicaController)
+}
+```
 
 **ReplicaControllerDelegate API**: Transition directors can assign a `replicaControllerDelegate`.
 
@@ -94,55 +106,15 @@ Subclasses are expected to set a custom replica controller delegate using this A
 
 Example pseudo-code:
 
-    TransitionDirector {
-      var replicaControllerDelegate
-    }
+```
+TransitionDirector {
+  var replicaControllerDelegate
+}
+```
 
-<p style="text-align:center"><tt>/MVP</tt></p>
+## Open Questions
 
----
+* How might we avoid subclassing this type?
+* Should we provide `TransitionDirector` with a timeline?
+* How does the `TransitionDirector` change the direction of the transition?
 
-<p style="text-align:center"><tt>feature: Context element</tt></p>
-
-The context element is what that the user interacted with in order to initiate the transition.
-
-**Context element API**: Provide an API for retrieving the transition's context element.
-
-Example pseudo-code:
-
-    TransitionDirector {
-      readonly var contextElement
-    }
-
-<p style="text-align:center"><tt>/feature: Context</tt></p>
-
----
-
-<p style="text-align:center"><tt>feature: Transition preconditions</tt></p>
-
-A transition can register certain pre-conditions. If any pre-condition fails, the director will not be selected for use in the transition.
-
-**Preconditions API**: Provide an API for registering new preconditions.
-
-Example pseudo-code:
-
-    TransitionDirector {
-      function registerPrecondition(function)
-      
-      init() {
-        registerPrecondition(function() {
-          // Verify that some element exists
-          return elementExists
-        })
-      }
-    }
-
-<p style="text-align:center"><tt>/feature: Transition preconditions</tt></p>
-
----
-
-## Open Questions ##
-
-- How might we avoid subclassing this type?
-- Should we provide `TransitionDirector` with a timeline?
-- How does the `TransitionDirector` change the direction of the transition?

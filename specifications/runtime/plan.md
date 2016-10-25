@@ -5,7 +5,7 @@ This is the engineering specification for the `Plan` abstract type.
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
 | First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
-| Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | &nbsp; |
+| Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | [Life of a plan](https://github.com/material-motion/material-motion-runtime-objc#how-to-create-a-new-plan-and-performer-type) |
 
 ## Features
 
@@ -37,10 +37,12 @@ Pseudo-code example:
 
 **Performer type API**: Provide an API that returns an instantiable type of performer that can execute this plan.
 
+Emphasis: `performerType` must **not** be an instance of an object. It must be an object type that the scheduler can instantiate at a later time. This restriction ensures that plans or app-level logic can't hand data directly to a performer instance.
+
 Pseudo-code example:
 
     protocol Plan {
-      var performerType
+      performerType: Class
     }
 
 **Copyable**: Plans can be copied.
