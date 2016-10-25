@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| N/A | Drafting |
+| [`RemoveSpring` plan](https://groups.google.com/forum/#!topic/material-motion/UTnXKlEYOOQ) | In review |
 
 ## Example: Tossable elements
 
