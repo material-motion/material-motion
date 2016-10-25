@@ -7,3 +7,7 @@ A context transition causes a visual change from one element hierarchy to anothe
 - Web: URL transitions
 
 The considerations for each platform are diverse and often distinct. To reflect this, the context transitions spec is split into two parts: **common specs** and **platform specs**.
+
+## Common specs
+
+- [Directionality](directionality.md)
