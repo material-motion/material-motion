@@ -35,7 +35,7 @@ function setUp() {
 Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
 
 ```
-function setUp(transaction) {
+function setUp() {
   var tween = TweenBetween(.opacity,
                            timeline: timeline,
                            segment: .entire,
