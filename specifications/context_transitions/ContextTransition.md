@@ -49,4 +49,3 @@ These values map from the platform's from/to values:
 |:----------|:-----|:---|
 | Forward | from | to |
 | Backward | to | from |
-
