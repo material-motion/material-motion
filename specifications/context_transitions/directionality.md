@@ -58,15 +58,13 @@ In a back/fore transition, the above context changes would look like so:
 
 Note that our `back` and `fore` variables now has just two distinct permutations. If we were to write the B/C transitions with these variables our code might look like so:
 
+```
+let animation = TweenBetween("opacity",
+                             window: transition.window,
+                             segment: .entire,
+                             back: 0
+                             fore: 1)
+addPlan(animation, to: transition.foreViewController.view)
+```
 
-
-Note that the final transition's arrow is pointed to the left. We always keep contexts on the same named "side" of the transition, regardless of direction.
-
-The left side of the transition is the "back" side.
-
-The right side of the transition is the "fore" side.
-
-A transition can either go **forward** or **backward**.
-
-This is an intentional departure from the conventional terminology of _source_ and _destination_.
-
+`transition.foreViewController` is a fixed value, regardless of whether we're transitioning **forward** or **backward**. This eliminates the need to express an entire logical path of code.
