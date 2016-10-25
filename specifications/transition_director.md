@@ -54,7 +54,7 @@ protocol ContextTransitionDirector {
 Example pseudo-code:
 
 ```
-MyTransitionDirector: ContextTransitionDirector {
+ContextTransitionDirector MyTransitionDirector {
   public var foreViewController
   public var backViewController
   public var transitionDirection: TransitionDirection
