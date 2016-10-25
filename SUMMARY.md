@@ -38,7 +38,7 @@
        * [Life of a context transition director](specifications/life_of_a_context_transition_director.md)
        * [ContextTransition](specifications/context_transitions/ContextTransition.md)
            * [Feature: interruptible](specifications/context_transitions/feature_interruptible.md)
-       * [ContextTransitionDirector](specifications/transition_director.md)
+       * [ContextTransitionDirector](specifications/context_transitions/ContextTransitionDirector.md)
            * [Feature: context element](specifications/feature-context-element.md)
            * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
            * [Feature: replication](specifications/context_transitions/feature_replication.md)
