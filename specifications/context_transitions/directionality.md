@@ -6,7 +6,7 @@ The following contexts exist in a hypothetical application:
 A    B    C
 ```
 
-Our application likely starts at context A. The user can enter context B, then context C, then move back to context B. Each context change can be represented by a transition. Writing out the three transitions:
+Our application starts at context A. The user can change to context B, then context C, then back to context B. Each context change can be represented by a **context transition**. Writing out the three transitions:
 
 ```
 A => B
