@@ -14,6 +14,12 @@ There are two ways to think about how we move between contexts: **from/to** and 
 
 In the traditional from/to model of transitions, the above context changes would have the following variable values:
 
+| `from` | `to` |
+|:------:|:------:|
+| `A` | `B` |
+| `B` | `C` |
+| `C` | `B` |
+
 1. **from** `A` **to** `B`
 2. **from** `B` **to** `C`
 3. **from** `C` **to** `B`
@@ -38,15 +44,17 @@ if transition.initialDirection == .forward {
 
 Note that we have to check `initialDirection` in order to determine which view to add the fade plan to.
 
-In practice, the B/C and C/B transitions are often mirror images of one another. What if we could write one transition that captured both directions?
+In practice, the B/C and C/B transitions are often mirror images of one another. Is there a better way to think about transitions with this in mind?
 
 ## back/fore transitions
 
 In a back/fore transition, the above context changes would look like so:
 
-- **Direction**: `forward` **back**: `A` **fore**: `B`
-- **Direction**: `forward` **back**: `B` **fore**: `C`
-- **Direction**: `backward` **back**: `B` **fore**: `C`
+| `initialDirection` | `back` | `fore` |
+|-------------------:|:------:|:------:|
+| forward | `A` | `B` |
+| forward | `B` | `C` |
+| backward | `B` | `C` |
 
 Note that our `back` and `fore` variables now has just two distinct permutations. If we were to write the B/C transitions with these variables our code might look like so:
 
