@@ -45,7 +45,7 @@
        * [Platform: iOS](specifications/context_transitions/platform/ios/README.md)
            * [Life of a transition controller](specifications/context_transitions/platform/ios/life_of_a_transition_controller.md)
            * [TransitionController](specifications/context_transitions/platform/ios/TransitionController.md)
-               * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
+               * [Feature: cancelable transitions](specifications/context_transitions/platform/ios/feature_cancelable_transitions.md)
                * [Feature: director stack](specifications/feature-director-stack.md)
            * [TransitionDriver](specifications/context_transitions/platform/ios/TransitionDriver.md)
    * [Domain mapping](specifications/runtime/feature_nested_timelines.md)
