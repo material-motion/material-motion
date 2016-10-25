@@ -21,6 +21,16 @@ Example pseudo-code:
 protocol TransitionDirector {}
 ```
 
+**setUp API**: Define a required API that allows a director to set up its initial plans.
+
+Example pseudo-code:
+
+```
+protocol TransitionDirector {
+  function setUp()
+}
+```
+
 **fore/back APIs**: Provide storage for information relevant to the transition.
 
 Example pseudo-code:
