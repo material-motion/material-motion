@@ -28,7 +28,7 @@
        * [🚩 Pinchable](specifications/plans/Pinchable.md)
        * [📢 RemoveSpring](specifications/plans/RemoveSpring.md)
        * [🚩 Rotatable](specifications/plans/Rotatable.md)
-       * [ScrollReactor](specifications/plans/ScrollReactor.md)
+       * [📝 ScrollReactor](specifications/plans/ScrollReactor.md)
        * [🚩 SpringTo](specifications/plans/SpringTo.md)
        * [🚩 Tween](specifications/plans/Tween.md)
        * [📢 TweenBetween](specifications/plans/TweenBetween.md)
