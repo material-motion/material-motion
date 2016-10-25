@@ -39,7 +39,7 @@
        * [Directionality](specifications/context_transitions/directionality.md)
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
        * [ContextTransition](specifications/context_transitions/ContextTransition.md)
-       * [TransitionDirector](specifications/transition_director.md)
+       * [ContextTransitionDirector](specifications/transition_director.md)
            * [Feature: context element](specifications/feature-context-element.md)
            * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
        * [Platform spec: iOS](specifications/context_transitions/platforms/ios/README.md)
