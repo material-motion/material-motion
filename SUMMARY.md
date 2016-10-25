@@ -41,6 +41,7 @@
        * [ContextTransitionDirector](specifications/transition_director.md)
            * [Feature: context element](specifications/feature-context-element.md)
            * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
+           * Feature: replication
        * [Platform spec: iOS](specifications/context_transitions/platforms/ios/README.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [TransitionController](specifications/transition_controller.md)
