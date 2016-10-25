@@ -20,6 +20,22 @@ In the traditional from/to model of transitions, the above context changes would
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
+If we wanted to implement the B/C and C/B transition, our code might look like so:
+
+```
+let animation = Tween("opacity", duration: transitionDurationForUIKitAnimations())
+
+if self.initialDirection == .forward {
+  animation.from = 0
+  animation.to = 1
+  addPlan(animation, to: toViewController.view)
+} else {
+  animation.from = 1
+  animation.to = 0
+  addPlan(animation, to: fromViewController.view)
+}
+```
+
 In practice, the B/C and C/B transitions are often mirror images of one another. What if we could write one transition that captured both directions?
 
 ## back/fore transitions
