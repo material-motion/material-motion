@@ -6,6 +6,8 @@ A context transition causes a visual change from one element hierarchy to anothe
 - Android: Activity transitions
 - Web: URL transitions
 
+The considerations for each platform are diverse and often distinct.
+
 ## Directionality
 
 Consider the following potential screens in an application:
