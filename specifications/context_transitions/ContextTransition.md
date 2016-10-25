@@ -1,5 +1,9 @@
 # ContextTransition
 
+| Discussion thread | Status |
+|:------------------|:-------|
+| ![](../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+
 This is the engineering specification for the `ContextTransition` concrete type.
 
 ## Overview
