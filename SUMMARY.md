@@ -18,7 +18,7 @@
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
        * [Feature: transition segment](specifications/runtime/feature_transition_segment.md)
        * [Feature: transition window](specifications/runtime/feature_transition_window.md)
-   * [Motion language](specifications/motion-family.md)
+   * [Motion language](specifications/plans/README.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [🚩 DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
