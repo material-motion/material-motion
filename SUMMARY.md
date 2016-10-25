@@ -62,6 +62,7 @@
        * [Plan serialization](specifications/plan_serialization.md)
        * [Transaction serialization](specifications/transaction_serialization.md)
        * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
+   * Motion family
 * [User journeys](user_journeys/README.md)
    * [Motion](user_journeys/motion.md)
    * [Engineering](user_journeys/engineering.md)
