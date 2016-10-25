@@ -1,8 +1,8 @@
 # Tween
 
-| Discussion thread | Status |
-|:------------------|:-------|
-| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | In review |
+| Discussion thread | Date initiated | Status |
+|:------------------|:-------|:-------|
+| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | Oct 18, 2016 | In review |
 
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
