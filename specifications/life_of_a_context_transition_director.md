@@ -24,7 +24,7 @@ Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/mat
 ```
 class Fade: TransitionDirector {
   function setUp() {
-    var tween = Tween(.opacity, duration: transitionDuration())
+    var tween = Tween(.opacity, duration: transition.duration)
     tween.duration = 0.3
     if initialDirection == .forward {
       tween.from = 0
@@ -33,7 +33,7 @@ class Fade: TransitionDirector {
       tween.from = 1
       tween.to = 0
     }
-    addPlan(tween, to: forwardElement)
+    transition.addPlan(tween, to: forwardElement)
   }
 }
 ```
@@ -43,11 +43,11 @@ Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/
 ```
 function setUp() {
   var tween = TweenBetween(.opacity,
-                           timeline: timeline,
-                           segment: .entire,
+                           timeline: transition.timeline,
+                           segment: transition.entire,
                            back: 0,
                            fore: 1)
-  addPlan(tween, to: forwardElement)
+  transition.addPlan(tween, to: forwardElement)
 }
 ```
 
