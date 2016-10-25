@@ -50,11 +50,11 @@ In practice, the B/C and C/B transitions are often mirror images of one another.
 
 In a back/fore transition, the above context changes would look like so:
 
-| `initialDirection` | `back` | `fore` |
-|-------------------:|:------:|:------:|
-| forward | `A` | `B` |
-| forward | `B` | `C` |
-| backward | `B` | `C` |
+| Transition # | `initialDirection` | `back` | `fore` |
+|-------------:|-------------------:|:------:|:------:|
+| 1. | forward | `A` | `B` |
+| 2. | forward | `B` | `C` |
+| 3. | backward | `B` | `C` |
 
 Note that our `back` and `fore` variables now has just two distinct permutations. If we were to write the B/C transitions with these variables our code might look like so:
 
