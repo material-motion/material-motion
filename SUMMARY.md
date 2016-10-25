@@ -37,6 +37,7 @@
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Context transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
+       * Platform spec: iOS
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [TransitionDirector](specifications/transition_director.md)
@@ -46,7 +47,6 @@
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
            * [Feature: director stack](specifications/feature-director-stack.md)
        * [TransitionDriver](specifications/transitiondriver.md)
-       * Platform spec: iOS
    * [Directors](specifications/directors.md)
        * [Interactions](specifications/interactions.md)
            * [Interaction Director](specifications/interaction_director.md)
