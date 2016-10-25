@@ -21,6 +21,10 @@ Example pseudo-code:
 protocol TransitionDirector {}
 ```
 
+**TransitionContext type**: Provide a concrete type that includes important transition information.
+
+
+
 **Initialization API**: Define a required API that allows a director to receive a `TransitionContext`.
 
 Example pseudo-code:
