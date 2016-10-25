@@ -36,10 +36,11 @@ Or if our plans have a concept of direction:
 
 ```
 function setUp(transaction) {
-  var tween = TweenBetween(.opacity, duration: transitionDuration())
-  tween.duration = 0.3
-  tween.back = 0
-  tween.fore = 1
+  var tween = TweenBetween(.opacity,
+                           timeline: timeline,
+                           segment: .entire,
+                           back: 0,
+                           fore: 1)
   addPlan(tween, to: forwardElement)
 }
 ```
