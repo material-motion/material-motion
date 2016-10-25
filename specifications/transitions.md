@@ -1,10 +1,6 @@
-Status of this document:
+# Context transitions
 
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
-# Transitions
-
-A transition causes a visual change from one element hierarchy to another.
+A context transition causes a visual change from one element hierarchy to another.
 
 ## Directionality
 
