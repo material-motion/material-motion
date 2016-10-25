@@ -68,3 +68,5 @@ addPlan(animation, to: transition.foreViewController.view)
 ```
 
 `transition.foreViewController` is a fixed value, regardless of whether we're transitioning **forward** or **backward**. This eliminates the need to express an entire logical path of code.
+
+Context transitions use the `back`/`fore` model in order to minimize the amount of code required to express bi-directional transitions.
