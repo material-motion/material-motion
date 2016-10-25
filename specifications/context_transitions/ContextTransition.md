@@ -31,6 +31,13 @@ class TransitionContext {
   let currentDirection: TransitionWindowDirection
 ```
 
+**Duration API**: Provide a read-only value of the transition's duration.
+
+```
+class TransitionContext {
+  let duration: TimeInterval
+```
+
 **back/fore API**: Provide a read-only `back` and `fore` value.
 
 The type of this value is platform-dependent.
