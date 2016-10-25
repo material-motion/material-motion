@@ -22,7 +22,7 @@ class FadeContextTransitionDirector: ContextTransitionDirector {
 Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
-class Fade: TransitionDirector {
+class FadeContextTransitionDirector: ContextTransitionDirector {
   function setUp() {
     var tween = Tween(.opacity, duration: transition.duration)
     if initialDirection == .forward {
@@ -40,13 +40,15 @@ class Fade: TransitionDirector {
 Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
 
 ```
-function setUp() {
-  var tween = TweenBetween(.opacity,
-                           timeline: transition.timeline,
-                           segment: transition.entire,
-                           back: 0,
-                           fore: 1)
-  transition.addPlan(tween, to: forwardElement)
+class FadeContextTransitionDirector: ContextTransitionDirector {
+  function setUp() {
+    var tween = TweenBetween(.opacity,
+                             timeline: transition.timeline,
+                             segment: transition.entire,
+                             back: 0,
+                             fore: 1)
+    transition.addPlan(tween, to: forwardElement)
+  }
 }
 ```
 
