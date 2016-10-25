@@ -26,7 +26,7 @@ In the traditional from/to model of transitions, the above context changes would
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
-If we wanted `B => C` to fade `C` in and `C => B` to fade `C` out, our code might look like so:
+If we wanted `B => C` to fade `C` in and `C => B` to fade `C` out, we might try to write one function that looks like so:
 
 ```
 let animation = Tween("opacity", duration: transition.duration)
