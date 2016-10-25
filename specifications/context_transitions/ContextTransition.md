@@ -45,7 +45,7 @@ class TransitionContext {
 
 These values map from the platform's from/to values:
 
-| Direction | From | To |
+| Direction | `back ==` | `fore ==` |
 |:----------|:-----|:---|
-| Forward | back | fore |
-| Backward | fore | back |
+| Forward | from | to |
+| Backward | to | from |
