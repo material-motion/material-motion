@@ -6,26 +6,22 @@ This is the engineering specification for the `ContextTransition` concrete type.
 
 A `ContextTransition` defines the essential information required by a `ContextTransitionDirector`.
 
-## Features
-
-* [Context element](feature-context-element.md)
-* [Transition preconditions](feature-transition-preconditions.md)
-
 ## MVP
 
-**Abstract type**: `TransitionDirector` is a protocol, if your language has that concept.
+**Concrete type**: `ContextTransition` is an object.
 
 Example pseudo-code:
 
 ```
-protocol TransitionDirector {}
+class ContextTransition {
+}
 ```
 
-**TransitionContext type**: Provide a concrete type that includes important transition information.
+**Initial direction API**: Provide a read-only value of the transition's initial direction.
 
 ```
 class TransitionContext {
-  let initialDirection: TransitionDirection
+  let initialDirection: TransitionWindowDirection
 }
 ```
 
