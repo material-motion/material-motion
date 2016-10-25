@@ -1,4 +1,4 @@
-# Life of a transition director
+# Life of a context transition director
 
 Let's walk through the life of a simple fade transition director.
 
