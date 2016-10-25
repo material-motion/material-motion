@@ -6,7 +6,7 @@ Let's walk through the life of a simple fade context transition director.
 
 ### Step 1: Define a new ContextTransitionDirector type
 
-This object will provide transition-specific plans.
+This object conforms to the `ContextTransitionDirector` type.
 
 ```
 class FadeContextTransitionDirector: ContextTransitionDirector {
@@ -32,7 +32,7 @@ class FadeContextTransitionDirector: ContextTransitionDirector {
       tween.from = 1
       tween.to = 0
     }
-    transition.addPlan(tween, to: forwardElement)
+    transition.addPlan(tween, to: transition.fore)
   }
 }
 ```
@@ -47,7 +47,7 @@ class FadeContextTransitionDirector: ContextTransitionDirector {
                              segment: transition.entire,
                              back: 0,
                              fore: 1)
-    transition.addPlan(tween, to: forwardElement)
+    transition.addPlan(tween, to: transition.fore)
   }
 }
 ```
