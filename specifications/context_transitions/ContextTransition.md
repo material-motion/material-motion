@@ -42,3 +42,10 @@ class TransitionContext {
   let back: UIViewController
   let fore: UIViewController
 ```
+
+These values map from the platform's from/to values:
+
+| Direction | From | To |
+|:----------|:-----|:---|
+| Forward | back | fore |
+| Backward | fore | back |
