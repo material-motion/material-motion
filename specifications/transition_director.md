@@ -38,37 +38,3 @@ Example pseudo-code:
 protocol ContextTransitionDirector {
   function setUp()
 ```
-
-**ReplicaController API**: Transition directors have a private read-only `replicaController` API.
-
-Provide the replica controller to the director's initializer.
-
-This API is not accessible to sub-classes.
-
-Example pseudo-code:
-
-```
-TransitionDirector {
-  private readonly var replicaController
-  init(replicaController)
-}
-```
-
-**ReplicaControllerDelegate API**: Transition directors can assign a `replicaControllerDelegate`.
-
-Subclasses are expected to set a custom replica controller delegate using this API.
-
-Example pseudo-code:
-
-```
-TransitionDirector {
-  var replicaControllerDelegate
-}
-```
-
-## Open Questions
-
-* How might we avoid subclassing this type?
-* Should we provide `TransitionDirector` with a timeline?
-* How does the `TransitionDirector` change the direction of the transition?
-
