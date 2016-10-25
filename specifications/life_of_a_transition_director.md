@@ -15,11 +15,11 @@ TransitionDirector Fade {
 
 ### Step 2: Implement the director's setUp method
 
-Our `setUp` will use a simple tween plan:
+Our `setUp` will use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
 function setUp() {
-  var tween = BasicTween(.opacity, duration: transitionDuration())
+  var tween = Tween(.opacity, duration: transitionDuration())
   tween.duration = 0.3
   if initialDirection == .forward {
     tween.from = 0
