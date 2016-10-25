@@ -34,7 +34,7 @@ class ContextTransitionDirector {
 Example pseudo-code:
 
 ```
-protocol TransitionDirector {
+protocol ContextTransitionDirector {
   init(TransitionContext)
 }
 ```
@@ -44,7 +44,7 @@ protocol TransitionDirector {
 Example pseudo-code:
 
 ```
-protocol TransitionDirector {
+protocol ContextTransitionDirector {
   function setUp()
 }
 ```
@@ -54,7 +54,7 @@ protocol TransitionDirector {
 Example pseudo-code:
 
 ```
-MyTransitionDirector: TransitionDirector {
+MyTransitionDirector: ContextTransitionDirector {
   public var foreViewController
   public var backViewController
   public var transitionDirection: TransitionDirection
