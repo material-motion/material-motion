@@ -1,10 +1,10 @@
 # ContextTransitionDirector specification
 
-This is the engineering specification for the `TransitionDirector` type.
+This is the engineering specification for the `ContextTransitionDirector` type.
 
 ## Overview
 
-A `TransitionDirector` creates the plans that shape a transition's motion and interaction.
+A `ContextTransitionDirector` creates the plans that shape a transition's motion and interaction.
 
 ## Features
 
