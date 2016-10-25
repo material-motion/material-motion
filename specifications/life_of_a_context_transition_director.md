@@ -1,34 +1,36 @@
 # Life of a context transition director
 
-Let's walk through the life of a simple fade transition director.
+Let's walk through the life of a simple fade context transition director.
 
 > Remember, any code you see here is pseudo-code.
 
-### Step 1: Create a new TransitionDirector type
+### Step 1: Define a new ContextTransitionDirector type
 
 This object will provide transition-specific plans.
 
 ```
-TransitionDirector Fade {
+class Fade: TransitionDirector {
 }
 ```
 
-### Step 2: Implement the director's setUp method
+### Step 2: Implement the setUp method
 
 Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
-function setUp() {
-  var tween = Tween(.opacity, duration: transitionDuration())
-  tween.duration = 0.3
-  if initialDirection == .forward {
-    tween.from = 0
-    tween.to = 1
-  } else {
-    tween.from = 1
-    tween.to = 0
+class Fade: TransitionDirector
+  function setUp() {
+    var tween = Tween(.opacity, duration: transitionDuration())
+    tween.duration = 0.3
+    if initialDirection == .forward {
+      tween.from = 0
+      tween.to = 1
+    } else {
+      tween.from = 1
+      tween.to = 0
+    }
+    addPlan(tween, to: forwardElement)
   }
-  addPlan(tween, to: forwardElement)
 }
 ```
 
