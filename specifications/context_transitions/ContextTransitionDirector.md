@@ -8,7 +8,7 @@ A `ContextTransitionDirector` creates the plans that shape a transition's motion
 
 ## Features
 
-* [Context element](feature-context-element.md)
+* [Context element](feature_context_element.md)
 * [Transition preconditions](feature-transition-preconditions.md)
 * [Replication](context_transitions/feature_replication.md)
 
