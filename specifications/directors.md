@@ -24,7 +24,7 @@ Example pseudo-code definition:
 function setPlanEmitter(PlanEmitter)
 ```
 
-**Set up API**: A director implements a `setUp` function. This function will be invoked exactly once.
+**setUp API**: A director implements a `setUp` function. This function will be invoked exactly once.
 
 Example pseudo-code definition:
 
