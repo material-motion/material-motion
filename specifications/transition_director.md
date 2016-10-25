@@ -13,18 +13,18 @@ A `ContextTransitionDirector` creates the plans that shape a transition's motion
 
 ## MVP
 
-**Abstract type**: `TransitionDirector` is a protocol, if your language has that concept.
+**Abstract type**: `ContextTransitionDirector` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
 ```
-protocol TransitionDirector {}
+protocol ContextTransitionDirector {}
 ```
 
 **TransitionContext type**: Provide a concrete type that includes important transition information.
 
 ```
-class TransitionContext {
+class ContextTransitionDirector {
   let initialDirection: TransitionDirection
 }
 ```
