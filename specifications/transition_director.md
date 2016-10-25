@@ -18,7 +18,7 @@ A `ContextTransitionDirector` creates the plans that shape a transition's motion
 Example pseudo-code:
 
 ```
-protocol ContextTransitionDirector {}
+protocol ContextTransitionDirector
 ```
 
 **Initialization API**: Define a required API that allows a director to receive a `ContextTransition` instance.
@@ -28,7 +28,6 @@ Example pseudo-code:
 ```
 protocol ContextTransitionDirector {
   init(transition: ContextTransition)
-}
 ```
 
 **setUp API**: Define a required API that allows a director to set up its initial plans.
@@ -38,7 +37,6 @@ Example pseudo-code:
 ```
 protocol ContextTransitionDirector {
   function setUp()
-}
 ```
 
 **fore/back APIs**: Provide storage for information relevant to the transition.
