@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| N/A | Stable |
+| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | In review |
 
 |  | Android | Apple | Web |
 | --- | --- | --- | --- |
