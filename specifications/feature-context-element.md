@@ -1,7 +1,6 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Context element feature specification
+
+![](../_assets/under-construction-flashing-barracade-animation.gif)
 
 The context element is what that the user interacted with in order to initiate the transition.
 
