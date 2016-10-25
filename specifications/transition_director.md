@@ -1,14 +1,10 @@
 # TransitionDirector specification
 
-This is the engineering specification for the `TransitionDirector` object.
+This is the engineering specification for the `TransitionDirector` type.
 
 ## Overview
 
-A `TransitionDirector` provides essential scaffolding for managing a transition.
-
-Printable tech tree/checklist:
-
-![](../_assets/TransitionDirectorTechTree.svg)
+A `TransitionDirector` creates the plans that shape a transition's motion and interaction.
 
 ## Features
 
