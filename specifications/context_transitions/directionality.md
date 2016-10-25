@@ -1,6 +1,6 @@
 # Directionality
 
-Consider the following potential contexts in an application:
+The following contexts exist in a hypothetical application:
 
 ```
 A    B    C
