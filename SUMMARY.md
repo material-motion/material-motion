@@ -47,7 +47,7 @@
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
            * [Feature: director stack](specifications/feature-director-stack.md)
        * [TransitionDriver](specifications/transitiondriver.md)
-   * [Feature: domain mapping](specifications/runtime/feature_nested_timelines.md)
+   * [Domain mapping](specifications/runtime/feature_nested_timelines.md)
    * [Directors](specifications/directors.md)
        * [Interactions](specifications/interactions.md)
            * [Interaction Director](specifications/interaction_director.md)
