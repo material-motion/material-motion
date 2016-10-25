@@ -20,7 +20,7 @@
        * [Feature: transition segment](specifications/runtime/feature_transition_segment.md)
        * [Feature: transition window](specifications/runtime/feature_transition_window.md)
    * [Motion language](specifications/motion-family.md)
-       * [ArcMove](specifications/plans/ArcMove.md)
+       * [📝 ArcMove](specifications/plans/ArcMove.md)
        * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [Draggable](specifications/plans/Draggable.md)
