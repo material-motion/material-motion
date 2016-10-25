@@ -1,6 +1,6 @@
 # Life of a context transition director
 
-Let's walk through the life of a simple fade context transition director.
+Let's walk through the life of a simple **fade** context transition director.
 
 > Remember, any code you see here is pseudo-code.
 
