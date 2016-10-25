@@ -47,7 +47,7 @@ Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/
 class FadeContextTransitionDirector: ContextTransitionDirector {
   function setUp() {
     var tween = TweenBetween(.opacity,
-                             timeline: transition.timeline,
+                             window: transition.window,
                              segment: transition.entire,
                              back: 0,
                              fore: 1)
