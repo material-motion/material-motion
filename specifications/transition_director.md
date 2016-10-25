@@ -23,7 +23,11 @@ protocol TransitionDirector {}
 
 **TransitionContext type**: Provide a concrete type that includes important transition information.
 
-
+```
+class TransitionContext {
+  let initialDirection: TransitionDirection
+}
+```
 
 **Initialization API**: Define a required API that allows a director to receive a `TransitionContext`.
 
