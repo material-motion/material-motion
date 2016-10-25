@@ -15,3 +15,10 @@ The considerations for each platform are diverse and often distinct. To reflect 
 ## Common specs
 
 - [Directionality](directionality.md)
+- [Life of a context transition director](life_of_a_context_transition_director.md)
+- [ContextTransition](ContextTransition.md)
+- [ContextTransitionDirector](ContextTransitionDirector.md)
+
+## Platform specs
+
+- [iOS](platform/ios/)
