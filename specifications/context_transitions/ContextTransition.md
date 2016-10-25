@@ -24,13 +24,6 @@ class TransitionContext {
   let initialDirection: TransitionWindowDirection
 ```
 
-**Current direction API**: Provide a writable value of the transition's current direction.
-
-```
-class TransitionContext {
-  var currentDirection: TransitionWindowDirection
-```
-
 **Duration API**: Provide a read-only value of the transition's duration.
 
 ```
@@ -56,3 +49,4 @@ These values map from the platform's from/to values:
 |:----------|:-----|:---|
 | Forward | from | to |
 | Backward | to | from |
+
