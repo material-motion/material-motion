@@ -18,7 +18,7 @@ class Fade: TransitionDirector {
 Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
-class Fade: TransitionDirector
+class Fade: TransitionDirector {
   function setUp() {
     var tween = Tween(.opacity, duration: transitionDuration())
     tween.duration = 0.3
