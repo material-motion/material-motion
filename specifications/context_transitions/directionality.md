@@ -20,12 +20,12 @@ In the traditional from/to model of transitions, the above context changes would
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
-If we wanted to implement the B/C and C/B transition, our code might look like so:
+If we wanted `B => C` to fade `C` in and `C => B` to fade `C` out, our code might look like so:
 
 ```
-let animation = Tween("opacity", duration: transitionDurationForUIKitAnimations())
+let animation = Tween("opacity", duration: transition.duration)
 
-if self.initialDirection == .forward {
+if transition.initialDirection == .forward {
   animation.from = 0
   animation.to = 1
   addPlan(animation, to: toViewController.view)
@@ -35,6 +35,8 @@ if self.initialDirection == .forward {
   addPlan(animation, to: fromViewController.view)
 }
 ```
+
+Note that we have to check the direction
 
 In practice, the B/C and C/B transitions are often mirror images of one another. What if we could write one transition that captured both directions?
 
@@ -46,7 +48,9 @@ In a back/fore transition, the above context changes would look like so:
 - **Direction**: `forward` **back**: `B` **fore**: `C`
 - **Direction**: `backward` **back**: `B` **fore**: `C`
 
-Note that our `back` and `fore` variables now has just two distinct permutations. Combined with the transition
+Note that our `back` and `fore` variables now has just two distinct permutations. If we were to write the B/C transitions with these variables our code might look like so:
+
+
 
 Note that the final transition's arrow is pointed to the left. We always keep contexts on the same named "side" of the transition, regardless of direction.
 
