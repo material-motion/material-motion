@@ -36,7 +36,7 @@
    * [Directors](specifications/directors.md)
    * [Context transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
-       * [Life of a context transition director](specifications/life_of_a_context_transition_director.md)
+       * [Life of a context transition director](specifications/context_transitions/life_of_a_context_transition_director.md)
        * [ContextTransition](specifications/context_transitions/ContextTransition.md)
            * [Feature: interruptible](specifications/context_transitions/feature_interruptible.md)
        * [ContextTransitionDirector](specifications/context_transitions/ContextTransitionDirector.md)
