@@ -4,7 +4,7 @@ Prioritization is how we choose what to work on for a given week or day. We make
 
 ## Material Motion milemarker
 
-https://material-motion.github.io/milemarker/
+https://material-motion.github.io/material-motion-milemarker/
 
 This website fetches every material-motion repo and shows their milestones. We use this website to get a high-level overview of the project's status on any given platform.
 
@@ -15,12 +15,6 @@ Projects == GitHub repos, usually.
 For most of our platforms, each "project" maps to a single GitHub repository.
 
 We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of `where:` labels to break down project-specific tasks.
-
-## Roadmap defines weekly project priority
-
-We define our roadmap on Discord. Our roadmap defines cross-project priorities. This is a good place to answer the question of "which project are we focused on this week?"
-
-See our [communication](../communication.md) article for an invite link to the channel.
 
 ## A milestone defines issue priority
 

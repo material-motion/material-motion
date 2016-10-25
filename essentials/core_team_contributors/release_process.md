@@ -1,5 +1,9 @@
 # Release process
 
+Read our release tooling documentation by running:
+
+    mdm help release
+
 ## Versioning
 
 Follow strict [semantic versioning](http://semver.org/).

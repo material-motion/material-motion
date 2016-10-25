@@ -8,4 +8,4 @@ Please file an issue in the relevant github repository in the material-motion or
 
 ## Made some code changes?
 
-Contributions are welcome. Please be sure to read our [Community](../community/) documentation. Learn how to send a pull request by reading [GitHub's guides](https://guides.github.com/introduction/flow/).
+Contributions are welcome. Please be sure to read our [Community](../../community/) documentation. Learn how to send a pull request by reading [GitHub's guides](https://guides.github.com/introduction/flow/).
