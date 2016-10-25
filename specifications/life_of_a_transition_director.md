@@ -45,35 +45,20 @@ function setUp() {
 }
 ```
 
-### Step 3: Access a transition controller
+### Step 3: Associate the director with a context transition
 
-A `TransitionController` is the configuring entity for a transition.
+This step is platform-specific.
 
-```
-transitionController = TransitionController()
-```
+### iOS
 
-An instance of this type might be lazily available for any transition on our platform.
-
-> _Platform-specific example_: iOS
-> 
-> Each view controller might have its own transition controller. This transition controller governs the present\/dismiss transitions of that particular view controller.
-> 
-> ```
-> viewController.transitionController
-> ```
-
-### Step 4: Set the director
-
-Provide the `FadeTransitionDirector` type to the transition controller.
+To configure the `present`/`dismiss` transition for a view controller, set the Director on the view controller's `transitionController`:
 
 ```
-transitionController.directorClass = typeof(FadeTransitionDirector)
+viewController.mdm_transitionController.directorClass = typeof(FadeTransitionDirector)
 ```
 
-### Step 5: Initiate the transition
+### Step 4: Initiate the transition
 
 Initiating our transition causes `FadeTransitionDirector` to be instantiated and its `setUp` method is invoked. The plans expressed by the director will then be executed.
 
 Upon completion, the director instance is thrown away. The transition controller resets its internal state in preparation for a future transition.
-
