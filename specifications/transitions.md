@@ -1,6 +1,10 @@
 # Context transitions
 
-A context transition causes a visual change from one element hierarchy to another.
+A context transition causes a visual change from one element hierarchy to another. Context transitions are a specialized subset of general state transitions. Context transitions mean different things on different platforms:
+
+- iOS: UIViewController transitions
+- Android: Activity transitions
+- Web: URL transitions
 
 ## Directionality
 
