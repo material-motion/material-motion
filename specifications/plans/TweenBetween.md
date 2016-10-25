@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| None | Drafting |
+| [`TweenBetween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | In review |
 
 TweenBetween describes tween animations that occur during a transition between two states.
 
