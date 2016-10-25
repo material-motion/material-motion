@@ -42,12 +42,12 @@
            * [Feature: context element](specifications/context_transitions/feature_context_element.md)
            * [Feature: transition preconditions](specifications/context_transitions/feature_transition_preconditions.md)
            * [Feature: replication](specifications/context_transitions/feature_replication.md)
+       * Platform: iOS
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [TransitionController](specifications/transition_controller.md)
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
            * [Feature: director stack](specifications/feature-director-stack.md)
        * [TransitionDriver](specifications/transitiondriver.md)
-       * Platform: iOS
    * [Domain mapping](specifications/runtime/feature_nested_timelines.md)
    * [Directors](specifications/directors.md)
        * [Interactions](specifications/interactions.md)
