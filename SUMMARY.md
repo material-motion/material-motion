@@ -38,6 +38,7 @@
    * [Context transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
+       * TransitionContext
        * [TransitionDirector](specifications/transition_director.md)
            * [Feature: context element](specifications/feature-context-element.md)
            * [Feature: transition preconditions](specifications/feature-transition-preconditions.md)
@@ -47,7 +48,6 @@
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
            * [Feature: director stack](specifications/feature-director-stack.md)
        * [TransitionDriver](specifications/transitiondriver.md)
-       * TransitionContext
    * [Directors](specifications/directors.md)
        * [Interactions](specifications/interactions.md)
            * [Interaction Director](specifications/interaction_director.md)
