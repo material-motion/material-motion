@@ -46,6 +46,7 @@
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
            * [Feature: director stack](specifications/feature-director-stack.md)
        * [TransitionDriver](specifications/transitiondriver.md)
+       * Common: Directionality
    * [Directors](specifications/directors.md)
        * [Interactions](specifications/interactions.md)
            * [Interaction Director](specifications/interaction_director.md)
