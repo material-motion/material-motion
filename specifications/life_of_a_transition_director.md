@@ -36,10 +36,10 @@ Or if our plans have a concept of direction:
 
 ```
 function setUp(transaction) {
-  var tween = Tween(.opacity)
+  var tween = Tween(.opacity, duration: transitionDuration())
   tween.duration = 0.3
-  tween.start = 0
-  tween.end = 1
+  tween.back = 0
+  tween.fore = 1
   tween.direction = initialDirection
   planEmitter.addPlan(tween, to: forwardElement)
 }
