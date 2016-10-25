@@ -28,7 +28,7 @@ class TransitionContext {
 
 ```
 class TransitionContext {
-  let currentDirection: TransitionWindowDirection
+  var currentDirection: TransitionWindowDirection
 ```
 
 **Duration API**: Provide a read-only value of the transition's duration.
