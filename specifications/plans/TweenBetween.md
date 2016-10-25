@@ -24,9 +24,9 @@ Plan TweenBetween {
 
 `property` is any animatable value on the target object.
 
-`backValue` is the destination value when the direction is backward.
+`back` is the destination value when the direction is backward.
 
-`foreValue` is the destination value when the direction is forward.
+`fore` is the destination value when the direction is forward.
 
 `forwardTimingFunction` is the timing function to use when initially animating forward.
 
@@ -43,8 +43,8 @@ Plan TweenBetween {
         let fade = TweenBetween("opacity",
                                 window: window,
                                 segment: .init(position: 0, length: 1)
-                                backValue: 0,
-                                foreValue: 1)
+                                back: 0,
+                                fore: 1)
         addPlan(fadeIn, to: forwardElement)
       }
     }
@@ -56,8 +56,8 @@ Plan TweenBetween {
         let shiftUp = TweenBetween("position",
                                    window: window,
                                    segment: .init(position: 0, length: 1)
-                                   backValue: bottomEdge,
-                                   foreValue: topEdge)
+                                   back: bottomEdge,
+                                   fore: topEdge)
         addPlan(shiftUp, to: forwardElement)
       }
     }
@@ -71,8 +71,8 @@ window = TransitionWindow(duration: 0.4s)
 TweenBetween("opacity",
              window: window,
              segment: .init(position: 0, length: 0.25)
-             backValue: 0,
-             foreValue: 1)
+             back: 0,
+             fore: 1)
 ```
 
 When initial direction == forward:
