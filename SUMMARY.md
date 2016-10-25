@@ -21,7 +21,7 @@
        * [Feature: transition window](specifications/runtime/feature_transition_window.md)
    * [Motion language](specifications/motion-family.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
-       * [ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
+       * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [Draggable](specifications/plans/Draggable.md)
        * [KeyframeTween](specifications/plans/KeyframeTween.md)
