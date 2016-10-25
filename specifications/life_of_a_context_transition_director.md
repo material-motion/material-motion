@@ -25,7 +25,6 @@ Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/mat
 class Fade: TransitionDirector {
   function setUp() {
     var tween = Tween(.opacity, duration: transition.duration)
-    tween.duration = 0.3
     if initialDirection == .forward {
       tween.from = 0
       tween.to = 1
