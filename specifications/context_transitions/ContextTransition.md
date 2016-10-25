@@ -6,6 +6,10 @@ This is the engineering specification for the `ContextTransition` concrete type.
 
 A `ContextTransition` defines the essential information required by a `ContextTransitionDirector`.
 
+## Features
+
+* [Interruptible](feature_interruptible.md)
+
 ## MVP
 
 **Concrete type**: `ContextTransition` is an object.
