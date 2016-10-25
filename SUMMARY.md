@@ -18,7 +18,6 @@
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
        * [Feature: transition segment](specifications/runtime/feature_transition_segment.md)
        * [Feature: transition window](specifications/runtime/feature_transition_window.md)
-   * Motion family
    * [Motion language](specifications/motion-family.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
@@ -33,6 +32,7 @@
        * [🚩 Tween](specifications/plans/Tween.md)
        * [📢 TweenBetween](specifications/plans/TweenBetween.md)
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
+   * Motion family
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
    * [Context transitions](specifications/context_transitions/README.md)
