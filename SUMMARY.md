@@ -18,6 +18,7 @@
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
        * [Feature: transition segment](specifications/runtime/feature_transition_segment.md)
        * [Feature: transition window](specifications/runtime/feature_transition_window.md)
+   * Motion family
    * [Motion language](specifications/motion-family.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
@@ -62,7 +63,6 @@
        * [Plan serialization](specifications/plan_serialization.md)
        * [Transaction serialization](specifications/transaction_serialization.md)
        * [Life of a serialized transaction](specifications/life_of_a_serialized_transaction.md)
-   * Motion family
 * [User journeys](user_journeys/README.md)
    * [Motion](user_journeys/motion.md)
    * [Engineering](user_journeys/engineering.md)
