@@ -42,7 +42,7 @@
            * [Feature: context element](specifications/context_transitions/feature_context_element.md)
            * [Feature: transition preconditions](specifications/context_transitions/feature_transition_preconditions.md)
            * [Feature: replication](specifications/context_transitions/feature_replication.md)
-       * Platform: iOS
+       * [Platform: iOS](specifications/context_transitions/platform/ios/README.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [TransitionController](specifications/transition_controller.md)
            * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
