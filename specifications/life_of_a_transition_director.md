@@ -19,7 +19,7 @@ Our `setUp` will use a simple tween plan:
 
 ```
 function setUp() {
-  var tween = Tween(.opacity, duration: transitionDuration())
+  var tween = BasicTween(.opacity, duration: transitionDuration())
   tween.duration = 0.3
   if initialDirection == .forward {
     tween.from = 0
@@ -36,12 +36,11 @@ Or if our plans have a concept of direction:
 
 ```
 function setUp(transaction) {
-  var tween = Tween(.opacity, duration: transitionDuration())
+  var tween = TweenBetween(.opacity, duration: transitionDuration())
   tween.duration = 0.3
   tween.back = 0
   tween.fore = 1
-  tween.direction = initialDirection
-  planEmitter.addPlan(tween, to: forwardElement)
+  addPlan(tween, to: forwardElement)
 }
 ```
 
