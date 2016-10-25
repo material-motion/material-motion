@@ -35,7 +35,7 @@
        * [VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
-   * [Screen transitions](specifications/transitions.md)
+   * [Context transitions](specifications/transitions.md)
        * [Life of a transition director](specifications/life_of_a_transition_director.md)
        * [Life of a transition controller](specifications/life_of_a_transition_controller.md)
        * [TransitionDirector](specifications/transition_director.md)
