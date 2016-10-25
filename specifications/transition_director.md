@@ -13,28 +13,12 @@ A `TransitionDirector` creates the plans that shape a transition's motion and in
 
 ## MVP
 
-**Concrete type**: A `TransitionDirector` is a concrete type that adheres to the informal Director APIs.
+**Abstract type**: `TransitionDirector` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
 ```
-TransitionDirector {
-  function setUp()
-}
-```
-
-**Subclassing**: This class is designed to be subclassed.
-
-The sub-class is expected to implement the functions specified in the `Director` protocol.
-
-Example pseudo-code:
-
-```
-MyTransitionDirector: TransitionDirector {
-  function setUp() {
-    // Perform set up operations
-  }
-}
+protocol TransitionDirector {}
 ```
 
 **fore/back APIs**: Provide storage for information relevant to the transition.
