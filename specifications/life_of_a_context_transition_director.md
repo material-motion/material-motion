@@ -10,6 +10,10 @@ This object will provide transition-specific plans.
 
 ```
 class Fade: TransitionDirector {
+  let transition: ContextTransition
+  init(transition: ContextTransition) {
+    self.transition = transition
+  }
 }
 ```
 
