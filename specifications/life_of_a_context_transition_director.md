@@ -61,7 +61,7 @@ This step is platform-specific.
 To configure the `present`/`dismiss` transition for a view controller, set the Director on the view controller's `transitionController`:
 
 ```
-viewController.mdm_transitionController.directorClass = typeof(FadeContextTransitionDirector)
+viewController.mdm_transitionController.directorType = typeof(FadeContextTransitionDirector)
 ```
 
 ### Step 4: Initiate the transition
