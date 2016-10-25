@@ -31,7 +31,7 @@
        * [ScrollReactor](specifications/plans/ScrollReactor.md)
        * [🚩 SpringTo](specifications/plans/SpringTo.md)
        * [🚩 Tween](specifications/plans/Tween.md)
-       * [TweenBetween](specifications/plans/TweenBetween.md)
+       * [📢 TweenBetween](specifications/plans/TweenBetween.md)
        * [VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion demos](specifications/motion-demos.md)
        * [Sparkle dialog](specifications/motion_demos/sparkle_dialog.md)
