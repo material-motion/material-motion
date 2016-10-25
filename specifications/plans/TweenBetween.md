@@ -13,8 +13,8 @@ TweenBetween describes tween animations that occur during a transition between t
 ```
 Plan TweenBetween {
   var property
-  var back
-  var fore
+  var backValue
+  var foreValue
   var forwardTimingFunction
   var backwardTimingFunction
   var segment: TransitionSegment
@@ -24,9 +24,9 @@ Plan TweenBetween {
 
 `property` is any animatable value on the target object.
 
-`back` is the destination value when the direction is backward.
+`backValue` is the destination value when the direction is backward.
 
-`fore` is the destination value when the direction is forward.
+`foreValue` is the destination value when the direction is forward.
 
 `forwardTimingFunction` is the timing function to use when initially animating forward.
 
@@ -43,8 +43,8 @@ Plan TweenBetween {
         let fade = TweenBetween("opacity",
                                 window: window,
                                 segment: .init(position: 0, length: 1)
-                                back: 0,
-                                fore: 1)
+                                backValue: 0,
+                                foreValue: 1)
         addPlan(fadeIn, to: forwardElement)
       }
     }
@@ -56,8 +56,8 @@ Plan TweenBetween {
         let shiftUp = TweenBetween("position",
                                    window: window,
                                    segment: .init(position: 0, length: 1)
-                                   back: bottomEdge,
-                                   fore: topEdge)
+                                   backValue: bottomEdge,
+                                   foreValue: topEdge)
         addPlan(shiftUp, to: forwardElement)
       }
     }
@@ -71,8 +71,8 @@ window = TransitionWindow(duration: 0.4s)
 TweenBetween("opacity",
              window: window,
              segment: .init(position: 0, length: 0.25)
-             back: 0,
-             fore: 1)
+             backValue: 0,
+             foreValue: 1)
 ```
 
 When initial direction == forward:
