@@ -36,7 +36,7 @@ if transition.initialDirection == .forward {
 }
 ```
 
-Note that we have to check the direction
+Note that we have to check `initialDirection` in order to determine which view to add the fade plan to.
 
 In practice, the B/C and C/B transitions are often mirror images of one another. What if we could write one transition that captured both directions?
 
