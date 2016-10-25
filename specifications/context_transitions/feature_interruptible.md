@@ -4,5 +4,5 @@
 
 ```
 class TransitionContext {
-  let currentDirection: TransitionWindowDirection
+  var currentDirection: TransitionWindowDirection
 ```
