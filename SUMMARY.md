@@ -44,7 +44,7 @@
            * [Feature: replication](specifications/context_transitions/feature_replication.md)
        * [Platform: iOS](specifications/context_transitions/platform/ios/README.md)
            * [Life of a transition controller](specifications/context_transitions/platform/ios/life_of_a_transition_controller.md)
-           * [TransitionController](specifications/transition_controller.md)
+           * [TransitionController](specifications/context_transitions/platform/ios/TransitionController.md)
                * [Feature: cancelable transitions](specifications/feature-cancelable-transitions.md)
                * [Feature: director stack](specifications/feature-director-stack.md)
            * [TransitionDriver](specifications/transitiondriver.md)
