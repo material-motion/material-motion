@@ -21,21 +21,13 @@ Example pseudo-code:
 protocol ContextTransitionDirector {}
 ```
 
-**TransitionContext type**: Provide a concrete type that includes important transition information.
-
-```
-class ContextTransitionDirector {
-  let initialDirection: TransitionDirection
-}
-```
-
-**Initialization API**: Define a required API that allows a director to receive a `TransitionContext`.
+**Initialization API**: Define a required API that allows a director to receive a `ContextTransition` instance.
 
 Example pseudo-code:
 
 ```
 protocol ContextTransitionDirector {
-  init(TransitionContext)
+  init(transition: ContextTransition)
 }
 ```
 
