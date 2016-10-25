@@ -1,5 +1,9 @@
 # ContextTransitionDirector replication feature specification
 
+| Discussion thread | Status |
+|:------------------|:-------|
+| None | Drafting |
+
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 
 Provide the replica controller to the director's initializer.
