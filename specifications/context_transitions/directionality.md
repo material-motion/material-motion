@@ -14,9 +14,9 @@ There are two ways to think about how we move between contexts: **from/to** and 
 
 In the traditional from/to model of transitions, the above context changes would have the following variable values:
 
-- **from** `A` **to** `B`
-- **from** `B` **to** `C`
-- **from** `C` **to** `B`
+1. **from** `A` **to** `B`
+2. **from** `B` **to** `C`
+3. **from** `C` **to** `B`
 
 We're concerned about three distinct transitions and will write three distinct code paths.
 
