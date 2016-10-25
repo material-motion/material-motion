@@ -12,7 +12,7 @@ There are two ways to think about how we move between contexts: **from/to** and 
 
 ## Traditional from/to transitions
 
-From/to is the traditional model. The above transitions would look like so:
+In the traditional from/to model of transitions, the above context changes would look like so:
 
 - Transition **from** `A` **to** `B`. Direction is forward.
 - Transition **from** `B` **to** `C`. Direction is forward.
