@@ -16,6 +16,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Draggable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Draggable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [KeyframeTween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/KeyframeTween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
+| [RemoveSpring](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/RemoveSpring.html)        | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
 | [ScrollReactor](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ScrollReactor.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [SpringTo](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/SpringTo.html) | Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | [1.0.0](https://github.com/material-motion/material-motion-family-rebound-android/releases/tag/1.0.0) | &nbsp; |
