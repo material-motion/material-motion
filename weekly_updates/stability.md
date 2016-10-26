@@ -24,8 +24,9 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html)               |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) |  [MVP](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | &nbsp; |
 | [VelocitySource](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/VelocitySource.html)      | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | - | - | - | - | - |
-| **Catalog** | **Starmap** | **Apple** | **Android** | **Web** |
+| **Interactions** | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+|  Sentence builder | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 |  Sparkle Dialog | Stable | &nbsp; |  &nbsp; | &nbsp; |
 | - | - | - | - | - |
 | **Tools** | **Starmap** | **Apple** | **Android** | **Web** |
