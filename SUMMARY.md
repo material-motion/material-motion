@@ -37,7 +37,7 @@
    * [Interactions](specifications/interactions.md)
        * [Interaction Director](specifications/interaction_director.md)
        * [Interaction Controller](specifications/interaction_controller.md)
-   * [Context transitions](specifications/context_transitions/README.md)
+   * [Transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
        * [Life of a context transition director](specifications/context_transitions/life_of_a_context_transition_director.md)
        * [ContextTransition](specifications/context_transitions/ContextTransition.md)
