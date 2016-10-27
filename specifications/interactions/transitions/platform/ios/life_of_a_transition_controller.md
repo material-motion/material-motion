@@ -46,14 +46,14 @@ The transition controller creates a `TransitionDriver` in reaction to a transiti
 
 The TransitionDriver is expected to create the scheduler and director required to drive the transition. When the scheduler reaches an idle state, the TransitionDriver is expected to inform the TransitionController. The TransitionController then informs iOS that the transition has terminated.
 
-For example:
-
 ```
 transitionWillStart(initialDirection) {
-  runner = TransitionRunner(directorClass(initialDirection))
+  let transition = Transition(initialDirection)
+  let director = directorType(transition)
+  driver = TransitionDriver(director)
 }
 
-class TransitionRunner {
+class TransitionDriver {
   let scheduler
   initWithDirector(director) {
     scheduler = Scheduler()
