@@ -34,7 +34,7 @@
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion family](specifications/motion_family.md)
    * [Directors](specifications/directors.md)
-   * [Interaction catalog](specifications/interactions.md)
+   * [Interactions](specifications/interactions.md)
    * [Transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
        * [Life of a context transition director](specifications/context_transitions/life_of_a_context_transition_director.md)
