@@ -4,7 +4,9 @@
 |:------------------|:-------|
 | ![](../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 27, 2016 |
 
-An interaction describes a coherent interactive experience. Interactions can involve any number of plans and targets. The specificity of an interaction is left as an exercise to its creator.
+An interaction describes a coherent interactive experience.
+
+Interactions can involve any number of plans and targets. The specificity of an interaction is left as an exercise to its creator.
 
 Interactions should prefer composition over subclassing.
 
