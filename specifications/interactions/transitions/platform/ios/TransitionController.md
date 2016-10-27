@@ -8,7 +8,7 @@ This is the engineering specification for the `TransitionController` object.
 
 ## Overview
 
-A `TransitionController` is the bridge between the platform's transitioning architecture and a `TransitionDirector`.
+`TransitionController` is a bridge between the platform's transitioning architecture and a `TransitionDirector`.
 
 ## MVP
 
@@ -16,22 +16,21 @@ A `TransitionController` is the bridge between the platform's transitioning arch
 
 Example pseudo-code:
 
-    TransitionController {
-    }
+```
+TransitionController {
+}
+```
 
-**One controller per transition**: Every transition has access to its own `TransitionController` instance.
+**One transition controller per view controller**: Every view controller stores its own weakly-created `TransitionController` instance.
 
-A transition can represent two directions. For example, present and dismiss are two directions of a single transition.
+**directorType API**: Provide an API for storing a `TransitionDirector` type.
 
-**Transition director type API**: Provide a public API for storing a `TransitionDirector` type.
-
-The type must be a subclass of `TransitionDirector`.
+The type must represent an object that conforms to the `TransitionDirector` type.
 
 Example pseudo-code:
 
     TransitionController {
       public var directorClass: typeof(TransitionDirector)
-    }
 
 **Transition will start**: The following should occur when a transition is about to begin:
 
@@ -41,24 +40,16 @@ Example pseudo-code:
 
 Example pseudo-code:
 
-    TransitionController {
-      function transitionWillStart(initialDirection) {
-        # Initialize the Director
-        replicationController = ReplicationController()
-        replicationController.duplicator = SystemDuplicator()
-        director = self.directorClass(initialDirection, replicationController)
-        
-        # Phase: set up
-        transaction = Transaction()
-        director.setUp(transaction)
-        
-        # Initialize the scheduler
-        scheduler = Scheduler()
-        scheduler.addNewTargetObserver(replicationController)
-        scheduler.addActivityStateObserver(self)
-        scheduler.commit(transaction)
-      }
-    }
+```
+TransitionController {
+  function transitionWillStart(initialDirection) {
+    let scheduler = Scheduler()
+    scheduler.delegate = self
+    let transition = Transition(...)
+    director = directorType(transition)
+  }
+}
+```
 
 **Finish on idle**: Finish the transition when the scheduler enters the idle activity state.
 
