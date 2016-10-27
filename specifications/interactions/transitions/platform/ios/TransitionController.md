@@ -23,14 +23,14 @@ TransitionController {
 
 **One transition controller per view controller**: Every view controller stores its own weakly-created `TransitionController` instance.
 
-**directorType API**: Provide an API for storing a `TransitionDirector` type.
+**directorClass API**: Provide an API for storing a `TransitionDirector` type.
 
 The type must represent an object that conforms to the `TransitionDirector` type.
 
 Example pseudo-code:
 
     TransitionController {
-      public var directorType: TransitionDirector.type
+      public var directorClass: TransitionDirector.type
 
 **Transition will start**: The following should occur when a transition is about to begin:
 
@@ -46,7 +46,7 @@ TransitionController {
     let scheduler = Scheduler()
     scheduler.delegate = self
     let transition = Transition(...)
-    director = directorType(transition)
+    director = directorClass(transition)
   }
 }
 ```
