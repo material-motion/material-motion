@@ -4,11 +4,11 @@
 |:------------------|:-------|
 | ![](../../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
-This is the engineering specification for the `ContextTransition` concrete type.
+This is the engineering specification for the `Transition` concrete type.
 
 ## Overview
 
-A `ContextTransition` defines the essential information required by a `ContextTransitionDirector`.
+A `Transition` defines the essential information required by a `TransitionDirector`.
 
 ## Features
 
@@ -16,26 +16,26 @@ A `ContextTransition` defines the essential information required by a `ContextTr
 
 ## MVP
 
-**Concrete type**: `ContextTransition` is an object.
+**Concrete type**: `Transition` is an object.
 
 Example pseudo-code:
 
 ```
-class ContextTransition {
+class Transition {
 }
 ```
 
 **Initial direction API**: Provide a read-only value of the transition's initial direction.
 
 ```
-class TransitionContext {
+class Transition {
   let initialDirection: TransitionWindowDirection
 ```
 
 **Duration API**: Provide a read-only value of the transition's duration.
 
 ```
-class TransitionContext {
+class Transition {
   let duration: TimeInterval
 ```
 
@@ -46,7 +46,7 @@ The type of this value is platform-dependent.
 On iOS:
 
 ```
-class TransitionContext {
+class Transition {
   let back: UIViewController
   let fore: UIViewController
 ```
