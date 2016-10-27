@@ -25,6 +25,13 @@ class Transition {
 }
 ```
 
+**Scheduler API**: Provide a read-only Scheduler instance.
+
+```
+class Transition {
+  let scheduler: Scheduler
+```
+
 **Initial direction API**: Provide a read-only value of the transition's initial direction.
 
 ```
