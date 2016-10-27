@@ -47,7 +47,10 @@ The transition controller creates an instance of the Director when a transition 
 ```
 transitionWillStart(initialDirection) {
   let scheduler = Scheduler()
-  let transition = Transition(initialDirection, scheduler)
+  let transition = Transition(initialDirection,
+                              scheduler: scheduler,
+                              back: back,
+                              fore: fore)
   director = directorType(transition)
 }
 ```
