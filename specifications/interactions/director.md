@@ -10,7 +10,7 @@ A director is an object whose primary purpose is to describe motion.
 
 "Director" does not have to be a formal base type. An object that emits Plans across a variety of targets can be considered a Director.
 
-Directors have little — if any — imperative code that directly applies motion to targets. Directors prefer to describe motion in terms of declarative plans. Directors may have a large amount of imperative code that coordinates the registration of plans.
+Directors have little — if any — imperative code that directly applies changes to targets. Directors prefer to describe motion in terms of declarative plans. Directors may have a large amount of imperative code that coordinates the registration of plans.
 
 ## MVP
 
