@@ -1,4 +1,4 @@
-# Directors
+# Director
 
 | Discussion thread | Status |
 |:------------------|:-------|
