@@ -13,7 +13,7 @@ Let's walk through the life of a simple **fade** transition director.
 This object conforms to the `TransitionDirector` type.
 
 ```
-class FadeTransitionDirector: TransitionDirector {
+TransitionDirector FadeTransitionDirector {
   let transition: Transition
   init(transition: Transition) {
     self.transition = transition
