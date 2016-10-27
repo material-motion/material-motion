@@ -27,6 +27,13 @@ A time window has a numerical **position** expressed in the range `[0,1]`. `0` r
 
 ## MVP Specification
 
+**Object type**: A time window is an object.
+
+```
+class TimeWindow {
+}
+```
+
 **Position API**: A time window has a current position.
 
 This numerical value should be bounded to `[0,1]`.
@@ -49,13 +56,6 @@ Define a direction type that includes both possible directions.
 TimeWindowDirection {
   .forward:
   .backward:
-}
-```
-
-**Object type**: A time window is an object.
-
-```
-class TimeWindow {
 }
 ```
 
