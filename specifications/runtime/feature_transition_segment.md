@@ -8,7 +8,7 @@ This is the engineering specification for the **TimeWindowSegment** type.
 
 ## Overview
 
-This feature enables the description of motion between two distinct states.
+A TimeWindowSegment represents a specific part of a time window.
 
 ## Example: TweenBetween
 
@@ -22,7 +22,9 @@ let tween = TweenBetween("opacity",
 
 ## MVP Specification
 
-**Struct type**: A TimeWindowSegment represents a specific part of a time window.
+**Struct type**: TimeWindowSegment is a struct type, if the language allows.
+
+**position and length APIs**: Provide two writable values for `position` and `length`.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
