@@ -10,12 +10,12 @@ Let's walk through the life of an arbitrary transition.
 
 ### Step 1: A transition controller is created
 
-Generally speaking, every "page" in an application should have its own transition controller. A transition controller is responsible for handling how a page is presented and dismissed.
+Every view controller has its own transition controller. A transition controller is responsible for handling how a view controller is presented and dismissed.
 
-For example, assume our platform has some concept of a "page":
+For example:
 
 ```
-page.transitionController.directorClass = SlideInTransitionDirector
+viewController.mdm_transitionController.directorClass = typeof(SlideInTransitionDirector)
 ```
 
 In the above example we've declared that this page should slide in when it is presented and slide out when it is dismissed.
