@@ -56,23 +56,8 @@ transitionWillStart(initialDirection) {
 }
 ```
 
+### Step 4: Terminate the transition once the scheduler idles
 
+The transition controller informs iOS that the transition has completed once the scheduler has idled.
 
-### Step 4: Once the runtime idles, terminate the transition
-
-Once the transition controller detects that the scheduler activity has idled, the transition controller should terminate the transition. How this is communicated will depend on the platform.
-
-> On iOS, for example, the transition controller must invoke a specific method to inform UIKit that the transition has either completed or canceled.
-
-The TransitionRunner is responsible for invoking `tearDown` on the director.
-
-```
-class TransitionRunner {
-  function transitionDidFinish() {
-    director.tearDown()
-  }
-}
-```
-
-At this point the transition controller might throw away its `TransitionRunner` instance.
-
+At this point the transition controller throws away its Director instance.
