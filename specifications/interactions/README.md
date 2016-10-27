@@ -11,7 +11,9 @@ Productionized interactions are encouraged to make use of the [Director](directo
 ```
 Interaction TossableWords {
   func setUp() {
-    addPlan(Draggable(), to: circle)
+    let draggable = Draggable()
+    addPlan(draggable, to: circle)
+    addPlan(VelocitySource(draggable), to: circle)
   }
 }
 ```
