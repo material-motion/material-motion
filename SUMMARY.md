@@ -32,7 +32,7 @@
        * [🚩 Tween](specifications/plans/Tween.md)
        * [📢 TweenBetween](specifications/plans/TweenBetween.md)
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
-   * [Motion family](specifications/motion_family.md)
+   * [Motion library](specifications/motion_family.md)
    * [Interactions](specifications/interactions.md)
    * [Directors](specifications/directors.md)
    * [Transitions](specifications/context_transitions/README.md)
