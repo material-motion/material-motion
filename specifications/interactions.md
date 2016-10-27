@@ -4,6 +4,6 @@ An interaction specification describes a coherent interactive experience. Intera
 
 Interactions should strive for being composable.
 
-Productionized interactions are encouraged to make use of the [Director](director.md) design pattern.
+Productionized interactions are encouraged to make use of the [Director](director.md) type.
 
 Prototype interactions are encouraged to use a flat file.
