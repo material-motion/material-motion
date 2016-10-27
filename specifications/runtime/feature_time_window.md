@@ -71,7 +71,7 @@ class TimeWindow {
 
 ```
 class TimeWindow {
-  TimeWindowDirection initialDirection
+  let initialDirection: TimeWindowDirection
 }
 ```
 
