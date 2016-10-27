@@ -42,9 +42,9 @@ present(viewController, animated: true)
 
 #### Step 3.1: Create a TransitionDriver
 
-The transition controller now creates a TransitionDriver.
+The transition controller creates a `TransitionDriver` in reaction to a transition being initiated.
 
-The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRunner`.
+The TransitionDriver is expected to create the scheduler and director required to drive the transition. When the scheduler reaches an idle state, the TransitionDriver is expected to inform the TransitionController. The TransitionController then informs iOS that the transition has terminated.
 
 For example:
 
