@@ -25,12 +25,14 @@ class Transition {
 }
 ```
 
-**Scheduler API**: Provide a read-only Scheduler instance.
+**Scheduler API**: Store a private Scheduler instance.
 
 ```
 class Transition {
-  let scheduler: Scheduler
+  private let scheduler: Scheduler
 ```
+
+The scheduler's plan APIs should be exposed through the Transition object.
 
 **Initial direction API**: Provide a read-only value of the transition's initial direction.
 
