@@ -1,8 +1,8 @@
-# Motion family
+# Motion library
 
-A **motion family** is a software library that includes one or more Plan and Performer implementations.
+A **motion library** is a software library that includes one or more Plan and Performer implementations.
 
-Motion families focus on motion for a **single element**. Use [Directors](directors.md) for motion concerning more than one element.
+Motion libraries focus on motion for a **single element**. Use [Directors](directors.md) for motion concerning more than one element.
 
 ## Minimum requirements
 
