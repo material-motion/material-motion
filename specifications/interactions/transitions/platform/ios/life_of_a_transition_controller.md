@@ -48,7 +48,8 @@ The TransitionDriver is expected to create the scheduler and director required t
 
 ```
 transitionWillStart(initialDirection) {
-  let transition = Transition(initialDirection)
+  let scheduler = Scheduler()
+  let transition = Transition(initialDirection, scheduler)
   let director = directorType(transition)
   driver = TransitionDriver(director)
 }
