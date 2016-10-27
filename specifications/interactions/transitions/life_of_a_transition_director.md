@@ -13,9 +13,9 @@ Let's walk through the life of a simple **fade** transition director.
 This object conforms to the `TransitionDirector` type.
 
 ```
-class FadeContextTransitionDirector: ContextTransitionDirector {
-  let transition: ContextTransition
-  init(transition: ContextTransition) {
+class FadeTransitionDirector: TransitionDirector {
+  let transition: Transition
+  init(transition: Transition) {
     self.transition = transition
   }
 }
@@ -26,7 +26,7 @@ class FadeContextTransitionDirector: ContextTransitionDirector {
 Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
 
 ```
-class FadeContextTransitionDirector: ContextTransitionDirector {
+class FadeTransitionDirector: TransitionDirector {
   function setUp() {
     var tween = Tween(.opacity, duration: transition.duration)
     if initialDirection == .forward {
@@ -44,7 +44,7 @@ class FadeContextTransitionDirector: ContextTransitionDirector {
 Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
 
 ```
-class FadeContextTransitionDirector: ContextTransitionDirector {
+class FadeTransitionDirector: TransitionDirector {
   function setUp() {
     var tween = TweenBetween(.opacity,
                              window: transition.window,
