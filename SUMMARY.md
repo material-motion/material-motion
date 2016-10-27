@@ -41,7 +41,7 @@
            * [Transition](specifications/interactions/transitions/Transition.md)
                * [Feature: interruptible](specifications/interactions/transitions/feature_interruptible.md)
            * [TransitionDirector](specifications/interactions/transitions/TransitionDirector.md)
-               * [Feature: context element](specifications/context_transitions/feature_context_element.md)
+               * [Feature: context element](specifications/interactions/transitions/feature_context_element.md)
                * [Feature: transition preconditions](specifications/context_transitions/feature_transition_preconditions.md)
                * [Feature: replication](specifications/context_transitions/feature_replication.md)
            * [Platform: iOS](specifications/context_transitions/platform/ios/README.md)
