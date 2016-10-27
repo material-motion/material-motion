@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![](../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 A director is an object whose primary purpose is to describe motion.
 
