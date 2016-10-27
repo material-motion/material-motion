@@ -1,10 +1,10 @@
-# Feature: transition segment
+# Feature: time window segment
 
 | Proposals | Status |
 |:------------------|:-------|
 | Current status | Draft |
 
-This is the engineering specification for the **TransitionSegment** type.
+This is the engineering specification for the **TimeWindowSegment** type.
 
 ## Overview
 
