@@ -17,7 +17,7 @@
        * [Feature: target selectors](specifications/runtime/target_selectors.md)
        * [Feature: timeline](specifications/runtime/feature_timeline.md)
        * [Feature: time window](specifications/runtime/feature_transition_window.md)
-       * [Feature: time window segment](specifications/runtime/feature_transition_segment.md)
+       * [Feature: time window segment](specifications/runtime/feature_time_window_segment.md)
    * [Motion language](specifications/plans/README.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
