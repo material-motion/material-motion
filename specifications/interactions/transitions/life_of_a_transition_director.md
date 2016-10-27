@@ -2,9 +2,9 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![](../../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
-Let's walk through the life of a simple **fade** context transition director.
+Let's walk through the life of a simple **fade** transition director.
 
 > Remember, any code you see here is pseudo-code.
 
