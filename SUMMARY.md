@@ -39,7 +39,7 @@
            * [Directionality](specifications/interactions/transitions/directionality.md)
            * [Life of a transition director](specifications/interactions/transitions/life_of_a_transition_director.md)
            * [Transition](specifications/interactions/transitions/Transition.md)
-               * [Feature: interruptible](specifications/context_transitions/feature_interruptible.md)
+               * [Feature: interruptible](specifications/interactions/transitions/feature_interruptible.md)
            * [ContextTransitionDirector](specifications/context_transitions/ContextTransitionDirector.md)
                * [Feature: context element](specifications/context_transitions/feature_context_element.md)
                * [Feature: transition preconditions](specifications/context_transitions/feature_transition_preconditions.md)
