@@ -2,8 +2,6 @@
 
 A **motion library** is a software library that includes one or more Plan and Performer implementations.
 
-Motion libraries focus on motion for a **single element**. Use [Directors](directors.md) for motion concerning more than one element.
-
 ## Minimum requirements
 
 For a library to be called a motion family it must satisfy the following minimal requirements:
