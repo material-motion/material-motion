@@ -8,7 +8,7 @@ This is the engineering specification for the `TransitionController` object.
 
 ## Overview
 
-The `TransitionController` is the bridge between the platform's transitioning architecture and the `TransitionDirector` type. Note that a `TransitionController` can make use of a `TransitionRunner`, an object that handles the director and the scheduler, to just focus on the the platform's transitioning API. This document assumes no such object is being used.
+A `TransitionController` is the bridge between the platform's transitioning architecture and a `TransitionDirector`.
 
 ## MVP
 
