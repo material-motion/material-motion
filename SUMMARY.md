@@ -47,7 +47,6 @@
            * [Platform: iOS](specifications/interactions/transitions/platform/ios/README.md)
                * [Life of a transition controller](specifications/interactions/transitions/platform/ios/life_of_a_transition_controller.md)
                * [TransitionController](specifications/interactions/transitions/platform/ios/TransitionController.md)
-                   * [Feature: cancelable transitions](specifications/interactions/transitions/platform/ios/feature_cancelable_transitions.md)
                    * [Feature: director stack](specifications/interactions/transitions/platform/ios/feature_director_stack.md)
    * [Domain mapping](specifications/runtime/feature_nested_timelines.md)
    * [Creating replica elements](specifications/replicas.md)
