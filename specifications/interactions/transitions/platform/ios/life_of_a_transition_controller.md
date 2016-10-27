@@ -40,33 +40,15 @@ Use standard view controller presentation APIs:
 present(viewController, animated: true)
 ```
 
-#### Step 3.1: Create a TransitionDriver
+#### Step 3.1: Create the Director instance
 
-The transition controller creates a `TransitionDriver` in reaction to a transition being initiated.
-
-The TransitionDriver is expected to create the scheduler and director required to drive the transition. When the scheduler reaches an idle state, the TransitionDriver is expected to inform the TransitionController. The TransitionController then informs iOS that the transition has terminated.
+The transition controller creates an instance of the Director when a transition is initiated. The Director must be provided a Transition instance that has been populated with the relevant information.
 
 ```
 transitionWillStart(initialDirection) {
   let scheduler = Scheduler()
   let transition = Transition(initialDirection, scheduler)
-  let director = directorType(transition)
-  driver = TransitionDriver(director)
-}
-
-class TransitionDriver {
-  let scheduler
-  initWithDirector(director) {
-    scheduler = Scheduler()
-    director.setPlanEmitter(scheduler)
-    director.setUp()
-
-    scheduler.addActivityStateObserver({
-      if scheduler.activityState == isIdle {
-        self.transitionDidComplete()
-      }
-    })
-  }
+  director = directorType(transition)
 }
 ```
 
