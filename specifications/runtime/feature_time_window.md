@@ -27,6 +27,20 @@ A time window has a numerical **position** expressed in the range `[0,1]`. `0` r
 
 ## MVP Specification
 
+**Position API**: A time window has a current position.
+
+This numerical value should be bounded to `[0,1]`.
+
+When initialized with an initial direction of **forward**, position should initially be `0`.
+
+When initialized with an initial direction of **backward**, position should initially be `1`.
+
+```
+class TimeWindow {
+  Double position
+}
+```
+
 **Direction type**: The position in a time window can move in one of two directions: forward or backward.
 
 Define a direction type that includes both possible directions.
@@ -78,19 +92,5 @@ This should be initialized with the value of `initialDirection`.
 ```
 class TimeWindow {
   TimelineDirection currentDirection
-}
-```
-
-**Position API**: A time window has a current position.
-
-This numerical value should be bounded to `[0,1]`.
-
-When initialized with an initial direction of **forward**, position should initially be `0`.
-
-When initialized with an initial direction of **backward**, position should initially be `1`.
-
-```
-class TimeWindow {
-  Double position
 }
 ```
