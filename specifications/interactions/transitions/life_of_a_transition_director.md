@@ -70,6 +70,6 @@ viewController.mdm_transitionController.directorType = typeof(FadeContextTransit
 
 ### Step 4: Initiate the transition
 
-Initiating our transition causes `FadeContextTransitionDirector` to be instantiated and its `setUp` method is invoked. The plans expressed by the director will then be executed.
+Initiating our transition causes `FadeTransitionDirector` to be instantiated and its `setUp` method is invoked. The plans expressed by the director will then be executed.
 
 Upon completion, the director instance is thrown away.
