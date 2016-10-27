@@ -8,9 +8,9 @@ Let's walk through the life of a simple **fade** transition director.
 
 > Remember, any code you see here is pseudo-code.
 
-### Step 1: Define a new ContextTransitionDirector type
+### Step 1: Define a new TransitionDirector type
 
-This object conforms to the `ContextTransitionDirector` type.
+This object conforms to the `TransitionDirector` type.
 
 ```
 class FadeContextTransitionDirector: ContextTransitionDirector {
