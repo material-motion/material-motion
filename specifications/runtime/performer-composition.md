@@ -14,6 +14,8 @@ Composition enables code reuse in the Material Motion ecosystem.
 
 **PlanEmitter API**: A performer may be provided with a plan emitter object.
 
+A PlanEmitter emits plans only for the performer's associated target.
+
 > The Performer may choose not to receive such an object.
 
 A plan emitter declaration might look like so:
