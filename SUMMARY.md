@@ -35,7 +35,6 @@
    * [Motion family](specifications/motion_family.md)
    * [Directors](specifications/directors.md)
    * [Interactions](specifications/interactions.md)
-       * [Interaction Director](specifications/interaction_director.md)
        * [Interaction Controller](specifications/interaction_controller.md)
    * [Transitions](specifications/context_transitions/README.md)
        * [Directionality](specifications/context_transitions/directionality.md)
