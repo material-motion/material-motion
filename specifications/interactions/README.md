@@ -4,7 +4,7 @@ An interaction specification describes a coherent interactive experience. Intera
 
 Interactions should strive for being composable.
 
-Productionized interactions are encouraged to make use of the [Director](director.md) type as a vessel for deploying interactions in a code base. For example:
+Object-oriented interactions are encouraged to make use of the [Director](director.md) object type. For example:
 
 **TossableWords**
 
@@ -17,7 +17,6 @@ Interaction TossableWords {
   }
 }
 ```
-
 
 Prototype interactions are encouraged to use a flat file. For example:
 
