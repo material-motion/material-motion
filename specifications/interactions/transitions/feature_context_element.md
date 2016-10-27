@@ -13,6 +13,6 @@ The context element is what that the user interacted with in order to initiate t
 Example pseudo-code:
 
 ```
-TransitionDirector {
+Transition {
   readonly var contextElement
 ```
