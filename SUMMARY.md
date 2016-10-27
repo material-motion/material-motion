@@ -36,7 +36,7 @@
    * [Interaction](specifications/interaction/README.md)
        * [Director](specifications/interaction/director.md)
        * [Transitions](specifications/interactions/transitions/README.md)
-           * [Directionality](specifications/interactions/transitions/directionality.md)
+           * [Directionality](specifications/interaction/transition/directionality.md)
            * [Life of a transition director](specifications/interactions/transitions/life_of_a_transition_director.md)
            * [Transition](specifications/interaction/transitions/Transition.md)
                * [Feature: interruptible](specifications/context_transitions/feature_interruptible.md)
