@@ -53,7 +53,7 @@ class TimeWindow {
 Define a direction type that includes both possible directions.
 
 ```
-TimeWindowDirection {
+enum TimeWindowDirection {
   .forward:
   .backward:
 }
