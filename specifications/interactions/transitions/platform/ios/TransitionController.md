@@ -53,24 +53,6 @@ TransitionController {
 
 **Finish on idle**: Finish the transition when the scheduler enters the idle activity state.
 
-Example pseudo-code:
-
-    TransitionController {
-      function schedulerActivityStateDidChange(scheduler) {
-        if scheduler.state == .Idle {
-          self.transitionDidFinish()
-        }
-      }
-      
-      function transitionDidFinish() {
-        director.tearDown();
-      }
-    }
-
-**System bridge**: Implement the necessary bridge for the platform's transitioning APIs.
-
-This differs greatly from platform to platform.
-
 ## Open Questions
 
 - How do we handle directors that never enter the .Active state?
