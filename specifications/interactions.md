@@ -27,7 +27,6 @@ Interaction FadeIn {
 
 There is only one target involved here, so we might be better off creating a Plan instead:
 
-
 ```
 Plan FadeIn {
   Performer {
