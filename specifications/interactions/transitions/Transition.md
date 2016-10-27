@@ -34,18 +34,11 @@ class Transition {
 
 The scheduler's plan APIs should be proxied through the Transition object so as not to provide direct access to the scheduler.
 
-**Initial direction API**: Provide a read-only value of the transition's initial direction.
+**Time window API**: Provide a read-only value of the transition's time window.
 
 ```
 class Transition {
-  let initialDirection: TransitionWindowDirection
-```
-
-**Duration API**: Provide a read-only value of the transition's duration.
-
-```
-class Transition {
-  let duration: TimeInterval
+  let window: TimeWindow
 ```
 
 **back/fore API**: Provide a read-only `back` and `fore` value.
