@@ -81,7 +81,7 @@ The unit of time is platform-dependent.
 
 ```
 class TimeWindow {
-  TimeInterval duration
+  let duration: TimeInterval
 }
 ```
 
