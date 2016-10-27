@@ -37,7 +37,7 @@ When initialized with an initial direction of **backward**, position should init
 
 ```
 class TimeWindow {
-  Double position
+  var position: Double
 }
 ```
 
