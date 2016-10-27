@@ -10,28 +10,6 @@ Interactions can involve any number of plans and targets. The specificity of an 
 
 Interactions should prefer composition over subclassing.
 
-Object-oriented interactions are encouraged to make use of the [Director](director.md) object type. For example:
-
-**TossableWords**
-
-```
-Interaction TossableWords {
-  func setUp() {
-    let draggable = Draggable()
-    addPlan(draggable, to: circle)
-    addPlan(VelocitySource(draggable), to: circle)
-  }
-}
-```
-
-Prototype interactions are encouraged to use a flat file. For example:
-
-**File: MyPrototype.interaction**
-
-```
-addPlan(Draggable(), to: circle)
-```
-
 ## Interactions or Plans?
 
 To determine whether something is an Interaction or a Plan, consider the number of targets involved. Only one target? It should be a Plan. More than one target? It should be an Interaction.
