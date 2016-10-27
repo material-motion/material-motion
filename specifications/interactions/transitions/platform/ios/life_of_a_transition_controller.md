@@ -60,4 +60,4 @@ transitionWillStart(initialDirection) {
 
 The transition controller informs iOS that the transition has completed once the scheduler has idled.
 
-At this point the transition controller throws away its Director instance.
+The transition controller now throws away its Director instance.
