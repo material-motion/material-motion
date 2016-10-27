@@ -1,4 +1,4 @@
-# Life of a context transition director
+# Life of a transition director
 
 | Discussion thread | Status |
 |:------------------|:-------|
