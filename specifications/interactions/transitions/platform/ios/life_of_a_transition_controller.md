@@ -30,14 +30,19 @@ Assign a TransitionDirector type to the transition controller.
 viewController.mdm_transitionController.directorType = typeof(FadeTransitionDirector)
 ```
 
+TransitionController uses this value to instantiate a director when a transition is initiated.
 
 ### Step 3: Initiate a transition
 
-Most platforms have a standard mechanism for initiating a transition. At this point our transition controller should take control of the transition.
+Use standard view controller presentation APIs:
+
+```
+present(viewController, animated: true)
+```
 
 #### Step 3.1: Create a scheduler and a director
 
-To coordinate a transition, a transition controller must create a scheduler and a director.
+The transition controller now creates a scheduler and a director.
 
 The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRunner`.
 
