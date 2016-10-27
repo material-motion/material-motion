@@ -26,7 +26,7 @@ Prototype interactions are encouraged to use a flat file. For example:
 addPlan(Draggable(), to: circle)
 ```
 
-## Interactions vs Plans
+## Interactions or Plans?
 
 To determine whether something is an Interaction or a Plan, consider the number of targets involved. Only one target? It should be a Plan. More than one target? It should be an Interaction.
 
