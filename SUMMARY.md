@@ -35,7 +35,7 @@
    * [Motion library](specifications/motion_library.md)
    * [Interaction](specifications/interaction/README.md)
        * [Director](specifications/interaction/director.md)
-       * [Transitions](specifications/context_transitions/README.md)
+       * [Transitions](specifications/interactions/transitions/README.md)
            * [Directionality](specifications/context_transitions/directionality.md)
            * [Life of a context transition director](specifications/context_transitions/life_of_a_context_transition_director.md)
            * [ContextTransition](specifications/context_transitions/ContextTransition.md)
