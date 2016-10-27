@@ -32,7 +32,7 @@ class Transition {
   private let scheduler: Scheduler
 ```
 
-The scheduler's plan APIs should be exposed through the Transition object.
+The scheduler's plan APIs should be exposed through the Transition object so as not to provide direct access to the scheduler.
 
 **Initial direction API**: Provide a read-only value of the transition's initial direction.
 
