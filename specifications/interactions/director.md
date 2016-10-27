@@ -14,17 +14,9 @@ Directors have little — if any — imperative code that directly applies chang
 
 ## MVP
 
-**planEmitter API**: A director may be provided with a PlanEmitter instance.
+**Scheduler API**: A director may be provided with a Scheduler instance, or it might create its own.
 
-Directors must use a PlanEmitter instance in order to register new plans with a scheduler.
-
-Example pseudo-code definition:
-
-```
-function setPlanEmitter(PlanEmitter)
-```
-
-**setUp API**: A director implements a `setUp` function. This function will be invoked exactly once.
+**setUp API**: A director may implement a `setUp` function. This function is expected to be invoked exactly once.
 
 Example pseudo-code definition:
 
@@ -32,35 +24,12 @@ Example pseudo-code definition:
 function setUp()
 ```
 
-Directors are expected to commit plans to `setUp`'s provided transaction .
-
 Example pseudo-code implementation:
 
 ```
 function setUp() {
-  planEmitter.addPlan(plan, to: targetA)
-  planEmitter.addPlan(plan, to: targetB)
+  scheduler.addPlan(plan, to: targetA)
+  scheduler.addPlan(plan, to: targetB)
   ...
 }
 ```
-
-**Tear down API**: The `tearDown` function, if implemented, is invoked when the director's corresponding scheduler is about to terminate.
-
-Pseudo-code example:
-
-```
-function tearDown() {
-  // Perform any cleanup work
-}
-```
-
-**API invocation order**: The director's methods must be invoked in the following order over the lifetime of the director:
-
-1. `setPlanEmitter`
-2. `setUp`
-3. `tearDown`
-
-**No access to a scheduler**: Directors do not have direct access to a scheduler.
-
-The primary goal of this restriction is to minimize the number of novel APIs a director must interact with. The planEmitter is the preferred bridge between a director and its scheduler.
-
