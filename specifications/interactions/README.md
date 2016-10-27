@@ -4,9 +4,26 @@ An interaction specification describes a coherent interactive experience. Intera
 
 Interactions should strive for being composable.
 
-Productionized interactions are encouraged to make use of the [Director](director.md) type as a vessel for deploying interactions in a code base.
+Productionized interactions are encouraged to make use of the [Director](director.md) type as a vessel for deploying interactions in a code base. For example:
 
-Prototype interactions are encouraged to use a flat file.
+**TossableWords**
+
+```
+Interaction TossableWords {
+  func setUp() {
+    addPlan(Draggable(), to: circle)
+  }
+}
+```
+
+
+Prototype interactions are encouraged to use a flat file. For example:
+
+**File: MyPrototype.interaction**
+
+```
+addPlan(Draggable(), to: circle)
+```
 
 ## Interactions vs Plans
 
