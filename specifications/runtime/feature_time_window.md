@@ -91,6 +91,6 @@ This should be initialized with the value of `initialDirection`.
 
 ```
 class TimeWindow {
-  TimelineDirection currentDirection
+  var currentDirection: TimeWindowDirection
 }
 ```
