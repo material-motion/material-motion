@@ -40,9 +40,9 @@ Use standard view controller presentation APIs:
 present(viewController, animated: true)
 ```
 
-#### Step 3.1: Create a scheduler and a director
+#### Step 3.1: Create a TransitionDriver
 
-The transition controller now creates a scheduler and a director.
+The transition controller now creates a TransitionDriver.
 
 The transition controller may hold on to an object that stores both the scheduler and the director during the lifetime of the transition. Such an object could be called a `TransitionRunner`.
 
