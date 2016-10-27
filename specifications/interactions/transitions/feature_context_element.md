@@ -15,5 +15,4 @@ Example pseudo-code:
 ```
 TransitionDirector {
   readonly var contextElement
-}
 ```
