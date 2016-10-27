@@ -25,7 +25,7 @@ class Transition {
 }
 ```
 
-**Scheduler API**: Store a private Scheduler instance.
+**Scheduler and proxied plan APIs**: Store a private Scheduler instance.
 
 ```
 class Transition {
