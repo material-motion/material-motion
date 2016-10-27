@@ -10,23 +10,24 @@ This is the engineering specification for the **TimeWindowSegment** type.
 
 This feature enables the description of motion between two distinct states.
 
-## Example: TransitionTween
+## Example: TweenBetween
 
 ```
-let tween = TransitionTween("opacity",
-                            during: .entireSegment,
-                            backValue: 0,
-                            foreValue: 1)
+let tween = TweenBetween("opacity",
+                         window: window,
+                         segment: .entireSegment,
+                         back: 0,
+                         fore: 1)
 ```
 
 ## MVP Specification
 
-**Struct type**: A transition segment represents a specific part of a transition.
+**Struct type**: A TimeWindowSegment represents a specific part of a time window.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
 ```
-Segment {
+TimeWindowSegment {
   var position
   var length
 }
@@ -49,7 +50,7 @@ back   fore
 **Epsilon**: Include an epsilon constant.
 
 ```
-let TransitionSegmentEpsilon = 0.00001
+let TimeWindowSegmentEpsilon = 0.00001
 ```
 
 ### Feature: Pre-defined segments
