@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](../../../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![](../../../../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 Let's walk through the life of an arbitrary transition.
 
