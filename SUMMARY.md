@@ -33,7 +33,7 @@
        * [📢 TweenBetween](specifications/plans/TweenBetween.md)
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion library](specifications/motion_library.md)
-   * [Interactions](specifications/interaction/README.md)
+   * [Interactions](specifications/interactions/README.md)
        * [Director](specifications/interaction/director.md)
        * [Transitions](specifications/interactions/transitions/README.md)
            * [Directionality](specifications/interaction/transition/directionality.md)
