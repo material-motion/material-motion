@@ -30,7 +30,7 @@ The type must represent an object that conforms to the `TransitionDirector` type
 Example pseudo-code:
 
     TransitionController {
-      public var directorClass: typeof(TransitionDirector)
+      public var directorType: TransitionDirector.type
 
 **Transition will start**: The following should occur when a transition is about to begin:
 
