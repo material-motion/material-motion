@@ -1,14 +1,14 @@
-# ContextTransitionDirector specification
+# TransitionDirector specification
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![](../../../_assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
-This is the engineering specification for the `ContextTransitionDirector` type.
+This is the engineering specification for the `TransitionDirector` type.
 
 ## Overview
 
-A `ContextTransitionDirector` creates the plans that shape a transition's motion and interaction.
+A `TransitionDirector` creates the plans that shape a transition's motion and interaction.
 
 ## Features
 
@@ -18,21 +18,21 @@ A `ContextTransitionDirector` creates the plans that shape a transition's motion
 
 ## MVP
 
-**Abstract type**: `ContextTransitionDirector` is a protocol, if your language has that concept.
+**Abstract type**: `TransitionDirector` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
 ```
-protocol ContextTransitionDirector
+protocol TransitionDirector
 ```
 
-**Initialization API**: Define a required API that allows a director to receive a `ContextTransition` instance.
+**Initialization API**: Define a required API that allows a director to receive a `Transition` instance.
 
 Example pseudo-code:
 
 ```
-protocol ContextTransitionDirector {
-  init(transition: ContextTransition)
+protocol TransitionDirector {
+  init(transition: Transition)
 ```
 
 **setUp API**: Define a required API that allows a director to set up its initial plans.
@@ -40,6 +40,6 @@ protocol ContextTransitionDirector {
 Example pseudo-code:
 
 ```
-protocol ContextTransitionDirector {
+protocol TransitionDirector {
   function setUp()
 ```
