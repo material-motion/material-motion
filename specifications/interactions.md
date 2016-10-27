@@ -1,5 +1,5 @@
-Status of this document:
-![](../_assets/under-construction-flashing-barracade-animation.gif)
-
 # Interactions
 
+An interaction describes a coherent interactive experience. Interactions can involve any number of plans and targets. The specificity of an interaction is left as an exercise to its creator.
+
+Interactions are composable in nature.
