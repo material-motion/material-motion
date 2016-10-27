@@ -2,7 +2,7 @@
 
 An interaction describes a coherent interactive experience. Interactions can involve any number of plans and targets. The specificity of an interaction is left as an exercise to its creator.
 
-Interactions should strive for being composable.
+Interactions should prefer composition over subclassing.
 
 Object-oriented interactions are encouraged to make use of the [Director](director.md) object type. For example:
 
