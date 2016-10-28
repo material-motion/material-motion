@@ -25,14 +25,12 @@ class Transition {
 }
 ```
 
-**Scheduler and proxied plan APIs**: Store a private Scheduler instance.
+**Scheduler API**: Provide access to a Scheduler instance.
 
 ```
 class Transition {
-  private let scheduler: Scheduler
+  let scheduler: Scheduler
 ```
-
-The scheduler's plan APIs should be proxied through the Transition object so as not to provide direct access to the scheduler.
 
 **Time window API**: Provide a read-only value of the transition's time window.
 
