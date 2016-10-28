@@ -27,8 +27,8 @@ from the latest `origin/develop` commit.
 
 Test the release by checking out the `release-candidate` branch and running unit tests.
 
-If remote continuous-integration is set up this is a good time to push the release-candidate to the
-remote.
+The `release-candidate` branch is automatically pushed to the remote,
+so check your remote continuous-integration if it is set up.
 
 ## Update CHANGELOG.md
 
@@ -73,7 +73,7 @@ And you're done!
 Usage: `mdm release cut [--hotfix]`
 
     Cut a new release from `origin/develop`.
-    
+
     Options:
       --hotfix  Cuts the release candidate from `origin/stable`.
 
@@ -81,7 +81,7 @@ Usage: `mdm release notes`
 
     Generates release notes from the previous `origin/stable` branch to the head
     of `release-candidate`.
-    
+
     Prerequirements:
     - Ran `mdm release cut`.
 
@@ -89,27 +89,27 @@ Usage: `mdm release bump <new version> [<old version>]`
 
     Updates all references to <old version> with <new version> in the repository.
     If not provided, <old version> is inferred from the latest git tag.
-    
+
     Will NOT modify files that match any of the regular expressions contained in
     the versionignore file that lives beside the `release` command.
-    
+
     Prerequirements:
     - Ran `mdm release cut`.
 
 Usage: `mdm release merge <version>`
 
     Merges the current release-candidate into `stable`.
-    
+
     <version> is the intended version number of the release. This must match the
     latest version number in CHANGELOG.md.
-    
+
     Prerequirements:
     - Ran `mdm release cut`.
 
 Usage: `mdm release publish <version>`
 
     Publishes the current release to GitHub.
-    
+
     Prerequirements:
     - On the `stable` branch.
     - Ran `mdm release merge <version>`.
@@ -117,5 +117,5 @@ Usage: `mdm release publish <version>`
 Usage: `mdm release abort`
 
     Aborts an active release.
-    
+
     `This operation is destructive and requires confirmation.`
