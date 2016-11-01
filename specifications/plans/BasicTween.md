@@ -1,9 +1,9 @@
-# BasicTween
+# BasicBasicTween
 
 | Discussion thread | Moderator | Status |
 |:------------------|:-------|:-------|
-| [Should we enforce one Tween per property?](https://github.com/material-motion/material-motion-family-tween-android/issues/6) | pingpongboss | Proposed on Oct 12, 2016 |
-| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | appsforartists | Approved on Nov 1, 2016 |
+| [Should we enforce one BasicTween per property?](https://github.com/material-motion/material-motion-family-tween-android/issues/6) | pingpongboss | Proposed on Oct 12, 2016 |
+| [Rename BasicTween to BasicBasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | appsforartists | Approved on Nov 1, 2016 |
 
 ## Example: Fade in
 
@@ -11,7 +11,7 @@
 Transition Fade {
   func setUp(planEmitter) {
     planEmitter.addPlan(
-      Tween(
+      BasicTween(
         .opacity, 
         from: 0, 
         to: 1, 
@@ -30,7 +30,7 @@ Transition Fade {
 Linearly interpolate a target's property from one value to another using a timing function for velocity.
 
 ```
-Plan Tween {
+Plan BasicTween {
   var property
   var from
   var to
@@ -64,4 +64,4 @@ For platforms that support a model/presentation layer separation, the `from` and
 
 ## Performer considerations
 
-If multiple Tweens are added for the same property then the latest tween is used.
+If multiple BasicTweens are added for the same property then the latest tween is used.
