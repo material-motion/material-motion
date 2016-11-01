@@ -47,7 +47,7 @@
                * [Life of a transition controller](specifications/interactions/transitions/platform/ios/life_of_a_transition_controller.md)
                * [TransitionController](specifications/interactions/transitions/platform/ios/TransitionController.md)
                    * [Feature: director stack](specifications/interactions/transitions/platform/ios/feature_director_stack.md)
-   * [Creating replica elements](specifications/replicas.md)
+   * [Target replication](specifications/replicas.md)
        * [ReplicaController](specifications/replicator_controller.md)
        * [ReplicaControllerDelegate](specifications/replicator.md)
    * [Domain mapping](specifications/runtime/feature_nested_timelines.md)
