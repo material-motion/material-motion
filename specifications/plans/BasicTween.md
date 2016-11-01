@@ -3,7 +3,7 @@
 | Discussion thread | Moderator | Status |
 |:------------------|:-------|:-------|
 | [Should we enforce one Tween per property?](https://github.com/material-motion/material-motion-family-tween-android/issues/6) | pingpongboss | Proposed on Oct 12, 2016 |
-| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | appsforartists | Proposed on Oct 18, 2016 |
+| [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | appsforartists | Approved on Nov 1, 2016 |
 
 |     | Android | Apple | Web |
 |:----|:--------|:------|:----|
