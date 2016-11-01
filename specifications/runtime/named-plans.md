@@ -1,6 +1,6 @@
 # Named plans feature specification
 
-This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Scheduler types.
+This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Runtime types.
 
 |     | Android | Apple | Web |
 |:----|:--------|:------|:----|
@@ -9,7 +9,7 @@ This is the engineering specification for **named plans**. This specification re
 
 ## Overview
 
-This feature enables the registration of _named plans_ to a scheduler. Named plans can be added and removed by name, enabling fine configuration of a performer's behavior.
+This feature enables the registration of _named plans_ to a runtime. Named plans can be added and removed by name, enabling fine configuration of a performer's behavior.
 
 > A named plan cannot have `null` or an empty string as its name.
 
@@ -23,10 +23,10 @@ Example pseudo-code:
 
 ```
 # on drag
-scheduler.addPlan(matchLocationOf(cursor), named: "drag", to: target)
+runtime.addPlan(matchLocationOf(cursor), named: "drag", to: target)
 
 # on release
-scheduler.addPlan(springToLocation(origin), named: "drag", to: target)
+runtime.addPlan(springToLocation(origin), named: "drag", to: target)
 ```
 
 Example use case: removing a behavior from a target.
@@ -34,10 +34,10 @@ Example use case: removing a behavior from a target.
 Example pseudo-code:
 
 ```
-scheduler.addPlan(springToLocation(origin), named: 'spring', to: target)
+runtime.addPlan(springToLocation(origin), named: 'spring', to: target)
 
 # later on
-scheduler.removePlan(named: 'spring', from: target)
+runtime.removePlan(named: 'spring', from: target)
 ```
 
 ## Performer specification
@@ -63,9 +63,9 @@ protocol NamedPlanPerforming {
 
 Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
 
-# Scheduler specification
+# Runtime specification
 
-Schedulers support named plans. Named plans are plans with a name associated via the transaction.
+Runtimes support named plans. Named plans are plans with a name associated via the transaction.
 
 **Named APIs**: Provide an `addPlan` and `removePlan` API with a name argument.
 
@@ -74,21 +74,21 @@ Note that the plan type must be a `NamedPlan`. Motion family designers use this 
 Example pseudo-code:
 
 ```
-class Scheduler {
+class Runtime {
   function addPlan(NamedPlan, named: String, to: Target)
   function removePlan(named: String, from: Target)
 }
 
 # Associate a named plan with a target.
-scheduler.addPlan(plan, named: name, to: target)
+runtime.addPlan(plan, named: name, to: target)
 
 # Remove any named plan from a target.
-scheduler.removePlan(named: name, from: target)
+runtime.removePlan(named: name, from: target)
 ```
 
 **Target-scoped names**: Names are scoped to a target.
 
-The scheduler maintains a separate named plan mapping for each target.
+The runtime maintains a separate named plan mapping for each target.
 
 **Remove-then-add**: Two things happen when a named plan is added.
 
@@ -116,8 +116,8 @@ performerForName(name) == performer
 *Removing a name which was never added before:*
 
 ```
-Scheduler scheduler = new Scheduler();
-scheduler.removeNamedPlan("foo");
+Runtime runtime = new Runtime();
+runtime.removeNamedPlan("foo");
 ```
  
 * Nothing happens. No performer is created.
@@ -125,8 +125,8 @@ scheduler.removeNamedPlan("foo");
 *Adding a name which was never added before:*
 
 ```
-Scheduler scheduler = new Scheduler();
-scheduler.addNamedPlan(plan, "foo");
+Runtime runtime = new Runtime();
+runtime.addNamedPlan(plan, "foo");
 ```
 
 * A performer is created for plan. 
@@ -135,9 +135,9 @@ scheduler.addNamedPlan(plan, "foo");
 *Adding a name which was added before:*
 
 ```
-Scheduler scheduler = new Scheduler();
-scheduler.addNamedPlan(plan, "foo");
-scheduler.addNamedPlan(plan2, "foo");
+Runtime runtime = new Runtime();
+runtime.addNamedPlan(plan, "foo");
+runtime.addNamedPlan(plan2, "foo");
 ```
 
 * A performer is created for plan. 

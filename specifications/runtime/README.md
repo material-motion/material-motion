@@ -24,14 +24,14 @@ To answer the first question we introduce our first type: `Plan`.
 
 > A plan is an object representing **what you want something to do**.
 
-To answer the second question we introduce two more types: the `Performer` and the `Scheduler`.
+To answer the second question we introduce two more types: the `Performer` and the `Runtime`.
 
-> A performer's sole responsibility is to fulfill the contract defined by one or more plans. A scheduler is the entity that creates performers.
+> A performer's sole responsibility is to fulfill the contract defined by one or more plans. A runtime is the entity that creates performers.
 
 Here's how these objects fit together:
 
-1. Plans are added to a scheduler.
-2. Schedulers create performers.
+1. Plans are added to a runtime.
+2. Runtimes create performers.
 3. Performers fulfill the plans.
 
 In visual form:
@@ -44,4 +44,4 @@ Or dive in to the engineering specifications:
 
 - [Plan](plan.md)
 - [Performer](performer.md)
-- [Scheduler](scheduler.md)
+- [Runtime](runtime.md)

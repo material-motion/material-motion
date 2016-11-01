@@ -46,18 +46,18 @@ The transition controller creates an instance of the Director when a transition 
 
 ```
 transitionWillStart(initialDirection) {
-  let scheduler = Scheduler()
-  scheduler.delegate = self
+  let runtime = Runtime()
+  runtime.delegate = self
   let transition = Transition(initialDirection,
-                              scheduler: scheduler,
+                              runtime: runtime,
                               back: back,
                               fore: fore)
   director = directorType(transition)
 }
 ```
 
-### Step 4: Terminate the transition once the scheduler idles
+### Step 4: Terminate the transition once the runtime idles
 
-The transition controller informs iOS that the transition has completed once the scheduler has idled.
+The transition controller informs iOS that the transition has completed once the runtime has idled.
 
 The transition controller now releases its Director instance.

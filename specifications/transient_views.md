@@ -21,6 +21,6 @@ Can be removed once some function evaluates to true. Many conditions can be buil
 - `timeHasPassed`
 - etc...
 
-Function can be scheduled to be checked on any scheduler event: update, teardown.
+Function can be scheduled to be checked on any runtime event: update, teardown.
 
 Multiple functions can be registered to a single view.
