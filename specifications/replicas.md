@@ -1,4 +1,4 @@
-# Creating replica elements
+# Target replication
 
 Replication allows motion to appear to affect an element without adversely affecting the existing element hierarchy. This is helpful for separating concerns when building transitions but often comes with an up-front cost.
 
