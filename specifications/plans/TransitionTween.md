@@ -32,7 +32,9 @@ Plan TransitionTween {
 
 `backwardTimingFunction` is the timing function to use when initially animating backward.
 
-`segment` is the portion of the transition window in which the animation should occur.
+`forwardSegment` is the portion of the transition window in which the animation should occur during a forward transition.
+
+`backwardSegment` is the portion of the transition window in which the animation should occur during a backward transition.
 
 `window` is the transition window within which the `segment` applies.
 
