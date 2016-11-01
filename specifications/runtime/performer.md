@@ -2,9 +2,9 @@
 
 This is the engineering specification for the `Performer` abstract type.
 
-|                  | Android | Apple |
-| ---------------- |:-------:|:-----:|
-| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+|     | Android | Apple | Web |
+|:----|:--------|:------|:----|
+| Available since | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) | &nbsp; |
 
 ## Features
 
