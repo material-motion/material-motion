@@ -4,7 +4,7 @@ Current stability status of each feature. Empty rows imply that the feature is n
 
 | [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:-------------:|:-------:|:-----:|:-------:|:---:|
-| [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | Stable | [v4.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v4.0.0) | [3.0.0](https://github.com/material-motion/material-motion-runtime-android/releases/tag/3.0.0) | [MVP](https://github.com/material-motion/material-motion-experiments-js/tree/develop/src) |
+| [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | Stable | [v4.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v4.0.0) | [4.0.0](https://github.com/material-motion/material-motion-runtime-android/releases/tag/4.0.0) | [MVP](https://github.com/material-motion/material-motion-experiments-js/tree/develop/src) |
 | [Transitions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/transitions.html)   | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions.html)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
