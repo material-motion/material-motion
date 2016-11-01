@@ -1,17 +1,17 @@
-# TweenBetween
+# TransitionTween
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| [`TweenBetween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | In review |
+| [`TransitionTween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | In review |
 
-TweenBetween describes tween animations that occur during a transition between two states.
+TransitionTween describes tween animations that occur during a transition between two states.
 
 > Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
 ## Contract
 
 ```
-Plan TweenBetween {
+Plan TransitionTween {
   var property
   var backValue
   var foreValue
@@ -40,7 +40,7 @@ Plan TweenBetween {
 
     TransitionDirector Fade {
       func setUp() {
-        let fade = TweenBetween("opacity",
+        let fade = TransitionTween("opacity",
                                 window: window,
                                 segment: .init(position: 0, length: 1)
                                 back: 0,
@@ -53,7 +53,7 @@ Plan TweenBetween {
 
     TransitionDirector Slide {
       func setUp() {
-        let shiftUp = TweenBetween("position",
+        let shiftUp = TransitionTween("position",
                                    window: window,
                                    segment: .init(position: 0, length: 1)
                                    back: bottomEdge,
@@ -64,11 +64,11 @@ Plan TweenBetween {
 
 ## Performer considerations
 
-A TweenBetweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
+A TransitionTweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
 
 ```
 window = TransitionWindow(duration: 0.4s)
-TweenBetween("opacity",
+TransitionTween("opacity",
              window: window,
              segment: .init(position: 0, length: 0.25)
              back: 0,
