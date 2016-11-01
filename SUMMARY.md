@@ -35,7 +35,7 @@
        * [Transitions](specifications/interactions/transitions/README.md)
            * [Directionality](specifications/interactions/transitions/directionality.md)
            * [Time window](specifications/interactions/transitions/feature_time_window.md)
-           * [Time window segment](specifications/runtime/feature_time_window_segment.md)
+           * [Time window segment](specifications/interactions/transitions/feature_time_window_segment.md)
            * [Life of a transition director](specifications/interactions/transitions/life_of_a_transition_director.md)
            * [Transition](specifications/interactions/transitions/Transition.md)
                * [Feature: context element](specifications/interactions/transitions/feature_context_element.md)
