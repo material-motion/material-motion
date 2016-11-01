@@ -1,5 +1,7 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
+| Discussion thread | Status |
+|:------------------|:-------|
+| None | Drafting |
 
 # Target selectors feature specification
 
