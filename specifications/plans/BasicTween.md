@@ -61,7 +61,3 @@ For platforms that support a model/presentation layer separation, the `from` and
 * Only `from` is provided. Interpolates between `from` and the current presentation value of the property.
 
 * Only `to` is provided. Interpolates between the current value of the property and `to`.
-
-## Performer considerations
-
-If multiple BasicTweens are added for the same property then the latest tween is used.
