@@ -4,7 +4,7 @@ This is the engineering specification for the `Runtime` object.
 
 | Discussion thread | Moderator | Status |
 |:------------------|:-------|:-------|
-| [Rename Runtime to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
+| [Rename Scheduler to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
 
 |     | Android | Apple | Web |
 |:----|:--------|:------|:----|
