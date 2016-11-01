@@ -9,8 +9,8 @@
 
 ```
 Transition Fade {
-  func setUp(planEmitter) {
-    planEmitter.addPlan(
+  func setUp() {
+    runtime.addPlan(
       BasicTween(
         .opacity, 
         from: 0, 
