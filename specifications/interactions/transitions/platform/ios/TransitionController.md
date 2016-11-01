@@ -36,22 +36,22 @@ Example pseudo-code:
 
 1. Initialize the director
 2. Invoke the `setUp` event on the director
-3. Commit the `setUp` transaction to a scheduler
+3. Commit the `setUp` transaction to a runtime
 
 Example pseudo-code:
 
 ```
 TransitionController {
   function transitionWillStart(initialDirection) {
-    let scheduler = Scheduler()
-    scheduler.delegate = self
+    let runtime = Runtime()
+    runtime.delegate = self
     let transition = Transition(...)
     director = directorClass(transition)
   }
 }
 ```
 
-**Finish on idle**: Finish the transition when the scheduler enters the idle activity state.
+**Finish on idle**: Finish the transition when the runtime enters the idle activity state.
 
 ## Open Questions
 

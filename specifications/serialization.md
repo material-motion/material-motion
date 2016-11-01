@@ -22,12 +22,12 @@ Serialization enables a wide variety of use cases:
   * Able to modify named variables in the system. E.g. `destinationOpacity = <slider with range of 0...1, default 0.1>`
 
 
-Example pseudo-code reading a transaction from a stream and committing it to a scheduler:
+Example pseudo-code reading a transaction from a stream and committing it to a runtime:
 
 ```
 let serializer = MotionSerializer
 let transaction = serializer.transactionFromStream(stream)
-transaction.commitToScheduler(scheduler)
+transaction.commitToRuntime(runtime)
 ```
 
 ## Protocol

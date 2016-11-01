@@ -1,10 +1,10 @@
-# Scheduler specification
+# Runtime specification
 
-This is the engineering specification for the `Scheduler` object.
+This is the engineering specification for the `Runtime` object.
 
 | Discussion thread | Moderator | Status |
 |:------------------|:-------|:-------|
-| [Rename Scheduler to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
+| [Rename Runtime to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
 
 |     | Android | Apple | Web |
 |:----|:--------|:------|:----|
@@ -17,21 +17,21 @@ This is the engineering specification for the `Scheduler` object.
 
 ## Overview
 
-A scheduler receives plans and creates performers. The scheduler generates relevant events for performers and monitors activity.
+A runtime receives plans and creates performers. The runtime generates relevant events for performers and monitors activity.
 
 Printable tech tree/checklist:
 
-![](../../_assets/SchedulerTechTree.svg)
+![](../../_assets/RuntimeTechTree.svg)
 
 ## MVP
 
 ### Simple initializer
 
-A scheduler is cheap to create.
+A runtime is cheap to create.
 
 Example pseudo-code:
 
-    scheduler = Scheduler()
+    runtime = Runtime()
 
 ### addPlan API
 
@@ -42,7 +42,7 @@ This API must accept a plan and a target object.
 Example pseudo-code:
 
     # Associate a plan with a target.
-    scheduler.addPlan(plan, to: target)
+    runtime.addPlan(plan, to: target)
 
 #### One instance of a performer type per target
 
@@ -52,8 +52,8 @@ Create one performer instance for each *type* of performer required by a target.
 
 > Consider the following pseudo-code involving physical simulation:
 > 
->     scheduler.addPlan(Friction(), to: circleView)
->     scheduler.addPlan(AnchoredSpringAtLocation(x, y), to: circleView)
+>     runtime.addPlan(Friction(), to: circleView)
+>     runtime.addPlan(AnchoredSpringAtLocation(x, y), to: circleView)
 > 
 > `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans have been provided to the performer instance.
 > 
@@ -78,7 +78,7 @@ Note that "one performer per type of plan" does not resolve the problem of shari
 
 #### Plan ↔ performer association
 
-The scheduler must be able to translate plans into performers.
+The runtime must be able to translate plans into performers.
 
 Plans define their performer type explicitly.
 
@@ -90,17 +90,17 @@ Example pseudo-code:
       }
     }
     
-    # In the scheduler...
+    # In the runtime...
     performerType = plan.performerType()
     performer = performerType()
 
 #### Unit Tests
 
-- [JavaScript](https://github.com/material-motion/material-motion-experiments-js/blob/develop/packages/runtime/src/__tests__/Scheduler-addPlan.test.ts)
+- [JavaScript](https://github.com/material-motion/material-motion-experiments-js/blob/develop/packages/runtime/src/__tests__/Runtime-addPlan.test.ts)
 
 ### Activity state
 
-Activity state is one of either active or at rest. The scheduler must provide a public read-only API for accessing this state.
+Activity state is one of either active or at rest. The runtime must provide a public read-only API for accessing this state.
 
 Pseudo-code example:
 
@@ -109,11 +109,11 @@ Pseudo-code example:
       .AtRest
     }
     
-    Scheduler {
+    Runtime {
       public function activityState() -> ActivityState
     }
 
-A scheduler is active if any of its performer instances are active.
+A runtime is active if any of its performer instances are active.
 
 ---
 
@@ -121,8 +121,8 @@ A scheduler is active if any of its performer instances are active.
 
 The following topics are open for discussion. They do not presently have a clear recommendation.
 
-- When should performers be removed from a scheduler?
-- Should schedulers support target-less plans?
+- When should performers be removed from a runtime?
+- Should runtimes support target-less plans?
 
 ---
 
@@ -132,21 +132,21 @@ The following topics are open for discussion. They do not presently have a clear
 
 #### Map performer type to plan type with look-up table.
 
-Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The scheduler would need to be able to determine which one to use.
+Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The runtime would need to be able to determine which one to use.
 
 Example pseudo-code:
   
     # In some initialization step...
-    scheduler.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
+    runtime.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
     
-    # In the scheduler...
+    # In the runtime...
     performerType = plan.performerTypeForPlan(plan)
     performer = performerType()
 
 
 ### Tear down API
 
-####Provide an API to tear down a scheduler.
+####Provide an API to tear down a runtime.
 
 This API would terminate all active performers and remove all registered plans.
 
@@ -154,17 +154,17 @@ It's unclear if this is a necessary feature.
 
 Example pseudo-code:
 
-    scheduler.tearDown()
+    runtime.tearDown()
 
 ### Garbage-collecting performers
 
-To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a scheduler may desire some strategy for removing references to old performers.
+To prevent a monotonically-increasing heap of performers from introducing a potential memory leak, a runtime may desire some strategy for removing references to old performers.
 
-The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) is considering removing references after the scheduler has be at rest for at least 500ms.  This was chosen for a few reasons:
+The [JavaScript implementation](https://github.com/material-motion/material-motion-experiments-js/) is considering removing references after the runtime has be at rest for at least 500ms.  This was chosen for a few reasons:
 
 - According to the [RAIL](https://developers.google.com/web/tools/chrome-devtools/profile/evaluate-performance/rail?hl=en) pattern, users are unlikely to notice a slow first frame in an animation.  This makes the first frame a good time to instantiate new objects.
 
-- The delay ensures that plans can be committed to the scheduler one-frame-at-a-time without triggering garbage collection.
+- The delay ensures that plans can be committed to the runtime one-frame-at-a-time without triggering garbage collection.
 
 - 500ms is long enough that new plans in this sequence are unlikely, but short enough that the user is unlikely to be initiating new plans.
 

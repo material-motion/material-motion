@@ -24,7 +24,7 @@ May be a Director Creator who was unable to express their desired interaction wi
 
 #### L4: Runtime engineering
 
-The Creator has decided that there is some functionality missing from all of the above knowledge areas, and has now decided to make modifications to the Runtime. This may result in modifications to the Scheduler, the Plan\/Performer protocols, or other aspects of the Runtime as a whole.
+The Creator has decided that there is some functionality missing from all of the above knowledge areas, and has now decided to make modifications to the Runtime. This may result in modifications to the Runtime, the Plan\/Performer protocols, or other aspects of the Runtime as a whole.
 
 ### Pivotal journey: First use of Material Motion in an existing app
 

@@ -16,7 +16,7 @@ This is the engineering specification for the `Transaction` object.
 
 ## Overview
 
-A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Scheduler](scheduler.md). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
+A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Runtime](runtime.md). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
 
 Printable tech tree\/checklist:
 
@@ -43,12 +43,12 @@ Example pseudo-code:
 transaction.addPlan(plan, to: target)
 ```
 
-**commit API**: Provide an API for committing a transaction to a scheduler.
+**commit API**: Provide an API for committing a transaction to a runtime.
 
 Example pseudo-code:
 
 ```
-transaction.commitToScheduler(scheduler)
+transaction.commitToRuntime(runtime)
 ```
 
 **Operation enumeration**: Operations recorded to a transaction are enumerable.

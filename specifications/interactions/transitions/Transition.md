@@ -25,11 +25,11 @@ class Transition {
 }
 ```
 
-**Scheduler API**: Provide access to a Scheduler instance.
+**Runtime API**: Provide access to a Runtime instance.
 
 ```
 class Transition {
-  let scheduler: Scheduler
+  let runtime: Runtime
 ```
 
 **Time window API**: Provide a read-only value of the transition's time window.

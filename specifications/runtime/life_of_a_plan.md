@@ -4,12 +4,12 @@ Let's walk through the life of a plan.
 
 > Note: any code you see here is pseudo-code.
 
-### Step 1: Create a scheduler
+### Step 1: Create a runtime
 
-Schedulers are cheap and easy to create. Many schedulers may exist in an application. Let's create one. We will make use of this object later.
+Runtimes are cheap and easy to create. Many runtimes may exist in an application. Let's create one. We will make use of this object later.
 
 ```
-scheduler = Scheduler()
+runtime = Runtime()
 ```
 
 ![](../../_assets/LifeOfAPlan-step1.svg)
@@ -31,7 +31,7 @@ rotatable = Rotatable()
 
 ![](../../_assets/LifeOfAPlan-step2.svg)
 
-### Step 3: Add the plans to the scheduler
+### Step 3: Add the plans to the runtime
 
 Let's say we have two targets - a circle and a square - to which we want to associate our plans.
 
@@ -40,21 +40,21 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 Plans are associated to targets:
 
 ```
-scheduler.addPlan(animation, to: circleView)
-scheduler.addPlan(draggable, to: squareView)
-scheduler.addPlan(pinchable, named: "name1", to: squareView)
-scheduler.addPlan(rotatable, named: "name2", to: squareView)
-scheduler.removePlan(named: "name2", from: squareView)
-scheduler.addPlan(draggable, to: circleView)
+runtime.addPlan(animation, to: circleView)
+runtime.addPlan(draggable, to: squareView)
+runtime.addPlan(pinchable, named: "name1", to: squareView)
+runtime.addPlan(rotatable, named: "name2", to: squareView)
+runtime.removePlan(named: "name2", from: squareView)
+runtime.addPlan(draggable, to: circleView)
 ```
 
-After executing the above code, the scheduler's internal state might resemble this:
+After executing the above code, the runtime's internal state might resemble this:
 
 ![](../../_assets/LifeOfAPlan-step4.svg)
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2".
 
-The scheduler uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its fulfillment.
+The runtime uses entities called **performers** to execute its plans. A performer is a specialized mediating agent between a plan and its fulfillment.
 
 We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
@@ -62,7 +62,7 @@ We'll assume a function exists that returns a performer capable of executing a t
 function performerForPlan(Plan, target, existingPerformers) -> Performer
 ```
 
-The scheduler creates performers by calling our hypothetical `performerForPlan` on each provided plan.
+The runtime creates performers by calling our hypothetical `performerForPlan` on each provided plan.
 
 We've created three performers in total. `circleView` has two performers. `squareView` has one.
 
@@ -72,7 +72,7 @@ We've created three performers in total. `circleView` has two performers. `squar
 
 ### Step 3a: Provide plans to performers
 
-The scheduler passes each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
+The runtime passes each plan instance to the relevant performer. This allows each performer to translate plans into actionable logic.
 
 ### Step 4: Performers execute plans
 
