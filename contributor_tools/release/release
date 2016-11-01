@@ -287,9 +287,15 @@ merge_release() {
     last_version=${last_version#v}
     last_version=$(echo "$last_version" | sed "s:\.:\\\\.:g")
     if grep -Ilr "$last_version" . | grep -v -f "$dir/versionignore"; then
-      echo "Old version $last_version found in the files above. Aborting release merge."
-      echo "Please run $parentcmd $cmd bump"
-      exit 1
+      echo "Old version $last_version found in the files above."
+      read -r -p "Continue? [y/N] " response
+      case $response in
+        [yY][eE][sS]|[yY]) ;;
+        *)
+          echo "Aborting release merge. Please run $parentcmd $cmd bump"
+          exit 1
+          ;;
+      esac
     fi
   fi
 
