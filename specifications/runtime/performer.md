@@ -52,7 +52,9 @@ Example pseudo-code:
 
     function addPlan(plan)
 
-**Continuous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
+### Continuous Performing API
+
+Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
 > The performer may choose not to implement this API.
 
