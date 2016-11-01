@@ -15,10 +15,6 @@ This is the engineering specification for the `Performer` abstract type.
 
 Performers are the objects responsible for executing plans.
 
-Printable tech tree/checklist:
-
-![](../../_assets/PerformerTechTree.svg)
-
 ## MVP
 
 ### Abstract type
