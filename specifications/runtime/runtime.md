@@ -19,10 +19,6 @@ This is the engineering specification for the `Runtime` object.
 
 A runtime receives plans and creates performers. The runtime generates relevant events for performers and monitors activity.
 
-Printable tech tree/checklist:
-
-![](../../_assets/RuntimeTechTree.svg)
-
 ## MVP
 
 ### Simple initializer
