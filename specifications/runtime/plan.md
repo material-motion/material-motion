@@ -2,10 +2,10 @@
 
 This is the engineering specification for the `Plan` abstract type.
 
-|                  | Android | Apple |
-| ---------------- |:-------:|:-----:|
-| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
-| Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | [Life of a plan](https://github.com/material-motion/material-motion-runtime-objc#how-to-create-a-new-plan-and-performer-type) |
+|     | Android | Apple | Web |
+|:----|:--------|:------|:----|
+| Available since | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) | &nbsp; |
+| Technical guide | <a href="https://github.com/material-motion/material-motion-runtime-objc/blob/develop/guides/Life%20of%20a%20plan%20(objc).md">Life of a plan</a>   | [Life of a plan](https://github.com/material-motion/material-motion-runtime-objc#how-to-create-a-new-plan-and-performer-type) | &nbsp; |
 
 ## Features
 

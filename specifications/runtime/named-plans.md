@@ -2,8 +2,8 @@
 
 This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Scheduler types.
 
-|  | Android | Apple | Web |
-| --- | --- | --- | --- |
+|     | Android | Apple | Web |
+|:----|:--------|:------|:----|
 | First introduced | &nbsp; | [Runtime 4.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v4.0.0) | &nbsp; |
 | MVP milestones | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/5) | Released | &nbsp; |
 

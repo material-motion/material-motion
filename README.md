@@ -9,6 +9,10 @@ This is a starmap. It defines high-level goals and identifies patterns. It is no
 
 Please read the chapter on [Starmap contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/starmap_essentials/) to learn how to contribute to the Starmap.
 
+## Is Material Motion affiliated with Google?
+
+Yes, the [Material Motion](https://github.com/material-motion) organization is one of Google's new homes for tools and frameworks related to our [Material Design](https://material.io) system, specifically surrounding motion and interaction.
+
 ## Who should read this?
 
 The Starmap is written for software engineers. We assume that you have some familiarity with animation systems.

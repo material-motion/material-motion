@@ -1,32 +1,35 @@
-# Feature: transition segment
+# Feature: time window segment
 
 | Proposals | Status |
 |:------------------|:-------|
 | Current status | Draft |
 
-This is the engineering specification for the **TransitionSegment** type.
+This is the engineering specification for the **TimeWindowSegment** type.
 
 ## Overview
 
-This feature enables the description of motion between two distinct states.
+A TimeWindowSegment represents a specific part of a time window.
 
-## Example: TransitionTween
+## Example: TweenBetween
 
 ```
-let tween = TransitionTween("opacity",
-                            during: .entireSegment,
-                            backValue: 0,
-                            foreValue: 1)
+let tween = TweenBetween("opacity",
+                         window: window,
+                         segment: .entireSegment,
+                         back: 0,
+                         fore: 1)
 ```
 
 ## MVP Specification
 
-**Struct type**: A transition segment represents a specific part of a transition.
+**Struct type**: TimeWindowSegment is a struct type, if the language allows.
+
+**position and length APIs**: Provide two writable values for `position` and `length`.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
 ```
-Segment {
+TimeWindowSegment {
   var position
   var length
 }
@@ -38,7 +41,7 @@ Assertions:
 - `0 <= length <= 1`
 - `0 <= position + length <= 1`
 
-For transitions that use the `back/fore` terminology, `0` refers to `back` while `1` refers to `fore`.
+`0` refers to `back` while `1` refers to `fore`.
 
 ```
 back   fore
@@ -46,12 +49,10 @@ back   fore
 0         1
 ```
 
-If a transition uses different terminology then it is up to the user to assign meaning to `0` and `1`.
-
 **Epsilon**: Include an epsilon constant.
 
 ```
-let TransitionSegmentEpsilon = 0.00001
+let TimeWindowSegmentEpsilon = 0.00001
 ```
 
 ### Feature: Pre-defined segments
