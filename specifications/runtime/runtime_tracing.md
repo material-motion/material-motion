@@ -36,7 +36,7 @@ Tracer {
 }
 ```
 
-### didAddPlan event
+### didAddPlan: event
 
 The Tracer type can optionally implement a `didAddPlan` function.
 
@@ -50,7 +50,7 @@ Tracer {
 }
 ```
 
-### didAddPlan:named event
+### didAddPlan:named: event
 
 The Tracer type can optionally implement a `didAddPlan:named:` function.
 
@@ -64,7 +64,7 @@ Tracer {
 }
 ```
 
-### didRemovePlanNamed event
+### didRemovePlanNamed: event
 
 The Tracer type can optionally implement a `didAddPlan:named:` function.
 
@@ -78,7 +78,7 @@ Tracer {
 }
 ```
 
-### didCreatePerformer event
+### didCreatePerformer: event
 
 The Tracer type can optionally implement a `didCreatePerformer` function.
 
