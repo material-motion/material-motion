@@ -29,7 +29,7 @@
        * [📝 ScrollReactor](specifications/plans/ScrollReactor.md)
        * [🚩 SpringTo](specifications/plans/SpringTo.md)
        * [🚩 Tween](specifications/plans/Tween.md)
-       * [📢 TweenBetween](specifications/plans/TweenBetween.md)
+       * [📢 TransitionTween](specifications/plans/TweenBetween.md)
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion library](specifications/motion_library.md)
    * [Interactions](specifications/interactions/README.md)
