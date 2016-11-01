@@ -22,10 +22,6 @@ Example plan objects:
 - `Draggable` describes gestural translation.
 - `AnchoredSpring` describes a physical simulation.
 
-Printable tech tree/checklist:
-
-![](../../_assets/PlanTechTree.svg)
-
 ## MVP
 
 ### Abstract type
