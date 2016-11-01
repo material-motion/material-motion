@@ -23,7 +23,7 @@
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [🚩 DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [🚩 Draggable](specifications/plans/Draggable.md)
-       * [🚩 KeyframeTween](specifications/plans/Tween.md)
+       * [🚩 Tween](specifications/plans/Tween.md)
        * [🚩 Pinchable](specifications/plans/Pinchable.md)
        * [📢  RemoveSpring](specifications/plans/RemoveSpring.md)
        * [🚩 Rotatable](specifications/plans/Rotatable.md)
