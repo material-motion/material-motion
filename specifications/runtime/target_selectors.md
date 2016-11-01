@@ -13,13 +13,13 @@ Example pseudo-code:
 
 ```
 # Associate a named plan with a target.
-scheduler.addPlan(plan, to: TargetSelector("#contextView"))
+runtime.addPlan(plan, to: TargetSelector("#contextView"))
 
 # Remove a named plan from a target.
-scheduler.removePlan(named: name, from: TargetSelector("#contextView"))
+runtime.removePlan(named: name, from: TargetSelector("#contextView"))
 ```
 
-## Scheduler specification
+## Runtime specification
 
 Support committing plans to targets using **target selectors**.
 

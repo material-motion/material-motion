@@ -14,7 +14,7 @@ Directors have little — if any — imperative code that directly applies chang
 
 ## MVP
 
-**Scheduler API**: A director may be provided with a Scheduler instance, or it might create its own.
+**Runtime API**: A director may be provided with a Runtime instance, or it might create its own.
 
 **setUp API**: A director may implement a `setUp` function. This function is expected to be invoked exactly once.
 
@@ -28,8 +28,8 @@ Example pseudo-code implementation:
 
 ```
 function setUp() {
-  scheduler.addPlan(plan, to: targetA)
-  scheduler.addPlan(plan, to: targetB)
+  runtime.addPlan(plan, to: targetA)
+  runtime.addPlan(plan, to: targetB)
   ...
 }
 ```

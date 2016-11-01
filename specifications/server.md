@@ -10,7 +10,7 @@ TODO: Formalize the following content as a protocol.
 The Server will need a variety of hooks in to the system. Notably it requires the following **outputs**:
 
 - List of all Plans types. (the available "motion language")
-- List of all active Scheduler instances.
+- List of all active Runtime instances.
 - List of all Director types.
 - List of all active Director instances.
 - Directors can expose configurable settings.

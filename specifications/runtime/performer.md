@@ -53,7 +53,7 @@ A continuous performer is responsible for requesting an is-active token and then
 - Generate a token before an animation begins and terminate the token when the animation completes.
 - Generate a token when a gesture begins and terminate the token when the gesture completes.
 
-> A scheduler is active if at least one is-active token exists that has not yet been terminated, otherwise the scheduler is inactive.
+> A runtime is active if at least one is-active token exists that has not yet been terminated, otherwise the runtime is inactive.
 
 Example pseudo-code:
 
