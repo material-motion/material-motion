@@ -6,9 +6,9 @@ This is the engineering specification for the `Scheduler` object.
 |:------------------|:-------|:-------|
 | [Rename Scheduler to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
 
-|                  | Android | Apple |
-| ---------------- |:-------:|:-----:|
-| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+|     | Android | Apple | Web |
+|:----|:--------|:------|:----|
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) | &nbsp; |
 
 ## Features
 
