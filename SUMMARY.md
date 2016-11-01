@@ -19,7 +19,7 @@
        * [Feature: time window segment](specifications/runtime/feature_time_window_segment.md)
    * [Motion language](specifications/plans/README.md)
        * [📝 ArcMove](specifications/plans/ArcMove.md)
-       * [📝 BasicTween](specifications/plans/Tween.md)
+       * [📝 BasicTween](specifications/plans/BasicTween.md)
        * [🚩 ChangeAnchorPoint](specifications/plans/ChangeAnchorPoint.md)
        * [🚩 DirectlyManipulable](specifications/plans/DirectlyManipulable.md)
        * [🚩 Draggable](specifications/plans/Draggable.md)
