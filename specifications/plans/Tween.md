@@ -1,4 +1,4 @@
-# KeyframeTween
+# Tween
 
 | Proposals | Status |
 |:------------------|:-------|
@@ -6,12 +6,12 @@
 | [Zip keyframes together in plan](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!topic/material-motion/i1Etw3mOlzE) | Proposed on October 18, 2016 |
 | [Rename `KeyframeTween` to `Tween`](https://groups.google.com/forum/?utm_medium=email&utm_source=footer#!topic/material-motion/fmk3ApBolkM) | **Accepted** on November 1, 2016 |
 
-KeyframeTween describes an animation that consists of more than two distinct frames of animation.
+Tween describes an animation that consists of more than two distinct frames of animation.
 
 ## Contract
 
 ```
-Plan KeyframeTween {
+Plan Tween {
   var property
   var values: [Any]
   var offsets: [Float]?
