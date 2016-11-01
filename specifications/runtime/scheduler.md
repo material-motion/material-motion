@@ -8,7 +8,7 @@ This is the engineering specification for the `Scheduler` object.
 
 |                  | Android | Apple |
 | ---------------- |:-------:|:-----:|
-| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases)   | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
+| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
 ## Features
 
