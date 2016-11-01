@@ -47,7 +47,6 @@ Example pseudo-code:
 
 Define an API that allows performers to receive plans.
 
-
 Example pseudo-code:
 
     function addPlan(plan)
