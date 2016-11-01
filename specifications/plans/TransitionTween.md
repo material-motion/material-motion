@@ -2,7 +2,7 @@
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| [`TransitionTween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | In review |
+| [`TransitionTween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | **Accepted** on November 1, 2016 |
 
 TransitionTween describes tween animations that occur during a transition between two states.
 
