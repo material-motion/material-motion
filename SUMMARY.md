@@ -28,7 +28,7 @@
        * [🚩 Rotatable](specifications/plans/Rotatable.md)
        * [📝 ScrollReactor](specifications/plans/ScrollReactor.md)
        * [🚩 SpringTo](specifications/plans/SpringTo.md)
-       * [🚩 BasicTween](specifications/plans/Tween.md)
+       * [📝 BasicTween](specifications/plans/Tween.md)
        * [📢 TweenBetween](specifications/plans/TweenBetween.md)
        * [📝 VelocitySource](specifications/plans/VelocitySource.md)
    * [Motion library](specifications/motion_library.md)
