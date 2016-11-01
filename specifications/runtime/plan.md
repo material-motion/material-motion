@@ -28,14 +28,18 @@ Printable tech tree/checklist:
 
 ## MVP
 
-**Abstract type**: `Plan` is a protocol, if your language has that concept.
+### Abstract type
+
+`Plan` is a protocol, if your language has that concept.
 
 Pseudo-code example:
 
     protocol Plan {
     }
 
-**Performer type API**: Provide an API that returns an instantiable type of performer that can execute this plan.
+### Performer type API
+
+Provide an API that returns an instantiable type of performer that can execute this plan.
 
 Emphasis: `performerType` must **not** be an instance of an object. It must be an object type that the runtime can instantiate at a later time. This restriction ensures that plans or app-level logic can't hand data directly to a performer instance.
 
@@ -45,7 +49,9 @@ Pseudo-code example:
       performerType: Class
     }
 
-**Copyable**: Plans can be copied.
+### Copyable
+
+Plans can be copied.
 
 Modifications made to the copy do not affect the original.
 
