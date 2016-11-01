@@ -13,10 +13,6 @@ This feature enables the registration of _named plans_ to a runtime. Named plans
 
 > A named plan cannot have `null` or an empty string as its name.
 
-Printable tech tree\/checklist:
-
-![](../../_assets/NamedPlansTechTree.svg)
-
 Example use case: associating a behavior with a target.
 
 Example pseudo-code:
