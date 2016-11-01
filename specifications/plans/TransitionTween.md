@@ -64,6 +64,16 @@ Plan TransitionTween {
       }
     }
 
+## Plan considerations
+
+Provide convenience APIs for describing both back- and foreward segments with one call. For example:
+
+```
+transitionTween.segment = .init(position: 0, length: 0.5)
+```
+
+would initialize `forwardSegment` as the first half and `backwardSegment` as the last half.
+
 ## Performer considerations
 
 A TransitionTweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
