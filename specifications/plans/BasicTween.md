@@ -5,10 +5,6 @@
 | [Should we enforce one Tween per property?](https://github.com/material-motion/material-motion-family-tween-android/issues/6) | pingpongboss | Proposed on Oct 12, 2016 |
 | [Rename Tween to BasicTween](https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM) | appsforartists | Approved on Nov 1, 2016 |
 
-|     | Android | Apple | Web |
-|:----|:--------|:------|:----|
-| Stability | [MVP milestone](https://github.com/material-motion/material-motion-family-tween-android/milestone/1) | [family-coreanimation-swift 1.0.0](https://github.com/material-motion/material-motion-family-coreanimation-swift/releases/tag/v1.0.0) | &nbsp; |
-
 ## Example: Fade in
 
 ```
