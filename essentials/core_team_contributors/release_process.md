@@ -8,7 +8,7 @@ Read our release tooling documentation by running:
 
 Follow strict [semantic versioning](http://semver.org/).
 
-tl;dr Major.minor.patch.
+tl;dr `major.minor.patch`.
 
 - If there is a breaking change in any way (i.e. a client has to take some action to upgrade), then the release is **Major**.
 - If there are no breaking changes but there are new features, then the release is **minor**.
