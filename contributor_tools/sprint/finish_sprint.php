@@ -4,12 +4,11 @@ date_default_timezone_set('America/New_York');
 
 $repo = $argv[1];
 $token = $argv[2];
-$sprint = $argv[3];
-$sprint_project_number = array_pop(explode("/", $sprint));
+$sprint_project_id = $argv[3];
 
 include 'common.php';
 
-$ch = createCurlRequest("repos/$sprint/columns");
+$ch = createCurlRequest("projects/$sprint_project_id/columns");
 $server_output = curl_exec($ch);
 curl_close($ch);
 if (!checkCurlResponse($server_output)) {
@@ -29,7 +28,7 @@ foreach ($columns as $column) {
     continue;
   }
   // Fetch all cards in this column...
-  $ch = createCurlRequest("repos/$repo/projects/columns/".$column['id']."/cards");
+  $ch = createCurlRequest("projects/columns/".$column['id']."/cards");
   $server_output = curl_exec($ch);
   curl_close($ch);
   if (!checkCurlResponse($server_output)) {
@@ -49,7 +48,7 @@ foreach ($columns as $column) {
 
     if ($issue['state'] == 'closed') {
       echo "- Moving issue #".$issue['number']." to Done column...\n";
-      $ch = createDataRequest("repos/$repo/projects/columns/cards/".$card['id']."/moves", array(
+      $ch = createDataRequest("projects/columns/cards/".$card['id']."/moves", array(
         'position' => "top",
         'column_id' => $column_name_to_id['Done']
       ));
@@ -99,21 +98,21 @@ if (!$archive_project) {
     exit(1);
   }
   $archive_project = json_decode($server_output, TRUE);
+}
 
-  echo "- Creating Done column...\n";
-  $ch = createDataRequest("repos/$repo/projects/".$archive_project['number']."/columns", array(
-    'name' => 'Done'
-  ));
-  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-  $server_output = curl_exec($ch);
-  curl_close($ch);
-  if (!checkCurlResponse($server_output)) {
-    exit(1);
-  }
+echo "- Creating Done column...\n";
+$ch = createDataRequest("projects/".$archive_project['id']."/columns", array(
+  'name' => 'Done'
+));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+$server_output = curl_exec($ch);
+curl_close($ch);
+if (!checkCurlResponse($server_output)) {
+  exit(1);
 }
 
 // Get the archive project's columns...
-$ch = createCurlRequest("repos/$repo/projects/".$archive_project['number']."/columns");
+$ch = createCurlRequest("projects/".$archive_project['id']."/columns");
 $server_output = curl_exec($ch);
 curl_close($ch);
 if (!checkCurlResponse($server_output)) {
@@ -125,7 +124,7 @@ $columns = json_decode($server_output, TRUE);
 $done_column = $columns[0];
 
 // Get all of the current sprint's Done cards...
-$ch = createCurlRequest("repos/$repo/projects/columns/".$column_name_to_id['Done']."/cards");
+$ch = createCurlRequest("projects/columns/".$column_name_to_id['Done']."/cards");
 $server_output = curl_exec($ch);
 curl_close($ch);
 if (!checkCurlResponse($server_output)) {
@@ -146,7 +145,7 @@ foreach ($cards as $card) {
   $issue = json_decode($server_output, TRUE);
 
   echo "- Moving card for issue #".$issue['number']."...\n";
-  $ch = createDataRequest("repos/$repo/projects/columns/".$done_column['id']."/cards", array(
+  $ch = createDataRequest("projects/columns/".$done_column['id']."/cards", array(
     'content_id' => intval($issue['id']),
     'content_type' => "Issue"
   ));
@@ -157,11 +156,23 @@ foreach ($cards as $card) {
     exit(1);
   }
 
-  $ch = createCurlRequest("repos/$repo/projects/columns/cards/".$card['id']);
+  $ch = createCurlRequest("projects/columns/cards/".$card['id']);
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
   $server_output = curl_exec($ch);
   curl_close($ch);
   if (!checkCurlResponse($server_output)) {
     exit(1);
   }
+}
+
+echo "Updating project description...\n";
+$ch = createDataRequest("projects/".$archive_project['id'], array(
+  'name' => $archive_name,
+  'body' => ((count($cards) == 1) ? "1 task completed" : count($cards)." tasks completed")
+));
+curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PATCH");
+$server_output = curl_exec($ch);
+curl_close($ch);
+if (!checkCurlResponse($server_output)) {
+  exit(1);
 }

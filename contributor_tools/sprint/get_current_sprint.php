@@ -19,7 +19,7 @@ $projects = json_decode($server_output, TRUE);
 
 foreach ($projects as $project) {
   if ($project['name'] == 'Current sprint') {
-    echo str_replace("https://api.github.com/repos/", "", $project['url'])."\n";
+    echo str_replace("https://api.github.com/projects/", "", $project['url'])."\n";
     exit(0);
   }
 }

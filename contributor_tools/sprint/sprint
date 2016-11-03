@@ -79,8 +79,6 @@ finish_sprint() {
   repo=$(mdm gh repo --whoami)
   token=$(mdm gh user --token)
   php "$THIS_SCRIPT_DIR/finish_sprint.php" $repo $token $sprint_path
-
-  open_sprint
 }
 
 case "$1" in

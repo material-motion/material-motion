@@ -26,7 +26,7 @@ function createColumn($name) {
   global $repo;
   global $project_number;
   echo "Creating column $name...\n";
-  $ch = createDataRequest("repos/$repo/projects/$project_number/columns", array(
+  $ch = createDataRequest("projects/$project_number/columns", array(
     'name' => $name
   ));
   curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
