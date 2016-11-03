@@ -1,5 +1,5 @@
-{% for page in site.html_pages %}
+{% for page in site.toc %}
 {% if page.layout == "toc" %}
-{{ page.content | markdownify }}
+{{ page.output }}
 {% break %}
 {% endif %} {% endfor %}

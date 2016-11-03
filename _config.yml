@@ -35,14 +35,10 @@ permalink:         /articles/:year-:month/:title
 collections:
   specifications:
     output: true
-    defaults:
-        values:
-          layout: page
   user_journeys:
     output: true
-    defaults:
-        values:
-          layout: page
+  toc:
+    output: true
 
 kramdown:
   auto_ids: true
