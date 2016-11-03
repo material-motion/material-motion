@@ -1,17 +1,17 @@
-# TweenBetween
+# TransitionTween
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| [`TweenBetween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | In review |
+| [`TransitionTween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | **Accepted** on November 1, 2016 |
 
-TweenBetween describes tween animations that occur during a transition between two states.
+TransitionTween describes tween animations that occur during a transition between two states.
 
 > Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
 
 ## Contract
 
 ```
-Plan TweenBetween {
+Plan TransitionTween {
   var property
   var backValue
   var foreValue
@@ -32,7 +32,9 @@ Plan TweenBetween {
 
 `backwardTimingFunction` is the timing function to use when initially animating backward.
 
-`segment` is the portion of the transition window in which the animation should occur.
+`forwardSegment` is the portion of the transition window in which the animation should occur during a forward transition.
+
+`backwardSegment` is the portion of the transition window in which the animation should occur during a backward transition.
 
 `window` is the transition window within which the `segment` applies.
 
@@ -40,7 +42,7 @@ Plan TweenBetween {
 
     TransitionDirector Fade {
       func setUp() {
-        let fade = TweenBetween("opacity",
+        let fade = TransitionTween("opacity",
                                 window: window,
                                 segment: .init(position: 0, length: 1)
                                 back: 0,
@@ -53,7 +55,7 @@ Plan TweenBetween {
 
     TransitionDirector Slide {
       func setUp() {
-        let shiftUp = TweenBetween("position",
+        let shiftUp = TransitionTween("position",
                                    window: window,
                                    segment: .init(position: 0, length: 1)
                                    back: bottomEdge,
@@ -62,13 +64,23 @@ Plan TweenBetween {
       }
     }
 
+## Plan considerations
+
+Provide convenience APIs for describing both back- and foreward segments with one call. For example:
+
+```
+transitionTween.segment = .init(position: 0, length: 0.5)
+```
+
+would initialize `forwardSegment` as the first half and `backwardSegment` as the last half.
+
 ## Performer considerations
 
-A TweenBetweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
+A TransitionTweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
 
 ```
 window = TransitionWindow(duration: 0.4s)
-TweenBetween("opacity",
+TransitionTween("opacity",
              window: window,
              segment: .init(position: 0, length: 0.25)
              back: 0,

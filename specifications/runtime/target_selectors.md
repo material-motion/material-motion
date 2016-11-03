@@ -1,5 +1,7 @@
-Status of this document:
-![](../../_assets/under-construction-flashing-barracade-animation.gif)
+
+| Discussion thread | Status |
+|:------------------|:-------|
+| None | Drafting |
 
 # Target selectors feature specification
 
@@ -7,7 +9,9 @@ Status of this document:
 
 Transactions may receive target selectors.
 
-**selector APIs**: All add\/remove APIs may be provided with a TargetSelector instead of a direct target.
+### selector APIs
+
+All add\/remove APIs may be provided with a TargetSelector instead of a direct target.
 
 Example pseudo-code:
 
@@ -30,7 +34,9 @@ Examples:
 * `#contextView`: The context view for a transition.
 * `Grid Photo`: All Photo children contained within a Grid.
 
-**Registration API**: Provide an API for associating names with targets.
+### Registration API
+
+Provide an API for associating names with targets.
 
 This API is the mechanism by which the selector tree is defined.
 
@@ -38,7 +44,9 @@ This API is the mechanism by which the selector tree is defined.
 func associateNameWithTarget(name, target)
 ```
 
-**Lookup API**: Provide an API for looking up targets with a given selector.
+### Lookup API
+
+Provide an API for looking up targets with a given selector.
 
 This API is meant to be used by the `commit` implementation to resolve specific targets when provided with a target selector.
 

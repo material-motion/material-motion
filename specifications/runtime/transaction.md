@@ -18,10 +18,6 @@ This is the engineering specification for the `Transaction` object.
 
 A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Runtime](runtime.md). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
 
-Printable tech tree\/checklist:
-
-![](../../_assets/TransactionTechTree.svg)
-
 ## MVP
 
 **Simple initializer**: A transaction is cheap to create.

@@ -6,10 +6,6 @@ This is the engineering specification for the `ReplicaControllerDelegate` abstra
 
 A instance of a `ReplicaControllerDelegate` creates similar replicas of visual elements. Replicas do not necessarily need to be as functional as their original element.
 
-Printable tech tree/checklist:
-
-![](../_assets/ReplicatorTechTree.svg)
-
 ## MVP
 
 **Abstract type**: `ReplicaControllerDelegate` is a protocol, if your language has that concept.

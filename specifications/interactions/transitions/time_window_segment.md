@@ -1,4 +1,4 @@
-# Feature: time window segment
+# Time window segment specification
 
 | Proposals | Status |
 |:------------------|:-------|

@@ -12,7 +12,9 @@ Composition enables code reuse in the Material Motion ecosystem.
 
 ## MVP
 
-**PlanEmitter API**: A performer may be provided with a plan emitter object.
+### PlanEmitter API
+
+A performer may be provided with a plan emitter object.
 
 A PlanEmitter emits plans only for the performer's associated target.
 

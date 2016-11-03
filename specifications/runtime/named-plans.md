@@ -13,10 +13,6 @@ This feature enables the registration of _named plans_ to a runtime. Named plans
 
 > A named plan cannot have `null` or an empty string as its name.
 
-Printable tech tree\/checklist:
-
-![](../../_assets/NamedPlansTechTree.svg)
-
 Example use case: associating a behavior with a target.
 
 Example pseudo-code:
@@ -44,7 +40,9 @@ runtime.removePlan(named: 'spring', from: target)
 
 Performers can receive named plans.
 
-**Add\/remove API**: Performers can implement an add\/remove function.
+### Add/remove API
+
+Performers can implement an add\/remove function.
 
 > Performers may choose not to implement this API.
 
@@ -59,7 +57,9 @@ protocol NamedPlanPerforming {
 }
 ```
 
-**NamedPlan type**: Provide a NamedPlan type.
+### NamedPlan type
+
+Provide a NamedPlan type.
 
 Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
 
@@ -67,7 +67,9 @@ Plans must conform to the NamedPlan type in order to indicate that they support 
 
 Runtimes support named plans. Named plans are plans with a name associated via the transaction.
 
-**Named APIs**: Provide an `addPlan` and `removePlan` API with a name argument.
+### Named APIs
+
+Provide an `addPlan` and `removePlan` API with a name argument.
 
 Note that the plan type must be a `NamedPlan`. Motion family designers use this type to indicate which plans support being named.
 
@@ -86,11 +88,15 @@ runtime.addPlan(plan, named: name, to: target)
 runtime.removePlan(named: name, from: target)
 ```
 
-**Target-scoped names**: Names are scoped to a target.
+### Target-scoped names
+
+Names are scoped to a target.
 
 The runtime maintains a separate named plan mapping for each target.
 
-**Remove-then-add**: Two things happen when a named plan is added.
+### Remove-then-add
+
+Two things happen when a named plan is added.
 
 1. Remove any previously committed plan with the same name from the target's performers.
 
@@ -111,7 +117,9 @@ performerForName(name) == performer
 > true
 ```
 
-**API contract**: Here are the Performer's expectations for this API.
+### API contract
+
+Here are the Performer's expectations for this API.
 
 *Removing a name which was never added before:*
 

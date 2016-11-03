@@ -1,4 +1,4 @@
-# Feature: time window
+# Time window specification
 
 | Proposals | Status |
 |:------------------|:-------|

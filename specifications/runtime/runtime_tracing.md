@@ -10,7 +10,9 @@ Tracing can be enabled on a runtime by providing an instance of an object that c
 
 ## Runtime
 
-**AddTracer and RemoveTracer APIs**: The runtime should provide a APIs for adding and removing tracer instances.
+### AddTracer and RemoveTracer APIs
+
+The runtime should provide a APIs for adding and removing tracer instances.
 
 Example pseudo-code:
 
@@ -23,7 +25,9 @@ class Runtime {
 
 ## Tracer
 
-**Abstract type**: Provide an abstract type named `Tracer`.
+### Abstract type
+
+Provide an abstract type named `Tracer`.
 
 Example pseudo-code:
 
@@ -32,7 +36,9 @@ Tracer {
 }
 ```
 
-**didAddPlan event**: The Tracer type can optionally implement a `didAddPlan` function.
+### didAddPlan: event
+
+The Tracer type can optionally implement a `didAddPlan` function.
 
 Invoked by the runtime when `addPlan` is about to return from its execution.
 
@@ -44,7 +50,9 @@ Tracer {
 }
 ```
 
-**didAddPlan:named event**: The Tracer type can optionally implement a `didAddPlan:named:` function.
+### didAddPlan:named: event
+
+The Tracer type can optionally implement a `didAddPlan:named:` function.
 
 Invoked by the runtime when `addPlan:named:` is about to return from its execution.
 
@@ -56,7 +64,9 @@ Tracer {
 }
 ```
 
-**didRemovePlanNamed event**: The Tracer type can optionally implement a `didAddPlan:named:` function.
+### didRemovePlanNamed: event
+
+The Tracer type can optionally implement a `didAddPlan:named:` function.
 
 Invoked by the runtime when `removePlanNamed` is about to return from its execution.
 
@@ -68,7 +78,9 @@ Tracer {
 }
 ```
 
-**didCreatePerformer event**: The Tracer type can optionally implement a `didCreatePerformer` function.
+### didCreatePerformer: event
+
+The Tracer type can optionally implement a `didCreatePerformer` function.
 
 Invoked by the runtime after a new performer instance has been created.
 

@@ -15,36 +15,41 @@ This is the engineering specification for the `Performer` abstract type.
 
 Performers are the objects responsible for executing plans.
 
-Printable tech tree/checklist:
-
-![](../../_assets/PerformerTechTree.svg)
-
 ## MVP
 
-**Abstract type**: `Performer` is a protocol, if your language has that concept.
+### Abstract type
+
+`Performer` is a protocol, if your language has that concept.
 
 Example pseudo-code:
 
     protocol Performer {}
 
-**Not directly configurable**: Performers do not provide direct configuration methods.
+### Not directly configurable
+
+Performers do not provide direct configuration methods.
 
 Performers can only be configured by providing them with plans.
 
-**Initialize with target**: Performers are initialized with a target.
+### Initialize with target
+
+Performers are initialized with a target.
 
 Example pseudo-code:
 
     performer = Performer(target)
 
-**Add plan API**: Define an API that allows performers to receive plans.
+### Add plan API
 
+Define an API that allows performers to receive plans.
 
 Example pseudo-code:
 
     function addPlan(plan)
 
-**Continuous Performing API**: Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
+### Continuous Performing API
+
+Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
 
 > The performer may choose not to implement this API.
 

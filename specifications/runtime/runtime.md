@@ -4,7 +4,7 @@ This is the engineering specification for the `Runtime` object.
 
 | Discussion thread | Moderator | Status |
 |:------------------|:-------|:-------|
-| [Rename Runtime to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | Accepted on Nov 1, 2016 |
+| [Rename Scheduler to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | **Accepted** on Nov 1, 2016 |
 
 |     | Android | Apple | Web |
 |:----|:--------|:------|:----|
@@ -18,10 +18,6 @@ This is the engineering specification for the `Runtime` object.
 ## Overview
 
 A runtime receives plans and creates performers. The runtime generates relevant events for performers and monitors activity.
-
-Printable tech tree/checklist:
-
-![](../../_assets/RuntimeTechTree.svg)
 
 ## MVP
 
