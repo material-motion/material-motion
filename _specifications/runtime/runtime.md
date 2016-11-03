@@ -48,7 +48,7 @@ Example pseudo-code:
 
 Create one performer instance for each *type* of performer required by a target. This allows multiple plans to affect a single performer instance. The performers can then maintain state across multiple plans.
 
-![](/assets/OnePerformer.svg)
+![]({{ site.url }}/assets/OnePerformer.svg)
 
 > Consider the following pseudo-code involving physical simulation:
 > 

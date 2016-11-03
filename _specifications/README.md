@@ -26,7 +26,7 @@ Each platform has its own implementation of this tech stack.
 
 Tech is grouped into **focus areas**. Each focus area is represented by a colored region in the diagram.
 
-![](/assets/Techstack.svg)
+![]({{ site.url }}/assets/Techstack.svg)
 
 # Education groups
 
@@ -65,7 +65,7 @@ Extending material motion will target director/motion creators.
 
 The following diagram shows the required amount of knowledge for each group.
 
-![](/assets/Roles.svg)
+![]({{ site.url }}/assets/Roles.svg)
 
 # The design/engineering handoff
 
@@ -73,11 +73,11 @@ One hopeful outcome of the Material Motion project is to remove the design/engin
 
 **Guaranteed near future**: not far from the status quo.
 
-![](/assets/Handoff-v1.svg)
+![]({{ site.url }}/assets/Handoff-v1.svg)
 
 **The ideal future**: design/engineering working in tandem to create interactive, production-ready experiences.
 
-![](/assets/Handoff-v2.svg)
+![]({{ site.url }}/assets/Handoff-v2.svg)
 
 
 # Library structure
@@ -91,4 +91,4 @@ This diagram does not include:
 - plan/performer families. E.g. Tween, Gesturing.
 - Specific Director implementations. E.g. PhotoDirector, FadeDirector, SlideUpDirector.
 
-![](/assets/RepoStructure.svg)
+![]({{ site.url }}/assets/RepoStructure.svg)

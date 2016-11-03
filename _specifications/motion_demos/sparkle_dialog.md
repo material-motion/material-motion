@@ -4,7 +4,7 @@ layout: page
 
 # Sparkle dialog demo
 
-![](/assets/sparkledialog.gif)
+![]({{ site.url }}/assets/sparkledialog.gif)
 
 ## Element hierarchy
 

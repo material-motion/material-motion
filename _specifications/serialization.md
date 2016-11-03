@@ -18,7 +18,7 @@ Serialization enables a wide variety of use cases:
 * Inspect motion in a production application.
 
 
-![](/assets/Inspector.svg)
+![]({{ site.url }}/assets/Inspector.svg)
 
 * Tweak motion in a running application.
   * Able to register new Plans to a runtime.
@@ -53,7 +53,7 @@ Payload in content-type encoding
 
 Status of this document:
 
-![](/assets/under-construction-flashing-barracade-animation.gif)
+![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
 
 ## Draft notes
 

@@ -6,7 +6,7 @@ layout: page
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 This is the engineering specification for the `TransitionController` object.
 

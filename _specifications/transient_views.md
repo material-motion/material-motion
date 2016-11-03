@@ -3,7 +3,7 @@ layout: page
 ---
 
 Status of this document:
-![](/assets/under-construction-flashing-barracade-animation.gif)
+![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
 
 # Condition elements
 

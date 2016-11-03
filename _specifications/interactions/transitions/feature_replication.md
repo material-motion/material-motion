@@ -6,7 +6,7 @@ layout: page
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
+| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 **ReplicaController API**: Transition directors have a private read-only `replicaController` API.
 

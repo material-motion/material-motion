@@ -16,7 +16,7 @@ Runtimes are cheap and easy to create. Many runtimes may exist in an application
 runtime = Runtime()
 ```
 
-![](/assets/LifeOfAPlan-step1.svg)
+![]({{ site.url }}/assets/LifeOfAPlan-step1.svg)
 
 ### Step 2: Create plans
 
@@ -33,13 +33,13 @@ pinchable = Pinchable()
 rotatable = Rotatable()
 ```
 
-![](/assets/LifeOfAPlan-step2.svg)
+![]({{ site.url }}/assets/LifeOfAPlan-step2.svg)
 
 ### Step 3: Add the plans to the runtime
 
 Let's say we have two targets - a circle and a square - to which we want to associate our plans.
 
-![](/assets/LifeOfAPlan-step3-targets.svg)
+![]({{ site.url }}/assets/LifeOfAPlan-step3-targets.svg)
 
 Plans are associated to targets:
 
@@ -54,7 +54,7 @@ runtime.addPlan(draggable, to: circleView)
 
 After executing the above code, the runtime's internal state might resemble this:
 
-![](/assets/LifeOfAPlan-step4.svg)
+![]({{ site.url }}/assets/LifeOfAPlan-step4.svg)
 
 > Note that `Rotatable` is not listed. This is because we also removed any plan named "name2".
 

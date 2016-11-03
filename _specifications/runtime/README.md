@@ -14,7 +14,7 @@ A runtime serves two primary purposes:
 
 The following diagram shows where the runtime lives in relation to a platform like iOS.
 
-![](/assets/Abstraction.svg)
+![]({{ site.url }}/assets/Abstraction.svg)
 
 ## Overview
 
@@ -41,7 +41,7 @@ Here's how these objects fit together:
 
 In visual form:
 
-![](/assets/RuntimeOverview.svg)
+![]({{ site.url }}/assets/RuntimeOverview.svg)
 
 Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.md).
 

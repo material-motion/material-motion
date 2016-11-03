@@ -32,7 +32,7 @@ Plan ChangeAnchorPoint {
 
 The following diagram shows the desired effect of changing the anchor point of an element:
 
-![](/assets/AnchorPoint.svg)
+![]({{ site.url }}/assets/AnchorPoint.svg)
 
 In pseudo-code:
 

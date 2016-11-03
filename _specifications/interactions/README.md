@@ -8,7 +8,7 @@ title: Interactions
 
 | Discussion thread | Status |
 |:------------------|:-------|
-| ![](/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 27, 2016 |
+| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 27, 2016 |
 
 An interaction describes a coherent interactive experience.
 
