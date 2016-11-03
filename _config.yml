@@ -32,12 +32,6 @@ highlighter:       rouge
 excerpt_separator: <!--more-->
 permalink:         /articles/:year-:month/:title
 
-collections:
-  specifications:
-    output: true
-  user_journeys:
-    output: true
-
 kramdown:
   auto_ids: true
   footnote_nr: 1
