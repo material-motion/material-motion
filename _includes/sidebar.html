@@ -8,7 +8,10 @@
   <span class="author_job">Material Motion</span>
   <span class="author_bio mbm">{{ site.description }}</span>
   <nav class="nav">
-    {% include sidebar_list.html %}
+    {% assign tree=site.toc %}
+    <ul>
+      {% include tree.html %}
+    </ul>
   </nav>
   {% include social-links.html %}
 </div>

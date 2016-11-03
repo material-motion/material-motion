@@ -1,0 +1,11 @@
+{% for node in tree %}
+<li>
+<a href="{{ node.url }}">{{ node.title }}</a>
+{% if node.children %}
+  <ul>
+  {% assign tree=node.children %}
+  {% include tree.html %}
+  </ul>
+{% endif %}
+</li>
+{% endfor %}
