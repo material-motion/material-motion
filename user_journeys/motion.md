@@ -25,7 +25,7 @@ Productionize a motion concept.
 7. The engineer and motion designer iterate on the implementation. 
 8. The implementation reaches a satisfactory point and is shipped. 
 
-![](/assets/Handoff-v1.svg)
+![]({{ site.url }}/assets/Handoff-v1.svg)
 
 #### “V2” ideal journey
 
@@ -36,7 +36,7 @@ Goal is to enable more collaboration between motion design and engineering.
 3. The person gets design and engineering feedback and iterates. 
 4. The implementation reaches a satisfactory point and is shipped.
 
-![](/assets/Handoff-v2.svg)
+![]({{ site.url }}/assets/Handoff-v2.svg)
 
 #### “V3” ideal journey
 
@@ -47,4 +47,4 @@ Goal is to completely remove the design/engineering hand-off.
 3. The person gets design and engineering feedback and iterates. 
 4. The implementation reaches a satisfactory point and is shipped.
 
-![](/assets/Handoff-v3.svg)
+![]({{ site.url }}/assets/Handoff-v3.svg)

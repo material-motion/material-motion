@@ -6,7 +6,7 @@ layout: page
 
 ### Knowledge levels
 
-![](/assets/Roles.svg)
+![]({{ site.url }}/assets/Roles.svg)
 
 #### L1: App Creator
 
