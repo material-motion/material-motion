@@ -11,13 +11,13 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | - | - | - | - | - |
 | **[Motion Family](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)**       | **Starmap** | **Apple**  | **Android** | **Web**    |
 | [ArcMove](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ArcMove.html)            |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html) |  Stable | MVP |  &nbsp; | &nbsp; |
-| [DirectlyManipulable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/DirectlyManipulable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
-| [Draggable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Draggable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
+| [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html) |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
+| [DirectlyManipulable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/DirectlyManipulable.html) |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
+| [Draggable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Draggable.html) |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
 | [KeyframeTween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/KeyframeTween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
+| [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html) |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
 | [RemoveSpring](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/RemoveSpring.html)        | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
-| [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html) |  Stable | MVP |  &nbsp; | &nbsp; |
+| [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html) |  Stable | [v1.0.0](https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0) |  &nbsp; | &nbsp; |
 | [ScrollReactor](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ScrollReactor.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [SpringTo](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/SpringTo.html) | Stable | [v1.1.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.1.0) | [1.0.0](https://github.com/material-motion/material-motion-family-rebound-android/releases/tag/1.0.0) | &nbsp; |
 | [TweenBetween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html)      |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
