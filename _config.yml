@@ -195,6 +195,68 @@ toc:
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/runtime/feature_nested_timelines"
+        - page:
+          title: "(drafts)"
+          url: "/starmap/specifications/drafts"
+          children:
+           - page:
+             title: "Serialization"
+             url: "/starmap/specifications/serialization"
+             children:
+               - page:
+                 title: "Transaction"
+                 url: "/starmap/specifications/runtime/transaction"
+                 children:
+                   - page:
+                     title: "Feature: target enumeration"
+                     url: "/starmap/specifications/runtime/transaction-target-enumeration"
+                   - page:
+                     title: "Feature: optimized"
+                     url: "/starmap/specifications/runtime/transaction-optimized"
+               - page:
+                 title: "Plan serialization"
+                 url: "/starmap/specifications/plan_serialization"
+               - page:
+                 title: "Transaction serialization"
+                 url: "/starmap/specifications/transaction_serialization"
+               - page:
+                 title: "Life of a serialized transaction"
+                 url: "/starmap/specifications/life_of_a_serialized_transaction"
+           - page:
+             title: "Motion demos"
+             url: "/starmap/specifications/motion-demos"
+             children:
+               - page:
+                 title: "Sparkle dialog"
+                 url: "/starmap/specifications/motion_demos/sparkle_dialog"
+           - page:
+             title: "Director composition"
+             url: "/starmap/specifications/director_composition"
+           - page:
+             title: "Condition elements"
+             url: "/starmap/specifications/transient_views"
+           - page:
+             title: "Server"
+             url: "/starmap/specifications/server"
+           - page:
+             title: "Debugging"
+             url: "/starmap/specifications/debugging"
+           - page:
+             title: "REPL"
+             url: "/starmap/specifications/repl"
+           - page:
+             title: "A consultation interface"
+             url: "/starmap/specifications/a_consultation_interface"
+           - page:
+             title: "Applications"
+             url: "/starmap/specifications/applications"
+           - page:
+             title: "Motion Expression"
+             url: "/starmap/specifications/expressions"
+             children:
+               - page:
+                 title: "Further considerations"
+                 url: "/starmap/specifications/expressions-addendum"
      - page:
        title: "User journeys"
        url: "/starmap/user_journeys/"
@@ -211,68 +273,6 @@ toc:
      - page:
        title: "Glossary"
        url: "/starmap/GLOSSARY"
-     - page:
-       title: "(drafts)"
-       url: "/starmap/specifications/drafts"
-       children:
-        - page:
-          title: "Serialization"
-          url: "/starmap/specifications/serialization"
-          children:
-            - page:
-              title: "Transaction"
-              url: "/starmap/specifications/runtime/transaction"
-              children:
-                - page:
-                  title: "Feature: target enumeration"
-                  url: "/starmap/specifications/runtime/transaction-target-enumeration"
-                - page:
-                  title: "Feature: optimized"
-                  url: "/starmap/specifications/runtime/transaction-optimized"
-            - page:
-              title: "Plan serialization"
-              url: "/starmap/specifications/plan_serialization"
-            - page:
-              title: "Transaction serialization"
-              url: "/starmap/specifications/transaction_serialization"
-            - page:
-              title: "Life of a serialized transaction"
-              url: "/starmap/specifications/life_of_a_serialized_transaction"
-        - page:
-          title: "Motion demos"
-          url: "/starmap/specifications/motion-demos"
-          children:
-            - page:
-              title: "Sparkle dialog"
-              url: "/starmap/specifications/motion_demos/sparkle_dialog"
-        - page:
-          title: "Director composition"
-          url: "/starmap/specifications/director_composition"
-        - page:
-          title: "Condition elements"
-          url: "/starmap/specifications/transient_views"
-        - page:
-          title: "Server"
-          url: "/starmap/specifications/server"
-        - page:
-          title: "Debugging"
-          url: "/starmap/specifications/debugging"
-        - page:
-          title: "REPL"
-          url: "/starmap/specifications/repl"
-        - page:
-          title: "A consultation interface"
-          url: "/starmap/specifications/a_consultation_interface"
-        - page:
-          title: "Applications"
-          url: "/starmap/specifications/applications"
-        - page:
-          title: "Motion Expression"
-          url: "/starmap/specifications/expressions"
-          children:
-            - page:
-              title: "Further considerations"
-              url: "/starmap/specifications/expressions-addendum"
   - page:
     title: "Team"
     url: "/team/"
