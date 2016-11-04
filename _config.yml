@@ -58,21 +58,21 @@ toc:
               url: "/starmap/specifications/runtime/life_of_a_plan"
             - page:
               title: "Plan"
-              url: "/starmap/specifications/runtime/plan"
+              url: "/starmap/specifications/runtime/Plan"
             - page:
               title: "Performer"
-              url: "/starmap/specifications/runtime/performer"
+              url: "/starmap/specifications/runtime/Performer"
               children:
                 - page:
                   title: "Feature: composition"
-                  url: "/starmap/specifications/runtime/performer-composition"
+                  url: "/starmap/specifications/runtime/Performer-composition"
             - page:
               title: "Runtime"
-              url: "/starmap/specifications/runtime/runtime"
+              url: "/starmap/specifications/runtime/Runtime"
               children:
                 - page:
                   title: "Feature: tracing"
-                  url: "/starmap/specifications/runtime/runtime_tracing"
+                  url: "/starmap/specifications/runtime/Runtime-tracing"
             - page:
               title: "Feature: named plans"
               url: "/starmap/specifications/runtime/named-plans"
@@ -462,6 +462,9 @@ toc:
     - page:
       title: "Random"
       url: "/team/random"
+  - page:
+    title: "Status"
+    url: "/status"
   - page:
     title: "Contributing"
     url: "/CONTRIBUTING"

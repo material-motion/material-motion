@@ -1,5 +1,17 @@
 ---
 layout: page
+status:
+  date: Oct 13, 2016
+  is: Stable
+availability:
+  - platform:
+    name: Android
+    label: Milestone
+    url: https://github.com/material-motion/material-motion-runtime-android/milestone/7
+  - platform:
+    name: iOS
+    label: "runtime-objc as of v4.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-objc
 ---
 
 # Runtime tracing feature specification

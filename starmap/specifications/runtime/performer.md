@@ -1,19 +1,27 @@
 ---
 layout: page
+status:
+  date: July 8, 2016
+  is: Stable
+availability:
+  - platform:
+    name: Android
+    label: "runtime-android as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-android
+  - platform:
+    name: iOS
+    label: "runtime-objc as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-objc
 ---
 
 # Performer specification
 
 This is the engineering specification for the `Performer` abstract type.
 
-|     | Android | Apple | Web |
-|:----|:--------|:------|:----|
-| Available since | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) | &nbsp; |
-
 ## Features
 
-- [Named plans](named-plans.md)
-- [Composition](performer-composition.md)
+- [Named plans](named-plans)
+- [Composition](Performer-composition)
 
 ## Overview
 

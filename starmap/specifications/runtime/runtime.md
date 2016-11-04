@@ -1,23 +1,35 @@
 ---
 layout: page
+status:
+  date: July 8, 2016
+  is: Stable
+proposals:
+  - proposal:
+    initiation_date: Oct 21, 2016
+    completion_date: Nov 1, 2016
+    state: Accepted
+    discussion: Rename Scheduler to [Runtime]?
+    discussion_url: https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo
+availability:
+  - platform:
+    name: Android
+    label: "runtime-android as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-android
+  - platform:
+    name: iOS
+    label: "runtime-objc as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-objc
 ---
 
 # Runtime specification
 
 This is the engineering specification for the `Runtime` object.
 
-| Discussion thread | Moderator | Status |
-|:------------------|:-------|:-------|
-| [Rename Scheduler to [Runtime]?](https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo) | appsforartists | **Accepted** on Nov 1, 2016 |
-
-|     | Android | Apple | Web |
-|:----|:--------|:------|:----|
-| Available since | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) | &nbsp; |
-
 ## Features
 
 - [Named plans](named-plans.md)
 - [Target selectors](target-selectors.md)
+- [Tracing](Runtime-tracing.md)
 
 ## Overview
 

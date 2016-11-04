@@ -1,0 +1,22 @@
+<h1>{{ table_status }}</h1>
+
+<div class="status">
+<div class="status_content">
+
+<table class="platform_table">
+  <thead><tr>
+    <td>Page</td><td>Date</td>
+  </tr></thead>
+  <tbody>
+{% for page in site.pages %}
+{% if page.status and page.status.is == table_status %}
+  <tr>
+    <td><a href="{{ site.url }}/{{ page.url }}">{{ page.url }}</a></td>
+    <td>{{ page.status.date }}</td>
+  </tr>
+{% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+</div></div>
