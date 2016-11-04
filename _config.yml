@@ -3,6 +3,8 @@ email: material-motion@googlegroups.com
 description: "Exploring solutions that will empower creators with the tools needed to describe and implement rich, interactive motion on any platform."
 baseurl: ""
 url: "https://material-motion.github.io/material-motion"
+github_url: "https://github.com/material-motion/material-motion"
+github_branch: "gh-pages"
 icon: "material-motion.png"
 
 # Build settings
