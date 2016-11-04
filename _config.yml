@@ -296,7 +296,9 @@ toc:
        - page:
          title: "Dashboards"
          url: "/team/community/dashboards"
-    - Culture:
+    - page:
+      title: "Culture"
+      url: "/team/culture/"
       children:
        - page:
          title: "Team goals"
