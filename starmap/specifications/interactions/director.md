@@ -1,12 +1,12 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 # Director
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 A director is an object whose primary purpose is to describe motion.
 
