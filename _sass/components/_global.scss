@@ -65,7 +65,7 @@ table {
   }
 }
 table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: rgba(128, 128, 128, 0.1);
 }
 thead {
   border-bottom: 1px solid $table-border-color;
