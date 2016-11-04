@@ -1,0 +1,46 @@
+{% if page.status or page.availability or page.proposals %}
+<div class="status">
+<div class="status_content">
+{% if page.status %}
+<div class="overall_status">Starmap status: <strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</div>
+{% endif %}
+
+{% if page.availability %}
+<table class="platform_table">
+  <thead><tr>
+    <td></td>
+    {% for platform in page.availability %}
+    <td>{{ platform.name }}</td>
+    {% endfor %}
+  </tr></thead>
+  <tbody><tr>
+    <td>Availability</td>
+    {% for platform in page.availability %}
+      <td><a href="{{ platform.url }}">{{ platform.label }}</a></td>
+    {% endfor %}
+  </tr></tbody>
+</table>
+
+{% endif %}
+{% if page.proposals %}
+<table class="status_table">
+  <thead><tr><td>Proposal</td><td>Current Status</td><td>Initiation date</td><td>Completion date</td></tr></thead>
+  <tbody>
+    {% for proposal in page.proposals %}
+    <tr>
+      <td>
+        <a href="{{ proposal.discussion_url }}">{{ proposal.discussion }}</a>
+      </td>
+      <td>
+        {{ proposal.state }}
+      </td>
+      <td>{{ proposal.initiation_date }}</td>
+      <td>{{ proposal.completion_date }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endif %}
+</div>
+</div>
+{% endif %}

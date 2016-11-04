@@ -1,12 +1,11 @@
 ---
 layout: page
+status:
+  date: Oct 24, 2016
+  is: Drafting
 ---
 
 # VelocitySource
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| N/A | Drafting |
 
 ## Example: Tossable elements
 

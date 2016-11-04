@@ -3,27 +3,6 @@ layout: default
 ---
 
   <div id="page">
-    
-{% if page.statuses %}
-<table class="statustable">
-  <thead><tr><td>Status</td><td>Date</td><td>Discussion thread</td></tr></thead>
-  <tbody>
-    {% for status in page.statuses %}
-    <tr>
-      <td>{{ status.type }}</td>
-      <td>{{ status.date }}</td>
-      <td>
-        {% if status.type == "Drafting" %}
-          <img src="{{ site.url }}/assets/under-construction-flashing-barracade-animation.gif" />
-        {% else %}
-          {{ status.discussion }}
-        {% endif %}
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
-</table>
-{% endif %}
 
     <article class="page-content">
       {{ content }}

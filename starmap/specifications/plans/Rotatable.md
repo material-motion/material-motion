@@ -1,16 +1,20 @@
 ---
 layout: page
+status:
+  date: Oct 18, 2016
+  is: Stable
+availability:
+  - platform:
+    name: Android
+    label: Milestone
+    url: https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1
+  - platform:
+    name: iOS
+    label: family-direct-manipulation-swift as of v1.0.0
+    url: https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0
 ---
 
 # Rotatable
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| N/A | Stable |
-
-|  | Android | Apple | Web |
-| --- | --- | --- | --- |
-| Milestone | [Milestone](https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1) | [Milestone](https://github.com/material-motion/material-motion-family-gestures-swift/milestone/1) | &nbsp; |
 
 ## Overview
 

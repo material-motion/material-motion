@@ -1,12 +1,18 @@
 ---
 layout: page
+status:
+  date: Nov 1, 2016
+  is: Stable
+proposals:
+  - proposal:
+    initiation_date: Oct 20, 2016
+    completion_date: Nov 1, 2016
+    state: Accepted
+    discussion: "TransitionTween plan"
+    discussion_url: https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE
 ---
 
 # TransitionTween
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| [`TransitionTween` plan](https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE) | **Accepted** on November 1, 2016 |
 
 TransitionTween describes tween animations that occur during a transition between two states.
 
@@ -21,7 +27,8 @@ Plan TransitionTween {
   var foreValue
   var forwardTimingFunction
   var backwardTimingFunction
-  var segment: TransitionSegment
+  var forwardSegment: TransitionSegment
+  var backwardSegment: TransitionSegment
   var window: TransitionWindow
 }
 ```

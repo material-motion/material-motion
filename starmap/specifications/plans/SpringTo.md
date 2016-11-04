@@ -1,17 +1,20 @@
 ---
 layout: page
+status:
+  date: Oct 18, 2016
+  is: Stable
+availability:
+  - platform:
+    name: Android
+    label: family-rebound-android as of v1.0.0
+    url: https://github.com/material-motion/material-motion-family-rebound-android
+  - platform:
+    name: iOS
+    label: family-pop-swift as of v1.0.0
+    url: https://github.com/material-motion/material-motion-family-pop-swift
 ---
 
 # SpringTo
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| N/A | Stable |
-
-
-|  | Android | Apple | Web |
-| --- | --- | --- | --- |
-| Stability | [MVP Milestone](https://github.com/material-motion/material-motion-family-rebound-android/milestone/1) | [family-pop-swift v1.0.0](https://github.com/material-motion/material-motion-family-pop-swift/releases/tag/v1.0.0) | &nbsp; |
 
 ## Example: Rounded corners
 

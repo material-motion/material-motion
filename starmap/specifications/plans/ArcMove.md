@@ -1,9 +1,8 @@
 ---
 layout: page
-statuses:
-  - status:
-    date: Aug 24, 2016
-    type: Drafting
+status:
+  date: Aug 24, 2016
+  is: Drafting
 ---
 
 # ArcMove

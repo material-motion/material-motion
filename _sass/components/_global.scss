@@ -82,12 +82,22 @@ tfoot {
   border-top: 1px solid $table-border-color;
 }
 
-.statustable td {
+.status {
+  background-color: #f5f5f5;
+}
+.status .status_content {
+  padding: 1px 16px;
+}
+.status table td {
   padding: 4px;
 }
-
-.statustable td img {
+.status table td img {
   width: 32px;
+}
+.platform_table,
+.status_table,
+.overall_status {
+  margin: 16px 0;
 }
 
 // Global transition

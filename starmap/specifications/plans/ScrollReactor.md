@@ -1,12 +1,11 @@
 ---
 layout: page
+status:
+  date: Oct 18, 2016
+  is: Drafting
 ---
 
 # ScrollReactor
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| None | Drafting |
 
 Open questions:
 
