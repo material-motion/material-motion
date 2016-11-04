@@ -84,43 +84,43 @@ toc:
           url: "/starmap/specifications/plans/"
           children:
             - page:
-              title: "📝 ArcMove"
+              title: "ArcMove"
               url: "/starmap/specifications/plans/ArcMove"
             - page:
-              title: "📝 BasicTween"
+              title: "BasicTween"
               url: "/starmap/specifications/plans/BasicTween"
             - page:
-              title: "🚩 ChangeAnchorPoint"
+              title: "ChangeAnchorPoint"
               url: "/starmap/specifications/plans/ChangeAnchorPoint"
             - page:
-              title: "🚩 DirectlyManipulable"
+              title: "DirectlyManipulable"
               url: "/starmap/specifications/plans/DirectlyManipulable"
             - page:
-              title: "🚩 Draggable"
+              title: "Draggable"
               url: "/starmap/specifications/plans/Draggable"
             - page:
-              title: "🚩 Pinchable"
+              title: "Pinchable"
               url: "/starmap/specifications/plans/Pinchable"
             - page:
-              title: "📢  RemoveSpring"
+              title: "RemoveSpring"
               url: "/starmap/specifications/plans/RemoveSpring"
             - page:
-              title: "🚩 Rotatable"
+              title: "Rotatable"
               url: "/starmap/specifications/plans/Rotatable"
             - page:
-              title: "📝 ScrollReactor"
+              title: "ScrollReactor"
               url: "/starmap/specifications/plans/ScrollReactor"
             - page:
-              title: "🚩 SpringTo"
+              title: "SpringTo"
               url: "/starmap/specifications/plans/SpringTo"
             - page:
-              title: "🚩 TransitionTween"
+              title: "TransitionTween"
               url: "/starmap/specifications/plans/TransitionTween"
             - page:
-              title: "🚩 Tween"
+              title: "Tween"
               url: "/starmap/specifications/plans/Tween"
             - page:
-              title: "📝 VelocitySource"
+              title: "VelocitySource"
               url: "/starmap/specifications/plans/VelocitySource"
         - page:
           title: "Motion library"

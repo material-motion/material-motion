@@ -1,9 +1,10 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Aug 24, 2016
+    type: Drafting
 ---
-
-Status of this document:
-![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
 
 # ArcMove
 
