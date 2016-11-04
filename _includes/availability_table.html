@@ -1,0 +1,33 @@
+<h1>{{ table_status }}</h1>
+
+<div class="status">
+<div class="status_content">
+
+<table class="platform_table">
+  <thead><tr>
+    <td></td>
+{% for platform in site.platforms %}
+    <td>{{ platform }}</td>
+{% endfor %}
+  </tr></thead>
+  <tbody>
+{% assign pages = site.pages | sort:"url"  %}
+{% for page in pages %}
+{% if page.availability %}
+  <tr><td><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></td>
+{% for platform in site.platforms %}
+  <td>
+{% for available_platform in page.availability %}
+  {% if available_platform.name == platform %}
+    <a href="{{ available_platform.url }}">{{ available_platform.label }}</a>
+  {% endif %}
+{% endfor %}
+  </td>
+{% endfor %}
+  </tr>
+{% endif %}
+{% endfor %}
+  </tbody>
+</table>
+
+</div></div>
