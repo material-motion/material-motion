@@ -5,7 +5,7 @@ status:
   is: Drafting
 ---
 
-# Time window specification
+# TimeWindow specification
 
 This is the engineering specification for the **TimeWindow** type.
 

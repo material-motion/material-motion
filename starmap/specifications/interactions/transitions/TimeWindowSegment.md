@@ -5,7 +5,7 @@ status:
   is: Drafting
 ---
 
-# Time window segment specification
+# TimeWindowSegment specification
 
 This is the engineering specification for the **TimeWindowSegment** type.
 

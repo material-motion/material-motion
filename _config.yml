@@ -140,11 +140,11 @@ toc:
                   title: "Directionality"
                   url: "/starmap/specifications/interactions/transitions/directionality"
                 - page:
-                  title: "Time window"
-                  url: "/starmap/specifications/interactions/transitions/time_window"
+                  title: "TimeWindow"
+                  url: "/starmap/specifications/interactions/transitions/TimeWindow"
                 - page:
-                  title: "Time window segment"
-                  url: "/starmap/specifications/interactions/transitions/time_window_segment"
+                  title: "TimeWindowSegment"
+                  url: "/starmap/specifications/interactions/transitions/TimeWindowSegment"
                 - page:
                   title: "Life of a transition director"
                   url: "/starmap/specifications/interactions/transitions/life_of_a_transition_director"

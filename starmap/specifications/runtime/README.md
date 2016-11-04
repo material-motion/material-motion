@@ -43,10 +43,10 @@ In visual form:
 
 ![]({{ site.url }}/assets/RuntimeOverview.svg)
 
-Learn more about these relationships by reading [Life of a Plan](life_of_a_plan.md).
+Learn more about these relationships by reading [Life of a Plan](life_of_a_plan).
 
 Or dive in to the engineering specifications:
 
-- [Plan](plan.md)
-- [Performer](performer.md)
-- [Runtime](runtime.md)
+- [Plan](plan)
+- [Performer](performer)
+- [Runtime](runtime)

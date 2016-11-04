@@ -2,7 +2,7 @@
 layout: page
 status:
   date: Oct 25, 2016
-  is: Drafting
+  is: Stable
 ---
 
 # Directionality
