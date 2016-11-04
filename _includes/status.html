@@ -1,5 +1,9 @@
 {% if page.status or page.availability or page.proposals %}
+{% if page.status.is == "Stable" %}
+<div class="status status_stable">
+{% else %}
 <div class="status">
+{% endif %}
 <div class="status_content">
 {% if page.status %}
 <div class="overall_status">Specification status: <strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</div>
