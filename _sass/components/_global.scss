@@ -17,13 +17,11 @@ img {
 }
 
 // Tables
-table,
-th,
 td {
-  border: 1px solid #eee;
+  border: 1px solid #ddd;
 }
 .table {
-  display: table;
+  display: block;
 }
 .table-cell {
   display: table-cell;
@@ -39,7 +37,7 @@ td {
 }
 table {
   width: 100%;
-  display: table;
+  display: block;
   &.bordered > thead > tr,
   &.bordered > tbody > tr {
     border-bottom: 1px solid $table-border-color;
@@ -66,13 +64,16 @@ table {
     }
   }
 }
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
 thead {
   border-bottom: 1px solid $table-border-color;
   font-weight: bold;
 }
 td,
 th {
-  padding: 15px 5px;
+  padding: 6px 13px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
