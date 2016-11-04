@@ -14,7 +14,7 @@
 {% assign pages = site.pages | sort:"url"  %}
 {% for page in pages %}
 {% if page.availability %}
-  <tr><td><a href="{{ site.url }}{{ page.url }}">{{ page.title }}</a></td>
+  <tr><td><a href="{{ site.url }}{{ page.url }}">{% if page.title %}{{ page.title }}{% else %}{{ page.url }}{% endif %}</a></td>
 {% for platform in site.platforms %}
   <td>
 {% for available_platform in page.availability %}

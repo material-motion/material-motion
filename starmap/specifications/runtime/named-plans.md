@@ -1,16 +1,23 @@
 ---
 layout: page
 title: Named plans
+status:
+  date: Oct 17, 2016
+  is: Stable
+availability:
+  - platform:
+    name: Android
+    label: "runtime-android as of v4.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-android
+  - platform:
+    name: iOS
+    label: "runtime-objc as of v4.0.0"
+    url: https://github.com/material-motion/material-motion-runtime-objc
 ---
 
 # Named plans feature specification
 
 This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Runtime types.
-
-|     | Android | Apple | Web |
-|:----|:--------|:------|:----|
-| First introduced | &nbsp; | [Runtime 4.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v4.0.0) | &nbsp; |
-| MVP milestones | [Milestone](https://github.com/material-motion/material-motion-runtime-android/milestone/5) | Released | &nbsp; |
 
 ## Overview
 
