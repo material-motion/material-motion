@@ -2,7 +2,7 @@
 layout: page
 ---
 
-Status of this document: ![](../../_assets/under-construction.gif)
+Status of this document: ![](/assets/under-construction.gif)
 
 # JavaScript Testing Notes
 

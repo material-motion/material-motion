@@ -19,4 +19,4 @@ https://github.com/material-foundation/compute-oss-dashboard
 
 [Milemarker](https://material-motion.github.io/material-motion-milemarker/) is a high-level view of the material-motion org's many repositories and milestones.
 
-![](../_assets/milemarker.png)
+![](/assets/milemarker.png)

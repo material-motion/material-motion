@@ -3,7 +3,7 @@ layout: page
 permalink: /team/essentials/testing/
 ---
 
-Status of this document: ![](../../_assets/under-construction.gif)
+Status of this document: ![](/assets/under-construction.gif)
 
 # Testing
 
