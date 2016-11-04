@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # appleOS
 
 We use Xcode unit tests to test our library code.

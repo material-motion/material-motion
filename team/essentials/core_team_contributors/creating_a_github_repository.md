@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Creating a GitHub repository
 
 GitHub repository creation rights for the `material-motion` org is restricted to a small set of Googlers.

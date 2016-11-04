@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Stability
 
 Current stability status of each feature. Empty rows imply that the feature is not stable. This document is updated each time something is launched.

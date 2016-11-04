@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 Status of this document: ![](../../_assets/under-construction.gif)
 
 # JavaScript Testing Notes

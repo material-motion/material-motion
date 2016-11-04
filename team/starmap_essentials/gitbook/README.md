@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /team/starmap_essentials/gitbook/
+---
+
 # GitBook etiquette
 
 GitBook does not have pull requests. By default, changes are made to the `master` branch for the book.

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Onboarding
 
 1. [Join our Discord channel](https://discord.gg/ZJyGXza) and post a message in #welcome.

@@ -278,194 +278,190 @@ toc:
     url: "/team"
     children:
     - page:
-      title: "Introduction"
-      url: "/team/README.md"
-    - page:
       title: "Community"
-      url: "/team/community/README.md"
+      url: "/team/community/"
       children:
        - page:
          title: "Communication"
-         url: "/team/community/communication.md"
-       - page:
-         title: "Contributing"
-         url: "/team/CONTRIBUTING.md"
+         url: "/team/community/communication"
        - page:
          title: "Governance"
-         url: "/team/community/governance.md"
+         url: "/team/community/governance"
        - page:
          title: "Code of conduct"
-         url: "/team/community/code_of_conduct.md"
+         url: "/team/community/code_of_conduct"
        - page:
          title: "Dashboards"
-         url: "/team/community/dashboards.md"
+         url: "/team/community/dashboards"
     - Culture:
       children:
        - page:
          title: "Team goals"
-         url: "/team/culture/team_goals.md"
+         url: "/team/culture/team_goals"
        - page:
          title: "Experiments"
-         url: "/team/culture/experiments/README.md"
+         url: "/team/culture/experiments/"
          children:
            - page:
              title: "Assorted"
-             url: "/team/culture/experiments/assorted.md"
+             url: "/team/culture/experiments/assorted"
     - page:
       title: "Planning"
-      url: "/team/planning/README.md"
+      url: "/team/planning/"
       children:
        - page:
          title: "Working on issues"
-         url: "/team/planning/working_on_issues.md"
+         url: "/team/planning/working_on_issues"
        - page:
          title: "Issues/bugs/feature requests"
-         url: "/team/planning/issues.md"
+         url: "/team/planning/issues"
        - page:
          title: "How we prioritize"
-         url: "/team/planning/how_we_prioritize.md"
+         url: "/team/planning/how_we_prioritize"
     - page:
       title: "Contributor essentials"
-      url: "/team/essentials/README.md"
+      url: "/team/essentials/"
       children:
        - page:
          title: "Writing reviewable code"
-         url: "/team/essentials/writing_reviewable_code.md"
+         url: "/team/essentials/writing_reviewable_code"
        - page:
          title: "Casual contributors"
-         url: "/team/essentials/casual_contributors/README.md"
+         url: "/team/essentials/casual_contributors/"
          children:
            - page:
              title: "Life of a change"
-             url: "/team/essentials/casual_contributors/life_of_a_change.md"
+             url: "/team/essentials/casual_contributors/life_of_a_change"
        - page:
          title: "Frequent and core contributors"
-         url: "/team/essentials/frequent_contributors/README.md"
+         url: "/team/essentials/frequent_contributors/"
          children:
            - page:
              title: "Onboarding"
-             url: "/team/essentials/frequent_contributors/onboarding.md"
+             url: "/team/essentials/frequent_contributors/onboarding"
            - page:
              title: "Life of a change"
-             url: "/team/essentials/frequent_contributors/life_of_a_change.md"
+             url: "/team/essentials/frequent_contributors/life_of_a_change"
            - page:
              title: "Branches"
-             url: "/team/essentials/frequent_contributors/branches.md"
+             url: "/team/essentials/frequent_contributors/branches"
            - page:
              title: "Deprecation policy"
-             url: "/team/essentials/frequent_contributors/deprecation_policy.md"
+             url: "/team/essentials/frequent_contributors/deprecation_policy"
            - page:
              title: "Tools"
-             url: "/team/essentials/frequent_contributors/tools.md"
+             url: "/team/essentials/frequent_contributors/tools"
        - page:
          title: "Core team contributors"
-         url: "/team/essentials/core_team_contributors/README.md"
+         url: "/team/essentials/core_team_contributors/"
          children:
            - page:
              title: "Creating a GitHub repository"
-             url: "/team/essentials/core_team_contributors/creating_a_github_repository.md"
+             url: "/team/essentials/core_team_contributors/creating_a_github_repository"
            - page:
              title: "Release process"
-             url: "/team/essentials/core_team_contributors/release_process.md"
+             url: "/team/essentials/core_team_contributors/release_process"
            - page:
              title: "Changes that don't need review"
-             url: "/team/essentials/core_team_contributors/changes_that_dont_need_review.md"
+             url: "/team/essentials/core_team_contributors/changes_that_dont_need_review"
        - page:
          title: "Testing"
-         url: "/team/essentials/testing/README.md"
+         url: "/team/essentials/testing/"
          children:
            - page:
              title: "appleOS"
-             url: "/team/essentials/testing/appleos.md"
+             url: "/team/essentials/testing/appleos"
            - page:
              title: "JavaScript"
-             url: "/team/essentials/testing/javascript.md"
+             url: "/team/essentials/testing/javascript"
        - page:
          title: "Style"
-         url: "/team/essentials/style/README.md"
+         url: "/team/essentials/style/"
          children:
            - page:
              title: "appleOS"
-             url: "/team/essentials/style/appleos.md"
+             url: "/team/essentials/style/appleos"
            - page:
              title: "Bash"
-             url: "/team/essentials/style/bash.md"
+             url: "/team/essentials/style/bash"
     - page:
       title: "Starmap contributor essentials"
-      url: "/team/starmap_essentials/README.md"
+      url: "/team/starmap_essentials/"
       children:
        - page:
          title: "Writing prose"
-         url: "/team/starmap_essentials/writing_prose.md"
+         url: "/team/starmap_essentials/writing_prose"
        - page:
          title: "GitBook"
-         url: "/team/starmap_essentials/gitbook/README.md"
+         url: "/team/starmap_essentials/gitbook/"
          children:
            - page:
              title: "Mirroring GitBooks to GitHub"
-             url: "/team/starmap_essentials/gitbook/updating_our_books.md"
+             url: "/team/starmap_essentials/gitbook/updating_our_books"
            - page:
              title: "Creating a GitBook pull request"
-             url: "/team/starmap_essentials/gitbook/pull_request.md"
+             url: "/team/starmap_essentials/gitbook/pull_request"
     - page:
       title: "Weekly updates"
-      url: "/team/weekly_updates/README.md"
+      url: "/team/weekly_updates/"
       children:
        - page:
          title: "Current sprint"
-         url: "/team/weekly_updates/current_focus.md"
+         url: "/team/weekly_updates/current_focus"
        - page:
          title: "Stability"
-         url: "/team/weekly_updates/stability.md"
+         url: "/team/weekly_updates/stability"
        - page:
          title: "October 27-November 02, 2016"
-         url: "/team/weekly_updates/2016-11-02.md"
+         url: "/team/weekly_updates/2016-11-02"
        - page:
          title: "October 20-26, 2016"
-         url: "/team/weekly_updates/2016-10-26.md"
+         url: "/team/weekly_updates/2016-10-26"
        - page:
          title: "October 13-19, 2016"
-         url: "/team/weekly_updates/2016-10-19.md"
+         url: "/team/weekly_updates/2016-10-19"
        - page:
          title: "October 06-12, 2016"
-         url: "/team/weekly_updates/2016-10-12.md"
+         url: "/team/weekly_updates/2016-10-12"
        - page:
          title: "September 29-October 05, 2016"
-         url: "/team/weekly_updates/2016-10-05.md"
+         url: "/team/weekly_updates/2016-10-05"
        - page:
          title: "September 22-28, 2016"
-         url: "/team/weekly_updates/2016-09-28.md"
+         url: "/team/weekly_updates/2016-09-28"
        - page:
          title: "September 15-21, 2016"
-         url: "/team/weekly_updates/2016-09-21.md"
+         url: "/team/weekly_updates/2016-09-21"
        - page:
          title: "September 8-14, 2016"
-         url: "/team/weekly_updates/2016-09-14.md"
+         url: "/team/weekly_updates/2016-09-14"
        - page:
          title: "August 18-24, 2016"
-         url: "/team/weekly_updates/2016-08-24.md"
+         url: "/team/weekly_updates/2016-08-24"
        - page:
          title: "August 11-17, 2016"
-         url: "/team/weekly_updates/2016-08-17.md"
+         url: "/team/weekly_updates/2016-08-17"
        - page:
          title: "August 4-10, 2016"
-         url: "/team/weekly_updates/2016-08-10.md"
+         url: "/team/weekly_updates/2016-08-10"
        - page:
          title: "July 28-August 3, 2016"
-         url: "/team/weekly_updates/2016-08-03.md"
+         url: "/team/weekly_updates/2016-08-03"
        - page:
          title: "July 21-27, 2016"
-         url: "/team/weekly_updates/2016-07-27.md"
+         url: "/team/weekly_updates/2016-07-27"
        - page:
          title: "July 14-20, 2016"
-         url: "/team/weekly_updates/2016-07-20.md"
+         url: "/team/weekly_updates/2016-07-20"
        - page:
          title: "July 7-13, 2016"
-         url: "/team/weekly_updates/2016-07-13.md"
+         url: "/team/weekly_updates/2016-07-13"
        - page:
          title: "June 30-July 6, 2016"
-         url: "/team/weekly_updates/2016-07-06.md"
+         url: "/team/weekly_updates/2016-07-06"
     - page:
       title: "Random"
-      url: "/team/random.md"
-
+      url: "/team/random"
+  - page:
+    title: "Contributing"
+    url: "/team/CONTRIBUTING"

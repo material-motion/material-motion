@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Changes that don't need review
 
 If a diff fits neatly into the following categories then you are not **required** to send the code out for review. You're still encouraged to send changes out for review if you'd like additional input or have questions.

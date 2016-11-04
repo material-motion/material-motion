@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Deprecation policy
 
 There will come a time where we have to deprecate an API.

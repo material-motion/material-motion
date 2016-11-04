@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /team/culture/experiments/
+---
+
 # Experiments
 
 Experimentation is an important part of our team's culture. We use experiments to inform decisions, to explore new ideas, and to have a safe place to fail.

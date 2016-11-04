@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Branches
 
 Primary development branch: **develop**

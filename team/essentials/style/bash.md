@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Bash style
 
 Use `lower_case` for local variables.

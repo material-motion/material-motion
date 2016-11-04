@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Writing reviewable code
 
 One important aspect of our team's culture is the same, regardless of language or platform: code review. All non-experimental code we write as a team goes through code review before it can be landed in any shared git repository.

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Dashboards
 
 ## Statistics

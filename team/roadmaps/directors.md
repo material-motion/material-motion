@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Directors
 
 The following Directors represent increasingly complex levels of expression we'd like to achieve.

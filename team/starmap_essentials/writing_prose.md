@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Writing prose
 
 ## Starmap policies

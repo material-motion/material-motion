@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Release process
 
 Read our release tooling documentation by running:

@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Issues/bugs/feature requests
 
 We host all of our issues on GitHub.

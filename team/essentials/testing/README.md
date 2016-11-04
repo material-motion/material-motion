@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /team/essentials/testing/
+---
+
 Status of this document: ![](../../_assets/under-construction.gif)
 
 # Testing

@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /team/essentials/casual_contributors
+---
+
 # Casual contributors
 
 Essential information for **casual** contributors. [What's a casual contributor?](../../community/governance.md)

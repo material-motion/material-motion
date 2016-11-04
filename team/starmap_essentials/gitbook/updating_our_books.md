@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Mirroring GitBooks to GitHub
 
 We strictly edit our books in the [GitBook](https://www.gitbook.com/) web UI. GitHub is a mirror.

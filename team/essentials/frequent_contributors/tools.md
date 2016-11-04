@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Tooling
 
 Our team uses a custom tool called `mdm` to manage our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:

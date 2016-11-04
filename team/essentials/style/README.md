@@ -1,3 +1,8 @@
+---
+layout: page
+permalink: /team/essentials/style/
+---
+
 # Team practices
 
 ## Line length

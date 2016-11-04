@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Creating a GitBook pull request
 
 These steps explain how to create a pull request for one of our GitBook books. It assumes you're modifying this book, but the commands apply to other books as well.

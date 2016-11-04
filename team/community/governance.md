@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Governance
 
 The Material Motion [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) and its implementations represent a collaborative effort lead by a core group of contributors. The core contributors represent diverse backgrounds across many platforms and languages. The initial core contributors are all Googlers.
