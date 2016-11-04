@@ -2,13 +2,13 @@
 layout: page
 permalink: /starmap/specifications/interactions/
 title: Interactions
+statuses:
+  - status:
+    date: Oct 27, 2016
+    type: Drafting
 ---
 
 # Interactions
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 27, 2016 |
 
 An interaction describes a coherent interactive experience.
 

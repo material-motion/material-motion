@@ -1,12 +1,12 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 # Life of a transition director
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 Let's walk through the life of a simple **fade** transition director.
 

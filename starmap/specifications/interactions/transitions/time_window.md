@@ -1,12 +1,12 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 # Time window specification
-
-| Proposals | Status |
-|:------------------|:-------|
-| Current status | Draft |
 
 This is the engineering specification for the **TimeWindow** type.
 

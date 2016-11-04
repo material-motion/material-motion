@@ -1,12 +1,12 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 # TransitionDirector specification
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 This is the engineering specification for the `TransitionDirector` type.
 

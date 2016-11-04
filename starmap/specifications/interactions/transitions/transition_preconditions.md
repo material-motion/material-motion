@@ -1,13 +1,13 @@
 ---
 layout: page
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 
 # Transition preconditions feature specification
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 ## MVP
 

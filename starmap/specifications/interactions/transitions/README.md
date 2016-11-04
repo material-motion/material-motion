@@ -2,13 +2,13 @@
 layout: page
 permalink: /starmap/specifications/interactions/transitions/
 title: Transitions
+statuses:
+  - status:
+    date: Oct 25, 2016
+    type: Drafting
 ---
 
 # Transitions
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| ![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif) | Drafting as of Oct 25, 2016 |
 
 A transition causes a visual change from one element hierarchy to another.
 
