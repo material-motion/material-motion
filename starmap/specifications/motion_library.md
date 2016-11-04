@@ -1,9 +1,5 @@
 ---
 layout: page
----
-
----
-layout: page
 title: Motion library
 ---
 

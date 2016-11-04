@@ -193,10 +193,10 @@ toc:
           children:
             - page:
               title: "ReplicaController"
-              url: "/starmap/specifications/replicator_controller"
+              url: "/starmap/specifications/ReplicaController"
             - page:
               title: "ReplicaControllerDelegate"
-              url: "/starmap/specifications/replicator"
+              url: "/starmap/specifications/ReplicaControllerDelegate"
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/runtime/domain_mapping"

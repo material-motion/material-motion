@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Target replication
 ---
 
 # Target replication

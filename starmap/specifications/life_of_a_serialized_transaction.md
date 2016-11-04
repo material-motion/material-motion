@@ -1,9 +1,10 @@
 ---
 layout: page
+title: Life of a serialized transaction
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
-
-Status of this document:
-![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
 
 # Life of a serialized transaction
 

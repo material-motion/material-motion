@@ -1,9 +1,10 @@
 ---
 layout: page
+title: REPL
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
-
-Status of this document:
-![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
 
 # REPL
 

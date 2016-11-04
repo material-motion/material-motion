@@ -1,5 +1,9 @@
 ---
 layout: page
+title: ReplicaControllerDelegate
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # ReplicaControllerDelegate specification

@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Sparkle dialog
 ---
 
 # Sparkle dialog demo

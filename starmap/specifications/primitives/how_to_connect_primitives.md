@@ -1,5 +1,6 @@
 ---
 layout: page
+title: How to connect primitives
 ---
 
 ## How to connect primitives

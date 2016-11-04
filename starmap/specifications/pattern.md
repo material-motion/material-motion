@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Pattern
 ---
 
 ## Declarative motion

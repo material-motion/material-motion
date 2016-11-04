@@ -1,5 +1,9 @@
 ---
 layout: page
+title: Expressions
+status:
+  date: Oct 25, 2016
+  is: Inactive
 ---
 
 # Expressions

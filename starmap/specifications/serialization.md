@@ -1,5 +1,9 @@
 ---
 layout: page
+title: Serialization
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # Serialization

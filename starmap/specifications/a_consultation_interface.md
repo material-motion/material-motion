@@ -1,10 +1,12 @@
 ---
 layout: page
+title: A consultation interface
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # A consultation interface
-
-TODO: Spec this out.
 
 A consultation interface is an entity that is able to dispense plans in response to a provided set of "goal" states. This interface might be a *learning* entity and it might be *context-aware*.
 

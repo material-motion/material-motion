@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Primitives
 permalink: /starmap/specifications/primitives/
 ---
 

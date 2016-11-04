@@ -1,10 +1,12 @@
 ---
 layout: page
+title: Expressions
+status:
+  date: Oct 25, 2016
+  is: Inactive
 ---
 
-Status of this document: **Experimental**
-
-# Motion expression
+# Expressions
 
 A **motion expression** is functional, syntactic sugar for the creation and configuration of plans.
 
