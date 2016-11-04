@@ -22,9 +22,9 @@ Agreement](https://cla.developers.google.com/about/google-corporate).
 
 ### Ready to continue?
 
-Read the [contributor essentials](essentials/).
+Read the [contributor essentials](team/essentials/).
 
 ## Contributing to the Starmap?
 
-See our [Starmap contributor essentials](starmap_essentials).
+See our [Starmap contributor essentials](team/starmap_essentials).
 
