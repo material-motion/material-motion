@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Serialization
+permalink: /starmap/specifications/serialization/
 status:
   date: Oct 25, 2016
   is: Drafting

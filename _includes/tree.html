@@ -1,7 +1,12 @@
 {% for node in tree %}
 <li class="{% if node.children %}has-children{% endif %} {% if page.url contains node.url %}expanded{% endif %}">
 <div class="thumb"></div>
-{% if page.url != node.url %}<a href="{{ site.url }}{{ node.url }}">{% endif %}{{ node.title }}{% if page.url != node.url %}</a>{% endif %}
+{% if node.url %}
+  {% if page.url != node.url %}<a href="{{ site.url }}{{ node.url }}">{% endif %}{{ node.title }}{% if page.url != node.url %}</a>{% endif %}
+{% else %}
+  <hr>
+  <em>{{ node.title }}</em>
+{% endif %}
 {% if node.children %}
   <ul class="bonsai"{% if page.url contains node.url %}{% else %} style="height: 0px"{% endif %}>
   {% assign tree=node.children %}
