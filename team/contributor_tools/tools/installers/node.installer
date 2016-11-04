@@ -1,0 +1,76 @@
+#!/bin/bash
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# Install nodejs v4.
+
+SHOULD_INSTALL=false
+
+REQUIRED_VERSION="4"
+VERSION=$(node --version 2> /dev/null)
+
+if [[ $? -ne 0 ]]; then
+  echo "nodejs is not installed"
+  SHOULD_INSTALL=true
+else
+  echo "Found $VERSION"
+  MAJOR_VERSION="${VERSION:1:1}"
+
+  if [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
+    echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
+    SHOULD_INSTALL=true
+  else
+    echo "nodejs version $MAJOR_VERSION already installed."
+  fi
+fi
+
+if [ "$SHOULD_INSTALL" = true ]; then
+  echo "Installing nodejs v$REQUIRED_VERSION..."
+  # https://github.com/creationix/nvm
+
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
+  source ~/.nvm/nvm.sh
+  nvm install "$REQUIRED_VERSION"
+fi
+
+# Install npm v2
+
+SHOULD_INSTALL=false
+REQUIRED_VERSION="2"
+VERSION=$(npm --version 2> /dev/null)
+VERSION=${VERSION#v}
+
+if [[ $? -ne 0 ]]; then
+  echo "npm is not installed"
+  SHOULD_INSTALL=true
+else
+  echo "Found $VERSION"
+  MAJOR_VERSION="${VERSION:0:1}"
+
+  if [ "$MAJOR_VERSION" -lt "$REQUIRED_VERSION" ]; then
+    echo "nodejs version $MAJOR_VERSION is too old. Need v$REQUIRED_VERSION+."
+    SHOULD_INSTALL=true
+  else
+    echo "nodejs version $MAJOR_VERSION already installed."
+  fi
+fi
+
+if [ "$SHOULD_INSTALL" = true ]; then
+  echo "Installing npm..."
+
+  if [ "$(uname)" == "Darwin" ]; then
+    brew install npm
+  fi
+fi

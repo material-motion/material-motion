@@ -1,0 +1,57 @@
+#!/bin/bash -e
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+find_path() {
+  short_reponame=${1#material-motion-}
+  full_reponame="material-motion-$short_reponame"
+  parent_dir="$(dirname $ROOT_DIR)"
+
+  suffixes=("" "-android" "-objc" "-swift" "-js")
+  matches=()
+
+  for suffix in "${suffixes[@]}"; do
+    if [ -d "$parent_dir/$full_reponame$suffix" ]; then
+      matches+=("$parent_dir/$full_reponame$suffix")
+    elif [ -d "$parent_dir/$short_reponame$suffix" ]; then
+      matches+=("$parent_dir/$short_reponame$suffix")
+    fi
+  done
+
+  if [[ "${#matches[@]}" -eq "0" ]]; then
+    # No exact matches, look for fuzzy matches.
+    if [[ $(ls $parent_dir | grep $short_reponame | wc -l) -eq "1" ]]; then
+      echo "$parent_dir/$(ls $parent_dir | grep $short_reponame)"
+    elif [[ $(ls $parent_dir | grep $short_reponame | wc -l) -gt "1" ]]; then
+      echo "Ambiguous matches, please provide a more specific query. Found:" >&2
+      ls $parent_dir | grep $short_reponame >&2
+      exit 1
+    else
+      echo "No matches found." >&2
+      exit 1
+    fi
+  elif [[ "${#matches[@]}" -eq "1" ]]; then
+    echo "${matches[0]}"
+  else
+    echo "Ambiguous matches, please specify a suffix manually. Found:" >&2
+    printf '%s\n' "${matches[@]}" >&2
+    exit 1
+  fi
+}
+
+case "$1" in
+  "") echo $ROOT_DIR ;;
+  *)  find_path "$@" ;;
+esac

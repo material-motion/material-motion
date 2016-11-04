@@ -1,0 +1,89 @@
+#!/bin/bash -e
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+parentcmd=$(basename "${BASH_SOURCE[1]}")
+
+function list {
+  echo "${b}NAME${N}"
+  echo "     ${B}$parentcmd${N} - extendable tools for automating material motion work"
+
+  echo
+  echo "${b}SYNOPSIS${N}"
+  echo "     ${B}$parentcmd${N} ${U}command${N} [${U}args${N}]"
+
+  echo
+  echo "${b}COMMANDS${N}"
+  for path in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
+    if [ "$path" == "$COMMAND_DIR" ]; then
+      continue # Find includes the given folder
+    elif [[ ! -f "$path/$( basename "$path" )" ]]; then
+      continue # Ignore directories with no command
+    fi
+    command=$(basename "$path")
+    echo "     $command"
+  done
+
+  echo
+  echo "Run ${B}$parentcmd help${N} ${U}command${N} to learn more about a specific command."
+}
+
+function cmdhelp {
+  HELPFILE=$BUILTIN_DIR/$1/README.md
+  if [ ! -f "$HELPFILE" ]; then
+    HELPFILE=$COMMAND_DIR/$1/README.md
+    if [ ! -f "$HELPFILE" ]; then
+      echo "No help for $parentcmd $1 found."
+      exit 1
+    fi
+  fi
+
+  if [ "$2" == "--edit" ]; then
+    $EDITOR "$HELPFILE"
+  else
+    echo
+    # Underline content between <> marks
+    sed -e "s:\(<\([a-zA-Z0-9 /]*\)>\):${N}${U}\2${N}:g" "$HELPFILE" | \
+      # Bold content between `` marks
+      perl -pe "s:(\`(.+?)\`):${B}\2${N}:g" | \
+      # Indent code blocks by two
+      sed -e "s/^    /      /" | \
+      # Bold markdown headers
+      perl -pe "s/^#+ (.+)/${B}\1${N}/g" | \
+      # Strip "Usage:"
+      sed -e "s/^Usage: //" | \
+      # Indent all paragraphs
+      perl -pe "s:^(\S.+):    \1:g"
+    echo
+  fi
+}
+
+function cmdhelp_all {
+  for path in $(find "$COMMAND_DIR" -type d -maxdepth 1 -user "$USER" | sort); do
+    if [ "$path" == "$COMMAND_DIR" ]; then
+      continue # Find includes the given folder
+    elif [[ ! -f "$path/$( basename "$path" )" ]]; then
+      continue # Ignore directories with no command
+    fi
+    command=$(basename "$path")
+    cmdhelp "$command"
+  done
+}
+
+case "$1" in
+  "")      list ;;
+  "--all") cmdhelp_all ;;
+  *)       cmdhelp "${@:1}" ;;
+esac

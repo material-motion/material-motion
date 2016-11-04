@@ -1,0 +1,204 @@
+#!/bin/bash
+#
+# Copyright 2016-present The Material Motion Authors. All Rights Reserved.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+# http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+parentcmd=$(basename "${BASH_SOURCE[1]}")
+cmd=$(basename "${BASH_SOURCE[0]}")
+this_script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+usage() {
+  $parentcmd help $cmd
+}
+
+if [ ! $(git rev-parse --is-inside-work-tree -q 2> /dev/null) ]; then
+  echo "Must be run from a git directory."
+  exit 1
+fi
+
+GIT_ROOT_DIR=$( cd "$(dirname $(git rev-parse --git-dir))" && pwd )
+
+publish_github() {
+  kind=$1
+
+  case "$kind" in
+    apple|android|javascript|tools) ;;
+    *) usage; exit 1 ;;
+  esac
+
+  if [ -z "$3" ]; then
+    reponame="$(basename $GIT_ROOT_DIR)"
+  else
+    reponame="$3"
+  fi
+  ownername="${2:-material-motion}"
+
+  if [ ! material-motion = $reponame* ] && [ -z "$2" ]; then
+    echo "No owner prefix detected. Please provide an owner."
+    usage
+    exit 1
+  fi
+
+  url="https://github.com/$ownername/$reponame"
+
+  echo "About to create a new GitHub repository."
+  echo "Please confirm the details below:"
+  echo
+  echo "    URL: $url"
+  echo "    Command: mdm gh repo -u $ownername --new $reponame"
+  echo
+  echo -n "Press enter to continue..."
+  read
+
+  if git remote -v | grep "^origin\t" >> /dev/null; then
+    echo "NOTICE: A remote named origin already exists."
+    echo
+    echo "Please verify that it is correct before continuing:"
+    echo
+    git remote -v | grep "^origin\t" | grep fetch
+    echo
+    echo "Press enter to continue..."
+    read
+  else # No remote named origin
+    if [ $(mdm gh user -w) == "$ownername" ]; then
+      mdm gh repo -u $ownername --new $reponame || exit 1
+    else
+      mdm gh repo -O $ownername --new $reponame || exit 1
+    fi
+
+    git remote add origin "git@github.com:$ownername/$reponame.git"
+    git push origin develop stable || exit 1
+  fi
+
+  $this_script_dir/configure_repo $kind $ownername $reponame $(mdm gh user --token)
+  mdm gh label templatize --template "$ROOT_DIR/labels.json" -u $ownername -r $reponame
+}
+
+fetch_repository_phid() {
+  results=$(echo | arc call-conduit diffusion.repository.search <<EOF
+{
+  "constraints": {
+    "name": "$reponame"
+  }
+}
+EOF
+)
+  php <<CODE
+<?php
+  \$results = json_decode('$results', TRUE);
+  foreach (\$results['response']['data'] as \$row) {
+    if (\$row['fields']['name'] == '$reponame') {
+      echo \$row['phid'];
+      break;
+    }
+  }
+?>
+CODE
+}
+
+publish_phabricator() {
+  if [ -z "$2" ]; then
+    reponame=$(basename $GIT_ROOT_DIR)
+  else
+    reponame="$2"
+  fi
+  ownername=${1:-material-motion}
+
+  if [ ! material-motion = $reponame* ] && [ -z "$1" ]; then
+    echo "No owner prefix detected. Please provide an owner."
+    usage
+    exit 1
+  fi
+
+  url="https://github.com/$ownername/$reponame.git"
+
+  echo "About to create a codereview.cc diffusion repository."
+  echo "Please confirm the details below:"
+  echo
+  echo "    Repo name: $reponame"
+  echo "    GitHub repo url: $url"
+  echo
+  echo -n "Press enter to continue..."
+  read
+
+  phid=$(fetch_repository_phid)
+
+  echo | arc call-conduit diffusion.repository.edit <<EOF
+{
+  "transactions": [
+    {
+      "type": "vcs",
+      "value": "git"
+    },
+    {
+      "type": "name",
+      "value": "$reponame"
+    },
+    {
+      "type": "defaultBranch",
+      "value": "develop"
+    },
+    {
+      "type": "autocloseOnly",
+      "value": [
+        "develop"
+      ]
+    }
+  ],
+  "objectIdentifier": "$phid"
+}
+EOF
+
+  if [ -z "$phid" ]; then
+    phid=$(fetch_repository_phid)
+  fi
+
+  if [ -z "$phid" ]; then
+    echo "Failed to get the phid for this repo."
+    exit 1
+  fi
+
+  echo | arc call-conduit diffusion.uri.edit <<EOF
+{
+  "transactions": [
+    {
+      "type": "repository",
+      "value": "$phid"
+    },
+    {
+      "type": "uri",
+      "value": "$url"
+    },
+    {
+      "type": "io",
+      "value": "observe"
+    },
+    {
+      "type": "display",
+      "value": "always"
+    },
+    {
+      "type": "display",
+      "value": "always"
+    }
+  ]
+}
+EOF
+}
+
+case "$1" in
+  github)       publish_github ${@:2} ;;
+  phabricator)  publish_phabricator ${@:2} ;;
+  *)            usage ;;
+esac
