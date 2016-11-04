@@ -2,7 +2,7 @@
 <li class="{% if node.children %}has-children{% endif %} {% if page.url contains node.url %}expanded{% endif %}">
 {% if page.url != node.url %}<a href="{{ site.url }}{{ node.url }}">{% endif %}{{ node.title }}{% if page.url != node.url %}</a>{% endif %}
 {% if node.children %}
-  <ul>
+  <ul class="bonsai">
   {% assign tree=node.children %}
   {% include tree.html %}
   </ul>

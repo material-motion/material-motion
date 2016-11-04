@@ -1,5 +1,6 @@
 ---
 layout: page
+permalink: /starmap/specifications/primitives/
 ---
 
 # Motion primitives
