@@ -199,7 +199,7 @@ toc:
               url: "/starmap/specifications/replicator"
         - page:
           title: "Domain mapping"
-          url: "/starmap/specifications/runtime/feature_nested_timelines"
+          url: "/starmap/specifications/runtime/domain_mapping"
         - page:
           title: "(drafts)"
           url: "/starmap/specifications/drafts"

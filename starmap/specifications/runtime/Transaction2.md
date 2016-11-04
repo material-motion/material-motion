@@ -1,14 +1,14 @@
 ---
 layout: page
+title: Transaction
+status:
+  date: Oct 25, 2016
+  is: Deprecated
 ---
 
 # Transaction specification
 
 This is the engineering specification for the `Transaction` object.
-
-|  | Android | Apple |
-| --- | --- | --- |
-| First introduced | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-android/releases) | [Runtime 1.0.0](https://github.com/material-motion/material-motion-runtime-objc/releases/tag/v1.0.0) |
 
 ## Features
 

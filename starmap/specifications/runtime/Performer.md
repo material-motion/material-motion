@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Performer
 status:
   date: July 8, 2016
   is: Stable

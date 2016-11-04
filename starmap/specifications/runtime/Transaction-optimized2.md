@@ -1,11 +1,12 @@
 ---
 layout: page
+title: Optimized transaction
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
-Status of this document:
-![]({{ site.url }}/assets/under-construction-flashing-barracade-animation.gif)
-
-# Transaction optimized feature specification
+# Optimized transaction feature specification
 
 Open question: Can transactions optimize their operations for over-the-wire transmission?
 

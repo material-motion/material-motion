@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Named plans
 ---
 
 # Named plans feature specification

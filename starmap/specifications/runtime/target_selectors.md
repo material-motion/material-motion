@@ -1,11 +1,10 @@
 ---
 layout: page
+title: Target selectors
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
-
-
-| Discussion thread | Status |
-|:------------------|:-------|
-| None | Drafting |
 
 # Target selectors feature specification
 

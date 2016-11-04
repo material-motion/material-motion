@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Runtime tracing
 status:
   date: Oct 13, 2016
   is: Stable
