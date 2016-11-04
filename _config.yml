@@ -208,7 +208,7 @@ toc:
           url: "/starmap/user_journeys/design"
      - page:
        title: "Glossary"
-       url: "/GLOSSARY"
+       url: "/starmap/GLOSSARY"
      - page:
        title: "(drafts)"
        url: "/starmap/specifications/drafts"
