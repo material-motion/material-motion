@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/interactions/
+permalink: /starmap/specifications/interactions/
 title: Interactions
 ---
 

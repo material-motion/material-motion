@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/runtime/
+permalink: /starmap/specifications/runtime/
 ---
 
 # Motion runtime

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/plans/
+permalink: /starmap/specifications/plans/
 title: Motion language
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/interactions/transitions/
+permalink: /starmap/specifications/interactions/transitions/
 title: Transitions
 ---
 

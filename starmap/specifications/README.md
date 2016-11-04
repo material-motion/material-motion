@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/
+permalink: /starmap/specifications/
 title: Engineering spec
 ---
 

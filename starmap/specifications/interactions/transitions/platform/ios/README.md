@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /specifications/interactions/transitions/platform/ios/
+permalink: /starmap/specifications/interactions/transitions/platform/ios/
 title: "Platform: iOS"
 ---
 
