@@ -1,11 +1,12 @@
 ---
 layout: page
+title: ArcMove
 status:
   date: Aug 24, 2016
   is: Drafting
 ---
 
-# ArcMove
+# ArcMove specification
 
 Things to focus on:
 

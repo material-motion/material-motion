@@ -27,6 +27,11 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
+platforms:
+  - Android
+  - iOS
+  - Web
+
 toc:
   - page:
     title: "Starmap"
@@ -465,6 +470,9 @@ toc:
   - page:
     title: "Status"
     url: "/status"
+  - page:
+    title: "Availability"
+    url: "/availability"
   - page:
     title: "Contributing"
     url: "/CONTRIBUTING"

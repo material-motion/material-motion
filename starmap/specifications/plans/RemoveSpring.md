@@ -1,5 +1,6 @@
 ---
 layout: page
+title: RemoveSpring
 status:
   date: Oct 24, 2016
   is: In review
@@ -11,7 +12,7 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/UTnXKlEYOOQ
 ---
 
-# RemoveSpring
+# RemoveSpring specification
 
 ## Example: Tossable elements
 

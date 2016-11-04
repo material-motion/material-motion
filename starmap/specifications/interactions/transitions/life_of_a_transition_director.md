@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Life of a transition director
 ---
 
 # Life of a transition director

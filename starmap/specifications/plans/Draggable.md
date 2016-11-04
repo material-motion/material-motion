@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Draggable
 status:
   date: Oct 18, 2016
   is: Stable
@@ -14,7 +15,7 @@ availability:
     url: https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0
 ---
 
-# Draggable
+# Draggable specification
 
 ## Overview
 

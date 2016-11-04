@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Director
 status:
   date: Oct 25, 2016
   is: Drafting

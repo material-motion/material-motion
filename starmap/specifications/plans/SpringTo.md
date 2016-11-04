@@ -1,5 +1,6 @@
 ---
 layout: page
+title: SpringTo
 status:
   date: Oct 18, 2016
   is: Stable
@@ -14,7 +15,7 @@ availability:
     url: https://github.com/material-motion/material-motion-family-pop-swift
 ---
 
-# SpringTo
+# SpringTo specification
 
 ## Example: Rounded corners
 

@@ -1,11 +1,12 @@
 ---
 layout: page
+title: VelocitySource
 status:
   date: Oct 24, 2016
   is: Drafting
 ---
 
-# VelocitySource
+# VelocitySource specification
 
 ## Example: Tossable elements
 

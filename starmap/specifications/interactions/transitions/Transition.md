@@ -1,11 +1,12 @@
 ---
 layout: page
+title: Transition
 status:
   date: Oct 25, 2016
   is: Drafting
 ---
 
-# Transition
+# Transition specification
 
 This is the engineering specification for the `Transition` concrete type.
 

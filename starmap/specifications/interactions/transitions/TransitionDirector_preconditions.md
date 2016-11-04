@@ -1,12 +1,12 @@
 ---
 layout: page
+title: "TransitionDirector preconditions"
 status:
   date: Oct 25, 2016
   is: Drafting
 ---
 
-
-# Transition preconditions feature specification
+# TransitionDirector preconditions feature specification
 
 ## MVP
 

@@ -1,11 +1,12 @@
 ---
 layout: page
+title: ScrollReactor
 status:
   date: Oct 18, 2016
   is: Drafting
 ---
 
-# ScrollReactor
+# ScrollReactor specification
 
 Open questions:
 

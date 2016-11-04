@@ -1,5 +1,6 @@
 ---
 layout: page
+title: BasicTween
 status:
   date: Nov 1, 2016
   is: Stable
@@ -26,7 +27,7 @@ availability:
     url: https://github.com/material-motion/material-motion-family-pop-swift
 ---
 
-# BasicTween
+# BasicTween specification
 
 ## Example: Fade in
 

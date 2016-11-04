@@ -1,5 +1,6 @@
 ---
 layout: page
+title: Tween
 status:
   date: Nov 1, 2016
   is: Stable
@@ -23,7 +24,7 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM
 ---
 
-# Tween
+# Tween specification
 
 Tween describes an animation that consists of distinct frames of animation.
 

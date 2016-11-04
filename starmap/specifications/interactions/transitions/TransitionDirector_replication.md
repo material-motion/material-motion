@@ -1,5 +1,6 @@
 ---
 layout: page
+title: "TransitionDirector replication"
 status:
   date: Oct 25, 2016
   is: Drafting

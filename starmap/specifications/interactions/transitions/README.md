@@ -1,10 +1,7 @@
 ---
 layout: page
-permalink: /starmap/specifications/interactions/transitions/
 title: Transitions
-status:
-  date: Oct 25, 2016
-  is: Drafting
+permalink: /starmap/specifications/interactions/transitions/
 ---
 
 # Transitions

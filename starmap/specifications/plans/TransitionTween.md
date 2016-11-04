@@ -1,5 +1,6 @@
 ---
 layout: page
+title: TransitionTween
 status:
   date: Nov 1, 2016
   is: Stable
@@ -12,7 +13,7 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/uoBbUAK0LCE
 ---
 
-# TransitionTween
+# TransitionTween specification
 
 TransitionTween describes tween animations that occur during a transition between two states.
 

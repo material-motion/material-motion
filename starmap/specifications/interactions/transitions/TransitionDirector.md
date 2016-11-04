@@ -1,5 +1,6 @@
 ---
 layout: page
+title: TransitionDirector
 status:
   date: Oct 25, 2016
   is: Drafting

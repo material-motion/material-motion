@@ -1,5 +1,6 @@
 ---
 layout: page
+title: DirectlyManipulable
 status:
   date: Oct 18, 2016
   is: Stable
@@ -14,7 +15,7 @@ availability:
     url: https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0
 ---
 
-# DirectlyManipulable
+# DirectlyManipulable specification
 
 ## Overview
 
