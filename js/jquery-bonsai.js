@@ -92,15 +92,9 @@ SOFTWARE.
       if (this.options.addSelectAll) this.addSelectAllLink();
       this.el.on('click', '.thumb', function(ev) {
         self.toggle($(ev.currentTarget).closest('li'));
-        localStorage.setItem('nav', JSON.stringify(self.serialize()));
       });
     }
     if (this.options.expandAll) this.expandAll();
-
-    var stored_nav = localStorage.getItem('nav');
-    if (stored_nav) {
-      self.restore(JSON.parse(stored_nav));
-    }
   };
   Bonsai.prototype = {
     isRootNode: function() {
