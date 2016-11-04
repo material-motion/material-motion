@@ -1,7 +1,6 @@
 /* LAYOUT CSS */
 .cover {
   background-color: $background-color;
-  position: fixed;
   width: 100%;
   min-height: 400px;
   padding: 30px 15px 20px;
@@ -12,6 +11,7 @@
     padding: 30px;
   }
   @include media-query($medium-screen) {
+    position: fixed;
     height: 100vh;
     position: initial;
     width: 100%;

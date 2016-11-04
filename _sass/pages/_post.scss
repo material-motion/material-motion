@@ -1,8 +1,6 @@
 // Post listing
 .post-listing {
   background-color: $white;
-  position: absolute;
-  top: 400px;
   z-index: 233;
   width: 100%;
   padding: 20px 20px 0;
@@ -14,8 +12,6 @@
   @include media-query($medium-screen) {
     height: 100vh;
     overflow-y: scroll;
-    position: initial;
-    top: 0;
   }
 }
 
