@@ -210,14 +210,14 @@ toc:
              children:
                - page:
                  title: "Transaction"
-                 url: "/starmap/specifications/runtime/transaction"
+                 url: "/starmap/specifications/runtime/Transaction"
                  children:
                    - page:
                      title: "Feature: target enumeration"
-                     url: "/starmap/specifications/runtime/transaction-target-enumeration"
+                     url: "/starmap/specifications/runtime/Transaction-target-enumeration"
                    - page:
                      title: "Feature: optimized"
-                     url: "/starmap/specifications/runtime/transaction-optimized"
+                     url: "/starmap/specifications/runtime/Transaction-optimized"
                - page:
                  title: "Plan serialization"
                  url: "/starmap/specifications/plan_serialization"
