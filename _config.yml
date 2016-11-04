@@ -30,7 +30,7 @@ kramdown:
 toc:
   - page:
     title: "Starmap"
-    url: "/starmap"
+    url: "/starmap/"
     children:
      - page:
        title: "Overview"
@@ -275,7 +275,7 @@ toc:
               url: "/starmap/specifications/expressions-addendum"
   - page:
     title: "Team"
-    url: "/team"
+    url: "/team/"
     children:
     - page:
       title: "Community"
