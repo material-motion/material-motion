@@ -15,7 +15,7 @@ Transactions may receive target selectors.
 
 ### selector APIs
 
-All add\/remove APIs may be provided with a TargetSelector instead of a direct target.
+All add/remove APIs may be provided with a TargetSelector instead of a direct target.
 
 Example pseudo-code:
 
