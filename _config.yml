@@ -1,23 +1,9 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing these this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 title: Material Motion
 email: material-motion@googlegroups.com
-description: "Long-term goals of the Material Motion engineering team."
+description: "Exploring solutions that will empower creators with the tools needed to describe and implement rich, interactive motion on any platform."
 baseurl: ""
 url: "https://material-motion.github.io/material-motion"
+icon: "material-motion.png"
 
 # Build settings
 markdown: kramdown
@@ -39,254 +25,252 @@ kramdown:
   toc_levels: 1..6
   enable_coderay: false
 
-owner:
-  name: Starmap
-  avatar: material-motion.png
-
 toc:
   - page:
-    title: "Overview"
-    url: "/overview"
-  - page:
-    title: "Engineering spec"
-    url: "/specifications/"
+    title: "Starmap"
+    url: "/starmap"
     children:
      - page:
-       title: "Motion primitives"
-       url: "/specifications/primitives"
+       title: "Overview"
+       url: "/overview"
+     - page:
+       title: "Engineering spec"
+       url: "/specifications/"
        children:
-         - page:
-           title: "How to connect primitives"
-           url: "/specifications/how_to_connect_primitives"
+        - page:
+          title: "Motion primitives"
+          url: "/specifications/primitives"
+          children:
+            - page:
+              title: "How to connect primitives"
+              url: "/specifications/how_to_connect_primitives"
+        - page:
+          title: "Declarative motion"
+          url: "/specifications/pattern"
+        - page:
+          title: "Motion runtime"
+          url: "/specifications/runtime/"
+          children:
+            - page:
+              title: "Life of a plan"
+              url: "/specifications/runtime/life_of_a_plan"
+            - page:
+              title: "Plan"
+              url: "/specifications/runtime/plan"
+            - page:
+              title: "Performer"
+              url: "/specifications/runtime/performer"
+              children:
+                - page:
+                  title: "Feature: composition"
+                  url: "/specifications/runtime/performer-composition"
+            - page:
+              title: "Runtime"
+              url: "/specifications/runtime/runtime"
+              children:
+                - page:
+                  title: "Feature: tracing"
+                  url: "/specifications/runtime/runtime_tracing"
+            - page:
+              title: "Feature: named plans"
+              url: "/specifications/runtime/named-plans"
+            - page:
+              title: "Feature: target selectors"
+              url: "/specifications/runtime/target_selectors"
+        - page:
+          title: "Motion language"
+          url: "/specifications/plans/"
+          children:
+            - page:
+              title: "📝 ArcMove"
+              url: "/specifications/plans/ArcMove"
+            - page:
+              title: "📝 BasicTween"
+              url: "/specifications/plans/BasicTween"
+            - page:
+              title: "🚩 ChangeAnchorPoint"
+              url: "/specifications/plans/ChangeAnchorPoint"
+            - page:
+              title: "🚩 DirectlyManipulable"
+              url: "/specifications/plans/DirectlyManipulable"
+            - page:
+              title: "🚩 Draggable"
+              url: "/specifications/plans/Draggable"
+            - page:
+              title: "🚩 Pinchable"
+              url: "/specifications/plans/Pinchable"
+            - page:
+              title: "📢  RemoveSpring"
+              url: "/specifications/plans/RemoveSpring"
+            - page:
+              title: "🚩 Rotatable"
+              url: "/specifications/plans/Rotatable"
+            - page:
+              title: "📝 ScrollReactor"
+              url: "/specifications/plans/ScrollReactor"
+            - page:
+              title: "🚩 SpringTo"
+              url: "/specifications/plans/SpringTo"
+            - page:
+              title: "🚩 TransitionTween"
+              url: "/specifications/plans/TransitionTween"
+            - page:
+              title: "🚩 Tween"
+              url: "/specifications/plans/Tween"
+            - page:
+              title: "📝 VelocitySource"
+              url: "/specifications/plans/VelocitySource"
+        - page:
+          title: "Motion library"
+          url: "/specifications/motion_library"
+        - page:
+          title: "Interactions"
+          url: "/specifications/interactions/"
+          children:
+            - page:
+              title: "Director"
+              url: "/specifications/interactions/director"
+            - page:
+              title: "Transitions"
+              url: "/specifications/interactions/transitions/"
+              children:
+                - page:
+                  title: "Directionality"
+                  url: "/specifications/interactions/transitions/directionality"
+                - page:
+                  title: "Time window"
+                  url: "/specifications/interactions/transitions/time_window"
+                - page:
+                  title: "Time window segment"
+                  url: "/specifications/interactions/transitions/time_window_segment"
+                - page:
+                  title: "Life of a transition director"
+                  url: "/specifications/interactions/transitions/life_of_a_transition_director"
+                - page:
+                  title: "Transition"
+                  url: "/specifications/interactions/transitions/Transition"
+                  children:
+                    - page:
+                      title: "Feature: context element"
+                      url: "/specifications/interactions/transitions/feature_context_element"
+                    - page:
+                      title: "Feature: interruptible"
+                      url: "/specifications/interactions/transitions/feature_interruptible"
+                - page:
+                  title: "TransitionDirector"
+                  url: "/specifications/interactions/transitions/TransitionDirector"
+                  children:
+                    - page:
+                      title: "Feature: transition preconditions"
+                      url: "/specifications/interactions/transitions/feature_transition_preconditions"
+                    - page:
+                      title: "Feature: replication"
+                      url: "/specifications/interactions/transitions/feature_replication"
+                - page:
+                  title: "Platform: iOS"
+                  url: "/specifications/interactions/transitions/platform/ios/"
+                  children:
+                    - page:
+                      title: "Life of a transition controller"
+                      url: "/specifications/interactions/transitions/platform/ios/life_of_a_transition_controller"
+                    - page:
+                      title: "TransitionController"
+                      url: "/specifications/interactions/transitions/platform/ios/TransitionController"
+                      children:
+                        - page:
+                          title: "Feature: director stack"
+                          url: "/specifications/interactions/transitions/platform/ios/feature_director_stack"
+        - page:
+          title: "Target replication"
+          url: "/specifications/replicas"
+          children:
+            - page:
+              title: "ReplicaController"
+              url: "/specifications/replicator_controller"
+            - page:
+              title: "ReplicaControllerDelegate"
+              url: "/specifications/replicator"
+        - page:
+          title: "Domain mapping"
+          url: "/specifications/runtime/feature_nested_timelines"
      - page:
-       title: "Declarative motion"
-       url: "/specifications/pattern"
-     - page:
-       title: "Motion runtime"
-       url: "/specifications/runtime/"
+       title: "User journeys"
+       url: "/user_journeys/"
        children:
-         - page:
-           title: "Life of a plan"
-           url: "/specifications/runtime/life_of_a_plan"
-         - page:
-           title: "Plan"
-           url: "/specifications/runtime/plan"
-         - page:
-           title: "Performer"
-           url: "/specifications/runtime/performer"
-           children:
-             - page:
-               title: "Feature: composition"
-               url: "/specifications/runtime/performer-composition"
-         - page:
-           title: "Runtime"
-           url: "/specifications/runtime/runtime"
-           children:
-             - page:
-               title: "Feature: tracing"
-               url: "/specifications/runtime/runtime_tracing"
-         - page:
-           title: "Feature: named plans"
-           url: "/specifications/runtime/named-plans"
-         - page:
-           title: "Feature: target selectors"
-           url: "/specifications/runtime/target_selectors"
+        - page:
+          title: "Motion"
+          url: "/user_journeys/motion"
+        - page:
+          title: "Engineering"
+          url: "/user_journeys/engineering"
+        - page:
+          title: "Design"
+          url: "/user_journeys/design"
      - page:
-       title: "Motion language"
-       url: "/specifications/plans/"
+       title: "Contributing"
+       url: "/CONTRIBUTING"
+     - page:
+       title: "Glossary"
+       url: "/GLOSSARY"
+     - page:
+       title: "(drafts)"
+       url: "/specifications/drafts"
        children:
-         - page:
-           title: "📝 ArcMove"
-           url: "/specifications/plans/ArcMove"
-         - page:
-           title: "📝 BasicTween"
-           url: "/specifications/plans/BasicTween"
-         - page:
-           title: "🚩 ChangeAnchorPoint"
-           url: "/specifications/plans/ChangeAnchorPoint"
-         - page:
-           title: "🚩 DirectlyManipulable"
-           url: "/specifications/plans/DirectlyManipulable"
-         - page:
-           title: "🚩 Draggable"
-           url: "/specifications/plans/Draggable"
-         - page:
-           title: "🚩 Pinchable"
-           url: "/specifications/plans/Pinchable"
-         - page:
-           title: "📢  RemoveSpring"
-           url: "/specifications/plans/RemoveSpring"
-         - page:
-           title: "🚩 Rotatable"
-           url: "/specifications/plans/Rotatable"
-         - page:
-           title: "📝 ScrollReactor"
-           url: "/specifications/plans/ScrollReactor"
-         - page:
-           title: "🚩 SpringTo"
-           url: "/specifications/plans/SpringTo"
-         - page:
-           title: "🚩 TransitionTween"
-           url: "/specifications/plans/TransitionTween"
-         - page:
-           title: "🚩 Tween"
-           url: "/specifications/plans/Tween"
-         - page:
-           title: "📝 VelocitySource"
-           url: "/specifications/plans/VelocitySource"
-     - page:
-       title: "Motion library"
-       url: "/specifications/motion_library"
-     - page:
-       title: "Interactions"
-       url: "/specifications/interactions/"
-       children:
-         - page:
-           title: "Director"
-           url: "/specifications/interactions/director"
-         - page:
-           title: "Transitions"
-           url: "/specifications/interactions/transitions/"
-           children:
-             - page:
-               title: "Directionality"
-               url: "/specifications/interactions/transitions/directionality"
-             - page:
-               title: "Time window"
-               url: "/specifications/interactions/transitions/time_window"
-             - page:
-               title: "Time window segment"
-               url: "/specifications/interactions/transitions/time_window_segment"
-             - page:
-               title: "Life of a transition director"
-               url: "/specifications/interactions/transitions/life_of_a_transition_director"
-             - page:
-               title: "Transition"
-               url: "/specifications/interactions/transitions/Transition"
-               children:
-                 - page:
-                   title: "Feature: context element"
-                   url: "/specifications/interactions/transitions/feature_context_element"
-                 - page:
-                   title: "Feature: interruptible"
-                   url: "/specifications/interactions/transitions/feature_interruptible"
-             - page:
-               title: "TransitionDirector"
-               url: "/specifications/interactions/transitions/TransitionDirector"
-               children:
-                 - page:
-                   title: "Feature: transition preconditions"
-                   url: "/specifications/interactions/transitions/feature_transition_preconditions"
-                 - page:
-                   title: "Feature: replication"
-                   url: "/specifications/interactions/transitions/feature_replication"
-             - page:
-               title: "Platform: iOS"
-               url: "/specifications/interactions/transitions/platform/ios/"
-               children:
-                 - page:
-                   title: "Life of a transition controller"
-                   url: "/specifications/interactions/transitions/platform/ios/life_of_a_transition_controller"
-                 - page:
-                   title: "TransitionController"
-                   url: "/specifications/interactions/transitions/platform/ios/TransitionController"
-                   children:
-                     - page:
-                       title: "Feature: director stack"
-                       url: "/specifications/interactions/transitions/platform/ios/feature_director_stack"
-     - page:
-       title: "Target replication"
-       url: "/specifications/replicas"
-       children:
-         - page:
-           title: "ReplicaController"
-           url: "/specifications/replicator_controller"
-         - page:
-           title: "ReplicaControllerDelegate"
-           url: "/specifications/replicator"
-     - page:
-       title: "Domain mapping"
-       url: "/specifications/runtime/feature_nested_timelines"
-  - page:
-    title: "User journeys"
-    url: "/user_journeys/"
-    children:
-     - page:
-       title: "Motion"
-       url: "/user_journeys/motion"
-     - page:
-       title: "Engineering"
-       url: "/user_journeys/engineering"
-     - page:
-       title: "Design"
-       url: "/user_journeys/design"
-  - page:
-    title: "Contributing"
-    url: "/CONTRIBUTING"
-  - page:
-    title: "Glossary"
-    url: "/GLOSSARY"
-  - page:
-    title: "(drafts)"
-    url: "/specifications/drafts"
-    children:
-     - page:
-       title: "Serialization"
-       url: "/specifications/serialization"
-       children:
-         - page:
-           title: "Transaction"
-           url: "/specifications/runtime/transaction"
-           children:
-             - page:
-               title: "Feature: target enumeration"
-               url: "/specifications/runtime/transaction-target-enumeration"
-             - page:
-               title: "Feature: optimized"
-               url: "/specifications/runtime/transaction-optimized"
-         - page:
-           title: "Plan serialization"
-           url: "/specifications/plan_serialization"
-         - page:
-           title: "Transaction serialization"
-           url: "/specifications/transaction_serialization"
-         - page:
-           title: "Life of a serialized transaction"
-           url: "/specifications/life_of_a_serialized_transaction"
-     - page:
-       title: "Motion demos"
-       url: "/specifications/motion-demos"
-       children:
-         - page:
-           title: "Sparkle dialog"
-           url: "/specifications/motion_demos/sparkle_dialog"
-     - page:
-       title: "Director composition"
-       url: "/specifications/director_composition"
-     - page:
-       title: "Condition elements"
-       url: "/specifications/transient_views"
-     - page:
-       title: "Server"
-       url: "/specifications/server"
-     - page:
-       title: "Debugging"
-       url: "/specifications/debugging"
-     - page:
-       title: "REPL"
-       url: "/specifications/repl"
-     - page:
-       title: "A consultation interface"
-       url: "/specifications/a_consultation_interface"
-     - page:
-       title: "Applications"
-       url: "/specifications/applications"
-     - page:
-       title: "Motion Expression"
-       url: "/specifications/expressions"
-       children:
-         - page:
-           title: "Further considerations"
-           url: "/specifications/expressions-addendum"
-
-  
+        - page:
+          title: "Serialization"
+          url: "/specifications/serialization"
+          children:
+            - page:
+              title: "Transaction"
+              url: "/specifications/runtime/transaction"
+              children:
+                - page:
+                  title: "Feature: target enumeration"
+                  url: "/specifications/runtime/transaction-target-enumeration"
+                - page:
+                  title: "Feature: optimized"
+                  url: "/specifications/runtime/transaction-optimized"
+            - page:
+              title: "Plan serialization"
+              url: "/specifications/plan_serialization"
+            - page:
+              title: "Transaction serialization"
+              url: "/specifications/transaction_serialization"
+            - page:
+              title: "Life of a serialized transaction"
+              url: "/specifications/life_of_a_serialized_transaction"
+        - page:
+          title: "Motion demos"
+          url: "/specifications/motion-demos"
+          children:
+            - page:
+              title: "Sparkle dialog"
+              url: "/specifications/motion_demos/sparkle_dialog"
+        - page:
+          title: "Director composition"
+          url: "/specifications/director_composition"
+        - page:
+          title: "Condition elements"
+          url: "/specifications/transient_views"
+        - page:
+          title: "Server"
+          url: "/specifications/server"
+        - page:
+          title: "Debugging"
+          url: "/specifications/debugging"
+        - page:
+          title: "REPL"
+          url: "/specifications/repl"
+        - page:
+          title: "A consultation interface"
+          url: "/specifications/a_consultation_interface"
+        - page:
+          title: "Applications"
+          url: "/specifications/applications"
+        - page:
+          title: "Motion Expression"
+          url: "/specifications/expressions"
+          children:
+            - page:
+              title: "Further considerations"
+              url: "/specifications/expressions-addendum"
