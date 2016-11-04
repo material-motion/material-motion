@@ -417,6 +417,9 @@ toc:
          title: "Stability"
          url: "/team/weekly_updates/stability"
        - page:
+         title: "November 03-November 09, 2016"
+         url: "/team/weekly_updates/2016-11-09"
+       - page:
          title: "October 27-November 02, 2016"
          url: "/team/weekly_updates/2016-11-02"
        - page:
