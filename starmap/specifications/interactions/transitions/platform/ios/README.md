@@ -2,6 +2,9 @@
 layout: page
 permalink: /starmap/specifications/interactions/transitions/platform/ios/
 title: "Platform: iOS"
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # Platform: iOS

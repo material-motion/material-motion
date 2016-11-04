@@ -1,9 +1,8 @@
 ---
 layout: page
-statuses:
-  - status:
-    date: Oct 25, 2016
-    type: Drafting
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # Life of a transition director

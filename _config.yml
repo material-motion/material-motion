@@ -154,20 +154,20 @@ toc:
                   children:
                     - page:
                       title: "Feature: context element"
-                      url: "/starmap/specifications/interactions/transitions/feature_context_element"
+                      url: "/starmap/specifications/interactions/transitions/Transition_context_element"
                     - page:
                       title: "Feature: interruptible"
-                      url: "/starmap/specifications/interactions/transitions/feature_interruptible"
+                      url: "/starmap/specifications/interactions/transitions/Transition_interruptible"
                 - page:
                   title: "TransitionDirector"
                   url: "/starmap/specifications/interactions/transitions/TransitionDirector"
                   children:
                     - page:
                       title: "Feature: transition preconditions"
-                      url: "/starmap/specifications/interactions/transitions/feature_transition_preconditions"
+                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_preconditions"
                     - page:
                       title: "Feature: replication"
-                      url: "/starmap/specifications/interactions/transitions/feature_replication"
+                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_replication"
                 - page:
                   title: "Platform: iOS"
                   url: "/starmap/specifications/interactions/transitions/platform/ios/"
@@ -181,7 +181,7 @@ toc:
                       children:
                         - page:
                           title: "Feature: director stack"
-                          url: "/starmap/specifications/interactions/transitions/platform/ios/feature_director_stack"
+                          url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController_director_stack"
         - page:
           title: "Target replication"
           url: "/starmap/specifications/replicas"

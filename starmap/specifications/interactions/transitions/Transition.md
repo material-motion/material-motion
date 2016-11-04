@@ -1,9 +1,8 @@
 ---
 layout: page
-statuses:
-  - status:
-    date: Oct 25, 2016
-    type: Drafting
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # Transition
@@ -13,10 +12,6 @@ This is the engineering specification for the `Transition` concrete type.
 ## Overview
 
 A `Transition` defines the essential information required by a `TransitionDirector`.
-
-## Features
-
-* [Interruptible](feature_interruptible.md)
 
 ## MVP
 

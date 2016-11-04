@@ -2,10 +2,9 @@
 layout: page
 permalink: /starmap/specifications/interactions/
 title: Interactions
-statuses:
-  - status:
-    date: Oct 27, 2016
-    type: Drafting
+status:
+  date: Oct 25, 2016
+  is: Drafting
 ---
 
 # Interactions
