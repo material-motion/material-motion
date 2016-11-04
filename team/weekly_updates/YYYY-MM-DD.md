@@ -18,7 +18,7 @@ Check out [stability](stability.md) to learn about the current state of each fea
 
 [![appsforartists](https://avatars0.githubusercontent.com/u/926648?v=3&s=100)](https://github.com/appsforartists)
 [![featherless](https://avatars0.githubusercontent.com/u/45670?v=3&s=100)](https://github.com/jverkoey)
-![pingpongboss](https://avatars0.githubusercontent.com/u/719914?v=3&s=100)
+[![pingpongboss](https://avatars0.githubusercontent.com/u/719914?v=3&s=100)](https://github.com/pingpongboss)
 
 ## What has changed
 
