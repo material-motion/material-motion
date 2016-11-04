@@ -207,9 +207,6 @@ toc:
           title: "Design"
           url: "/starmap/user_journeys/design"
      - page:
-       title: "Contributing"
-       url: "/CONTRIBUTING"
-     - page:
        title: "Glossary"
        url: "/GLOSSARY"
      - page:
