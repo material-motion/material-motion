@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /team/essentials/casual_contributors
+permalink: /team/essentials/casual_contributors/
 ---
 
 # Casual contributors
