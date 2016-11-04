@@ -41,7 +41,7 @@ toc:
        children:
         - page:
           title: "Motion primitives"
-          url: "/starmap/specifications/primitives"
+          url: "/starmap/specifications/primitives/"
           children:
             - page:
               title: "How to connect primitives"
