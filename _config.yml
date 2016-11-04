@@ -189,17 +189,17 @@ toc:
                           url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController_director_stack"
         - page:
           title: "Target replication"
-          url: "/starmap/specifications/replicas"
+          url: "/starmap/specifications/target_replication/"
           children:
             - page:
               title: "ReplicaController"
-              url: "/starmap/specifications/ReplicaController"
+              url: "/starmap/specifications/target_replication/ReplicaController"
             - page:
               title: "ReplicaControllerDelegate"
-              url: "/starmap/specifications/ReplicaControllerDelegate"
+              url: "/starmap/specifications/target_replication/ReplicaControllerDelegate"
         - page:
           title: "Domain mapping"
-          url: "/starmap/specifications/runtime/domain_mapping"
+          url: "/starmap/specifications/domain_mapping"
         - page:
           title: "(drafts)"
           url: "/starmap/specifications/drafts"

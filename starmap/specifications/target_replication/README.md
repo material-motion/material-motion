@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Target replication
+permalink: /starmap/specifications/target_replication/
 ---
 
 # Target replication
