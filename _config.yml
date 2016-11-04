@@ -17,7 +17,7 @@ title: Material Motion
 email: material-motion@googlegroups.com
 description: "Long-term goals of the Material Motion engineering team."
 baseurl: ""
-url: "http://material-motion.github.io/material-motion"
+url: "https://material-motion.github.io/material-motion"
 
 # Build settings
 markdown: kramdown
