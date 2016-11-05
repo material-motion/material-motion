@@ -4,6 +4,11 @@ title: TransitionDirector
 status:
   date: Oct 25, 2016
   is: Drafting
+availability:
+  - platform:
+    name: iOS
+    label: "transitions-objc as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-transitions-objc
 ---
 
 # TransitionDirector specification
