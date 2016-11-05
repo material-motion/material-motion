@@ -9,7 +9,7 @@ The Starmap represents our long-term plans as a team. Contributions made to the 
 
 ## Patch acceptance process
 
-- Read the [Governance](../community/governance.md) article.
+- Read the [Governance](../community/governance) article.
 - Discuss your proposed changes and get agreement on our mailing list.
 - [Create a pull request](https://material-motion.gitbooks.io/material-motion-team/content/gitbook_pull_request.html). This process differs from the typical GitHub pull request process.
   - Ensure that you have signed [Google's Contributor License Agreement](https://cla.developers.google.com/)

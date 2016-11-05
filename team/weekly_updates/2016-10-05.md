@@ -6,9 +6,9 @@ layout: page
 
 This weekly update captures what changed in a given week across the Material Motion ecosystem.
 
-Check out [current focus](current_focus.md) to see what we're working on next.
+Check out [current focus](current_focus) to see what we're working on next.
 
-Check out [stability](stability.md) to learn about the current state of each feature.
+Check out [stability](stability) to learn about the current state of each feature.
 
 ## Meta
 

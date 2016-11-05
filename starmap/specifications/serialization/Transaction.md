@@ -12,15 +12,15 @@ This is the engineering specification for the `Transaction` object.
 
 ## Features
 
-* [Target enumeration](transaction-enumeration.md)
-* [Optimized](transaction-optimized.md)
-* [Target selectors](target-selectors.md)
-* [Named plans](named-plans.md)
-* [Serialization](serialization.md)
+* [Target enumeration](transaction-enumeration)
+* [Optimized](transaction-optimized)
+* [Target selectors](target-selectors)
+* [Named plans](named-plans)
+* [Serialization](serialization)
 
 ## Overview
 
-A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Runtime](runtime.md). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
+A transaction aggregates requests for plans to be assigned to targets. Transactions are meant to be committed to a [Runtime](runtime). Transactions are **ephemeral**. Transactions should be as "dumb" as possible; a reasonable implementation is no more than a log of requested operations and their parameters.
 
 ## MVP
 

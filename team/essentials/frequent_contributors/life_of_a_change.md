@@ -14,7 +14,7 @@ Guides on `arc`:
 
 ## Prerequisite: install tools
 
-Please follow our [Tools](tools.md) guide to learn how to install the `mdm` command line tool. This tool provides an easy way to install tools on your computer via `mdm tools`.
+Please follow our [Tools](tools) guide to learn how to install the `mdm` command line tool. This tool provides an easy way to install tools on your computer via `mdm tools`.
 
 ## Start a feature branch
 

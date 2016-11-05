@@ -28,9 +28,9 @@ This is the engineering specification for the `Runtime` object.
 
 ## Features
 
-- [Named plans](named-plans.md)
-- [Target selectors](target-selectors.md)
-- [Tracing](Runtime-tracing.md)
+- [Named plans](named-plans)
+- [Target selectors](target-selectors)
+- [Tracing](Runtime-tracing)
 
 ## Overview
 
@@ -64,27 +64,27 @@ Create one performer instance for each *type* of performer required by a target.
 ![]({{ site.url }}/assets/OnePerformer.svg)
 
 > Consider the following pseudo-code involving physical simulation:
-> 
+>
 >     runtime.addPlan(Friction(), to: circleView)
 >     runtime.addPlan(AnchoredSpringAtLocation(x, y), to: circleView)
-> 
+>
 > `circleView` now has two plans and one performer, a `PhysicalSimulationPerformer`. Both plans have been provided to the performer instance.
-> 
+>
 > The performer knows the following:
-> 
+>
 > - It has two forces, both affecting `position`.
 > - It needs to model `velocity` for the `position`.
-> 
+>
 > The performer creates some state that will track the position's velocity.
-> 
+>
 > The performer can now:
-> 
+>
 > 1. convert each plan into a physics force,
 > 2. apply the force to the velocity, and
 > 3. apply the velocity to the position
 >
 > on every update event.
-> 
+>
 > Alternatively, consider how this situation would have played out if we had one performer for each plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one performer would "lose". The result would be a confusing animation.
 
 Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of plans. This is an open problem.
@@ -96,13 +96,13 @@ The runtime must be able to translate plans into performers.
 Plans define their performer type explicitly.
 
 Example pseudo-code:
-  
+
     class SomePlan {
       function performerType() {
         return SomePerformer.type
       }
     }
-    
+
     # In the runtime...
     performerType = plan.performerType()
     performer = performerType()
@@ -121,7 +121,7 @@ Pseudo-code example:
       .Active
       .AtRest
     }
-    
+
     Runtime {
       public function activityState() -> ActivityState
     }
@@ -148,10 +148,10 @@ The following topics are open for discussion. They do not presently have a clear
 Performers define which plans they can fulfill. This approach allows plans to be less intelligent. But it introduces the possibility of performers conflicting on a given plan. The runtime would need to be able to determine which one to use.
 
 Example pseudo-code:
-  
+
     # In some initialization step...
     runtime.performerType(SomePerformer.type, canExecutePlanType: SomePlan.type)
-    
+
     # In the runtime...
     performerType = plan.performerTypeForPlan(plan)
     performer = performerType()

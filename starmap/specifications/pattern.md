@@ -18,7 +18,7 @@ Benefits of this separation:
 
 ## Examples of this separation
 
-Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](primitives.md).
+Most platforms have an implementation of this separation for tween animations. Few platforms have implemented this separation for other [primitives](primitives).
 
 ![]({{ site.url }}/assets/PatternMatches.svg)
 

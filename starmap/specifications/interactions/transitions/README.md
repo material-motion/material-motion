@@ -18,10 +18,10 @@ The considerations for each platform are diverse and often distinct. To reflect 
 
 ## Common specs
 
-- [Directionality](directionality.md)
-- [Life of a transition director](life_of_a_transition_director.md)
-- [ContextTransition](ContextTransition.md)
-- [ContextTransitionDirector](ContextTransitionDirector.md)
+- [Directionality](directionality)
+- [Life of a transition director](life_of_a_transition_director)
+- [ContextTransition](ContextTransition)
+- [ContextTransitionDirector](ContextTransitionDirector)
 
 ## Platform specs
 

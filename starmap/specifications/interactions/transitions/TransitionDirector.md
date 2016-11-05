@@ -16,9 +16,9 @@ A `TransitionDirector` creates the plans that shape a transition's motion and in
 
 ## Features
 
-* [Context element](feature_context_element.md)
-* [Transition preconditions](feature_transition_preconditions.md)
-* [Replication](feature_replication.md)
+* [Context element](feature_context_element)
+* [Transition preconditions](feature_transition_preconditions)
+* [Replication](feature_replication)
 
 ## MVP
 

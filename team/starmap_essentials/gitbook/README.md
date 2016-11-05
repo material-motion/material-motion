@@ -28,5 +28,5 @@ If GitBook detects a conflict when attempting to merge two branches it will open
 
 Learn more about GitBook editing by reading:
 
-- [Mirroring GitBooks to GitHub](updating_our_books.md)
-- [Creating a GitBook pull request](gitbook_pull_request.md)
+- [Mirroring GitBooks to GitHub](updating_our_books)
+- [Creating a GitBook pull request](gitbook_pull_request)

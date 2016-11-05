@@ -37,7 +37,7 @@ Interaction Sticker {
 
 ## Contract
 
-Registers [`Draggable`](Draggable.md), [`Pinchable`](Pinchable.md), and [`Rotatable`](Rotatable.md) to the given target. May be provided with pre-configured gesture recognizer instances. If no gesture recognizer is provided, one will be created on the target.
+Registers [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](Rotatable) to the given target. May be provided with pre-configured gesture recognizer instances. If no gesture recognizer is provided, one will be created on the target.
 
 ```
 Plan DirectlyManipulable {
@@ -49,4 +49,4 @@ Plan DirectlyManipulable {
 
 ## Performer considerations
 
-Always emits [`ChangeAnchorPoint`](ChangeAnchorPoint.md) when the first gesture recognizer starts.
+Always emits [`ChangeAnchorPoint`](ChangeAnchorPoint) when the first gesture recognizer starts.

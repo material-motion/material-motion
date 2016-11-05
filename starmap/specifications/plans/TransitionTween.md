@@ -17,7 +17,7 @@ proposals:
 
 TransitionTween describes tween animations that occur during a transition between two states.
 
-> Note that this motion family can/should compose to [`Tween`](Tween.md) or [`KeyframeTween`](KeyframeTween.md).
+> Note that this motion family can/should compose to [`Tween`](Tween) or [`KeyframeTween`](KeyframeTween).
 
 ## Contract
 

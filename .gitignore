@@ -19,3 +19,6 @@ _book
 _site
 .sass-cache
 .jekyll-metadata
+
+# Editors
+.idea
