@@ -26,9 +26,13 @@ let tween = TweenBetween("opacity",
 
 ## MVP Specification
 
-**Struct type**: TimeWindowSegment is a struct type, if the language allows.
+### Struct type
 
-**position and length APIs**: Provide two writable values for `position` and `length`.
+TimeWindowSegment is a struct type, if the language allows.
+
+### position and length APIs
+
+Provide two writable values for `position` and `length`.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
@@ -53,7 +57,9 @@ back   fore
 0         1
 ```
 
-**Epsilon**: Include an epsilon constant.
+### Epsilon
+
+Include an epsilon constant.
 
 ```
 let TimeWindowSegmentEpsilon = 0.00001
