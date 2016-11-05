@@ -18,9 +18,13 @@ Directors have little — if any — imperative code that directly applies chang
 
 ## MVP
 
-**Runtime API**: A director may be provided with a Runtime instance, or it might create its own.
+### Runtime API
 
-**setUp API**: A director may implement a `setUp` function. This function is expected to be invoked exactly once.
+A director may be provided with a Runtime instance, or it might create its own.
+
+### setUp API
+
+A director may implement a `setUp` function. This function is expected to be invoked exactly once.
 
 Example pseudo-code definition:
 
