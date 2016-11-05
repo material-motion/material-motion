@@ -2,8 +2,8 @@
 layout: page
 title: Director
 status:
-  date: Oct 25, 2016
-  is: Drafting
+  date: Nov 5, 2016
+  is: Stable
 ---
 
 # Director
