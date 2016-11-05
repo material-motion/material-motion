@@ -31,14 +31,18 @@ A time window has a numerical **position** expressed in the range `[0,1]`. `0` r
 
 ## MVP Specification
 
-**Object type**: A time window is an object.
+### Object type
+
+A time window is an object.
 
 ```
 class TimeWindow {
 }
 ```
 
-**Position API**: A time window has a current position.
+### Position API
+
+A time window has a current position.
 
 This numerical value should be bounded to `[0,1]`.
 
@@ -52,7 +56,9 @@ class TimeWindow {
 }
 ```
 
-**Direction type**: The position in a time window can move in one of two directions: forward or backward.
+### Direction type
+
+The position in a time window can move in one of two directions: forward or backward.
 
 Define a direction type that includes both possible directions.
 
@@ -63,7 +69,9 @@ enum TimeWindowDirection {
 }
 ```
 
-**Initialization API**: A time window must be created with an initial direction and duration.
+### Initialization API
+
+A time window must be created with an initial direction and duration.
 
 ```
 class TimeWindow {
@@ -71,7 +79,9 @@ class TimeWindow {
 }
 ```
 
-**Initial direction API**: A time window is aware of its initial direction.
+### Initial direction API
+
+A time window is aware of its initial direction.
 
 ```
 class TimeWindow {
@@ -79,7 +89,9 @@ class TimeWindow {
 }
 ```
 
-**Duration API**: A time window is aware of its expected duration.
+### Duration API
+
+A time window is aware of its expected duration.
 
 The unit of time is platform-dependent.
 
@@ -89,7 +101,9 @@ class TimeWindow {
 }
 ```
 
-**Current direction API**: A time window is aware of its current direction.
+### Current direction API
+
+A time window is aware of its current direction.
 
 This should be initialized with the value of `initialDirection`.
 
