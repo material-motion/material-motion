@@ -33,6 +33,8 @@ Tween describes an animation that consists of distinct frames of animation.
 ```
 Plan Tween {
   var property
+  var duration
+  var delay
   var values: [Any]
   var offsets: [Float]?
   var interTimingFunctions: [TimingFunction]?
@@ -40,6 +42,10 @@ Plan Tween {
 ```
 
 `property` is any animatable value on the target object.
+
+`duration` is the length of time over which the animation should occur, expressed in milliseconds (e.g. 300 milliseconds).
+
+`delay` is the number of milliseconds that should elapse before a tween begins.
 
 `values` is an array of objects that each define a single frame of the animation. If `values.length == 1` then the `values[0]` value is treated as the `destination` value of the property.
 
