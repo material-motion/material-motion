@@ -4,6 +4,11 @@ title: TimeWindow
 status:
   date: Oct 25, 2016
   is: Drafting
+availability:
+  - platform:
+    name: iOS
+    label: "transitions-objc as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-transitions-objc
 ---
 
 # TimeWindow specification
@@ -29,7 +34,7 @@ A time window has an expected **duration**, expressed in units of time.
 
 A time window has a numerical **position** expressed in the range `[0,1]`. `0` refers to the back side of the time, while `1` refers to the front side.
 
-## MVP Specification
+## MVP
 
 ### Object type
 

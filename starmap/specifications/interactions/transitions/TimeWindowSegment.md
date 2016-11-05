@@ -4,6 +4,11 @@ title: TimeWindowSegment
 status:
   date: Oct 25, 2016
   is: Drafting
+availability:
+  - platform:
+    name: iOS
+    label: "transitions-objc as of v1.0.0"
+    url: https://github.com/material-motion/material-motion-transitions-objc
 ---
 
 # TimeWindowSegment specification
@@ -24,7 +29,7 @@ let tween = TweenBetween("opacity",
                          fore: 1)
 ```
 
-## MVP Specification
+## MVP
 
 ### Struct type
 
@@ -64,21 +69,3 @@ Include an epsilon constant.
 ```
 let TimeWindowSegmentEpsilon = 0.00001
 ```
-
-### Feature: Pre-defined segments
-
-Provide the following set of pre-defined segments.
-
-| name | from | to |
-|:---- |:---- |:-- |
-| entire | 0 | 1 |
-| firstHalf | 0 | 0.5 |
-| middleHalf | 0.25 | 0.75 |
-| latterHalf | 0.5 | 1 |
-| firstQuarter | 0 | 0.25 |
-| secondQuarter | 0.25 | 0.5 |
-| thirdQuarter | 0.5 | 0.75 |
-| fourthQuarter | 0.75 | 1 |
-| firstThreeQuarters | 0 | 0.75 |
-| lastThreeQuarters | 0.25 | 1 |
-
