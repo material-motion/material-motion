@@ -27,27 +27,27 @@ Legend:
 - 🎉: something launched! Click to view the release notes.
 - 📝: something was worked on.
 
-| [Tech stack](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
+| [Tech stack](https://material-motion.github.io/material-motion/starmap/specifications/#tech-stack)    | Starmap | Apple | Android | Web |
 |:--------------|:-------:|:-----:|:-------:|:---:|
-| [Runtime](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/runtime/)       | &nbsp; | &nbsp; | &nbsp; | &nbsp;  |
-| [Transitions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions/transitions/)   | &nbsp;  | &nbsp; | &nbsp; | &nbsp; |
-| [Interactions](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/interactions/)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Serialization](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Runtime](https://material-motion.github.io/material-motion/starmap/specifications/runtime/)       | &nbsp; | &nbsp; | &nbsp; | &nbsp;  |
+| [Transitions](https://material-motion.github.io/material-motion/starmap/specifications/interactions/transitions/)   | &nbsp;  | &nbsp; | &nbsp; | &nbsp; |
+| [Interactions](https://material-motion.github.io/material-motion/starmap/specifications/interactions/)  | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Serialization](https://material-motion.github.io/material-motion/starmap/specifications/serialization.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | - | - | - | - | - |
-| **[Motion language](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/motion-family.html)**       | **Starmap** | **Apple**  | **Android** | **Web**    |
-| [ArcMove](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ArcMove.html)             | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [ChangeAnchorPoint](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ChangeAnchorPoint.html)   | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [DirectlyManipulable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/DirectlyManipulable.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Draggable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Draggable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [KeyframeTween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/KeyframeTween.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Pinchable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Pinchable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [RemoveSpring](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/RemoveSpring.html)        | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Rotatable](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Rotatable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [ScrollReactor](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/ScrollReactor.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [SpringTo](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/SpringTo.html)            | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [TweenBetween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html)        | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [Tween](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html)               | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| [VelocitySource](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/VelocitySource.html)      | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| **[Motion language](https://material-motion.github.io/material-motion/starmap/specifications/motion-family.html)**       | **Starmap** | **Apple**  | **Android** | **Web**    |
+| [ArcMove](https://material-motion.github.io/material-motion/starmap/specifications/plans/ArcMove.html)             | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [ChangeAnchorPoint](https://material-motion.github.io/material-motion/starmap/specifications/plans/ChangeAnchorPoint.html)   | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [DirectlyManipulable](https://material-motion.github.io/material-motion/starmap/specifications/plans/DirectlyManipulable.html) | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Draggable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Draggable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [KeyframeTween](https://material-motion.github.io/material-motion/starmap/specifications/plans/KeyframeTween.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Pinchable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Pinchable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [RemoveSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/RemoveSpring.html)        | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Rotatable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Rotatable.html)           | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [ScrollReactor](https://material-motion.github.io/material-motion/starmap/specifications/plans/ScrollReactor.html)       | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [SpringTo](https://material-motion.github.io/material-motion/starmap/specifications/plans/SpringTo.html)            | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [TweenBetween](https://material-motion.github.io/material-motion/starmap/specifications/plans/TweenBetween.html)        | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [Tween](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween.html)               | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| [VelocitySource](https://material-motion.github.io/material-motion/starmap/specifications/plans/VelocitySource.html)      | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | - | - | - | - | - |
 | **Interactions** | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |

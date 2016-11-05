@@ -24,7 +24,7 @@ TransitionDirector FadeTransitionDirector {
 
 ### Step 2: Implement the setUp method
 
-Our `setUp` might use a simple [`Tween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/Tween.html) plan:
+Our `setUp` might use a simple [`Tween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween.html) plan:
 
 ```
 class FadeTransitionDirector: TransitionDirector {
@@ -42,7 +42,7 @@ class FadeTransitionDirector: TransitionDirector {
 }
 ```
 
-Or [`TweenBetween`](https://material-motion.gitbooks.io/material-motion-starmap/content/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
+Or [`TweenBetween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/TweenBetween.html) to reduce the need for conditional logic:
 
 ```
 class FadeTransitionDirector: TransitionDirector {

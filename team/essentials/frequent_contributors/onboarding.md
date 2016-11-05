@@ -8,7 +8,7 @@ layout: page
 2. Create an account at [codereview.cc](http://codereview.cc). Your account will need to be approved by an admin.
 3. Request membership to the [material-motion](https://github.com/material-motion) organization by pinging `@core team` in Discord.
 4. [Install our contributor tools](tools).
-5. Read through the [contributor essentials](https://material-motion.gitbooks.io/material-motion-team/content/essentials/) guides.
+5. Read through the [contributor essentials](https://material-motion.github.io/material-motion/team/essentials/) guides.
 6. Look for good starter issues for your platform [on Milemarker](https://material-motion.github.io/material-motion-milemarker/newbie.html).
 7. Ask questions in Discord!
 

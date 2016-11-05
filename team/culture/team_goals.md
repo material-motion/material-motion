@@ -4,7 +4,7 @@ layout: page
 
 # Team goals
 
-We use the [Starmap](https://material-motion.gitbooks.io/material-motion-starmap/content/) to guide our ongoing development.
+We use the [Starmap](https://material-motion.github.io/material-motion/starmap/) to guide our ongoing development.
 
 As a team we **operate in the open**.
 

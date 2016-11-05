@@ -108,7 +108,7 @@ All code review tooling installed and ready to use. Able to run arc diff success
 #### Journey
 
 1. Pings a core team member, either via Discord or directly. 
-2. Person is told to visit the [Onboarding doc](https://material-motion.gitbooks.io/material-motion-team/content/essentials/frequent_contributors/onboarding.html). 
+2. Person is told to visit the [Onboarding doc](https://material-motion.github.io/material-motion/team/essentials/frequent_contributors/onboarding.html). 
 3. Follows the steps outlined in the doc. 
 
 ### Toothbrush journey: Publish a diff

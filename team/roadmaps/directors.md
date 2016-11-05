@@ -12,7 +12,7 @@ What it does: fades in a view.
 
 What's required to build it:
 
-- [Expression Foundation](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/checklist.html#expression-foundation)
+- [Expression Foundation](https://material-motion.github.io/material-motion/team/roadmaps/checklist.html#expression-foundation)
 - Tween Expression with fadeIn term
 
 Director pseudo-code:
@@ -31,7 +31,7 @@ What it does: fades in a view via a Runtime.
 
 What's required to build it:
 
-- [Expression Foundation](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/checklist.html#expression-foundation)
+- [Expression Foundation](https://material-motion.github.io/material-motion/team/roadmaps/checklist.html#expression-foundation)
 - Tween Expression with fadeIn term
 - A Runtime
 
@@ -55,7 +55,7 @@ What it does: a circle follows the user's finger around while squashing/stretchi
 
 What's required to build it:
 
-- [Expression Foundation](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/checklist.html#expression-foundation)
+- [Expression Foundation](https://material-motion.github.io/material-motion/team/roadmaps/checklist.html#expression-foundation)
 - Squishable Intention
 - Runtime
 - Gesture recognizers
@@ -97,7 +97,7 @@ Director pseudo-code:
 
 <video width="200" muted="" autoplay="yes" loop="" src="/assets/photo-album.mp4"></video>
 
-- [Expression Foundation](https://material-motion.gitbooks.io/material-motion-team/content/roadmaps/checklist.html#expression-foundation)
+- [Expression Foundation](https://material-motion.github.io/material-motion/team/roadmaps/checklist.html#expression-foundation)
 - Runtime
 
     function setup() {
