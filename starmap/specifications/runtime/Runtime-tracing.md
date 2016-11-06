@@ -59,6 +59,8 @@ The Tracer type can optionally implement a `didAddPlan` function.
 
 Invoked by the runtime when `addPlan` is about to return from its execution.
 
+Invoked after `didCreatePerformer:`, if applicable.
+
 Example pseudo-code:
 
 ```
@@ -72,6 +74,8 @@ Tracer {
 The Tracer type can optionally implement a `didAddPlan:named:` function.
 
 Invoked by the runtime when `addPlan:named:` is about to return from its execution.
+
+Invoked after `didCreatePerformer:`, if applicable.
 
 Example pseudo-code:
 
@@ -87,6 +91,8 @@ The Tracer type can optionally implement a `didAddPlan:named:` function.
 
 Invoked by the runtime when `removePlanNamed` is about to return from its execution.
 
+Invoked after `didCreatePerformer:`, if applicable.
+
 Example pseudo-code:
 
 ```
@@ -100,6 +106,8 @@ Tracer {
 The Tracer type can optionally implement a `didCreatePerformer` function.
 
 Invoked by the runtime after a new performer instance has been created.
+
+Should be invoked before any corresponding `didAdd*Plan` event.
 
 Example pseudo-code:
 
