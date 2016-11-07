@@ -65,8 +65,8 @@ toc:
                   title: "RotationGestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer"
                 - page:
-                  title: "PinchGestureRecognizer"
-                  url: "/starmap/specifications/primitives/gesture_recognizers/PinchGestureRecognizer"
+                  title: "ScaleGestureRecognizer"
+                  url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
         - page:
           title: "Declarative motion"
           url: "/starmap/specifications/pattern"
