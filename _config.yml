@@ -132,11 +132,14 @@ toc:
               title: "Rotatable"
               url: "/starmap/specifications/plans/Rotatable"
             - page:
-              title: "ScrollReactor"
-              url: "/starmap/specifications/plans/ScrollReactor"
+              title: "ScrollTween"
+              url: "/starmap/specifications/plans/ScrollTween"
             - page:
               title: "SpringTo"
               url: "/starmap/specifications/plans/SpringTo"
+            - page:
+              title: "StreamTween"
+              url: "/starmap/specifications/plans/StreamTween"
             - page:
               title: "TransitionTween"
               url: "/starmap/specifications/plans/TransitionTween"
