@@ -61,10 +61,6 @@ toc:
                 - page:
                   title: "GestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
-                  children:
-                   - page:
-                     title: "Coordinate spaces"
-                     url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer_coordinate_spaces"
                 - page:
                   title: "DragGestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer"
