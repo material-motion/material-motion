@@ -38,7 +38,8 @@ class DragGestureRecognizer: GestureRecognizer {
 
 ### Translation API
 
-Expose an API for reading the current translation of the gesture recognizer.
+Expose an API for reading the current translation of the gesture recognizer in relation to the
+associated element.
 
 The translation should be expressed in individual components for platform's available axis of
 movement. For example, on a touch screen this might be a two-dimensional vector consisting of an
@@ -46,12 +47,13 @@ x and a y translation.
 
 ```
 class DragGestureRecognizer {
-  func translationInElement(element: Element) -> Vector
+  func translation() -> Vector
 ```
 
 ### Velocity API
 
-Expose an API for reading the current translation velocity of the input events.
+Expose an API for reading the current translation velocity of the input events in relation to the
+associated element.
 
 The velocity should be expressed in individual components for platform's available axis of movement.
 For example, on a touch screen this might be a two-dimensional vector consisting of an x and a y
@@ -61,7 +63,7 @@ TODO: Spec out an implementation for calculating velocity.
 
 ```
 class DragGestureRecognizer {
-  func velocityInElement(element: Element) -> Vector
+  func velocity() -> Vector
 ```
 
 ### Recognition threshold API

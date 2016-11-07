@@ -38,25 +38,27 @@ class ScaleGestureRecognizer: GestureRecognizer {
 
 ### Scale API
 
-Expose an API for reading the current scale of the gesture recognizer.
+Expose an API for reading the current scale of the gesture recognizer in relation to the
+associated element.
 
 For two-dimensional displays the scale should be expressed in terms of a linear scale applied to
 both the x and y components.
 
 ```
 class ScaleGestureRecognizer {
-  func scaleInElement(element: Element) -> Number
+  func scale() -> Number
 ```
 
 ### Velocity API
 
-Expose an API for reading the current scale velocity of the input events.
+Expose an API for reading the current scale velocity of the input events in relation to the
+associated element.
 
 TODO: Spec out an implementation for calculating velocity.
 
 ```
 class ScaleGestureRecognizer {
-  func velocityInElement(element: Element) -> Number
+  func velocity() -> Number
 ```
 
 ### Recognition threshold API

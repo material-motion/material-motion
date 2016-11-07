@@ -52,12 +52,19 @@ toc:
               title: "How to connect primitives"
               url: "/starmap/specifications/primitives/how_to_connect_primitives"
             - page:
+              title: "Mapping to coordinate spaces"
+              url: "/starmap/specifications/primitives/mapping_to_coordinate_spaces"
+            - page:
               title: "Gesture recognizers"
               url: "/starmap/specifications/primitives/gesture_recognizers/"
               children:
                 - page:
                   title: "GestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
+                  children:
+                   - page:
+                     title: "Coordinate spaces"
+                     url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer_coordinate_spaces"
                 - page:
                   title: "DragGestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer"

@@ -38,24 +38,26 @@ class RotationGestureRecognizer: GestureRecognizer {
 
 ### Rotation API
 
-Expose an API for reading the current rotation of the gesture recognizer.
+Expose an API for reading the current rotation of the gesture recognizer in relation to the
+associated element.
 
 For two-dimensional displays the rotation should be expressed in terms of the z coordinate space.
 
 ```
 class RotationGestureRecognizer {
-  func rotationInElement(element: Element) -> Number
+  func rotation() -> Number
 ```
 
 ### Velocity API
 
-Expose an API for reading the current angular velocity of the input events.
+Expose an API for reading the current angular velocity of the input events in relation to the
+associated element.
 
 TODO: Spec out an implementation for calculating velocity.
 
 ```
 class RotationGestureRecognizer {
-  func velocityInElement(element: Element) -> Number
+  func velocity() -> Number
 ```
 
 ### Recognition threshold API
