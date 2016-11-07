@@ -51,6 +51,13 @@ toc:
             - page:
               title: "How to connect primitives"
               url: "/starmap/specifications/primitives/how_to_connect_primitives"
+            - page:
+              title: "Gesture recognizers"
+              url: "/starmap/specifications/primitives/gesture_recognizers/"
+              children:
+                - page:
+                  title: "GestureRecognizer"
+                  url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
         - page:
           title: "Declarative motion"
           url: "/starmap/specifications/pattern"

@@ -11,7 +11,7 @@ This section explores some **building blocks** of rich, interactive motion.
 This section's topics:
 
 - [Tweens](#tweens)
-- [Gesture recognition](#gesture-recognition)
+- [Gesture recognition](gesture_recognizers)
 - [Applied forces](#applied-forces)
 - [Timeline](#timeline)
 - [State Machine](#state-machine)
@@ -29,32 +29,6 @@ Please note that these primitives can apply to an arbitrary number of dimensions
 Tweens have a **starting time** and a **duration**. The starting time and duration properties allow tweens to be sequenced in relation to other tweens.
 
 Tweens use an **interpolation function**. This is often a cubic-bezier, but could be any mathematical equation accepting time as an input.
-
-## Gesture recognition
-
-**What it is**: *recognition of continuous or discrete actions from a stream of device input events*.
-
-**Registration**: A gesture recognizer can be attached to an element.
-
-**Interpreting events**: Gesture recognizers transform input events into meaningful outputs. The output is often a linear transformation of translation, rotation, and/or scale.
-
-**Frequency of recognition**: Gestures may be recognized continuously (many times) or discretely (once).
-
-**Simultaneous gesture recognition**: Multiple gesture recognizers can be associated with a single element. All associated gesture recognizers should be capable of generating values simultaneously. For instance:
-
-> Two pan gestures are registered to a carousel:
-> 
-> - horizontal pans move between items in the carousel, and
-> - vertical pans collapse or expand the carousel.
-> 
-> Both gestures can occur simultaneously.
-
-**Gesture dependencies**: Gesture recognizers can defer recognition until other
-recognizers have failed. For instance:
-
-> An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
-
-**Velocity**: Continuous gesture recognizers include a velocity in each event. When a gesture's state becomes `recognized`, its velocity may be fed into applied forces.
 
 ## Applied forces
 
