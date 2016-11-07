@@ -44,8 +44,6 @@ protocol GestureRecognizer {
 
 ### Element association
 
-Gesture recognizers can only be associated with one element at a time.
-
 How a gesture recognizer is associated with an element is a platform implementation detail.
 
 ### Event API
