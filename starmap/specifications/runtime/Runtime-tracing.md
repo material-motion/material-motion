@@ -29,7 +29,7 @@ Tracing can be enabled on a runtime by providing an instance of an object that c
 
 ### AddTracer and RemoveTracer APIs
 
-The runtime should provide a APIs for adding and removing tracer instances.
+The runtime should provide APIs for adding and removing tracer instances.
 
 Example pseudo-code:
 
