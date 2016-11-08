@@ -50,7 +50,7 @@ How a gesture recognizer is associated with an element is a platform implementat
 
 A gesture recognizer should expose an API for adding objects that will receive state change events.
 
-These observers should be invoked each time the gesture recognizer's state value is written to.
+These observers should be notified each time the gesture recognizer's state changes.
 
 ```
 protocol GestureRecognizer {
@@ -68,40 +68,20 @@ protocol GestureRecognizer {
   var enabled: Bool
 ```
 
-### States
+### State changes
 
-A gesture recognizer can be in any one of the following states:
+A gesture recognizer is notified of the following state change events:
 
 ```
-enum GestureRecognizerState {
-  case Possible
-  case Began
-  case Changed
-  case Ended
-  case Cancelled
-  case Failed
-
-  case Recognized = Ended
+protocol StateChangeObserver {
+  func didBegin(centroid: Point)
+  func didMove(centroid: Point)
+  
+  // Always calls didEnd() after.
+  func didCancel(centroid: Point)
+  // Always calls didEnd() after.
+  func didRecognize(centroid: Point)
+  
+  func didEnd(centroid: Point)
 }
-```
-
-### State API
-
-A gesture recognizer has a read-only `state` API.
-
-```
-protocol GestureRecognizer {
-  let state: GestureRecognizerState
-```
-
-### Location API
-
-A gesture recognizer should expose an API for reading the centroid touch location in a given
-element's coordinate system.
-
-The method is responsible for converting the touch location to the relevant coordinate system.
-
-```
-protocol GestureRecognizer {
-  func locationInElement(element: Element) -> Point
 ```
