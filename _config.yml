@@ -167,15 +167,15 @@ toc:
                   title: "Directionality"
                   url: "/starmap/specifications/interactions/transitions/directionality"
                 - page:
-                  title: "TimeWindow"
-                  url: "/starmap/specifications/interactions/transitions/TimeWindow"
+                  title: "TransitionWindow"
+                  url: "/starmap/specifications/interactions/transitions/TransitionWindow"
                 - page:
-                  title: "TimeWindowSegment"
-                  url: "/starmap/specifications/interactions/transitions/TimeWindowSegment"
+                  title: "TransitionWindowSegment"
+                  url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment"
                   children:
                    - page:
-                     title: "Predefined time window segments"
-                     url: "/starmap/specifications/interactions/transitions/TimeWindowSegment_predefined"
+                     title: "Predefined segments"
+                     url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment_predefined"
                 - page:
                   title: "Life of a transition director"
                   url: "/starmap/specifications/interactions/transitions/life_of_a_transition_director"

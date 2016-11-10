@@ -1,14 +1,14 @@
 ---
 layout: page
-title: Predefined time window segments
+title: Predefined transition window segments
 status:
   date: Nov 5, 2016
   is: Drafting
 ---
 
-# Predefined time window segments feature specification
+# Predefined transition window segments feature specification
 
-This is the engineering specification for predefined **TimeWindowSegment** values.
+This is the engineering specification for predefined **TransitionWindowSegment** values.
 
 ## MVP
 

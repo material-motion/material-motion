@@ -1,6 +1,6 @@
 ---
 layout: page
-title: TimeWindowSegment
+title: TransitionWindowSegment
 status:
   date: Oct 25, 2016
   is: Drafting
@@ -11,13 +11,13 @@ availability:
     url: https://github.com/material-motion/material-motion-transitions-objc
 ---
 
-# TimeWindowSegment specification
+# TransitionWindowSegment specification
 
-This is the engineering specification for the **TimeWindowSegment** type.
+This is the engineering specification for the **TransitionWindowSegment** type.
 
 ## Overview
 
-A TimeWindowSegment represents a specific part of a time window.
+A TransitionWindowSegment represents a specific part of a transition window.
 
 ## Example: TweenBetween
 
@@ -33,7 +33,7 @@ let tween = TweenBetween("opacity",
 
 ### Struct type
 
-TimeWindowSegment is a struct type, if the language allows.
+TransitionWindowSegment is a struct type, if the language allows.
 
 ### position and length APIs
 
@@ -42,7 +42,7 @@ Provide two writable values for `position` and `length`.
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
 ```
-TimeWindowSegment {
+TransitionWindowSegment {
   var position
   var length
 }
@@ -62,10 +62,21 @@ back   fore
 0         1
 ```
 
+### Inversion API
+
+Provide an API for inverting a segment.
+
+```
+TransitionWindowSegment {
+  func inverted() -> TransitionWindowSegment {
+    return TransitionWindowSegment(position: 1 - position, length: length)
+  }
+```
+
 ### Epsilon
 
 Include an epsilon constant.
 
 ```
-let TimeWindowSegmentEpsilon = 0.00001
+let TransitionWindowSegmentEpsilon = 0.00001
 ```
