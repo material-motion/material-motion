@@ -6,6 +6,10 @@ status:
   is: Draft
 availability:
   - platform:
+    name: Android
+    label: Milestone
+    url: https://github.com/material-motion/family-direct-manipulation-android/milestone/1
+  - platform:
     name: iOS
     label: "iOS SDK 3.2+ UIPinchGestureRecognizer"
     url: https://developer.apple.com/reference/uikit/uipinchgesturerecognizer
