@@ -12,6 +12,10 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
 availability:
   - platform:
+    name: Android
+    label: Milestone
+    url: https://github.com/material-motion/runtime-android/milestone/13
+  - platform:
     name: iOS
     label: Milestone
     url: https://github.com/material-motion/runtime-objc/milestone/16
