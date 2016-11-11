@@ -25,6 +25,26 @@ class Timeline {
 }
 ```
 
+### begin API
+
+Expose an API for beginning the timeline.
+
+```
+class Timeline {
+  func begin()
+```
+
+### beginTime API
+
+Expose a read-only nullable API for the timeline's beginTime.
+
+beginTime is non-null after `begin` has been invoked.
+
+```
+class Timeline {
+  var beginTime: TimeInterval? { get }
+```
+
 ### Scrubber API
 
 Expose an API for setting an optional TimelineScrubber instance.
