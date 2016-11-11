@@ -26,7 +26,7 @@ Within a given project we use GitHub milestones to define relative issue priorit
 
 For example, consider the [Runtime v1.0.0 milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/1):
 
-![](/assets/runtime-v1.0.0.png)
+![]({{ site.url }}/assets/runtime-v1.0.0.png)
 
 In this milestone we can clearly see the work ahead of us and the current status of each issue.
 
