@@ -10,6 +10,11 @@ proposals:
     state: Proposed
     discussion: "Timeline spec review"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
+availability:
+  - platform:
+    name: iOS
+    label: Milestone
+    url: https://github.com/material-motion/runtime-objc/milestone/16
 ---
 
 # Timeline specification
