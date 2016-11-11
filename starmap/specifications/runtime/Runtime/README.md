@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Runtime
+permalink: /starmap/specifications/runtime/Runtime/
 status:
   date: July 8, 2016
   is: Stable

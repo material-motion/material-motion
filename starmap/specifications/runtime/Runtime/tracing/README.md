@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Runtime tracing
-permalink: /starmap/specifications/runtime/Runtime-tracing/
+permalink: /starmap/specifications/runtime/Runtime/tracing/
 status:
   date: Oct 13, 2016
   is: Stable
