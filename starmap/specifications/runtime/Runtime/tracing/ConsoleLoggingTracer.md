@@ -4,6 +4,13 @@ title: ConsoleLoggingTracer
 status:
   date: Nov 11, 2016
   is: Stable
+proposals:
+  - proposal:
+    initiation_date: Nov 11, 2016
+    completion_date: Nov 11, 2016
+    state: Stable
+    discussion: Improved console logging output
+    discussion_url: https://github.com/material-motion/starmap/issues/73
 availability:
   - platform:
     name: Android

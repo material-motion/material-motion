@@ -33,7 +33,11 @@
     {% for proposal in page.proposals %}
     <tr>
       <td>
-        <a href="{{ proposal.discussion_url }}">{{ proposal.discussion }}</a>
+        {% if proposal.discussion_url %}
+          <a href="{{ proposal.discussion_url }}">{{ proposal.discussion }}</a>
+        {% else %}
+          {{ proposal.discussion }}
+        {% endif %}
       </td>
       <td>
         {{ proposal.state }}
