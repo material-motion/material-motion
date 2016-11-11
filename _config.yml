@@ -91,24 +91,24 @@ toc:
               url: "/starmap/specifications/runtime/Performer"
               children:
                 - page:
-                  title: "Feature: composition"
+                  title: "Composition"
                   url: "/starmap/specifications/runtime/Performer-composition"
             - page:
               title: "Runtime"
               url: "/starmap/specifications/runtime/Runtime/"
               children:
                 - page:
-                  title: "Feature: tracing"
+                  title: "Tracing"
                   url: "/starmap/specifications/runtime/Runtime/tracing/"
                   children:
                     - page:
-                      title: "Feature: ConsoleLoggingTracer"
+                      title: "ConsoleLoggingTracer"
                       url: "/starmap/specifications/runtime/Runtime/tracing/ConsoleLoggingTracer"
             - page:
-              title: "Feature: named plans"
+              title: "Named plans"
               url: "/starmap/specifications/runtime/named-plans"
             - page:
-              title: "Feature: target selectors"
+              title: "Target selectors"
               url: "/starmap/specifications/runtime/target_selectors"
         - page:
           title: "Motion language"
