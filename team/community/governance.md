@@ -10,7 +10,7 @@ The Material Motion [Starmap](https://material-motion.github.io/material-motion/
 
 We use GitHub teams to define specific roles for the material-motion organization.
 
-![](/assets/Contributors.svg)
+![]({{ site.url }}/assets/Contributors.svg)
 
 `core-team`
 
