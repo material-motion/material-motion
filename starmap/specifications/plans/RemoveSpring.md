@@ -2,8 +2,8 @@
 layout: page
 title: RemoveSpring
 status:
-  date: Oct 24, 2016
-  is: In review
+  date: Nov 7, 2016
+  is: Stable
 proposals:
   - proposal:
     initiation_date: Oct 24, 2016
