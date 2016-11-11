@@ -7,8 +7,7 @@ status:
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016
-    completion_date: Nov 11, 2016
-    state: Stable
+    state: Proposed
     discussion: Improved console logging output
     discussion_url: https://github.com/material-motion/starmap/issues/73
 availability:
@@ -42,7 +41,32 @@ class ConsoleLoggingTracer: Tracing {
 }
 ```
 
-### Plan string format
+
+### Plan registration verbosity API
+
+Expose an API for configuring whether plan registration events are written to the console.
+
+This should be **enabled** by default.
+
+```
+class ConsoleLoggingTracer {
+  var planRegistrationLoggingEnabled = true
+```
+
+### Performer verbosity API
+
+Expose an API for configuring whether performer events are written to the console.
+
+This should be **disabled** by default.
+
+```
+class ConsoleLoggingTracer {
+  var performerLoggingEnabled = true
+```
+
+## Proposed additions to MVP
+
+### Plan string format (Nov 11, 2016)
 
 A plan should be written to the console with the following format:
 
@@ -72,26 +96,4 @@ Plan: MDMTween
     easeInEaseOut
 )
   let timeline: MDMTimeline = <MDMTimeline: 0x60000002b540>
-```
-
-### Plan registration verbosity API
-
-Expose an API for configuring whether plan registration events are written to the console.
-
-This should be **enabled** by default.
-
-```
-class ConsoleLoggingTracer {
-  var planRegistrationLoggingEnabled = true
-```
-
-### Performer verbosity API
-
-Expose an API for configuring whether performer events are written to the console.
-
-This should be **disabled** by default.
-
-```
-class ConsoleLoggingTracer {
-  var performerLoggingEnabled = true
 ```
