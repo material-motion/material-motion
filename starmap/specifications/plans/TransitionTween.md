@@ -26,11 +26,12 @@ Plan TransitionTween {
   var property
   var backValue
   var foreValue
-  var forwardTimingFunction
-  var backwardTimingFunction
-  var forwardSegment: TransitionSegment
-  var backwardSegment: TransitionSegment
+  var segment: TransitionSegment
+  var timingFunction: TimingFunction = .linear
+  var backwardSegment: TransitionSegment?
+  var backwardTimingFunction: TimingFunction?
   var window: TransitionWindow
+  var direction: TransitionDirection
 }
 ```
 
@@ -40,25 +41,28 @@ Plan TransitionTween {
 
 `fore` is the destination value when the direction is forward.
 
-`forwardTimingFunction` is the timing function to use when initially animating forward.
+`segment` is the portion of the transition window in which the animation should occur during a forward transition. If no `backwardSegment` is provided then `segment` will be used instead, though its position will be inverted to correspond to the correct time for the backward transition.
 
-`backwardTimingFunction` is the timing function to use when initially animating backward.
-
-`forwardSegment` is the portion of the transition window in which the animation should occur during a forward transition.
+`timingFunction` is the timing function to use when initially animating forward. Is linear by default. If no `backwardTimingFunction` is provided then `timingFunction` will be inverted and used instead.
 
 `backwardSegment` is the portion of the transition window in which the animation should occur during a backward transition.
 
+`backwardTimingFunction` is the timing function to use when initially animating backward.
+
 `window` is the transition window within which the `segment` applies.
+
+`direction` is the transition's direction.
 
 ## Example: Fade transition
 
     TransitionDirector Fade {
       func setUp() {
         let fade = TransitionTween("opacity",
-                                window: window,
-                                segment: .init(position: 0, length: 1)
-                                back: 0,
-                                fore: 1)
+                                   window: transition.window,
+                                   direction: transition.direction
+                                   segment: .init(position: 0, length: 1)
+                                   back: 0,
+                                   fore: 1)
         addPlan(fadeIn, to: forwardElement)
       }
     }
@@ -68,10 +72,11 @@ Plan TransitionTween {
     TransitionDirector Slide {
       func setUp() {
         let shiftUp = TransitionTween("position",
-                                   window: window,
-                                   segment: .init(position: 0, length: 1)
-                                   back: bottomEdge,
-                                   fore: topEdge)
+                                      window: transition.window,
+                                      direction: transition.direction
+                                      segment: .init(position: 0, length: 1)
+                                      back: bottomEdge,
+                                      fore: topEdge)
         addPlan(shiftUp, to: forwardElement)
       }
     }
@@ -93,10 +98,11 @@ A TransitionTweenPerformer will generate different tweens based on the initial d
 ```
 window = TransitionWindow(duration: 0.4s)
 TransitionTween("opacity",
-             window: window,
-             segment: .init(position: 0, length: 0.25)
-             back: 0,
-             fore: 1)
+                window: transition.window,
+                direction: transition.direction
+                segment: .init(position: 0, length: 0.25)
+                back: 0,
+                fore: 1)
 ```
 
 When initial direction == forward:
