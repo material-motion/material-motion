@@ -13,7 +13,7 @@ This section's topics:
 - [Tweens](#tweens)
 - [Gesture recognition](gesture_recognizers)
 - [Applied forces](#applied-forces)
-- [Timeline](#timeline)
+- [Timeline](Timelime)
 - [State Machine](#state-machine)
 
 Most of these primitives represent change over time.
@@ -46,17 +46,6 @@ The body consists of both a position and a velocity. Physical forces can be appl
 ---
 
 The following primitives are more structural in nature than the primitives described above.
-
-## Timeline
-
-**What it is**: *an object that contains a floating-point value, the progress*.
-
-**Normalized progress**: A timeline's progress is "normalized" to a `[0...1]` range.
-
-**Extending past the timeline**: A timeline's progress can extend beyond its bounds. What this means to objects observing the timeline is implementation-dependent. For example:
-
-- **Fade** does not extend beyond 0 or 1 and can clamp to `[0...1]`.
-- **Move** may extend beyond 0 or 1 and may not clamp at all.
 
 ## State Machine
 

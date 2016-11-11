@@ -12,50 +12,81 @@ This is the engineering specification for the `Timeline` object.
 
 ## Overview
 
+A timeline provides an API for scrubbing time.
+
 ## MVP
 
-### Initializer
+### Object type
 
-Pseudo-code example:
+A timeline is an object.
 
 ```
 class Timeline {
-  init(duration)
 }
 ```
 
-### Duration API
+### Scrubber API
 
-Expose a read-only duration API.
-
-```
-class Timeline {
-  let duration: TimeInterval
-```
-
-### Progress API
-
-Expose a writeable progress API.
+Expose an API for setting an optional TimelineScrubber instance.
 
 ```
 class Timeline {
-  let progress: Double
+  var scrubber: TimelineScrubber?
 ```
 
-### Paused API
+### Add/remove observer API
 
-Expose a writeable paused API.
-
-```
-class Timeline {
-  let paused: Boolean
-```
-
-### Reversed API
-
-Expose a writeable reversed API.
+Expose APIs for adding and removing observers.
 
 ```
 class Timeline {
-  let reversed: Boolean
+  func addObserver(TimelineObserver)
+  func removeObserver(TimelineObserver)
 ```
+
+### Observer event API
+
+Expose a protocol that observers are expected to conform to.
+
+```
+protocol TimelineObserver {
+  func timelineDidAttachScrubber(timeline, scrubber)
+  func timelineDidDetachScrubber(timeline)
+  func timelineScrubberDidScrub(timeline, timeOffset)
+}
+```
+
+`timelineDidAttachScrubber` should be invoked when scrubber is assigned a non-null value when it
+was previously null.
+
+`timelineDidDetachScrubber` should be invoked when scrubber is assigned a null value when it
+was previously non-null.
+
+`timelineScrubberDidScrub` should be invoked when the attached scrubber's position changes.
+
+### TimelineScrubber type
+
+A timeline scrubber is an object.
+
+```
+class TimelineScrubber {
+}
+```
+
+### TimelineScrubber timeOffset API
+
+Expose an API on TimelineScrubber for setting a time offset.
+
+```
+class TimelineScrubber {
+  var timeOffset
+}
+```
+
+### TimelineScrubber/Timeline association
+
+When a timeline scrubber is attached to a timeline, modifications to the scrubber's timeOffset
+should result in timeline observer `timelineScrubberDidScrub` invocations.
+
+This effect can be achieved by storing a weak association to the timeline within the timeline
+scrubber.

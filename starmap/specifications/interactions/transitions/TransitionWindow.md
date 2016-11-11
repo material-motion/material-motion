@@ -12,11 +12,14 @@ This is the engineering specification for the **TransitionWindow** type.
 
 ## Overview
 
-A TransitionWindow represents a reversible interval of time. A segment of a transition window
-represents a specific region in the window. When used in a transition, segments placed on a
-transition window can be mapped to absolute time by considering the transition's direction.
+A transition window represents a reversible interval of time in a bi-directional transition.
 
-In the following diagram there are two segments:
+A **segment** of a transition window represents a specific region in the window.
+[TransitionWindowSegment](TransitionWindowSegment) is a representation of such a segment. When used
+in a transition, segments placed on a transition window can be mapped to absolute time by
+considering the transition's direction.
+
+Consider the following diagram in which there are two segments:
 
 ```
 let redSegment = TransitionWindowSegment(position: 0, length: 0.5)

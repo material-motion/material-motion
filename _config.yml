@@ -70,6 +70,9 @@ toc:
                 - page:
                   title: "ScaleGestureRecognizer"
                   url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
+            - page:
+              title: "Timeline"
+              url: "/starmap/specifications/primitives/Timeline"
         - page:
           title: "Declarative motion"
           url: "/starmap/specifications/pattern"

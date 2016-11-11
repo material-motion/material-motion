@@ -12,17 +12,7 @@ This is the engineering specification for the **TransitionWindowSegment** type.
 
 ## Overview
 
-A TransitionWindowSegment represents a specific part of a transition window.
-
-## Example: TweenBetween
-
-```
-let tween = TweenBetween("opacity",
-                         window: window,
-                         segment: .entireSegment,
-                         back: 0,
-                         fore: 1)
-```
+A TransitionWindowSegment represents a specific region in a [TransitionWindow](TransitionWindow).
 
 ## MVP
 
@@ -30,14 +20,19 @@ let tween = TweenBetween("opacity",
 
 TransitionWindowSegment is a struct type, if the language allows.
 
+```
+struct TransitionWindowSegment {
+}
+```
+
 ### position and length APIs
 
-Provide two writable values for `position` and `length`.
+Provide two read-writable values for `position` and `length`.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
 ```
-TransitionWindowSegment {
+struct TransitionWindowSegment {
   var position
   var length
 }
@@ -49,22 +44,15 @@ Assertions:
 - `0 <= length <= 1`
 - `0 <= position + length <= 1`
 
-`0` refers to `back` while `1` refers to `fore`.
-
-```
-back   fore
-|---------|
-0         1
-```
-
-### Inversion API
+### Inverted API
 
 Provide an API for inverting a segment.
 
 ```
 TransitionWindowSegment {
+  /** Returns a new segment with an inverted position. */
   func inverted() -> TransitionWindowSegment {
-    return TransitionWindowSegment(position: 1 - position, length: length)
+    return TransitionWindowSegment(position: 1 - (position + length), length: length)
   }
 ```
 
@@ -73,5 +61,6 @@ TransitionWindowSegment {
 Include an epsilon constant.
 
 ```
+/** Epsilon for use when comparing TransitionWindowSegment values. */
 let TransitionWindowSegmentEpsilon = 0.00001
 ```
