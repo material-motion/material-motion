@@ -7,7 +7,8 @@ status:
 proposals:
   - proposal:
     initiation_date: Oct 24, 2016
-    state: Proposed
+    completion_date: Nov 7, 2016
+    state: Accepted
     discussion: "`RemoveSpring` plan"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/UTnXKlEYOOQ
 ---
