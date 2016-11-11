@@ -2,8 +2,14 @@
 layout: page
 title: GestureRecognizer
 status:
-  date: November 8, 2016
-  is: Draft
+  date: November 11, 2016
+  is: In review
+proposals:
+  - proposal:
+    initiation_date: Nov 11, 2016
+    state: Proposed
+    discussion: "Timeline spec review"
+    discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
 ---
 
 # Timeline specification
