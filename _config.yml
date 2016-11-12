@@ -221,6 +221,20 @@ toc:
                           title: "Feature: director stack"
                           url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController_director_stack"
         - page:
+          title: "Interaction library"
+          url: "/starmap/specifications/interaction_library/"
+          children:
+            - page:
+              title: "Transition library"
+              url: "/starmap/specifications/interaction_library/transitions/"
+              children:
+                - page:
+                  title: "FadeIn"
+                  url: "/starmap/specifications/interaction_library/transitions/FadeIn"
+                - page:
+                  title: "SlideIn"
+                  url: "/starmap/specifications/interaction_library/transitions/SlideIn"
+        - page:
           title: "Target replication"
           url: "/starmap/specifications/target_replication/"
           children:
