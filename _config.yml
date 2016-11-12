@@ -32,6 +32,8 @@ platforms:
   - iOS
   - Web
 
+google_analytics: UA-80214706-3
+
 toc:
   - page:
     title: "Starmap"
