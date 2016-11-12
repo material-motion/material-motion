@@ -4,6 +4,13 @@ title: SpringTo
 status:
   date: Oct 18, 2016
   is: Stable
+proposals:
+  - proposal:
+    initiation_date: Nov 6, 2016
+    completion_date: Nov 7, 2016
+    state: Accepted
+    discussion: "Make SpringConfiguration a required property on SpringTo"
+    discussion_url: https://github.com/material-motion/starmap/issues/67
 availability:
   - platform:
     name: Android
@@ -24,11 +31,11 @@ To animate a rounded-corners square to a new dimension:
     Interaction Morphing {
       let roundedCornerShape
       
-      func setUp(planEmitter) {
-        planEmitter.addPlan(SpringTo(.layerBounds, destination: bounds),
-                            to: roundedCornerShape)
-        planEmitter.addPlan(SpringTo(.layerCornerRadius, destination: radius),
-                            to: roundedCornerShape)
+      func setUp() {
+        runtime.addPlan(SpringTo(.layerBounds, destination: bounds),
+                        to: roundedCornerShape)
+        runtime.addPlan(SpringTo(.layerCornerRadius, destination: radius),
+                        to: roundedCornerShape)
       }
     }
 
@@ -36,12 +43,12 @@ To animate a rounded-corners square to a new dimension:
 
 One or more one-dimensional springs pull a property's current value to a provided `destination`.
 
-If a `configuration` is provided then the associated spring's configuration should be updated to match the provided values.
+Configuration should be initialized to a default set of values as defined below.
 
     Plan SpringTo {
       property
       destination
-      configuration (optional)
+      configuration
     }
 
 ## Types
@@ -54,22 +61,6 @@ Contract: configure the behavior of a SpringTo plan.
     SpringConfiguration {
       friction: float = 30
       tension: float = 342
-    }
-    
-    // Feature: bounciness/speed configuration
-    SpringConfiguration {
-      bounciness: SpringBounciness
-      speed: SpringSpeed
-    }
-    enum SpringBounciness {
-      case Bouncy(scalar)
-      case NotBouncy
-      case Exponential
-    }
-
-    enum SpringSpeed {
-      case Fast(scalar)
-      case Slow(scalar)
     }
 
 ## Performer considerations

@@ -146,6 +146,10 @@ toc:
             - page:
               title: "SpringTo"
               url: "/starmap/specifications/plans/SpringTo"
+              children:
+               - page:
+                 title: "Springiness"
+                 url: "/starmap/specifications/plans/SpringTo_springiness"
             - page:
               title: "StreamTween"
               url: "/starmap/specifications/plans/StreamTween"
