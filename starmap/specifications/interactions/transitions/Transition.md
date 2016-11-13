@@ -16,7 +16,9 @@ A `Transition` defines the essential information required by a `TransitionDirect
 
 ## MVP
 
-**Concrete type**: `Transition` is an object.
+### Concrete type
+
+`Transition` is an object.
 
 Example pseudo-code:
 
@@ -25,21 +27,45 @@ class Transition {
 }
 ```
 
-**Runtime API**: Provide access to a Runtime instance.
+### Runtime API
+
+Expose a read-only Runtime instance.
 
 ```
 class Transition {
   let runtime: Runtime
 ```
 
-**Time window API**: Provide a read-only value of the transition's time window.
+### Transition window API
+
+Expose a read-only value of the transition's window.
 
 ```
 class Transition {
-  let window: TimeWindow
+  let window: TransitionWindow
 ```
 
-**back/fore API**: Provide a read-only `back` and `fore` value.
+### Timeline API
+
+Expose a read-only value of the transition's timeline.
+
+```
+class Transition {
+  let timeline: Timeline
+```
+
+### Direction API
+
+Expose a read-only value of the transition's direction.
+
+```
+class Transition {
+  let direction: TransitionDirection
+```
+
+### back/fore API
+
+Expose a read-only `back` and `fore` value.
 
 The type of this value is platform-dependent.
 
