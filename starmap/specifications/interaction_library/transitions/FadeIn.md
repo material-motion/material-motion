@@ -20,13 +20,11 @@ class FadeInTransitionDirector: TransitionDirector {
 
   func setUp() {
     let fadeIn = TransitionTween("opacity",
-                                 window: transition.window,
-                                 direction: transition.direction,
+                                 transition: transition,
                                  segment: .entire,
                                  back: 0,
                                  fore: 1)
     fadeIn.timingFunction = .easeInEaseOut
-    fadeIn.timeline = transition.timeline
     transition.runtime.addPlan(fadeIn, to: transition.fore)
   }
 }

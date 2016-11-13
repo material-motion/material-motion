@@ -22,13 +22,11 @@ class SlideInTransitionDirector: TransitionDirector {
     let position = transition.fore.position.y
     let height = transition.fore.height
     let slide = TransitionTween("position.y",
-                                window: transition.window,
-                                direction: transition.direction,
+                                transition: transition,
                                 segment: .entire,
                                 back: position + height,
                                 fore: position)
     slide.timingFunction = .easeOut
-    slide.timeline = transition.timeline
     transition.runtime.addPlan(slide, to: transition.fore)
   }
 }

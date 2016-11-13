@@ -30,8 +30,7 @@ Plan TransitionTween {
   var timingFunction: TimingFunction = .linear
   var backwardSegment: TransitionSegment?
   var backwardTimingFunction: TimingFunction?
-  var window: TransitionWindow
-  var direction: TransitionDirection
+  var transition: Transition
 }
 ```
 
@@ -49,18 +48,15 @@ Plan TransitionTween {
 
 `backwardTimingFunction` is the timing function to use when initially animating backward.
 
-`window` is the transition window within which the `segment` applies.
-
-`direction` is the transition's direction.
+`transition` is the transition within which the `segment`.
 
 ## Example: Fade transition
 
     TransitionDirector Fade {
       func setUp() {
         let fade = TransitionTween("opacity",
-                                   window: transition.window,
-                                   direction: transition.direction
-                                   segment: .init(position: 0, length: 1)
+                                   transition: transition,
+                                   segment: .init(position: 0, length: 1),
                                    back: 0,
                                    fore: 1)
         addPlan(fadeIn, to: forwardElement)
@@ -72,9 +68,8 @@ Plan TransitionTween {
     TransitionDirector Slide {
       func setUp() {
         let shiftUp = TransitionTween("position",
-                                      window: transition.window,
-                                      direction: transition.direction
-                                      segment: .init(position: 0, length: 1)
+                                      transition: transition,
+                                      segment: .init(position: 0, length: 1),
                                       back: bottomEdge,
                                       fore: topEdge)
         addPlan(shiftUp, to: forwardElement)
@@ -98,9 +93,8 @@ A TransitionTweenPerformer will generate different tweens based on the initial d
 ```
 window = TransitionWindow(duration: 0.4s)
 TransitionTween("opacity",
-                window: transition.window,
-                direction: transition.direction
-                segment: .init(position: 0, length: 0.25)
+                transition: transition,
+                segment: .init(position: 0, length: 0.25),
                 back: 0,
                 fore: 1)
 ```
