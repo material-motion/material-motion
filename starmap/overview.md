@@ -63,7 +63,7 @@ Using material motion will target app creators.
 
 Extending material motion will target director/motion creators.
 
-## Knowledge iceberg
+## Knowledge hierarchy
 
 The following diagram shows the required amount of knowledge for each group.
 
