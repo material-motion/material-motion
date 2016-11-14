@@ -80,7 +80,7 @@ The act of directly manipulating a Timeline's `progress` value.
 
 ## target
 
-A target is the entity to which a plan is meant to be applied, such as an element or a Timeline.
+A target is the entity to which a plan is meant to be applied.
 
 ## transaction
 
