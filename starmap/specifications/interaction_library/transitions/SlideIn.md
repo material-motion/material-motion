@@ -10,7 +10,7 @@ status:
 
 ```
 import Transitions
-import Tween
+import TransitionTween
 
 class SlideInTransitionDirector: TransitionDirector {
   let transition: Transition
