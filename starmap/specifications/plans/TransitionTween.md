@@ -48,7 +48,7 @@ Plan TransitionTween {
 
 `backwardTimingFunction` is the timing function to use when initially animating backward.
 
-`transition` is the transition within which the `segment`.
+`transition` is the transition within which the `segment` applies.
 
 ## Example: Fade transition
 
