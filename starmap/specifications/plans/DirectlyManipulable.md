@@ -37,16 +37,16 @@ Interaction Sticker {
 
 ## Contract
 
-Registers [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](Rotatable) to the given target. May be provided with pre-configured gesture recognizer instances. If no gesture recognizer is provided, one will be created on the target.
+Registers [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](Rotatable) to the given target. May be provided with pre-configured gesture recognizer instances.
 
 ```
 Plan DirectlyManipulable {
-  GestureRecognizer panGestureRecognizer?
-  GestureRecognizer pinchGestureRecognizer?
-  GestureRecognizer rotateGestureRecognizer?
+  var dragGestureRecognizer = DragGestureRecognizer()
+  var scaleGestureRecognizer = ScaleGestureRecognizer()
+  var rotationGestureRecognizer = RotationGestureRecognizer()
 }
 ```
 
 ## Performer considerations
 
-Always emits [`ChangeAnchorPoint`](ChangeAnchorPoint) when the first gesture recognizer starts.
+Emit [`ChangeAnchorPoint`](ChangeAnchorPoint) when the first gesture recognizer starts.

@@ -27,11 +27,12 @@ Z rotation from the given gesture recognizer is added to the target's `rotation.
 
 ```
 Plan Rotatable {
-  GestureRecognizer rotationGestureRecognizer?
-  Bool shouldAdjustAnchorPointOnGestureStart = true
+  var rotationGestureRecognizer = RotationGestureRecognizer()
 }
 ```
 
-## Performer considerations
+### rotationGestureRecognizer API
 
-If `shouldAdjustAnchorPointOnGestureStart` is true, then `ChangeAnchorPoint` is emitted when the gesture recognizer starts.
+Provide a settable `rotationGestureRecognizer` API.
+
+This value should be initialized with a default `RotationGestureRecognizer` instance.
