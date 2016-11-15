@@ -22,6 +22,11 @@ proposals:
     state: Accepted
     discussion: "Rename KeyframeTween to Tween"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM
+  - proposal:
+    initiation_date: Nov 14, 2016
+    state: Proposed
+    discussion: "Add optional timeline property"
+    discussion_url: https://groups.google.com/forum/#!topic/material-motion/CSlqlBb92bg
 ---
 
 # Tween specification
