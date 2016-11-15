@@ -7,7 +7,8 @@ status:
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016
-    state: Proposed
+    completion_date: Nov 14, 2016
+    state: Accepted
     discussion: Improved console logging output
     discussion_url: https://github.com/material-motion/starmap/issues/73
 availability:
