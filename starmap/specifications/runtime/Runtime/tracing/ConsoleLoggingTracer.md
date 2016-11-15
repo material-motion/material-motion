@@ -64,9 +64,7 @@ class ConsoleLoggingTracer {
   var performerLoggingEnabled = true
 ```
 
-## Proposed additions to MVP
-
-### Plan string format (Nov 11, 2016)
+### Plan string format
 
 A plan should be written to the console with the following format:
 
