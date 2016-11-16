@@ -4,6 +4,15 @@ title: Tween
 status:
   date: Nov 1, 2016
   is: Stable
+availability:
+  - platform:
+    name: Android
+    label: tween-android v1.1
+    url: https://github.com/material-motion/family-tween-android/releases/tag/1.1.0
+  - platform:
+    name: iOS
+    label: coreanimation-swift v2
+    url: https://github.com/material-motion/coreanimation-swift/releases/tag/v2.0.0
 proposals:
   - proposal:
     initiation_date: Oct 18, 2016
