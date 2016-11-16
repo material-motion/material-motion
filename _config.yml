@@ -132,6 +132,9 @@ toc:
               title: "Draggable"
               url: "/starmap/specifications/plans/Draggable"
             - page:
+              title: "PauseSpring"
+              url: "/starmap/specifications/plans/PauseSpring"
+            - page:
               title: "Pinchable"
               url: "/starmap/specifications/plans/Pinchable"
             - page:
@@ -469,6 +472,9 @@ toc:
        - page:
          title: "Stability"
          url: "/team/weekly_updates/stability"
+       - page:
+         title: "November 11-November 16, 2016"
+         url: "/team/weekly_updates/2016-11-16"
        - page:
          title: "November 03-November 10, 2016"
          url: "/team/weekly_updates/2016-11-10"
