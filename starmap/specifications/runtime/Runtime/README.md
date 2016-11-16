@@ -135,6 +135,7 @@ A runtime is active if any of its performer instances are active.
 
 #### Unit Tests
 
+- [Objective-C](https://github.com/material-motion/runtime-objc/blob/develop/tests/unit/ContinuousPerformingTests.swift)
 - [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/runtime/src/__tests__/Runtime-isActive.test.ts)
 
 ---
