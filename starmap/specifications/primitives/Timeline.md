@@ -17,8 +17,8 @@ availability:
     url: https://github.com/material-motion/runtime-android/milestone/13
   - platform:
     name: iOS
-    label: Milestone
-    url: https://github.com/material-motion/runtime-objc/milestone/16
+    label: runtime-objc v6
+    url: https://github.com/material-motion/runtime-objc/releases/tag/v6.0.0
 ---
 
 # Timeline specification
