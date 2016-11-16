@@ -160,7 +160,7 @@ Example pseudo-code:
 
 ### Tear down API
 
-####Provide an API to tear down a runtime.
+#### Provide an API to tear down a runtime.
 
 This API would terminate all active performers and remove all registered plans.
 
