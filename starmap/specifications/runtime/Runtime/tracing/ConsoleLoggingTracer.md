@@ -71,8 +71,8 @@ A plan should be written to the console with the following format:
 
 ```
 Plan: <Plan name>
-  let <property name>: <property type> = <property value>
-  let <property name>: <property type> = <property value>
+  <property name>: <property type> = <property value>
+  <property name>: <property type> = <property value>
   ...
 ```
 
@@ -80,19 +80,19 @@ Example output (swift):
 
 ```
 Plan: MDMTween
-  let keyPath: NSString = position.y
-  let duration: @ = 0.3
-  let delay: @ = 0
-  let values: NSArray = (
+  keyPath: NSString = position.y
+  duration: @ = 0.3
+  delay: @ = 0
+  values: NSArray = (
     "1000.5",
     "333.5"
 )
-  let keyPositions: NSArray = (
+  keyPositions: NSArray = (
     0,
     1
 )
-  let timingFunctions: NSArray = (
+  timingFunctions: NSArray = (
     easeInEaseOut
 )
-  let timeline: MDMTimeline = <MDMTimeline: 0x60000002b540>
+  timeline: MDMTimeline = <MDMTimeline: 0x60000002b540>
 ```
