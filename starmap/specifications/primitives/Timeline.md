@@ -13,12 +13,12 @@ proposals:
 availability:
   - platform:
     name: Android
-    label: Milestone
-    url: https://github.com/material-motion/runtime-android/milestone/13
+    label: tween-android v1.1
+    url: https://github.com/material-motion/family-tween-android/releases/tag/1.1.0
   - platform:
     name: iOS
-    label: runtime-objc v6
-    url: https://github.com/material-motion/runtime-objc/releases/tag/v6.0.0
+    label: coreanimation-swift v2
+    url: https://github.com/material-motion/coreanimation-swift/releases/tag/v2.0.0
 ---
 
 # Timeline specification
