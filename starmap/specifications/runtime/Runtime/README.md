@@ -110,7 +110,7 @@ Example pseudo-code:
 
 #### Unit Tests
 
-- [JavaScript](https://github.com/material-motion/material-motion-experiments-js/blob/develop/packages/runtime/src/__tests__/Runtime-addPlan.test.ts)
+- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/runtime/src/__tests__/Runtime-addPlan.test.ts)
 
 ### Activity state
 
@@ -128,6 +128,10 @@ Pseudo-code example:
     }
 
 A runtime is active if any of its performer instances are active.
+
+#### Unit Tests
+
+- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/runtime/src/__tests__/Runtime-isActive.test.ts)
 
 ---
 
