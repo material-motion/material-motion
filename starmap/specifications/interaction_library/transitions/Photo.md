@@ -13,7 +13,7 @@ import Transitions
 
 import DirectManipulation
 import TransitionTween
-import SpringTween
+import TransitionSpring
 
 protocol PhotoTransitionContextElement {
   func imageElementForTransition() -> UIImageView
