@@ -68,7 +68,7 @@ Note that our `back` and `fore` variables now has just two distinct permutations
 
 ```
 let animation = TweenBetween("opacity",
-                             window: transition.window,
+                             transition: transition,
                              segment: .entire,
                              back: 0
                              fore: 1)
