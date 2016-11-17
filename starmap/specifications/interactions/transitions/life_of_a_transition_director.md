@@ -14,7 +14,7 @@ Let's walk through the life of a simple **fade** transition director.
 This object conforms to the `TransitionDirector` type.
 
 ```
-TransitionDirector FadeTransitionDirector {
+class FadeTransitionDirector: TransitionDirector {
   let transition: Transition
   init(transition: Transition) {
     self.transition = transition
