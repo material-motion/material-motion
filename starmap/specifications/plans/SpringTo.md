@@ -45,23 +45,28 @@ One or more one-dimensional springs pull a property's current value to a provide
 
 Configuration should be initialized to a default set of values as defined below.
 
-    Plan SpringTo {
-      property
-      destination
-      configuration
-    }
+```
+Plan SpringTo {
+  property
+  destination
+  configuration
+}
+```
 
 ## Types
 
 ### SpringConfiguration
 
-Contract: configure the behavior of a SpringTo plan.
+Configures the behavior of a SpringTo plan.
 
-    // MVP
-    SpringConfiguration {
-      friction: float = 30
-      tension: float = 342
-    }
+```
+SpringConfiguration {
+  friction: float = 30
+  tension: float = 342
+}
+```
+
+This is an object because the two variables are very closely related.
 
 ## Performer considerations
 
