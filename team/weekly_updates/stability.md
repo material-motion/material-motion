@@ -24,7 +24,8 @@ Current stability status of each feature. Empty rows imply that the feature is n
 | [Rotatable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Rotatable)                     |  Stable | [v1.1.0](https://github.com/material-motion/direct-manipulation-swift/releases/tag/v1.1.0) |  &nbsp; | &nbsp; |
 | [ScrollReactor](https://material-motion.github.io/material-motion/starmap/specifications/plans/ScrollReactor)             | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | [SpringTo](https://material-motion.github.io/material-motion/starmap/specifications/plans/SpringTo)                       | Stable | [v1.1.0](https://github.com/material-motion/pop-swift/releases/tag/v1.1.0) | [1.0.0](https://github.com/material-motion/family-rebound-android/releases/tag/1.0.0) | &nbsp; |
-| [TweenBetween](https://material-motion.github.io/material-motion/starmap/specifications/plans/TweenBetween)               |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [TransitionSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionSpring)       |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
+| [TransitionTween](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionTween)         |  &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | [Tween](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween)                             |  Stable | [v2.0.0](https://github.com/material-motion/coreanimation-swift/releases/tag/v2.0.0) |  [1.0.0](https://github.com/material-motion/family-tween-android/releases/tag/1.0.0) | &nbsp; |
 | [VelocitySource](https://material-motion.github.io/material-motion/starmap/specifications/plans/VelocitySource)           | &nbsp; | &nbsp; |  &nbsp; | &nbsp; |
 | - | - | - | - | - |
