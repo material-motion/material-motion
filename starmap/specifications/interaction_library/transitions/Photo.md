@@ -59,27 +59,28 @@ class PhotoTransitionDirector: TransitionDirector {
                          foreView.bounds.height / imageSize.height)
       let fitSize = CGSize(width: fitScale * imageSize.width, height: fitScale * imageSize.height)
 
-      transition.runtime.addPlan(TransitionSpring(.size,
-                                                  transition: transition,
-                                                  back: replica.bounds.size,
-                                                  fore: fitSize),
-                                 to: replica)
-      let forePosition = foreImageElement!.superElement!.convert(foreImageElement!.center, to: transition.containerElement)
-      transition.runtime.addPlan(TransitionSpring(.position,
-                                                  transition: transition,
-                                                  back: replica.layer.position,
-                                                  fore: forePosition),
-                                 to: replica)
-      transition.runtime.addPlan(TransitionSpring(.scale,
-                                                  transition: transition,
-                                                  back: CGSize(width: 1, height: 1),
-                                                  fore: CGSize(width: 1, height: 1)),
-                                 to: replica.layer)
-      transition.runtime.addPlan(TransitionSpring(.rotation,
-                                                  transition: transition,
-                                                  back: 0,
-                                                  fore: 0),
-                                 to: replica.layer)
+      let forePosition = foreImageView!.superview!.convert(foreImageView!.center, to: transition.containerView)
+      let plans = [
+        TransitionSpring(.layerSize,
+                         transition: transition,
+                         back: replica.bounds.size,
+                         fore: fitSize),
+        TransitionSpring(.layerPosition,
+                         transition: transition,
+                         back: replica.layer.position,
+                         fore: forePosition),
+        TransitionSpring(.layerScaleXY,
+                         transition: transition,
+                         back: CGSize(width: 1, height: 1),
+                         fore: CGSize(width: 1, height: 1)),
+        TransitionSpring(.layerRotation,
+                         transition: transition,
+                         back: 0,
+                         fore: 0)
+        ]
+      for plan in plans {
+        transition.runtime.addPlan(plan, to: replica.layer)
+      }
       foreImageElement!.isHidden = true
 
       replicaImageElement = replica
