@@ -61,12 +61,24 @@ Configures the behavior of a SpringTo plan.
 
 ```
 SpringConfiguration {
-  friction: float = 30
-  tension: float = 342
+  friction: float
+  tension: float
 }
 ```
 
 This is an object because the two variables are very closely related.
+
+### Default SpringConfiguration
+
+Provide a default spring configuration on the SpringTo type.
+
+The default friction is 30. The default tension is 342.
+
+```
+SpringTo {
+  static let defaultConfiguration = SpringConfiguration(friction: 30, tension: 342)
+}
+```
 
 ## Performer considerations
 
