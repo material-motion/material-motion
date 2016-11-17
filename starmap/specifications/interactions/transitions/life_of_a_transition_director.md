@@ -29,15 +29,15 @@ Our `setUp` might use a simple [`Tween`](https://material-motion.github.io/mater
 ```
 class FadeTransitionDirector: TransitionDirector {
   function setUp() {
-    var tween = Tween(.opacity, duration: transition.duration)
-    if initialDirection == .forward {
+    var tween = Tween(.opacity, duration: transition.window.duration)
+    if transition.direction == .forward {
       tween.from = 0
       tween.to = 1
     } else {
       tween.from = 1
       tween.to = 0
     }
-    transition.addPlan(tween, to: transition.fore)
+    transition.runtime.addPlan(tween, to: transition.fore)
   }
 }
 ```
@@ -47,12 +47,12 @@ Or [`TweenBetween`](https://material-motion.github.io/material-motion/starmap/sp
 ```
 class FadeTransitionDirector: TransitionDirector {
   function setUp() {
-    var tween = TweenBetween(.opacity,
-                             window: transition.window,
-                             segment: transition.entire,
-                             back: 0,
-                             fore: 1)
-    transition.addPlan(tween, to: transition.fore)
+    var tween = TransitionTween(.opacity,
+                                transition: transition,
+                                segment: .entire,
+                                back: 0,
+                                fore: 1)
+    transition.runtime.addPlan(tween, to: transition.fore)
   }
 }
 ```
