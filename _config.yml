@@ -241,6 +241,9 @@ toc:
                   title: "FadeIn"
                   url: "/starmap/specifications/interaction_library/transitions/FadeIn"
                 - page:
+                  title: "Photo"
+                  url: "/starmap/specifications/interaction_library/transitions/Photo"
+                - page:
                   title: "SlideIn"
                   url: "/starmap/specifications/interaction_library/transitions/SlideIn"
         - page:
@@ -281,13 +284,6 @@ toc:
             - page:
               title: "Life of a serialized transaction"
               url: "/starmap/specifications/serialization/life_of_a_serialized_transaction"
-        - page:
-          title: "Motion demos"
-          url: "/starmap/specifications/motion-demos"
-          children:
-            - page:
-              title: "Sparkle dialog"
-              url: "/starmap/specifications/motion_demos/sparkle_dialog"
         - page:
           title: "Director composition"
           url: "/starmap/specifications/director_composition"
