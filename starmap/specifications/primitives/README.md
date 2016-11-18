@@ -13,7 +13,7 @@ This section's topics:
 - [Tweens](#tweens)
 - [Gesture recognition](gesture_recognizers)
 - [Applied forces](#applied-forces)
-- [Timeline](Timelime)
+- [Timeline](Timeline)
 - [State Machine](#state-machine)
 
 Most of these primitives represent change over time.
