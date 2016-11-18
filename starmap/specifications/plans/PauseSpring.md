@@ -4,6 +4,17 @@ title: PauseSpring
 status:
   date: Nov 16, 2016
   is: Drafting
+availability:
+  - platform:
+    name: iOS
+    label: pop-swift v1.2
+    url: https://github.com/material-motion/pop-swift/releases/tag/v1.2.0
+proposals:
+  - proposal:
+    initiation_date: Nov 17, 2016
+    state: Proposed
+    discussion: "PauseSpring plan"
+    discussion_url: https://groups.google.com/forum/#!topic/material-motion/zBZ6D_uxHx4
 ---
 
 # PauseSpring specification
