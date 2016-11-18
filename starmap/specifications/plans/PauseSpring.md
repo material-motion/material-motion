@@ -24,16 +24,46 @@ Pauses a spring simulation while a gesture recognizer is active.
 ## Example: Gestures with springs
 
 ```
-Interaction AttachedToPosition {
-  let position
+Interaction DragToOpen {
+  let closedPosition = {x: 0, y: 0}
+  let openPosition = {x: 0, y: 200}
+  let boundary = 100
+  let willOpen = false
+  
   func setUp() {
     let plans = [
       Draggable(withGestureRecognizer: dragGestureRecognizer),
-      SpringTo(.position, destination: position),
+      SpringTo(.position, destination: closedPosition),
       PauseSpring(.position, whileActive: dragGestureRecognizer)
     ]
+    
     for plan in plans {
       runtime.addPlan(plan, to: element)
+    }
+  }
+  
+  func didDrag(newLocation) {
+    # Because the spring is paused, we can change the spring's destination when
+    # the boundary is crossed with SpringTo.  When the drag completes, 
+    # PauseSpring will release the spring to continue to the most recently set 
+    # destination.
+
+    let crossed = newLocation.y > boundary
+
+    if (crossed && !willOpen) {
+      runtime.addPlan(
+        SpringTo(.position, destination: openPosition),
+        to: element
+      )
+      willOpen = true
+      
+    } else if (!crossed && willOpen) { 
+      runtime.addPlan(
+        SpringTo(.position, destination: openPosition),
+        to: element
+      )
+      
+      willOpen = false
     }
   }
 }
