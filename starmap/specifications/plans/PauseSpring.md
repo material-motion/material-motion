@@ -43,8 +43,8 @@ Interaction DragToOpen {
   }
   
   func didDrag(newLocation) {
-    # Because the spring is paused, we can change the spring's destination when
-    # the boundary is crossed with SpringTo.  When the drag completes, 
+    # Because the spring is paused, when the boundary is crossed we can change
+    # the spring's destination with SpringTo.  When the drag completes,
     # PauseSpring will release the spring to continue to the most recently set 
     # destination.
 
