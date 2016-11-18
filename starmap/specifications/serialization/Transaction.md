@@ -12,11 +12,9 @@ This is the engineering specification for the `Transaction` object.
 
 ## Features
 
-* [Target enumeration](transaction-enumeration)
-* [Optimized](transaction-optimized)
-* [Target selectors](target-selectors)
-* [Named plans](named-plans)
-* [Serialization](serialization)
+* [Target enumeration](Transaction-target-enumeration)
+* [Optimized](Transaction-optimized)
+* [Serialization](Transaction_serialization)
 
 ## Overview
 

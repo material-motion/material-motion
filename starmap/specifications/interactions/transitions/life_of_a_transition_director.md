@@ -42,7 +42,7 @@ class FadeTransitionDirector: TransitionDirector {
 }
 ```
 
-Or [`TweenBetween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/TweenBetween) to reduce the need for conditional logic:
+Or [`TransitionTween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionTween) to reduce the need for conditional logic:
 
 ```
 class FadeTransitionDirector: TransitionDirector {

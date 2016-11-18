@@ -47,6 +47,6 @@ Learn more about these relationships by reading [Life of a Plan](life_of_a_plan)
 
 Or dive in to the engineering specifications:
 
-- [Plan](plan)
-- [Performer](performer)
-- [Runtime](runtime)
+- [Plan](Plan)
+- [Performer](Performer)
+- [Runtime](Runtime)

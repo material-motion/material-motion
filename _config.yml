@@ -280,7 +280,7 @@ toc:
               url: "/starmap/specifications/serialization/plan_serialization"
             - page:
               title: "Transaction serialization"
-              url: "/starmap/specifications/serialization/transaction_serialization"
+              url: "/starmap/specifications/serialization/Transaction_serialization"
             - page:
               title: "Life of a serialized transaction"
               url: "/starmap/specifications/serialization/life_of_a_serialized_transaction"

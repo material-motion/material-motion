@@ -33,9 +33,9 @@ This is the engineering specification for the `Runtime` object.
 
 ## Features
 
-- [Named plans](named-plans)
-- [Target selectors](target-selectors)
-- [Tracing](Runtime-tracing)
+- [Named plans](../named-plans)
+- [Target selectors](../target_selectors)
+- [Tracing](tracing)
 
 ## Overview
 
