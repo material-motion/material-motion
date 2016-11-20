@@ -157,6 +157,9 @@ toc:
               title: "StreamTween"
               url: "/starmap/specifications/plans/StreamTween"
             - page:
+              title: "TransitionSpring"
+              url: "/starmap/specifications/plans/TransitionSpring"
+            - page:
               title: "TransitionTween"
               url: "/starmap/specifications/plans/TransitionTween"
             - page:
