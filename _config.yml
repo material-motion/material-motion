@@ -132,8 +132,8 @@ toc:
               title: "Draggable"
               url: "/starmap/specifications/plans/Draggable"
             - page:
-              title: "PauseSpring"
-              url: "/starmap/specifications/plans/PauseSpring"
+              title: "PausesSpring"
+              url: "/starmap/specifications/plans/PausesSpring"
             - page:
               title: "Pinchable"
               url: "/starmap/specifications/plans/Pinchable"

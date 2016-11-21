@@ -88,13 +88,13 @@ class PhotoTransitionDirector: TransitionDirector {
   }
 
   func add(_ gestureRecognizer: GestureRecognizer) {
-    transition.runtime.addPlan(PauseSpring(.size, whileActive: gestureRecognizer),
+    transition.runtime.addPlan(PausesSpring(.size, whileActive: gestureRecognizer),
                                to: replicaImageElement!)
-    transition.runtime.addPlan(PauseSpring(.position, whileActive: gestureRecognizer),
+    transition.runtime.addPlan(PausesSpring(.position, whileActive: gestureRecognizer),
                                to: replicaImageElement!)
-    transition.runtime.addPlan(PauseSpring(.rotation, whileActive: gestureRecognizer),
+    transition.runtime.addPlan(PausesSpring(.rotation, whileActive: gestureRecognizer),
                                to: replicaImageElement!.layer)
-    transition.runtime.addPlan(PauseSpring(.scale, whileActive: gestureRecognizer),
+    transition.runtime.addPlan(PausesSpring(.scale, whileActive: gestureRecognizer),
                                to: replicaImageElement!.layer)
 
     switch gestureRecognizer {

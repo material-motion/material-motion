@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PauseSpring
+title: PausesSpring
 status:
   date: Nov 16, 2016
   is: Drafting
@@ -13,11 +13,11 @@ proposals:
   - proposal:
     initiation_date: Nov 17, 2016
     state: Proposed
-    discussion: "PauseSpring plan"
+    discussion: "PausesSpring plan"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/zBZ6D_uxHx4
 ---
 
-# PauseSpring specification
+# PausesSpring specification
 
 Pauses a spring simulation while a gesture recognizer is active.
 
@@ -34,7 +34,7 @@ Interaction DragToOpen {
     let plans = [
       Draggable(withGestureRecognizer: dragGestureRecognizer),
       SpringTo(.position, destination: closedPosition),
-      PauseSpring(.position, whileActive: dragGestureRecognizer)
+      PausesSpring(.position, whileActive: dragGestureRecognizer)
     ]
     
     for plan in plans {
@@ -45,7 +45,7 @@ Interaction DragToOpen {
   func didDrag(newLocation) {
     # Because the spring is paused, when the boundary is crossed we can change
     # the spring's destination with SpringTo.  When the drag completes,
-    # PauseSpring will release the spring to continue to the most recently set 
+    # PausesSpring will release the spring to continue to the most recently set 
     # destination.
 
     let crossed = newLocation.y > boundary
@@ -72,7 +72,7 @@ Interaction DragToOpen {
 ## Contract
 
 ```
-Plan PauseSpring {
+Plan PausesSpring {
   var property
   var gestureRecognizer: GestureRecognizer
 }
@@ -84,9 +84,9 @@ Multiple gesture recognizers can cause a single property to be paused. Consider 
 
 ```
 let plans = [
-  PauseSpring(.position, whileActive: dragGestureRecognizer),
-  PauseSpring(.position, whileActive: rotationGestureRecognizer),
-  PauseSpring(.position, whileActive: scaleGestureRecognizer)
+  PausesSpring("position", whileActive: dragGestureRecognizer),
+  PausesSpring("position", whileActive: rotationGestureRecognizer),
+  PausesSpring("position", whileActive: scaleGestureRecognizer)
 ]
 ```
 
