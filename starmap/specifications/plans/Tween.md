@@ -33,7 +33,8 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/fmk3ApBolkM
   - proposal:
     initiation_date: Nov 14, 2016
-    state: Proposed
+    completion_date: Nov 15, 2016
+    state: Accepted
     discussion: "Add optional timeline property"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/CSlqlBb92bg
 ---
@@ -70,7 +71,7 @@ If `values.length == 1` then the `values[0]` value is treated as the `destinatio
 
 `interTimingFunctions` optionally defines the timing functions to be used between any two values. If `values` is of length `n`, then `interTimingFunctions` should be of length `n-1`. If not provided, each timing function is assumed to be linear. If `values.length == 1` then `interTimingFunctions[0]` value is treated as the timing function for the animation.
 
-**Proposed Nov 14, 2016** `timeline` optionally allows a Tween's progress to be driven with a scrubber.
+`timeline` optionally allows a Tween's progress to be driven with a scrubber.
 
 ## Performer considerations
 
