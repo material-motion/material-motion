@@ -76,3 +76,5 @@ If `values.length == 1` then the `values[0]` value is treated as the `destinatio
 ## Performer considerations
 
 If a tween has an associated timeline then the performer's `addPlan` method should invoke the timeline's `begin` method if it hasn't already been. The timeline's `beginTime` value should then be used to properly attach the tween to the correct position in time.
+
+In general, the last-registered Tween should take precedence over earlier Tweens. Consider two tweens, A and B, added in that order. If A == B then B will be the only interpolation to take effect. If A starts before B, then A's tween should take effect until B starts, at which point B should take effect. Similarly if A lasts longer than B, A's tween should resume after B has completed.
