@@ -1,12 +1,12 @@
 ---
 layout: page
-title: VelocitySource
+title: AppliesVelocity
 status:
   date: Oct 24, 2016
   is: Drafting
 ---
 
-# VelocitySource specification
+# AppliesVelocity specification
 
 ## Example: Tossable elements
 
@@ -16,7 +16,7 @@ Transition TossableElements {
     let gestureRecognizer = PanGestureRecognizer()
     addPlan(Draggable(withGestureRecognizer: gestureRecognizer), 
             to: target)
-    addPlan(VelocitySource(gestureRecognizer, appliedTo: .layerPosition), 
+    addPlan(AppliesVelocity(gestureRecognizer, appliedTo: .layerPosition), 
             to: target)
   }
 }
@@ -27,7 +27,7 @@ Transition TossableElements {
 Upon successfull completion of a gesture recognizer, adds the velocity to a property's current velocity.
 
 ```
-Plan VelocitySource {
+Plan AppliesVelocity {
   var gestureRecognizer
   var property
 }

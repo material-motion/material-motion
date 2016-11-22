@@ -120,6 +120,9 @@ toc:
               title: "ArcMove"
               url: "/starmap/specifications/plans/ArcMove"
             - page:
+              title: "AppliesVelocity"
+              url: "/starmap/specifications/plans/AppliesVelocity"
+            - page:
               title: "BasicTween"
               url: "/starmap/specifications/plans/BasicTween"
             - page:
@@ -165,9 +168,6 @@ toc:
             - page:
               title: "Tween"
               url: "/starmap/specifications/plans/Tween"
-            - page:
-              title: "VelocitySource"
-              url: "/starmap/specifications/plans/VelocitySource"
         - page:
           title: "Motion library"
           url: "/starmap/specifications/motion_library"
