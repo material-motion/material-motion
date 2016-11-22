@@ -35,20 +35,11 @@ Example pseudo-code:
 protocol TransitionDirector
 ```
 
-**Initialization API**: Define a required API that allows a director to receive a `Transition` instance.
+**willBeginTransition API**: Define a required API that allows a director to set up its initial plans.
 
 Example pseudo-code:
 
 ```
 protocol TransitionDirector {
-  init(transition: Transition)
-```
-
-**setUp API**: Define a required API that allows a director to set up its initial plans.
-
-Example pseudo-code:
-
-```
-protocol TransitionDirector {
-  function setUp()
+  function willBeginTransition(Transition)
 ```
