@@ -57,6 +57,8 @@ Example pseudo-code:
 
 This API must accept a plan and a target object.
 
+A target can be any type of object.
+
 Example pseudo-code:
 
     # Associate a plan with a target.
