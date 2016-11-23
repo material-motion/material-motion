@@ -472,6 +472,9 @@ toc:
          title: "Stability"
          url: "/team/weekly_updates/stability"
        - page:
+         title: "November 17-November 23, 2016"
+         url: "/team/weekly_updates/2016-11-23"
+       - page:
          title: "November 11-November 16, 2016"
          url: "/team/weekly_updates/2016-11-16"
        - page:
