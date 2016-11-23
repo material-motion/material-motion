@@ -36,10 +36,11 @@ Legend:
 | - | - | - | - | - |
 | **[Motion language](https://material-motion.github.io/material-motion/starmap/specifications/motion-family)**             | **Starmap** | **Apple**  | **Android** | **Web**    |
 | [ArcMove](https://material-motion.github.io/material-motion/starmap/specifications/plans/ArcMove)                         |   |   |   |   |
+| [AppliesVelocity](https://material-motion.github.io/material-motion/starmap/specifications/plans/AppliesVelocity)         |   |   |   |   |
 | [ChangeAnchorPoint](https://material-motion.github.io/material-motion/starmap/specifications/plans/ChangeAnchorPoint)     |   |   |   |   |
 | [DirectlyManipulable](https://material-motion.github.io/material-motion/starmap/specifications/plans/DirectlyManipulable) |   |   |   |   |
 | [Draggable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Draggable)                     |   |   |   |   |
-| [PauseSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/PauseSpring)                 |   |   |   |   |
+| [PausesSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/PausesSpring)               |   |   |   |   |
 | [Pinchable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Pinchable)                     |   |   |   |   |
 | [RemoveSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/RemoveSpring)               |   |   |   |   |
 | [Rotatable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Rotatable)                     |   |   |   |   |
@@ -48,7 +49,6 @@ Legend:
 | [Tween](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween)                             |   |   |   |   |
 | [TransitionSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionSpring)       |   |   |   |   |
 | [TransitionTween](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionTween)         |   |   |   |   |
-| [VelocitySource](https://material-motion.github.io/material-motion/starmap/specifications/plans/VelocitySource)           |   |   |   |   |
 | - | - | - | - | - |
 | **Interactions**      | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation  |   |   |    |   |
