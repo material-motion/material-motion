@@ -3,7 +3,7 @@ layout: page
 title: PausesSpring
 status:
   date: Nov 16, 2016
-  is: Drafting
+  is: Approved
 availability:
   - platform:
     name: iOS
@@ -12,7 +12,8 @@ availability:
 proposals:
   - proposal:
     initiation_date: Nov 17, 2016
-    state: Proposed
+    completion_date: Nov 20, 2016
+    state: Accepted
     discussion: "PausesSpring plan"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/zBZ6D_uxHx4
 ---
