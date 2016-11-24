@@ -29,14 +29,14 @@ To answer the first question we introduce our first type: `Plan`.
 
 > A plan is an object representing **what you want something to do**.
 
-To answer the second question we introduce two more types: the `Performer` and the `Runtime`.
+To answer the second question we introduce two more types: the `Performer` and the `MotionRuntime`.
 
 > A performer's sole responsibility is to fulfill the contract defined by one or more plans. A runtime is the entity that creates performers.
 
 Here's how these objects fit together:
 
 1. Plans are added to a runtime.
-2. Runtimes create performers.
+2. MotionRuntimes create performers.
 3. Performers fulfill the plans.
 
 In visual form:
@@ -49,4 +49,4 @@ Or dive in to the engineering specifications:
 
 - [Plan](Plan)
 - [Performer](Performer)
-- [Runtime](Runtime)
+- [MotionRuntime](MotionRuntime)

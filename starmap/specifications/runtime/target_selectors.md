@@ -26,7 +26,7 @@ runtime.addPlan(plan, to: TargetSelector("#contextView"))
 runtime.removePlan(named: name, from: TargetSelector("#contextView"))
 ```
 
-## Runtime specification
+## MotionRuntime specification
 
 Support committing plans to targets using **target selectors**.
 

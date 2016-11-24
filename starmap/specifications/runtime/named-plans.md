@@ -17,7 +17,7 @@ availability:
 
 # Named plans feature specification
 
-This is the engineering specification for **named plans**. This specification requires the Transaction, Performer, Plan, and Runtime types.
+This is the engineering specification for **named plans**.
 
 ## Overview
 
@@ -75,9 +75,9 @@ Provide a NamedPlan type.
 
 Plans must conform to the NamedPlan type in order to indicate that they support being registered as named plans to a transaction.
 
-# Runtime specification
+# MotionRuntime specification
 
-Runtimes support named plans. Named plans are plans with a name associated via the transaction.
+MotionRuntimes support named plans. Named plans are plans with a name associated via the transaction.
 
 ### Named APIs
 
@@ -88,7 +88,7 @@ Note that the plan type must be a `NamedPlan`. Motion family designers use this 
 Example pseudo-code:
 
 ```
-class Runtime {
+class MotionRuntime {
   function addPlan(NamedPlan, named: String, to: Target)
   function removePlan(named: String, from: Target)
 }
@@ -136,8 +136,8 @@ Here are the Performer's expectations for this API.
 *Removing a name which was never added before:*
 
 ```
-Runtime runtime = new Runtime();
-runtime.removeNamedPlan("foo");
+let runtime = MotionRuntime()
+runtime.removeNamedPlan("foo")
 ```
  
 * Nothing happens. No performer is created.
@@ -145,8 +145,8 @@ runtime.removeNamedPlan("foo");
 *Adding a name which was never added before:*
 
 ```
-Runtime runtime = new Runtime();
-runtime.addNamedPlan(plan, "foo");
+let runtime = MotionRuntime()
+runtime.addNamedPlan(plan, "foo")
 ```
 
 * A performer is created for plan. 
@@ -155,9 +155,9 @@ runtime.addNamedPlan(plan, "foo");
 *Adding a name which was added before:*
 
 ```
-Runtime runtime = new Runtime();
-runtime.addNamedPlan(plan, "foo");
-runtime.addNamedPlan(plan2, "foo");
+let runtime = MotionRuntime()
+runtime.addNamedPlan(plan, "foo")
+runtime.addNamedPlan(plan2, "foo")
 ```
 
 * A performer is created for plan. 

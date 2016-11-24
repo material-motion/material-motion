@@ -10,7 +10,7 @@ status:
 
 TODO: Discuss debugging tools.
 
-- Enumerating Plans and Executors currently active in a Runtime.
+- Enumerating Plans and Executors currently active in a MotionRuntime.
 - Pausing animations.
 - Slowing down animations.
 - Scrubbing through animations.

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Runtime
-permalink: /starmap/specifications/runtime/Runtime/
+title: MotionRuntime
+permalink: /starmap/specifications/runtime/MotionRuntime/
 status:
   date: July 8, 2016
   is: Stable
@@ -10,7 +10,7 @@ proposals:
     initiation_date: Oct 21, 2016
     completion_date: Nov 1, 2016
     state: Accepted
-    discussion: Rename Scheduler to [Runtime]?
+    discussion: Rename Scheduler to [MotionRuntime]?
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/FNULoSyqEOo
 availability:
   - platform:
@@ -27,9 +27,9 @@ availability:
     url: https://www.npmjs.com/package/material-motion-runtime
 ---
 
-# Runtime specification
+# MotionRuntime specification
 
-This is the engineering specification for the `Runtime` object.
+This is the engineering specification for the `MotionRuntime` object.
 
 ## Features
 
@@ -49,7 +49,7 @@ A runtime is cheap to create.
 
 Example pseudo-code:
 
-    runtime = Runtime()
+    runtime = MotionRuntime()
 
 ### addPlan API
 
@@ -129,7 +129,7 @@ Pseudo-code example:
       .AtRest
     }
 
-    Runtime {
+    MotionRuntime {
       public function activityState() -> ActivityState
     }
 
@@ -138,7 +138,7 @@ A runtime is active if any of its performer instances are active.
 #### Unit Tests
 
 - [Objective-C](https://github.com/material-motion/runtime-objc/blob/develop/tests/unit/ContinuousPerformingTests.swift)
-- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/runtime/src/__tests__/Runtime-isActive.test.ts)
+- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/runtime/src/__tests__/MotionRuntime-isActive.test.ts)
 
 ---
 

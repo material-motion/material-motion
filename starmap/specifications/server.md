@@ -15,11 +15,11 @@ TODO: Formalize the following content as a protocol.
 The Server will need a variety of hooks in to the system. Notably it requires the following **outputs**:
 
 - List of all Plans types. (the available "motion language")
-- List of all active Runtime instances.
+- List of all active MotionRuntime instances.
 - List of all Director types.
 - List of all active Director instances.
 - Directors can expose configurable settings.
-- For each Runtime:
+- For each MotionRuntime:
   - List of active Executors.
   - List of Plans associated with targets.
 
@@ -27,11 +27,11 @@ It also requires the following **inputs**:
 
 - Transactions are committable over the wire to a specific runtime on a server.
 - Changing Plan values? Unclear how this would work.
-- Pausing/unpausing a Runtime.
+- Pausing/unpausing a MotionRuntime.
 
 It should be possible to connect to the server and send/receive the above protocol.
 
-MVP tool connecting to server would be able to inspect active Runtimes.
+MVP tool connecting to server would be able to inspect active MotionRuntimes.
 
 Tool features:
 

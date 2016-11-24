@@ -10,10 +10,10 @@ Let's walk through the life of a plan.
 
 ### Step 1: Create a runtime
 
-Runtimes are cheap and easy to create. Many runtimes may exist in an application. Let's create one. We will make use of this object later.
+MotionRuntimes are cheap and easy to create. Many runtimes may exist in an application. Let's create one. We will make use of this object later.
 
 ```
-runtime = Runtime()
+runtime = MotionRuntime()
 ```
 
 ![]({{ site.url }}/assets/LifeOfAPlan-step1.svg)

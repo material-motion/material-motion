@@ -18,9 +18,9 @@ Directors have little — if any — imperative code that directly applies chang
 
 ## MVP
 
-### Runtime API
+### MotionRuntime API
 
-A director may be provided with a Runtime instance, or it might create its own.
+A director may be provided with a MotionRuntime instance, or it might create its own.
 
 ### setUp API
 

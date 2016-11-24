@@ -50,7 +50,7 @@ Examples:
 
 * [CAAnimation](https://developer.apple.com/library/ios/documentation/GraphicsImaging/Reference/CAAnimation_class/) \(iOS\)
 
-In relation to a Runtime, a Plan is a concrete object that can be associated with a target.
+In relation to a MotionRuntime, a Plan is a concrete object that can be associated with a target.
 
 ## platform
 
@@ -84,7 +84,7 @@ A target is the entity to which a plan is meant to be applied.
 
 ## transaction
 
-A mechanism by which new Plans are committed to a Runtime.
+A mechanism by which new Plans are committed to a MotionRuntime.
 
 ## update event
 

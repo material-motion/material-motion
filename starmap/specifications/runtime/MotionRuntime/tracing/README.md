@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Runtime tracing
-permalink: /starmap/specifications/runtime/Runtime/tracing/
+title: MotionRuntime tracing
+permalink: /starmap/specifications/runtime/MotionRuntime/tracing/
 status:
   date: Oct 13, 2016
   is: Stable
@@ -16,7 +16,7 @@ availability:
     url: https://github.com/material-motion/material-motion-runtime-objc
 ---
 
-# Runtime tracing feature specification
+# MotionRuntime tracing feature specification
 
 This is the engineering specification for the `Tracer` abstract type.
 
@@ -26,7 +26,7 @@ Tracing is a form of logging in which information is recorded about a program's 
 
 Tracing can be enabled on a runtime by providing an instance of an object that conforms to the `Tracer` type.
 
-## Runtime
+## MotionRuntime
 
 ### AddTracer and RemoveTracer APIs
 
@@ -35,7 +35,7 @@ The runtime should provide APIs for adding and removing tracer instances.
 Example pseudo-code:
 
 ```
-class Runtime {
+class MotionRuntime {
   function addTracer(Tracer)
   function removeTracer(Tracer)
 }

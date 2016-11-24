@@ -52,7 +52,7 @@ Example pseudo-code:
 ```
 TransitionController {
   function transitionWillStart(initialDirection) {
-    let runtime = Runtime()
+    let runtime = MotionRuntime()
     runtime.delegate = self
     let transition = Transition(...)
     director = directorClass(transition)

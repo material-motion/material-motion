@@ -27,13 +27,13 @@ class Transition {
 }
 ```
 
-### Runtime API
+### MotionRuntime API
 
-Expose a read-only Runtime instance.
+Expose a read-only MotionRuntime instance.
 
 ```
 class Transition {
-  let runtime: Runtime
+  let runtime: MotionRuntime
 ```
 
 ### Transition window API
