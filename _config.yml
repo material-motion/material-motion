@@ -96,16 +96,16 @@ toc:
                   title: "Composition"
                   url: "/starmap/specifications/runtime/Performer-composition"
             - page:
-              title: "Runtime"
-              url: "/starmap/specifications/runtime/Runtime/"
+              title: "MotionRuntime"
+              url: "/starmap/specifications/runtime/MotionRuntime/"
               children:
                 - page:
                   title: "Tracing"
-                  url: "/starmap/specifications/runtime/Runtime/tracing/"
+                  url: "/starmap/specifications/runtime/MotionRuntime/tracing/"
                   children:
                     - page:
                       title: "ConsoleLoggingTracer"
-                      url: "/starmap/specifications/runtime/Runtime/tracing/ConsoleLoggingTracer"
+                      url: "/starmap/specifications/runtime/MotionRuntime/tracing/ConsoleLoggingTracer"
             - page:
               title: "Named plans"
               url: "/starmap/specifications/runtime/named-plans"
