@@ -118,3 +118,18 @@ Tracer {
 }
 ```
 
+### activityGroupStateDidChange: event
+
+The Tracer type can optionally implement an `activityGroupStateDidChange` function.
+
+Invoked by an activity group each time its activity state changes.
+
+Should be invoked before any state change delegates or observers are invoked.
+
+Example pseudo-code:
+
+```
+Tracer {
+  optional function activityGroupStateDidChange(ActivityGroup)
+}
+```
