@@ -133,6 +133,12 @@ Pseudo-code example:
       public function activityState() -> ActivityState
     }
 
+Alternative example:
+
+    MotionRuntime {
+      public function isActive() -> Bool
+    }
+
 A runtime is active if any of its performer instances are active.
 
 #### Unit Tests
