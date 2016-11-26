@@ -9,6 +9,8 @@ Welcome to the material motion documentation site. Please check out the [Starmap
 
 [Chat with us on Discord](https://discord.gg/ZJyGXza).
 
+<iframe src="https://discordapp.com/widget?id=198544450366996480&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
+
 ## Android platform support
 
 | Library                    | Build status | Coverage | Version | Issues |
