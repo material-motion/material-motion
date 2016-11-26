@@ -11,8 +11,8 @@ Welcome to the material motion documentation site. Please check out the [Starmap
 
 ## Android platform support
 
-| Library                    | Build status | Coverage | Version | Platforms | Docs |
-|:--------------------------:|:------------:|:--------:|:-------:|:---------:|:----:|
+| Library                    | Build status | Coverage | Version |
+|:--------------------------:|:------------:|:--------:|:-------:|
 | Runtime                    | [![Build Status](https://travis-ci.org/material-motion/runtime-android.svg?branch=develop)](https://travis-ci.org/material-motion/runtime-android)                                       | [![codecov](https://codecov.io/gh/material-motion/runtime-android/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/runtime-android)                                       | [![Release](https://img.shields.io/github/release/material-motion/runtime-android.svg)](https://github.com/material-motion/runtime-android/releases/latest)                                       |
 | Tween                      | [![Build Status](https://travis-ci.org/material-motion/family-tween-android.svg?branch=develop)](https://travis-ci.org/material-motion/family-tween-android)                             | [![codecov](https://codecov.io/gh/material-motion/family-tween-android/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/family-tween-android)                             | [![Release](https://img.shields.io/github/release/material-motion/family-tween-android.svg)](https://github.com/material-motion/family-tween-android/releases/latest)                             |
 | Rebound                    | [![Build Status](https://travis-ci.org/material-motion/family-rebound-android.svg?branch=develop)](https://travis-ci.org/material-motion/family-rebound-android)                         | [![codecov](https://codecov.io/gh/material-motion/family-rebound-android/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/family-rebound-android)                         | [![Release](https://img.shields.io/github/release/material-motion/family-rebound-android.svg)](https://github.com/material-motion/family-rebound-android/releases/latest)                         |
@@ -33,6 +33,6 @@ Welcome to the material motion documentation site. Please check out the [Starmap
 
 ## Web platform support
 
-| Library                    | Build status | Coverage | Version | Platforms | Docs |
-|:--------------------------:|:------------:|:--------:|:-------:|:---------:|:----:|
+| Library                    | Build status | Coverage | Version |
+|:--------------------------:|:------------:|:--------:|:-------:|
 | Runtime                    | [![Build Status](https://travis-ci.org/material-motion/material-motion-js.svg?branch=develop)](https://travis-ci.org/material-motion/material-motion-js) | [![codecov](https://codecov.io/gh/material-motion/material-motion-js/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/material-motion-js) | [![Release](https://img.shields.io/npm/v/material-motion-runtime.svg)](https://www.npmjs.com/package/material-motion-runtime)                                       |
