@@ -36,5 +36,3 @@ Welcome to the material motion documentation site. Please check out the [Starmap
 | Library                    | Build status | Coverage | Version | Issues |
 |:---------------------------|:------------:|:--------:|:-------:|:------:|
 | Runtime                    | [![Build Status](https://travis-ci.org/material-motion/material-motion-js.svg?branch=develop)](https://travis-ci.org/material-motion/material-motion-js) | [![codecov](https://codecov.io/gh/material-motion/material-motion-js/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/material-motion-js) | [![Release](https://img.shields.io/npm/v/material-motion-runtime.svg)](https://www.npmjs.com/package/material-motion-runtime)                                       | [![Open issues](https://img.shields.io/github/issues/material-motion/material-motion-js.svg)](https://github.com/material-motion/material-motion-js/issues) |
-
-<iframe src="https://discordapp.com/widget?id=198544450366996480&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
