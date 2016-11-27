@@ -19,19 +19,18 @@ availability:
 
 ## Overview
 
-Change the anchor point of a target.
+Change the anchor point of a target when a gesture recognizer begins.
 
 ## Contract
 
-The anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
+The anchor point of the view is changed each time the observed gesture recognizer begins. The
+target's position is also updated to avoid noticeable movement of the target.
 
 ```
 Plan AdjustsAnchorPoint {
-  Position newAnchorPoint
+  GestureRecognizer gestureRecognizer
 }
 ```
-
-`newAnchorPoint` should be relative to the target's dimensions. E.g. an anchor point of 0,0 means the corner of the target should be the new anchor point.
 
 ## Performer considerations
 
