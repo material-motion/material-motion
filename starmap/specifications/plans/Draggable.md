@@ -28,7 +28,6 @@ Delta x and y from the given gesture recognizer are added to the target's `posit
 ```
 Plan Draggable {
   var dragGestureRecognizer = DragGestureRecognizer()
-
   Bool shouldAdjustAnchorPointOnGestureStart = false
 }
 ```
