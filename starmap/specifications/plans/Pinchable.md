@@ -28,7 +28,6 @@ Scale amount from the given gesture recognizer are multiplied to the target's `s
 ```
 Plan Pinchable {
   var pinchGestureRecognizer = PinchGestureRecognizer()
-  Bool shouldAdjustAnchorPointOnGestureStart = true
 }
 ```
 
@@ -39,7 +38,5 @@ Provide a settable `pinchGestureRecognizer` API.
 This value should be initialized with a default `PinchGestureRecognizer` instance.
 
 ## Performer considerations
-
-If `shouldAdjustAnchorPointOnGestureStart` is true, emit `ChangeAnchorPoint` when the gesture recognizer starts.
 
 Draggable, Pinchable, and Rotatable can all share the same performer.

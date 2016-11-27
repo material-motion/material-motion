@@ -117,6 +117,9 @@ toc:
           url: "/starmap/specifications/plans/"
           children:
             - page:
+              title: "AdjustsAnchorPoint"
+              url: "/starmap/specifications/plans/AdjustsAnchorPoint"
+            - page:
               title: "ArcMove"
               url: "/starmap/specifications/plans/ArcMove"
             - page:
@@ -125,9 +128,6 @@ toc:
             - page:
               title: "BasicTween"
               url: "/starmap/specifications/plans/BasicTween"
-            - page:
-              title: "ChangeAnchorPoint"
-              url: "/starmap/specifications/plans/ChangeAnchorPoint"
             - page:
               title: "DirectlyManipulable"
               url: "/starmap/specifications/plans/DirectlyManipulable"

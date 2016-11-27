@@ -28,7 +28,6 @@ Delta x and y from the given gesture recognizer are added to the target's `posit
 ```
 Plan Draggable {
   var dragGestureRecognizer = DragGestureRecognizer()
-  Bool shouldAdjustAnchorPointOnGestureStart = false
 }
 ```
 
@@ -39,7 +38,5 @@ Provide a settable `dragGestureRecognizer` API.
 This value should be initialized with a default `DragGestureRecognizer` instance.
 
 ## Performer considerations
-
-If `shouldAdjustAnchorPointOnGestureStart` is true, emit `ChangeAnchorPoint` when the gesture recognizer starts.
 
 Draggable, Pinchable, and Rotatable can all share the same performer.

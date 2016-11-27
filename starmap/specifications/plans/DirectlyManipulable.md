@@ -49,4 +49,6 @@ Plan DirectlyManipulable {
 
 ## Performer considerations
 
-Emit [`ChangeAnchorPoint`](ChangeAnchorPoint) when the first gesture recognizer starts.
+Should emit [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](Rotatable).
+
+Emit a separate [`AdjustsAnchorPoint`](AdjustsAnchorPoint) for each gesture recognizer.

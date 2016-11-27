@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ChangeAnchorPoint
+title: AdjustsAnchorPoint
 status:
   date: Oct 18, 2016
   is: Stable
@@ -15,7 +15,7 @@ availability:
     url: https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0
 ---
 
-# ChangeAnchorPoint specification
+# AdjustsAnchorPoint specification
 
 ## Overview
 
@@ -26,7 +26,7 @@ Change the anchor point of a target.
 The anchor point of the view is immediately changed to the `newAnchorPoint`. The target's position is also updated to avoid noticeable movement of the target.
 
 ```
-Plan ChangeAnchorPoint {
+Plan AdjustsAnchorPoint {
   Position newAnchorPoint
 }
 ```
