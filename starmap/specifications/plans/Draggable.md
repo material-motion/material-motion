@@ -40,3 +40,19 @@ This value should be initialized with a default `DragGestureRecognizer` instance
 ## Performer considerations
 
 Draggable, Pinchable, and Rotatable can all share the same performer.
+
+# Suggested features
+
+## axis lock
+
+When enabled, will only allow drags along the given axis.
+
+```swift
+enum AxisLock {
+  case horizontal:
+  case vertical:
+  case none:
+}
+Plan Draggable {
+  var axisLock: AxisLock
+```
