@@ -7,11 +7,11 @@ status:
 availability:
   - platform:
     name: Android
-    label: Milestone
-    url: https://github.com/material-motion/material-motion-family-direct-manipulation-android/milestone/1
+    label: direct-manipulation-android as of v1.0.0
+    url: https://github.com/material-motion/family-direct-manipulation-android/releases/tag/1.0.0
   - platform:
     name: iOS
-    label: family-direct-manipulation-swift as of v1.0.0
+    label: direct-manipulation-swift as of v1.0.0
     url: https://github.com/material-motion/material-motion-family-direct-manipulation-swift/releases/tag/v1.0.0
 ---
 
