@@ -4,6 +4,13 @@ layout: page
 
 # Month day-Month day, 2016
 
+Want to contribute? Check out our [Android](https://material-motion.github.io/milemarker/index.html?filterby=android) and
+[iOS](https://material-motion.github.io/milemarker/index.html?filterby=appleos) milestones, many of
+which are ready for someone to take ownership of. Also check out our
+[newbie-friendly tasks](https://material-motion.github.io/milemarker/newbie.html?filterby=appleos).
+
+---
+
 This weekly update captures what changed in a given week across the Material Motion ecosystem.
 
 Check out [current focus](current_focus) to see what we're working on next.
