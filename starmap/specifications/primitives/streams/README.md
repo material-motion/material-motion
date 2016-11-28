@@ -27,3 +27,26 @@ It should be possible to create specific Observable types. Common examples:
 
 - filter
 - map
+
+# Example usage
+
+Extracting velocity from a iOS pan gesture recognizer in Swift:
+
+```swift
+class VelocityObservable: Observable<(UIGestureRecognizerState, CGPoint)> {
+  init(listeningTo to: UIPanGestureRecognizer) {
+    super.init()
+    to.addTarget(self, action: #selector(panDidUpdate))
+  }
+
+  @objc private func panDidUpdate(gesture: UIPanGestureRecognizer) {
+    onNext(value: (gesture.state, gesture.velocity(in: gesture.view)))
+  }
+}
+
+let pan = UIPanGestureRecognizer()
+stream = VelocityObservable(listeningTo: pan)
+  .filter     { (state, _) in state == .ended }
+  .map        { (_, value) in value }
+  .subscribe  { print($0) }
+```
