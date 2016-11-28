@@ -17,7 +17,7 @@ Streams lean more toward the engineering side of the product development process
 tooling side. The reason for this is because of the heavy use of lambdas to build streams from
 scratch. Lambdas are inherently difficult to introspect and represent in a tool without making other
 trade-offs (performance, platform expectations). *Operators* can be built to reuse lambdas, but
-the Material Motion core engineering team prefers to build serializable Plan types instead.
+the Material Motion core engineering team generally prefers to spec out Plan types.
 
 We provide support for Streams in specific Plan types when it provides clear engineering
 productivity value. The direct manipulation family of plans is one such family. Consider the
