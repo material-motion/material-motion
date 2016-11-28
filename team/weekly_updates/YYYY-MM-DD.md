@@ -44,7 +44,6 @@ Legend:
 | [Pinchable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Pinchable)                     |   |   |   |   |
 | [RemoveSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/RemoveSpring)               |   |   |   |   |
 | [Rotatable](https://material-motion.github.io/material-motion/starmap/specifications/plans/Rotatable)                     |   |   |   |   |
-| [ScrollReactor](https://material-motion.github.io/material-motion/starmap/specifications/plans/ScrollReactor)             |   |   |   |   |
 | [SpringTo](https://material-motion.github.io/material-motion/starmap/specifications/plans/SpringTo)                       |   |   |   |   |
 | [Tween](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween)                             |   |   |   |   |
 | [TransitionSpring](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionSpring)       |   |   |   |   |
