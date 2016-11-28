@@ -1,6 +1,6 @@
 ---
 layout: page
-title: GestureRecognizer
+title: Timeline
 status:
   date: November 11, 2016
   is: Stable

@@ -10,10 +10,11 @@ This section explores some **building blocks** of rich, interactive motion.
 
 This section's topics:
 
-- [Tweens](#tweens)
 - [Gesture recognition](gesture_recognizers)
-- [Applied forces](#applied-forces)
+- [Streams](streams)
 - [Timeline](Timeline)
+- [Tweens](#tweens)
+- [Applied forces](#applied-forces)
 - [State Machine](#state-machine)
 
 Most of these primitives represent change over time.
