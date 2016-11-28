@@ -48,7 +48,7 @@ Draggable, Pinchable, and Rotatable can all share the same performer.
 When enabled, will only allow drags along the given axis.
 
 ```swift
-enum AxisLock {
+enum DraggableAxisLock {
   case horizontal:
   case vertical:
   case none:
