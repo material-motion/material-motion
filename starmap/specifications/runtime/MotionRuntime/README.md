@@ -94,7 +94,7 @@ Create one performer instance for each *type* of performer required by a target.
 >
 > Alternatively, consider how this situation would have played out if we had one performer for each plan. There would now be two conflicting representations of `velocity` for the same `position`. On each frame, one performer would "lose". The result would be a confusing animation.
 
-Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of plans. This is an open problem.
+Note that "one performer per type of plan" does not resolve the problem of sharing state across different types of performers. This is an open problem.
 
 #### Plan ↔ performer association
 
