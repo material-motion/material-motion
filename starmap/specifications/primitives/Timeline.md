@@ -36,7 +36,7 @@ A timeline provides an API for scrubbing time.
 
 A timeline is an object.
 
-```
+```swift
 class Timeline {
 }
 ```
@@ -45,7 +45,7 @@ class Timeline {
 
 Expose an API for beginning the timeline.
 
-```
+```swift
 class Timeline {
   func begin()
 ```
@@ -56,7 +56,7 @@ Expose a read-only nullable API for the timeline's beginTime.
 
 beginTime is non-null after `begin` has been invoked.
 
-```
+```swift
 class Timeline {
   var beginTime: TimeInterval? { get }
 ```
@@ -65,7 +65,7 @@ class Timeline {
 
 Expose an API for setting an optional TimelineScrubber instance.
 
-```
+```swift
 class Timeline {
   var scrubber: TimelineScrubber?
 ```
@@ -74,7 +74,7 @@ class Timeline {
 
 Expose APIs for adding and removing observers.
 
-```
+```swift
 class Timeline {
   func addObserver(TimelineObserver)
   func removeObserver(TimelineObserver)
@@ -84,7 +84,7 @@ class Timeline {
 
 Expose a protocol that observers are expected to conform to.
 
-```
+```swift
 protocol TimelineObserver {
   func timelineDidAttachScrubber(timeline, scrubber)
   func timelineDidDetachScrubber(timeline)
@@ -104,7 +104,7 @@ was previously non-null.
 
 A timeline scrubber is an object.
 
-```
+```swift
 class TimelineScrubber {
 }
 ```
@@ -113,7 +113,7 @@ class TimelineScrubber {
 
 Expose an API on TimelineScrubber for setting a time offset.
 
-```
+```swift
 class TimelineScrubber {
   var timeOffset
 }

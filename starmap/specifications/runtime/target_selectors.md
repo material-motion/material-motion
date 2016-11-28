@@ -18,11 +18,11 @@ All add/remove APIs may be provided with a TargetSelector instead of a direct ta
 
 Example pseudo-code:
 
-```
-# Associate a named plan with a target.
+```swift
+// Associate a named plan with a target.
 runtime.addPlan(plan, to: TargetSelector("#contextView"))
 
-# Remove a named plan from a target.
+// Remove a named plan from a target.
 runtime.removePlan(named: name, from: TargetSelector("#contextView"))
 ```
 
@@ -43,7 +43,7 @@ Provide an API for associating names with targets.
 
 This API is the mechanism by which the selector tree is defined.
 
-```
+```swift
 func associateNameWithTarget(name, target)
 ```
 
@@ -53,7 +53,7 @@ Provide an API for looking up targets with a given selector.
 
 This API is meant to be used by the `commit` implementation to resolve specific targets when provided with a target selector.
 
-```
+```swift
 func targetsForSelector(selector) -> [Targets]
 ```
 

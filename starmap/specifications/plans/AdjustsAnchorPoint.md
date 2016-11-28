@@ -40,7 +40,7 @@ The following diagram shows the desired effect of changing the anchor point of a
 
 In pseudo-code:
 
-```
+```swift
 func onGestureInitiated() {
   let initialPositionInElement = Point(element.anchorPoint.x * element.width,
                                        element.anchorPoint.x * element.height)

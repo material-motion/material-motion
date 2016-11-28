@@ -45,7 +45,7 @@ One or more one-dimensional springs pull a property's current value to a provide
 
 Configuration should be initialized to a default set of values as defined below.
 
-```
+```swift
 Plan SpringTo {
   property
   destination
@@ -59,7 +59,7 @@ Plan SpringTo {
 
 Configures the behavior of a SpringTo plan.
 
-```
+```swift
 SpringConfiguration {
   friction: float
   tension: float
@@ -74,7 +74,7 @@ Provide a default spring configuration on the SpringTo type.
 
 The default friction is 30. The default tension is 342.
 
-```
+```swift
 SpringTo {
   static let defaultConfiguration = SpringConfiguration(friction: 30, tension: 342)
 }

@@ -29,11 +29,9 @@ Example use case: associating a behavior with a target.
 
 Example pseudo-code:
 
-```
-# on drag
+```swift
 runtime.addPlan(matchLocationOf(cursor), named: "drag", to: target)
 
-# on release
 runtime.addPlan(springToLocation(origin), named: "drag", to: target)
 ```
 
@@ -41,10 +39,9 @@ Example use case: removing a behavior from a target.
 
 Example pseudo-code:
 
-```
+```swift
 runtime.addPlan(springToLocation(origin), named: 'spring', to: target)
 
-# later on
 runtime.removePlan(named: 'spring', from: target)
 ```
 
@@ -62,7 +59,7 @@ If one method is implemented, the other must be implemented as well.
 
 Example pseudo-code:
 
-```
+```swift
 protocol NamedPlanPerforming {
   function addPlan(NamedPlan, named: String)
   function removePlan(named: String)
@@ -87,16 +84,16 @@ Note that the plan type must be a `NamedPlan`. Motion family designers use this 
 
 Example pseudo-code:
 
-```
+```swift
 class MotionRuntime {
   function addPlan(NamedPlan, named: String, to: Target)
   function removePlan(named: String, from: Target)
 }
 
-# Associate a named plan with a target.
+// Associate a named plan with a target.
 runtime.addPlan(plan, named: name, to: target)
 
-# Remove any named plan from a target.
+// Remove any named plan from a target.
 runtime.removePlan(named: name, from: target)
 ```
 
@@ -118,11 +115,11 @@ Two things happen when a named plan is added.
 
 Example pseudo-code:
 
-```
-# Step 1
+```swift
+// Step 1
 performerForName(name).removePlan(named: name)
 
-# Step 2
+// Step 2
 performer = performerForPlan(plan)
 performer.add(plan: plan, withName: name)
 performerForName(name) == performer 
@@ -135,7 +132,7 @@ Here are the Performer's expectations for this API.
 
 *Removing a name which was never added before:*
 
-```
+```swift
 let runtime = MotionRuntime()
 runtime.removeNamedPlan("foo")
 ```
@@ -144,7 +141,7 @@ runtime.removeNamedPlan("foo")
 
 *Adding a name which was never added before:*
 
-```
+```swift
 let runtime = MotionRuntime()
 runtime.addNamedPlan(plan, "foo")
 ```
@@ -154,7 +151,7 @@ runtime.addNamedPlan(plan, "foo")
 
 *Adding a name which was added before:*
 
-```
+```swift
 let runtime = MotionRuntime()
 runtime.addNamedPlan(plan, "foo")
 runtime.addNamedPlan(plan2, "foo")

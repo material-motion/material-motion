@@ -37,7 +37,7 @@ runtime.
 
 Example pseudo-code:
 
-```
+```swift
 class ConsoleLoggingTracer: Tracing {
 }
 ```
@@ -49,7 +49,7 @@ Expose an API for configuring whether plan registration events are written to th
 
 This should be **enabled** by default.
 
-```
+```swift
 class ConsoleLoggingTracer {
   var planRegistrationLoggingEnabled = true
 ```
@@ -60,7 +60,7 @@ Expose an API for configuring whether performer events are written to the consol
 
 This should be **disabled** by default.
 
-```
+```swift
 class ConsoleLoggingTracer {
   var performerLoggingEnabled = true
 ```
@@ -69,7 +69,7 @@ class ConsoleLoggingTracer {
 
 A plan should be written to the console with the following format:
 
-```
+```swift
 Plan: <Plan name>
   <property name>: <property type> = <property value>
   <property name>: <property type> = <property value>
@@ -78,7 +78,7 @@ Plan: <Plan name>
 
 Example output (swift):
 
-```
+```swift
 Plan: MDMTween
   keyPath: NSString = position.y
   duration: @ = 0.3

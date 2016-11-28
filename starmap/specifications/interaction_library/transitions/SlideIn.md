@@ -8,17 +8,12 @@ status:
 
 # SlideIn specification
 
-```
+```swift
 import Transitions
 import TransitionTween
 
 class SlideInTransitionDirector: TransitionDirector {
-  let transition: Transition
-  required init(transition: Transition) {
-    self.transition = transition
-  }
-
-  func setUp() {
+  func willBeginTransition(_ transition: Transition) {
     let position = transition.fore.position.y
     let height = transition.fore.height
     let slide = TransitionTween(.positionY,

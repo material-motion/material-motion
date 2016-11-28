@@ -21,7 +21,7 @@ TransitionTween describes tween animations that occur during a transition betwee
 
 ## Contract
 
-```
+```swift
 Plan TransitionTween {
   var property
   var backValue
@@ -80,7 +80,7 @@ Plan TransitionTween {
 
 Provide convenience APIs for describing both back- and foreward segments with one call. For example:
 
-```
+```swift
 transitionTween.segment = .init(position: 0, length: 0.5)
 ```
 
@@ -90,7 +90,7 @@ would initialize `forwardSegment` as the first half and `backwardSegment` as the
 
 A TransitionTweenPerformer will generate different tweens based on the initial direction. Consider the following examples:
 
-```
+```swift
 window = TransitionWindow(duration: 0.4s)
 TransitionTween("opacity",
                 transition: transition,
@@ -101,7 +101,7 @@ TransitionTween("opacity",
 
 When initial direction == forward:
 
-```
+```swift
 let forwardTween = Tween("opacity", duration: 0.1s)
 forwardTween.from = 0
 forwardTween.to = 1
@@ -109,7 +109,7 @@ forwardTween.to = 1
 
 When initial direction == backward:
 
-```
+```swift
 let backwardTween = Tween("opacity", duration: 0.1s)
 backwardTween.delay = 0.3s
 backwardTween.from = 1

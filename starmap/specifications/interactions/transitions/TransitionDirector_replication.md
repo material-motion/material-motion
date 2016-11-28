@@ -16,7 +16,7 @@ This API is not accessible to sub-classes.
 
 Example pseudo-code:
 
-```
+```swift
 TransitionDirector {
   private readonly var replicaController
   init(replicaController)
@@ -28,7 +28,7 @@ Subclasses are expected to set a custom replica controller delegate using this A
 
 Example pseudo-code:
 
-```
+```swift
 TransitionDirector {
   var replicaControllerDelegate
 }

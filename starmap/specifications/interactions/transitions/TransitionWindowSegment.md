@@ -20,7 +20,7 @@ A TransitionWindowSegment represents a specific region in a [TransitionWindow](T
 
 TransitionWindowSegment is a struct type, if the language allows.
 
-```
+```swift
 struct TransitionWindowSegment {
 }
 ```
@@ -31,7 +31,7 @@ Provide two read-writable values for `position` and `length`.
 
 Position and length must be expressed in normalized units from `0...1` inclusively. The sum of these two values must never exceed `1`.
 
-```
+```swift
 struct TransitionWindowSegment {
   var position
   var length
@@ -48,7 +48,7 @@ Assertions:
 
 Provide an API for inverting a segment.
 
-```
+```swift
 TransitionWindowSegment {
   /** Returns a new segment with an inverted position. */
   func inverted() -> TransitionWindowSegment {
@@ -60,7 +60,7 @@ TransitionWindowSegment {
 
 Include an epsilon constant.
 
-```
+```swift
 /** Epsilon for use when comparing TransitionWindowSegment values. */
 let TransitionWindowSegmentEpsilon = 0.00001
 ```

@@ -35,7 +35,7 @@ A PlanEmitter emits plans only for the performer's associated target.
 
 A plan emitter declaration might look like so:
 
-```
+```swift
 protocol PlanEmitter {
   func emitPlan(Plan)
 }
@@ -45,7 +45,7 @@ A performer can be provided with a plan emitter.
 
 Example pseudo-code protocol that a performer could conform to:
 
-```
+```swift
 protocol ComposablePerforming {
   func set(planEmitter: PlanEmitter)
 }
@@ -53,7 +53,7 @@ protocol ComposablePerforming {
 
 Pseudo-code of a performer emitting new plans:
 
-```
+```swift
 function onGesture(gesture) {
   if gesture.state == Ended {
     planEmitter.emitPlan(Spring())

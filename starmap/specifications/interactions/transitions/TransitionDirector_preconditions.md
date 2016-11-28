@@ -16,7 +16,7 @@ A transition can register certain pre-conditions. If any pre-condition fails, th
 
 Example pseudo-code:
 
-```
+```swift
 TransitionDirector {
   preconditions() -> [Precondition] {
     return [Precondition({

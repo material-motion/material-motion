@@ -10,7 +10,7 @@ status:
 
 **Current direction API**: Provide a writable value of the transition's current direction.
 
-```
+```swift
 class Transition {
   var currentDirection: TransitionWindowDirection
 ```

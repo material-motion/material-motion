@@ -19,7 +19,7 @@ To determine whether something is an Interaction or a Plan, consider the number 
 
 Consider the following interaction:
 
-```
+```swift
 Interaction FadeIn {
   func applyTo(target) {
     let plan = Tween("opacity", duration: 0.3)
@@ -32,7 +32,7 @@ Interaction FadeIn {
 
 There is only one target involved here, so we might be better off creating a Plan instead:
 
-```
+```swift
 Plan FadeIn {
   Performer {
     func addPlan(fadeIn) {

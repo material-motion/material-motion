@@ -31,7 +31,7 @@ A gesture recognizer listens to input events and translates them into meaningful
 
 Pseudo-code example:
 
-```
+```swift
 protocol GestureRecognizer {
 }
 ```
@@ -41,7 +41,7 @@ protocol GestureRecognizer {
 A gesture recognizer should expose an API for reading the element to which the recognizer is
 associated.
 
-```
+```swift
 protocol GestureRecognizer {
   let element
 ```
@@ -56,7 +56,7 @@ A gesture recognizer should expose an API for adding objects that will receive s
 
 These observers should be invoked each time the gesture recognizer's state value is written to.
 
-```
+```swift
 protocol GestureRecognizer {
   func addStateChangeObserver(observer)
 ```
@@ -67,7 +67,7 @@ A gesture recognizer should expose an API for changing its enabled state.
 
 A disabled gesture recognizer will not emit any state change events.
 
-```
+```swift
 protocol GestureRecognizer {
   var enabled: Bool
 ```
@@ -76,7 +76,7 @@ protocol GestureRecognizer {
 
 A gesture recognizer can be in any one of the following states:
 
-```
+```swift
 enum GestureRecognizerState {
   case Possible
   case Began
@@ -93,7 +93,7 @@ enum GestureRecognizerState {
 
 A gesture recognizer has a read-only `state` API.
 
-```
+```swift
 protocol GestureRecognizer {
   let state: GestureRecognizerState
 ```
@@ -105,7 +105,7 @@ element's coordinate system.
 
 The method is responsible for converting the touch location to the relevant coordinate system.
 
-```
+```swift
 protocol GestureRecognizer {
   func locationInElement(element: Element) -> Point
 ```

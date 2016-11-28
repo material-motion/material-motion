@@ -12,7 +12,7 @@ Let's walk through the life of a plan.
 
 MotionRuntimes are cheap and easy to create. Many runtimes may exist in an application. Let's create one. We will make use of this object later.
 
-```
+```swift
 runtime = MotionRuntime()
 ```
 
@@ -22,7 +22,7 @@ runtime = MotionRuntime()
 
 All motion in a runtime begins with a plan. Let's create four different types of plan:
 
-```
+```swift
 animation = Tween()
 animation.property = "opacity"
 animation.from = 0
@@ -43,7 +43,7 @@ Let's say we have two targets - a circle and a square - to which we want to asso
 
 Plans are associated to targets:
 
-```
+```swift
 runtime.addPlan(animation, to: circleView)
 runtime.addPlan(draggable, to: squareView)
 runtime.addPlan(pinchable, named: "name1", to: squareView)
@@ -62,7 +62,7 @@ The runtime uses entities called **performers** to execute its plans. A performe
 
 We'll assume a function exists that returns a performer capable of executing a type of plan. The method signature for this method might look like this:
 
-```
+```swift
 function performerForPlan(Plan, target, existingPerformers) -> Performer
 ```
 

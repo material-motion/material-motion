@@ -25,7 +25,7 @@ Enables an element to be rotated about the z axis with a gesture.
 
 Z rotation from the given gesture recognizer is added to the target's `rotation.z`. If no gesture recognizer is provided, then one is created.
 
-```
+```swift
 Plan Rotatable {
   var rotationGestureRecognizer = RotationGestureRecognizer()
 }

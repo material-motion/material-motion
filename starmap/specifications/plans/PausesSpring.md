@@ -24,7 +24,7 @@ Pauses a spring simulation while a gesture recognizer is active.
 
 ## Example: Gestures with springs
 
-```
+```swift
 Interaction DragToOpen {
   let closedPosition = {x: 0, y: 0}
   let openPosition = {x: 0, y: 200}
@@ -72,7 +72,7 @@ Interaction DragToOpen {
 
 ## Contract
 
-```
+```swift
 Plan PausesSpring {
   var property
   var gestureRecognizer: GestureRecognizer
@@ -83,7 +83,7 @@ Plan PausesSpring {
 
 Multiple gesture recognizers can cause a single property to be paused. Consider the following scenario in which a directly-interactive element should stop moving while being dragged, rotated, or scaled:
 
-```
+```swift
 let plans = [
   PausesSpring("position", whileActive: dragGestureRecognizer),
   PausesSpring("position", whileActive: rotationGestureRecognizer),

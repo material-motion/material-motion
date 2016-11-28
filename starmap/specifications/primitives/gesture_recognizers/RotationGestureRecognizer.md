@@ -35,7 +35,7 @@ rotation.
 
 Pseudo-code example:
 
-```
+```swift
 class RotationGestureRecognizer: GestureRecognizer {
 }
 ```
@@ -47,7 +47,7 @@ associated element.
 
 For two-dimensional displays the rotation should be expressed in terms of the z coordinate space.
 
-```
+```swift
 class RotationGestureRecognizer {
   func rotation() -> Number
 ```
@@ -59,7 +59,7 @@ associated element.
 
 TODO: Spec out an implementation for calculating velocity.
 
-```
+```swift
 class RotationGestureRecognizer {
   func velocity() -> Number
 ```
@@ -71,7 +71,7 @@ recognizer begins emitting `Changed` gesture events.
 
 The default value is platform-dependent.
 
-```
+```swift
 class RotationGestureRecognizer {
   var recognitionThreshold: Vector
 ```

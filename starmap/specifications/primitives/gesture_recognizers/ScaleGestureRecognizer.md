@@ -35,7 +35,7 @@ scale.
 
 Pseudo-code example:
 
-```
+```swift
 class ScaleGestureRecognizer: GestureRecognizer {
 }
 ```
@@ -48,7 +48,7 @@ associated element.
 For two-dimensional displays the scale should be expressed in terms of a linear scale applied to
 both the x and y components.
 
-```
+```swift
 class ScaleGestureRecognizer {
   func scale() -> Number
 ```
@@ -60,7 +60,7 @@ associated element.
 
 TODO: Spec out an implementation for calculating velocity.
 
-```
+```swift
 class ScaleGestureRecognizer {
   func velocity() -> Number
 ```
@@ -72,7 +72,7 @@ begins emitting `Changed` gesture events.
 
 The default value is platform-dependent.
 
-```
+```swift
 class ScaleGestureRecognizer {
   var recognitionThreshold: Vector
 ```

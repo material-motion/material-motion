@@ -13,7 +13,7 @@ Let's walk through the life of a simple **fade** transition director.
 
 This object conforms to the `TransitionDirector` type.
 
-```
+```swift
 class FadeTransitionDirector: TransitionDirector {
   let transition: Transition
   init(transition: Transition) {
@@ -26,7 +26,7 @@ class FadeTransitionDirector: TransitionDirector {
 
 Our `setUp` might use a simple [`Tween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/Tween) plan:
 
-```
+```swift
 class FadeTransitionDirector: TransitionDirector {
   function setUp() {
     var tween = Tween(.opacity, duration: transition.window.duration)
@@ -44,7 +44,7 @@ class FadeTransitionDirector: TransitionDirector {
 
 Or [`TransitionTween`](https://material-motion.github.io/material-motion/starmap/specifications/plans/TransitionTween) to reduce the need for conditional logic:
 
-```
+```swift
 class FadeTransitionDirector: TransitionDirector {
   function setUp() {
     var tween = TransitionTween(.opacity,
@@ -65,7 +65,7 @@ This step is platform-specific.
 
 To configure the `present`/`dismiss` transition for a view controller, set the Director on the view controller's `transitionController`:
 
-```
+```swift
 viewController.mdm_transitionController.directorType = typeof(FadeTransitionDirector)
 ```
 

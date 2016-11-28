@@ -14,7 +14,7 @@ Every view controller has its own transition controller. A transition controller
 
 For example:
 
-```
+```swift
 viewController.mdm_transitionController
 ```
 
@@ -26,7 +26,7 @@ Accessing the transition controller will assign it to the view controller's `tra
 
 Assign a TransitionDirector type to the transition controller.
 
-```
+```swift
 viewController.mdm_transitionController.directorType = typeof(FadeTransitionDirector)
 ```
 
@@ -36,7 +36,7 @@ TransitionController uses this value to instantiate a director when a transition
 
 Use standard view controller presentation APIs:
 
-```
+```swift
 present(viewController, animated: true)
 ```
 
@@ -44,7 +44,7 @@ present(viewController, animated: true)
 
 The transition controller creates an instance of the Director when a transition is initiated. The Director must be provided a Transition instance that has been populated with the relevant information.
 
-```
+```swift
 transitionWillStart(initialDirection) {
   let runtime = MotionRuntime()
   runtime.delegate = self

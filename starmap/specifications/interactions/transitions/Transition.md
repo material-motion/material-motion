@@ -22,7 +22,7 @@ A `Transition` defines the essential information required by a `TransitionDirect
 
 Example pseudo-code:
 
-```
+```swift
 class Transition {
 }
 ```
@@ -31,7 +31,7 @@ class Transition {
 
 Expose a read-only MotionRuntime instance.
 
-```
+```swift
 class Transition {
   let runtime: MotionRuntime
 ```
@@ -40,7 +40,7 @@ class Transition {
 
 Expose a read-only value of the transition's window.
 
-```
+```swift
 class Transition {
   let window: TransitionWindow
 ```
@@ -49,7 +49,7 @@ class Transition {
 
 Expose a read-only value of the transition's timeline.
 
-```
+```swift
 class Transition {
   let timeline: Timeline
 ```
@@ -58,7 +58,7 @@ class Transition {
 
 Expose a read-only value of the transition's direction.
 
-```
+```swift
 class Transition {
   let direction: TransitionDirection
 ```
@@ -71,7 +71,7 @@ The type of this value is platform-dependent.
 
 On iOS:
 
-```
+```swift
 class Transition {
   let back: UIViewController
   let fore: UIViewController

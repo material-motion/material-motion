@@ -21,7 +21,7 @@ considering the transition's direction.
 
 Consider the following diagram in which there are two segments:
 
-```
+```swift
 let redSegment = TransitionWindowSegment(position: 0, length: 0.5)
 let greenSegment = TransitionWindowSegment(position: 0, length: 1)
 ```
@@ -30,14 +30,14 @@ let greenSegment = TransitionWindowSegment(position: 0, length: 1)
 
 During a forward transition our segments are mapped to absolute time like so:
 
-```
+```swift
 let delay = segment.position * window.duration
 let duration = segment.length * window.duration
 ```
 
 During a backward transition, our segments are mapped to absolute time like so:
 
-```
+```swift
 let delay = (1 - (segment.position + segment.length)) * window.duration
 let duration = segment.length * window.duration
 ```
@@ -51,7 +51,7 @@ during the **last half** of a backward transition.
 
 A transition window is an object.
 
-```
+```swift
 class TransitionWindow {
 }
 ```
@@ -60,7 +60,7 @@ class TransitionWindow {
 
 A transition window must be created with a duration.
 
-```
+```swift
 class TransitionWindow {
   init(duration)
 ```
@@ -69,7 +69,7 @@ class TransitionWindow {
 
 Expose a read-only API for the window's duration.
 
-```
+```swift
 class TransitionWindow {
   let duration: TimeInterval
 ```

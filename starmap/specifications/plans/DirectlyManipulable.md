@@ -25,7 +25,7 @@ Enables an element to be manipulated with multiple simultaneous touch interactio
 
 Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinched, and rotated.
 
-```
+```swift
 Interaction Sticker {
   let sticker
 
@@ -39,7 +39,7 @@ Interaction Sticker {
 
 Registers [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](Rotatable) to the given target. May be provided with pre-configured gesture recognizer instances.
 
-```
+```swift
 Plan DirectlyManipulable {
   var dragGestureRecognizer = DragGestureRecognizer()
   var scaleGestureRecognizer = ScaleGestureRecognizer()

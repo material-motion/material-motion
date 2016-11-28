@@ -23,7 +23,7 @@ An Observable emits values to its subscribed observers.
 
 Pseudo-code example:
 
-```
+```swift
 class Observable<Value> {
 }
 ```
@@ -32,7 +32,7 @@ class Observable<Value> {
 
 Observers can subscribe to an observable using the `subscribe` API.
 
-```
+```swift
 class Observable<Value> {
   func subscribe(observer: (Value) -> Void) -> Observable<Value>
 ```
@@ -43,7 +43,7 @@ This method should return self so that it can be chained.
 
 Values are sent to the observers via the `onNext` API.
 
-```
+```swift
 class Observable<Value> {
   func onNext(value: Value)
 ```
@@ -55,7 +55,7 @@ value.
 
 Transforms the items emitted by an Observable by applying a function to each item.
 
-```
+```swift
 func map<T>(transform: (Value) -> T) -> Observable<T>
 ```
 
@@ -85,7 +85,7 @@ func map<T>(_ transform: @escaping (Value) -> T) -> Observable<T> {
 
 Emits only those items from an Observable that pass a test.
 
-```
+```swift
 func filter(isIncluded: (Value) -> Bool) -> Observable<Value>
 ```
 

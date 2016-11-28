@@ -28,13 +28,13 @@ A director may implement a `setUp` function. This function is expected to be inv
 
 Example pseudo-code definition:
 
-```
+```swift
 function setUp()
 ```
 
 Example pseudo-code implementation:
 
-```
+```swift
 function setUp() {
   runtime.addPlan(plan, to: targetA)
   runtime.addPlan(plan, to: targetB)

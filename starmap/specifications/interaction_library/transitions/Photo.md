@@ -8,7 +8,7 @@ status:
 
 # Photo specification
 
-```
+```swift
 import Transitions
 
 import DirectManipulation

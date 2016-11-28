@@ -25,7 +25,7 @@ This is the engineering specification for the `TransitionController` object.
 
 Example pseudo-code:
 
-```
+```swift
 TransitionController {
 }
 ```
@@ -49,7 +49,7 @@ Example pseudo-code:
 
 Example pseudo-code:
 
-```
+```swift
 TransitionController {
   function transitionWillStart(initialDirection) {
     let runtime = MotionRuntime()

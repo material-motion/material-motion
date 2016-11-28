@@ -10,7 +10,7 @@ status:
 
 ## Example: Tossable elements
 
-```
+```swift
 Transition TossableElements {
   func setUp() {
     let gestureRecognizer = PanGestureRecognizer()
@@ -26,7 +26,7 @@ Transition TossableElements {
 
 Upon successfull completion of a gesture recognizer, adds the velocity to a property's current velocity.
 
-```
+```swift
 Plan AppliesVelocity {
   var gestureRecognizer
   var property

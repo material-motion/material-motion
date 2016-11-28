@@ -8,17 +8,12 @@ status:
 
 # FadeIn specification
 
-```
+```swift
 import Transitions
 import TransitionTween
 
 class FadeInTransitionDirector: TransitionDirector {
-  let transition: Transition
-  required init(transition: Transition) {
-    self.transition = transition
-  }
-
-  func setUp() {
+  func willBeginTransition(_ transition: Transition) {
     let fadeIn = TransitionTween(.opacity,
                                  transition: transition,
                                  segment: .entire,

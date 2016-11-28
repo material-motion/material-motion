@@ -31,7 +31,7 @@ A `TransitionDirector` creates the plans that shape a transition's motion and in
 
 Example pseudo-code:
 
-```
+```swift
 protocol TransitionDirector
 ```
 
@@ -39,7 +39,7 @@ protocol TransitionDirector
 
 Example pseudo-code:
 
-```
+```swift
 protocol TransitionDirector {
   function willBeginTransition(Transition)
 ```

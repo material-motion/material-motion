@@ -35,7 +35,7 @@ centroid of the events should be used in all calculations.
 
 Pseudo-code example:
 
-```
+```swift
 class DragGestureRecognizer: GestureRecognizer {
 }
 ```
@@ -49,7 +49,7 @@ The translation should be expressed in individual components for platform's avai
 movement. For example, on a touch screen this might be a two-dimensional vector consisting of an
 x and a y translation.
 
-```
+```swift
 class DragGestureRecognizer {
   func translation() -> Vector
 ```
@@ -65,7 +65,7 @@ velocity.
 
 TODO: Spec out an implementation for calculating velocity.
 
-```
+```swift
 class DragGestureRecognizer {
   func velocity() -> Vector
 ```
@@ -77,7 +77,7 @@ recognizer begins emitting `Changed` gesture events.
 
 The default value is platform-dependent.
 
-```
+```swift
 class DragGestureRecognizer {
   var recognitionThreshold: Vector
 ```

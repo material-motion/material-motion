@@ -14,7 +14,7 @@ TransitionSpring describes spring animations that occur during a transition betw
 
 ## Contract
 
-```
+```swift
 Plan TransitionSpring {
   var property
   var backDestination

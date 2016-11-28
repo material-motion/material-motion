@@ -34,7 +34,7 @@ The runtime should provide APIs for adding and removing tracer instances.
 
 Example pseudo-code:
 
-```
+```swift
 class MotionRuntime {
   function addTracer(Tracer)
   function removeTracer(Tracer)
@@ -49,7 +49,7 @@ Provide an abstract type named `Tracer`.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
 }
 ```
@@ -64,7 +64,7 @@ Invoked after `didCreatePerformer:`, if applicable.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
   optional function didAddPlan(Plan, to: Target)
 }
@@ -80,7 +80,7 @@ Invoked after `didCreatePerformer:`, if applicable.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
   optional function didAddPlan(Plan, named: String, to: Target)
 }
@@ -96,7 +96,7 @@ Invoked after `didCreatePerformer:`, if applicable.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
   optional function didRemovePlanNamed(String, from: Target)
 }
@@ -112,7 +112,7 @@ Should be invoked before any corresponding `didAdd*Plan` event.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
   optional function didCreatePerformer(Performer, for: Target)
 }
@@ -128,7 +128,7 @@ Should be invoked before any state change delegates or observers are invoked.
 
 Example pseudo-code:
 
-```
+```swift
 Tracer {
   optional function activityGroupStateDidChange(ActivityGroup)
 }

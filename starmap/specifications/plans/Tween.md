@@ -45,7 +45,7 @@ Tween describes an animation that consists of distinct frames of animation.
 
 ## Contract
 
-```
+```swift
 Plan Tween {
   var property
   var duration

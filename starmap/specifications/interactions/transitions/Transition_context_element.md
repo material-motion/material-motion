@@ -16,7 +16,7 @@ The context element is what that the user interacted with in order to initiate t
 
 Example pseudo-code:
 
-```
+```swift
 Transition {
   readonly var contextElement
 ```

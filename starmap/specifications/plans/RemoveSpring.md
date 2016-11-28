@@ -17,7 +17,7 @@ proposals:
 
 ## Example: Tossable elements
 
-```
+```swift
 Transition TossableElements {
   func gestureDidStart() {
     addPlan(RemoveSpring(from: .layerPosition), to: target)
@@ -29,7 +29,7 @@ Transition TossableElements {
 
 Removes any active spring from the given target's property.
 
-```
+```swift
 Plan RemoveSpring {
   var property
 }

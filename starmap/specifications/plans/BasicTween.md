@@ -31,7 +31,7 @@ availability:
 
 ## Example: Fade in
 
-```
+```swift
 Transition Fade {
   func setUp() {
     runtime.addPlan(
@@ -53,7 +53,7 @@ Transition Fade {
 
 Linearly interpolate a target's property from one value to another using a timing function for velocity.
 
-```
+```swift
 Plan BasicTween {
   var property
   var from

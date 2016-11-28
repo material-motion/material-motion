@@ -36,7 +36,7 @@ We're concerned about three distinct transitions and will write three distinct c
 
 If we wanted `B => C` to fade `C` in and `C => B` to fade `C` out, we might try to write one function that looks like so:
 
-```
+```swift
 let animation = Tween("opacity", duration: transition.duration)
 
 if transition.initialDirection == .forward {
@@ -66,7 +66,7 @@ In a back/fore transition, the above context changes would look like so:
 
 Note that our `back` and `fore` variables now has just two distinct permutations. If we were to write the B/C transitions with these variables our code might look like so:
 
-```
+```swift
 let animation = TweenBetween("opacity",
                              transition: transition,
                              segment: .entire,
