@@ -74,7 +74,7 @@ toc:
                   url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
             - page:
               title: "Streams"
-              url: "/starmap/specifications/primitives/streams"
+              url: "/starmap/specifications/primitives/streams/"
               children:
                 - page:
                   title: "Observable"
