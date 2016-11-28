@@ -49,9 +49,9 @@ When enabled, will only allow drags along the given axis.
 
 ```swift
 enum DraggableAxisLock {
-  case horizontal:
-  case vertical:
-  case none:
+  case horizontal
+  case vertical
+  case none
 }
 Plan Draggable {
   var axisLock: AxisLock
