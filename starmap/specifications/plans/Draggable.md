@@ -51,8 +51,7 @@ When enabled, will only allow drags along the given axis.
 enum DraggableAxisLock {
   case horizontal
   case vertical
-  case none
 }
 Plan Draggable {
-  var axisLock: AxisLock
+  var axisLock: AxisLock?
 ```
