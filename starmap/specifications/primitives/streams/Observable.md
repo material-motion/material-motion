@@ -56,7 +56,8 @@ value.
 Transforms the items emitted by an Observable by applying a function to each item.
 
 ```swift
-func map<T>(transform: (Value) -> T) -> Observable<T>
+class Observable<Value> {
+  func map<T>(transform: (Value) -> T) -> Observable<T>
 ```
 
 Note that the return type has a different associated value, `T`. This allows map to transform both
@@ -86,7 +87,8 @@ func map<T>(_ transform: @escaping (Value) -> T) -> Observable<T> {
 Emits only those items from an Observable that pass a test.
 
 ```swift
-func filter(isIncluded: (Value) -> Bool) -> Observable<Value>
+class Observable<Value> {
+  func filter(isIncluded: (Value) -> Bool) -> Observable<Value>
 ```
 
 A new observable instance should be returned. This instance should have a strong reference to the
