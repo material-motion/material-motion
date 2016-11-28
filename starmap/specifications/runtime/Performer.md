@@ -13,6 +13,10 @@ availability:
     name: iOS
     label: "runtime-objc as of v1.0.0"
     url: https://github.com/material-motion/material-motion-runtime-objc
+  - platform:
+    name: JavaScript
+    label: "material-motion-runtime as of v1.0.0"
+    url: https://www.npmjs.com/package/material-motion-runtime
 ---
 
 # Performer specification
