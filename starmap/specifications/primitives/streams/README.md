@@ -16,21 +16,23 @@ intentionally trimmed the operators down to the bare essentials required for mot
 Streams lean more toward the engineering side of the product development process than the design
 tooling side. The reason for this is because of the heavy use of lambdas to build streams from
 scratch. Lambdas are inherently difficult to introspect and represent in a tool without making other
-trade-offs (performance, platform expectations). *Operators* can be built to reuse lambdas, but
-the Material Motion core engineering team generally prefers to spec out Plan types.
+trade-offs (performance, platform expectations). This being said, streams can be a powerful tool
+for quickly prototyping interactions.
 
-We provide support for Streams in specific Plan types when it provides clear engineering
-productivity value. The direct manipulation family of plans is one such family. Consider the
-following example:
+Consider the exploration of building an axis-locked Draggable interaction. We might use a stream to
+prototype the desired behavior:
 
 ```swift
-// Without streams
-let draggable = Draggable(withGestureRecognizer: pan)
-draggable.axis = .horizontal
+let stream = TranslationObservable(withPanRecognizer: pan)
+  .map { CGPoint(x: 0, y: $0.y) }
+  .subscribe { view.layer.position = $0 }
+```
 
-// With streams
-let stream = TranslationObservable(withPanRecognizer: pan).map { CGPoint(x: 0, y: $0.y) }
-let draggable = Draggable(withStream: stream)
+And eventually propose an update to the Draggable spec:
+
+```
+let draggable = Draggable(withGestureRecognizer: pan)
+draggable.axis = .vertical
 ```
 
 The general work flow we expect to follow is:
