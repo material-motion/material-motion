@@ -45,11 +45,11 @@ In other words, **use streams for prototyping and plans for production**.
 
 ### Generic Observable type
 
-Must provide a single genericized Observable type. This is the starting point for any stream.
+Provide a single genericized Observable type. This is the starting point for any stream.
 
 ### Able to create specific Observable types
 
-It should be possible to create specific Observable types. Common examples:
+Is possible to create specific Observable types. Common examples:
 
 - Gesture recognizer observable.
 
