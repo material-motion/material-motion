@@ -30,7 +30,7 @@ kramdown:
 platforms:
   - Android
   - iOS
-  - Web
+  - JavaScript
 
 google_analytics: UA-80214706-3
 
