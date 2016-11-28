@@ -14,7 +14,7 @@ intentionally trimmed the operators down to the bare essentials required for mot
 ## Streams vs Plans
 
 Streams lean more toward the engineering side of the product development process than the design
-side. The reason for this is because of the heavy use of lambdas to build streams from
+tooling side. The reason for this is because of the heavy use of lambdas to build streams from
 scratch. Lambdas are inherently difficult to introspect and represent in a tool without making other
 trade-offs (performance, platform expectations). *Operators* can be built to reuse lambdas, but
 the Material Motion core engineering team prefers to build serializable Plan types instead.
