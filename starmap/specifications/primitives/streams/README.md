@@ -33,6 +33,14 @@ let stream = TranslationObservable(withPanRecognizer: pan).map { CGPoint(x: 0, y
 let draggable = Draggable(withStream: stream)
 ```
 
+The general work flow we expect to follow is:
+
+1. Rapidly prototype with streams.
+2. Identify common patterns and propose Plan specifications.
+3. Build out the plan specifications.
+
+In other words, **use streams for prototyping and plans for production**.
+
 ## MVP expectations
 
 ### Generic Observable type
