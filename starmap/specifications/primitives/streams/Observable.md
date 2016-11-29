@@ -39,13 +39,13 @@ class Observable<Value> {
 
 This method should return self so that it can be chained.
 
-### onNext API
+### next API
 
-Values are sent to the observers via the `onNext` API.
+Values are sent to the observers via the `next` API.
 
 ```swift
 class Observable<Value> {
-  func onNext(value: Value)
+  func next(value: Value)
 ```
 
 The implementation should enumerate over all registered observers and invoke them with the provided
@@ -76,7 +76,7 @@ func map<T>(_ transform: @escaping (Value) -> T) -> Observable<T> {
   // ensures that a reference to a downstream node will keep the entire stream alive.
   subscribe { [weak downstream] in
     let _ = self
-    downstream?.onNext(value: transform($0))
+    downstream?.next(value: transform($0))
   }
   return downstream
 }
@@ -105,7 +105,7 @@ func filter(_ isIncluded: @escaping (Value) -> Bool) -> Observable<Value> {
   subscribe { [weak downstream] in
     let _ = self
     if isIncluded($0) {
-      downstream?.onNext(value: $0)
+      downstream?.next(value: $0)
     }
   }
   return downstream
