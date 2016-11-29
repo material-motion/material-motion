@@ -72,7 +72,7 @@ class VelocityObservable: Observable<(UIGestureRecognizerState, CGPoint)> {
   }
 
   @objc private func panDidUpdate(gesture: UIPanGestureRecognizer) {
-    onNext(value: (gesture.state, gesture.velocity(in: gesture.view)))
+    next(value: (gesture.state, gesture.velocity(in: gesture.view)))
   }
 }
 
