@@ -67,7 +67,7 @@ Plan Tween {
 
 If `values.length == 1` then the `values[0]` value is treated as the `destination` value of the property.
 
-`offsets` optionally defines the pacing of the animation. Each offset corresponds to its identically-indexed value in the `values` array. Each offset is a floating point number in the range of `[0,1]`. If not provided, each value is assumed to be evenly spaced.
+`offsets` optionally defines the pacing of the animation. Each offset corresponds to its identically-indexed value in the `values` array. Each offset is a floating point number in the range of `[0,1]` and is expected to be absolute and monotonically increasing. If not provided, each value is assumed to be evenly spaced.
 
 `interTimingFunctions` optionally defines the timing functions to be used between any two values. If `values` is of length `n`, then `interTimingFunctions` should be of length `n-1`. If not provided, each timing function is assumed to be linear. If `values.length == 1` then `interTimingFunctions[0]` value is treated as the timing function for the animation.
 
