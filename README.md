@@ -7,6 +7,8 @@ permalink: /
 
 Welcome to the Material Motion documentation site. Please check out the [Starmap](starmap/) for our engineering specification and our [Team](team/) documentation to learn more about our culture.
 
+Current status: **early development**.
+
 [Chat with us on Discord](https://discord.gg/ZJyGXza).
 
 ## Android platform support
