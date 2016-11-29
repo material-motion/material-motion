@@ -41,7 +41,7 @@ This value should be initialized with a default `DragGestureRecognizer` instance
 
 Draggable, Pinchable, and Rotatable can all share the same performer.
 
-# Suggested features
+# Proposed features
 
 ## axis lock
 
