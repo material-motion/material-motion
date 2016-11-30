@@ -65,7 +65,7 @@ Plan Tween {
 
 `values` is an array of objects that each define a single frame of the animation.
 
-If `values.length == 1` then the `values[0]` value is treated as the `destination` value of the property.
+> If `values.length == 1` then the `values[0]` value is treated as the `destination` value of the property.
 
 `offsets` optionally defines the pacing of the animation. Each offset corresponds to its identically-indexed value in the `values` array. Each offset is a floating point number in the range of `[0,1]` and is expected to be absolute and monotonically increasing. If not provided, each value is assumed to be evenly spaced.
 
