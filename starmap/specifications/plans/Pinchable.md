@@ -40,3 +40,7 @@ This value should be initialized with a default `PinchGestureRecognizer` instanc
 ## Performer considerations
 
 Draggable, Pinchable, and Rotatable can all share the same performer.
+
+If a performer is fulfilling Draggable at the same time as Pinchable, then it must modify the anchor point of the view to ensure that the centroid between the user's fingers is untransformed throughout the gesture.
+
+If a performer is not fulfilling Draggable, then it should keep the anchor point of the view at its center.
