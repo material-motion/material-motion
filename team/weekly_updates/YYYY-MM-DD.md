@@ -58,10 +58,11 @@ Legend:
 | - | - | - | - | - |
 | **Interactions**      | **Starmap** | **Apple** | **Android** | **Web** |
 |  Color interpolation  |   |   |    |   |
+|  Modal Dialog         |   |   |    |   |
 |  Parallax scrolling   |   |   |    |   |
+|  Photo transition     |   |   |    |   |
 |  Sentence builder     |   |   |    |   |
 |  Sparkle Dialog       |   |   |    |   |
-|  Photo transition     |   |   |    |   |
 
 ## Starmap
 
