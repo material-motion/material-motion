@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MotionStream
+title: MotionObservable
 status:
   date: December 4, 2016
   is: Draft
