@@ -1,4 +1,4 @@
-{% if page.status or page.availability or page.proposals %}
+{% if page.status or page.availability or page.proposals or page.knowledgelevel %}
 {% if page.status.is == "Stable" %}
 <div class="status status_stable">
 {% else %}
@@ -7,6 +7,22 @@
 <div class="status_content">
 {% if page.status %}
 <div class="overall_status">Specification status: <strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</div>
+{% endif %}
+
+{% if page.knowledgelevel %}
+<div class="knowledge_level">
+<a href="{{ site.url }}/starmap/overview">Knowledge level</a>:
+{% case page.knowledgelevel %}
+  {% when 'L1' %}
+    App Creative
+  {% when 'L2' %}
+    Director Creative
+  {% when 'L3' %}
+    Motion Creative
+  {% else %}
+    Runtime Engineering
+{% endcase %}
+</div>
 {% endif %}
 
 {% if page.availability %}

@@ -22,90 +22,138 @@ This is the engineering specification for the `IndefiniteObservable` object.
 
 ## Overview
 
-An IndefiniteObservable
+IndefiniteObservable is a minimal implementation of [Observable](http://reactivex.io/rxjs/manual/overview.html)
+with no concept of completion or failure.
 
 ## MVP
 
-### Abstract type
+### Generic type
 
-`Performer` is a protocol, if your language has that concept.
+There is a single generic value type: `T`. This is the type of value that can be received from an
+IndefiniteObservable.
 
-Example pseudo-code:
+### IndefiniteObservable object type
 
-    protocol Performer {}
+`IndefiniteObservable` is a class with a single generic type, `T`.
 
-### Not directly configurable
+```swift
+class IndefiniteObservable<T>
+```
 
-Performers do not provide direct configuration methods.
+### Observer object type
 
-Performers can only be configured by providing them with plans.
+`Observer` is a protocol with a `next` method that accepts a `T` value.
 
-### Initialize with target
+```swift
+protocol Observer<T> {
+  var next: (T) -> Void { get }
+}
+```
 
-Performers are initialized with a target.
+### Unsubscribe function type
 
-Example pseudo-code:
+The function signature expected to be returned by a `Subscriber`.
 
-    performer = Performer(target)
+```swift
+typealias Unsubscribe = () -> Void
+```
 
-### Add plan API
+### Subscriber function type
 
-Define an API that allows performers to receive plans.
+A `Subscriber` receives an `Observer` and can optionally return an `Unsubscribe` method.
 
-Example pseudo-code:
+```swift
+typealias Subscriber<T> = (Observer<T>) -> Unsubscribe?
+```
 
-    function addPlan(plan)
+### Subscription object type
 
-### Continuous Performing API
+A representation of a subscription made by invoking `subscribe` on an `IndefiniteObservable`.
 
-Define an optional API that allows performers to indicate when some continuous work has started and when it eventually ends.
+```swift
+protocol Subscription {
+  func unsubscribe()
+}
+```
 
-> The performer may choose not to implement this API.
+### IndefiniteObservable initialization
 
-A continuous performer is responsible for requesting an is-active token and then terminating it once no longer needed. Consider the following examples:
+Requires a `Subscriber` type. Store the subscriber as a private constant variable.
 
-- Generate a token before an animation begins and terminate the token when the animation completes.
-- Generate a token when a gesture begins and terminate the token when the gesture completes.
+```swift
+class IndefiniteObservable<T> {
+  init(subscriber: Subscriber<T>) {
+    self.subscriber = subscriber
+  }
 
-> A runtime is active if at least one is-active token exists that has not yet been terminated, otherwise the runtime is inactive.
+  private let subscriber: Subscriber<T>
+```
 
-Example pseudo-code:
+### Internal SimpleSubscription type
 
-    protocol ContinuousPerforming {
-      function setIsActiveTokenGenerator(tokenGenerator)
+Implement a `SimpleSubscription` class that conforms to `Subscription`.
+
+This class should optionally store an `Unbsubscribe` function.
+
+When the Subscription is deallocated it should invoke unsubscribe.
+
+```swift
+private final class SimpleSubscription: Subscription {
+  deinit {
+    unsubscribe()
+  }
+
+  init(_ unsubscribe: Unbsubscribe) {
+    _unsubscribe = unsubscribe
+  }
+
+  init() {
+    _unsubscribe = nil
+  }
+
+  func unsubscribe() {
+    _unsubscribe?()
+    _unsubscribe = nil
+  }
+
+  private var _unsubscribe: Unbsubscribe?
+}
+```
+
+### AnyObserver type
+
+Provide an `AnyObserver` class that conforms to `Observer`. It must be initialized with a next
+function.
+
+```
+public final class AnyObserver<T>: Observer {
+  public typealias Value = T
+
+  public init(_ next: @escaping (T) -> Void) {
+    self.next = next
+  }
+
+  public let next: (T) -> Void
+}
+```
+
+### IndefiniteObservable.subscribe
+
+Expose a `subscribe` API on `IndefiniteObservable` that accepts a `next` function and returns a
+`Subscription`.
+
+`subscribe` should invoke `self.subscriber` with the provided observer. The returned subscription
+is optional and should be wrapped in a `SimpleSubscription` instance before being returned because
+`subscribe` must always return a valid Subscription.
+
+```swift
+class IndefiniteObservable<T> {
+  func subscribe(next: (T) -> Void) -> Subscription {
+    let observer = AnyObserver<T>(next)
+    if let subscription = self.subscriber(observer) {
+      return SimpleSubscription(subscription)
+    } else {
+      return SimpleSubscription()
     }
-    
-    class IsActiveTokenGenerator {
-      function generate() -> IsActiveToken
-    }
-    
-    class IsActiveToken {
-      function terminate()
-    }
-
----
-
-## Proposed features
-
-### Manual execution
-
-A performer can choose to implement an update function that will be called many times per second.
-
-**Manual execution API**: Define an optional API that allows performers to implement an update function.
-
-> The performer may choose not to implement this API.
-
-The update function will be called each time the platform will draw a new frame. The performer may use this method to perform time-based calculations. The performer is **not** expected to perform any rendering during this update event.
-
-The method returns an activity state enumeration. This enumeration has two states: active and at rest.
-
-Example pseudo-code:
-
-    enum ActivityState {
-      .Active
-      .AtRest
-    }
-    
-    protocol ManualPerforming {
-      function update(millisecondsSinceLastUpdate) -> ActivityState
-    }
+  }
+```
