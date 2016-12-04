@@ -1,17 +1,22 @@
-{% if page.status or page.availability or page.proposals or page.knowledgelevel %}
+{% if page.status or page.availability or page.proposals or page.knowledgelevel or page.library %}
 {% if page.status.is == "Stable" %}
 <div class="status status_stable">
 {% else %}
 <div class="status">
 {% endif %}
 <div class="status_content">
-{% if page.status %}
-<div class="overall_status">Specification status: <strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</div>
-{% endif %}
 
+{% if page.status or page.knowledgelevel or page.library %}
+<table class="platform_table">
+  <thead><tr>
+{% if page.status %}<td>Specification status</td>{% endif %}
+{% if page.knowledgelevel %}<td><a href="{{ site.url }}/starmap/overview">Knowledge level</a></td>{% endif %}
+{% if page.library %}<td>Library</td>{% endif %}
+</tr></thead>
+<tr>
+{% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
 {% if page.knowledgelevel %}
-<div class="knowledge_level">
-<a href="{{ site.url }}/starmap/overview">Knowledge level</a>:
+<td>
 {% case page.knowledgelevel %}
   {% when 'L1' %}
     App Creative
@@ -22,7 +27,11 @@
   {% else %}
     Runtime Engineering
 {% endcase %}
-</div>
+</td>
+{% endif %}
+{% if page.library %}<td>{{ page.library }}</td>{% endif %}
+</tr>
+</table>
 {% endif %}
 
 {% if page.availability %}

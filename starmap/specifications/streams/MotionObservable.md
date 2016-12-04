@@ -5,6 +5,7 @@ status:
   date: December 4, 2016
   is: Draft
 knowledgelevel: L4
+library: streams
 ---
 
 # MotionObservable specification
@@ -22,8 +23,8 @@ the addition of `active` to the `Observer` type.
 
 Fork the `IndefiniteObservable` implementation.
 
-**Do not depend on `IndefiniteObservable`.** `IndefiniteObservable` and `MotionObservable` are
-incompatible types.
+**Do not depend on or subclass `IndefiniteObservable`.** `IndefiniteObservable` and
+`MotionObservable` are incompatible types.
 
 Replace all API references of Indefinite with Motion:
 

@@ -5,6 +5,7 @@ status:
   date: December 4, 2016
   is: Stable
 knowledgelevel: L4
+library: indefinite-observable
 availability:
   - platform:
     name: iOS
