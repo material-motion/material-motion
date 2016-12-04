@@ -125,7 +125,7 @@ private final class SimpleSubscription: Subscription {
 Provide an `AnyObserver` class that conforms to `Observer`. It must be initialized with a next
 function.
 
-```
+```swift
 public final class AnyObserver<T>: Observer {
   public typealias Value = T
 
