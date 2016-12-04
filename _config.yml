@@ -263,6 +263,13 @@ toc:
         - page:
           title: "Experiments"
         - page:
+          title: "Streams"
+          url: "/starmap/specifications/streams/"
+          children:
+            - page:
+              title: "IndefiniteObservable"
+              url: "/starmap/specifications/streams/IndefiniteObservable"
+        - page:
           title: "Domain mapping"
           url: "/starmap/specifications/domain_mapping"
         - page:
