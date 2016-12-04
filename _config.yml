@@ -269,6 +269,9 @@ toc:
             - page:
               title: "IndefiniteObservable"
               url: "/starmap/specifications/streams/IndefiniteObservable"
+            - page:
+              title: "MotionObservable"
+              url: "/starmap/specifications/streams/MotionObservable"
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/domain_mapping"

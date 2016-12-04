@@ -37,7 +37,7 @@ IndefiniteObservable.
 `IndefiniteObservable` is a class with a single generic type, `T`.
 
 ```swift
-class IndefiniteObservable<T>
+public final class IndefiniteObservable<T>
 ```
 
 ### Observer object type
@@ -45,7 +45,7 @@ class IndefiniteObservable<T>
 `Observer` is a protocol with a `next` method that accepts a `T` value.
 
 ```swift
-protocol Observer<T> {
+public protocol Observer<T> {
   var next: (T) -> Void { get }
 }
 ```
@@ -55,7 +55,7 @@ protocol Observer<T> {
 The function signature expected to be returned by a `Subscriber`.
 
 ```swift
-typealias Unsubscribe = () -> Void
+public typealias Unsubscribe = () -> Void
 ```
 
 ### Subscriber function type
@@ -63,7 +63,7 @@ typealias Unsubscribe = () -> Void
 A `Subscriber` receives an `Observer` and can optionally return an `Unsubscribe` method.
 
 ```swift
-typealias Subscriber<T> = (Observer<T>) -> Unsubscribe?
+public typealias Subscriber<T> = (Observer<T>) -> Unsubscribe?
 ```
 
 ### Subscription object type
@@ -71,7 +71,7 @@ typealias Subscriber<T> = (Observer<T>) -> Unsubscribe?
 A representation of a subscription made by invoking `subscribe` on an `IndefiniteObservable`.
 
 ```swift
-protocol Subscription {
+public protocol Subscription {
   func unsubscribe()
 }
 ```
