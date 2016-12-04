@@ -53,8 +53,8 @@ We use the following rules for accepting contributions.
 
 Each core contributor has a specific focus area.
 
-| GitHub Account | Platform |
-|:-------|:------|
-| [appsforartists](https://github.com/appsforartists) | JavaScript, Web |
-| [featherless](https://github.com/jverkoey) | iOS, macOS, project lead |
-| [pingpongboss](https://github.com/pingpongboss) | Android |
+| [![appsforartists](https://avatars0.githubusercontent.com/u/926648?v=3&s=175)](https://github.com/appsforartists) | [![featherless](https://avatars0.githubusercontent.com/u/45670?v=3&s=175)](https://github.com/jverkoey) | [![pingpongboss](https://avatars0.githubusercontent.com/u/719914?v=3&s=175)](https://github.com/pingpongboss) |
+|:-----------------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------:|:-------------------------------------------------------------------------------------------------------------:|
+|                                                  Brenton Simpson                                                  |                                              Jeff Verkoeyen                                             |                                                    Mark Wei                                                   |
+|                                [appsforartists](https://github.com/appsforartists)                                |                                [featherless](https://github.com/jverkoey)                               |                                [pingpongboss](https://github.com/pingpongboss)                                |
+|                                                    JavaScript, Web                                                    |                                         iOS, macOS, **project lead**                                        |                                                      Android                                                      |
