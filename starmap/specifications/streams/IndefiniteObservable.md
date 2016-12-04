@@ -89,9 +89,11 @@ class IndefiniteObservable<T> {
   private let subscriber: Subscriber<T>
 ```
 
-### Internal SimpleSubscription type
+### Private SimpleSubscription type
 
 Implement a `SimpleSubscription` class that conforms to `Subscription`.
+
+This class should be **private**.
 
 This class should optionally store an `Unbsubscribe` function.
 
