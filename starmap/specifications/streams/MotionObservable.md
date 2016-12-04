@@ -22,8 +22,8 @@ the addition of `active` to the `Observer` type.
 
 Fork the `IndefiniteObservable` implementation.
 
-**Do not depend on IndefiniteObservable.** We do not currently have a clear support path for adding
-additional methods to the Observer type.
+**Do not depend on `IndefiniteObservable`.** `IndefiniteObservable` and `MotionObservable` are
+incompatible types.
 
 Replace all API references of Indefinite with Motion:
 
