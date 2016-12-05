@@ -14,7 +14,7 @@ This is the engineering specification for the `Property` object type.
 
 ## Overview
 
-A `Property` provides a read/write abstraction for a given object.
+A `Property` provides a serializable read/write abstraction for a given object.
 
 Example usage in Swift:
 
