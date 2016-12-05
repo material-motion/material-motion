@@ -76,7 +76,7 @@ class OP {
 
 Example output (iOS):
 
-```
+```swift
 drag(: UIPanGestureRecognizer::ObjectIdentifier(0x00007ff41321bdd0))
   .state(is: .ended)
   .velocity(in: UIView::ObjectIdentifier(0x00007ff41321ba90))
