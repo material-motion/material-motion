@@ -5,6 +5,7 @@ status:
   date: Nov 20, 2016
   is: Draft
 knowledgelevel: L2
+library: transition-spring
 depends_on:
   - /starmap/specifications/runtime/Plan
   - /starmap/specifications/plans/SpringTo

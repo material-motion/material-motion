@@ -5,6 +5,7 @@ status:
   date: Oct 18, 2016
   is: Stable
 knowledgelevel: L2
+library: spring
 depends_on:
   - /starmap/specifications/runtime/Plan
 proposals:

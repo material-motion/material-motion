@@ -3,6 +3,9 @@ layout: page
 title: Target selectors
 knowledgelevel: L3
 library: runtime
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/runtime/Performer
 status:
   date: Oct 25, 2016
   is: Drafting

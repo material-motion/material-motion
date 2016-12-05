@@ -25,11 +25,6 @@ availability:
 
 This is the engineering specification for the `Performer` abstract type.
 
-## Features
-
-- [Named plans](named-plans)
-- [Composition](Performer-composition)
-
 ## Overview
 
 Performers are the objects responsible for executing plans.

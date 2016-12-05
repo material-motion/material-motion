@@ -5,6 +5,7 @@ status:
   date: Oct 18, 2016
   is: Stable
 knowledgelevel: L2
+library: direct-manipulation
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer

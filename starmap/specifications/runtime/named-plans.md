@@ -6,6 +6,9 @@ status:
   is: Stable
 knowledgelevel: L3
 library: runtime
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/runtime/Performer
 availability:
   - platform:
     name: Android

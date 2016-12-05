@@ -5,6 +5,7 @@ status:
   date: Nov 16, 2016
   is: Approved
 knowledgelevel: L2
+library: spring
 depends_on:
   - /starmap/specifications/runtime/Plan
   - /starmap/specifications/plans/SpringTo

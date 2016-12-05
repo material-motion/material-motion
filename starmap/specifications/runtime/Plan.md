@@ -25,10 +25,6 @@ availability:
 
 This is the engineering specification for the `Plan` abstract type.
 
-## Features
-
-- [Serialization](../serialization)
-
 ## Overview
 
 A plan is an object representing **what you want something to do** or **how you want it to behave**.

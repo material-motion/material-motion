@@ -5,6 +5,7 @@ status:
   date: Nov 1, 2016
   is: Stable
 knowledgelevel: L2
+library: tween
 depends_on:
   - /starmap/specifications/runtime/Plan
   - /starmap/specifications/plans/Tween
