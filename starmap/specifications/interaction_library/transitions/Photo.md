@@ -4,6 +4,15 @@ title: Photo
 status:
   date: Nov 16, 2016
   is: Draft
+knowledgelevel: L1
+library: transitions-catalog
+depends_on:
+  - /starmap/specifications/intereactions/transitions/Transition
+  - /starmap/specifications/plans/AppliesVelocity
+  - /starmap/specifications/plans/Draggable
+  - /starmap/specifications/plans/PausesSpring
+  - /starmap/specifications/plans/TransitionTween
+  - /starmap/specifications/plans/TransitionSpring
 ---
 
 # Photo specification
