@@ -96,7 +96,7 @@ Implement a `SimpleSubscription` class that conforms to `Subscription`.
 
 This class should be **private**.
 
-This class should optionally store an `Unbsubscribe` function.
+This class should optionally store an `Unsubscribe` function.
 
 When the Subscription is deallocated it should invoke unsubscribe.
 
@@ -106,7 +106,7 @@ private final class SimpleSubscription: Subscription {
     unsubscribe()
   }
 
-  init(_ unsubscribe: Unbsubscribe) {
+  init(_ unsubscribe: Unsubscribe) {
     _unsubscribe = unsubscribe
   }
 
@@ -119,7 +119,7 @@ private final class SimpleSubscription: Subscription {
     _unsubscribe = nil
   }
 
-  private var _unsubscribe: Unbsubscribe?
+  private var _unsubscribe: Unsubscribe?
 }
 ```
 
