@@ -17,13 +17,20 @@
 
 <table class="platform_table">
   <thead><tr>
-{% if page.status %}<td>Specification status</td>{% endif %}
-{% if page.knowledgelevel %}<td><a href="{{ site.url }}/starmap/overview">Knowledge level</a></td>{% endif %}
-{% if page.library %}<td>Library</td>{% endif %}
-{% if page.depends_on %}<td>Depends on</td>{% endif %}
-{% if children.size > 0 %}<td>Features</td>{% endif %}
+{% if page.depends_on %}<th>Depends on</th>{% endif %}
+{% if page.status %}<th>Specification status</th>{% endif %}
+{% if page.knowledgelevel %}<th><a href="{{ site.url }}/starmap/overview">Knowledge level</a></th>{% endif %}
+{% if page.library %}<th>Library</th>{% endif %}
+{% if children.size > 0 %}<th>Features</th>{% endif %}
 </tr></thead>
 <tr>
+{% if page.depends_on %}
+<td>
+  {% for dependency in page.depends_on %}
+    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
+  {% endfor %}
+</td>
+{% endif %}
 {% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
 {% if page.knowledgelevel %}
 <td>
@@ -41,13 +48,6 @@
 </td>
 {% endif %}
 {% if page.library %}<td>{{ page.library }}</td>{% endif %}
-{% if page.depends_on %}
-<td>
-  {% for dependency in page.depends_on %}
-    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
-  {% endfor %}
-</td>
-{% endif %}
 {% if children.size > 0 %}
 <td>
   {% for child in children %}
@@ -62,9 +62,9 @@
 {% if page.availability %}
 <table class="platform_table">
   <thead><tr>
-    <td></td>
+    <th></th>
     {% for platform in page.availability %}
-    <td>{{ platform.name }}</td>
+    <th>{{ platform.name }}</th>
     {% endfor %}
   </tr></thead>
   <tbody><tr>
@@ -78,7 +78,7 @@
 {% endif %}
 {% if page.proposals %}
 <table class="status_table">
-  <thead><tr><td>Proposal</td><td>Current Status</td><td>Initiation date</td><td>Completion date</td></tr></thead>
+  <thead><tr><th>Proposal</th><th>Current Status</th><th>Initiation date</th><th>Completion date</th></tr></thead>
   <tbody>
     {% for proposal in page.proposals %}
     <tr>
