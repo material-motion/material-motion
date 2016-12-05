@@ -40,7 +40,7 @@ let _ = observable.subscribe { value in
 
 // Example operators:
 extension IndefiniteObservable {
-  public func _operator<U>(_ work: (AnyObserver<U>, T) -> Void) -> IndefiniteObservable<U> {
+  public func _operator<U>(_ work: (ValueObserver<U>, T) -> Void) -> IndefiniteObservable<U> {
     return IndefiniteObservable<U>(self.op.with(op.name, args: op.args)) { observer in
       return self.subscribe(next: {
         work(observer, $0)
@@ -161,13 +161,13 @@ private final class SimpleSubscription: Subscription {
 }
 ```
 
-### AnyObserver type
+### ValueObserver type
 
-Provide an `AnyObserver` class that conforms to `Observer`. It must be initialized with a next
+Provide a `ValueObserver` class that conforms to `Observer`. It must be initialized with a next
 function.
 
 ```swift
-public final class AnyObserver<T>: Observer {
+public final class ValueObserver<T>: Observer {
   public typealias Value = T
 
   public init(_ next: (T) -> Void) {
@@ -190,7 +190,7 @@ is optional and should be wrapped in a `SimpleSubscription` instance before bein
 ```swift
 class IndefiniteObservable<T> {
   func subscribe(next: (T) -> Void) -> Subscription {
-    let observer = AnyObserver<T>(next)
+    let observer = ValueObserver<T>(next)
     if let subscription = self.subscriber(observer) {
       return SimpleSubscription(subscription)
     } else {
