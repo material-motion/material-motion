@@ -297,6 +297,9 @@ toc:
                - page:
                  title: "ReadonlyProperty"
                  url: "/starmap/specifications/streams/properties/ReadonlyProperty"
+            - page:
+              title: "MotionAggregator"
+              url: "/starmap/specifications/streams/MotionAggregator"
         - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"

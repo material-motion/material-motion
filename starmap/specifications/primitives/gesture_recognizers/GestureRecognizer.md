@@ -2,13 +2,15 @@
 layout: page
 title: GestureRecognizer
 status:
-  date: November 7, 2016
-  is: Draft
+  date: December 4, 2016
+  is: Stable
+knowledgelevel: L2
+library: gestures
 availability:
   - platform:
     name: Android
-    label: Milestone
-    url: https://github.com/material-motion/family-direct-manipulation-android/milestone/1
+    label: "gestures-android as of v1.0.0"
+    url: https://github.com/material-motion/gestures-android/releases/tag/1.0.0
   - platform:
     name: iOS
     label: "iOS SDK 3.2+"
