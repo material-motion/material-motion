@@ -44,14 +44,14 @@
 {% if page.depends_on %}
 <td>
   {% for dependency in page.depends_on %}
-    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>
+    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
   {% endfor %}
 </td>
 {% endif %}
 {% if children.size > 0 %}
 <td>
   {% for child in children %}
-    <a href="{{ site.url}}{{ child }}">{{ child | split: '/' | last }}</a>
+    <a href="{{ site.url}}{{ child }}">{{ child | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
   {% endfor %}
 </td>
 {% endif %}
