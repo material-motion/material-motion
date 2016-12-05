@@ -26,38 +26,17 @@ Fork the `IndefiniteObservable` implementation.
 **Do not depend on or subclass `IndefiniteObservable`.** `IndefiniteObservable` and
 `MotionObservable` are incompatible types.
 
-Replace all API references of Indefinite with Motion:
+Replace all API references of Indefinite/Next with Motion:
 
 - `IndefiniteObservable -> MotionObservable`
-- `Observer -> MotionObserver`
-- `MotionSubscription -> MotionSubscription`
-- `AnyObserver -> AnyMotionObserver`
-- `SimpleSubscription -> SimpleMotionSubscription`
+- `NextObserver -> MotionObserver`
 
 ### Add active to the MotionObserver API
-
-The method signature for active should accept a `Bool` and return nothing:
-
-```swift
-var active: (Bool) -> Void { get }
-```
-
-What the `MotionObserver` should look like:
-
-```swift
-public protocol MotionObserver {
-  associatedtype Value
-  var next: (Value) -> Void { get }
-  var active: (Bool) -> Void { get }
-}
-```
-
-### Add active to the AnyMotionObserver API
 
 What the `AnyMotionObserver` should look like:
 
 ```swift
-public final class AnyMotionObserver<T>: MotionObserver {
+public final class MotionObserver<T>: MotionObserver {
   public typealias Value = T
 
   public init(_ next: @escaping (T) -> Void, active: @escaping (Bool) -> Void) {
