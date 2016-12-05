@@ -48,22 +48,18 @@ class OP {
   }
 ```
 
-### Provide creator methods
+### Expose with API
 
-Expose methods that create a new OP with self as its parent.
+Expose a `with` method that creates a new OP with self as its parent.
 
 ```swift
 class OP {
   public func with(_ name: String, args: [Any]? = nil) -> OP {
     return .init(name, args: args, parent: self)
   }
-
-  public func with(_ op: OP) -> OP {
-    return .init(op.name, args: op.args, parent: self)
-  }
 ```
 
-### Provide debug description method
+### Expose debug description API
 
 Expose a debug description method. The implementation should traverse the parent OPs and construct
 a string represenation of the operator.
