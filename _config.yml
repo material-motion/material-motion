@@ -272,6 +272,10 @@ toc:
             - page:
               title: "MotionObservable"
               url: "/starmap/specifications/streams/MotionObservable"
+              children:
+               - page:
+                 title: "OP"
+                 url: "/starmap/specifications/streams/MotionObservable-OP"
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/domain_mapping"

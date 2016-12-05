@@ -1,4 +1,4 @@
-{% if page.status or page.availability or page.proposals or page.knowledgelevel or page.library %}
+{% if page.status or page.availability or page.proposals or page.knowledgelevel or page.library or page.depends_on %}
 {% if page.status.is == "Stable" %}
 <div class="status status_stable">
 {% else %}
@@ -6,12 +6,22 @@
 {% endif %}
 <div class="status_content">
 
-{% if page.status or page.knowledgelevel or page.library %}
+{% if page.status or page.knowledgelevel or page.library or page.depends_on %}
+
+{% assign children = "" | split: "" %}
+{% for subpage in site.pages %}
+{% if subpage.depends_on contains page.url %}
+{% assign children = children | push: subpage.url %}
+{% endif %}
+{% endfor %}
+
 <table class="platform_table">
   <thead><tr>
 {% if page.status %}<td>Specification status</td>{% endif %}
 {% if page.knowledgelevel %}<td><a href="{{ site.url }}/starmap/overview">Knowledge level</a></td>{% endif %}
 {% if page.library %}<td>Library</td>{% endif %}
+{% if page.depends_on %}<td>Depends on</td>{% endif %}
+{% if children.size > 0 %}<td>Enables</td>{% endif %}
 </tr></thead>
 <tr>
 {% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
@@ -30,6 +40,20 @@
 </td>
 {% endif %}
 {% if page.library %}<td>{{ page.library }}</td>{% endif %}
+{% if page.depends_on %}
+<td>
+  {% for dependency in page.depends_on %}
+    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>
+  {% endfor %}
+</td>
+{% endif %}
+{% if children.size > 0 %}
+<td>
+  {% for child in children %}
+    <a href="{{ site.url}}{{ child }}">{{ child | split: '/' | last }}</a>
+  {% endfor %}
+</td>
+{% endif %}
 </tr>
 </table>
 {% endif %}

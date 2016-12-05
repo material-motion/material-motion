@@ -17,6 +17,10 @@ This is the engineering specification for the `MotionObservable` object.
 `MotionObservable` has a similar shape to [`IndefiniteObservable`](IndefiniteObservable), but with
 the addition of `active` to the `Observer` type.
 
+## Features
+
+- [`OP`](MotionObservable-OP)
+
 ## MVP
 
 ### Fork the IndefiniteObservable implementation
