@@ -74,6 +74,15 @@ class OP {
   }
 ```
 
+Example stream:
+
+```swift
+drag(pan)
+  .state(is: .ended)
+  .velocity(in: view).y()
+  .writeTo(spring$.initialVelocity, of: spring$)
+```
+
 Example output (iOS):
 
 ```swift
