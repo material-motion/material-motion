@@ -36,6 +36,29 @@ class MotionAggregator<T>: MotionObservable<T> {
   public init(named name: String? = nil)
 ```
 
+### Subscriber implementation
+
+The subscriber implementation should add and remove observers to a shared observers set.
+
+Depending on your language you may need to create a local version of the variable first, assign it
+to self, and then refer to the locally-scoped variable in the callback.
+
+```swift
+class MotionAggregator<T>: MotionObservable<T> {
+  public init(named name: String? = nil) {
+    self.name = name
+
+    let observers = NSMutableSet()
+    self.observers = observers
+    super.init(OP("\(type(of: self))")) { observer in
+      observers.add(observer)
+      return {
+        observers.remove(observer)
+      }
+    }
+  }
+```
+
 ### Expose Token type
 
 Represents a globally unique value.
