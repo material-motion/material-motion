@@ -59,7 +59,7 @@ public class Property<O, T> {
   public let read: Read
   public let write: Write
 
-  init(_ name: String, readBlock: Read, writeBlock: Write) {
+  init(_ name: String, read: Read, write: Write) {
     self.name = name
     self.read = read
     self.write = write
