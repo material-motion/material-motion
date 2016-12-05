@@ -27,6 +27,7 @@
 {% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
 {% if page.knowledgelevel %}
 <td>
+{{ page.knowledgelevel }}: 
 {% case page.knowledgelevel %}
   {% when 'L1' %}
     App Creative
