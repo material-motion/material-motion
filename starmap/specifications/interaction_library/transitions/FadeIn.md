@@ -7,7 +7,7 @@ status:
 knowledgelevel: L1
 library: transitions-catalog
 depends_on:
-  - /starmap/specifications/intereactions/transitions/Transition
+  - /starmap/specifications/interactions/transitions/Transition
   - /starmap/specifications/plans/TransitionTween
 ---
 
