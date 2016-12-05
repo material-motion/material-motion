@@ -73,10 +73,6 @@ toc:
             - page:
               title: "Streams"
               url: "/starmap/specifications/primitives/streams/"
-              children:
-                - page:
-                  title: "Observable"
-                  url: "/starmap/specifications/primitives/streams/Observable"
             - page:
               title: "Timeline"
               url: "/starmap/specifications/primitives/Timeline"

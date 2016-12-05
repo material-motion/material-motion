@@ -5,6 +5,8 @@ permalink: /starmap/specifications/runtime/MotionRuntime/tracing/
 status:
   date: Oct 13, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/MotionRuntime/
 knowledgelevel: L4
 library: runtime
 availability:

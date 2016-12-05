@@ -6,6 +6,8 @@ status:
   is: Stable
 knowledgelevel: L2
 library: runtime
+depends_on:
+  - /starmap/specifications/runtime/MotionRuntime/tracing/
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016

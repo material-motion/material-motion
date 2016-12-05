@@ -4,6 +4,9 @@ title: MotionRuntime
 permalink: /starmap/specifications/runtime/MotionRuntime/
 knowledgelevel: L4
 library: runtime
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/runtime/Performer
 status:
   date: July 8, 2016
   is: Stable
