@@ -29,24 +29,36 @@ with no concept of completion or failure.
 ## Examples
 
 ```
-public func _operator<U>(_ work: (AnyObserver<U>, T) -> Void) -> IndefiniteObservable<U> {
-  return IndefiniteObservable<U>(self.op.with(op.name, args: op.args)) { observer in
-    return self.subscribe(next: {
-      work(observer, $0)
-    }).unsubscribe
-  }
+let observable = IndefiniteObservable<Int> { observer in
+  observer.next(10)
+  return noUnsubscription
 }
 
-public func _map<U>(_ op: OP, _ transform: (T) -> U) -> IndefiniteObservable<U> {
-  return _operator(op) { observer, value in
-    observer.next(transform(value))
-  }
+let _ = observable.subscribe { value in
+  print(value)
 }
 
-public func _filter(_ op: OP, _ isIncluded: (T) -> Bool) -> IndefiniteObservable<T> {
-  return _operator(op) { observer, value in
-    if isIncluded(value) {
-      observer.next(value)
+// Example operators:
+extension IndefiniteObservable {
+  public func _operator<U>(_ work: (AnyObserver<U>, T) -> Void) -> IndefiniteObservable<U> {
+    return IndefiniteObservable<U>(self.op.with(op.name, args: op.args)) { observer in
+      return self.subscribe(next: {
+        work(observer, $0)
+      }).unsubscribe
+    }
+  }
+
+  public func _map<U>(_ op: OP, _ transform: (T) -> U) -> IndefiniteObservable<U> {
+    return _operator(op) { observer, value in
+      observer.next(transform(value))
+    }
+  }
+
+  public func _filter(_ op: OP, _ isIncluded: (T) -> Bool) -> IndefiniteObservable<T> {
+    return _operator(op) { observer, value in
+      if isIncluded(value) {
+        observer.next(value)
+      }
     }
   }
 }
