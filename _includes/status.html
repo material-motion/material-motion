@@ -6,31 +6,14 @@
 {% endif %}
 <div class="status_content">
 
-{% if page.status or page.knowledgelevel or page.library or page.depends_on %}
-
-{% assign children = "" | split: "" %}
-{% for subpage in site.pages %}
-{% if subpage.depends_on contains page.url %}
-{% assign children = children | push: subpage.url %}
-{% endif %}
-{% endfor %}
-
+{% if page.status or page.knowledgelevel or page.library %}
 <table class="platform_table">
   <thead><tr>
-{% if page.depends_on %}<th>Depends on</th>{% endif %}
 {% if page.status %}<th>Specification status</th>{% endif %}
 {% if page.knowledgelevel %}<th><a href="{{ site.url }}/starmap/overview">Knowledge level</a></th>{% endif %}
 {% if page.library %}<th>Library</th>{% endif %}
-{% if children.size > 0 %}<th>Features</th>{% endif %}
 </tr></thead>
 <tr>
-{% if page.depends_on %}
-<td>
-  {% for dependency in page.depends_on %}
-    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
-  {% endfor %}
-</td>
-{% endif %}
 {% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
 {% if page.knowledgelevel %}
 <td>
@@ -48,16 +31,44 @@
 </td>
 {% endif %}
 {% if page.library %}<td>{{ page.library }}</td>{% endif %}
+</tr>
+</table>
+{% endif %}
+
+{% if page.status %}
+{% assign children = "" | split: "" %}
+{% for subpage in site.pages %}
+{% if subpage.depends_on contains page.url %}
+{% assign children = children | push: subpage.url %}
+{% endif %}
+{% endfor %}
+
+{% if page.depends_on or children.size > 0 %}
+<table class="dependency_table">
+<tbody><tr>
+{% if page.depends_on %}
+<td>
+  {% for dependency in page.depends_on %}
+    <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
+  {% endfor %}
+</td>
+<td>&rarr;</td>
+{% endif %}
+<td><strong>{{ page.title }}</strong></td>
 {% if children.size > 0 %}
+<td>&rarr;</td>
 <td>
   {% for child in children %}
     <a href="{{ site.url}}{{ child }}">{{ child | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
   {% endfor %}
 </td>
 {% endif %}
-</tr>
+</tr></tbody>
 </table>
 {% endif %}
+
+{% endif %}
+
 
 {% if page.availability %}
 <table class="platform_table">
