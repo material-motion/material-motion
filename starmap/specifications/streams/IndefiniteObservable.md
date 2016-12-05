@@ -132,7 +132,7 @@ function.
 public final class AnyObserver<T>: Observer {
   public typealias Value = T
 
-  public init(_ next: @escaping (T) -> Void) {
+  public init(_ next: (T) -> Void) {
     self.next = next
   }
 
