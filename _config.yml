@@ -276,6 +276,13 @@ toc:
                - page:
                  title: "OP"
                  url: "/starmap/specifications/streams/MotionObservable-OP"
+            - page:
+              title: "Operators"
+              url: "/starmap/specifications/streams/operators/"
+              children:
+               - page:
+                 title: "_operator"
+                 url: "/starmap/specifications/streams/operators/operator"
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/domain_mapping"
