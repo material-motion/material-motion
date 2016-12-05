@@ -15,7 +15,7 @@ This is the engineering specification for the `MotionObservable` object.
 ## Overview
 
 `MotionObservable` has a similar shape to [`IndefiniteObservable`](IndefiniteObservable), but with
-the addition of `active` to the `Observer` type.
+the addition of a `state` channel in the `Observer` type.
 
 ## MVP
 
@@ -31,7 +31,19 @@ Replace all API references of Indefinite/Next with Motion:
 - `IndefiniteObservable -> MotionObservable`
 - `NextObserver -> MotionObserver`
 
-### Add active to the MotionObserver API
+### Expose a State enumeration
+
+Should include two possible states: `atRest` and `active`. If you must give the states numerical
+values then make `atRest = 0` and `active = 1`.
+
+```swift
+public enum State {
+  case atRest
+  case active
+}
+```
+
+### Add a state channel to the MotionObserver API
 
 What the `AnyMotionObserver` should look like:
 
@@ -39,12 +51,12 @@ What the `AnyMotionObserver` should look like:
 public final class MotionObserver<T>: MotionObserver {
   public typealias Value = T
 
-  public init(_ next: @escaping (T) -> Void, active: @escaping (Bool) -> Void) {
+  public init(_ next: @escaping (T) -> Void, state: @escaping (State) -> Void) {
     self.next = next
-    self.active = active
+    self.state = state
   }
 
   public let next: (T) -> Void
-  public let active: (Bool) -> Void
+  public let state: (State) -> Void
 }
 ```
