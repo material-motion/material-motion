@@ -289,6 +289,13 @@ toc:
                - page:
                  title: "_map"
                  url: "/starmap/specifications/streams/operators/map"
+            - page:
+              title: "Properties"
+              url: "/starmap/specifications/streams/properties/"
+              children:
+               - page:
+                 title: "Property"
+                 url: "/starmap/specifications/streams/properties/Property"
         - page:
           title: "Domain mapping"
           url: "/starmap/specifications/domain_mapping"
