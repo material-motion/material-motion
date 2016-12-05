@@ -1,6 +1,8 @@
 ---
 layout: page
 title: Target selectors
+knowledgelevel: L3
+library: runtime
 status:
   date: Oct 25, 2016
   is: Drafting

@@ -4,6 +4,8 @@ title: ConsoleLoggingTracer
 status:
   date: Nov 11, 2016
   is: Stable
+knowledgelevel: L2
+library: runtime
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016

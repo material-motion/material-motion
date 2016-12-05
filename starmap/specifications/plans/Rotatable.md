@@ -4,6 +4,7 @@ title: Rotatable
 status:
   date: Oct 18, 2016
   is: Stable
+knowledgelevel: L2
 depends_on:
   - /starmap/specifications/runtime/Plan
   - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer

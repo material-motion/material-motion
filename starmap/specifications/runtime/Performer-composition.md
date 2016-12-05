@@ -4,6 +4,8 @@ title: Performer composition
 status:
   date: July 8, 2016
   is: Stable
+knowledgelevel: L3
+library: runtime
 availability:
   - platform:
     name: Android

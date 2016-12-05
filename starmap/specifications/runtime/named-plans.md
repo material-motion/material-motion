@@ -4,6 +4,8 @@ title: Named plans
 status:
   date: Oct 17, 2016
   is: Stable
+knowledgelevel: L3
+library: runtime
 availability:
   - platform:
     name: Android
