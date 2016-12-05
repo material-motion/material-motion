@@ -13,6 +13,7 @@ Current status: **early development**.
 
 
 ## Apple platform support
+
 | Library | Build status | Coverage | Version | Platforms | Docs | Issues |
 |---------|:------------:|:--------:|:-------:|:---------:|:----:|:------:|
 | [material-motion/experiments-swift](https://github.com/material-motion/experiments-swift) | [![Build Status](https://travis-ci.org/material-motion/experiments-swift.svg?branch=develop)](https://travis-ci.org/material-motion/experiments-swift/) | [![codecov](https://codecov.io/gh/material-motion/experiments-swift/branch/develop/graph/badge.svg)](https://codecov.io/gh/material-motion/experiments-swift/) | [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/.svg)](https://cocoapods.org/pods//) | [![Platform](https://img.shields.io/cocoapods/p/.svg)](http://cocoadocs.org/docsets/) | [![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/.svg)]() | [![Open issues](https://img.shields.io/github/issues/material-motion/experiments-swift.svg)](https://github.com/material-motion/experiments-swift/issues/) |
