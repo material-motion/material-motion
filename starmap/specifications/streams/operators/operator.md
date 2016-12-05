@@ -21,7 +21,7 @@ This is the engineering specification for the `MotionObservable` operator: `_ope
 Example usage:
 
 ```swift
-public func _map<U>(_ transform: @escaping (T) -> U) -> MotionObservable<U> {
+public func _map<U>(_ transform: (T) -> U) -> MotionObservable<U> {
   return _operator { observer, value in
     observer.next(transform(value))
   }
