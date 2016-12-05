@@ -49,8 +49,8 @@ public protocol ReadableProperty {
   associatedtype T
   typealias Read = (O) -> T
 
-  var name: String { get }
-  var read: Read { get }
+  readonly var name: String
+  readonly var read: Read
 }
 
 public protocol WriteableProperty {
@@ -58,8 +58,8 @@ public protocol WriteableProperty {
   associatedtype T
   typealias Write = (O, T) -> Void
 
-  var name: String { get }
-  var write: Write { get }
+  readonly var name: String
+  readonly var write: Write
 }
 ```
 

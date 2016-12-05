@@ -47,7 +47,7 @@ public final class IndefiniteObservable<T>
 
 ```swift
 public protocol Observer<T> {
-  var next: (T) -> Void { get }
+  readonly var next: (T) -> Void
 }
 ```
 
