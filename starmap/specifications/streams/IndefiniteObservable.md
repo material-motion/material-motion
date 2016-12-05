@@ -79,16 +79,6 @@ IndefiniteObservable.
 public final class IndefiniteObservable<T>
 ```
 
-### Observer object type
-
-`Observer` is a protocol with a `next` method that accepts a `T` value.
-
-```swift
-public protocol Observer<T> {
-  readonly var next: (T) -> Void
-}
-```
-
 ### Unsubscribe function type
 
 The function signature expected to be returned by a `Subscriber`.
@@ -99,10 +89,10 @@ public typealias Unsubscribe = () -> Void
 
 ### Subscriber function type
 
-A `Subscriber` receives an `Observer` and can optionally return an `Unsubscribe` method.
+A `Subscriber` receives a `ValueObserver` and can optionally return an `Unsubscribe` method.
 
 ```swift
-public typealias Subscriber<T> = (Observer<T>) -> Unsubscribe?
+public typealias Subscriber<T> = (ValueObserver<T>) -> Unsubscribe?
 ```
 
 ### Subscription object type
@@ -163,11 +153,10 @@ private final class SimpleSubscription: Subscription {
 
 ### ValueObserver type
 
-Provide a `ValueObserver` class that conforms to `Observer`. It must be initialized with a next
-function.
+Provide a `ValueObserver` class. It must be initialized with a next function.
 
 ```swift
-public final class ValueObserver<T>: Observer {
+public final class ValueObserver<T> {
   public typealias Value = T
 
   public init(_ next: (T) -> Void) {
