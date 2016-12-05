@@ -51,6 +51,9 @@ each stream.
 
 The aggregator should subscribe to each stream and hold on to its subscription internally.
 
+Tokens do not need to be retained, unlike Subscriptions. Streams that are registered with an
+aggregator remain subscribed until the aggregator is released.
+
 ```swift
 class MotionAggregator<T>: MotionObservable<T> {
   public func register(_ streams: [MotionObservable<T>]) -> [Token]
