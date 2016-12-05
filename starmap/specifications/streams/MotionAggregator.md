@@ -6,6 +6,8 @@ status:
   is: Draft
 knowledgelevel: L3
 library: streams
+depends_on:
+  - /starmap/specifications/streams/MotionObservable
 ---
 
 # MotionAggregator specification
