@@ -4,6 +4,10 @@ title: TransitionSpring
 status:
   date: Nov 20, 2016
   is: Draft
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/plans/SpringTo
+  - /starmap/specifications/interactions/transitions/Transition
 ---
 
 # TransitionSpring specification

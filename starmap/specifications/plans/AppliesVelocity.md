@@ -4,6 +4,9 @@ title: AppliesVelocity
 status:
   date: Oct 24, 2016
   is: Drafting
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/plans/SpringTo
 ---
 
 # AppliesVelocity specification

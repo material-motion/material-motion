@@ -4,6 +4,9 @@ title: BasicTween
 status:
   date: Nov 1, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/plans/Tween
 proposals:
   - proposal:
     initiation_date: Oct 12, 2016

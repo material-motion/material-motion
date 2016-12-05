@@ -4,6 +4,10 @@ title: TransitionTween
 status:
   date: Nov 1, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/plans/Tween
+  - /starmap/specifications/interactions/transitions/Transition
 proposals:
   - proposal:
     initiation_date: Oct 20, 2016

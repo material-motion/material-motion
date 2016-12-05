@@ -4,6 +4,8 @@ title: Tween
 status:
   date: Nov 1, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/Plan
 availability:
   - platform:
     name: Android

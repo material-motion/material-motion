@@ -4,6 +4,8 @@ title: Springiness
 status:
   date: Nov 1, 2016
   is: Draft
+depends_on:
+  - /starmap/specifications/plans/SpringTo
 ---
 
 # Springiness feature specification

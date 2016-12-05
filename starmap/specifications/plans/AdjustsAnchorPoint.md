@@ -4,6 +4,8 @@ title: AdjustsAnchorPoint
 status:
   date: Oct 18, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/Plan
 availability:
   - platform:
     name: Android

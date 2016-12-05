@@ -5,6 +5,7 @@ status:
   date: Oct 18, 2016
   is: Stable
 depends_on:
+  - /starmap/specifications/runtime/Plan
   - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
 availability:
   - platform:

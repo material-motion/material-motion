@@ -4,6 +4,9 @@ title: RemoveSpring
 status:
   date: Nov 7, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/plans/SpringTo
 proposals:
   - proposal:
     initiation_date: Oct 24, 2016
