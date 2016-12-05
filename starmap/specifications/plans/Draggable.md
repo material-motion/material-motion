@@ -4,6 +4,8 @@ title: Draggable
 status:
   date: Oct 18, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
 availability:
   - platform:
     name: Android

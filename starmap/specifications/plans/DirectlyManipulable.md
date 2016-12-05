@@ -4,6 +4,10 @@ title: DirectlyManipulable
 status:
   date: Oct 18, 2016
   is: Stable
+depends_on:
+  - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
+  - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
+  - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer
 availability:
   - platform:
     name: Android
