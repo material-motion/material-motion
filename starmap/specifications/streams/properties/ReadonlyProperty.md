@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Property
+title: ReadonlyProperty
 status:
   date: December 4, 2016
   is: Draft
