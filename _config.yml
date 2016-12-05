@@ -52,9 +52,6 @@ toc:
               title: "How to connect primitives"
               url: "/starmap/specifications/primitives/how_to_connect_primitives"
             - page:
-              title: "Mapping to coordinate spaces"
-              url: "/starmap/specifications/primitives/mapping_to_coordinate_spaces"
-            - page:
               title: "Gesture recognizers"
               url: "/starmap/specifications/primitives/gesture_recognizers/"
               children:

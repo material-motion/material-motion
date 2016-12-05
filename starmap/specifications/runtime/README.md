@@ -1,6 +1,11 @@
 ---
 layout: page
+title: Motion runtime
 permalink: /starmap/specifications/runtime/
+enables:
+  - /starmap/specifications/runtime/MotionRuntime/
+  - /starmap/specifications/runtime/Plan
+  - /starmap/specifications/runtime/Performer
 ---
 
 # Motion runtime

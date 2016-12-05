@@ -2,6 +2,8 @@
 layout: page
 title: Streams
 permalink: /starmap/specifications/primitives/streams/
+enables:
+  - /starmap/specifications/streams/IndefiniteObservable
 ---
 
 # Streams

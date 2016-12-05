@@ -2,6 +2,8 @@
 layout: page
 title: Gesture recognizers
 permalink: /starmap/specifications/primitives/gesture_recognizers/
+enables:
+  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
 ---
 
 # Gesture recognizers
