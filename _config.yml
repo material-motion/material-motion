@@ -298,9 +298,6 @@ toc:
                  title: "ReadonlyProperty"
                  url: "/starmap/specifications/streams/properties/ReadonlyProperty"
         - page:
-          title: "Domain mapping"
-          url: "/starmap/specifications/domain_mapping"
-        - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"
           children:
