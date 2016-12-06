@@ -278,7 +278,7 @@ toc:
                  title: "_map"
                  url: "/starmap/specifications/streams/operators/map"
             - page:
-              title: "connections"
+              title: "Connecting with external systems"
               url: "/starmap/specifications/streams/connections/"
               children:
                - page:
