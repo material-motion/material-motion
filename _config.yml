@@ -34,6 +34,22 @@ google_analytics: UA-80214706-3
 
 toc:
   - page:
+    title: "Documentation"
+    url: "/documentation/"
+    children:
+     - page:
+       title: "L1"
+       url: "/documentation/L1/"
+     - page:
+       title: "L2"
+       url: "/documentation/L2/"
+     - page:
+       title: "L3"
+       url: "/documentation/L3/"
+     - page:
+       title: "L4"
+       url: "/documentation/L4/"
+  - page:
     title: "Starmap"
     url: "/starmap/"
     children:
