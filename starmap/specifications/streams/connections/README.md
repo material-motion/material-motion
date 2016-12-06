@@ -42,7 +42,7 @@ will be created to bridge Material Motion with existing ecosystems.
 
 ## iOS example
 
-```
+```swift
 func propertyOf(_ view: UIView) -> UIViewPropertyBuilder {
   return UIViewPropertyBuilder(view)
 }
