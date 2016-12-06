@@ -21,8 +21,8 @@ Example usage in Swift:
 
 ```swift
 let property = Property<UIView, CGPoint>("center",
-                                         read: { $0.center },
-                                         write: { $0.center = $1 })
+                                         read: { object in object.center },
+                                         write: { object, value in object.center = value })
 var center = property.read(view)
 center.x = 10
 property.write(view, center)
@@ -46,7 +46,7 @@ public class Property<O, T> {
 
 ### Read/write types
 
-```
+```swift
 public typealias Read = (O) -> T
 public typealias Write = (O, T) -> Void
 ```
