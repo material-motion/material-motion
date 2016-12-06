@@ -29,7 +29,23 @@ with no concept of completion or failure.
 ## Examples
 
 ```
-let observable = IndefiniteObservable<Int> { observer in
+public final class ValueObserver<T> {
+  public typealias Value = T
+
+  public init(_ next: (T) -> Void) {
+    self.next = next
+  }
+
+  public let next: (T) -> Void
+}
+
+public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
+  public final func subscribe(_ next: (T) -> Void) -> Subscription {
+    return super.subscribe(observer: ValueObserver(next))
+  }
+}
+
+let observable = ValueObservable<Int> { observer in
   observer.next(10)
   return noopUnsubscription
 }
@@ -39,22 +55,22 @@ let _ = observable.subscribe { value in
 }
 
 // Example operators:
-extension IndefiniteObservable {
-  public func _operator<U>(_ work: (ValueObserver<U>, T) -> Void) -> IndefiniteObservable<U> {
-    return IndefiniteObservable<U>(self.op.with(op.name, args: op.args)) { observer in
-      return self.subscribe(next: {
+extension ValueObservable {
+  public func _operator<U>(_ work: (ValueObserver<U>, T) -> Void) -> ValueObservable<U> {
+    return ValueObservable<U> { observer in
+      return self.subscribe(next: observer: ValueObserver<T> {
         work(observer, $0)
       }).unsubscribe
     }
   }
 
-  public func _map<U>(_ op: OP, _ transform: (T) -> U) -> IndefiniteObservable<U> {
+  public func _map<U>(_ op: OP, _ transform: (T) -> U) -> ValueObservable<U> {
     return _operator(op) { observer, value in
       observer.next(transform(value))
     }
   }
 
-  public func _filter(_ op: OP, _ isIncluded: (T) -> Bool) -> IndefiniteObservable<T> {
+  public func _filter(_ op: OP, _ isIncluded: (T) -> Bool) -> ValueObservable<T> {
     return _operator(op) { observer, value in
       if isIncluded(value) {
         observer.next(value)
@@ -68,15 +84,20 @@ extension IndefiniteObservable {
 
 ### Generic type
 
-There is a single generic value type: `T`. This is the type of value that can be received from an
-IndefiniteObservable.
+There is a single generic value type: `O`. This is the type of observer that can be provided to the
+`subscribe` method.
+
+```swift
+class IndefiniteObservable<O> {
+}
+```
 
 ### IndefiniteObservable object type
 
-`IndefiniteObservable` is a class with a single generic type, `T`.
+`IndefiniteObservable` is a class with a single generic type, `O`.
 
 ```swift
-public final class IndefiniteObservable<T>
+public class IndefiniteObservable<O>
 ```
 
 ### Unsubscribe function type
@@ -89,10 +110,10 @@ public typealias Unsubscribe = () -> Void
 
 ### Subscriber function type
 
-A `Subscriber` receives a `ValueObserver` and can optionally return an `Unsubscribe` method.
+A `Subscriber` receives an observer and can optionally return an `Unsubscribe` method.
 
 ```swift
-public typealias Subscriber<T> = (ValueObserver<T>) -> Unsubscribe?
+public typealias Subscriber<O> = (O) -> Unsubscribe?
 ```
 
 ### Subscription object type
@@ -110,12 +131,12 @@ public protocol Subscription {
 Requires a `Subscriber` type. Store the subscriber as a private constant variable.
 
 ```swift
-class IndefiniteObservable<T> {
-  init(subscriber: Subscriber<T>) {
+class IndefiniteObservable<O> {
+  public init(subscriber: Subscriber<O>) {
     self.subscriber = subscriber
   }
 
-  private let subscriber: Subscriber<T>
+  private let subscriber: Subscriber<O>
 ```
 
 ### Private SimpleSubscription type
@@ -151,25 +172,9 @@ private final class SimpleSubscription: Subscription {
 }
 ```
 
-### ValueObserver type
-
-Provide a `ValueObserver` class. It must be initialized with a next function.
-
-```swift
-public final class ValueObserver<T> {
-  public typealias Value = T
-
-  public init(_ next: (T) -> Void) {
-    self.next = next
-  }
-
-  public let next: (T) -> Void
-}
-```
-
 ### IndefiniteObservable.subscribe
 
-Expose a `subscribe` API on `IndefiniteObservable` that accepts a `next` function and returns a
+Expose a `subscribe` API on `IndefiniteObservable` that accepts an observable and returns a
 `Subscription`.
 
 `subscribe` should invoke `self.subscriber` with the provided observer. The returned subscription
@@ -178,9 +183,8 @@ is optional and should be wrapped in a `SimpleSubscription` instance before bein
 
 ```swift
 class IndefiniteObservable<T> {
-  func subscribe(next: (T) -> Void) -> Subscription {
-    let observer = ValueObserver<T>(next)
-    if let subscription = self.subscriber(observer) {
+  func subscribe(observer: O) -> Subscription {
+    if let subscription = subscriber(observer) {
       return SimpleSubscription(subscription)
     } else {
       return SimpleSubscription()

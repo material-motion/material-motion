@@ -6,6 +6,8 @@ status:
   is: Draft
 knowledgelevel: L4
 library: streams
+depends_on:
+  - /starmap/specifications/streams/IndefiniteObservable
 ---
 
 # MotionObservable specification
@@ -14,22 +16,10 @@ This is the engineering specification for the `MotionObservable` object.
 
 ## Overview
 
-`MotionObservable` has a similar shape to [`IndefiniteObservable`](IndefiniteObservable), but with
-the addition of a `state` channel in the `Observer` type.
+`MotionObservable` is a specialization of [`IndefiniteObservable`](IndefiniteObservable).
+`MotionObservable` includes two channels: `next` and `state`.
 
 ## MVP
-
-### Fork the IndefiniteObservable implementation
-
-Fork the `IndefiniteObservable` implementation.
-
-**Do not depend on or subclass `IndefiniteObservable`.** `IndefiniteObservable` and
-`MotionObservable` are incompatible types.
-
-Replace all API references of Indefinite/Next with Motion:
-
-- `IndefiniteObservable -> MotionObservable`
-- `NextObserver -> MotionObserver`
 
 ### Expose a State enumeration
 
@@ -37,26 +27,44 @@ Should include two possible states: `atRest` and `active`. If you must give the 
 values then make `atRest = 0` and `active = 1`.
 
 ```swift
-public enum State {
+public enum MotionState {
   case atRest
   case active
 }
 ```
 
-### Add a state channel to the MotionObserver API
+### Expose MotionObserver API
 
-What the `AnyMotionObserver` should look like:
+```
+public protocol MotionObserver {
+  associatedtype Value
+
+  var next: (Value) -> Void { get }
+  var state: (MotionState) -> Void { get }
+}
+```
+
+### Subclass IndefiniteObservable
+
+```
+public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
+}
+```
+
+### Expose an AnyMotionObserver API
+
+Provide an API for creating a motion observer using inline functions.
 
 ```swift
-public final class MotionObserver<T>: MotionObserver {
+public final class AnyMotionObserver<T>: MotionObserver {
   public typealias Value = T
 
-  public init(_ next: (T) -> Void, state: (State) -> Void) {
+  public init(_ next: (T) -> Void, state: (MotionState) -> Void) {
     self.next = next
     self.state = state
   }
 
   public let next: (T) -> Void
-  public let state: (State) -> Void
+  public let state: (MotionState) -> Void
 }
 ```
