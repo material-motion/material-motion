@@ -33,30 +33,12 @@ public enum MotionState {
 }
 ```
 
-### Expose MotionObserver API
+### Expose a MotionObserver API
+
+Provide a class for creating a motion observer using inline functions.
 
 ```swift
-public protocol MotionObserver {
-  associatedtype Value
-
-  var next: (Value) -> Void { get }
-  var state: (MotionState) -> Void { get }
-}
-```
-
-### Subclass IndefiniteObservable
-
-```swift
-public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
-}
-```
-
-### Expose an AnyMotionObserver API
-
-Provide an API for creating a motion observer using inline functions.
-
-```swift
-public final class AnyMotionObserver<T>: MotionObserver {
+public final class MotionObserver<T> {
   public typealias Value = T
 
   public init(_ next: (T) -> Void, state: (MotionState) -> Void) {
@@ -66,5 +48,12 @@ public final class AnyMotionObserver<T>: MotionObserver {
 
   public let next: (T) -> Void
   public let state: (MotionState) -> Void
+}
+```
+
+### Subclass IndefiniteObservable
+
+```swift
+public class MotionObservable<T>: IndefiniteObservable<MotionObserver<T>> {
 }
 ```
