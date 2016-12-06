@@ -278,12 +278,21 @@ toc:
                  title: "_map"
                  url: "/starmap/specifications/streams/operators/map"
             - page:
-              title: "Property"
-              url: "/starmap/specifications/streams/Property/"
+              title: "connections"
+              url: "/starmap/specifications/streams/connections/"
               children:
                - page:
-                 title: "ReadonlyProperty"
-                 url: "/starmap/specifications/streams/Property/ReadonlyProperty"
+                 title: "Getter"
+                 url: "/starmap/specifications/streams/connections/Getter"
+               - page:
+                 title: "Setter"
+                 url: "/starmap/specifications/streams/connections/Setter"
+               - page:
+                 title: "Property"
+                 url: "/starmap/specifications/streams/connections/Property"
+               - page:
+                 title: "Names"
+                 url: "/starmap/specifications/streams/connections/names"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
