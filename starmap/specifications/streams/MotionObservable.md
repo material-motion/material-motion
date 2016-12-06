@@ -51,7 +51,7 @@ What the `AnyMotionObserver` should look like:
 public final class MotionObserver<T>: MotionObserver {
   public typealias Value = T
 
-  public init(_ next: @escaping (T) -> Void, state: @escaping (State) -> Void) {
+  public init(_ next: (T) -> Void, state: (State) -> Void) {
     self.next = next
     self.state = state
   }
