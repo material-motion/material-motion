@@ -31,7 +31,7 @@ with no concept of completion or failure.
 ```
 let observable = IndefiniteObservable<Int> { observer in
   observer.next(10)
-  return noUnsubscription
+  return noopUnsubscription
 }
 
 let _ = observable.subscribe { value in
