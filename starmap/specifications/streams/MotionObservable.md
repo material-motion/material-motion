@@ -35,7 +35,7 @@ public enum MotionState {
 
 ### Expose MotionObserver API
 
-```
+```swift
 public protocol MotionObserver {
   associatedtype Value
 
@@ -46,7 +46,7 @@ public protocol MotionObserver {
 
 ### Subclass IndefiniteObservable
 
-```
+```swift
 public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
 }
 ```
