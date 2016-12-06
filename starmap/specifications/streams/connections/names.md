@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Connection names
+title: Property names
 status:
   date: December 4, 2016
   is: Draft
@@ -10,23 +10,26 @@ depends_on:
   - /starmap/specifications/streams/connections/
 ---
 
-# Names specification
+# Property names specification
 
-This is the engineering specification for the names of getters/setters.
+This is the engineering specification for the names of properties in Material Motion.
 
 ## Overview
 
 In order to provide a consistent set of getters and setters across all platforms we've provided the
 following list of preferred names.
 
-### Element
+We list properties for a variety of object types below. The Starmap column defines the term we use
+throughout the Starmap. We also provide a column for each platform that maps to the
+platform-specific property in case it deviates from the Starmap name.
 
-Android: View &middot; iOS: UIView/CALayer &middot; Web: DOM element
+### Names for element properties
 
-- backgroundColor
-- height
-- opacity
-- position
-- positionX
-- positionY
-- width
+| Starmap                         | Android                | iOS       | Web      |
+|:--------------------------------|:-----------------------|:----------|:---------|
+| `backgroundColor`               |                        |           |          |
+| `height`                        |                        |           |          |
+| `opacity`                       |                        |           |          |
+| `position` relative to parent   | (`View.X`, `View.Y`)   |           |          |
+| `positionX` relative to parent  | `View.X`               |           |          |
+| `positionY` relative to parent  | `View.Y`               |           |          |

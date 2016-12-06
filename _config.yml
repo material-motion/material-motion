@@ -282,16 +282,7 @@ toc:
               url: "/starmap/specifications/streams/connections/"
               children:
                - page:
-                 title: "Getter"
-                 url: "/starmap/specifications/streams/connections/Getter"
-               - page:
-                 title: "Setter"
-                 url: "/starmap/specifications/streams/connections/Setter"
-               - page:
-                 title: "Property"
-                 url: "/starmap/specifications/streams/connections/Property"
-               - page:
-                 title: "Names"
+                 title: "Property names"
                  url: "/starmap/specifications/streams/connections/names"
             - page:
               title: "MotionAggregator"
