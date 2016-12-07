@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 permalink: /documentation/L2/
 title: "L2: Director creative documentation"
 ---
