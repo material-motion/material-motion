@@ -1,8 +1,3 @@
----
-layout: page
-title: IndefiniteObservable
----
-
 # How [Indefinite Observables](https://www.npmjs.org/package/indefinite-observable) work
 
 An Observable is a bridge, connecting an event source to a listener.  You've
@@ -18,15 +13,15 @@ Each one puts the listener in a different place.  An Observable is just a
 wrapper that gives them all the same interface:
 
 ```javascript
-click$.subscribe({
+clickStream.subscribe({
   next: listener
 });
 
-fetchResponse$.subscribe({
+fetchResponseStream.subscribe({
   next: listener
 });
 
-message$.subscribe({
+messageStream.subscribe({
   next: listener
 });
 ```
@@ -53,11 +48,11 @@ function connectClicksToObserver(observer) {
 }
 ```
 
-We can pass this function to the `Observable` constructor to create `click$`
-from our first example:
+We can pass this function to the `Observable` constructor to create
+`clickStream` from our first example:
 
 ```javascript
-const click$ = new IndefiniteObservable(connectClicksToObserver);
+const clickStream = new IndefiniteObservable(connectClicksToObserver);
 ```
 
 When you connect a listener to an event source, the event source needs to hold a
@@ -86,8 +81,8 @@ function connectClicksToObserver(observer) {
 Now, when the subscriber unsubscribes, the event listener will be removed:
 
 ```javascript
-const click$ = new IndefiniteObservable(connectClicksToObserver);
-const clickSubscription = click$.subscribe({
+const clickStream = new IndefiniteObservable(connectClicksToObserver);
+const clickSubscription = clickStream.subscribe({
   next(event) {
     console.log("I've been clicked!");
   }
@@ -102,7 +97,7 @@ to the disparate event sources we have in JavaScript.  Here are the
 Observables for those examples:
 
 ```javascript
-const fetchResponse$ = new IndefiniteObservable(
+const fetchResponseStream = new IndefiniteObservable(
   (observer) => {
     // We only want to forward the result if the observer is
     // still subscribed when fetch resolves
@@ -121,7 +116,7 @@ const fetchResponse$ = new IndefiniteObservable(
   }
 };
 
-const message$ = new IndefiniteObservable(
+const messageStream = new IndefiniteObservable(
   (observer) => {
     self.onmessage = observer.next;
 
