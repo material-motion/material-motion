@@ -16,12 +16,8 @@ This is the engineering specification for the names of properties in Material Mo
 
 ## Overview
 
-In order to provide a consistent set of getters and setters across all platforms we've provided the
-following list of preferred names.
-
-We list properties for a variety of object types below. The Starmap column defines the term we use
-throughout the Starmap. We also provide a column for each platform that maps to the
-platform-specific property in case it deviates from the Starmap name.
+The following tables correlate the property names on each platform with the terms we use in the
+Starmap.
 
 ### Names for element properties
 
