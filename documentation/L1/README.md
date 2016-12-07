@@ -1,7 +1,7 @@
 ---
 layout: page
-permalink: /documentation/L1
-title: Documentation
+permalink: /documentation/L1/
+title: L1: App creative documentation
 ---
 
 # L1: App creative documentation

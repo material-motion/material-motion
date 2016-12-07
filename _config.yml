@@ -49,6 +49,10 @@ toc:
      - page:
        title: "L4"
        url: "/documentation/L4/"
+       children:
+        - page:
+          title: "IndefiniteObservable"
+          url: "/documentation/L4/IndefiniteObservable"
   - page:
     title: "Starmap"
     url: "/starmap/"
