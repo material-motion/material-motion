@@ -57,3 +57,16 @@ public final class MotionObserver<V> {
 public class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
 }
 ```
+
+### Expose a helper subscribe API
+
+This API should allow a client to subscribe to a MotionObservable without having to create a
+MotionObserver.
+
+```swift
+public class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
+  public func subscribe(next: (V) -> Void, state: (MotionState) -> Void) -> Subscription {
+    return super.subscribe(observer: MotionObserver<V>(next: next, state: state))
+  }
+}
+```
