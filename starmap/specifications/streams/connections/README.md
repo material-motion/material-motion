@@ -41,8 +41,8 @@ An **Unscoped Property** is a property instance that can write to *any* target.
 
 ## Example usage
 
-| Option Number | Name              | Readable connections             | Writeable connections                   |
-|:--------------|:------------------|:---------------------------------|:----------------------------------------|
-| 1.            | Scoped Property   |  | `$.write(to: propertyOf(view).positionX)`       |
-| 2.            | Unscoped Property |  | `$.write(to: view, property: View.X)`           |
-| 3.            | Inline            |  | `$.write({ value in view.position.x = value })` |
+| Option Number | Name              | Writing a stream                                |
+|:--------------|:------------------|:------------------------------------------------|
+| 1.            | Scoped Property   | `$.write(to: propertyOf(view).positionX)`       |
+| 2.            | Unscoped Property | `$.write(to: view, property: View.X)`           |
+| 3.            | Inline            | `$.write({ value in view.position.x = value })` |
