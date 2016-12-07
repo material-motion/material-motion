@@ -33,18 +33,16 @@ with no concept of completion or failure.
 ## Examples
 
 ```swift
-public final class ValueObserver<T> {
-  public typealias Value = T
-
-  public init(_ next: (T) -> Void) {
+public final class ValueObserver<V>: Observer<V> {
+  public init(_ next: (V) -> Void) {
     self.next = next
   }
 
-  public let next: (T) -> Void
+  public let next: (V) -> Void
 }
 
-public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
-  public final func subscribe(_ next: (T) -> Void) -> Subscription {
+public class ValueObservable<V>: IndefiniteObservable<ValueObserver<V>> {
+  public final func subscribe(_ next: (V) -> Void) -> Subscription {
     return super.subscribe(observer: ValueObserver(next))
   }
 }
@@ -60,21 +58,21 @@ let _ = observable.subscribe { value in
 
 // Example operators:
 extension ValueObservable {
-  public func _operator<U>(_ work: (ValueObserver<U>, T) -> Void) -> ValueObservable<U> {
-    return ValueObservable<U> { observer in
-      return self.subscribe(next: observer: ValueObserver<T> {
+  public func _operator<W>(_ work: (ValueObserver<W>, V) -> Void) -> ValueObservable<W> {
+    return ValueObservable<W> { observer in
+      return self.subscribe(next: observer: ValueObserver<V> {
         work(observer, $0)
       }).unsubscribe
     }
   }
 
-  public func _map<U>(_ op: OP, _ transform: (T) -> U) -> ValueObservable<U> {
+  public func _map<W>(transform: (V) -> W) -> ValueObservable<W> {
     return _operator(op) { observer, value in
       observer.next(transform(value))
     }
   }
 
-  public func _filter(_ op: OP, _ isIncluded: (T) -> Bool) -> ValueObservable<T> {
+  public func _filter(isIncluded: (V) -> Bool) -> ValueObservable<V> {
     return _operator(op) { observer, value in
       if isIncluded(value) {
         observer.next(value)
@@ -86,25 +84,28 @@ extension ValueObservable {
 
 ## MVP
 
-### Generic type
+### Expose a generic abstract Observer type
 
-There is a single generic value type: `O`. This is the type of observer that can be provided to the
-`subscribe` method.
+Define the base Observer type which has a single **channel** called `next`. `next` accepts an
+argument of type `V`.
 
 ```swift
-class IndefiniteObservable<O> {
+public protocol Observer<V> {
+  func next(value: V)
 }
 ```
 
-### IndefiniteObservable object type
+### Expose a concrete IndefiniteObservable type
 
-`IndefiniteObservable` is a class with a single generic type, `O`.
+There is a single generic value type: `O`. This is the type of observer that can be provided to the
+`subscribe` method. This type should conform to the abstract `Observer` type.
 
 ```swift
-public class IndefiniteObservable<O>
+class IndefiniteObservable<O: Observer> {
+}
 ```
 
-### Unsubscribe function type
+### Expose an unsubscribe function type
 
 The function signature expected to be returned by a `Subscriber`.
 
@@ -112,7 +113,7 @@ The function signature expected to be returned by a `Subscriber`.
 public typealias Unsubscribe = () -> Void
 ```
 
-### Subscriber function type
+### Expose a Subscriber function type
 
 A `Subscriber` receives an observer and can optionally return an `Unsubscribe` method.
 
@@ -120,7 +121,7 @@ A `Subscriber` receives an observer and can optionally return an `Unsubscribe` m
 public typealias Subscriber<O> = (O) -> Unsubscribe?
 ```
 
-### Subscription object type
+### Expose a Subscription object type
 
 A representation of a subscription made by invoking `subscribe` on an `IndefiniteObservable`.
 
@@ -130,7 +131,7 @@ public protocol Subscription {
 }
 ```
 
-### IndefiniteObservable initialization
+### Expose an IndefiniteObservable initializer
 
 Requires a `Subscriber` type. Store the subscriber as a private constant variable.
 
@@ -143,7 +144,7 @@ class IndefiniteObservable<O> {
   private let subscriber: Subscriber<O>
 ```
 
-### Private SimpleSubscription type
+### Create a private SimpleSubscription type
 
 Implement a `SimpleSubscription` class that conforms to `Subscription`.
 
@@ -176,7 +177,7 @@ private final class SimpleSubscription: Subscription {
 }
 ```
 
-### IndefiniteObservable.subscribe
+### Expose a subscribe API on IndefiniteObservable
 
 Expose a `subscribe` API on `IndefiniteObservable` that accepts an observable and returns a
 `Subscription`.
@@ -186,7 +187,7 @@ is optional and should be wrapped in a `SimpleSubscription` instance before bein
 `subscribe` must always return a valid Subscription.
 
 ```swift
-class IndefiniteObservable<T> {
+class IndefiniteObservable<O> {
   func subscribe(observer: O) -> Subscription {
     if let subscription = subscriber(observer) {
       return SimpleSubscription(subscription)
