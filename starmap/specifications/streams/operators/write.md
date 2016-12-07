@@ -7,8 +7,8 @@ status:
 knowledgelevel: L2
 library: streams
 depends_on:
-  - /starmap/specifications/streams/connections/
   - /starmap/specifications/streams/operators/operator
+  - /starmap/specifications/streams/connections/Property
 ---
 
 # write specification
