@@ -1,3 +1,9 @@
+----		
+ -layout: page		
+ -title: IndefiniteObservable		
+ ----		
+ -
+
 # How [Indefinite Observables](https://www.npmjs.org/package/indefinite-observable) work
 
 An Observable is a bridge, connecting an event source to a listener.  You've
