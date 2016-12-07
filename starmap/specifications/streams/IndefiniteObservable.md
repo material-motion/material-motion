@@ -8,6 +8,10 @@ knowledgelevel: L4
 library: indefinite-observable
 availability:
   - platform:
+    name: Android
+    label: "indefinite-observable-android as of v1.0.0"
+    url: https://github.com/material-motion/indefinite-observable-android
+  - platform:
     name: iOS
     label: "indefinite-observable-swift as of v1.0.0"
     url: https://github.com/material-motion/indefinite-observable-swift
