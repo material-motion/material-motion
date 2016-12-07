@@ -32,7 +32,7 @@ with no concept of completion or failure.
 
 ## Examples
 
-```
+```swift
 public final class ValueObserver<T> {
   public typealias Value = T
 
