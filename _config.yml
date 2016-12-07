@@ -285,7 +285,7 @@ toc:
                  title: "OP"
                  url: "/starmap/specifications/streams/MotionObservable-OP"
             - page:
-              title: "Connecting with external systems"
+              title: "Connecting streams with external systems"
               url: "/starmap/specifications/streams/connections/"
               children:
                - page:
@@ -304,6 +304,9 @@ toc:
                - page:
                  title: "_map"
                  url: "/starmap/specifications/streams/operators/map"
+               - page:
+                 title: "write"
+                 url: "/starmap/specifications/streams/operators/write"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
