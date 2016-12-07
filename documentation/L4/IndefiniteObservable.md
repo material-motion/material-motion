@@ -1,8 +1,7 @@
-----		
- -layout: page		
- -title: IndefiniteObservable		
- ----		
- -
+---
+layout: page
+title: IndefiniteObservable
+---
 
 # How [Indefinite Observables](https://www.npmjs.org/package/indefinite-observable) work
 
