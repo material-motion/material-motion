@@ -37,6 +37,8 @@ Your MVP must implement at least one of the following options.
 
 ### Option 1: Expose write-to-property API
 
+The property is expected to have a handle to the target instance.
+
 ```swift
 public func write(to property: Writeable<Target, T>) -> MotionObservable<T> {
   return MotionObservable<T> { observer in
@@ -48,7 +50,15 @@ public func write(to property: Writeable<Target, T>) -> MotionObservable<T> {
 }
 ```
 
+Example usage:
+
+```swift
+some$.write(to property: propertyOf(view).positionX)
+```
+
 ### Option 2: Expose write-to-target-property API
+
+The property is expected to be stateless.
 
 ```swift
 public func write(to target: Target, property: Writeable<Target, T>) -> MotionObservable<T> {
@@ -59,6 +69,12 @@ public func write(to target: Target, property: Writeable<Target, T>) -> MotionOb
     }, state: observer.state ).unsubscribe
   }
 }
+```
+
+Example usage:
+
+```swift
+some$.write(to: view, property: View.X)
 ```
 
 ### Option 3: Expose write-inline API
@@ -72,4 +88,12 @@ public func write(_ block: (T) -> Void) -> MotionObservable<T> {
     }, state: observer.state ).unsubscribe
   }
 }
+```
+
+Example usage:
+
+```swift
+some$.write({ value in
+  view.position.x = value
+})
 ```
