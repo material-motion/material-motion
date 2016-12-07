@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 permalink: /documentation/L1/
 title: "L1: App creative documentation"
 ---
