@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 permalink: /documentation/L3/
 title: "L3: Motion creative documentation"
 ---
