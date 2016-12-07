@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /documentation/L3/
-title: L3: Motion creative documentation
+title: "L3: Motion creative documentation"
 ---
 
 # L3: Motion creative documentation

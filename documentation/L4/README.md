@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /documentation/L4/
-title: L4: Core team documentation
+title: "L4: Core team documentation"
 ---
 
 # L4: Core team documentation

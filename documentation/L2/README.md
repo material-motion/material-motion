@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /documentation/L2/
-title: L2: Director creative documentation
+title: "L2: Director creative documentation"
 ---
 
 # L2: Director creative documentation
