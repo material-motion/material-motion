@@ -26,11 +26,11 @@ There are two primary flows of data we care about:
 
 There are three primary ways to read or write a value: **Properties** and **Inline** functions.
 
-| Option Number | Name              | Readable connections                                                | Writeable connections                             |
-|:--------------|:------------------|:--------------------------------------------------------------------|:--------------------------------------------------|
-| 1.            | Scoped Property   | `$.someOp(initialPositionFrom: propertyOf(view).position)`          | `$.write(to: propertyOf(view).position)`          |
-| 2.            | Unscoped Property | `$.someOp(initialPositionFrom: view, property: View.TRANSLATION_X)` | `$.write(to: view, property: View.TRANSLATION_X)` |
-| 3.            | Inline            | `$.someOp({ return view.position })`                                | `$.write({ value in view.position = value })`     |
+| Option Number | Name              | Readable connections              | Writeable connections                   |
+|:--------------|:------------------|:----------------------------------|:----------------------------------------|
+| 1.            | Scoped Property   | `propertyOf(view).positionX`      | `propertyOf(view).positionX`            |
+| 2.            | Unscoped Property | `source: view, property: View.X)` | `target: view, property: View.X)`       |
+| 3.            | Inline            | `{ return view.position.x })`     | `{ value in view.position.x = value })` |
 
 The above connection types are guidelines around the shape of connections. A given platform must
 provide at least one mechanism.
