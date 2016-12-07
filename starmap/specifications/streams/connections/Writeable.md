@@ -22,7 +22,7 @@ This is the engineering specification for the `Writeable` abstract types.
 
 ## MVP
 
-### Option 1: Expose ScopedWriteable API
+### Option 1: Expose an abstract ScopedWriteable API
 
 ```swift
 public protocol ScopedWriteable<V> {
@@ -30,7 +30,7 @@ public protocol ScopedWriteable<V> {
 }
 ```
 
-### Option 2: Expose UnscopedWriteable API
+### Option 2: Expose an abstract UnscopedWriteable API
 
 ```swift
 public protocol UnscopedWriteable<O, V> {

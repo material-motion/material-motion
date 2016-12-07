@@ -22,7 +22,7 @@ This is the engineering specification for the `Readable` abstract types.
 
 ## MVP
 
-### Option 1: Expose ScopedReadable API
+### Option 1: Expose an abstract ScopedReadable API
 
 ```swift
 public protocol ScopedReadable<V> {
@@ -30,7 +30,7 @@ public protocol ScopedReadable<V> {
 }
 ```
 
-### Option 2: Expose UnscopedReadable API
+### Option 2: Expose an abstract UnscopedReadable API
 
 ```swift
 public protocol UnscopedReadable<O, V> {
