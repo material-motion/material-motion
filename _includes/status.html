@@ -29,7 +29,12 @@
 </td>
 <td>&rarr;</td>
 {% endif %}
-<td><strong>{{ page.title }}</strong></td>
+<td><strong>
+  {{ page.title }}
+  {% for related in page.related_to %}
+    <br/><a href="{{ site.url }}{{ related }}">{{ related | split: '/' | last }}</a>
+  {% endfor %}
+</strong></td>
 {% if children.size > 0 %}
 <td>&rarr;</td>
 <td>

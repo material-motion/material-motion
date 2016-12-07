@@ -8,6 +8,8 @@ knowledgelevel: L3
 library: streams
 depends_on:
   - /starmap/specifications/streams/connections/
+related_to:
+  - /starmap/specifications/streams/connections/Readable
 ---
 
 # Writeable specification
