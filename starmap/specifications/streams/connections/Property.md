@@ -31,7 +31,7 @@ public class ScopedProperty<V>: ScopedReadable<V>, ScopedWriteable<V> {
   public let read: Read
   public let write: Write
 
-  public init(read: @escaping Read, write: @escaping Write) {
+  public init(read: Read, write: Write) {
     self.read = read
     self.write = write
   }
@@ -48,7 +48,7 @@ public class UnscopedProperty<O, V>: ScopedReadable<O, V>, ScopedWriteable<O, V>
   public let read: Read
   public let write: Write
 
-  public init(read: @escaping Read, write: @escaping Write) {
+  public init(read: Read, write: Write) {
     self.read = read
     self.write = write
   }
