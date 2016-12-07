@@ -24,13 +24,17 @@ There are two primary flows of data we care about:
 
 ## Connection types
 
-There are two primary ways to read or write a value: **Properties** and **Inline** functions.
+There are three primary ways to read or write a value: **Properties** and **Inline** functions.
 
-|               | Readable connections                                                | Writeable connections                             |
-|:--------------|:--------------------------------------------------------------------|:--------------------------------------------------|
-| Property type | `$.someOp(initialPositionFrom: propertyOf(view).position)`          | `$.write(to: propertyOf(view).position)`          |
-| Property args | `$.someOp(initialPositionFrom: view, property: View.TRANSLATION_X)` | `$.write(to: view, property: View.TRANSLATION_X)` |
-| Inline        | `$.someOp({ return view.position })`                                | `$.write({ value in view.position = value })`     |
+| Number | Name              | Readable connections                                                | Writeable connections                             |
+|:-------|:------------------|:--------------------------------------------------------------------|:--------------------------------------------------|
+| 1.     | Scoped Property   | `$.someOp(initialPositionFrom: propertyOf(view).position)`          | `$.write(to: propertyOf(view).position)`          |
+| 2.     | Unscoped Property | `$.someOp(initialPositionFrom: view, property: View.TRANSLATION_X)` | `$.write(to: view, property: View.TRANSLATION_X)` |
+| 3.     | Inline            | `$.someOp({ return view.position })`                                | `$.write({ value in view.position = value })`     |
 
 The above connection types are guidelines around the shape of connections. A given platform must
 provide at least one mechanism.
+
+A **Scoped Property** is a property instance that writes to a *specific* target.
+
+An **Unscoped Property** is a property instance that can write to *any* target.

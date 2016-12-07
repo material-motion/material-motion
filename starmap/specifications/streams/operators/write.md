@@ -35,13 +35,13 @@ some$.write({ value in
 
 Your MVP must implement at least one of the following options.
 
-### Option 1: Expose write-to-property API
+### Option 1: Expose ScopedWriteable API
 
 The property is expected to have a handle to the target instance.
 
 ```swift
-public func write(to property: Writeable<Target, T>) -> MotionObservable<T> {
-  return MotionObservable<T> { observer in
+public func write(to property: ScopedWriteable<V>) -> MotionObservable<V> {
+  return MotionObservable<V> { observer in
     return self.subscribe(next: { value in
       property.set(value)
       observer.next(value)
@@ -56,13 +56,13 @@ Example usage:
 some$.write(to property: propertyOf(view).positionX)
 ```
 
-### Option 2: Expose write-to-target-property API
+### Option 2: Expose UnscopedWriteable API
 
 The property is expected to be stateless.
 
 ```swift
-public func write(to target: Target, property: Writeable<Target, T>) -> MotionObservable<T> {
-  return MotionObservable<T> { observer in
+public func write<O>(to target: O, property: UnscopedWriteable<O, V>) -> MotionObservable<V> {
+  return MotionObservable<V> { observer in
     return self.subscribe(next: { value in
       property.set(target, value)
       observer.next(value)
@@ -80,8 +80,8 @@ some$.write(to: view, property: View.X)
 ### Option 3: Expose write-inline API
 
 ```swift
-public func write(_ block: (T) -> Void) -> MotionObservable<T> {
-  return MotionObservable<T> { observer in
+public func write(_ block: (V) -> Void) -> MotionObservable<V> {
+  return MotionObservable<V> { observer in
     return self.subscribe(next: { value in
       block(value)
       observer.next(value)

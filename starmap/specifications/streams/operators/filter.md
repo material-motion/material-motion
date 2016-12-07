@@ -33,7 +33,7 @@ some$._filter { state in return state == .began || state == .changed }
 Should delegate to [`_operator`](operator).
 
 ```swift
-public func _filter(_ passesTest: (T) -> Bool) -> MotionObservable<T> {
+public func _filter(_ passesTest: (V) -> Bool) -> MotionObservable<V> {
   return _operator { observer, value in
     if passesTest(value) {
       observer.next(value)
@@ -45,7 +45,7 @@ public func _filter(_ passesTest: (T) -> Bool) -> MotionObservable<T> {
 If `OP` is available then this method should also accept an OP.
 
 ```swift
-public func _filter(_ op: OP, _ passesTest: (T) -> Bool) -> MotionObservable<T> {
+public func _filter(_ op: OP, _ passesTest: (V) -> Bool) -> MotionObservable<V> {
   return _operator(op) { observer, value in
     if passesTest(value) {
       observer.next(value)

@@ -289,6 +289,12 @@ toc:
               url: "/starmap/specifications/streams/connections/"
               children:
                - page:
+                 title: "Readable"
+                 url: "/starmap/specifications/streams/connections/Readable"
+               - page:
+                 title: "Writeable"
+                 url: "/starmap/specifications/streams/connections/Writeable"
+               - page:
                  title: "Property names"
                  url: "/starmap/specifications/streams/connections/names"
             - page:

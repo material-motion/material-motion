@@ -16,7 +16,7 @@ This is the engineering specification for the `MotionObservable` operator: `_map
 
 ## Overview
 
-`_map` transforms an incoming value of type `T` to a new value of type `U`.
+`_map` transforms an incoming value of type `V` to a new value of type `W`.
 
 [ReactiveX documentation](http://reactivex.io/documentation/operators/map.html).
 
@@ -33,7 +33,7 @@ some$._map { point in return point.x }
 Should delegate to [`_operator`](operator).
 
 ```swift
-public func _map<U>(_ transform: (T) -> U) -> MotionObservable<U> {
+public func _map<W>(_ transform: (V) -> W) -> MotionObservable<W> {
   return _operator { observer, value in
     observer.next(transform(value))
   }
@@ -43,7 +43,7 @@ public func _map<U>(_ transform: (T) -> U) -> MotionObservable<U> {
 If `OP` is available then this method should also accept an OP.
 
 ```swift
-public func _map<U>(_ op: OP, _ transform: (T) -> U) -> MotionObservable<U> {
+public func _map<W>(_ op: OP, _ transform: (V) -> W) -> MotionObservable<W> {
   return _operator(op) { observer, value in
     observer.next(transform(value))
   }
