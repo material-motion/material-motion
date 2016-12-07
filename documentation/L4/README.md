@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: docs
 permalink: /documentation/L4/
 title: "L4: Core team documentation"
 ---
