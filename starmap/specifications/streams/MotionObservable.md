@@ -64,7 +64,7 @@ This API should allow a client to subscribe to a MotionObservable without having
 MotionObserver.
 
 ```swift
-public class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
+class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
   public func subscribe(next: (V) -> Void, state: (MotionState) -> Void) -> Subscription {
     return super.subscribe(observer: MotionObserver<V>(next: next, state: state))
   }
