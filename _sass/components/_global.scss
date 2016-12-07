@@ -128,6 +128,13 @@ a {
   @include transition(all .1s ease);
 }
 
+.code-container .filter {
+  text-align: right;
+}
+.code-container .filter input {
+  margin: 10px;
+}
+
 // Footer
 footer {
   text-align: center;

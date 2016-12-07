@@ -14,6 +14,11 @@ fetch(someURL).then(listener);
 self.onmessage = listener;
 ```
 
+```swift
+gesture.addTarget(self, action: #selector(gestureDidUpdate))
+viewController.delegate = self
+```
+
 Each one puts the listener in a different place.  An Observable is just a
 wrapper that gives them all the same interface:
 
