@@ -18,7 +18,7 @@ a MotionObservable.
 
 Sources have two internal shapes: inline and object-oriented.
 
-## Inline source
+## Inline subscriptions
 
 This type of source is able to make use of inline function APIs.
 
@@ -42,7 +42,7 @@ func spring(to destination: T) -> MotionObservable<T> {
 }
 ```
 
-## Object-oriented source
+## Object subscriptions
 
 Consider the following example of a tapSource that we might make on iOS:
 
@@ -59,8 +59,6 @@ func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapProduce
 
 Our tap gesture recognizer requires an object that can receive target/action events, so we've
 created a TapSubscription object that can receive these events.
-
-### Subscriptions to systems that require object instances
 
 Sources represent the connection from an external system into Material Motion.
 Subscriptions are the literal connections. In this case our TapSubscription listens to
