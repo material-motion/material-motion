@@ -77,7 +77,7 @@ $(document).ready(function() {
     });
 
     panel.append(form);
-    $(this).prepend(panel);
+    $(this).append(panel);
   });
   
   filterDidChange(filter);
