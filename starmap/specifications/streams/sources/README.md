@@ -50,7 +50,7 @@ func spring(to destination: T) -> MotionObservable<T> {
 Consider the following example of a tapSource that we might make on iOS:
 
 ```swift
-func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapProducer.Value> {
+func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapSubscription.Value> {
   return MotionObservable { observer in
     let subscription = TapSubscription(subscribedTo: gesture, observer: observer)
     return {
