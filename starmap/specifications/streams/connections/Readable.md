@@ -22,10 +22,10 @@ This is the engineering specification for the `Readable` abstract types.
 
 ## MVP
 
-### Option 1: Expose an abstract Readable API
+### Option 1: Expose an abstract ScopedReadable API
 
 ```swift
-public protocol Readable<T> {
+public protocol ScopedReadable<T> {
   func read() -> T
 }
 ```
