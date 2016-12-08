@@ -54,7 +54,7 @@ public final class MotionObserver<T> {
 ### Subclass IndefiniteObservable
 
 ```swift
-public class MotionObservable<T>: IndefiniteObservable<MotionObserver<V>> {
+public class MotionObservable<T>: IndefiniteObservable<MotionObserver<T>> {
 }
 ```
 
