@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Writeable
+title: Writable
 status:
   date: December 6, 2016
   is: Draft
@@ -12,13 +12,13 @@ related_to:
   - /starmap/specifications/streams/connections/Readable
 ---
 
-# Writeable specification
+# Writable specification
 
-This is the engineering specification for the `Writeable` abstract types.
+This is the engineering specification for the `Writable` abstract types.
 
 ## Overview
 
-`Writeable` defines an interface for writing a value to a target object.
+`Writable` defines an interface for writing a value to a target object.
 
 ## MVP
 
