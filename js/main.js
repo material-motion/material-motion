@@ -1,6 +1,5 @@
 
 function filterDidChange(filter) {
-  localStorage.setItem('filter', filter);
   $('.filter input').each(function() {
     this.checked = this.value == filter;
   })
@@ -18,18 +17,18 @@ $(document).ready(function() {
 
   var filter = localStorage.getItem('filter');
 
-  var allLanguages = new Set();
+  var languageLookup = new Set();
   $(".code-container").each(function() {
     $(this).children().map(function() {
       return /language-([a-z0-9]+)/.exec($(this).attr('class'))[1];
     }).each(function(index, language) {
-      allLanguages.add(language);
+      languageLookup.add(language);
     });
   });
-  allLanguages = Array.from(allLanguages);
+  allLanguages = Array.from(languageLookup);
   allLanguages.sort();
 
-  if (filter === null) {
+  if (filter === null || !languageLookup.has(filter)) {
     filter = allLanguages[0];
   }
 
@@ -47,6 +46,7 @@ $(document).ready(function() {
 
       radio.on('click', function() {
         filterDidChange(this.value);
+        localStorage.setItem('filter', filter);
       });
       
       var label = $('<label>');
