@@ -16,9 +16,13 @@ This is the engineering specification for the `IndefiniteSubject` object.
 
 ## Overview
 
+The `IndefiniteSubject` is both an `Observer` and multicast `Observable`.  It receives values via its `next` method and will dispatch those values to any observers who have `subscribe`d.
+
+Like `IndefiniteObservable`, it can be implemented very simply, with no dependencies:
+
 ## Examples
 
-```javascript
+```typescript
 class IndefiniteSubject<T> implements Observable<T>, Observer<T> {
   // Keep track of all the observers who have subscribed, so we can notify them
   // when we get new values.
@@ -58,12 +62,17 @@ class IndefiniteSubject<T> implements Observable<T>, Observer<T> {
 
 ## MVP
 
-### Do a thing
+### Cache the last-dispatched value for the next observer
 
-Explanation of the thing.
+The IndefiniteSubject should remember the last-dispatched value, and pass it to any observers who subscribe before the next dispatch.
 
 ```swift
-Code snippet of the thing.
+subject.next(42);
+subject.subscribe(console.log);
+// 42
+subject.next(3.14);
+// 3.14
 ```
+
 ## Unit tests
 - [JavaScript](https://github.com/material-motion/indefinite-observable-js/tree/develop/src/__tests__/IndefiniteSubject.test.ts)
