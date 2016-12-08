@@ -34,16 +34,16 @@ with no concept of completion or failure.
 ## Examples
 
 ```swift
-public final class ValueObserver<V>: Observer<V> {
-  public init(_ next: (V) -> Void) {
+public final class ValueObserver<T>: Observer<T> {
+  public init(_ next: (T) -> Void) {
     self.next = next
   }
 
-  public let next: (V) -> Void
+  public let next: (T) -> Void
 }
 
-public class ValueObservable<V>: IndefiniteObservable<ValueObserver<V>> {
-  public final func subscribe(_ next: (V) -> Void) -> Subscription {
+public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
+  public final func subscribe(_ next: (T) -> Void) -> Subscription {
     return super.subscribe(observer: ValueObserver(next))
   }
 }
@@ -59,23 +59,23 @@ let _ = observable.subscribe { value in
 
 // Example operators:
 extension ValueObservable {
-  public func _operator<W>(_ work: (ValueObserver<W>, V) -> Void) -> ValueObservable<W> {
-    return ValueObservable<W> { observer in
-      return self.subscribe(next: observer: ValueObserver<V> {
-        work(observer, $0)
+  public func _operator<U>(_ operation: (ValueObserver<U>, T) -> Void) -> ValueObservable<U> {
+    return ValueObservable<U> { observer in
+      return self.subscribe(next: observer: ValueObserver<T> {
+        operation(observer, $0)
       }).unsubscribe
     }
   }
 
-  public func _map<W>(transform: (V) -> W) -> ValueObservable<W> {
+  public func _map<W>(transform: (T) -> U) -> ValueObservable<W> {
     return _operator(op) { observer, value in
       observer.next(transform(value))
     }
   }
 
-  public func _filter(isIncluded: (V) -> Bool) -> ValueObservable<V> {
+  public func _filter(predicate: (T) -> Bool) -> ValueObservable<T> {
     return _operator(op) { observer, value in
-      if isIncluded(value) {
+      if predicate(value) {
         observer.next(value)
       }
     }
@@ -88,11 +88,11 @@ extension ValueObservable {
 ### Expose a generic abstract Observer type
 
 Define the base Observer type which has a single **channel** called `next`. `next` accepts an
-argument of type `V`.
+argument of type `T`.
 
 ```swift
-public protocol Observer<V> {
-  func next(value: V)
+public protocol Observer<T> {
+  func next(value: T)
 }
 ```
 
