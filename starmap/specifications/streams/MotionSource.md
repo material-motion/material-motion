@@ -12,12 +12,35 @@ depends_on:
 
 # MotionSource concept
 
-A motion source is the beginning of a material motion stream. It produces events by connecting one
-system to another. Sources are usually simple global functions that return a MotionObservable.
+A motion source is the beginning of a material motion stream. It produces events by connecting a
+platform value emitter to a motion stream. Sources are usually simple global functions that return
+a MotionObservable.
 
 Sources have two internal shapes: inline and object-oriented.
 
 ## Inline source
+
+This type of source is able to make use of inline function APIs.
+
+```swift
+func spring(to destination: T) -> MotionObservable<T> {
+  return MotionObservable { observer in
+    let spring = Spring()
+    spring.destination = destination
+    spring.onActivate = {
+      observer.state(.active)
+    }
+    spring.onCompletion = {
+      observer.state(.atRest)
+    }
+    spring.start()
+    
+    return {
+      spring.stop()
+    }
+  }
+}
+```
 
 ## Object-oriented source
 
