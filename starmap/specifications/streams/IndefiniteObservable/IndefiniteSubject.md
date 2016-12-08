@@ -66,7 +66,7 @@ class IndefiniteSubject<T> implements Observable<T>, Observer<T> {
 
 The IndefiniteSubject should remember the last-dispatched value, and pass it to any observers who subscribe before the next dispatch.
 
-```swift
+```typescript
 subject.next(42);
 subject.subscribe(console.log);
 // 42
