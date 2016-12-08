@@ -19,7 +19,7 @@ gesture.addTarget(listener, action: #selector(gestureDidUpdate))
 viewController.delegate = listener
 ```
 
-```android
+```java
 gesture.addStateChangeListener(listener);
 view.setOnClickListener(listener);
 ```
