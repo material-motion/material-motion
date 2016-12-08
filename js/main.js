@@ -3,7 +3,7 @@ function filterDidChange(filter) {
   $('.filter input').each(function() {
     this.checked = this.value == filter;
   })
-  $('.highlighter-rouge').hide();
+  $('div.highlighter-rouge').hide();
   $('.language-'+filter).show();
 }
 
