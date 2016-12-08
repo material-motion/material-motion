@@ -41,7 +41,7 @@ An **Unscoped Property** is a property instance that can write to *any* target.
 
 ## Example usage
 
-| Option Number | Name              | [$.write](/starmap/specifications/streams/operators/$.write) |
+| Option Number | Name              | [$.write]({{ site.url }}/starmap/specifications/streams/operators/$.write) |
 |:--------------|:------------------|:------------------------------------------------|
 | 1.            | Scoped Property   | `$.write(to: propertyOf(view).positionX)`       |
 | 2.            | Unscoped Property | `$.write(to: view, property: View.X)`           |
