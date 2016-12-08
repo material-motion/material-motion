@@ -60,8 +60,8 @@ public class MotionObservable<T>: IndefiniteObservable<MotionObserver<T>> {
 
 ### Expose a helper subscribe API
 
-This API should allow a client to subscribe to a MotionObservable without having to create a
-MotionObserver.
+This API should allow a client to subscribe to a `MotionObservable` without having to create a
+`MotionObserver`.
 
 ```swift
 class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
