@@ -50,7 +50,7 @@ $(document).ready(function() {
 
       radio.on('click', function() {
         filterDidChange(this.value);
-        localStorage.setItem('filter', filter);
+        localStorage.setItem('filter', this.value);
       });
       
       var label = $('<label>');
