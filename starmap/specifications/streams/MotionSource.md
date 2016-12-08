@@ -49,7 +49,7 @@ Consider the following example of a tapSource that we might make on iOS:
 ```swift
 func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapProducer.Value> {
   return MotionObservable { observer in
-    let subscription = TapProducer(subscribedTo: gesture, observer: observer)
+    let subscription = TapSubscription(subscribedTo: gesture, observer: observer)
     return {
       subscription.unsubscribe()
     }
@@ -58,18 +58,16 @@ func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapProduce
 ```
 
 Our tap gesture recognizer requires an object that can receive target/action events, so we've
-created a type of object we call a `Producer`.
+created a TapSubscription object that can receive these events.
 
-### Producers
+### Subscriptions to systems that require object instances
 
-While Sources represent the connection from one system to another, Producers are the literal
-connections. In this case our TapProducer listens to UITapGestureRecognizer events and sends
-them through the provided observer.
-
-A Producer is a Subscription.
+Sources represent the connection from an external system into Material Motion.
+Subscriptions are the literal connections. In this case our TapSubscription listens to
+UITapGestureRecognizer events and sends them through the provided observer's channels.
 
 ```swift
-final class TapProducer: Subscription {
+final class TapSubscription: Subscription {
   typealias Value = CGPoint
 
   init(subscribedTo gesture: UITapGestureRecognizer, observer: MotionObserver<Value>) {
