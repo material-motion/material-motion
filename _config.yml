@@ -276,7 +276,11 @@ toc:
           children:
             - page:
               title: "IndefiniteObservable"
-              url: "/starmap/specifications/streams/IndefiniteObservable"
+              url: "/starmap/specifications/streams/IndefiniteObservable/"
+              children:
+               - page:
+                 title: "IndefiniteSubject"
+                 url: "/starmap/specifications/streams/IndefiniteObservable/IndefiniteSubject"
             - page:
               title: "MotionObservable"
               url: "/starmap/specifications/streams/MotionObservable"
