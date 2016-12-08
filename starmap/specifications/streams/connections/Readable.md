@@ -22,12 +22,11 @@ This is the engineering specification for the `Readable` abstract types.
 
 ## MVP
 
-### Option 1: Expose an abstract ScopedReadable API
+### Option 1: Expose an abstract Readable API
 
 ```swift
-public protocol ScopedReadable<O, T> {
+public protocol Readable<T> {
   func read() -> T
-  readonly var object: O
 }
 ```
 
@@ -36,13 +35,5 @@ public protocol ScopedReadable<O, T> {
 ```swift
 public protocol UnscopedReadable<O, T> {
   func read(object: O) -> T
-}
-```
-
-### Option 3: Expose an abstract InlineReadable API
-
-```swift
-public protocol InlineReadable<T> {
-  func read() -> T
 }
 ```
