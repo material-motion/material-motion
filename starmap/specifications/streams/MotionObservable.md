@@ -8,6 +8,11 @@ knowledgelevel: L4
 library: streams
 depends_on:
   - /starmap/specifications/streams/IndefiniteObservable
+availability:
+  - platform:
+    name: iOS
+    label: "streams-swift in develop"
+    url: https://github.com/material-motion/streams-swift
 ---
 
 # MotionObservable specification
