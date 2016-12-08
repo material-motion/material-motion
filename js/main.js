@@ -29,7 +29,11 @@ $(document).ready(function() {
   allLanguages.sort();
 
   if (filter === null || !languageLookup.has(filter)) {
-    filter = allLanguages[0];
+    if (languageLookup.has('javascript')) {
+      filter = 'javascript';
+    } else {
+      filter = allLanguages[0];
+    }
   }
 
   var editThisPageUrl = $('#edit-this-page').attr('href');
