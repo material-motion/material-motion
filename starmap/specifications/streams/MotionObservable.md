@@ -2,8 +2,8 @@
 layout: page
 title: MotionObservable
 status:
-  date: December 4, 2016
-  is: Draft
+  date: December 7, 2016
+  is: Stable
 knowledgelevel: L4
 library: streams
 depends_on:
