@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MotionObservable OP
+title: OperatorMetadata
 status:
   date: December 4, 2016
   is: Draft
@@ -10,38 +10,38 @@ depends_on:
   - /starmap/specifications/streams/MotionObservable
 ---
 
-# OP feature specification for MotionObservable
+# OperatorMetadata feature specification for MotionObservable
 
-This is the engineering specification for the `OP` object.
+This is the engineering specification for the `OperatorMetadata` object.
 
 ## Overview
 
 Observables can be referred to as operators. A series of operators is referred to as a stream. In order
 provide introspection capabilities, each operator is expected to store a small amount of meta
-information about itself. This information is stored in an object called `OP`.
+information about itself. This information is stored in an object called `OperatorMetadata`.
 
 ## MVP
 
-Provide an `OP` type that represents metadata about the operator.
+Provide an `OperatorMetadata` type that represents metadata about the operator.
 
 ### Class type
 
-Define a public object type named `OP`.
+Define a public object type named `OperatorMetadata`.
 
 ```swift
-public class OP {
+public class OperatorMetadata {
 }
 ```
 
 ### Store name and args
 
 ```swift
-class OP {
+class OperatorMetadata {
   public let name: String
   public let args: [Any]?
-  private var parent: OP?
+  private var parent: OperatorMetadata?
 
-  private init(_ name: String, args: [Any]?, parent: OP?) {
+  private init(_ name: String, args: [Any]?, parent: OperatorMetadata?) {
     self.name = name
     self.args = args
     self.parent = parent
@@ -50,22 +50,22 @@ class OP {
 
 ### Expose with API
 
-Expose a `with` method that creates a new OP with self as its parent.
+Expose a `with` method that creates a new OperatorMetadata with self as its parent.
 
 ```swift
-class OP {
-  public func with(_ name: String, args: [Any]? = nil) -> OP {
+class OperatorMetadata {
+  public func with(_ name: String, args: [Any]? = nil) -> OperatorMetadata {
     return .init(name, args: args, parent: self)
   }
 ```
 
 ### Expose debug description API
 
-Expose a debug description method. The implementation should traverse the parent OPs and construct
+Expose a debug description method. The implementation should traverse the parent OperatorMetadatas and construct
 a string represenation of the operator.
 
 ```swift
-class OP {
+class OperatorMetadata {
   public var debugDescription: String {
   }
 ```
