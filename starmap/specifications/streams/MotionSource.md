@@ -8,6 +8,8 @@ knowledgelevel: L4
 library: streams
 depends_on:
   - /starmap/specifications/streams/IndefiniteObservable/
+enables:
+  - /starmap/specifications/streams/operators/foundation/direct_manipulation/
 ---
 
 # MotionSource concept
