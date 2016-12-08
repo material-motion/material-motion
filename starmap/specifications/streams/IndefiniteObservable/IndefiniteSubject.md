@@ -18,8 +18,6 @@ This is the engineering specification for the `IndefiniteSubject` object.
 
 The `IndefiniteSubject` is both an `Observer` and multicast `Observable`.  It receives values via its `next` method and will dispatch those values to any observers who have `subscribe`d.
 
-Like `IndefiniteObservable`, it can be implemented very simply, with no dependencies:
-
 ## Examples
 
 ```typescript
@@ -31,14 +29,14 @@ class IndefiniteSubject<T> implements Observable<T>, Observer<T> {
   _hasStarted: boolean = false;
 
   next(value: T) {
-    this._hasStarted = true;
-    this._lastValue = value;
-
     // The parent stream has dispatched a value, so pass it along to all the
     // children, and cache it for any observers that subscribe before the next
     // dispatch.
+    this._hasStarted = true;
+    this._lastValue = value;
+
     this._observers.forEach(
-      (observer: Observer<T>) => observer.next(value)
+      (observer) => observer.next(value)
     );
   }
 
