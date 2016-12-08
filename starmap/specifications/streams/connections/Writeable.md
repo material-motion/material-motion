@@ -22,10 +22,10 @@ This is the engineering specification for the `Writable` abstract types.
 
 ## MVP
 
-### Option 1: Expose an abstract Writable API
+### Option 1: Expose an abstract ScopedWritable API
 
 ```swift
-public protocol Writable<T> {
+public protocol ScopedWritable<T> {
   func write(value: T)
 }
 ```
