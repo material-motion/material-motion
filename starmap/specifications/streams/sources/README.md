@@ -13,11 +13,11 @@ depends_on:
 
 # Sources
 
-A motion source is the beginning of a motion stream. It produces events by connecting a platform
-value emitter to a motion stream. Sources are usually simple global functions that return a
-MotionObservable.
+A motion source is the beginning of a motion stream. It produces events often by connecting
+to an existing value emitter. A source can be created by invoking a global function that
+returns a MotionObservable.
 
-Sources have two internal shapes: inline and object-oriented.
+Sources have two subscription shapes: inline and object.
 
 ## Inline subscriptions
 
