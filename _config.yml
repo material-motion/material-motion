@@ -308,11 +308,11 @@ toc:
                  title: "$._operator"
                  url: "/starmap/specifications/streams/operators/$._operator"
                - page:
-                 title: "$._filter"
-                 url: "/starmap/specifications/streams/operators/$._filter"
-               - page:
                  title: "$._map"
                  url: "/starmap/specifications/streams/operators/$._map"
+               - page:
+                 title: "$._filter"
+                 url: "/starmap/specifications/streams/operators/$._filter"
                - page:
                  title: "$.write"
                  url: "/starmap/specifications/streams/operators/$.write"
