@@ -7,7 +7,7 @@ status:
 knowledgelevel: L4
 library: indefinite-observable
 depends_on:
-  - /starmap/specifications/streams/IndefiniteSubject
+  - /starmap/specifications/streams/IndefiniteObservable/
 ---
 
 # IndefiniteSubject specification
