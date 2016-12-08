@@ -19,6 +19,11 @@ gesture.addTarget(listener, action: #selector(gestureDidUpdate))
 viewController.delegate = listener
 ```
 
+```android
+gesture.addStateChangeListener(listener);
+view.setOnClickListener(listener);
+```
+
 Each one puts the listener in a different place.  An Observable is just a
 wrapper that gives them all the same interface:
 
