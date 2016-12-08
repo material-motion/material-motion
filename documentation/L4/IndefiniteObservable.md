@@ -15,8 +15,8 @@ self.onmessage = listener;
 ```
 
 ```swift
-gesture.addTarget(self, action: #selector(gestureDidUpdate))
-viewController.delegate = self
+gesture.addTarget(listener, action: #selector(gestureDidUpdate))
+viewController.delegate = listener
 ```
 
 Each one puts the listener in a different place.  An Observable is just a
