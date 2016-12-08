@@ -21,11 +21,14 @@ Starmap.
 
 ### Names for element properties
 
-| Starmap                         | Android View           | iOS UIView  | Web DOM  |
-|:--------------------------------|:-----------------------|:------------|:---------|
-| `backgroundColor`               |                        |             |          |
-| `height`                        |                        |             |          |
-| `opacity`                       |                        |             |          |
-| `position` relative to parent   | (`view.X`, `view.Y`)   | `view.layer.position` |          |
-| `positionX` relative to parent  | `view.X`               | `view.layer.position.x`          |          |
-| `positionY` relative to parent  | `view.Y`               | `view.layer.position.y`          |          |
+| Starmap                        | Android View         | iOS UIView              | CSS                |
+|--------------------------------|----------------------|-------------------------|--------------------|
+| `backgroundColor`              |                      |                         | `background-color` |
+| `width`                        |                      |                         | `width`            |
+| `height`                       |                      |                         | `height`           |
+| `opacity`                      |                      |                         | `opacity`          |
+| `position` relative to parent  | (`view.X`, `view.Y`) | `view.layer.position`   | `translate()`      |
+| `positionX` relative to parent | `view.X`             | `view.layer.position.x` | `translateX()`     |
+| `positionY` relative to parent | `view.Y`             | `view.layer.position.y` | `translateY()`     |
+| `rotation`                     |                      |                         | `rotate()`         |
+| `scale`                        |                      |                         | `scale()`          |
