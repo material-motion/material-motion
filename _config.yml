@@ -309,20 +309,27 @@ toc:
               url: "/starmap/specifications/streams/operators/"
               children:
                - page:
-                 title: "$._operator"
-                 url: "/starmap/specifications/streams/operators/$._operator"
-               - page:
-                 title: "$._map"
-                 url: "/starmap/specifications/streams/operators/$._map"
-               - page:
-                 title: "$._filter"
-                 url: "/starmap/specifications/streams/operators/$._filter"
+                 title: "Foundation"
+                 url: "/starmap/specifications/streams/operators/foundation/"
+                 children:
+                  - page:
+                    title: "$._operator"
+                    url: "/starmap/specifications/streams/operators/foundation/$._operator"
+                  - page:
+                    title: "$._map"
+                    url: "/starmap/specifications/streams/operators/foundation/$._map"
+                  - page:
+                    title: "$._filter"
+                    url: "/starmap/specifications/streams/operators/foundation/$._filter"
                - page:
                  title: "$.write"
                  url: "/starmap/specifications/streams/operators/$.write"
             - page:
               title: "MotionSource"
               url: "/starmap/specifications/streams/MotionSource"
+            - page:
+              title: " operators"
+              url: "/starmap/specifications/streams/operators/"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
