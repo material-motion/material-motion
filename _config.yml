@@ -321,6 +321,9 @@ toc:
                  title: "$.write"
                  url: "/starmap/specifications/streams/operators/$.write"
             - page:
+              title: "MotionSource"
+              url: "/starmap/specifications/streams/MotionSource"
+            - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
               children:
