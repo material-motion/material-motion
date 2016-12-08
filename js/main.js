@@ -28,7 +28,12 @@ $(document).ready(function() {
   });
   allLanguages = Array.from(allLanguages);
   allLanguages.sort();
-  
+
+  if (filter == 'undefined') {
+    filter = allLanguages[0];
+    console.log(filter);
+  }
+
   var editThisPageUrl = $('#edit-this-page').attr('href');
 
   $(".code-container").each(function() {
