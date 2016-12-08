@@ -25,15 +25,24 @@ This is the engineering specification for the `Readable` abstract types.
 ### Option 1: Expose an abstract ScopedReadable API
 
 ```swift
-public protocol ScopedReadable<V> {
-  func read() -> V
+public protocol ScopedReadable<O, T> {
+  func read() -> T
+  readonly var object: O
 }
 ```
 
 ### Option 2: Expose an abstract UnscopedReadable API
 
 ```swift
-public protocol UnscopedReadable<O, V> {
-  func read(object: O) -> V
+public protocol UnscopedReadable<O, T> {
+  func read(object: O) -> T
+}
+```
+
+### Option 3: Expose an abstract InlineReadable API
+
+```swift
+public protocol InlineReadable<T> {
+  func read() -> T
 }
 ```
