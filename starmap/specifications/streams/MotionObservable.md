@@ -38,15 +38,15 @@ public enum MotionState {
 Provide a class for creating a motion observer using inline functions.
 
 ```swift
-public final class MotionObserver<V> {
-  public typealias Value = V
+public final class MotionObserver<T> {
+  public typealias Value = T
 
-  public init(_ next: (V) -> Void, state: (MotionState) -> Void) {
+  public init(_ next: (T) -> Void, state: (MotionState) -> Void) {
     self.next = next
     self.state = state
   }
 
-  public let next: (V) -> Void
+  public let next: (T) -> Void
   public let state: (MotionState) -> Void
 }
 ```
@@ -54,7 +54,7 @@ public final class MotionObserver<V> {
 ### Subclass IndefiniteObservable
 
 ```swift
-public class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
+public class MotionObservable<T>: IndefiniteObservable<MotionObserver<V>> {
 }
 ```
 
@@ -65,8 +65,8 @@ MotionObserver.
 
 ```swift
 class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
-  public func subscribe(next: (V) -> Void, state: (MotionState) -> Void) -> Subscription {
-    return super.subscribe(observer: MotionObserver<V>(next: next, state: state))
+  public func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
+    return super.subscribe(observer: MotionObserver<T>(next: next, state: state))
   }
 }
 ```
