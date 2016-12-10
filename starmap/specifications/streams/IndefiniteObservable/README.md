@@ -106,20 +106,28 @@ class IndefiniteObservable<O: Observer> {
 }
 ```
 
-### Expose an unsubscribe function type
+### Expose a Connect function type
 
-The function signature expected to be returned by a `Subscriber`.
+`Connect` receives an observer and can returns a `Disconnect` method.
+
+```swift
+public typealias Connect<O> = (O) -> Disconnect?
+```
+
+### Expose a Disconnect function type
+
+The function signature expected to be returned by a `Connect`.
+
+```swift
+public typealias Disconnect = () -> Void
+```
+
+### Expose an Unsubscribe function type
+
+`Unsubscribe` should have the same shape as `Disconnect`.
 
 ```swift
 public typealias Unsubscribe = () -> Void
-```
-
-### Expose a Subscriber function type
-
-A `Subscriber` receives an observer and can optionally return an `Unsubscribe` method.
-
-```swift
-public typealias Subscriber<O> = (O) -> Unsubscribe?
 ```
 
 ### Expose a Subscription object type
@@ -128,21 +136,21 @@ A representation of a subscription made by invoking `subscribe` on an `Indefinit
 
 ```swift
 public protocol Subscription {
-  func unsubscribe()
+  func unsubscribe: Unsubscribe
 }
 ```
 
 ### Expose an IndefiniteObservable initializer
 
-Requires a `Subscriber` type. Store the subscriber as a private constant variable.
+Requires a `Connect` type. Store the subscriber as a private constant variable.
 
 ```swift
 class IndefiniteObservable<O> {
-  public init(subscriber: Subscriber<O>) {
-    self.subscriber = subscriber
+  public init(connect: Connect<O>) {
+    _connect = connect
   }
 
-  private let subscriber: Subscriber<O>
+  private let _connect: Connect<O>
 ```
 
 ### Create a private SimpleSubscription type
@@ -151,7 +159,7 @@ Implement a `SimpleSubscription` class that conforms to `Subscription`.
 
 This class should be **private**.
 
-This class should optionally store an `Unsubscribe` function.
+This class should store an `Unsubscribe` function.  The first time `Unsubscribe` is called, it should call the `Disconnect` function returned by `connect`.  Thereafter, it should do nothing.  (`Disconnect` shouldn't be called more than once per connection.)
 
 When the Subscription is deallocated it should invoke unsubscribe.
 
@@ -183,17 +191,12 @@ private final class SimpleSubscription: Subscription {
 Expose a `subscribe` API on `IndefiniteObservable` that accepts an observable and returns a
 `Subscription`.
 
-`subscribe` should invoke `self.subscriber` with the provided observer. The returned subscription
-is optional and should be wrapped in a `SimpleSubscription` instance before being returned because
-`subscribe` must always return a valid Subscription.
+`subscribe` should invoke `self.connect` with the provided observer.
 
 ```swift
 class IndefiniteObservable<O> {
   func subscribe(observer: O) -> Subscription {
-    if let subscription = subscriber(observer) {
-      return SimpleSubscription(subscription)
-    } else {
-      return SimpleSubscription()
-    }
+    return subscriber(observer);
   }
+}
 ```
