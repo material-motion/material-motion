@@ -108,7 +108,7 @@ class IndefiniteObservable<O: Observer> {
 
 ### Expose a Connect function type
 
-`Connect` receives an observer and can returns a `Disconnect` method.
+`Connect` receives an `observer` and returns a `Disconnect` function.
 
 ```swift
 public typealias Connect<O> = (O) -> Disconnect?
