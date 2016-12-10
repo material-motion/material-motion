@@ -173,10 +173,6 @@ private final class SimpleSubscription: Subscription {
     _unsubscribe = unsubscribe
   }
 
-  init() {
-    _unsubscribe = nil
-  }
-
   func unsubscribe() {
     _unsubscribe?()
     _unsubscribe = nil
