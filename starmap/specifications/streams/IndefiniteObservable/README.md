@@ -142,7 +142,7 @@ public protocol Subscription {
 
 ### Expose an IndefiniteObservable initializer
 
-Requires a `Connect` type. Store the subscriber as a private constant variable.
+Requires a `Connect` type. Store `connect` as a private constant.
 
 ```swift
 class IndefiniteObservable<O> {
@@ -161,7 +161,7 @@ This class should be **private**.
 
 This class should store an `Unsubscribe` function.  The first time `Unsubscribe` is called, it should call the `Disconnect` function returned by `connect`.  Thereafter, it should do nothing.  (`Disconnect` shouldn't be called more than once per connection.)
 
-When the Subscription is deallocated it should invoke unsubscribe.
+When the `Subscription` is deallocated it should invoke `unsubscribe`.
 
 ```swift
 private final class SimpleSubscription: Subscription {
@@ -188,15 +188,15 @@ private final class SimpleSubscription: Subscription {
 
 ### Expose a subscribe API on IndefiniteObservable
 
-Expose a `subscribe` API on `IndefiniteObservable` that accepts an observable and returns a
+Expose a `subscribe` API on `IndefiniteObservable` that accepts an `observer` and returns a
 `Subscription`.
 
-`subscribe` should invoke `self.connect` with the provided observer.
+`subscribe` should invoke `self._connect` with the provided observer.
 
 ```swift
 class IndefiniteObservable<O> {
   func subscribe(observer: O) -> Subscription {
-    return subscriber(observer);
+    return _connect(observer);
   }
 }
 ```
