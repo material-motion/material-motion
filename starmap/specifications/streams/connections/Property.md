@@ -24,9 +24,9 @@ This is the engineering specification for the `Property` concrete type.
 ### Option 1: Expose a concrete ScopedProperty API
 
 ```swift
-public class ScopedProperty<V>: ScopedReadable<V>, ScopedWriteable<V> {
-  public typealias Read = () -> V
-  public typealias Write = (V) -> Void
+public class ScopedProperty<T>: ScopedReadable<T>, ScopedWriteable<T> {
+  public typealias Read = () -> T
+  public typealias Write = (T) -> Void
 
   public let read: Read
   public let write: Write
@@ -41,9 +41,9 @@ public class ScopedProperty<V>: ScopedReadable<V>, ScopedWriteable<V> {
 ### Option 2: Expose a concrete UnscopedProperty API
 
 ```swift
-public class UnscopedProperty<O, V>: ScopedReadable<O, V>, ScopedWriteable<O, V> {
-  public typealias Read = (O) -> V
-  public typealias Write = (O, V) -> Void
+public class UnscopedProperty<O, T>: ScopedReadable<O, T>, ScopedWriteable<O, T> {
+  public typealias Read = (O) -> T
+  public typealias Write = (O, T) -> Void
 
   public let read: Read
   public let write: Write
