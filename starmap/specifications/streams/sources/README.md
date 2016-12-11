@@ -19,9 +19,9 @@ A motion source is the beginning of a motion stream. It produces events often by
 to an existing value emitter. A source can be created by invoking a global function that
 returns a MotionObservable.
 
-Sources have two subscription shapes: inline and object.
+Sources have two connection shapes: inline and object.
 
-## Inline subscriptions
+## Inline connections
 
 This type of source is able to make use of inline function APIs.
 
@@ -45,30 +45,30 @@ func spring(to destination: T) -> MotionObservable<T> {
 }
 ```
 
-## Object subscriptions
+## Object connections
 
 Consider the following example of a tapSource that we might make on iOS:
 
 ```swift
 func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapSubscription.Value> {
   return MotionObservable { observer in
-    let subscription = TapSubscription(subscribedTo: gesture, observer: observer)
+    let connection = TapConnection(subscribedTo: gesture, observer: observer)
     return {
-      subscription.unsubscribe()
+      connection.disconnect()
     }
   }
 }
 ```
 
 Our tap gesture recognizer requires an object that can receive target/action events, so we've
-created a TapSubscription object that can receive these events.
+created a TapConnection object that can receive these events.
 
 Sources represent the connection from an external system into Material Motion.
-Subscriptions are the literal connections. In this case our TapSubscription listens to
-UITapGestureRecognizer events and sends them through the provided observer's channels.
+TapConnection listens to UITapGestureRecognizer events and sends them through the provided
+observer's channels.
 
 ```swift
-final class TapSubscription: Subscription {
+final class TapConnection {
   typealias Value = CGPoint
 
   init(subscribedTo gesture: UITapGestureRecognizer, observer: MotionObserver<Value>) {
@@ -81,7 +81,7 @@ final class TapSubscription: Subscription {
     propagate()
   }
 
-  func unsubscribe() {
+  func disconnect() {
     gesture?.removeTarget(self, action: #selector(didTap))
     gesture = nil
   }
