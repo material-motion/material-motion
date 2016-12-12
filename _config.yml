@@ -329,18 +329,8 @@ toc:
               url: "/starmap/specifications/streams/sources/"
               children:
                - page:
-                 title: "Direct manipulation"
-                 url: "/starmap/specifications/streams/sources/direct_manipulation/"
-                 children:
-                  - page:
-                    title: "dragGestureSource"
-                    url: "/starmap/specifications/streams/sources/direct_manipulation/dragGestureSource"
-                  - page:
-                    title: "scaleGestureSource"
-                    url: "/starmap/specifications/streams/sources/direct_manipulation/scaleGestureSource"
-                  - page:
-                    title: "rotationGestureSource"
-                    url: "/starmap/specifications/streams/sources/direct_manipulation/rotationGestureSource"
+                 title: "gestureSource"
+                 url: "/starmap/specifications/streams/sources/gestureSource/"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
