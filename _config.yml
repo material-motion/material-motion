@@ -470,6 +470,9 @@ toc:
          title: "Writing reviewable code"
          url: "/team/essentials/writing_reviewable_code"
        - page:
+         title: "Giving helpful feedback"
+         url: "/team/essentials/giving_helpful_feedback"
+       - page:
          title: "Casual contributors"
          url: "/team/essentials/casual_contributors/"
          children:
