@@ -11,7 +11,7 @@ The Starmap represents our long-term plans as a team. Contributions made to the 
 
 - Read the [Governance](../community/governance) article.
 - Discuss your proposed changes and get agreement on our mailing list.
-- [Create a pull request](https://material-motion.github.io/material-motion/team/starmap_essentials/gitbook/pull_request). This process differs from the typical GitHub pull request process.
+- [Create a pull request](https://github.com/material-motion/material-motion)
   - Ensure that you have signed [Google's Contributor License Agreement](https://cla.developers.google.com/)
 - Once your pull request has been approved, a core contributor will merge your pull request.
 

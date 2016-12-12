@@ -520,16 +520,6 @@ toc:
        - page:
          title: "Writing prose"
          url: "/team/starmap_essentials/writing_prose"
-       - page:
-         title: "GitBook"
-         url: "/team/starmap_essentials/gitbook/"
-         children:
-           - page:
-             title: "Mirroring GitBooks to GitHub"
-             url: "/team/starmap_essentials/gitbook/updating_our_books"
-           - page:
-             title: "Creating a GitBook pull request"
-             url: "/team/starmap_essentials/gitbook/pull_request"
     - page:
       title: "Weekly updates"
       url: "/team/weekly_updates/"
