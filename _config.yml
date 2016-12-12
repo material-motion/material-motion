@@ -296,8 +296,8 @@ toc:
                  title: "Readable"
                  url: "/starmap/specifications/streams/connections/Readable"
                - page:
-                 title: "Writeable"
-                 url: "/starmap/specifications/streams/connections/Writeable"
+                 title: "Writable"
+                 url: "/starmap/specifications/streams/connections/Writable"
                - page:
                  title: "Property"
                  url: "/starmap/specifications/streams/connections/Property"

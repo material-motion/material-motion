@@ -9,7 +9,7 @@ library: streams
 depends_on:
   - /starmap/specifications/streams/connections/
 related_to:
-  - /starmap/specifications/streams/connections/Writeable
+  - /starmap/specifications/streams/connections/Writable
 ---
 
 # Readable specification

@@ -26,7 +26,7 @@ There are two primary flows of data we care about:
 
 There are three primary ways to read or write a value: **Properties** and **Inline** functions.
 
-| Option Number | Name              | Readable connections             | Writeable connections                  |
+| Option Number | Name              | Readable connections             | Writable connections                  |
 |:--------------|:------------------|:---------------------------------|:---------------------------------------|
 | 1.            | Scoped Property   | `propertyOf(view).positionX`     | `propertyOf(view).positionX`           |
 | 2.            | Unscoped Property | `source: view, property: View.X` | `target: view, property: View.X`       |

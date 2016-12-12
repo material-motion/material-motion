@@ -8,7 +8,7 @@ knowledgelevel: L3
 library: streams
 depends_on:
   - /starmap/specifications/streams/connections/Readable
-  - /starmap/specifications/streams/connections/Writeable
+  - /starmap/specifications/streams/connections/Writable
 ---
 
 # Property specification
@@ -24,7 +24,7 @@ This is the engineering specification for the `Property` concrete type.
 ### Option 1: Expose a concrete ScopedProperty API
 
 ```swift
-public class ScopedProperty<T>: ScopedReadable<T>, ScopedWriteable<T> {
+public class ScopedProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
   public typealias Read = () -> T
   public typealias Write = (T) -> Void
 
@@ -41,7 +41,7 @@ public class ScopedProperty<T>: ScopedReadable<T>, ScopedWriteable<T> {
 ### Option 2: Expose a concrete UnscopedProperty API
 
 ```swift
-public class UnscopedProperty<O, T>: ScopedReadable<O, T>, ScopedWriteable<O, T> {
+public class UnscopedProperty<O, T>: ScopedReadable<O, T>, ScopedWritable<O, T> {
   public typealias Read = (O) -> T
   public typealias Write = (O, T) -> Void
 
