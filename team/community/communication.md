@@ -8,11 +8,9 @@ layout: page
 
 To receive announcements by email, subscribe to our announcement mailing list: [material-motion-announce@googlegroups.com](https://groups.google.com/forum/#!forum/material-motion-announce)
 
-## Chat + roadmap planning
+## Chat
 
-We hang out on Discord. Visit https://discord.gg/ZJyGXza to join the server.
-
-Our team is distributed, so we use Discord to plan our roadmaps and for daily standups.
+We hang out on Discord. Visit [https://discord.gg/ZJyGXza](https://discord.gg/ZJyGXza) to join the server.
 
 ## Code
 
