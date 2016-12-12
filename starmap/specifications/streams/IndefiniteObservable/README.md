@@ -111,7 +111,15 @@ class IndefiniteObservable<O: Observer> {
 `Connect` receives an `observer` and returns a `Disconnect` function.
 
 ```swift
-public typealias Connect<O> = (O) -> Disconnect?
+public typealias Connect<O> = (O) -> Disconnect
+```
+
+### Expose a noopDisconnect constant
+
+This value can be returned by a connect function to indicate that no disconnection work will occur.
+
+```swift
+public let noopDisconnect: Disconnect = { }
 ```
 
 ### Expose a Disconnect function type
