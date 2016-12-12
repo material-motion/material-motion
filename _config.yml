@@ -330,7 +330,7 @@ toc:
               children:
                - page:
                  title: "gestureSource"
-                 url: "/starmap/specifications/streams/sources/gestureSource/"
+                 url: "/starmap/specifications/streams/sources/gestureSource"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
