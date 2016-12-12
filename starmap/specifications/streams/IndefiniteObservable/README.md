@@ -50,7 +50,7 @@ public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
 
 let observable = ValueObservable<Int> { observer in
   observer.next(10)
-  return noopDisconnection
+  return noopDisconnect
 }
 
 let _ = observable.subscribe { value in
