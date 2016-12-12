@@ -30,8 +30,8 @@ gestureSource(dragGesture).subscribe(...)
 
 ### Expose generic gestureSource API
 
-Is a function accessible from anywhere. Is genericized with type T, where T is a type of
-GestureRecognizer. Returns a MotionObservable of type T.
+`gestureSource` is a function. It should be accessible from anywhere. `gestureSource` is genericized
+with type T, where T is a type of GestureRecognizer. Returns a MotionObservable of type T.
 
 > Emphasis: note that the type of value this source forwards is a **type of GestureRecognizer**.
 > This allows us to build operators that extract relevant information from the gesture recognizer
