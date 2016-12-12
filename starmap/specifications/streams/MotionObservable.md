@@ -79,3 +79,16 @@ class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
   }
 }
 ```
+
+### Expose a helper no-op subscribe API
+
+This API should allow a client to subscribe to a `MotionObservable` without having to provide any
+arguments. All `next` and `state` events will be ignored.
+
+```swift
+class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
+  public func subscribe() -> Subscription {
+    return super.subscribe(observer: MotionObserver<T>(next: { }, state: { }))
+  }
+}
+```
