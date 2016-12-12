@@ -436,20 +436,6 @@ toc:
          title: "Dashboards"
          url: "/team/community/dashboards"
     - page:
-      title: "Culture"
-      url: "/team/culture/"
-      children:
-       - page:
-         title: "Team goals"
-         url: "/team/culture/team_goals"
-       - page:
-         title: "Experiments"
-         url: "/team/culture/experiments/"
-         children:
-           - page:
-             title: "Assorted"
-             url: "/team/culture/experiments/assorted"
-    - page:
       title: "Contributor essentials"
       url: "/team/essentials/"
       children:

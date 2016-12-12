@@ -15,6 +15,16 @@ For casual contributions, check out our [Casual Contributors](essentials/casual_
 
 For frequent contributions, check out our [Frequent Contributors](essentials/frequent_contributors) guides.
 
+## Team culture goals
+
+As a team we **operate in the open**.
+
+Our general team culture:
+
+- Elevate existing solutions. Avoid re-inventing wheels.
+- In the absence of existing solutions, build great ones.
+- Use the Starmap as our common knowledge pool.
+
 ## License
 
 [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png)](http://creativecommons.org/licenses/by/4.0/)
