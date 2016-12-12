@@ -26,7 +26,7 @@ Helpful code review feedback is **relevant**. Try to avoid increasing the scope 
 good rule of thumb is to ask "can this be solved in a follow-up diff?" If the answer is
 yes, file an issue and follow-up.
 
-> Unhelpful: "Can you also fix this <unrelated problem>?"
+> Unhelpful: "Can you also fix this `<unrelated problem>`?"
 >
 > Helpful: "I've filed `[this bug](link)` to track fixing a separate problem I noticed as part of
 > this review."
