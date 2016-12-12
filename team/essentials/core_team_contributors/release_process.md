@@ -32,7 +32,7 @@ Our goal is to cut releases early and often. We plan to automate as much of this
 
 ### Frequency
 
-We cut releases on Wednesday of each week.
+We do not currently follow a strict release schedule.
 
 ### Process
 
