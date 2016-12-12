@@ -10,7 +10,7 @@ layout: page
 
 Why do we review code?
 
-1. To provide an opportunity for receiving feedback on code before it lands.
+1. To receive feedback on code before it lands.
 2. To increase awareness of solutions across platforms.
 3. To evaluate incremental adherence to the starmap.
 4. To evaluate adherence to language style.
