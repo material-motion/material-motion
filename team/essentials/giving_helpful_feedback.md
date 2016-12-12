@@ -22,8 +22,8 @@ towards resolving the feedback.
 >
 > Helpful: "I see another way to solve this problem. What are your thoughts on `<actionable solution>`?"
 
-Helpful code review feedback is **relevant** and doesn't unnecessarily increase the scope of the
-change. A good rule of thumb is to ask "can this be solved in a follow-up diff?" If the answer is
+Helpful code review feedback is **relevant**. Try to avoid increasing the scope of a change. A
+good rule of thumb is to ask "can this be solved in a follow-up diff?" If the answer is
 yes, file an issue and follow-up.
 
 > Unhelpful: "Can you also fix this <unrelated problem>?"
