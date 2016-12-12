@@ -2,8 +2,6 @@
 layout: page
 ---
 
-Status of this document: ![](/assets/under-construction.gif)
-
 # JavaScript Testing Notes
 
 There are multiple concerns in JavaScript testing: test execution, test assertion, and spying/mocking.  Some libraries do all of them; some focus on just one.
