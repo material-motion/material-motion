@@ -450,19 +450,6 @@ toc:
              title: "Assorted"
              url: "/team/culture/experiments/assorted"
     - page:
-      title: "Planning"
-      url: "/team/planning/"
-      children:
-       - page:
-         title: "Working on issues"
-         url: "/team/planning/working_on_issues"
-       - page:
-         title: "Issues/bugs/feature requests"
-         url: "/team/planning/issues"
-       - page:
-         title: "How we prioritize"
-         url: "/team/planning/how_we_prioritize"
-    - page:
       title: "Contributor essentials"
       url: "/team/essentials/"
       children:
@@ -472,6 +459,15 @@ toc:
        - page:
          title: "Giving helpful feedback"
          url: "/team/essentials/giving_helpful_feedback"
+       - page:
+         title: "Working on issues"
+         url: "/team/planning/working_on_issues"
+       - page:
+         title: "Issues/bugs/feature requests"
+         url: "/team/planning/issues"
+       - page:
+         title: "How we prioritize"
+         url: "/team/planning/how_we_prioritize"
        - page:
          title: "Casual contributors"
          url: "/team/essentials/casual_contributors/"
