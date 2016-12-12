@@ -50,7 +50,7 @@ public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
 
 let observable = ValueObservable<Int> { observer in
   observer.next(10)
-  return noopUnsubscription
+  return noopDisconnection
 }
 
 let _ = observable.subscribe { value in
@@ -135,10 +135,29 @@ public typealias Unsubscribe = () -> Void
 A representation of a subscription made by invoking `subscribe` on an `IndefiniteObservable`.
 
 ```swift
-public protocol Subscription {
-  func unsubscribe: Unsubscribe
+public final class Subscription {
+  deinit {
+    unsubscribe()
+  }
+
+  init(_ disconnect: () -> Void) {
+    self.disconnect = disconnect
+  }
+
+  public func unsubscribe() {
+    if disconnect != nil {
+      disconnect()
+      disconnect = nil
+    }
+  }
+
+  private var disconnect: (Disconnect)?
 }
 ```
+
+This class should store a `disconnect` function. The first time `unsubscribe` is called, it should call the `disconnect` function. Thereafter, it should do nothing.  `disconnect` shouldn't be called more than once per connection.
+
+When the `Subscription` is deallocated it should invoke `unsubscribe`.
 
 ### Expose an IndefiniteObservable initializer
 
@@ -151,35 +170,6 @@ class IndefiniteObservable<O> {
   }
 
   private let _connect: Connect<O>
-```
-
-### Create a private SimpleSubscription type
-
-Implement a `SimpleSubscription` class that conforms to `Subscription`.
-
-This class should be **private**.
-
-This class should store an `Unsubscribe` function.  The first time `Unsubscribe` is called, it should call the `Disconnect` function returned by `connect`.  Thereafter, it should do nothing.  (`Disconnect` shouldn't be called more than once per connection.)
-
-When the `Subscription` is deallocated it should invoke `unsubscribe`.
-
-```swift
-private final class SimpleSubscription: Subscription {
-  deinit {
-    unsubscribe()
-  }
-
-  init(_ unsubscribe: Unsubscribe) {
-    _unsubscribe = unsubscribe
-  }
-
-  func unsubscribe() {
-    _unsubscribe?()
-    _unsubscribe = nil
-  }
-
-  private var _unsubscribe: Unsubscribe?
-}
 ```
 
 ### Expose a subscribe API on IndefiniteObservable
