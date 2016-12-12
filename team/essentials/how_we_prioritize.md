@@ -6,23 +6,15 @@ layout: page
 
 Prioritization is how we choose what to work on for a given week or day. We make heavy use of GitHub and Discord to communicate our priorities. This allows us to minimize the number of team meetings and encourages autonomy.
 
-## Material Motion milemarker
+## Sprints
 
-[https://material-motion.github.io/milemarker/](https://material-motion.github.io/milemarker/)
+We use GitHub's org-wide projects to organize our weekly sprints. You must be a member of the material-motion organization to view the sprint board. [Ask a core team member on Discord for access](https://discord.gg/ZJyGXza).
 
-This website fetches every material-motion repo and shows their milestones. We use this website to get a high-level overview of the project's status on any given platform.
+[View the sprint board](https://github.com/orgs/material-motion/projects/4?fullscreen=true).
 
-## What is a project?
+## A milestone defines relative issue priority
 
-Projects == GitHub repos, usually.
-
-For most of our platforms, each "project" maps to a single GitHub repository.
-
-We do make use of [monorepos](http://danluu.com/monorepo/). Monorepos contain many projects. Monorepos make heavy use of `where:` labels to break down project-specific tasks.
-
-## A milestone defines issue priority
-
-Within a given project we use GitHub milestones to define relative issue priority. Issues at the top of the milestone are the most important.
+Within a given library we use GitHub milestones to define relative issue priority. Issues at the top of the milestone are the most important.
 
 For example, consider the [Runtime v1.0.0 milestone](https://github.com/material-motion/material-motion-runtime-objc/milestone/1):
 
