@@ -9,7 +9,7 @@ defines the names we use and what their intended uses are.
 
 ## Generic names
 
-`T`: the value type.
+`T`: a value type.
 
 `U`: a mapped value type.
 
