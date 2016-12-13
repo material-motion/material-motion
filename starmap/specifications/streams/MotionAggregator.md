@@ -21,126 +21,72 @@ of all streams changes.
 
 ## MVP
 
-### Is a type of MotionObservable
+### Expose a concrete MotionAggregator class
 
 ```swift
-public class MotionAggregator<T>: MotionObservable<T> {
+public class MotionAggregator {
 }
 ```
 
-### Initialized with an optional name
+### Expose a write API
+
+This APIs should accept a `MotionObservable<T>`.
+
+The implementation should subscribe to the stream and hold on to its subscription internally.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  public let name: String?
-  public init(named name: String? = nil)
+class MotionAggregator {
+  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>)
 ```
 
-### Subscriber implementation
+### next channel implementation
 
-The subscriber implementation should add and remove observers to a shared observers set.
-
-Depending on your language you may need to create a local version of the variable first, assign it
-to self, and then refer to the locally-scoped variable in the callback.
+The stream subscription should write all `next` values to the property.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  public init(named name: String? = nil) {
-    self.name = name
-
-    let observers = NSMutableSet()
-    self.observers = observers
-    super.init { observer in
-      observers.add(observer)
-      return {
-        observers.remove(observer)
-      }
-    }
+class MotionAggregator {
+  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
+    subscriptions.append(stream.subscribe(next: {
+      property.write($0)
+    } ...
   }
 ```
 
-### Expose Token type
+### state channel implementation
 
-Represents a globally unique value.
+The stream subscription should observe state changes in aggregate.
 
-```
-public typealias Token = String
-```
-
-### Expose register APIs
-
-These APIs should accept `MotionObservable<T>` instances and return a unique Token instance for
-each stream.
-
-The aggregator should subscribe to each stream and hold on to its subscription internally.
-
-Tokens do not need to be retained, unlike Subscriptions. Streams that are registered with an
-aggregator remain subscribed until the aggregator is released.
+The implementation should handle multiple equivalent state values being received in sequence; i.e.
+a simple counter implementation in which .active is an increment and .atRest is a decrement will not
+suffice without some form of deduping. A token implementation using uuids and a set is simple.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  public func register(_ streams: [MotionObservable<T>]) -> [Token]
-  public func register(_ stream: MotionObservable<T>) -> Token
-```
+class MotionAggregator {
+  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
+    subscriptions.append(stream.subscribe(next: {
+      ...
 
-### Expose isActive API
-
-Expose an API that represents whether the aggregate set of subscribed streams is active or not.
-
-If any stream is active, then the aggregate is active. If no streams are active, then neither is the
-aggregate.
-
-```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  public var isActive: Bool = false
-```
-
-### next internal API
-
-Implement a function that retrieves a `next` method for use in an Observer.
-
-```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  private var next: (T) -> Void {
-    return { [weak self] value in
+    }, state: { [weak self] state in
       guard let strongSelf = self else { return }
-      for observer in strongSelf.observers {
-        (observer as! AnyMotionObserver<T>).next(value)
-      }
-    }
-  }
-```
-
-### active internal API
-
-Implement a function that retrieves an `active` method for use in an Observer.
-
-The method should accept a token and return a function that adds/removes the token from an
-`activeTokens` set. The aggregator's `active` state should then be updated.
-
-```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  private func active(_ token: Token) -> (Bool) -> Void {
-    return { [weak self] in
-      guard let strongSelf = self else { return }
-      if $0 {
-        strongSelf.activeTokens.insert(token)
+      if state == .active {
+        strongSelf.activeSubscriptions.insert(token)
       } else {
-        strongSelf.activeTokens.remove(token)
+        strongSelf.activeSubscriptions.remove(token)
       }
-      strongSelf.active = strongSelf.activeTokens.count > 0
-    }
+
+      strongSelf.aggregateState = strongSelf.activeSubscriptions.count > 0 ? .active : .atRest
+    }))
   }
 ```
 
-### Connection internal API
+### Expose state API
 
-This method accepts a token. It subscribes to the token's stream and stores its subscription.
+Expose an API that represents the aggregate state of all streams.
+
+If any stream is active, then the aggregate state is active. If all streams are at rest, then
+the aggregate is at rest.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  private func connect(token: Token) {
-    let stream = streams[token]
-    subscriptions[token] = stream.subscribe(next: next, active: active(token))
-  }
+class MotionAggregator {
+  public var aggregateState = MotionState.atRest
 ```
