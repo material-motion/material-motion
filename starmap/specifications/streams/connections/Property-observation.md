@@ -36,7 +36,7 @@ let destinationSubscription = spring.destination.subscribe { destination in
 This should be a private class. It does not need to conform to the Observer type. It should store
 a constant next function.
 
-```
+```swift
 private final class ScopedPropertyObserver<T> {
   let next: (T) -> Void
 }
