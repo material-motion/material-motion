@@ -524,6 +524,9 @@ toc:
            - page:
              title: "Bash"
              url: "/team/essentials/style/bash"
+           - page:
+             title: "Generics"
+             url: "/team/essentials/style/generics"
     - page:
       title: "Starmap contributor essentials"
       url: "/team/starmap_essentials/"
