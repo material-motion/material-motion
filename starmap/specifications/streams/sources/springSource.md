@@ -5,9 +5,8 @@ status:
   date: December 13, 2016
   is: Draft
 knowledgelevel: L2
-library: direct-manipulation
+library: springs
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
   - /starmap/specifications/streams/MotionObservable/
 ---
 
