@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: "IndefiniteObservable: Conclusion"
+title: "Conclusion"
 status:
   date: December 7, 2016
   is: Draft
