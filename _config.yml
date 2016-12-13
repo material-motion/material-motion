@@ -332,6 +332,9 @@ toc:
                   - page:
                     title: "$.centroid"
                     url: "/starmap/specifications/streams/operators/gesture/$.centroid"
+                  - page:
+                    title: "$.onRecognitionState"
+                    url: "/starmap/specifications/streams/operators/gesture/$.onRecognitionState"
             - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"
