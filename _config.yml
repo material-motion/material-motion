@@ -329,8 +329,12 @@ toc:
                  title: "gestureSource"
                  url: "/starmap/specifications/streams/sources/gestureSource"
             - page:
-              title: "PropertyWriter"
-              url: "/starmap/specifications/streams/PropertyWriter"
+              title: "MotionAggregator"
+              url: "/starmap/specifications/streams/MotionAggregator"
+              children:
+               - page:
+                 title: "Recursive aggregation"
+                 url: "/starmap/specifications/streams/MotionAggregator-recursive-aggregation"
         - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"
