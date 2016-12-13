@@ -301,6 +301,10 @@ toc:
                - page:
                  title: "Property"
                  url: "/starmap/specifications/streams/connections/Property"
+                 children:
+                  - page:
+                    title: "Observation"
+                    url: "/starmap/specifications/streams/connections/Property-observation"
                - page:
                  title: "Property names"
                  url: "/starmap/specifications/streams/connections/names"
