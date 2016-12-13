@@ -52,7 +52,20 @@ toc:
        children:
         - page:
           title: "IndefiniteObservable"
-          url: "/documentation/L4/IndefiniteObservable"
+          url: "/documentation/L4/IndefiniteObservable/"
+          children:
+           - page:
+             title: "How do I create an Observable?"
+             url: "/documentation/L4/IndefiniteObservable/creation"
+           - page:
+             title: "Operators"
+             url: "/documentation/L4/IndefiniteObservable/operators"
+           - page:
+             title: "Multicasting"
+             url: "/documentation/L4/IndefiniteObservable/multicasting"
+           - page:
+             title: "Conclusion"
+             url: "/documentation/L4/IndefiniteObservable/conclusion"
   - page:
     title: "Starmap"
     url: "/starmap/"
