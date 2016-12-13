@@ -335,6 +335,10 @@ toc:
                - page:
                  title: "springSource"
                  url: "/starmap/specifications/streams/sources/springSource"
+                 children:
+                  - page:
+                    title: "Dynamic destination"
+                    url: "/starmap/specifications/streams/sources/springSource-dynamic-destination"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"

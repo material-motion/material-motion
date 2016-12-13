@@ -93,7 +93,7 @@ public func springSource<T>(spring: Spring<T>) -> MotionObservable<T>
 ### Return a motion observable
 
 ```swift
-public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat> {
+func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     // Connect to a spring system
     return {
@@ -106,7 +106,7 @@ public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat>
 ### Read the spring's initialValue
 
 ```swift
-public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat> {
+func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
     
@@ -117,7 +117,7 @@ public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat>
 ### Set the spring's destination
 
 ```swift
-public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat> {
+func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
     
@@ -128,7 +128,7 @@ public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat>
 ### Update the observer's state
 
 ```swift
-public func springSource(_ spring: Spring<CGFloat>) -> MotionObservable<CGFloat> {
+func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
 
