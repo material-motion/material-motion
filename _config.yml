@@ -286,8 +286,8 @@ toc:
               url: "/starmap/specifications/streams/MotionObservable"
               children:
                - page:
-                 title: "OP"
-                 url: "/starmap/specifications/streams/MotionObservable-OP"
+                 title: "Metadata"
+                 url: "/starmap/specifications/streams/MotionObservable-Metadata"
             - page:
               title: "Connecting streams with external systems"
               url: "/starmap/specifications/streams/connections/"
