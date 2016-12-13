@@ -9,6 +9,15 @@ library: direct-manipulation
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
   - /starmap/specifications/streams/MotionObservable/
+availability:
+  - platform:
+    name: Android
+    label: "streams-android in develop"
+    url: https://github.com/material-motion/streams-android
+  - platform:
+    name: iOS
+    label: "streams-swift in develop"
+    url: https://github.com/material-motion/streams-swift
 ---
 
 # gestureSource specification
