@@ -332,6 +332,9 @@ toc:
                - page:
                  title: "gestureSource"
                  url: "/starmap/specifications/streams/sources/gestureSource"
+               - page:
+                 title: "springSource"
+                 url: "/starmap/specifications/streams/sources/springSource"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
