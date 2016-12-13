@@ -68,13 +68,6 @@ class Property {
     ...
 
     observer.next(read())
-
-    return Subscription {
-      if let index = self.observers.index(where: { $0 === observer }) {
-        self.observers.remove(at: index)
-      }
-    }
-  }
 ```
 
 ### Return a Subscription instance
