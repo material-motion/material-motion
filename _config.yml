@@ -325,6 +325,13 @@ toc:
                   - page:
                     title: "$._filter"
                     url: "/starmap/specifications/streams/operators/foundation/$._filter"
+               - page:
+                 title: "Gesture"
+                 url: "/starmap/specifications/streams/operators/gesture/"
+                 children:
+                  - page:
+                    title: "$.centroid"
+                    url: "/starmap/specifications/streams/operators/gesture/$.centroid"
             - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"
