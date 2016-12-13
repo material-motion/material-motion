@@ -4,7 +4,7 @@ title: Writable
 status:
   date: December 6, 2016
   is: Draft
-knowledgelevel: L3
+knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/streams/connections/
