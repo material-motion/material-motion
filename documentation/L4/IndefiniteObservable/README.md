@@ -45,6 +45,15 @@ messageStream.subscribe({
 });
 ```
 
+```swift
+gesture.subscribe { value in
+  listener.gestureDidUpdate(with: value)
+}
+viewController.subscribe { value in
+  listener.didUpdate(with: value)
+}
+```
+
 As you can see, each observable has a `subscribe` method. When you call
 `subscribe`, the Observable connects your listener to the event source, and
 returns an object with an `unsubscribe` method. Calling `unsubscribe` will
