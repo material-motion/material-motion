@@ -18,6 +18,8 @@ This is the engineering specification for observing `Property` changes.
 
 This feature outlines the mechanisms by which an entity can subscribe to changes made to a property.
 
+This spec assumes that you are using **scoped** properties.
+
 ## Examples
 
 *Observing changes to a spring's destination property*
@@ -31,13 +33,13 @@ let destinationSubscription = spring.destination.subscribe { destination in
 
 ## MVP
 
-### Implement a ScopedPropertyObserver API
+### Implement a PropertyObserver API
 
 This should be a private class. It does not need to conform to the Observer type. It should store
 a constant next function.
 
 ```swift
-private final class ScopedPropertyObserver<T> {
+private final class PropertyObserver<T> {
   let next: (T) -> Void
 }
 ```
@@ -56,7 +58,7 @@ class Property {
 ```swift
 class Property {
   public func subscribe(next: (T) -> Void) -> Subscription {
-    let observer = ScopedPropertyObserver(next)
+    let observer = PropertyObserver(next)
     observers.append(observer)
 ```
 
