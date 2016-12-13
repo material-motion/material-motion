@@ -50,7 +50,7 @@ class MotionAggregator<T>: MotionObservable<T> {
 
     let observers = NSMutableSet()
     self.observers = observers
-    super.init(OP("\(type(of: self))")) { observer in
+    super.init { observer in
       observers.add(observer)
       return {
         observers.remove(observer)
