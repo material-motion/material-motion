@@ -321,9 +321,6 @@ toc:
                   - page:
                     title: "$._filter"
                     url: "/starmap/specifications/streams/operators/foundation/$._filter"
-               - page:
-                 title: "$.write"
-                 url: "/starmap/specifications/streams/operators/$.write"
             - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"

@@ -73,10 +73,10 @@ class OperatorMetadata {
 Example stream:
 
 ```swift
-drag(pan)
+let stream = drag(pan)
   .state(is: .ended)
   .velocity(in: view).y()
-  .writeTo(spring$.initialVelocity, of: spring$)
+propertyWriter.write(stream, to: spring$.initialVelocity)
 ```
 
 Example output (iOS):
