@@ -32,3 +32,4 @@ Starmap.
 | `positionY` relative to parent | `view.Y`             | `view.layer.position.y` | `translateY()`     |
 | `rotation`                     |                      |                         | `rotate()`         |
 | `scale`                        |                      |                         | `scale()`          |
+| `translation`                  |                      |                         |                    |
