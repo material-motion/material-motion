@@ -19,7 +19,10 @@ $(document).ready(function() {
 
   var languageLookup = new Set();
   $(".code-container").each(function() {
-    $(this).children().map(function() {
+    $(this).children()
+    .filter(function() {
+      return $(this).attr('class').indexOf('language-') >= 0;
+    }).map(function() {
       return /language-([a-z0-9]+)/.exec($(this).attr('class'))[1];
     }).each(function(index, language) {
       languageLookup.add(language);
