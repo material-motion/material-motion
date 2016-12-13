@@ -113,6 +113,8 @@ class GestureConnection {
 
 ### Implement a disconnect method
 
+The GestureConnection should remove itself from the list of observers on the gesture recognizer.
+
 ```swift
 class GestureConnection {
   func disconnect() {
@@ -123,9 +125,11 @@ class GestureConnection {
 
 ### Propagate gesture events
 
+Propagate the gesture when the gesture event callback is invoked.
+
 ```swift
 class GestureConnection {
-  @objc private func gestureEvent(gesture: UIGestureRecognizer) {
+  private func gestureEvent(gesture: UIGestureRecognizer) {
     propagate(gesture)
   }
 ```
