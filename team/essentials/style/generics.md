@@ -9,14 +9,14 @@ defines the names we use and what their intended uses are.
 
 ## Generic names
 
-`T`: a value type.
+**T**: a value type.
 
-`U`: a mapped value type.
+**U**: a mapped value type.
 
-`O`: an object type.
+**O**: an object type.
 
 ## Examples
 
-map from `T` to `U`.
+map from **T** to **U**.
 
-A property for an object `O` with a value `T`.
+A property for an object **O** with a value **T**.
