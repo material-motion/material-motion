@@ -7,7 +7,7 @@ status:
 knowledgelevel: L2
 library: springs
 depends_on:
-  - /starmap/specifications/streams/MotionObservable/
+  - /starmap/specifications/streams/sources/springSource
   - /starmap/specifications/streams/connections/Property-observation
 ---
 
