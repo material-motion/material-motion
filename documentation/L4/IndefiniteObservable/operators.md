@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: IndefiniteObservable: Operators
+title: "IndefiniteObservable: Operators"
 status:
   date: December 7, 2016
   is: Draft

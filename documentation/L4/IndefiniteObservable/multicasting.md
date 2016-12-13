@@ -1,6 +1,6 @@
 ---
 layout: docs
-title: IndefiniteObservable: Multicasting
+title: "IndefiniteObservable: Multicasting"
 status:
   date: December 7, 2016
   is: Draft
