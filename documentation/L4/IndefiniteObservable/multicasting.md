@@ -5,7 +5,7 @@ depends_on:
   - /documentation/L4/IndefiniteObservable/operators
 ---
 
-## Part 3: Multicasting
+# Part 3: Multicasting
 
 This walkthrough has introduced you to most of the important concepts to
 understand about Observables and how they work:

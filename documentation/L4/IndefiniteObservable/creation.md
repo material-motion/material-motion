@@ -5,7 +5,7 @@ depends_on:
   - /documentation/L4/IndefiniteObservable/
 ---
 
-## Part 1: How do I create an Observable?
+# Part 1: How do I create an Observable?
 
 The IndefiniteObservable constructor receives a single function, `connect`, and
 holds onto it.
