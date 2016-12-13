@@ -1,6 +1,9 @@
 ---
 layout: docs
 permalink: /documentation/L4/IndefiniteObservable/
+status:
+  date: December 7, 2016
+  is: Draft
 title: IndefiniteObservable
 ---
 

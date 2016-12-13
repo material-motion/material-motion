@@ -1,6 +1,9 @@
 ---
 layout: docs
 title: IndefiniteObservable: How do I create an Observable?
+status:
+  date: December 7, 2016
+  is: Draft
 depends_on:
   - /documentation/L4/IndefiniteObservable/
 ---
