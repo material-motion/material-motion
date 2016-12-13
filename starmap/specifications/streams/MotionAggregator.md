@@ -16,8 +16,8 @@ This is the engineering specification for the `MotionAggregator` object.
 
 ## Overview
 
-A `MotionAggregator` can subscribe to streams and emit aggregate events when the overall activity
-of all streams changes.
+A `MotionAggregator` can subscribe to streams and write their output to properties. All stream state
+changes will be collected in aggregate and reported as a single aggregate state value.
 
 ## MVP
 
