@@ -10,6 +10,15 @@ depends_on:
   - /starmap/specifications/streams/connections/
 related_to:
   - /starmap/specifications/streams/connections/Readable
+availability:
+  - platform:
+    name: Android
+    label: "streams-android in develop"
+    url: https://github.com/material-motion/streams-android
+  - platform:
+    name: iOS
+    label: "streams-swift in develop"
+    url: https://github.com/material-motion/streams-swift
 ---
 
 # Writable specification
