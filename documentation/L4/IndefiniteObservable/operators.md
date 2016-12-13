@@ -5,7 +5,7 @@ status:
   date: December 7, 2016
   is: Draft
 depends_on:
-  - /documentation/L4/IndefiniteObservable/creation/
+  - /documentation/L4/IndefiniteObservable/creation
 ---
 
 # Part 2: Operators
