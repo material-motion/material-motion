@@ -46,10 +46,10 @@ messageStream.subscribe({
 ```
 
 ```swift
-gesture.subscribe { value in
+observableGesture.subscribe { value in
   listener.gestureDidUpdate(with: value)
 }
-viewController.subscribe { value in
+observableViewController.subscribe { value in
   listener.didUpdate(with: value)
 }
 ```
