@@ -329,8 +329,8 @@ toc:
                  title: "gestureSource"
                  url: "/starmap/specifications/streams/sources/gestureSource"
             - page:
-              title: "MotionPropertyWriter"
-              url: "/starmap/specifications/streams/MotionPropertyWriter"
+              title: "PropertyWriter"
+              url: "/starmap/specifications/streams/PropertyWriter"
         - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"

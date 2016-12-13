@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MotionPropertyWriter
+title: PropertyWriter
 status:
   date: December 4, 2016
   is: Draft
@@ -10,20 +10,20 @@ depends_on:
   - /starmap/specifications/streams/MotionObservable
 ---
 
-# MotionPropertyWriter specification
+# PropertyWriter specification
 
-This is the engineering specification for the `MotionPropertyWriter` object.
+This is the engineering specification for the `PropertyWriter` object.
 
 ## Overview
 
-A `MotionPropertyWriter` subscribes to streams and writes their values to properties.
+A `PropertyWriter` subscribes to streams and writes their values to properties.
 
 ## MVP
 
-### Expose a concrete MotionPropertyWriter class
+### Expose a concrete PropertyWriter class
 
 ```swift
-public class MotionPropertyWriter {
+public class PropertyWriter {
 }
 ```
 
@@ -37,7 +37,7 @@ property.
 The property writer should store the subscription in a collection of subscriptions.
 
 ```swift
-class MotionPropertyWriter {
+class PropertyWriter {
   func write<T>(stream: MotionObservable<T>, to property: ScopedProperty<T>) {
 ```
 
