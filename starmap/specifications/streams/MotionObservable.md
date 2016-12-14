@@ -20,8 +20,7 @@ availability:
     tests_url: https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift
   - platform:
     name: JavaScript
-    label: "material-motion-streams in develop"
-    url: https://github.com/material-motion/material-motion-js
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/MotionObservable.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts
 ---
 
