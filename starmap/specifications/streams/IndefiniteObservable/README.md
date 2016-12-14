@@ -19,8 +19,7 @@ availability:
     tests_url: https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit
   - platform:
     name: JavaScript
-    label: "indefinite-observable-js as of v1.0.0"
-    url: https://github.com/material-motion/indefinite-observable-js
+    url: https://github.com/material-motion/indefinite-observable-js/blob/develop/src/IndefiniteObservable.ts
     tests_url: https://github.com/material-motion/indefinite-observable-js/blob/develop/src/__tests__/IndefiniteObservable.test.ts
 ---
 
