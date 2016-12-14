@@ -15,13 +15,13 @@ availability:
     url: https://github.com/material-motion/streams-android
     tests_url: https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java
   - platform:
-    name: Swift
-    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionObservable.swift
-    tests_url: https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift
-  - platform:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/MotionObservable.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionObservable.swift
+    tests_url: https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift
 ---
 
 # MotionObservable specification
