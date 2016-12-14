@@ -13,13 +13,13 @@ availability:
     url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/main/java/com/google/android/material/motion/observable/IndefiniteObservable.java
     tests_url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/test/java/com/google/android/material/motion/observable/IndefiniteObservableTests.java
   - platform:
-    name: Swift
-    url: https://github.com/material-motion/indefinite-observable-swift/blob/develop/src/IndefiniteObservable.swift
-    tests_url: https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit
-  - platform:
     name: JavaScript
     url: https://github.com/material-motion/indefinite-observable-js/blob/develop/src/IndefiniteObservable.ts
     tests_url: https://github.com/material-motion/indefinite-observable-js/blob/develop/src/__tests__/IndefiniteObservable.test.ts
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/indefinite-observable-swift/blob/develop/src/IndefiniteObservable.swift
+    tests_url: https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit
 ---
 
 # IndefiniteObservable specification
