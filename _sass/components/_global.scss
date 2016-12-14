@@ -105,6 +105,13 @@ tfoot {
 .dependency_table {
   margin: 16px 0;
 }
+.dependency_table_container {
+  display: table;
+  margin: 0 auto;
+}
+.dependency_table_footer td {
+  text-align: center;
+}
 .platform_table th {
   text-align: center;
   padding: 6px 2px;

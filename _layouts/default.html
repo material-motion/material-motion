@@ -3,6 +3,17 @@
 
 {% include head.html %}
 
+{% if page.enables %}
+{% assign children = page.enables %}
+{% else %}
+{% assign children = "" | split: "" %}
+{% for subpage in site.pages %}
+{% if subpage.depends_on contains page.url %}
+{% assign children = children | push: subpage.url %}
+{% endif %}
+{% endfor %}
+{% endif %}
+
 <body>
   <div class="row">
     <div class="col s12 m3">
@@ -14,6 +25,40 @@
       <div class="post-listing">
         {% include status.html %}
         {{ content }}
+
+        {% if page.layout == "docs" %}
+        {% if page.depends_on or children.size > 0 %}
+        <div class="dependency_table_container">
+        <table class="dependency_table dependency_table_footer">
+        <tbody><tr>
+        {% if page.depends_on %}
+        <td>
+          {% for dependency in page.depends_on %}
+            <a href="{{ site.url}}{{ dependency }}">{{ dependency | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
+          {% endfor %}
+        </td>
+        <td>&rarr;</td>
+        {% endif %}
+        <td><strong>
+          {{ page.title }}
+          {% for related in page.related_to %}
+            <br/><a href="{{ site.url }}{{ related }}">{{ related | split: '/' | last }}</a>
+          {% endfor %}
+        </strong></td>
+        {% if children.size > 0 %}
+        <td>&rarr;</td>
+        <td>
+          {% for child in children %}
+            <a href="{{ site.url }}{{ child }}">{{ child | split: '/' | last }}</a>{% if forloop.last == false %} &middot; {% endif %}
+          {% endfor %}
+        </td>
+        {% endif %}
+        </tr></tbody>
+        </table>
+        </div>
+        {% endif %}
+        {% endif %}
+        
         {% include footer.html %}
       </div>
     </div>
