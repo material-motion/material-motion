@@ -17,6 +17,10 @@ availability:
     name: iOS
     label: "streams-swift in develop"
     url: https://github.com/material-motion/streams-swift
+  - platform:
+    name: JavaScript
+    label: "material-motion-js in develop"
+    url: https://github.com/material-motion/material-motion-js
 ---
 
 # MotionObservable specification
