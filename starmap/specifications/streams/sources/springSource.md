@@ -25,6 +25,10 @@ Example usage:
 springSource(spring).subscribe(...)
 ```
 
+```java
+SpringSource.from(spring).subscribe(...)
+```
+
 ## MVP
 
 ### Expose Spring API
