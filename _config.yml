@@ -351,6 +351,9 @@ toc:
                - page:
                  title: "$.toggled"
                  url: "/starmap/specifications/streams/operators/$.toggled"
+               - page:
+                 title: "$.x+$.y"
+                 url: "/starmap/specifications/streams/operators/$.x+$.y"
             - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"
