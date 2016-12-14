@@ -35,6 +35,10 @@ Example usage:
 gestureSource(dragGesture).subscribe(...)
 ```
 
+```java
+GestureSource.from(dragGesture).subscribe(...)
+```
+
 ## MVP
 
 ### Expose generic gestureSource API
