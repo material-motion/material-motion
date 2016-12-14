@@ -83,3 +83,8 @@ class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
   }
 }
 ```
+
+## Unit tests
+- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts)
+- [Swift](https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift)
+- [Java](https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java)
