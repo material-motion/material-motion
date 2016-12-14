@@ -190,5 +190,3 @@ const x$ = pointerEvent$.map(
   })
 ).pluck('x');
 ```
-
-[Learn how to multicast](multicasting).

@@ -58,5 +58,3 @@ As you can see, each observable has a `subscribe` method. When you call
 `subscribe`, the Observable connects your listener to the event source, and
 returns an object with an `unsubscribe` method. Calling `unsubscribe` will
 disconnect the listener from the source.
-
-[Learn how to create an observable](creation).

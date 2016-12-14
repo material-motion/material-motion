@@ -112,5 +112,3 @@ Recall that an Observable is a bridge between an event source and a listener.
 What if the event source was another listener?  You could write a function
 that listened for an event, did something with it, and called its own
 listener with the result. This is called an _Operator_.
-
-[Learn how to create operators](operators).
