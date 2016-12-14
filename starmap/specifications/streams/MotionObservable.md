@@ -71,19 +71,6 @@ public class MotionObservable<T>: IndefiniteObservable<MotionObserver<T>> {
 }
 ```
 
-### Expose a helper subscribe API
-
-This API should allow a client to subscribe to a `MotionObservable` without having to create a
-`MotionObserver`.
-
-```swift
-class MotionObservable<V>: IndefiniteObservable<MotionObserver<V>> {
-  public func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
-    return super.subscribe(observer: MotionObserver<T>(next: next, state: state))
-  }
-}
-```
-
 ## Unit tests
 - [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts)
 - [Swift](https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift)
