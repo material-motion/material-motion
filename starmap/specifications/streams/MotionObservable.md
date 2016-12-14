@@ -16,8 +16,7 @@ availability:
     tests_url: https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java
   - platform:
     name: iOS
-    label: "streams-swift in develop"
-    url: https://github.com/material-motion/streams-swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionObservable.swift
     tests_url: https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift
   - platform:
     name: JavaScript
