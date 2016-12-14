@@ -19,7 +19,7 @@ availability:
     url: https://github.com/material-motion/streams-swift
   - platform:
     name: JavaScript
-    label: "material-motion-js in develop"
+    label: "material-motion-streams in develop"
     url: https://github.com/material-motion/material-motion-js
 ---
 
