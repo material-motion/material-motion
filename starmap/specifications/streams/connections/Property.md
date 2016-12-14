@@ -50,7 +50,7 @@ public class ScopedProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
 ### Option 2: Expose a concrete UnscopedProperty API
 
 ```swift
-public class UnscopedProperty<O, T>: ScopedReadable<O, T>, ScopedWritable<O, T> {
+public class UnscopedProperty<O, T>: UnscopedReadable<O, T>, UnscopedWritable<O, T> {
   public typealias Read = (O) -> T
   public typealias Write = (O, T) -> Void
 
