@@ -13,14 +13,17 @@ availability:
     name: Android
     label: "streams-android in develop"
     url: https://github.com/material-motion/streams-android
+    tests_url: https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java
   - platform:
     name: iOS
     label: "streams-swift in develop"
     url: https://github.com/material-motion/streams-swift
+    tests_url: https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift
   - platform:
     name: JavaScript
     label: "material-motion-streams in develop"
     url: https://github.com/material-motion/material-motion-js
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts
 ---
 
 # MotionObservable specification
@@ -70,8 +73,3 @@ public final class MotionObserver<T> {
 public class MotionObservable<T>: IndefiniteObservable<MotionObserver<T>> {
 }
 ```
-
-## Unit tests
-- [JavaScript](https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts)
-- [Swift](https://github.com/material-motion/streams-swift/blob/develop/tests/unit/MotionObservableTests.swift)
-- [Java](https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java)

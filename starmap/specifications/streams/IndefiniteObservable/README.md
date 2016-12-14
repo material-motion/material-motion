@@ -12,14 +12,17 @@ availability:
     name: Android
     label: "indefinite-observable-android as of v1.0.0"
     url: https://github.com/material-motion/indefinite-observable-android
+    tests_url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/test/java/com/google/android/material/motion/observable/IndefiniteObservableTests.java
   - platform:
     name: iOS
     label: "indefinite-observable-swift as of v1.0.0"
     url: https://github.com/material-motion/indefinite-observable-swift
+    tests_url: https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit
   - platform:
     name: JavaScript
     label: "indefinite-observable-js as of v1.0.0"
     url: https://github.com/material-motion/indefinite-observable-js
+    tests_url: https://github.com/material-motion/indefinite-observable-js/blob/develop/src/__tests__/IndefiniteObservable.test.ts
 ---
 
 # IndefiniteObservable specification
@@ -194,8 +197,3 @@ class IndefiniteObservable<O> {
   }
 }
 ```
-
-## Unit tests
-- [JavaScript](https://github.com/material-motion/indefinite-observable-js/blob/develop/src/__tests__/IndefiniteObservable.test.ts)
-- [Swift](https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit)
-- [Java](https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/test/java/com/google/android/material/motion/observable/IndefiniteObservableTests.java)

@@ -105,6 +105,13 @@ tfoot {
 .dependency_table {
   margin: 16px 0;
 }
+.platform_table th {
+  text-align: center;
+  padding: 6px 2px;
+}
+.platform_table tr:nth-child(2n) {
+  background-color: inherit;
+}
 .dependency_table td {
   border: none;
 }

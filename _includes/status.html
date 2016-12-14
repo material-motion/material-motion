@@ -16,8 +16,9 @@
 <div class="status">
 {% endif %}
 
-<div class="status_content">
+<div class="status_content row">
 
+<div class="col s12 m9">
 {% if page.depends_on or children.size > 0 %}
 <table class="dependency_table">
 <tbody><tr>
@@ -76,23 +77,6 @@
 </table>
 {% endif %}
 
-{% if page.availability %}
-<table class="platform_table">
-  <thead><tr>
-    <th></th>
-    {% for platform in page.availability %}
-    <th>{{ platform.name }}</th>
-    {% endfor %}
-  </tr></thead>
-  <tbody><tr>
-    <td>Availability</td>
-    {% for platform in page.availability %}
-      <td><a href="{{ platform.url }}">{{ platform.label }}</a></td>
-    {% endfor %}
-  </tr></tbody>
-</table>
-
-{% endif %}
 {% if page.proposals %}
 <table class="status_table">
   <thead><tr><th>Proposal</th><th>Current Status</th><th>Initiation date</th><th>Completion date</th></tr></thead>
@@ -116,6 +100,29 @@
   </tbody>
 </table>
 {% endif %}
+</div>
+
+<div class="col s12 m3">
+{% if page.availability %}
+<div class="platform_table_container">
+<table class="platform_table">
+  <thead><tr>
+    <th>platform</th><th>src</th><th>tests</th>
+  </tr></thead>
+  <tbody>
+    {% for platform in page.availability %}
+    <tr>
+      <td>{{ platform.name }}</td>
+      <td>{% if platform.url %}<a href="{{ platform.url }}">View</a>{% endif %}</td>
+      <td>{% if platform.tests_url %}<a href="{{ platform.tests_url }}">View</a>{% endif %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+</div>
+{% endif %}
+</div>
+
 </div>
 </div>
 {% endif %}
