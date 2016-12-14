@@ -330,8 +330,8 @@ toc:
                  url: "/starmap/specifications/streams/operators/foundation/"
                  children:
                   - page:
-                    title: "$._operator"
-                    url: "/starmap/specifications/streams/operators/foundation/$._operator"
+                    title: "$._nextOperator"
+                    url: "/starmap/specifications/streams/operators/foundation/$._nextOperator"
                   - page:
                     title: "$._map"
                     url: "/starmap/specifications/streams/operators/foundation/$._map"
