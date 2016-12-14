@@ -15,8 +15,7 @@ availability:
     tests_url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/test/java/com/google/android/material/motion/observable/IndefiniteObservableTests.java
   - platform:
     name: iOS
-    label: "indefinite-observable-swift as of v1.0.0"
-    url: https://github.com/material-motion/indefinite-observable-swift
+    url: https://github.com/material-motion/indefinite-observable-swift/blob/develop/src/IndefiniteObservable.swift
     tests_url: https://github.com/material-motion/indefinite-observable-swift/tree/develop/tests/unit
   - platform:
     name: JavaScript
