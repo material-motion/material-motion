@@ -10,8 +10,7 @@ library: indefinite-observable
 availability:
   - platform:
     name: Android
-    label: "indefinite-observable-android as of v1.0.0"
-    url: https://github.com/material-motion/indefinite-observable-android
+    url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/main/java/com/google/android/material/motion/observable/IndefiniteObservable.java
     tests_url: https://github.com/material-motion/indefinite-observable-android/blob/develop/library/src/test/java/com/google/android/material/motion/observable/IndefiniteObservableTests.java
   - platform:
     name: iOS
