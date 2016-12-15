@@ -561,6 +561,9 @@ toc:
          title: "Stability"
          url: "/team/weekly_updates/stability"
        - page:
+         title: "December 08-December 14, 2016"
+         url: "/team/weekly_updates/2016-12-14"
+       - page:
          title: "December 02-December 07, 2016"
          url: "/team/weekly_updates/2016-12-07"
        - page:
