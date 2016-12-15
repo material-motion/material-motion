@@ -10,7 +10,7 @@
   "commit": true,
   "types": {
     "core": {
-      "symbol": "<div>Core team</div>",
+      "symbol": "<div style="font-weight: normal">Core team</div>",
       "description": "Core team"
     },
     "apple": {
