@@ -11,7 +11,7 @@ Current status: **early development**.
 
 [Chat with us on Discord](https://discord.gg/ZJyGXza).
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-10-orange.svg?style=flat-square)](#contributors)
 
 ## Android platform support
 
