@@ -1,7 +1,6 @@
 {
   "projectName": "material-motion",
   "projectOwner": "material-motion",
-  "contributorsPerLine": 3,
   "files": [
     "CONTRIBUTORS.md",
     "README.md"
@@ -14,15 +13,15 @@
       "description": "Core team"
     },
     "apple": {
-      "symbol": "Apple platforms",
+      "symbol": "<div>Apple platforms</div>",
       "description": "Apple platforms"
     },
     "android": {
-      "symbol": "Android platforms",
+      "symbol": "<div>Android platforms</div>",
       "description": "Android platforms"
     },
     "web": {
-      "symbol": "Web platforms",
+      "symbol": "<div>Web platforms</div>",
       "description": "Web platforms"
     }
   },
