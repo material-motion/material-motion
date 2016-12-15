@@ -19,13 +19,7 @@ Check out [stability](stability) to learn about the current state of each featur
 
 ## Meta
 
-
-
-## People involved in this sprint
-
-[![appsforartists](https://avatars0.githubusercontent.com/u/926648?v=3&s=100)](https://github.com/appsforartists)
-[![featherless](https://avatars0.githubusercontent.com/u/45670?v=3&s=100)](https://github.com/jverkoey)
-[![pingpongboss](https://avatars0.githubusercontent.com/u/719914?v=3&s=100)](https://github.com/pingpongboss)
+[View all of our contributors](https://github.com/material-motion/material-motion/blob/gh-pages/CONTRIBUTORS.md)
 
 ## Current state
 
