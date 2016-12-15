@@ -52,6 +52,51 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "seanoshea",
+      "name": "Sean O'Shea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97601?v=3",
+      "profile": "http://www.upwardsnorthwards.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "rcameron",
+      "name": "Rich Cameron",
+      "avatar_url": "https://avatars.githubusercontent.com/u/369057?v=3",
+      "profile": "https://github.com/rcameron",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "maxluzuriaga",
+      "name": "Max Luzuriaga",
+      "avatar_url": "https://avatars.githubusercontent.com/u/309096?v=3",
+      "profile": "http://www.maxluzuriaga.com/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "chuga",
+      "name": "Andrés",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4545451?v=3",
+      "profile": "https://github.com/chuga",
+      "contributions": [
+        "review"
+      ]
+    },
+    {
+      "login": "miguelandres",
+      "name": "Miguel Andrés Yáñez Barreto",
+      "avatar_url": "https://avatars.githubusercontent.com/u/160168?v=3",
+      "profile": "https://github.com/miguelandres",
+      "contributions": [
+        "review"
+      ]
     }
   ]
 }
