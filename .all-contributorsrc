@@ -75,7 +75,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/2232877?v=3",
       "profile": "https://tofuness.com",
       "contributions": [
-        "tool"
+        "tool",
+        "web"
       ]
     },
     {
@@ -84,7 +85,9 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/97601?v=3",
       "profile": "http://www.upwardsnorthwards.com",
       "contributions": [
-        "code"
+        "code",
+        "apple",
+        "android"
       ]
     },
     {
@@ -93,7 +96,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/369057?v=3",
       "profile": "https://github.com/rcameron",
       "contributions": [
-        "code"
+        "code",
+        "apple"
       ]
     },
     {
@@ -102,7 +106,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/309096?v=3",
       "profile": "http://www.maxluzuriaga.com/",
       "contributions": [
-        "code"
+        "code",
+        "apple"
       ]
     },
     {
@@ -111,7 +116,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/4545451?v=3",
       "profile": "https://github.com/chuga",
       "contributions": [
-        "review"
+        "review",
+        "apple"
       ]
     },
     {
@@ -120,7 +126,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/160168?v=3",
       "profile": "https://github.com/miguelandres",
       "contributions": [
-        "review"
+        "review",
+        "android"
       ]
     }
   ]
