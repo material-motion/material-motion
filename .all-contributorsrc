@@ -121,6 +121,16 @@
       ]
     },
     {
+      "login": "shyndman",
+      "name": "Scott Hyndman",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42326?v=3",
+      "profile": "https://github.com/shyndman",
+      "contributions": [
+        "review",
+        "web"
+      ]
+    },
+    {
       "login": "tofuness",
       "name": "Dennis Jin",
       "avatar_url": "https://avatars.githubusercontent.com/u/2232877?v=3",
@@ -128,16 +138,6 @@
       "contributions": [
         "tool",
         "web"
-      ]
-    },
-    {
-      "login": "shyndman",
-      "name": "Scott Hyndman",
-      "avatar_url": "https://avatars.githubusercontent.com/u/42326?v=3",
-      "profile": "https://github.com/shyndman",
-      "contributions": [
-        "web",
-        "review"
       ]
     }
   ]
