@@ -1,0 +1,57 @@
+{
+  "projectName": "Material Motion",
+  "projectOwner": "Material Motion",
+  "files": [
+    "CONTRIBUTORS.md",
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "jverkoey",
+      "name": "featherless",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45670?v=3",
+      "profile": "http://JeffVerkoeyen.com/",
+      "contributions": [
+        "code",
+        "tool",
+        "test",
+        "doc"
+      ]
+    },
+    {
+      "login": "appsforartists",
+      "name": "Brenton Simpson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/926648?v=3",
+      "profile": "http://www.appsforartists.com",
+      "contributions": [
+        "code",
+        "tool",
+        "test",
+        "doc"
+      ]
+    },
+    {
+      "login": "pingpongboss",
+      "name": "Mark Wei",
+      "avatar_url": "https://avatars.githubusercontent.com/u/719914?v=3",
+      "profile": "http://www.about.me/markwei",
+      "contributions": [
+        "code",
+        "tool",
+        "test",
+        "doc"
+      ]
+    },
+    {
+      "login": "tofuness",
+      "name": "Dennis Jin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2232877?v=3",
+      "profile": "https://tofuness.com",
+      "contributions": [
+        "tool"
+      ]
+    }
+  ]
+}
