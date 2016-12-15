@@ -11,6 +11,18 @@
     "core": {
       "symbol": "Core team",
       "description": "Core team"
+    },
+    "apple": {
+      "symbol": "Apple platforms",
+      "description": "Apple platforms"
+    },
+    "android": {
+      "symbol": "Android platforms",
+      "description": "Android platforms"
+    },
+    "web": {
+      "symbol": "Web platforms",
+      "description": "Web platforms"
     }
   },
   "contributors": [
@@ -24,7 +36,8 @@
         "tool",
         "test",
         "doc",
-        "core"
+        "core",
+        "apple"
       ]
     },
     {
@@ -37,7 +50,8 @@
         "tool",
         "test",
         "doc",
-        "core"
+        "core",
+        "web"
       ]
     },
     {
@@ -50,7 +64,8 @@
         "tool",
         "test",
         "doc",
-        "core"
+        "core",
+        "android"
       ]
     },
     {
