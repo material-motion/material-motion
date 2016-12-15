@@ -7,6 +7,12 @@
   ],
   "imageSize": 100,
   "commit": true,
+  "types": {
+    "core": {
+      "symbol": "Core team",
+      "description": "Core team"
+    }
+  },
   "contributors": [
     {
       "login": "jverkoey",
@@ -17,7 +23,8 @@
         "code",
         "tool",
         "test",
-        "doc"
+        "doc",
+        "core"
       ]
     },
     {
@@ -29,7 +36,8 @@
         "code",
         "tool",
         "test",
-        "doc"
+        "doc",
+        "core"
       ]
     },
     {
@@ -41,7 +49,8 @@
         "code",
         "tool",
         "test",
-        "doc"
+        "doc",
+        "core"
       ]
     },
     {
