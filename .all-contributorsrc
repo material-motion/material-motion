@@ -1,6 +1,7 @@
 {
   "projectName": "material-motion",
   "projectOwner": "material-motion",
+  "contributorsPerLine": 3,
   "files": [
     "CONTRIBUTORS.md",
     "README.md"
