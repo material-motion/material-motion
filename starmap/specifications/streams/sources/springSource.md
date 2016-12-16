@@ -8,6 +8,7 @@ knowledgelevel: L2
 library: springs
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
+  - /starmap/specifications/streams/connections/Property
   - /starmap/specifications/streams/plans/Spring
 ---
 
@@ -37,20 +38,13 @@ SpringSource.from(spring).subscribe(...)
 `springSource` is a function. It should be accessible from anywhere. Returns a MotionObservable.
 
 ```swift
-public func springSource(spring: Spring) -> MotionObservable<Float>
-```
-
-For languages that support composite properties, the returned MotionObservable should be genericized
-with type T.
-
-```swift
 public func springSource<T>(spring: Spring<T>) -> MotionObservable<T>
 ```
 
 ### Return a motion observable
 
 ```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
+func springSource(spring: Spring) -> MotionObservable<T> {
   return MotionObservable { observer in
     // Connect to a spring system
     return {
@@ -67,19 +61,37 @@ func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
     
-    springSystem.fromValue = spring.initialValue
-    
+    springSystem.fromValue = spring.initialValue.read() 
 ```
 
-### Set the spring's destination
+### Read the spring's initialVelocity
 
 ```swift
 func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
     
-    springSystem.toValue = spring.destination
+    springSystem.velocity = spring.initialVelocity.read() 
+```
+
+### Read the spring's threshold
+
+```swift
+func springSource(spring: Spring) -> MotionObservable<Float> {
+  return MotionObservable { observer in
+    ...
     
+    springSystem.threshold = spring.threshold.read() 
+```
+
+### Read the spring's destination
+
+```swift
+func springSource(spring: Spring) -> MotionObservable<Float> {
+  return MotionObservable { observer in
+    ...
+    
+    springSystem.toValue = spring.destination.read() 
 ```
 
 ### Update the observer's state
