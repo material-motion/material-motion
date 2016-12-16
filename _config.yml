@@ -349,6 +349,9 @@ toc:
                     title: "$.onRecognitionState"
                     url: "/starmap/specifications/streams/operators/gesture/$.onRecognitionState"
                   - page:
+                    title: "$.translated"
+                    url: "/starmap/specifications/streams/operators/gesture/$.translated"
+                  - page:
                     title: "$.velocity"
                     url: "/starmap/specifications/streams/operators/gesture/$.velocity"
                - page:
