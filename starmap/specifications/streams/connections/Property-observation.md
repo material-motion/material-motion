@@ -10,13 +10,13 @@ depends_on:
   - /starmap/specifications/streams/connections/Property
 ---
 
-# Property observation feature specification
+# Property write observation feature specification
 
-This is the engineering specification for observing `Property` changes.
+This is the engineering specification for observing `Property` writes.
 
 ## Overview
 
-This feature outlines the mechanisms by which an entity can subscribe to changes made to a property.
+This feature outlines the mechanisms by which an entity can observe changes made to a property.
 
 This spec assumes that you are using **scoped** properties.
 
@@ -25,7 +25,7 @@ This spec assumes that you are using **scoped** properties.
 *Observing changes to a spring's destination property*
 
 ```swift
-let destinationSubscription = spring.destination.subscribe { destination in
+let subscription = spring.destination.addObserver { destination in
   animation.toValue = destination
   animation.isPaused = false
 }
@@ -41,7 +41,7 @@ This is a similar shape to an IndefiniteObservable, but without the initializati
 protocol ObservableProperty {
   associatedtype T
 
-  func subscribe(_ next: (T) -> Void) -> Subscription
+  func addObserver(_ next: (T) -> Void) -> Subscription
 }
 ```
 
@@ -49,7 +49,7 @@ protocol ObservableProperty {
 
 ```swift
 class Property: ObservableProperty {
-  public func subscribe(next: (T) -> Void) -> Subscription
+  public func addObserver(next: (T) -> Void) -> Subscription
 ```
 
 ### Implement a PropertyObserver API
@@ -67,7 +67,7 @@ private final class PropertyObserver<T> {
 
 ```swift
 class Property {
-  public func subscribe(next: (T) -> Void) -> Subscription {
+  public func addObserver(next: (T) -> Void) -> Subscription {
     let observer = PropertyObserver(next)
     observers.append(observer)
 ```
@@ -76,7 +76,7 @@ class Property {
 
 ```swift
 class Property {
-  public func subscribe(next: (T) -> Void) -> Subscription {
+  public func addObserver(next: (T) -> Void) -> Subscription {
     ...
 
     observer.next(read())
@@ -88,7 +88,7 @@ The unsubscribe implementation should remove the observer from the list of obser
 
 ```swift
 class Property {
-  public func subscribe(next: (T) -> Void) -> Subscription {
+  public func addObserver(next: (T) -> Void) -> Subscription {
     ...
 
     return Subscription {
