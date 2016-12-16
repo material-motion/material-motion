@@ -33,24 +33,34 @@ let destinationSubscription = spring.destination.subscribe { destination in
 
 ## MVP
 
+### Expose an ObservableProperty API
+
+This is a similar shape to an IndefiniteObservable, but without the initialization method.
+
+```swift
+protocol ObservableProperty {
+  associatedtype T
+
+  func subscribe(_ next: (T) -> Void) -> Subscription
+}
+```
+
+### Make Property conform to ObservableProperty
+
+```swift
+class Property: ObservableProperty {
+  public func subscribe(next: (T) -> Void) -> Subscription
+```
+
 ### Implement a PropertyObserver API
 
-This should be a private class. It does not need to conform to the Observer type. It should store
-a constant next function.
+This should be a private class. It does not need to conform to a formal Observer type, but it can if
+one is available. It should store a constant next function that accepts a value and returns nothing.
 
 ```swift
 private final class PropertyObserver<T> {
   let next: (T) -> Void
 }
-```
-
-### Expose a subscribe API
-
-The API should accept a next function.
-
-```swift
-class Property {
-  public func subscribe(next: (T) -> Void) -> Subscription
 ```
 
 ### Store the next function as an observer
@@ -82,9 +92,7 @@ class Property {
     ...
 
     return Subscription {
-      if let index = self.observers.index(where: { $0 === observer }) {
-        self.observers.remove(at: index)
-      }
+      <remove the observer>
     }
   }
 ```
