@@ -63,7 +63,11 @@ $(document).ready(function() {
 
     }).each(function() { form.append(this); })
 
-    var languages = $(this).children().map(function() {
+    var languages = $(this)
+    .children()
+    .filter(function() {
+      return $(this).attr('class').indexOf('language-') >= 0;
+    }).map(function() {
       return /language-([a-z0-9]+)/.exec($(this).attr('class'))[1];
     });
     var writtenLanguages = new Set();
