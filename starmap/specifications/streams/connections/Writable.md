@@ -16,9 +16,11 @@ availability:
     label: "streams-android in develop"
     url: https://github.com/material-motion/streams-android
   - platform:
-    name: iOS
-    label: "streams-swift in develop"
-    url: https://github.com/material-motion/streams-swift
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/types.ts
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/ScopedProperty.swift
 ---
 
 # Writable specification
