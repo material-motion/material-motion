@@ -29,7 +29,8 @@ Example use:
 ```swift
 let tossable = Tossable(destination: propertyOf(circle).center,
                         viewToToss: square,
-                        containerView: view)
+                        containerView: view,
+                        springSource: popSpringSource)
   .connect(with: aggregator)
 ```
 
@@ -62,7 +63,10 @@ Must accept a destination property, the element to toss, and a container element
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element)
+  init(destination: ScopedProperty<Point>,
+       toss element: Element,
+       container: Element,
+       springSource: SpringSource<CGPoint>)
 }
 ```
 
@@ -70,7 +74,7 @@ class Tossable {
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element) {
+  init(destination: ScopedProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
     self.destination = destination
     self.element = element
 
@@ -83,7 +87,7 @@ class Tossable {
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element) {
+  init(destination: ScopedProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
     ...
 
     let dragGesture = DragGestureRecognizer()
@@ -98,7 +102,7 @@ class Tossable {
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element) {
+  init(destination: ScopedProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
     ...
 
     let dragStream = gestureSource(dragGesture)
@@ -115,7 +119,7 @@ class Tossable {
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element) {
+  init(destination: ScopedProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
     ...
 
     self.initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: container)
@@ -129,7 +133,7 @@ class Tossable {
 
 ```swift
 class Tossable {
-  init(destination: ScopedProperty<Point>, toss element: Element, container: Element) {
+  init(destination: ScopedProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
     ...
 
     self.spring = Spring(to: destination, initialValue: initialPosition, threshold: 1)
