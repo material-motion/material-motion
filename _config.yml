@@ -388,6 +388,9 @@ toc:
                     title: "Dynamic destination"
                     url: "/starmap/specifications/streams/sources/springSource-dynamic-destination"
             - page:
+              title: "Interaction"
+              url: "/starmap/specifications/streams/Interaction"
+            - page:
               title: "Interactions"
               url: "/starmap/specifications/streams/interactions/"
             - page:

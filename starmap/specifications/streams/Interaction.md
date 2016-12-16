@@ -1,0 +1,62 @@
+---
+layout: page
+title: Interaction
+status:
+  date: December 16, 2016
+  is: Draft
+knowledgelevel: L2
+library: streams
+---
+
+# Interaction specification
+
+This is the engineering specification for the abstract `Interaction` type.
+
+## Overview
+
+An Interaction is a class that represents one or more streams of values that can be connected to
+properties.
+
+Example interaction:
+
+```swift
+class TapToChangeDestination: Interaction {
+  let destination: ScopedProperty<CGPoint>
+
+  var tapStream: MotionObservable<CGPoint>
+  init(destination: ScopedProperty<CGPoint>, container: Element) {
+    self.destination = destination
+
+    let tap = UITapGestureRecognizer()
+    container.addGestureRecognizer(tap)
+
+    self.tapStream = gestureSource(tap).onRecognitionState(.recognized).centroid(in: container)
+  }
+
+  func connect(with aggregator: MotionAggregator) {
+    aggregator.write(tapStream, to: destination)
+  }
+}
+
+TapToChangeDestination(destination: tossable.destination, container: element)
+  .connect(with: aggregator)
+```
+
+## MVP
+
+### Expose an abstract type
+
+```swift
+public protocol Interaction
+```
+
+### Expose a connect API
+
+An interaction implements the connect method to set up the default set of connections one might
+expect from the interaction.
+
+```swift
+protocol Interaction {
+  func connect(with aggregator: MotionAggregator)
+}
+```
