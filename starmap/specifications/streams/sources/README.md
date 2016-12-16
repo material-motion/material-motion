@@ -24,20 +24,14 @@ Sources have two connection shapes: inline and object.
 This type of source is able to make use of inline function APIs.
 
 ```swift
-func spring(to destination: T) -> MotionObservable<T> {
+func springSource(spring: Spring) -> MotionObservable<T> {
   return MotionObservable { observer in
-    let spring = Spring()
-    spring.destination = destination
-    spring.onActivate = {
-      observer.state(.active)
-    }
-    spring.onCompletion = {
-      observer.state(.atRest)
-    }
-    spring.start()
-    
+    ... // Configure the spring system
+
+    springSystem.start()
+
     return {
-      spring.stop()
+      springSystem.stop()
     }
   }
 }
@@ -58,55 +52,5 @@ func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapSubscri
 }
 ```
 
-Our tap gesture recognizer requires an object that can receive target/action events, so we've
-created a TapConnection object that can receive these events.
-
-Sources represent the connection from an external system into Material Motion.
-TapConnection listens to UITapGestureRecognizer events and sends them through the provided
-observer's channels.
-
-```swift
-final class TapConnection {
-  typealias Value = CGPoint
-
-  init(subscribedTo gesture: UITapGestureRecognizer, observer: MotionObserver<Value>) {
-    self.gesture = gesture
-    self.observer = observer
-
-    gesture.addTarget(self, action: #selector(didTap))
-
-    // Populate the observer with the current gesture state.
-    propagate()
-  }
-
-  func disconnect() {
-    gesture?.removeTarget(self, action: #selector(didTap))
-    gesture = nil
-  }
-
-  @objc private func didTap() {
-    propagate()
-  }
-
-  private func propagate() {
-    if gesture!.state != .recognized {
-      return
-    }
-    // We simulate an instantaneous active state here:
-    observer.state(.active)
-    observer.next(value())
-    observer.state(.atRest)
-  }
-
-  private func state() -> MotionState {
-    return gesture!.state == .recognized ? .active : .atRest
-  }
-
-  private func value() -> Value {
-    return gesture!.location(in: gesture!.view!)
-  }
-
-  private var gesture: (UITapGestureRecognizer)?
-  private let observer: MotionObserver<Value>
-}
-```
+Our tap gesture recognizer requires an object that can receive target/action events, so we create a
+TapConnection object that receives these events.
