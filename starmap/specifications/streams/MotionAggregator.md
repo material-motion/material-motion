@@ -14,8 +14,7 @@ availability:
     url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionAggregator.java
   - platform:
     name: iOS
-    label: "streams-swift in develop"
-    url: https://github.com/material-motion/streams-swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionAggregator.swift
 ---
 
 # MotionAggregator specification
