@@ -400,6 +400,10 @@ toc:
             - page:
               title: "Interactions"
               url: "/starmap/specifications/streams/interactions/"
+              children:
+               - page:
+                 title: "Tossable"
+                 url: "/starmap/specifications/streams/interactions/Tossable"
         - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"
