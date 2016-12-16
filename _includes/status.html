@@ -95,7 +95,7 @@
 <tbody><tr>
 <td><code>{{ page.streamtype.in }}</code></td>
 <td>&rarr;</td>
-<td><code><strong>{{ page.title }}</strong></code></td>
+<td><code><strong>{{ page.title | remove_first: "$" }}</strong></code></td>
 <td>&rarr;</td>
 <td><code>{{ page.streamtype.out }}</code></td>
 </tr></tbody>
