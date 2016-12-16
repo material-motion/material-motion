@@ -1,6 +1,6 @@
 ---
 layout: page
-title: springSource
+title: SpringSource
 status:
   date: December 13, 2016
   is: Draft
@@ -12,14 +12,14 @@ depends_on:
   - /starmap/specifications/streams/plans/Spring
 ---
 
-# springSource specification
+# SpringSource specification
 
-This is the engineering specification for the `springSource` API.
+This is the engineering specification for the `SpringSource` type.
 
 ## Overview
 
-`springSource` connects to a Spring and emits values on the next channel until the spring comes to
-rest.
+A `SpringSource` is a function that accepts a `Spring` of type `T` and returns a MotionObservable
+capable of emitting `T` values.
 
 Example usage:
 
@@ -33,95 +33,10 @@ SpringSource.from(spring).subscribe(...)
 
 ## MVP
 
-### Expose generic springSource API
+### Expose generic SpringSource API
 
 `springSource` is a function. It should be accessible from anywhere. Returns a MotionObservable.
 
 ```swift
-public func springSource<T>(spring: Spring<T>) -> MotionObservable<T>
-```
-
-### Return a motion observable
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<T> {
-  return MotionObservable { observer in
-    // Connect to a spring system
-    return {
-      // Disconnect from the spring system
-    }
-  }
-}
-```
-
-### Read the spring's initialValue
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-    
-    springSystem.fromValue = spring.initialValue.read() 
-```
-
-### Read the spring's initialVelocity
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-    
-    springSystem.velocity = spring.initialVelocity.read() 
-```
-
-### Read the spring's threshold
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-    
-    springSystem.threshold = spring.threshold.read() 
-```
-
-### Read the spring's destination
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-    
-    springSystem.toValue = spring.destination.read() 
-```
-
-### Update the observer's state
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-
-    springSystem.didStart = { _ in
-      observer.state(.active)
-    }
-    springSystem.didComplete = { _ in
-      observer.state(.atRest)
-    }
-```
-
-### Start the spring simulation
-
-Stop the spring simulation when disconnected.
-
-```swift
-func springSource(spring: Spring) -> MotionObservable<Float> {
-  return MotionObservable { observer in
-    ...
-
-    // Start spring system
-    return {
-      // Stop spring system
-    }
-  }
-}
+public typealias SpringSource<T> = (Spring<T>) -> MotionObservable<T>
 ```

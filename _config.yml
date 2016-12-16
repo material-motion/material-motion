@@ -378,15 +378,22 @@ toc:
               url: "/starmap/specifications/streams/sources/"
               children:
                - page:
-                 title: "gestureSource"
-                 url: "/starmap/specifications/streams/sources/gestureSource"
-               - page:
-                 title: "springSource"
-                 url: "/starmap/specifications/streams/sources/springSource"
+                 title: "GestureSource"
+                 url: "/starmap/specifications/streams/sources/GestureSource"
                  children:
                   - page:
+                    title: "Object implementation"
+                    url: "/starmap/specifications/streams/sources/GestureSource-object-implementation"
+               - page:
+                 title: "SpringSource"
+                 url: "/starmap/specifications/streams/sources/SpringSource"
+                 children:
+                  - page:
+                    title: "Inline implementation"
+                    url: "/starmap/specifications/streams/sources/SpringSource-inline-implementation"
+                  - page:
                     title: "Dynamic destination"
-                    url: "/starmap/specifications/streams/sources/springSource-dynamic-destination"
+                    url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
             - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"

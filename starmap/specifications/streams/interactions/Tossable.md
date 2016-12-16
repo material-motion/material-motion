@@ -10,8 +10,8 @@ depends_on:
   - /starmap/specifications/streams/connections/Property
   - /starmap/specifications/streams/Interaction
   - /starmap/specifications/streams/operators/gesture/$.translated
-  - /starmap/specifications/streams/sources/gestureSource
-  - /starmap/specifications/streams/sources/springSource
+  - /starmap/specifications/streams/sources/GestureSource
+  - /starmap/specifications/streams/sources/SpringSource
 library: interactions
 ---
 
