@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/plans/
+permalink: /starmap/specifications/streams/interactions/
 title: Interactions
 status:
   date: December 15, 2016
