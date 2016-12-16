@@ -388,18 +388,18 @@ toc:
                     title: "Dynamic destination"
                     url: "/starmap/specifications/streams/sources/springSource-dynamic-destination"
             - page:
-              title: "Interaction"
-              url: "/starmap/specifications/streams/Interaction"
-            - page:
-              title: "Interactions"
-              url: "/starmap/specifications/streams/interactions/"
-            - page:
               title: "MotionAggregator"
               url: "/starmap/specifications/streams/MotionAggregator"
               children:
                - page:
                  title: "Recursive aggregation"
                  url: "/starmap/specifications/streams/MotionAggregator-recursive-aggregation"
+            - page:
+              title: "Interaction"
+              url: "/starmap/specifications/streams/Interaction"
+            - page:
+              title: "Interactions"
+              url: "/starmap/specifications/streams/interactions/"
         - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"

@@ -5,6 +5,8 @@ status:
   date: December 16, 2016
   is: Draft
 knowledgelevel: L2
+depends_on:
+  - /starmap/specifications/streams/MotionAggregator
 library: streams
 ---
 
