@@ -5,27 +5,34 @@ status:
   date: December 15, 2016
   is: Draft
 knowledgelevel: L2
-library: springs
+library: streams
 ---
 
 # Spring specification
 
-This is the engineering specification for the concrete `Spring` API.
+This is the engineering specification for the concrete `Spring` type.
 
 ## Overview
+
+A Spring can pull a value from an initial position to a destination using a physical simulation.
+
+This class defines the expected shape of a Spring for use in creating a Spring source.
+
+Example usage:
+
+```swift
+let view = UIView()
+let target = UIView()
+let spring = Spring(to: propertyOf(target).center, initialValue: propertyOf(view).center)
+let spring$ = springSource(spring)
+...
+```
 
 ## MVP
 
 ### Expose Spring API
 
-Should be a class type.
-
-```swift
-public final class Spring {
-```
-
-This class should be generic with a value `T` For languages that support composite properties such
-as position.
+This class should be generic with a value `T`.
 
 ```swift
 public final class Spring<T> {
@@ -51,15 +58,6 @@ starting value of the spring. `initialVelocity` represents the initial velocity 
 
 ```swift
 class Spring {
-  public let destination: ScopedReadable
-  public let initialValue: ScopedReadable
-  public let initialVelocity: ScopedReadable
-```
-
-For generic Springs, all properties should be of type `T`:
-
-```swift
-class Spring {
   public let destination: ScopedReadable<T>
   public let initialValue: ScopedReadable<T>
   public let initialVelocity: ScopedReadable<T>
@@ -73,5 +71,20 @@ Default is tension of `342` and friction of `30`.
 
 ```swift
 class Spring {
-  public let configuration = ScopedReadable<SpringConfiguration>(SpringConfiguration(tension: 342, friction: 30))
+  public var configuration: ScopedReadable<SpringConfiguration>
+```
+
+### Expose a default configuration API
+
+The default tension is 342 and the default friction is 30.
+
+```swift
+class SpringConfiguration {
+  ...
+
+  public static var defaultConfiguration: SpringConfiguration {
+    get {
+      return SpringConfiguration(tension: 342, friction: 30)
+    }
+  }
 ```
