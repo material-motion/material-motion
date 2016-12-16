@@ -357,6 +357,13 @@ toc:
             - page:
               title: "Plans"
               url: "/starmap/specifications/streams/plans/"
+              children:
+               - page:
+                 title: "Spring"
+                 url: "/starmap/specifications/streams/plans/Spring"
+               - page:
+                 title: "Tween"
+                 url: "/starmap/specifications/streams/plans/Tween"
             - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"
