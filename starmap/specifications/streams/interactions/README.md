@@ -17,9 +17,9 @@ For example:
 
 ```swift
 class TossableInteraction {
-  let spring = Spring<CGPoint>
-  let positionStream = MotionObservable<CGPoint>
-  let initialVelocityStream = MotionObservable<CGPoint>
+  let spring: Spring<CGPoint>
+  let positionStream: MotionObservable<CGPoint>
+  let initialVelocityStream: MotionObservable<CGPoint>
 
   init(destination: Property<CGPoint>, view: UIView) {
     let dragGesture = DragGestureRecognizer()
