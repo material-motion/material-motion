@@ -21,7 +21,7 @@ This is the engineering specification for the concrete `Spring` API.
 Should be a class type.
 
 ```swift
-public final class Spring<T> {
+public final class Spring {
 ```
 
 This class should be generic with a value `T` For languages that support composite properties such
@@ -29,19 +29,6 @@ as position.
 
 ```swift
 public final class Spring<T> {
-```
-
-### Expose destination and initialValue APIs
-
-These properties should be provided at initialization time.
-
-`destination` represents the desired final value of the spring. `initialValue` represents the
-starting value of the spring.
-
-```swift
-class Spring {
-  public let destination: Property
-  public let initialValue: Property
 ```
 
 ### Expose a SpringConfiguration API
@@ -55,11 +42,36 @@ public final class SpringConfiguration {
 }
 ```
 
+### Expose property APIs
+
+These properties should be provided at initialization time.
+
+`destination` represents the desired final value of the spring. `initialValue` represents the
+starting value of the spring. `initialVelocity` represents the initial velocity of the spring.
+
+```swift
+class Spring {
+  public let destination: ScopedReadable
+  public let initialValue: ScopedReadable
+  public let initialVelocity: ScopedReadable
+```
+
+For generic Springs, all properties should be of type `T`:
+
+```swift
+class Spring {
+  public let destination: ScopedReadable<T>
+  public let initialValue: ScopedReadable<T>
+  public let initialVelocity: ScopedReadable<T>
+```
+
 ### Expose a configuration API
 
 Expose a configuration API that is initialized with default values.
 
+Default is tension of `342` and friction of `30`.
+
 ```swift
 class Spring {
-  public let configuration = SpringConfiguration(tension: 342, friction: 30)
+  public let configuration = ScopedReadable<SpringConfiguration>(SpringConfiguration(tension: 342, friction: 30))
 ```
