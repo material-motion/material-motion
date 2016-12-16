@@ -21,6 +21,18 @@ This is the engineering specification for the concreate `Tossable` interaction t
 
 ## Overview
 
+The tossable interaction allows an element to be dragged and tossed to a destination. The
+destination is configurable.
+
+Example use:
+
+```swift
+let tossable = Tossable(destination: propertyOf(circle).center,
+                        viewToToss: square,
+                        containerView: view)
+  .connect(with: aggregator)
+```
+
 ## MVP
 
 ### Expose a Tossable type
