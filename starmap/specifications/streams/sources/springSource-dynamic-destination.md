@@ -23,14 +23,13 @@ spring simulations to the new destination. This is implemented using [property o
 Example:
 
 ```swift
-let destination = Property(...)
-let spring = Spring(to: destination, ...)
-let spring$ = springSource(spring)
-aggregator.write(spring$, to: propertyOf(view).position)
+let destination = propertyOf(view).center
 
-// On tap, change the destination of the spring.
-aggregator.write(gestureSource(tap).onRecognitionState(.recognized).location(in: view),
-                 to: destination)
+let spring = Spring(to: destination, ...)
+aggregator.write(springSource(spring), to: propertyOf(view).position)
+
+let didTapStream = gestureSource(tap).onRecognitionState(.recognized)
+aggregator.write(didTapStream.location(in: view), to: destination)
 ```
 
 ## MVP
