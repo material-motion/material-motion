@@ -355,6 +355,9 @@ toc:
                  title: "$.x+$.y"
                  url: "/starmap/specifications/streams/operators/$.x+$.y"
             - page:
+              title: "Plans"
+              url: "/starmap/specifications/streams/plans/"
+            - page:
               title: "Sources"
               url: "/starmap/specifications/streams/sources/"
               children:
