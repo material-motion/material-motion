@@ -358,8 +358,11 @@ toc:
                  title: "$.toggled"
                  url: "/starmap/specifications/streams/operators/$.toggled"
                - page:
-                 title: "$.x+$.y"
-                 url: "/starmap/specifications/streams/operators/$.x+$.y"
+                 title: "$.x"
+                 url: "/starmap/specifications/streams/operators/$.x"
+               - page:
+                 title: "$.y"
+                 url: "/starmap/specifications/streams/operators/$.y"
             - page:
               title: "Plans"
               url: "/starmap/specifications/streams/plans/"
