@@ -1,4 +1,4 @@
-{% if page.status or page.availability or page.proposals or page.knowledgelevel or page.library or page.depends_on or children.size > 0 %}
+{% if page.status or page.availability or page.proposals or page.knowledgelevel or page.library or page.depends_on or children.size > 0 or page.streamtype %}
 {% if page.status.is == "Stable" %}
 <div class="status status_stable">
 {% else %}
@@ -89,6 +89,19 @@
   </tbody>
 </table>
 {% endif %}
+
+{% if page.streamtype %}
+<table class="stream_table">
+<tbody><tr>
+<td><pre>{{ page.streamtype.in }}</pre></td>
+<td>&rarr;</td>
+<td><strong>{{ page.title }}</strong></td>
+<td>&rarr;</td>
+<td><pre>{{ page.streamtype.out }}</pre></td>
+</tr></tbody>
+</table>
+{% endif %}
+
 </div>
 
 <div class="col s12 m3">
