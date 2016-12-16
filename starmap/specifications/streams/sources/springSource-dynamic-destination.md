@@ -45,7 +45,7 @@ func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
 
-    let destinationSubscription = spring.destination.subscribe { destination in
+    let destinationSubscription = spring.destination.addObserver { destination in
       springSystem.toValue = destination
       springSystem.isPaused = false
     }
