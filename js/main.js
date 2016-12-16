@@ -7,7 +7,6 @@ function filterDidChange(filter) {
   $('.language-'+filter).show();
 }
 
-
 $(document).ready(function() {
   $("div.highlighter-rouge").map(function() {
       if (!$(this).prev().hasClass("highlighter-rouge")) {
@@ -88,4 +87,10 @@ $(document).ready(function() {
   });
   
   filterDidChange(filter);
+  
+  var container = $('.cover');
+  var scrollTo = $('#tocjump');
+  container.scrollTop(
+      scrollTo.offset().top - container.offset().top + container.scrollTop() - container.height() / 2
+  );
 });
