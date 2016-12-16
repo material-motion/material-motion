@@ -108,3 +108,20 @@ func springSource(spring: Spring) -> MotionObservable<Float> {
       observer.state(.atRest)
     }
 ```
+
+### Start the spring simulation
+
+Stop the spring simulation when disconnected.
+
+```swift
+func springSource(spring: Spring) -> MotionObservable<Float> {
+  return MotionObservable { observer in
+    ...
+
+    // Start spring system
+    return {
+      // Stop spring system
+    }
+  }
+}
+```
