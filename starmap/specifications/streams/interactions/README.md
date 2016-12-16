@@ -24,13 +24,13 @@ class TossableInteraction {
   init(destination: Property<CGPoint>, view: UIView) {
     let dragGesture = DragGestureRecognizer()
     let dragStream = gestureSource(dragGesture)
-    initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: view)
+    self.initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: view)
 
-    let spring = Spring(to: destination,
-                        initialValue: propertyOf(view).center,
-                        initialVelocity: property(withInitialValue: CGPoint(x: 0, y: 0)))
+    self.spring = Spring(to: destination,
+                         initialValue: propertyOf(view).center,
+                         initialVelocity: property(withInitialValue: CGPoint(x: 0, y: 0)))
     let springStream = springSource(spring)
-    positionStream = springStream.toggled(with: dragStream.centroid(in: view))
+    self.positionStream = springStream.toggled(with: dragStream.centroid(in: view))
   }
 }
 
