@@ -55,12 +55,14 @@ These properties should be provided at initialization time.
 
 `destination` represents the desired final value of the spring. `initialValue` represents the
 starting value of the spring. `initialVelocity` represents the initial velocity of the spring.
+`threshold` represents the value used to calculate when a spring has come to rest.
 
 ```swift
 class Spring {
   public let destination: ScopedReadable<T>
   public let initialValue: ScopedReadable<T>
   public let initialVelocity: ScopedReadable<T>
+  public let threshold: ScopedReadable<Float>
 ```
 
 ### Expose a configuration API
@@ -71,7 +73,7 @@ Default is tension of `342` and friction of `30`.
 
 ```swift
 class Spring {
-  public var configuration: ScopedReadable<SpringConfiguration>
+  public let configuration: ScopedReadable<SpringConfiguration>
 ```
 
 ### Expose a default configuration API
