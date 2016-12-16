@@ -120,7 +120,8 @@ tfoot {
 .platform_table tr:nth-child(2n) {
   background-color: inherit;
 }
-.dependency_table td {
+.dependency_table td,
+.stream_table td {
   border: none;
 }
 
