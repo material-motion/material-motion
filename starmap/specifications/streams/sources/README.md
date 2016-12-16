@@ -9,8 +9,6 @@ knowledgelevel: L3
 library: streams
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
-enables:
-  - /starmap/specifications/streams/operators/foundation/direct_manipulation/
 ---
 
 # Sources
