@@ -2,7 +2,7 @@
 <li class="{% if node.children %}has-children{% endif %} {% if page.url contains node.url %}expanded{% endif %}">
 <div class="thumb"></div>
 {% if node.url %}
-  {% if page.url != node.url %}<a href="{{ site.url }}{{ node.url }}">{% endif %}{{ node.title }}{% if page.url != node.url %}</a>{% endif %}
+  {% if page.url != node.url %}<a href="{{ site.url }}{{ node.url }}">{% else %}<span id="tocjump">{% endif %}{{ node.title }}{% if page.url != node.url %}</a>{% else %}</span>{% endif %}
 {% else %}
   <hr>
   <em>{{ node.title }}</em>
