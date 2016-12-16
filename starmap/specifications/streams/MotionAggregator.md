@@ -10,6 +10,9 @@ depends_on:
   - /starmap/specifications/streams/MotionObservable
 availability:
   - platform:
+    name: Android 
+    url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionAggregator.java
+  - platform:
     name: iOS
     label: "streams-swift in develop"
     url: https://github.com/material-motion/streams-swift
