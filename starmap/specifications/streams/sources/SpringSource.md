@@ -8,7 +8,6 @@ knowledgelevel: L2
 library: springs
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
-  - /starmap/specifications/streams/connections/ReactiveProperty
   - /starmap/specifications/streams/plans/Spring
 ---
 
@@ -33,9 +32,10 @@ SpringSource.from(spring).subscribe(...)
 
 ## MVP
 
-### Expose generic SpringSource API
+### Expose a SpringSource type
 
-`springSource` is a function. It should be accessible from anywhere. Returns a MotionObservable.
+`SpringSource` is a function signature. It accepts a Spring of type T and returns a MotionObservable
+of the same type T.
 
 ```swift
 public typealias SpringSource<T> = (Spring<T>) -> MotionObservable<T>

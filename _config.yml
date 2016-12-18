@@ -381,6 +381,9 @@ toc:
                     title: "Object implementation"
                     url: "/starmap/specifications/streams/sources/GestureSource-object-implementation"
                - page:
+                 title: "ScrollSource"
+                 url: "/starmap/specifications/streams/sources/ScrollSource"
+               - page:
                  title: "SpringSource"
                  url: "/starmap/specifications/streams/sources/SpringSource"
                  children:
