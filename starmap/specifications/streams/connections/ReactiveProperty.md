@@ -73,34 +73,48 @@ public class UnscopedReactiveProperty<O, T>: UnscopedReadable<O, T>, UnscopedWri
 }
 ```
 
-### Expose a subscribe API
+### Expose subscribe APIs
+
+Expose a MotionObserver-shaped subscribe API that accepts a next and state function. Expose a second
+subscribe method that only accepts a next function. THe second method should invoke the first with
+an empty state function.
 
 ```swift
 class ReactiveProperty {
-  public func subscribe(_ next: (T) -> Void) -> Subscription
+  public func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription
+
+  public func subscribe(next: (T) -> Void) -> Subscription {
+    return self.subscribe(next: next, state: { _ in })
+  }
 ```
 
-### Implement a ReactivePropertyObserver API
+### Expose a next and state API
 
-This should be a private class. It does not need to conform to a formal Observer type, but it can if
-one is available. It should store a constant next function that accepts a value and returns nothing.
-
-```swift
-private final class ReactivePropertyObserver<T> {
-  let next: (T) -> Void
-}
-```
-
-### Store the next function as an observer
+These methods inform all subscribed observers.
 
 ```swift
 class ReactiveProperty {
-  public func addObserver(next: (T) -> Void) -> Subscription {
-    let observer = ReactivePropertyObserver(next)
+  public func next(_ value: T)
+  public func state(_ state: MotionState)
+```
+
+### Store a list of MotionObserver instances
+
+```swift
+class ReactiveProperty {
+  private var observers: [MotionObserver<T>] = []
+```
+
+### Subscribe adds an observer to a list of observers
+
+```swift
+class ReactiveProperty {
+  func subscribe(next: (T) -> Void) -> Subscription {
+    let observer = MotionObserver(next: next, state: state)
     observers.append(observer)
 ```
 
-### Immediately provide the observer with the current reactive property value
+### Subscribe invokes the observer's next function with the current read value
 
 ```swift
 class ReactiveProperty {
@@ -110,7 +124,7 @@ class ReactiveProperty {
     observer.next(read())
 ```
 
-### Return a Subscription instance
+### Subscribe returns a Subscription instance
 
 The unsubscribe implementation should remove the observer from the list of observers.
 
@@ -125,17 +139,19 @@ class ReactiveProperty {
   }
 ```
 
-### Inform observers on write
-
-Invoke all observer next functions when the reactive property is written to.
+### Next and state should forward to all subscribed observers
 
 ```swift
 class ReactiveProperty {
-  func write(_ value: T) {
-    _write(value)
-
+  func next(value: T) {
     for observer in observers {
       observer.next(value)
+    }
+  }
+
+  func state(state: MotionState) {
+    for observer in observers {
+      observer.state(state)
     }
   }
 ```
