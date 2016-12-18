@@ -94,8 +94,8 @@ These methods inform all subscribed observers.
 
 ```swift
 class ReactiveProperty {
-  public func next(_ value: T)
-  public func state(_ state: MotionState)
+  public func next(value: T)
+  public func state(state: MotionState)
 ```
 
 ### Store a list of MotionObserver instances
@@ -109,7 +109,7 @@ class ReactiveProperty {
 
 ```swift
 class ReactiveProperty {
-  func subscribe(next: (T) -> Void) -> Subscription {
+  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
     let observer = MotionObserver(next: next, state: state)
     observers.append(observer)
 ```
@@ -118,7 +118,7 @@ class ReactiveProperty {
 
 ```swift
 class ReactiveProperty {
-  public func addObserver(next: (T) -> Void) -> Subscription {
+  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
     ...
 
     observer.next(read())
@@ -130,7 +130,7 @@ The unsubscribe implementation should remove the observer from the list of obser
 
 ```swift
 class ReactiveProperty {
-  public func addObserver(next: (T) -> Void) -> Subscription {
+  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
     ...
 
     return Subscription {
