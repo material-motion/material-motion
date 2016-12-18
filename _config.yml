@@ -302,7 +302,7 @@ toc:
                  title: "Metadata"
                  url: "/starmap/specifications/streams/MotionObservable-Metadata"
             - page:
-              title: "Connecting streams with external systems"
+              title: "Connecting streams"
               url: "/starmap/specifications/streams/connections/"
               children:
                - page:
