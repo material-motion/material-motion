@@ -8,7 +8,7 @@ knowledgelevel: L2
 library: springs
 depends_on:
   - /starmap/specifications/streams/sources/SpringSource-inline-implementation
-  - /starmap/specifications/streams/connections/ReactiveProperty-observation
+  - /starmap/specifications/streams/connections/ReactiveProperty
 ---
 
 # springSource dynamic destination feature specification

@@ -314,10 +314,6 @@ toc:
                - page:
                  title: "ReactiveProperty"
                  url: "/starmap/specifications/streams/connections/ReactiveProperty"
-                 children:
-                  - page:
-                    title: "Observation"
-                    url: "/starmap/specifications/streams/connections/ReactiveProperty-observation"
                - page:
                  title: "Property names"
                  url: "/starmap/specifications/streams/connections/names"
