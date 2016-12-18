@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OperatorMetadata
+title: Metadata
 status:
   date: December 4, 2016
   is: Draft
@@ -10,33 +10,40 @@ depends_on:
   - /starmap/specifications/streams/MotionObservable
 ---
 
-# OperatorMetadata feature specification for MotionObservable
+# Metadata feature specification for MotionObservable
 
 This is the engineering specification for the `OperatorMetadata` object.
 
 ## Overview
 
-Observables can be referred to as operators. A series of operators is referred to as a stream. In order
-provide introspection capabilities, each operator is expected to store a small amount of meta
-information about itself. This information is stored in an object called `OperatorMetadata`.
+In order provide introspection capabilities, each observable is expected to store a small amount of
+meta information about itself. This information is stored in an object called `Metadata`.
 
 ## MVP
 
-Provide an `OperatorMetadata` type that represents metadata about the operator.
+Provide an `Metadata` type that represents metadata about the operator.
 
 ### Class type
 
 Define a public object type named `OperatorMetadata`.
 
 ```swift
-public class OperatorMetadata {
+public class Metadata {
+}
+```
+
+### Expose a metadata API on each MotionObservable
+
+```swift
+class MotionObservable {
+  public let metadata: Metadata
 }
 ```
 
 ### Store name and args
 
 ```swift
-class OperatorMetadata {
+class Metadata {
   public let name: String
   public let args: [Any]?
   private var parent: OperatorMetadata?
@@ -53,7 +60,7 @@ class OperatorMetadata {
 Expose a `with` method that creates a new OperatorMetadata with self as its parent.
 
 ```swift
-class OperatorMetadata {
+class Metadata {
   public func with(_ name: String, args: [Any]? = nil) -> OperatorMetadata {
     return .init(name, args: args, parent: self)
   }
@@ -61,11 +68,11 @@ class OperatorMetadata {
 
 ### Expose debug description API
 
-Expose a debug description method. The implementation should traverse the parent OperatorMetadatas and construct
-a string represenation of the operator.
+Expose a debug description method. The implementation should traverse the parent Metadata and
+construct a string represenation of the operator.
 
 ```swift
-class OperatorMetadata {
+class Metadata {
   public var debugDescription: String {
   }
 ```
@@ -73,9 +80,10 @@ class OperatorMetadata {
 Example stream:
 
 ```swift
-let stream = drag(pan)
+let stream = gestureSource(pan)
   .state(is: .ended)
-  .velocity(in: view).y()
+  .velocity(in: view)
+  .y()
 propertyWriter.write(stream, to: spring$.initialVelocity)
 ```
 
