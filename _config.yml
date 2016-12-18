@@ -107,183 +107,6 @@ toc:
               title: "Timeline"
               url: "/starmap/specifications/primitives/Timeline"
         - page:
-          title: "Declarative motion"
-          url: "/starmap/specifications/pattern"
-        - page:
-          title: "Motion runtime"
-          url: "/starmap/specifications/runtime/"
-          children:
-            - page:
-              title: "Life of a plan"
-              url: "/starmap/specifications/runtime/life_of_a_plan"
-            - page:
-              title: "Plan"
-              url: "/starmap/specifications/runtime/Plan"
-            - page:
-              title: "Performer"
-              url: "/starmap/specifications/runtime/Performer"
-              children:
-                - page:
-                  title: "Composition"
-                  url: "/starmap/specifications/runtime/Performer-composition"
-            - page:
-              title: "MotionRuntime"
-              url: "/starmap/specifications/runtime/MotionRuntime/"
-              children:
-                - page:
-                  title: "Tracing"
-                  url: "/starmap/specifications/runtime/MotionRuntime/tracing/"
-                  children:
-                    - page:
-                      title: "ConsoleLoggingTracer"
-                      url: "/starmap/specifications/runtime/MotionRuntime/tracing/ConsoleLoggingTracer"
-            - page:
-              title: "Named plans"
-              url: "/starmap/specifications/runtime/named-plans"
-            - page:
-              title: "Target selectors"
-              url: "/starmap/specifications/runtime/target_selectors"
-        - page:
-          title: "Motion language"
-          url: "/starmap/specifications/plans/"
-          children:
-            - page:
-              title: "AdjustsAnchorPoint"
-              url: "/starmap/specifications/plans/AdjustsAnchorPoint"
-            - page:
-              title: "ArcMove"
-              url: "/starmap/specifications/plans/ArcMove"
-            - page:
-              title: "AppliesVelocity"
-              url: "/starmap/specifications/plans/AppliesVelocity"
-            - page:
-              title: "BasicTween"
-              url: "/starmap/specifications/plans/BasicTween"
-            - page:
-              title: "DirectlyManipulable"
-              url: "/starmap/specifications/plans/DirectlyManipulable"
-            - page:
-              title: "Draggable"
-              url: "/starmap/specifications/plans/Draggable"
-            - page:
-              title: "PausesSpring"
-              url: "/starmap/specifications/plans/PausesSpring"
-            - page:
-              title: "Pinchable"
-              url: "/starmap/specifications/plans/Pinchable"
-            - page:
-              title: "Rotatable"
-              url: "/starmap/specifications/plans/Rotatable"
-            - page:
-              title: "SpringTo"
-              url: "/starmap/specifications/plans/SpringTo"
-              children:
-               - page:
-                 title: "Springiness"
-                 url: "/starmap/specifications/plans/SpringTo_springiness"
-            - page:
-              title: "TransitionSpring"
-              url: "/starmap/specifications/plans/TransitionSpring"
-            - page:
-              title: "TransitionTween"
-              url: "/starmap/specifications/plans/TransitionTween"
-            - page:
-              title: "Tween"
-              url: "/starmap/specifications/plans/Tween"
-        - page:
-          title: "Motion library"
-          url: "/starmap/specifications/motion_library"
-        - page:
-          title: "Interactions"
-          url: "/starmap/specifications/interactions/"
-          children:
-            - page:
-              title: "Director"
-              url: "/starmap/specifications/interactions/director"
-            - page:
-              title: "Transitions"
-              url: "/starmap/specifications/interactions/transitions/"
-              children:
-                - page:
-                  title: "Directionality"
-                  url: "/starmap/specifications/interactions/transitions/directionality"
-                - page:
-                  title: "TransitionWindow"
-                  url: "/starmap/specifications/interactions/transitions/TransitionWindow"
-                - page:
-                  title: "TransitionWindowSegment"
-                  url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment"
-                  children:
-                   - page:
-                     title: "Predefined segments"
-                     url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment_predefined"
-                - page:
-                  title: "Life of a transition director"
-                  url: "/starmap/specifications/interactions/transitions/life_of_a_transition_director"
-                - page:
-                  title: "Transition"
-                  url: "/starmap/specifications/interactions/transitions/Transition"
-                  children:
-                    - page:
-                      title: "Feature: context element"
-                      url: "/starmap/specifications/interactions/transitions/Transition_context_element"
-                    - page:
-                      title: "Feature: interruptible"
-                      url: "/starmap/specifications/interactions/transitions/Transition_interruptible"
-                - page:
-                  title: "TransitionDirector"
-                  url: "/starmap/specifications/interactions/transitions/TransitionDirector"
-                  children:
-                    - page:
-                      title: "Feature: transition preconditions"
-                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_preconditions"
-                    - page:
-                      title: "Feature: replication"
-                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_replication"
-                - page:
-                  title: "Platform: iOS"
-                  url: "/starmap/specifications/interactions/transitions/platform/ios/"
-                  children:
-                    - page:
-                      title: "Life of a transition controller"
-                      url: "/starmap/specifications/interactions/transitions/platform/ios/life_of_a_transition_controller"
-                    - page:
-                      title: "TransitionController"
-                      url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController"
-                      children:
-                        - page:
-                          title: "Feature: director stack"
-                          url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController_director_stack"
-        - page:
-          title: "Interaction library"
-          url: "/starmap/specifications/interaction_library/"
-          children:
-            - page:
-              title: "Transition library"
-              url: "/starmap/specifications/interaction_library/transitions/"
-              children:
-                - page:
-                  title: "FadeIn"
-                  url: "/starmap/specifications/interaction_library/transitions/FadeIn"
-                - page:
-                  title: "Photo"
-                  url: "/starmap/specifications/interaction_library/transitions/Photo"
-                - page:
-                  title: "SlideIn"
-                  url: "/starmap/specifications/interaction_library/transitions/SlideIn"
-        - page:
-          title: "Target replication"
-          url: "/starmap/specifications/target_replication/"
-          children:
-            - page:
-              title: "ReplicaController"
-              url: "/starmap/specifications/target_replication/ReplicaController"
-            - page:
-              title: "ReplicaControllerDelegate"
-              url: "/starmap/specifications/target_replication/ReplicaControllerDelegate"
-        - page:
-          title: "Experiments"
-        - page:
           title: "Streams"
           url: "/starmap/specifications/streams/"
           children:
@@ -411,6 +234,99 @@ toc:
                  title: "Tossable"
                  url: "/starmap/specifications/streams/interactions/Tossable"
         - page:
+          title: "Motion library"
+          url: "/starmap/specifications/motion_library"
+        - page:
+          title: "Interactions"
+          url: "/starmap/specifications/interactions/"
+          children:
+            - page:
+              title: "Director"
+              url: "/starmap/specifications/interactions/director"
+            - page:
+              title: "Transitions"
+              url: "/starmap/specifications/interactions/transitions/"
+              children:
+                - page:
+                  title: "Directionality"
+                  url: "/starmap/specifications/interactions/transitions/directionality"
+                - page:
+                  title: "TransitionWindow"
+                  url: "/starmap/specifications/interactions/transitions/TransitionWindow"
+                - page:
+                  title: "TransitionWindowSegment"
+                  url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment"
+                  children:
+                   - page:
+                     title: "Predefined segments"
+                     url: "/starmap/specifications/interactions/transitions/TransitionWindowSegment_predefined"
+                - page:
+                  title: "Life of a transition director"
+                  url: "/starmap/specifications/interactions/transitions/life_of_a_transition_director"
+                - page:
+                  title: "Transition"
+                  url: "/starmap/specifications/interactions/transitions/Transition"
+                  children:
+                    - page:
+                      title: "Feature: context element"
+                      url: "/starmap/specifications/interactions/transitions/Transition_context_element"
+                    - page:
+                      title: "Feature: interruptible"
+                      url: "/starmap/specifications/interactions/transitions/Transition_interruptible"
+                - page:
+                  title: "TransitionDirector"
+                  url: "/starmap/specifications/interactions/transitions/TransitionDirector"
+                  children:
+                    - page:
+                      title: "Feature: transition preconditions"
+                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_preconditions"
+                    - page:
+                      title: "Feature: replication"
+                      url: "/starmap/specifications/interactions/transitions/TransitionDirector_replication"
+                - page:
+                  title: "Platform: iOS"
+                  url: "/starmap/specifications/interactions/transitions/platform/ios/"
+                  children:
+                    - page:
+                      title: "Life of a transition controller"
+                      url: "/starmap/specifications/interactions/transitions/platform/ios/life_of_a_transition_controller"
+                    - page:
+                      title: "TransitionController"
+                      url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController"
+                      children:
+                        - page:
+                          title: "Feature: director stack"
+                          url: "/starmap/specifications/interactions/transitions/platform/ios/TransitionController_director_stack"
+        - page:
+          title: "Interaction library"
+          url: "/starmap/specifications/interaction_library/"
+          children:
+            - page:
+              title: "Transition library"
+              url: "/starmap/specifications/interaction_library/transitions/"
+              children:
+                - page:
+                  title: "FadeIn"
+                  url: "/starmap/specifications/interaction_library/transitions/FadeIn"
+                - page:
+                  title: "Photo"
+                  url: "/starmap/specifications/interaction_library/transitions/Photo"
+                - page:
+                  title: "SlideIn"
+                  url: "/starmap/specifications/interaction_library/transitions/SlideIn"
+        - page:
+          title: "Target replication"
+          url: "/starmap/specifications/target_replication/"
+          children:
+            - page:
+              title: "ReplicaController"
+              url: "/starmap/specifications/target_replication/ReplicaController"
+            - page:
+              title: "ReplicaControllerDelegate"
+              url: "/starmap/specifications/target_replication/ReplicaControllerDelegate"
+        - page:
+          title: "Experiments"
+        - page:
           title: "Serialization"
           url: "/starmap/specifications/serialization/"
           children:
@@ -454,6 +370,92 @@ toc:
         - page:
           title: "Applications"
           url: "/starmap/specifications/applications"
+        - page:
+          title: "Archive"
+        - page:
+          title: "Declarative motion"
+          url: "/starmap/specifications/pattern"
+        - page:
+          title: "Motion runtime"
+          url: "/starmap/specifications/runtime/"
+          children:
+            - page:
+              title: "Life of a plan"
+              url: "/starmap/specifications/runtime/life_of_a_plan"
+            - page:
+              title: "Plan"
+              url: "/starmap/specifications/runtime/Plan"
+            - page:
+              title: "Performer"
+              url: "/starmap/specifications/runtime/Performer"
+              children:
+                - page:
+                  title: "Composition"
+                  url: "/starmap/specifications/runtime/Performer-composition"
+            - page:
+              title: "MotionRuntime"
+              url: "/starmap/specifications/runtime/MotionRuntime/"
+              children:
+                - page:
+                  title: "Tracing"
+                  url: "/starmap/specifications/runtime/MotionRuntime/tracing/"
+                  children:
+                    - page:
+                      title: "ConsoleLoggingTracer"
+                      url: "/starmap/specifications/runtime/MotionRuntime/tracing/ConsoleLoggingTracer"
+            - page:
+              title: "Named plans"
+              url: "/starmap/specifications/runtime/named-plans"
+            - page:
+              title: "Target selectors"
+              url: "/starmap/specifications/runtime/target_selectors"
+        - page:
+          title: "Motion language"
+          url: "/starmap/specifications/plans/"
+          children:
+            - page:
+              title: "AdjustsAnchorPoint"
+              url: "/starmap/specifications/plans/AdjustsAnchorPoint"
+            - page:
+              title: "ArcMove"
+              url: "/starmap/specifications/plans/ArcMove"
+            - page:
+              title: "AppliesVelocity"
+              url: "/starmap/specifications/plans/AppliesVelocity"
+            - page:
+              title: "BasicTween"
+              url: "/starmap/specifications/plans/BasicTween"
+            - page:
+              title: "DirectlyManipulable"
+              url: "/starmap/specifications/plans/DirectlyManipulable"
+            - page:
+              title: "Draggable"
+              url: "/starmap/specifications/plans/Draggable"
+            - page:
+              title: "PausesSpring"
+              url: "/starmap/specifications/plans/PausesSpring"
+            - page:
+              title: "Pinchable"
+              url: "/starmap/specifications/plans/Pinchable"
+            - page:
+              title: "Rotatable"
+              url: "/starmap/specifications/plans/Rotatable"
+            - page:
+              title: "SpringTo"
+              url: "/starmap/specifications/plans/SpringTo"
+              children:
+               - page:
+                 title: "Springiness"
+                 url: "/starmap/specifications/plans/SpringTo_springiness"
+            - page:
+              title: "TransitionSpring"
+              url: "/starmap/specifications/plans/TransitionSpring"
+            - page:
+              title: "TransitionTween"
+              url: "/starmap/specifications/plans/TransitionTween"
+            - page:
+              title: "Tween"
+              url: "/starmap/specifications/plans/Tween"
         - page:
           title: "Motion Expression"
           url: "/starmap/specifications/expressions"
