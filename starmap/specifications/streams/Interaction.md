@@ -23,10 +23,10 @@ Example interaction:
 
 ```swift
 class TapToChangeDestination: Interaction {
-  let destination: ScopedProperty<CGPoint>
+  let destination: ReactiveProperty<CGPoint>
 
   var tapStream: MotionObservable<CGPoint>
-  init(destination: ScopedProperty<CGPoint>, container: Element) {
+  init(destination: ReactiveProperty<CGPoint>, container: Element) {
     self.destination = destination
 
     let tap = UITapGestureRecognizer()

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Property
+title: ReactiveProperty
 status:
   date: December 6, 2016
   is: Draft
@@ -20,20 +20,20 @@ availability:
     url: https://github.com/material-motion/streams-swift
 ---
 
-# Property specification
+# ReactiveProperty specification
 
-This is the engineering specification for the `Property` concrete type.
+This is the engineering specification for the `ReactiveProperty` concrete type.
 
 ## Overview
 
-`Property` defines an interface for reading a value from - and writing a value to - a target object.
+`ReactiveProperty` defines an interface for reading a value from - and writing a value to - a target object.
 
 ## MVP
 
-### Option 1: Expose a concrete ScopedProperty API
+### Option 1: Expose a concrete ScopedReactiveProperty API
 
 ```swift
-public class ScopedProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
+public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
   public typealias Read = () -> T
   public typealias Write = (T) -> Void
 
@@ -47,10 +47,10 @@ public class ScopedProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
 }
 ```
 
-### Option 2: Expose a concrete UnscopedProperty API
+### Option 2: Expose a concrete UnscopedReactiveProperty API
 
 ```swift
-public class UnscopedProperty<O, T>: UnscopedReadable<O, T>, UnscopedWritable<O, T> {
+public class UnscopedReactiveProperty<O, T>: UnscopedReadable<O, T>, UnscopedWritable<O, T> {
   public typealias Read = (O) -> T
   public typealias Write = (O, T) -> Void
 

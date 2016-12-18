@@ -8,7 +8,7 @@ knowledgelevel: L2
 library: springs
 depends_on:
   - /starmap/specifications/streams/sources/SpringSource-inline-implementation
-  - /starmap/specifications/streams/connections/Property-observation
+  - /starmap/specifications/streams/connections/ReactiveProperty-observation
 ---
 
 # springSource dynamic destination feature specification
@@ -18,7 +18,7 @@ This is the engineering specification for dynamic destinations on the `springSou
 ## Overview
 
 When the destination of a Spring changes, all active subscriptions should update their in-flight
-spring simulations to the new destination. This is implemented using [property observation](/starmap/specifications/streams/connections/Property-observation).
+spring simulations to the new destination. This is implemented using property observation.
 
 Example:
 
