@@ -431,9 +431,6 @@ toc:
            title: "Further considerations"
            url: "/starmap/specifications/expressions-addendum"
   - page:
-    title: "Glossary"
-    url: "/GLOSSARY"
-  - page:
     title: "User journeys"
     url: "/user_journeys/"
     children:
@@ -642,3 +639,6 @@ toc:
   - page:
     title: "Contributing"
     url: "/CONTRIBUTING"
+  - page:
+    title: "Glossary"
+    url: "/GLOSSARY"
