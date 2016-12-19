@@ -435,17 +435,17 @@ toc:
     url: "/GLOSSARY"
   - page:
     title: "User journeys"
-    url: "/starmap/user_journeys/"
+    url: "/user_journeys/"
     children:
      - page:
        title: "Motion"
-       url: "/starmap/user_journeys/motion"
+       url: "/user_journeys/motion"
      - page:
        title: "Engineering"
-       url: "/starmap/user_journeys/engineering"
+       url: "/user_journeys/engineering"
      - page:
        title: "Design"
-       url: "/starmap/user_journeys/design"
+       url: "/user_journeys/design"
   - page:
     title: "Team"
     url: "/team/"
