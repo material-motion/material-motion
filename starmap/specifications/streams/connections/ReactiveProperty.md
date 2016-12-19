@@ -42,16 +42,16 @@ let subscription = spring.destination.addObserver { destination in
 ### Option 1: Expose a concrete ScopedReactiveProperty API
 
 ```swift
+public typealias ScopedRead<T> = () -> T
+public typealias ScopedWrite<T> = (T) -> Void
+
 public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
-  public typealias Read = () -> T
-  public typealias Write = (T) -> Void
+  private let _read: ScopedRead
+  private let _write: ScopedWrite
 
-  public let read: Read
-  public let write: Write
-
-  public init(read: Read, write: Write) {
-    self.read = read
-    self.write = write
+  public init(read: ScopedRead, write: ScopedWrite) {
+    self._read = read
+    self._write = write
   }
 }
 ```
@@ -59,16 +59,16 @@ public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
 ### Option 2: Expose a concrete UnscopedReactiveProperty API
 
 ```swift
+public typealias UnscopedRead = (O) -> T
+public typealias UnscopedWrite = (O, T) -> Void
+
 public class UnscopedReactiveProperty<O, T>: UnscopedReadable<O, T>, UnscopedWritable<O, T> {
-  public typealias Read = (O) -> T
-  public typealias Write = (O, T) -> Void
+  public let _read: UnscopedRead
+  public let _write: UnscopedWrite
 
-  public let read: Read
-  public let write: Write
-
-  public init(read: Read, write: Write) {
-    self.read = read
-    self.write = write
+  public init(read: UnscopedRead, write: UnscopedWrite) {
+    self._read = read
+    self._write = write
   }
 }
 ```
@@ -88,14 +88,15 @@ class ReactiveProperty {
   }
 ```
 
-### Expose a next and state API
+### Expose a read API
 
-These methods inform all subscribed observers.
+Should invoke the provided read function.
 
 ```swift
 class ReactiveProperty {
-  public func next(value: T)
-  public func state(state: MotionState)
+  public func read() -> T {
+    return self._read()
+  }
 ```
 
 ### Store a list of MotionObserver instances
@@ -139,19 +140,30 @@ class ReactiveProperty {
   }
 ```
 
-### Next and state should forward to all subscribed observers
+### Expose a state API
+
+Informs all subscribed observers of the provided state.
 
 ```swift
 class ReactiveProperty {
-  func next(value: T) {
-    for observer in observers {
-      observer.next(value)
+  public func state(state: MotionState) {
+    for observer in self.observers {
+      observer.state(state)
     }
   }
+```
 
-  func state(state: MotionState) {
-    for observer in observers {
-      observer.state(state)
+### Expose a write API
+
+Invokes the provided write function and informs all subscribed observers of the new value.
+
+```swift
+class ReactiveProperty {
+  public func write(_ value: T) {
+    self._write(value)
+
+    for observer in self.observers {
+      observer.next(value)
     }
   }
 ```
