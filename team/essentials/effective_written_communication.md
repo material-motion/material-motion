@@ -2,7 +2,7 @@
 layout: page
 ---
 
-# Effective communication
+# Effective written communication
 
 ## Limit use of emphatics in technical conversations
 
