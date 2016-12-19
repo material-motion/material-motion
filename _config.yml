@@ -474,6 +474,9 @@ toc:
          title: "Giving helpful feedback"
          url: "/team/essentials/giving_helpful_feedback"
        - page:
+         title: "Effective communication"
+         url: "/team/essentials/effective_communication"
+       - page:
          title: "Working on issues"
          url: "/team/essentials/working_on_issues"
        - page:
