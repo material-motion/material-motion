@@ -109,10 +109,6 @@ toc:
         - page:
           title: "IndefiniteObservable"
           url: "/starmap/specifications/streams/IndefiniteObservable/"
-          children:
-           - page:
-             title: "IndefiniteSubject"
-             url: "/starmap/specifications/streams/IndefiniteObservable/IndefiniteSubject"
         - page:
           title: "MotionObservable"
           url: "/starmap/specifications/streams/MotionObservable"
@@ -344,6 +340,9 @@ toc:
           url: "/starmap/specifications/applications"
         - page:
           title: "Archive"
+        - page:
+          title: "IndefiniteSubject"
+          url: "/starmap/specifications/streams/IndefiniteObservable/IndefiniteSubject"
         - page:
           title: "Declarative motion"
           url: "/starmap/specifications/pattern"
