@@ -23,18 +23,13 @@ Each group in the list above requires more knowledge of the Material Motion ecos
 
 **Runtime engineer**: uses platform-specific considerations to build the runtime.
 
-The Starmap is written for runtime engineers.
+> Note that the Starmap is written for runtime engineers.
+
+![]({{ site.url }}/assets/Roles.svg)
 
 ## Methods of positioning these expectations
 
-Provide two categories of educational material: **using** material motion and **extending** material motion.
+We will provide distinct categories of educational material targeted toward each knowledge level:
 
-Using material motion will target app creators.
-
-Extending material motion will target director/motion creators.
-
-## Knowledge hierarchy
-
-The following diagram shows the required amount of knowledge for each group.
-
-![]({{ site.url }}/assets/Roles.svg)
+- L1: **using** material motion
+- L2-3: **extending** material motion.
