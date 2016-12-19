@@ -78,9 +78,6 @@ toc:
        url: "/starmap/specifications/primitives/"
        children:
          - page:
-           title: "How to connect primitives"
-           url: "/starmap/specifications/primitives/how_to_connect_primitives"
-         - page:
            title: "Gesture recognizers"
            url: "/starmap/specifications/primitives/gesture_recognizers/"
            children:
@@ -97,11 +94,17 @@ toc:
                title: "ScaleGestureRecognizer"
                url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
          - page:
-           title: "Streams"
-           url: "/starmap/specifications/primitives/streams/"
+           title: "Tweens"
+           url: "/starmap/specifications/primitives/tweens"
+         - page:
+           title: "Applied forces"
+           url: "/starmap/specifications/primitives/applied_forces"
          - page:
            title: "Timeline"
            url: "/starmap/specifications/primitives/Timeline"
+         - page:
+           title: "Streams"
+           url: "/starmap/specifications/primitives/streams/"
      - page:
        title: "IndefiniteObservable"
        url: "/starmap/specifications/streams/IndefiniteObservable/"
