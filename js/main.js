@@ -89,7 +89,7 @@ $(document).ready(function() {
     panel.append(form);
     $(this).append(panel);
   });
-  
+
   filterDidChange(filter);
   
   var container = $('.cover');

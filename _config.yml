@@ -73,6 +73,10 @@ toc:
      - page:
        title: "Overview"
        url: "/starmap/overview"
+       children:
+        - page:
+          title: "Knowledge levels"
+          url: "/starmap/overview-knowledge"
      - page:
        title: "Engineering spec"
        url: "/starmap/specifications/"
