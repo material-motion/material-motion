@@ -6,12 +6,10 @@ status:
   is: Draft
 knowledgelevel: L2
 depends_on:
+  - /starmap/specifications/streams/interactions/Attach
   - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
-  - /starmap/specifications/streams/connections/Property
-  - /starmap/specifications/streams/Interaction
   - /starmap/specifications/streams/operators/gesture/$.translated
   - /starmap/specifications/streams/sources/GestureSource
-  - /starmap/specifications/streams/sources/SpringSource
 library: interactions
 ---
 
@@ -21,124 +19,96 @@ This is the engineering specification for the `Tossable` interaction.
 
 ## Overview
 
-The tossable interaction allows an element to be dragged and tossed to a destination. The
-destination is configurable.
+The tossable interaction allows an element to be dragged and tossed to a destination.
 
 Example use:
 
 ```swift
-let tossable = Tossable(destination: propertyOf(circle).center,
-                        viewToToss: square,
+let tossable = Tossable(position: propertyOf(view).center,
+                        to: propertyOf(targetView).center,
                         containerView: view,
                         springSource: popSpringSource)
-  .connect(with: aggregator)
 ```
 
 ## MVP
 
 ### Expose a Tossable type
 
+Subclass the Attach interaction.
+
 ```swift
-public class Tossable: Interaction
+public class Tossable: Attach
 ```
 
 ### Expose configurable values
 
-All values should be constant and initialized in the initializer.
+All property values should be readonly, all stream values should be settable.
 
 ```swift
 class Tossable {
-  let spring: Spring<Point>
-  let element: Element
-
-  let destination: ReactiveProperty<Point>
-  let positionStream: MotionObservable<Point>
-  let initialVelocityStream: MotionObservable<Point>
-}
+  /** A stream that emits the pan gesture's velocity when the gesture ends. */
+  public var initialVelocityStream: MotionObservable<CGPoint>
 ```
 
 ### Expose an initializer
 
-Must accept a destination property, the element to toss, and a container element.
-
 ```swift
 class Tossable {
-  public init(destination: ReactiveProperty<Point>,
-              toss element: Element,
-              container: Element,
-              springSource: SpringSource<CGPoint>)
+  public init(position: ReactiveProperty<CGPoint>,
+              to destination: ReactiveProperty<CGPoint>,
+              containerView: UIView,
+              springSource: SpringSource<CGPoint>,
+              panGestureRecognizer: UIPanGestureRecognizer? = nil)
 }
 ```
 
-### Store the destination and element
+### Create a pan gesture recognizer if one was not provided
 
 ```swift
 class Tossable {
-  init(destination: ReactiveProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
-    self.destination = destination
-    self.element = element
+  init(...) {
+    let panGestureRecognizer = panGestureRecognizer ?? UIPanGestureRecognizer()
+    if panGestureRecognizer.view == nil {
+      containerView.addGestureRecognizer(panGestureRecognizer)
+    }
 
     ...
-  }
-}
-```
-
-### Add a drag gesture to the container
-
-```swift
-class Tossable {
-  init(destination: ReactiveProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
-    ...
-
-    let dragGesture = DragGestureRecognizer()
-    containerView.addGestureRecognizer(dragGesture)
-
-    ...
-  }
-}
 ```
 
 ### Create a translation stream
 
 ```swift
 class Tossable {
-  init(destination: ReactiveProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
+  init(...) {
     ...
 
-    let dragStream = gestureSource(dragGesture)
-
-    let initialPosition = propertyOf(element).center
-    let translationStream = dragStream.translated(from: initialPosition, in: container)
+    let dragStream = gestureSource(panGestureRecognizer)
+    let translationStream = dragStream.translated(from: position, in: containerView)
 
     ...
-  }
-}
 ```
 
 ### Store the initial velocity stream
 
 ```swift
 class Tossable {
-  init(destination: ReactiveProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
+  init(...) {
     ...
 
     self.initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: container)
 
     ...
-  }
-}
 ```
 
-### Store the position stream
+### Call super and store the position stream
 
 ```swift
 class Tossable {
-  init(destination: ReactiveProperty<Point>, toss element: Element, container: Element, springSource: SpringSource<Point>) {
+  init(...) {
     ...
 
-    self.spring = Spring(to: destination, initialValue: initialPosition, threshold: 1)
-    let springStream = springSource(spring)
-    self.positionStream = springStream.toggled(with: translationStream)
+    super.init(position: position, to: destination, springSource: springSource)
+
+    self.positionStream = self.positionStream.toggled(with: translationStream)
   }
-}
 ```

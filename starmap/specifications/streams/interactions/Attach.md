@@ -38,7 +38,7 @@ public class Attach: Interaction
 
 ### Expose configurable values
 
-All values should be constant and initialized in the initializer.
+All property values should be readonly, all stream values should be settable.
 
 ```swift
 class Attach {
@@ -60,8 +60,6 @@ class Attach {
 ```
 
 ### Expose an initializer
-
-Must accept a destination property, the element to toss, and a container element.
 
 ```swift
 class Attach {
