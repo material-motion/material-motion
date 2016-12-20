@@ -53,7 +53,7 @@ These properties should be provided at initialization time.
 `timingFunctions` optionally defines the timing functions to be used between any two values. If `values` is of length `n`, then `interTimingFunctions` should be of length `n-1`. If not provided, each timing function is assumed to be linear. If `values.length == 1` then `interTimingFunctions[0]` value is treated as the timing function for the animation.
 
 ```swift
-class Spring {
+class Tween {
   public var duration: TimeInterval
   public var delay: TimeInterval = 0
   public var values: [T]
