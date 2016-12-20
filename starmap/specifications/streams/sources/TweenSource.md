@@ -5,7 +5,7 @@ status:
   date: December 20, 2016
   is: Draft
 knowledgelevel: L2
-library: springs
+library: tweens
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
   - /starmap/specifications/streams/plans/Tween
