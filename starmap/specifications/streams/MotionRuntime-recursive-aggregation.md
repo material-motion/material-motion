@@ -1,22 +1,22 @@
 ---
 layout: page
-title: MotionAggregator recursive aggregation
+title: MotionRuntime recursive aggregation
 status:
   date: December 4, 2016
   is: Draft
 knowledgelevel: L3
 library: streams
 depends_on:
-  - /starmap/specifications/streams/MotionAggregator
+  - /starmap/specifications/streams/MotionRuntime
 ---
 
-# MotionAggregator recursive aggregation feature specification
+# MotionRuntime recursive aggregation feature specification
 
-This is the engineering specification for creating recursive MotionAggregators.
+This is the engineering specification for creating recursive MotionRuntimes.
 
 ## Overview
 
-A `MotionAggregator` can generate child instances of `MotionAggregator`. Streams registered with
+A `MotionRuntime` can generate child instances of `MotionRuntime`. Streams registered with
 child instances will also affect the active state of their parents, enabling the expression of
 recursive aggregation and is-active monitoring.
 
@@ -27,8 +27,8 @@ recursive aggregation and is-active monitoring.
 Should accept an optional name.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
-  public func createChild(named name: String? = nil) -> MotionAggregator
+class MotionRuntime<T>: MotionObservable<T> {
+  public func createChild(named name: String? = nil) -> MotionRuntime
 }
 ```
 
@@ -38,13 +38,13 @@ The child should have a weak reference to its parent. The parent should have str
 all of its children.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
+class MotionRuntime<T>: MotionObservable<T> {
 
-  private weak var parent: MotionAggregator?
-  private var children: [MotionAggregator] = []
+  private weak var parent: MotionRuntime?
+  private var children: [MotionRuntime] = []
 
-  func createChild(named name: String? = nil) -> MotionAggregator {
-    let child = MotionAggregator(parent: self, named: name)
+  func createChild(named name: String? = nil) -> MotionRuntime {
+    let child = MotionRuntime(parent: self, named: name)
     children.append(child)
     return child
   }
@@ -55,7 +55,7 @@ class MotionAggregator<T>: MotionObservable<T> {
 When `active` is invoked on an aggregator it should invoke its parent's `active` method as well.
 
 ```swift
-class MotionAggregator<T>: MotionObservable<T> {
+class MotionRuntime<T>: MotionObservable<T> {
 
   private func active(_ token: Token) -> (Bool) -> Void {
     return { [weak self] in

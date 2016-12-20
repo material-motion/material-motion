@@ -212,12 +212,12 @@ toc:
              title: "Dynamic destination"
              url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
      - page:
-       title: "MotionAggregator"
-       url: "/starmap/specifications/streams/MotionAggregator"
+       title: "MotionRuntime"
+       url: "/starmap/specifications/streams/MotionRuntime"
        children:
         - page:
           title: "Recursive aggregation"
-          url: "/starmap/specifications/streams/MotionAggregator-recursive-aggregation"
+          url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
      - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"

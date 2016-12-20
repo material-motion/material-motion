@@ -6,7 +6,7 @@ status:
   is: Draft
 knowledgelevel: L2
 depends_on:
-  - /starmap/specifications/streams/MotionAggregator
+  - /starmap/specifications/streams/MotionRuntime
 library: streams
 ---
 
@@ -35,7 +35,7 @@ class TapToChangeDestination: Interaction {
     self.tapStream = gestureSource(tap).onRecognitionState(.recognized).centroid(in: container)
   }
 
-  func connect(with aggregator: MotionAggregator) {
+  func connect(with aggregator: MotionRuntime) {
     aggregator.write(tapStream, to: destination)
   }
 }
@@ -59,6 +59,6 @@ expect from the interaction.
 
 ```swift
 protocol Interaction {
-  func connect(with aggregator: MotionAggregator)
+  func connect(with aggregator: MotionRuntime)
 }
 ```

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: MotionAggregator
+title: MotionRuntime
 status:
   date: December 4, 2016
   is: Draft
@@ -11,27 +11,27 @@ depends_on:
 availability:
   - platform:
     name: Android 
-    url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionAggregator.java
+    url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionRuntime.java
   - platform:
     name: iOS
-    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionAggregator.swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionRuntime.swift
 ---
 
-# MotionAggregator specification
+# MotionRuntime specification
 
-This is the engineering specification for the `MotionAggregator` object.
+This is the engineering specification for the `MotionRuntime` object.
 
 ## Overview
 
-A `MotionAggregator` can subscribe to streams and write their output to properties. All stream state
+A `MotionRuntime` can subscribe to streams and write their output to properties. All stream state
 changes will be collected in aggregate and reported as a single aggregate state value.
 
 ## MVP
 
-### Expose a concrete MotionAggregator class
+### Expose a concrete MotionRuntime class
 
 ```swift
-public class MotionAggregator {
+public class MotionRuntime {
 }
 ```
 
@@ -42,7 +42,7 @@ This APIs should accept a `MotionObservable<T>`.
 The implementation should subscribe to the stream and hold on to its subscription internally.
 
 ```swift
-class MotionAggregator {
+class MotionRuntime {
   public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>)
 ```
 
@@ -51,7 +51,7 @@ class MotionAggregator {
 The stream subscription should write all `next` values to the property.
 
 ```swift
-class MotionAggregator {
+class MotionRuntime {
   public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
     subscriptions.append(stream.subscribe(next: {
       property.write($0)
@@ -68,7 +68,7 @@ a simple counter implementation in which .active is an increment and .atRest is 
 suffice without some form of deduping. A token implementation using uuids and a set is simple.
 
 ```swift
-class MotionAggregator {
+class MotionRuntime {
   public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
     subscriptions.append(stream.subscribe(next: {
       ...
@@ -94,6 +94,6 @@ If any stream is active, then the aggregate state is active. If all streams are 
 the aggregate is at rest.
 
 ```swift
-class MotionAggregator {
+class MotionRuntime {
   public var aggregateState = MotionState.atRest
 ```
