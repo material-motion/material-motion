@@ -86,14 +86,14 @@ class MotionRuntime {
   }
 ```
 
-### Expose state API
+### Expose readonly state API
 
-Expose an API that represents the aggregate state of all streams.
+Expose a readonly API that represents the aggregate state of all streams.
 
 If any stream is active, then the aggregate state is active. If all streams are at rest, then
 the aggregate is at rest.
 
 ```swift
 class MotionRuntime {
-  public var aggregateState = MotionState.atRest
+  public readonly var aggregateState = MotionState.atRest
 ```
