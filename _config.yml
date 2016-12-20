@@ -217,6 +217,9 @@ toc:
            - page:
              title: "Dynamic destination"
              url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
+        - page:
+          title: "TweenSource"
+          url: "/starmap/specifications/streams/sources/TweenSource"
      - page:
        title: "MotionRuntime"
        url: "/starmap/specifications/streams/MotionRuntime"
