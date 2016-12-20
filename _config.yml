@@ -226,6 +226,9 @@ toc:
        url: "/starmap/specifications/streams/interactions/"
        children:
         - page:
+          title: "Attach"
+          url: "/starmap/specifications/streams/interactions/Attach"
+        - page:
           title: "Tossable"
           url: "/starmap/specifications/streams/interactions/Tossable"
      - page:

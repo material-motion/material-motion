@@ -17,7 +17,7 @@ library: interactions
 
 # Tossable specification
 
-This is the engineering specification for the concreate `Tossable` interaction type.
+This is the engineering specification for the `Tossable` interaction.
 
 ## Overview
 
@@ -63,10 +63,10 @@ Must accept a destination property, the element to toss, and a container element
 
 ```swift
 class Tossable {
-  init(destination: ReactiveProperty<Point>,
-       toss element: Element,
-       container: Element,
-       springSource: SpringSource<CGPoint>)
+  public init(destination: ReactiveProperty<Point>,
+              toss element: Element,
+              container: Element,
+              springSource: SpringSource<CGPoint>)
 }
 ```
 
