@@ -226,8 +226,8 @@ toc:
        url: "/starmap/specifications/streams/interactions/"
        children:
         - page:
-          title: "Attach"
-          url: "/starmap/specifications/streams/interactions/Attach"
+          title: "AttachWithSpring"
+          url: "/starmap/specifications/streams/interactions/AttachWithSpring"
         - page:
           title: "Tap"
           url: "/starmap/specifications/streams/interactions/Tap"

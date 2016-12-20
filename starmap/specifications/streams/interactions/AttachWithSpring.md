@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Attach
+title: AttachWithSpring
 status:
   date: December 19, 2016
   is: Draft
@@ -12,28 +12,28 @@ depends_on:
 library: interactions
 ---
 
-# Attach specification
+# AttachWithSpring specification
 
-This is the engineering specification for the `Attach` interaction.
+This is the engineering specification for the `AttachWithSpring` interaction.
 
 ## Overview
 
-Attach pulls a position toward a destination using a spring.
+AttachWithSpring pulls a position toward a destination using a spring.
 
 Example use:
 
 ```swift
-let attach = Attach(position: propertyOf(view).center,
+let attach = AttachWithSpring(position: propertyOf(view).center,
                     to: propertyOf(targetView).center,
                     springSource: popSpringSource)
 ```
 
 ## MVP
 
-### Expose an Attach type
+### Expose an AttachWithSpring type
 
 ```swift
-public class Attach: Interaction
+public class AttachWithSpring: Interaction
 ```
 
 ### Expose configurable values
@@ -41,7 +41,7 @@ public class Attach: Interaction
 All property values should be readonly, all stream values should be settable.
 
 ```swift
-class Attach {
+class AttachWithSpring {
 
   /** The position to which the position stream is expected to write. */
   public let position: ReactiveProperty<CGPoint>
@@ -62,7 +62,7 @@ class Attach {
 ### Expose an initializer
 
 ```swift
-class Attach {
+class AttachWithSpring {
   public init(position: ReactiveProperty<CGPoint>,
               to destination: ReactiveProperty<CGPoint>,
               springSource: SpringSource<CGPoint>)
@@ -72,7 +72,7 @@ class Attach {
 ### Store the destination and position
 
 ```swift
-class Attach {
+class AttachWithSpring {
   init(...) {
     self.destination = destination
     self.position = position
@@ -86,7 +86,7 @@ class Attach {
 Only extract the spring configuration and initial velocity.
 
 ```swift
-class Attach {
+class AttachWithSpring {
   init(...) {
     ...
 
@@ -101,7 +101,7 @@ class Attach {
 ### Store the position stream
 
 ```swift
-class Attach {
+class AttachWithSpring {
   init(...) {
     ...
 

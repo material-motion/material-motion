@@ -6,7 +6,7 @@ status:
   is: Draft
 knowledgelevel: L2
 depends_on:
-  - /starmap/specifications/streams/interactions/Attach
+  - /starmap/specifications/streams/interactions/AttachWithSpring
   - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
   - /starmap/specifications/streams/operators/gesture/$.translated
   - /starmap/specifications/streams/sources/GestureSource
@@ -34,10 +34,10 @@ let tossable = Tossable(position: propertyOf(view).center,
 
 ### Expose a Tossable type
 
-Subclass the Attach interaction.
+Subclass the AttachWithSpring interaction.
 
 ```swift
-public class Tossable: Attach
+public class Tossable: AttachWithSpring
 ```
 
 ### Expose configurable values
