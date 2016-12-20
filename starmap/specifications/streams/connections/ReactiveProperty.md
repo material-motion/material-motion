@@ -58,17 +58,11 @@ public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
 
 ### Expose subscribe APIs
 
-Expose a MotionObserver-shaped subscribe API that accepts a next and state function. Expose a second
-subscribe method that only accepts a next function. THe second method should invoke the first with
-an empty state function.
+Expose a MotionObserver-shaped subscribe API that accepts a next function.
 
 ```swift
 class ReactiveProperty {
-  public func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription
-
-  public func subscribe(next: (T) -> Void) -> Subscription {
-    return self.subscribe(next: next, state: { _ in })
-  }
+  public func subscribe(next: (T) -> Void) -> Subscription
 ```
 
 ### Expose a read API
@@ -93,8 +87,8 @@ class ReactiveProperty {
 
 ```swift
 class ReactiveProperty {
-  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
-    let observer = MotionObserver(next: next, state: state)
+  func subscribe(next: (T) -> Void) -> Subscription {
+    let observer = MotionObserver(next: next)
     observers.append(observer)
 ```
 
@@ -102,7 +96,7 @@ class ReactiveProperty {
 
 ```swift
 class ReactiveProperty {
-  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
+  func subscribe(next: (T) -> Void) -> Subscription {
     ...
 
     observer.next(read())
@@ -114,24 +108,11 @@ The unsubscribe implementation should remove the observer from the list of obser
 
 ```swift
 class ReactiveProperty {
-  func subscribe(next: (T) -> Void, state: (MotionState) -> Void) -> Subscription {
+  func subscribe(next: (T) -> Void) -> Subscription {
     ...
 
     return Subscription {
       <remove the observer>
-    }
-  }
-```
-
-### Expose a state API
-
-Informs all subscribed observers of the provided state.
-
-```swift
-class ReactiveProperty {
-  public func state(state: MotionState) {
-    for observer in self.observers {
-      observer.state(state)
     }
   }
 ```
