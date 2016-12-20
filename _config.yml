@@ -229,6 +229,9 @@ toc:
           title: "Attach"
           url: "/starmap/specifications/streams/interactions/Attach"
         - page:
+          title: "Tap"
+          url: "/starmap/specifications/streams/interactions/Tap"
+        - page:
           title: "Tossable"
           url: "/starmap/specifications/streams/interactions/Tossable"
      - page:
