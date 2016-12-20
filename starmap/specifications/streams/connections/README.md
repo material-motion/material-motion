@@ -24,7 +24,7 @@ There are two primary flows of data we care about:
 
 ## Connection types
 
-There are three primary ways to read or write a value: **Properties** and **Inline** functions.
+There are two primary ways to read or write a value: **Scoped** and **Unscoped**.
 
 | Option Number | Name                   | Readable connections             | Writable connections                  |
 |:--------------|:-----------------------|:---------------------------------|:---------------------------------------|
