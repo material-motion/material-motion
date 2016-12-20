@@ -26,23 +26,16 @@ There are two primary flows of data we care about:
 
 There are three primary ways to read or write a value: **Properties** and **Inline** functions.
 
-| Option Number | Name              | Readable connections             | Writable connections                  |
-|:--------------|:------------------|:---------------------------------|:---------------------------------------|
-| 1.            | Scoped Property   | `propertyOf(view).positionX`     | `propertyOf(view).positionX`           |
-| 2.            | Unscoped Property | `source: view, property: View.X` | `target: view, property: View.X`       |
-| 3.            | Inline            | `{ return view.position.x }`     | `{ value in view.position.x = value }` |
+| Option Number | Name                   | Readable connections             | Writable connections                  |
+|:--------------|:-----------------------|:---------------------------------|:---------------------------------------|
+| 1.            | Scoped Property        | `propertyOf(view).positionX`     | `propertyOf(view).positionX`           |
+| 2.            | Unscoped Property      | `source: view, property: View.X` | `target: view, property: View.X`       |
+| 1. variant    | Inline scoped property | `{ return view.position.x }`     | `{ value in view.position.x = value }` |
 
 The above connection types are guidelines around the shape of connections. A given platform must
-provide at least one mechanism.
+provide at least one mechanism but likely won't need to provide both. Pick the one that makes the
+most sense for your platform and build the stack with that first.
 
 A **Scoped Property** is a property instance that writes to a *specific* target.
 
 An **Unscoped Property** is a property instance that can write to *any* target.
-
-## Example usage
-
-| Option Number | Name              | [$.write]({{ site.url }}/starmap/specifications/streams/operators/$.write) |
-|:--------------|:------------------|:------------------------------------------------|
-| 1.            | Scoped Property   | `$.write(to: propertyOf(view).positionX)`       |
-| 2.            | Unscoped Property | `$.write(to: view, property: View.X)`           |
-| 3.            | Inline            | `$.write({ value in view.position.x = value })` |
