@@ -92,9 +92,14 @@ $(document).ready(function() {
 
   filterDidChange(filter);
   
-  let relativeTime = moment($('#timestamp').text()).fromNow();
+  let timestamp = $('#timestamp').text();
+  let relativeTime = moment(timestamp).fromNow();
   $('#timestamp').text(relativeTime);
-  
+  window.setInterval(function() {
+    let relativeTime = moment(timestamp).fromNow();
+    $('#timestamp').text(relativeTime);
+  }, 30000);
+
   var container = $('.cover');
   var scrollTo = $('#tocjump');
   container.scrollTop(
