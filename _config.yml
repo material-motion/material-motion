@@ -82,6 +82,12 @@ toc:
            url: "/starmap/specifications/primitives/gesture_recognizers/"
            children:
              - page:
+               title: "Simultaneous recognition"
+               url: "/starmap/specifications/primitives/gesture_recognizers/simultaneous_recognition"
+             - page:
+               title: "Dependent gestures"
+               url: "/starmap/specifications/primitives/gesture_recognizers/dependent_gestures"
+             - page:
                title: "GestureRecognizer"
                url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
              - page:

@@ -1,45 +1,36 @@
 ---
 layout: page
-title: Gesture recognizers
+title: Gesture recognizer specification
 permalink: /starmap/specifications/primitives/gesture_recognizers/
-enables:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
+status:
+  date: December 20, 2016
+  is: Stable
 ---
 
-# Gesture recognizers
+# Gesture recognizer specification
 
 A gesture recognizer generates continuous or discrete events from a stream of device input events.
+This specification describes the MVP expectations for a gesture recognition system.
 
 ## MVP expectations
 
-### Able to generate gesture events
+### Able to be attached to an element
 
 When attached to an element, any interactions with that element will be interpreted by the gesture
-recognizer and turned into gesture events. The output is often a linear transformation of
-translation, rotation, and/or scale.
+recognizer and turned into gesture events.
 
 ### Support continuous and discrete types
 
-Gestures may be recognized continuously (many times) or discretely (once).
+Gestures may be recognized continuously (many related events over time) or discretely (once).
+
+The output might be a location, translation, rotation, or scale. It should not generate all types of
+output simultaneously.
+
+### Support active and at rest states
+
+Gestures may be active or at rest. A continuous gesture is active for a period of time until it
+comes to rest. A discrete gesture is instantaneously active and then at rest.
 
 ### Velocity
 
 Continuous gesture recognizers include a velocity with each event.
-
-## Feature: multiple simultaneous gesture recognizers
-
-Multiple gesture recognizers can be associated with a single element. All associated gesture
-recognizers should be capable of generating values simultaneously. For instance:
-
-> Two pan gestures are registered to an element:
-> 
-> - horizontal pans move between items in the element, and
-> - vertical pans collapse or expand the element.
-> 
-> Both gestures might occur simultaneously.
-
-## Feature: gesture dependencies
-
-Gesture recognizers can defer recognition until other recognizers have failed. For instance:
-
-> An element can both be tapped and double-tapped; tap is deferred until the failure of double-tap.
