@@ -39,7 +39,7 @@ let subscription = spring.destination.addObserver { destination in
 
 ## MVP
 
-### Option 1: Expose a concrete ScopedReactiveProperty API
+### Expose a concrete ReactiveProperty API
 
 ```swift
 public typealias ScopedRead<T> = () -> T
@@ -50,23 +50,6 @@ public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
   private let _write: ScopedWrite
 
   public init(read: ScopedRead, write: ScopedWrite) {
-    self._read = read
-    self._write = write
-  }
-}
-```
-
-### Option 2: Expose a concrete UnscopedReactiveProperty API
-
-```swift
-public typealias UnscopedRead = (O) -> T
-public typealias UnscopedWrite = (O, T) -> Void
-
-public class UnscopedReactiveProperty<O, T>: UnscopedReadable<O, T>, UnscopedWritable<O, T> {
-  public let _read: UnscopedRead
-  public let _write: UnscopedWrite
-
-  public init(read: UnscopedRead, write: UnscopedWrite) {
     self._read = read
     self._write = write
   }
