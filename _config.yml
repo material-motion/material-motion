@@ -85,14 +85,14 @@ toc:
                title: "GestureRecognizer"
                url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
              - page:
-               title: "DragGestureRecognizer"
-               url: "/starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer"
-             - page:
                title: "RotationGestureRecognizer"
                url: "/starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer"
              - page:
                title: "ScaleGestureRecognizer"
                url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
+             - page:
+               title: "TranslationGestureRecognizer"
+               url: "/starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer"
              - page:
                title: "Simultaneous recognition"
                url: "/starmap/specifications/primitives/gesture_recognizers/simultaneous_recognition"
