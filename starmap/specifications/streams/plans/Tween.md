@@ -8,7 +8,7 @@ knowledgelevel: L2
 library: streams
 ---
 
-# Teen specification
+# Tween specification
 
 This is the engineering specification for the concrete `Tween` API.
 
