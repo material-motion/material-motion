@@ -16,8 +16,6 @@ This is the engineering specification for the concrete `Spring` type.
 
 A Spring can pull a value from an initial position to a destination using a physical simulation.
 
-This class defines the expected shape of a Spring for use in creating a Spring source.
-
 Example usage:
 
 ```swift
