@@ -7,7 +7,7 @@ status:
 knowledgelevel: L2
 depends_on:
   - /starmap/specifications/streams/interactions/AttachWithSpring
-  - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
+  - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/streams/operators/gesture/$.translated
   - /starmap/specifications/streams/sources/GestureSource
 library: interactions

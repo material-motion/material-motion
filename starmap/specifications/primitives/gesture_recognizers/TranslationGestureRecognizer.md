@@ -1,6 +1,6 @@
 ---
 layout: page
-title: DragGestureRecognizer
+title: TranslationGestureRecognizer
 status:
   date: December 4, 2016
   is: Stable
@@ -11,17 +11,15 @@ depends_on:
 availability:
   - platform:
     name: Android
-    label: "gestures-android as of v1.0.0"
-    url: https://github.com/material-motion/gestures-android/releases/tag/1.0.0
+    url: https://github.com/material-motion/gestures-android/blob/develop/library/src/main/java/com/google/android/material/motion/gestures/TranslationGestureRecognizer.java
   - platform:
     name: iOS
-    label: "iOS SDK 3.2+ UIPanGestureRecognizer"
     url: https://developer.apple.com/reference/uikit/uipangesturerecognizer
 ---
 
-# DragGestureRecognizer specification
+# TranslationGestureRecognizer specification
 
-This is the engineering specification for the `DragGestureRecognizer` object.
+This is the engineering specification for the `TranslationGestureRecognizer` object.
 
 ## Overview
 
@@ -35,12 +33,12 @@ centroid of the events should be used in all calculations.
 
 ### Is a GestureRecognizer
 
-`DragGestureRecognizer` conforms to the `GestureRecognizer` protocol.
+`TranslationGestureRecognizer` conforms to the `GestureRecognizer` protocol.
 
 Pseudo-code example:
 
 ```swift
-class DragGestureRecognizer: GestureRecognizer {
+class TranslationGestureRecognizer: GestureRecognizer {
 }
 ```
 
@@ -54,7 +52,7 @@ movement. For example, on a touch screen this might be a two-dimensional vector 
 x and a y translation.
 
 ```swift
-class DragGestureRecognizer {
+class TranslationGestureRecognizer {
   func translation() -> Vector
 ```
 
@@ -70,7 +68,7 @@ velocity.
 TODO: Spec out an implementation for calculating velocity.
 
 ```swift
-class DragGestureRecognizer {
+class TranslationGestureRecognizer {
   func velocity() -> Vector
 ```
 
@@ -82,6 +80,6 @@ recognizer begins emitting `Changed` gesture events.
 The default value is platform-dependent.
 
 ```swift
-class DragGestureRecognizer {
+class TranslationGestureRecognizer {
   var recognitionThreshold: Vector
 ```

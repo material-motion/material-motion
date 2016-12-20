@@ -8,7 +8,7 @@ knowledgelevel: L2
 library: direct-manipulation
 depends_on:
   - /starmap/specifications/runtime/Plan
-  - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
+  - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
 availability:
   - platform:
     name: Android
@@ -32,7 +32,7 @@ Delta x and y from the given gesture recognizer are added to the target's `posit
 
 ```swift
 Plan Draggable {
-  var dragGestureRecognizer = DragGestureRecognizer()
+  var dragGestureRecognizer = TranslationGestureRecognizer()
 }
 ```
 
@@ -40,7 +40,7 @@ Plan Draggable {
 
 Provide a settable `dragGestureRecognizer` API.
 
-This value should be initialized with a default `DragGestureRecognizer` instance.
+This value should be initialized with a default `TranslationGestureRecognizer` instance.
 
 ## Performer considerations
 

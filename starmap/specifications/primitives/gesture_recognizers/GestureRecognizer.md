@@ -9,11 +9,9 @@ library: gestures
 availability:
   - platform:
     name: Android
-    label: "gestures-android as of v1.0.0"
-    url: https://github.com/material-motion/gestures-android/releases/tag/1.0.0
+    url: https://github.com/material-motion/gestures-android/blob/develop/library/src/main/java/com/google/android/material/motion/gestures/GestureRecognizer.java
   - platform:
     name: iOS
-    label: "iOS SDK 3.2+"
     url: https://developer.apple.com/reference/uikit/uigesturerecognizer
 ---
 

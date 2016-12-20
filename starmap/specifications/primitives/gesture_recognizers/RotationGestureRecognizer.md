@@ -11,11 +11,9 @@ depends_on:
 availability:
   - platform:
     name: Android
-    label: "gestures-android as of v1.0.0"
-    url: https://github.com/material-motion/gestures-android/releases/tag/1.0.0
+    url: https://github.com/material-motion/gestures-android/blob/1.0.0/library/src/main/java/com/google/android/material/motion/gestures/RotateGestureRecognizer.java
   - platform:
     name: iOS
-    label: "iOS SDK 3.2+ UIRotationGestureRecognizer"
     url: https://developer.apple.com/reference/uikit/uirotationgesturerecognizer
 ---
 

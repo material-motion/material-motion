@@ -22,7 +22,7 @@ class TossableInteraction {
   let initialVelocityStream: MotionObservable<CGPoint>
 
   init(destination: ReactiveProperty<CGPoint>, view: UIView) {
-    let dragGesture = DragGestureRecognizer()
+    let dragGesture = TranslationGestureRecognizer()
     let dragStream = gestureSource(dragGesture)
     self.initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: view)
 

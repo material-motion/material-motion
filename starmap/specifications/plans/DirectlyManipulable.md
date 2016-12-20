@@ -7,7 +7,7 @@ status:
 knowledgelevel: L2
 library: direct-manipulation
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/DragGestureRecognizer
+  - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer
 availability:
@@ -47,7 +47,7 @@ Registers [`Draggable`](Draggable), [`Pinchable`](Pinchable), and [`Rotatable`](
 
 ```swift
 Plan DirectlyManipulable {
-  var dragGestureRecognizer = DragGestureRecognizer()
+  var dragGestureRecognizer = TranslationGestureRecognizer()
   var scaleGestureRecognizer = ScaleGestureRecognizer()
   var rotationGestureRecognizer = RotationGestureRecognizer()
 }
