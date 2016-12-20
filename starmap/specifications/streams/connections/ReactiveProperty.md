@@ -31,7 +31,7 @@ This is the engineering specification for the `ReactiveProperty` concrete type.
 *Observing changes to a spring's destination reactive property*
 
 ```swift
-let subscription = spring.destination.addObserver { destination in
+let subscription = spring.destination.subscribe { destination in
   animation.toValue = destination
   animation.isPaused = false
 }
