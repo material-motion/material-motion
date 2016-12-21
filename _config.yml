@@ -232,6 +232,9 @@ toc:
        url: "/starmap/specifications/streams/elements/"
        children:
         - page:
+          title: "PositionableElement"
+          url: "/starmap/specifications/streams/elements/PositionableElement"
+        - page:
           title: "TransformableElement"
           url: "/starmap/specifications/streams/elements/TransformableElement"
      - page:
