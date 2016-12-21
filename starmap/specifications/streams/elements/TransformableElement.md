@@ -31,7 +31,7 @@ All properties should be constant.
 
 ```swift
 protocol TransformableElement {
-  const var translation: ReactiveProperty<Point>
+  const var position: ReactiveProperty<Point>
   const var rotation: ReactiveProperty<Number>
   const var scale: ReactiveProperty<Number>
   const var transform: ReactiveProperty<Transform>
