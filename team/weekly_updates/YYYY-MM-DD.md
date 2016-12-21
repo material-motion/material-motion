@@ -27,17 +27,16 @@ Check out [stability](stability) to learn about the current state of each featur
 
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
-| [catalog-android](https://github.com/material-motion/catalog-android/) |  |  |  | 0 open |
+| [catalog-android](https://github.com/material-motion/catalog-android/) | passing | 0% |  | 0 open |
 | [conventions-android](https://github.com/material-motion/conventions-android/) |  |  |  | 0 open |
-| [experiments-android](https://github.com/material-motion/experiments-android/) |  |  |  | 0 open |
 | [expression-android](https://github.com/material-motion/expression-android/) |  |  |  | 2 open |
 | [family-direct-manipulation-android](https://github.com/material-motion/family-direct-manipulation-android/) | passing | 100% | v1.2.0 | 2 open |
 | [family-rebound-android](https://github.com/material-motion/family-rebound-android/) | passing | 100% | v1.1.0 | 3 open |
 | [family-tween-android](https://github.com/material-motion/family-tween-android/) | passing | 100% | v2.1.0 | 2 open |
-| [gestures-android](https://github.com/material-motion/gestures-android/) | passing | 95% | v1.0.0 | 3 open |
-| [indefinite-observable-android](https://github.com/material-motion/indefinite-observable-android/) | failing | 95% | v2.0.0 | 1 open |
+| [gestures-android](https://github.com/material-motion/gestures-android/) | passing | 91% | v1.0.0 | 4 open |
+| [indefinite-observable-android](https://github.com/material-motion/indefinite-observable-android/) | passing | 100% | v2.0.0 | 0 open |
 | [runtime-android](https://github.com/material-motion/runtime-android/) | passing | 95% | v6.0.1 | 12 open |
-| [streams-android](https://github.com/material-motion/streams-android/) | passing | 100% | v1.0.0 | 3 open |
+| [streams-android](https://github.com/material-motion/streams-android/) | passing | 81% | v1.0.0 | 6 open |
 | [transitions-android](https://github.com/material-motion/transitions-android/) |  |  |  | 9 open |
 
 ### Apple platform support
@@ -50,10 +49,10 @@ Check out [stability](stability) to learn about the current state of each featur
 | [coreanimation-transitions-swift](https://github.com/material-motion/coreanimation-transitions-swift) | passing | 84% | v1.0.0 | ios | -1% | 0 open |
 | [direct-manipulation-swift](https://github.com/material-motion/direct-manipulation-swift) | passing | 84% | v1.1.0 | ios |  | 5 open |
 | [indefinite-observable-swift](https://github.com/material-motion/indefinite-observable-swift) | passing | 100% | v3.1.0 | ios / osx | 54% | 0 open |
-| [pop-swift](https://github.com/material-motion/pop-swift) | passing | 42% | v1.1.0 | ios | 21% | 6 open |
+| [pop-swift](https://github.com/material-motion/pop-swift) | passing | 42% |  |  | 21% | 6 open |
 | [pop-transitions-swift](https://github.com/material-motion/pop-transitions-swift) | passing | 71% | v1.0.0 | ios |  | 0 open |
 | [runtime-objc](https://github.com/material-motion/runtime-objc) | passing | 91% | v6.0.1 | ios | 100% | 16 open |
-| [streams-swift](https://github.com/material-motion/streams-swift) | passing | 51% |  |  |  | 5 open |
+| [streams-swift](https://github.com/material-motion/streams-swift) | passing | 20% |  |  |  | 0 open |
 | [transitions-objc](https://github.com/material-motion/transitions-objc) | passing | 48% | v1.1.0 | ios | 90% | 5 open |
 
 ### Web platform support
@@ -61,7 +60,7 @@ Check out [stability](stability) to learn about the current state of each featur
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
 | [indefinite-observable-js](https://github.com/material-motion/indefinite-observable-js) | passing | 100% | v0.3.0 | 4 open |
-| [material-motion-js](https://github.com/material-motion/material-motion-js) |  |  |  | 54 open |
+| [material-motion-js](https://github.com/material-motion/material-motion-js) | passing |  |  | 57 open |
 | [streams-experiment-js](https://github.com/material-motion/streams-experiment-js) |  |  |  | 1 open |
 
 ### Misc libraries
@@ -75,9 +74,9 @@ Check out [stability](stability) to learn about the current state of each featur
 | [material-motion](https://github.com/material-motion/material-motion/) |  |  |  | 16 open |
 | [milemarker](https://github.com/material-motion/milemarker/) |  |  |  | 18 open |
 | [sprints](https://github.com/material-motion/sprints/) |  |  |  | 32 open |
-| [starmap](https://github.com/material-motion/starmap/) |  |  |  | 43 open |
-| [sublime](https://github.com/material-motion/sublime/) |  |  |  | 1 open |
-| [tools](https://github.com/material-motion/tools/) |  |  |  | 96 open |
+| [starmap](https://github.com/material-motion/starmap/) |  |  |  | 45 open |
+| [sublime](https://github.com/material-motion/sublime/) |  |  |  | 4 open |
+| [tools](https://github.com/material-motion/tools/) |  |  |  | 97 open |
 
 ## Starmap
 
