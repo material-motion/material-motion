@@ -5,7 +5,7 @@ status:
   date: December 13, 2016
   is: Draft
 knowledgelevel: L2
-library: springs
+library: streams
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
 availability:
