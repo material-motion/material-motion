@@ -8,6 +8,10 @@ knowledgelevel: L2
 library: springs
 depends_on:
   - /starmap/specifications/streams/MotionObservable/
+availability:
+  - platform:
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/sources/scrollSource.ts
 ---
 
 # ScrollSource specification
