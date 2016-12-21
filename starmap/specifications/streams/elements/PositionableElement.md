@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/elements/
 status:
   date: December 20, 2016
   is: Draft
