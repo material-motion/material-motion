@@ -228,6 +228,13 @@ toc:
           title: "Recursive aggregation"
           url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
      - page:
+       title: "Elements"
+       url: "/starmap/specifications/streams/elements/"
+       children:
+        - page:
+          title: "TransformableElement"
+          url: "/starmap/specifications/streams/elements/TransformableElement"
+     - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"
      - page:
