@@ -2,8 +2,8 @@
 layout: page
 title: Readable
 status:
-  date: December 6, 2016
-  is: Draft
+  date: December 20, 2016
+  is: Stable
 knowledgelevel: L2
 library: streams
 depends_on:
