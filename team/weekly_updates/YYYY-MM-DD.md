@@ -49,7 +49,7 @@ Check out [stability](stability) to learn about the current state of each featur
 | [coreanimation-transitions-swift](https://github.com/material-motion/coreanimation-transitions-swift) | passing | 84% | v1.0.0 | ios | -1% | 0 open |
 | [direct-manipulation-swift](https://github.com/material-motion/direct-manipulation-swift) | passing | 84% | v1.1.0 | ios |  | 5 open |
 | [indefinite-observable-swift](https://github.com/material-motion/indefinite-observable-swift) | passing | 100% | v3.1.0 | ios / osx | 54% | 0 open |
-| [pop-swift](https://github.com/material-motion/pop-swift) | passing | 42% |  |  | 21% | 6 open |
+| [pop-swift](https://github.com/material-motion/pop-swift) | passing | 42% | v2.1.0 | ios | 21% | 6 open |
 | [pop-transitions-swift](https://github.com/material-motion/pop-transitions-swift) | passing | 71% | v1.0.0 | ios |  | 0 open |
 | [runtime-objc](https://github.com/material-motion/runtime-objc) | passing | 91% | v6.0.1 | ios | 100% | 16 open |
 | [streams-swift](https://github.com/material-motion/streams-swift) | passing | 20% |  |  |  | 0 open |
