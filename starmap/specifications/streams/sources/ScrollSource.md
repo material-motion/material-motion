@@ -12,6 +12,7 @@ availability:
   - platform:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/sources/scrollSource.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/sources/__tests__/scrollSource.test.ts
 ---
 
 # ScrollSource specification
