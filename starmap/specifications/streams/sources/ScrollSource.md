@@ -13,6 +13,10 @@ availability:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/sources/scrollSource.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/sources/__tests__/scrollSource.test.ts
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/sources/ScrollSource.swift
+
 ---
 
 # ScrollSource specification
