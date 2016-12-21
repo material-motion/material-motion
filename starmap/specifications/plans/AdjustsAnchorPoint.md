@@ -46,11 +46,11 @@ In pseudo-code:
 
 ```swift
 func onGestureInitiated() {
-  let initialPositionInElement = Point(element.anchorPoint.x * element.width,
+  const var initialPositionInElement = Point(element.anchorPoint.x * element.width,
                                        element.anchorPoint.x * element.height)
 
-  let gesturePositionInElement = gesture.positionInElement(element)
-  let desiredAnchorPoint = Point(gesturePositionInElement.x / element.width,
+  const var gesturePositionInElement = gesture.positionInElement(element)
+  const var desiredAnchorPoint = Point(gesturePositionInElement.x / element.width,
                                  gesturePositionInElement.y / height)
 
   element.anchorPoint = desiredAnchorPoint

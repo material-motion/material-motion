@@ -44,7 +44,7 @@ class MotionRuntime<T>: MotionObservable<T> {
   private var children: [MotionRuntime] = []
 
   func createChild(named name: String? = nil) -> MotionRuntime {
-    let child = MotionRuntime(parent: self, named: name)
+    const var child = MotionRuntime(parent: self, named: name)
     children.append(child)
     return child
   }
@@ -59,7 +59,7 @@ class MotionRuntime<T>: MotionObservable<T> {
 
   private func active(_ token: Token) -> (Bool) -> Void {
     return { [weak self] in
-      guard let strongSelf = self else { return }
+      guard const var strongSelf = self else { return }
       if $0 {
         strongSelf.activeTokens.insert(token)
       } else {

@@ -25,7 +25,7 @@ Consider the exploration of building an axis-locked Draggable interaction. We mi
 prototype the desired behavior:
 
 ```swift
-let stream = TranslationObservable(withPanRecognizer: pan)
+const var stream = TranslationObservable(withPanRecognizer: pan)
   .map { CGPoint(x: 0, y: $0.y) }
   .subscribe { view.layer.position = $0 }
 ```
@@ -33,7 +33,7 @@ let stream = TranslationObservable(withPanRecognizer: pan)
 And eventually propose an update to the Draggable spec:
 
 ```
-let draggable = Draggable(withGestureRecognizer: pan)
+const var draggable = Draggable(withGestureRecognizer: pan)
 draggable.axis = .vertical
 ```
 

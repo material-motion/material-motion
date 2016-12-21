@@ -33,7 +33,7 @@ availability:
 To animate a rounded-corners square to a new dimension:
 
     Interaction Morphing {
-      let roundedCornerShape
+      const var roundedCornerShape
       
       func setUp() {
         runtime.addPlan(SpringTo(.layerBounds, destination: bounds),
@@ -80,7 +80,7 @@ The default friction is 30. The default tension is 342.
 
 ```swift
 SpringTo {
-  static let defaultConfiguration = SpringConfiguration(friction: 30, tension: 342)
+  static const var defaultConfiguration = SpringConfiguration(friction: 30, tension: 342)
 }
 ```
 

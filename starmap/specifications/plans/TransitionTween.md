@@ -60,7 +60,7 @@ Plan TransitionTween {
 
     TransitionDirector Fade {
       func setUp() {
-        let fade = TransitionTween("opacity",
+        const var fade = TransitionTween("opacity",
                                    transition: transition,
                                    segment: .init(position: 0, length: 1),
                                    back: 0,
@@ -73,7 +73,7 @@ Plan TransitionTween {
 
     TransitionDirector Slide {
       func setUp() {
-        let shiftUp = TransitionTween("position",
+        const var shiftUp = TransitionTween("position",
                                       transition: transition,
                                       segment: .init(position: 0, length: 1),
                                       back: bottomEdge,
@@ -108,7 +108,7 @@ TransitionTween("opacity",
 When initial direction == forward:
 
 ```swift
-let forwardTween = Tween("opacity", duration: 0.1s)
+const var forwardTween = Tween("opacity", duration: 0.1s)
 forwardTween.from = 0
 forwardTween.to = 1
 ```
@@ -116,7 +116,7 @@ forwardTween.to = 1
 When initial direction == backward:
 
 ```swift
-let backwardTween = Tween("opacity", duration: 0.1s)
+const var backwardTween = Tween("opacity", duration: 0.1s)
 backwardTween.delay = 0.3s
 backwardTween.from = 1
 backwardTween.to = 0

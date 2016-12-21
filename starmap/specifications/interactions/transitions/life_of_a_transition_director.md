@@ -15,7 +15,7 @@ This object conforms to the `TransitionDirector` type.
 
 ```swift
 class FadeTransitionDirector: TransitionDirector {
-  let transition: Transition
+  const var transition: Transition
   init(transition: Transition) {
     self.transition = transition
   }

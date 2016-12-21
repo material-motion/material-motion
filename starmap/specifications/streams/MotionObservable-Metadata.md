@@ -36,7 +36,7 @@ public class Metadata {
 
 ```swift
 class MotionObservable {
-  public let metadata: Metadata
+  public const var metadata: Metadata
 }
 ```
 
@@ -44,8 +44,8 @@ class MotionObservable {
 
 ```swift
 class Metadata {
-  public let name: String
-  public let args: [Any]?
+  public const var name: String
+  public const var args: [Any]?
   private var parent: OperatorMetadata?
 
   private init(_ name: String, args: [Any]?, parent: OperatorMetadata?) {
@@ -80,7 +80,7 @@ class Metadata {
 Example stream:
 
 ```swift
-let stream = gestureSource(pan)
+const var stream = gestureSource(pan)
   .state(is: .ended)
   .velocity(in: view)
   .y()

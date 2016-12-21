@@ -42,7 +42,7 @@ Pseudo-code example implementation of a fade in term function:
 
     fn Tween.fadeIn() -> TweenTerm {
       return TweenTerm(previousTerm: self.previousTerm, work: function() {
-        let animation = TweenAnimation("opacity")
+        const var animation = TweenAnimation("opacity")
         animation.from = 0
         animation.to = 1
         return [animation]
@@ -79,7 +79,7 @@ Pseudo-code example implementation of an easing curve modifier function:
 
     fn TweenTerm.withEasingCurve(curve) -> TweenTerm { {
       return TweenTerm(previousTerm: self.previousTerm, work: function() {
-        let plans = self.work()
+        const var plans = self.work()
         for plan in plans {
           plan.easingCurve = curve
         }

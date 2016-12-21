@@ -44,7 +44,7 @@ Consider the following example of a tapSource that we might make on iOS:
 ```swift
 func tapSource(_ gesture: UITapGestureRecognizer) -> MotionObservable<TapSubscription.Value> {
   return MotionObservable { observer in
-    let connection = TapConnection(subscribedTo: gesture, observer: observer)
+    const var connection = TapConnection(subscribedTo: gesture, observer: observer)
     return {
       connection.disconnect()
     }

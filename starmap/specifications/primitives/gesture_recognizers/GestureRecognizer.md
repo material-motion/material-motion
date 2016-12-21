@@ -43,7 +43,7 @@ associated.
 
 ```swift
 protocol GestureRecognizer {
-  let element
+  const var element
 ```
 
 ### Element association
@@ -95,7 +95,7 @@ A gesture recognizer has a read-only `state` API.
 
 ```swift
 protocol GestureRecognizer {
-  let state: GestureRecognizerState
+  const var state: GestureRecognizerState
 ```
 
 ### Location API

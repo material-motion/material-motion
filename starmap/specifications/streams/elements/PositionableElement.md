@@ -31,6 +31,6 @@ All properties should be constant.
 
 ```swift
 protocol PositionableElement {
-  let position: ReactiveProperty<Point>
+  const var position: ReactiveProperty<Point>
 }
 ```

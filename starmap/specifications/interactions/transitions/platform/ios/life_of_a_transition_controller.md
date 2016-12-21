@@ -46,9 +46,9 @@ The transition controller creates an instance of the Director when a transition 
 
 ```swift
 transitionWillStart(initialDirection) {
-  let runtime = MotionRuntime()
+  const var runtime = MotionRuntime()
   runtime.delegate = self
-  let transition = Transition(initialDirection,
+  const var transition = Transition(initialDirection,
                               runtime: runtime,
                               back: back,
                               fore: fore)

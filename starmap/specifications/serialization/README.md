@@ -34,8 +34,8 @@ Serialization enables a wide variety of use cases:
 Example pseudo-code reading a transaction from a stream and committing it to a runtime:
 
 ```
-let serializer = MotionSerializer
-let transaction = serializer.transactionFromStream(stream)
+const var serializer = MotionSerializer
+const var transaction = serializer.transactionFromStream(stream)
 transaction.commitToRuntime(runtime)
 ```
 

@@ -138,7 +138,7 @@ Here are the Performer's expectations for this API.
 *Removing a name which was never added before:*
 
 ```swift
-let runtime = MotionRuntime()
+const var runtime = MotionRuntime()
 runtime.removeNamedPlan("foo")
 ```
  
@@ -147,7 +147,7 @@ runtime.removeNamedPlan("foo")
 *Adding a name which was never added before:*
 
 ```swift
-let runtime = MotionRuntime()
+const var runtime = MotionRuntime()
 runtime.addNamedPlan(plan, "foo")
 ```
 
@@ -157,7 +157,7 @@ runtime.addNamedPlan(plan, "foo")
 *Adding a name which was added before:*
 
 ```swift
-let runtime = MotionRuntime()
+const var runtime = MotionRuntime()
 runtime.addNamedPlan(plan, "foo")
 runtime.addNamedPlan(plan2, "foo")
 ```

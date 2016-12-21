@@ -62,5 +62,5 @@ Include an epsilon constant.
 
 ```swift
 /** Epsilon for use when comparing TransitionWindowSegment values. */
-let TransitionWindowSegmentEpsilon = 0.00001
+const var TransitionWindowSegmentEpsilon = 0.00001
 ```

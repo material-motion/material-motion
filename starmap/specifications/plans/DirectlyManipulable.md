@@ -33,7 +33,7 @@ Scenario: Placing stickers on a photo/video. Each sticker can be dragged, pinche
 
 ```swift
 Interaction Sticker {
-  let sticker
+  const var sticker
 
   func setUp(planEmitter) {
     planEmitter.addPlan(DirectlyManipulable(), to: sticker)

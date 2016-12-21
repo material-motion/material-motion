@@ -22,7 +22,7 @@ The tap interaction writes to a position property when a tap gesture is recogniz
 Example use:
 
 ```swift
-let tap = Tap(sets: tossable.destination, containerView: view)
+const var tap = Tap(sets: tossable.destination, containerView: view)
 ```
 
 ## MVP
@@ -41,7 +41,7 @@ All property values should be readonly, all stream values should be settable.
 class Tap {
 
   /** The position to which the position stream is expected to write. */
-  public let position: ReactiveProperty<CGPoint>
+  public const var position: ReactiveProperty<CGPoint>
 
   /** A stream that emits positional values to be written to the view. */
   public var positionStream: MotionObservable<CGPoint>
@@ -73,7 +73,7 @@ class Tap {
   init(...) {
     ...
 
-    let tapGestureRecognizer = tapGestureRecognizer ?? UITapGestureRecognizer()
+    const var tapGestureRecognizer = tapGestureRecognizer ?? UITapGestureRecognizer()
     if tapGestureRecognizer.view == nil {
       containerView.addGestureRecognizer(tapGestureRecognizer)
     }

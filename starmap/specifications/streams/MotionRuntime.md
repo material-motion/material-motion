@@ -74,7 +74,7 @@ class MotionRuntime {
       ...
 
     }, state: { [weak self] state in
-      guard let strongSelf = self else { return }
+      guard const var strongSelf = self else { return }
       if state == .active {
         strongSelf.activeSubscriptions.insert(token)
       } else {

@@ -23,13 +23,13 @@ Example interaction:
 
 ```swift
 class TapToChangeDestination: Interaction {
-  let destination: ReactiveProperty<CGPoint>
+  const var destination: ReactiveProperty<CGPoint>
 
   var tapStream: MotionObservable<CGPoint>
   init(destination: ReactiveProperty<CGPoint>, container: Element) {
     self.destination = destination
 
-    let tap = UITapGestureRecognizer()
+    const var tap = UITapGestureRecognizer()
     container.addGestureRecognizer(tap)
 
     self.tapStream = gestureSource(tap).onRecognitionState(.recognized).centroid(in: container)

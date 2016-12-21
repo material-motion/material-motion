@@ -31,7 +31,7 @@ This is the engineering specification for the `ReactiveProperty` concrete type.
 *Observing changes to a spring's destination reactive property*
 
 ```swift
-let subscription = spring.destination.subscribe { destination in
+const var subscription = spring.destination.subscribe { destination in
   animation.toValue = destination
   animation.isPaused = false
 }
@@ -46,8 +46,8 @@ public typealias ScopedRead<T> = () -> T
 public typealias ScopedWrite<T> = (T) -> Void
 
 public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
-  private let _read: ScopedRead
-  private let _write: ScopedWrite
+  private const var _read: ScopedRead
+  private const var _write: ScopedWrite
 
   public init(read: ScopedRead, write: ScopedWrite) {
     self._read = read
@@ -88,7 +88,7 @@ class ReactiveProperty {
 ```swift
 class ReactiveProperty {
   func subscribe(next: (T) -> Void) -> Subscription {
-    let observer = MotionObserver(next: next)
+    const var observer = MotionObserver(next: next)
     observers.append(observer)
 ```
 

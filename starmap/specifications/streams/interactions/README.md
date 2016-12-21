@@ -17,24 +17,24 @@ For example:
 
 ```swift
 class TossableInteraction {
-  let spring: Spring<CGPoint>
-  let positionStream: MotionObservable<CGPoint>
-  let initialVelocityStream: MotionObservable<CGPoint>
+  const var spring: Spring<CGPoint>
+  const var positionStream: MotionObservable<CGPoint>
+  const var initialVelocityStream: MotionObservable<CGPoint>
 
   init(destination: ReactiveProperty<CGPoint>, view: UIView) {
-    let dragGesture = TranslationGestureRecognizer()
-    let dragStream = gestureSource(dragGesture)
+    const var dragGesture = TranslationGestureRecognizer()
+    const var dragStream = gestureSource(dragGesture)
     self.initialVelocityStream = dragStream.onRecognitionState(.ended).velocity(in: view)
 
     self.spring = Spring(to: destination,
                          initialValue: propertyOf(view).center,
                          initialVelocity: property(withInitialValue: CGPoint(x: 0, y: 0)))
-    let springStream = springSource(spring)
+    const var springStream = springSource(spring)
     self.positionStream = springStream.toggled(with: dragStream.centroid(in: view))
   }
 }
 
-let tossable = TossableInteraction(destination: someDestination, view: view)
+const var tossable = TossableInteraction(destination: someDestination, view: view)
 
 aggregator.write(tossable.initialVelocityStream,
                  to: tossable.spring.initialVelocity)

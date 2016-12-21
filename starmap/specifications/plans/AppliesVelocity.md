@@ -18,7 +18,7 @@ depends_on:
 ```swift
 Transition TossableElements {
   func setUp() {
-    let gestureRecognizer = PanGestureRecognizer()
+    const var gestureRecognizer = PanGestureRecognizer()
     addPlan(Draggable(withGestureRecognizer: gestureRecognizer), 
             to: target)
     addPlan(AppliesVelocity(gestureRecognizer, appliedTo: .layerPosition), 

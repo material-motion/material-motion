@@ -60,8 +60,8 @@ public final class MotionObserver<T> {
     self.state = state
   }
 
-  public let next: (T) -> Void
-  public let state: (MotionState) -> Void
+  public const var next: (T) -> Void
+  public const var state: (MotionState) -> Void
 }
 ```
 

@@ -21,7 +21,7 @@ title: Sparkle dialog
 ## Director
 
     func setUp(withDialogView dialogView: SparkleDialogView) {
-      let size = scrimView.bounds.size
+      const var size = scrimView.bounds.size
 
       when(.collapsed) { make in
         make[contentView].spring(.layerOpacity, to: contentView.layer.opacity)
@@ -53,8 +53,8 @@ title: Sparkle dialog
                                  to: detaillabel.layer.position.y + 5)
         make[detaillabel].spring(.layerOpacity, to: 1)
 
-        let xOffset: [CGFloat] = [-20, 0, 20]
-        let rotations: [Double] = [-45, 0, 45]
+        const var xOffset: [CGFloat] = [-20, 0, 20]
+        const var rotations: [Double] = [-45, 0, 45]
         for (i, card) in dialogView.cards.enumerated() {
           make[card].spring(.layerRotation, to: rotations[i] * M_PI / 180)
           make[card].spring(.layerPositionX, to: card.layer.position.x + xOffset[i])

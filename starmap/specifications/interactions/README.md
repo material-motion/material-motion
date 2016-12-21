@@ -22,7 +22,7 @@ Consider the following interaction:
 ```swift
 Interaction FadeIn {
   func applyTo(target) {
-    let plan = Tween("opacity", duration: 0.3)
+    const var plan = Tween("opacity", duration: 0.3)
     plan.from = 0
     plan.to = 1
     addPlan(plan, to: target)
@@ -36,7 +36,7 @@ There is only one target involved here, so we might be better off creating a Pla
 Plan FadeIn {
   Performer {
     func addPlan(fadeIn) {
-      let plan = Tween("opacity", duration: 0.3)
+      const var plan = Tween("opacity", duration: 0.3)
       plan.from = 0
       plan.to = 1
       emitPlan(plan)

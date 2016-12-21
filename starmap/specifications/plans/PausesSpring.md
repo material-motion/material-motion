@@ -31,13 +31,13 @@ Pauses a spring simulation while a gesture recognizer is active.
 
 ```swift
 Interaction DragToOpen {
-  let closedPosition = {x: 0, y: 0}
-  let openPosition = {x: 0, y: 200}
-  let boundary = 100
-  let willOpen = false
+  const var closedPosition = {x: 0, y: 0}
+  const var openPosition = {x: 0, y: 200}
+  const var boundary = 100
+  const var willOpen = false
   
   func setUp() {
-    let plans = [
+    const var plans = [
       Draggable(withGestureRecognizer: dragGestureRecognizer),
       SpringTo(.position, destination: closedPosition),
       PausesSpring(.position, whileActive: dragGestureRecognizer)
@@ -54,7 +54,7 @@ Interaction DragToOpen {
     # PausesSpring will release the spring to continue to the most recently set 
     # destination.
 
-    let crossed = newLocation.y > boundary
+    const var crossed = newLocation.y > boundary
 
     if (crossed && !willOpen) {
       runtime.addPlan(
@@ -89,7 +89,7 @@ Plan PausesSpring {
 Multiple gesture recognizers can cause a single property to be paused. Consider the following scenario in which a directly-interactive element should stop moving while being dragged, rotated, or scaled:
 
 ```swift
-let plans = [
+const var plans = [
   PausesSpring("position", whileActive: dragGestureRecognizer),
   PausesSpring("position", whileActive: rotationGestureRecognizer),
   PausesSpring("position", whileActive: scaleGestureRecognizer)

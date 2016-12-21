@@ -23,7 +23,7 @@ AttachWithSpring pulls a position toward a destination using a spring.
 Example use:
 
 ```swift
-let attach = AttachWithSpring(position: propertyOf(view).center,
+const var attach = AttachWithSpring(position: propertyOf(view).center,
                     to: propertyOf(targetView).center,
                     springSource: popSpringSource)
 ```
@@ -44,19 +44,19 @@ All property values should be readonly, all stream values should be settable.
 class AttachWithSpring {
 
   /** The position to which the position stream is expected to write. */
-  public let position: ReactiveProperty<CGPoint>
+  public const var position: ReactiveProperty<CGPoint>
 
   /** A stream that emits positional values to be written to the view. */
   public var positionStream: MotionObservable<CGPoint>
 
   /** The destination to which the spring will pull the view. */
-  public let destination: ReactiveProperty<CGPoint>
+  public const var destination: ReactiveProperty<CGPoint>
 
   /** The initial velocity of the spring. */
-  public let initialVelocity: ReactiveProperty<CGPoint>
+  public const var initialVelocity: ReactiveProperty<CGPoint>
 
   /** The spring configuration governing this interaction. */
-  public let springConfiguration: ReactiveProperty<SpringConfiguration>
+  public const var springConfiguration: ReactiveProperty<SpringConfiguration>
 ```
 
 ### Expose an initializer
@@ -90,7 +90,7 @@ class AttachWithSpring {
   init(...) {
     ...
 
-    let spring = Spring(to: destination, initialValue: position, threshold: 1)
+    const var spring = Spring(to: destination, initialValue: position, threshold: 1)
     self.springConfiguration = spring.configuration
     self.initialVelocity = spring.initialVelocity
 
@@ -105,7 +105,7 @@ class AttachWithSpring {
   init(...) {
     ...
 
-    let springStream = springSource(spring)
+    const var springStream = springSource(spring)
     self.positionStream = springStream
   }
 ```

@@ -23,12 +23,12 @@ spring simulations to the new destination. This is implemented using property ob
 Example:
 
 ```swift
-let destination = propertyOf(view).center
+const var destination = propertyOf(view).center
 
-let spring = Spring(to: destination, ...)
+const var spring = Spring(to: destination, ...)
 aggregator.write(springSource(spring), to: propertyOf(view).position)
 
-let didTapStream = gestureSource(tap).onRecognitionState(.recognized)
+const var didTapStream = gestureSource(tap).onRecognitionState(.recognized)
 aggregator.write(didTapStream.location(in: view), to: destination)
 ```
 
@@ -45,7 +45,7 @@ func springSource(spring: Spring) -> MotionObservable<Float> {
   return MotionObservable { observer in
     ...
 
-    let destinationSubscription = spring.destination.addObserver { destination in
+    const var destinationSubscription = spring.destination.addObserver { destination in
       springSystem.toValue = destination
       springSystem.isPaused = false
     }
