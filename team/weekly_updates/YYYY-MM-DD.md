@@ -15,7 +15,7 @@ This weekly update captures what changed in a given week across the Material Mot
 
 Check out [current focus](current_focus) to see what we're working on next.
 
-Check out [stability](stability) to learn about the current state of each feature.
+Check out [stability](https://material-motion.github.io/material-motion/) to learn about the current state of each feature.
 
 ## Meta
 
