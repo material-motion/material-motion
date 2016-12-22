@@ -21,6 +21,16 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 
 [View all of our contributors](https://github.com/material-motion/material-motion/blob/gh-pages/CONTRIBUTORS.md)
 
+## Starmap
+
+## Android platform
+
+## Apple platforms
+
+## Web frameworks
+
+## Tooling
+
 ## Current state
 
 ### Android platform support
@@ -77,16 +87,6 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 | [starmap](https://github.com/material-motion/starmap/) |  |  |  | 45 open |
 | [sublime](https://github.com/material-motion/sublime/) |  |  |  | 4 open |
 | [tools](https://github.com/material-motion/tools/) |  |  |  | 97 open |
-
-## Starmap
-
-## Android platform
-
-## Apple platforms
-
-## Web frameworks
-
-## Tooling
 
 ## Learn more
 
