@@ -231,16 +231,6 @@ toc:
           title: "Recursive aggregation"
           url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
      - page:
-       title: "Elements"
-       url: "/starmap/specifications/streams/elements/"
-       children:
-        - page:
-          title: "PositionableElement"
-          url: "/starmap/specifications/streams/elements/PositionableElement"
-        - page:
-          title: "TransformableElement"
-          url: "/starmap/specifications/streams/elements/TransformableElement"
-     - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"
      - page:
@@ -256,6 +246,16 @@ toc:
         - page:
           title: "Tossable"
           url: "/starmap/specifications/streams/interactions/Tossable"
+     - page:
+       title: "Elements"
+       url: "/starmap/specifications/streams/elements/"
+       children:
+        - page:
+          title: "PositionableElement"
+          url: "/starmap/specifications/streams/elements/PositionableElement"
+        - page:
+          title: "TransformableElement"
+          url: "/starmap/specifications/streams/elements/TransformableElement"
      - page:
        title: "Director"
        url: "/starmap/specifications/interactions/director"
