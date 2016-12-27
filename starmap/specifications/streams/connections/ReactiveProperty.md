@@ -12,12 +12,10 @@ depends_on:
 availability:
   - platform:
     name: Android
-    label: "streams-android in develop"
     url: https://github.com/material-motion/streams-android
   - platform:
-    name: iOS
-    label: "streams-swift in develop"
-    url: https://github.com/material-motion/streams-swift
+    name: Swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/ReactiveProperty.swift
 ---
 
 # ReactiveProperty specification
