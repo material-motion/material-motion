@@ -120,3 +120,21 @@ streamtype:
   in: GestureRecognizer
   out: Point
 ```
+
+### Availability
+
+Link to the platform's source and tests, when available.
+
+We use the following platform names: `Android`, `iOS`, and `JavaScript`.
+
+```yaml
+availability:
+  - platform:
+    name: <platform name>
+    url: <source url>
+    tests_url: <tests url>
+  - platform:
+    name: <platform name>
+    url: <source url>
+    tests_url: <tests url>
+```
