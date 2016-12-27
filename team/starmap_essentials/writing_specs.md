@@ -29,7 +29,7 @@ of the topic, not its literal implementation.
 Presented below is the outline of an engineering specification. We discuss each section in more
 detail further below.
 
-```
+```yaml
 ---
 key: value
 key: value
@@ -53,7 +53,6 @@ An optional set of examples showing use of the topic.
 ### Specific thing to build
 
 And how to build it.
-
 ```
 
 ## YAML preamble
