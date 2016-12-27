@@ -121,6 +121,9 @@ toc:
         - page:
           title: "Metadata"
           url: "/starmap/specifications/streams/MotionObservable-Metadata"
+        - page:
+          title: "Core Animation"
+          url: "/starmap/specifications/streams/MotionObservable-core-animation"
      - page:
        title: "Connecting streams"
        url: "/starmap/specifications/streams/connections/"
