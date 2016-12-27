@@ -174,7 +174,7 @@ Requires a `Connect` type. Store `connect` as a private constant.
 ```swift
 class IndefiniteObservable<O> {
   public init(connect: Connect<O>) {
-    _connect = connect
+    self._connect = connect
   }
 
   private const var _connect: Connect<O>
@@ -190,7 +190,7 @@ Expose a `subscribe` API on `IndefiniteObservable` that accepts an `observer` an
 ```swift
 class IndefiniteObservable<O> {
   func subscribe(observer: O) -> Subscription {
-    return _connect(observer);
+    return self._connect(observer);
   }
 }
 ```
