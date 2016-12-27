@@ -121,6 +121,7 @@ All library names are lower-cased and hyphenated.
 ```yaml
 library: streams
 ```
+
 ### Dependencies
 
 A list of absolute paths to other starmap files.
