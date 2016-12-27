@@ -24,8 +24,8 @@ Example use:
 
 ```swift
 const var attach = AttachWithSpring(position: propertyOf(view).center,
-                    to: propertyOf(targetView).center,
-                    springSource: popSpringSource)
+                                    to: propertyOf(targetView).center,
+                                    springSource: popSpringSource)
 ```
 
 ## MVP
