@@ -153,6 +153,10 @@ a {
   margin-right: 16px;
 }
 
+.svg-object {
+  pointer-events: none;
+}
+
 // Footer
 footer {
   text-align: center;

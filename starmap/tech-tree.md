@@ -17,12 +17,12 @@ A completed milestone represents a usable product. A milestone is composed of fe
 
 ## Milestones
 
-<object type="image/svg+xml" data="{{ site.url }}/assets/tech-tree-milestones.svg">
+<object class="svg-object" type="image/svg+xml" data="{{ site.url }}/assets/tech-tree-milestones.svg">
   Your browser does not support SVG
 </object>
 
 ## Milestone features
 
-<object type="image/svg+xml" data="{{ site.url }}/assets/tech-tree-features.svg">
+<object class="svg-object" type="image/svg+xml" data="{{ site.url }}/assets/tech-tree-features.svg">
   Your browser does not support SVG
 </object>
