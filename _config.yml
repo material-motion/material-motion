@@ -74,6 +74,9 @@ toc:
        title: "Overview"
        url: "/starmap/overview"
      - page:
+       title: "Tech tree"
+       url: "/starmap/tech-tree"
+     - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
        children:
