@@ -586,6 +586,9 @@ toc:
        - page:
          title: "Writing prose"
          url: "/team/starmap_essentials/writing_prose"
+       - page:
+         title: "Writing specs"
+         url: "/team/starmap_essentials/writing_specs"
     - page:
       title: "Weekly updates"
       url: "/team/weekly_updates/"
