@@ -31,6 +31,9 @@ language-specific feature is necessary, explain why.
 **Conformance**: Specs do not need to be 100% byte-for-byte accurate. The goal is to communicate the
 intent and shape of the topic, not its literal implementation.
 
+**Features**: Identify non-MVP features and break them apart into separate
+**feature specifications**. A feature specification can build off of an MVP in a parallel fashion.
+
 ## Shape of a spec
 
 Presented below is the outline of an engineering specification. We discuss each section in more
