@@ -44,6 +44,8 @@ intent and shape of the topic, not its literal implementation.
 
 **Features**: Identify non-MVP features and break them apart into separate
 **feature specifications**. A feature specification can build off of an MVP in a parallel fashion.
+Feature specifications live in a separate file from their MVP. E.g. for `topic.md`, a feature might
+live in `topic-feature.md`. Feature specs have similar shapes to MVP specs.
 
 ## Shape of a spec
 
