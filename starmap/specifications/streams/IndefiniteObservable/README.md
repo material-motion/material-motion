@@ -98,7 +98,7 @@ public protocol Observer<T> {
 
 ### Expose a concrete IndefiniteObservable type
 
-There is a single generic value type: `O`. This is the type of observer that can be provided to the
+There is a single generic observer type: `O`. This is the type of observer that can be provided to the
 `subscribe` method. This type should conform to the abstract `Observer` type.
 
 ```swift
