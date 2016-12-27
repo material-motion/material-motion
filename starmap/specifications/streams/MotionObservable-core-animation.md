@@ -34,6 +34,19 @@ This feature specification is targeted to the iOS platform alone.
 
 [Learn more about Core Animation](http://devstreaming.apple.com/videos/wwdc/2014/419xxli6f60a6bs/419/419_advanced_graphics_and_animation_performance.pdf).
 
+### Why we don't emit the animation object on the next channel
+
+So that we may maximize interoperability with existing operators and interactions.
+
+If we emitted a different `T` value for Core Animation-based streams then we'd have to introduce a
+new class of operators, interactions, and properties that support these distinct `T` types. While
+this would be more type safe, it would increase the burden on the L2 engineer. Rather than simply
+choose which animation system to use (POP, Core Animation, etc...), the L2 engineer would also have
+to rewrite all related code to handle the distinct types.
+
+This spec has decided to lean towards improving the quality of life for an L2 engineer at the cost
+of increased complexity in the MotionObservable implementation.
+
 ## Examples
 
 In the following example we create a point spring stream backed by Core Animation with a `x()`
