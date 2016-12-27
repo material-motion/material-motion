@@ -23,7 +23,7 @@ AttachWithSpring pulls a position toward a destination using a spring.
 Example use:
 
 ```swift
-const var attach = AttachWithSpring(position: propertyOf(view).center,
+const var attach = AttachWithSpring(property: propertyOf(view).center,
                                     to: propertyOf(targetView).center,
                                     springSource: popSpringSource)
 ```
