@@ -13,7 +13,8 @@ over time.
 **Purpose**: To provide a checklist for an engineer to validate their implementation against.
 
 **Shape**: Specs start with an **overview** of the topic and then a broken-down
-**MVP specification**. Each part of the MVP specification should be as small as possible, and no smaller.
+**minimum-viable product (MVP) specification**. Each part of the MVP specification should be as
+small as possible, and no smaller.
 
 **Order of information**: The spec should be readable in a top-down fashion.
 
