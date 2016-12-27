@@ -61,7 +61,7 @@ key: value
 
 # <topic> specification
 
-This is the engineering specification for the `<topic>` API.
+This is the engineering specification for the `<topic>`.
 
 ## Overview
 
