@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/user_journeys/
+permalink: /user_journeys/
 title: User journeys
 ---
 
