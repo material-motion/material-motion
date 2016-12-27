@@ -10,19 +10,26 @@ over time.
 
 ## General guidelines
 
-The goal of a spec is to provide a checklist for an engineer to validate their implementation
-against.
+**Purpose**: To provide a checklist for an engineer to validate their implementation against.
 
-If you are writing a spec you ideally already have a working implementation in your langauge of
-choice. Do not paste this implementation into the spec verbatim. Your role as spec writer is to
-break the implementation apart into a checklist. Another engineer - potentially thinking in a
-language different from your own - can then follow this checklist.
+**Shape**: Specs start with an **overview** of the topic and then a broken-down
+**MVP specification**. Each part of the MVP specification should be as small as possible, and no smaller.
 
-Avoid use of language-specific features where possible. If a language-specific feature is necessary,
-explain why.
+**Order of information**: The spec should be readable in a top-down fashion.
 
-Specs do not need to be 100% byte-for-byte accurate. The goal is to communicate the intent and shape
-of the topic, not its literal implementation.
+**Audience**: The audience is expected to be highly technical, with a strong understanding of types,
+object oriented programming, and functional programming.
+
+**Build it first**: If you are writing a spec you ideally already have a working implementation in
+your language of choice. Do not paste this implementation into the spec verbatim. Your role as spec
+writer is to break the implementation apart into a checklist. Another engineer - potentially
+thinking in a language different from your own - can then follow this checklist.
+
+**Language-agnostic**: Avoid use of language-specific features where possible. If a
+language-specific feature is necessary, explain why.
+
+**Conformance**: Specs do not need to be 100% byte-for-byte accurate. The goal is to communicate the
+intent and shape of the topic, not its literal implementation.
 
 ## Shape of a spec
 
