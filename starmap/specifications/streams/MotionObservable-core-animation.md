@@ -34,7 +34,7 @@ This feature specification is targeted to the iOS platform alone.
 
 [Learn more about Core Animation](http://devstreaming.apple.com/videos/wwdc/2014/419xxli6f60a6bs/419/419_advanced_graphics_and_animation_performance.pdf).
 
-### Why we don't emit the animation object on the next channel
+### Why don't we emit the animation object on the next channel?
 
 So that we may maximize interoperability with existing operators and interactions.
 
