@@ -43,13 +43,13 @@ All property values should be readonly, all stream values should be settable.
 ```swift
 class AttachWithSpring {
 
-  /** The position to which the position stream is expected to write. */
-  public const var position: ReactiveProperty<CGPoint>
+  /** The property to which the value stream is expected to write. */
+  public const var property: ReactiveProperty<CGPoint>
 
-  /** A stream that emits positional values to be written to the view. */
+  /** A stream that emits values to be written to the property. */
   public var positionStream: MotionObservable<CGPoint>
 
-  /** The destination to which the spring will pull the view. */
+  /** The destination to which the spring will pull the property. */
   public const var destination: ReactiveProperty<CGPoint>
 
   /** The initial velocity of the spring. */
@@ -63,7 +63,7 @@ class AttachWithSpring {
 
 ```swift
 class AttachWithSpring {
-  public init(position: ReactiveProperty<CGPoint>,
+  public init(property: ReactiveProperty<CGPoint>,
               to destination: ReactiveProperty<CGPoint>,
               springSource: SpringSource<CGPoint>)
 }
@@ -74,8 +74,8 @@ class AttachWithSpring {
 ```swift
 class AttachWithSpring {
   init(...) {
+    self.property = property
     self.destination = destination
-    self.position = position
 
     ...
   }
@@ -90,7 +90,7 @@ class AttachWithSpring {
   init(...) {
     ...
 
-    const var spring = Spring(to: destination, initialValue: position, threshold: 1)
+    const var spring = Spring(to: destination, initialValue: property, threshold: 1)
     self.springConfiguration = spring.configuration
     self.initialVelocity = spring.initialVelocity
 
@@ -98,7 +98,7 @@ class AttachWithSpring {
   }
 ```
 
-### Store the position stream
+### Store the value stream
 
 ```swift
 class AttachWithSpring {
@@ -106,6 +106,6 @@ class AttachWithSpring {
     ...
 
     const var springStream = springSource(spring)
-    self.positionStream = springStream
+    self.valueStream = springStream
   }
 ```
