@@ -27,7 +27,17 @@ writer is to break the implementation apart into a checklist. Another engineer -
 thinking in a language different from your own - can then follow this checklist.
 
 **Language-agnostic**: Avoid use of language-specific features where possible. If a
-language-specific feature is necessary, explain why.
+language-specific feature is necessary, explain why. Examples of language-specific features include:
+
+- Function short-hand (`() => ()` in JavaScript, `$0` notation in swift).
+- Named arguments (Objective-C and swift).
+- Protocol extensions (swift).
+
+Features we expect to be available in all of our supported languages:
+
+- Compile-time type enforcement.
+- Generics.
+- Objects.
 
 **Conformance**: Specs do not need to be 100% byte-for-byte accurate. The goal is to communicate the
 intent and shape of the topic, not its literal implementation.
