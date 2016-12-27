@@ -2,7 +2,7 @@
 layout: page
 status:
   date: December 27, 2016
-  is: Stable
+  is: Draft
 knowledgelevel: L2
 library: streams
 depends_on:
