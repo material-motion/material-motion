@@ -81,7 +81,7 @@ class MotionRuntime {
         strongSelf.activeSubscriptions.remove(token)
       }
 
-      strongSelf.aggregateState = strongSelf.activeSubscriptions.count > 0 ? .active : .atRest
+      strongSelf.state = strongSelf.activeSubscriptions.count > 0 ? .active : .atRest
     }))
   }
 ```
@@ -95,5 +95,5 @@ the aggregate is at rest.
 
 ```swift
 class MotionRuntime {
-  public readonly var aggregateState = MotionState.atRest
+  public readonly var state = MotionState.atRest
 ```
