@@ -12,6 +12,7 @@ Motion into two overall deliverables: an MVP and a v1.
 
 The MVP defines the minimally-viable implementation of a reactive motion architecture.
 
-The v1 defines the core set of features required for an implementation to be considered v1.
+v1 defines the core set of features required for an implementation to be considered shippable as a
+supported release.
 
 <embed id="tech-tree" src="{{ site.url }}/assets/tech-tree-features.svg" type="image/svg+xml" />
