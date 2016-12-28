@@ -7,25 +7,11 @@ status:
 
 # Tech tree
 
-Material Motion is a large project with many moving parts. To ensure that an implementor can make
-reasonable iterations, we've provided the following tech chart. This chart splits Material Motion
-into separate arcs of development.
+Material Motion is a large project with many moving parts. The following chart breaks Material
+Motion into two overall deliverables: an MVP and a v1.
 
-There are two zoom levels to this chart: milestones and features.
+The MVP defines the minimally-viable implementation of a reactive motion architecture.
 
-A completed milestone represents a usable product. A milestone is composed of features.
-
-## Milestones
-
-<embed src="{{ site.url }}/assets/tech-tree-milestones.svg" type="image/svg+xml" />
-
-## Milestones features
+The v1 defines the core set of features required for an implementation to be considered v1.
 
 <embed id="tech-tree" src="{{ site.url }}/assets/tech-tree-features.svg" type="image/svg+xml" />
-
-<script type="text/javascript" src="{{ site.url }}/js/svg-pan-zoom.min.js"></script>
-<script>
-$(document).ready(function() {
-  svgPanZoom('#tech-tree');
-});
-</script>
