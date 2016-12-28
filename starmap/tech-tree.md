@@ -17,8 +17,11 @@ A completed milestone represents a usable product. A milestone is composed of fe
 
 ## Milestones
 
-<embed src="{{ site.url }}/assets/tech-tree-milestones.svg" type="image/svg+xml" />
+<embed id="tech-tree" src="{{ site.url }}/assets/tech-tree-features.svg" type="image/svg+xml" />
 
-## Milestone features
-
-<embed src="{{ site.url }}/assets/tech-tree-features.svg" type="image/svg+xml" />
+<script type="text/javascript" src="{{ site.url }}/js/svg-pan-zoom.min.js"></script>
+<script>
+$(document).ready(function() {
+  svgPanZoom('#tech-tree');
+});
+</script>
