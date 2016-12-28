@@ -105,4 +105,6 @@ $(document).ready(function() {
   container.scrollTop(
       scrollTo.offset().top - container.offset().top + container.scrollTop() - container.height() / 2
   );
+
+  svgPanZoom('#tech-tree');
 });
