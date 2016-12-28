@@ -175,6 +175,9 @@ toc:
              title: "$.normalized"
              url: "/starmap/specifications/streams/operators/arithmetic/$.normalized"
            - page:
+             title: "$.offset"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.offset"
+           - page:
              title: "$.scaled"
              url: "/starmap/specifications/streams/operators/arithmetic/$.scaled"
         - page:
