@@ -181,6 +181,9 @@ toc:
              title: "$.velocity"
              url: "/starmap/specifications/streams/operators/gesture/$.velocity"
         - page:
+          title: "$.constant"
+          url: "/starmap/specifications/streams/operators/$.constant"
+        - page:
           title: "$.toggled"
           url: "/starmap/specifications/streams/operators/$.toggled"
         - page:
