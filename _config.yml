@@ -165,6 +165,19 @@ toc:
              title: "$._filter"
              url: "/starmap/specifications/streams/operators/foundation/$._filter"
         - page:
+          title: "Arithmetic"
+          url: "/starmap/specifications/streams/operators/arithmetic/"
+          children:
+           - page:
+             title: "$.distance"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.distance"
+           - page:
+             title: "$.normalized"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.normalized"
+           - page:
+             title: "$.scaled"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.scaled"
+        - page:
           title: "Gesture"
           url: "/starmap/specifications/streams/operators/gesture/"
           children:
