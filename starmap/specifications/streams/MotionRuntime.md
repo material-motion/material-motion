@@ -64,7 +64,9 @@ class MotionRuntime {
 The stream subscription should observe state changes in aggregate.
 
 The implementation should handle multiple equivalent state values being received in sequence.
-Consider using an incrementing integer as a unique identifier for each subscribed stream.
+
+Each subscription must be given a globally-unique identifier. This identifier will be added and
+removed from a pool of "active subscriptions".
 
 ```swift
 class MotionRuntime {
