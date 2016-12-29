@@ -191,8 +191,8 @@ toc:
           url: "/starmap/specifications/streams/operators/debugging/"
           children:
            - page:
-             title: "$.dump"
-             url: "/starmap/specifications/streams/operators/debugging/$.dump"
+             title: "$.log"
+             url: "/starmap/specifications/streams/operators/debugging/$.log"
         - page:
           title: "Gesture"
           url: "/starmap/specifications/streams/operators/gesture/"
