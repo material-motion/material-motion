@@ -63,9 +63,8 @@ class MotionRuntime {
 
 The stream subscription should observe state changes in aggregate.
 
-The implementation should handle multiple equivalent state values being received in sequence; i.e.
-a simple counter implementation in which .active is an increment and .atRest is a decrement will not
-suffice without some form of deduping. A token implementation using uuids and a set is simple.
+The implementation should handle multiple equivalent state values being received in sequence.
+Consider using an incrementing integer as a unique identifier for each subscribed stream.
 
 ```swift
 class MotionRuntime {
@@ -73,27 +72,30 @@ class MotionRuntime {
     subscriptions.append(stream.subscribe(next: {
       ...
 
-    }, state: { [weak self] state in
-      guard const var strongSelf = self else { return }
+    }, state: { state in
       if state == .active {
-        strongSelf.activeSubscriptions.insert(token)
+        self.activeSubscriptions.insert(uniqueIdentifier)
       } else {
-        strongSelf.activeSubscriptions.remove(token)
+        self.activeSubscriptions.remove(uniqueIdentifier)
       }
 
-      strongSelf.state = strongSelf.activeSubscriptions.count > 0 ? .active : .atRest
+      let oldState = strongSelf.state.read()
+      let newState: MotionState = self.activeSubscriptions.count > 0 ? .active : .atRest
+      if oldState != newState {
+        self.state.write(newState)
+      }
     }))
   }
 ```
 
-### Expose readonly state API
+### Expose reactive state API
 
-Expose a readonly API that represents the aggregate state of all streams.
+Expose a ReactiveProperty `state` API that represents the aggregate state of all streams.
 
 If any stream is active, then the aggregate state is active. If all streams are at rest, then
 the aggregate is at rest.
 
 ```swift
 class MotionRuntime {
-  public readonly var state = MotionState.atRest
+  public const var state = createProperty(MotionState.atRest)
 ```
