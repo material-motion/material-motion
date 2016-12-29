@@ -181,6 +181,13 @@ toc:
              title: "$.scaled"
              url: "/starmap/specifications/streams/operators/arithmetic/$.scaled"
         - page:
+          title: "Debugging"
+          url: "/starmap/specifications/streams/operators/debugging/"
+          children:
+           - page:
+             title: "$.distance"
+             url: "/starmap/specifications/streams/operators/debugging/$.dumpValue"
+        - page:
           title: "Gesture"
           url: "/starmap/specifications/streams/operators/gesture/"
           children:
