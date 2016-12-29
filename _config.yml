@@ -172,6 +172,12 @@ toc:
              title: "$.distance"
              url: "/starmap/specifications/streams/operators/arithmetic/$.distance"
            - page:
+             title: "$.min"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.min"
+           - page:
+             title: "$.max"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.max"
+           - page:
              title: "$.normalized"
              url: "/starmap/specifications/streams/operators/arithmetic/$.normalized"
            - page:
