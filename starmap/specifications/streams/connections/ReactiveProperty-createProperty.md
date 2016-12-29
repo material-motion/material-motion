@@ -7,6 +7,10 @@ knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/streams/connections/ReactiveProperty
+availability:
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/streams-swift/blob/develop/src/ReactiveProperty.swift
 ---
 
 # createProperty feature specification
