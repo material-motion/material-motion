@@ -185,7 +185,7 @@ toc:
           url: "/starmap/specifications/streams/operators/debugging/"
           children:
            - page:
-             title: "$.distance"
+             title: "$.dump"
              url: "/starmap/specifications/streams/operators/debugging/$.dump"
         - page:
           title: "Gesture"
