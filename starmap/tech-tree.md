@@ -7,12 +7,7 @@ status:
 
 # Tech tree
 
-Material Motion is a large project with many moving parts. The following chart breaks Material
-Motion into two overall deliverables: an MVP and a v1.
-
-The MVP defines the minimally-viable implementation of a reactive motion architecture.
-
-v1 defines the core set of features required for an implementation to be considered shippable as a
-supported release.
+Material Motion is a large project with many moving parts. The following chart outlines the Material
+Motion roadmap in the form of a tech tree.
 
 <embed id="tech-tree" src="{{ site.url }}/assets/tech-tree-features.svg" type="image/svg+xml" />
