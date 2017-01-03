@@ -42,11 +42,21 @@ toc:
        url: "/documentation/L1/"
        children:
         - page:
+          title: "iOS interactions"
+          url: "/documentation/L1/ios-interactions"
+        - page:
           title: "iOS transitions"
           url: "/documentation/L1/ios-transitions"
      - page:
        title: "L2"
        url: "/documentation/L2/"
+       children:
+        - page:
+          title: "iOS custom interactions"
+          url: "/documentation/L1/ios-custom-interactions"
+        - page:
+          title: "iOS custom transitions"
+          url: "/documentation/L1/ios-custom-transitions"
      - page:
        title: "L3"
        url: "/documentation/L3/"

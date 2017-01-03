@@ -5,7 +5,7 @@ status:
   is: Drafting
 ---
 
-# iOS transitions with Material Motion
+# Transitions with Material Motion in iOS
 
 ## Outline
 
@@ -21,6 +21,10 @@ status:
 
 1. Introduce concept of context views.
 2. Example of implementing context view retrieval in a view controller.
+
+### Transition director catalog
+
+1. List all available transition directors.
 
 ### Graduation to L2
 
