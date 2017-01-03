@@ -84,11 +84,12 @@ public enum CoreAnimationChannelEvent
 
 ### Define two events: add and remove
 
-Add must accept a property animation and a key. Remove must accept a key.
+Add must accept a property animation, a key, a model value, and an optional initial velocity. Remove
+must accept a key.
 
 ```swift
 enum CoreAnimationChannelEvent {
-  case add(CAPropertyAnimation, String)
+  case add(CAPropertyAnimation, String, modelValue: Any, initialVelocity: Any?)
   case remove(String)
 }
 ```
