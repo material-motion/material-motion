@@ -731,12 +731,6 @@ toc:
       title: "Random"
       url: "/team/random"
   - page:
-    title: "Status"
-    url: "/status"
-  - page:
-    title: "Availability"
-    url: "/availability"
-  - page:
     title: "Contributing"
     url: "/CONTRIBUTING"
   - page:
