@@ -13,8 +13,8 @@ Welcome to the Material Motion documentation. There's not much here yet.
 We categorize the education of Material Motion into the following groups:
 
 1. App creator
-2. Director creator
-3. Motion creator
+2. Interaction/Director creator
+3. Stream creator
 4. Runtime engineering
 
 Each group in the list above requires more knowledge of the Material Motion ecosystem than the group preceding it.
