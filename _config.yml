@@ -60,6 +60,10 @@ toc:
      - page:
        title: "L3"
        url: "/documentation/L3/"
+       children:
+        - page:
+          title: "Custom stream operators"
+          url: "/documentation/L3/custom-stream-operators"
      - page:
        title: "L4"
        url: "/documentation/L4/"
