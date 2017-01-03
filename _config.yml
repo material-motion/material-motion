@@ -40,6 +40,10 @@ toc:
      - page:
        title: "L1"
        url: "/documentation/L1/"
+       children:
+        - page:
+          title: "iOS transitions"
+          url: "/documentation/L1/ios-transitions"
      - page:
        title: "L2"
        url: "/documentation/L2/"
