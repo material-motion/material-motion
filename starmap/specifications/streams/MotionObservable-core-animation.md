@@ -13,6 +13,8 @@ depends_on:
 
 This is the engineering specification for `MotionObservable` support for Core Animation.
 
+**This feature specification is targeted to the iOS platform alone**.
+
 ## Overview
 
 Core Animation makes use of what is called *the render server*. The render server is an iOS-wide
@@ -29,8 +31,6 @@ emit a single value on the `next` channel: **the layer model value**. Core Anima
 emit a keyed animation object on a new channel called the `coreAnimation` channel. This combination
 of model value + core animation emitting provides the flexibility needed to create Core
 Animation-backed animations that work in a platform-expected manner.
-
-This feature specification is targeted to the iOS platform alone.
 
 [Learn more about Core Animation](http://devstreaming.apple.com/videos/wwdc/2014/419xxli6f60a6bs/419/419_advanced_graphics_and_animation_performance.pdf).
 
