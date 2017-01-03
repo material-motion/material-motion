@@ -13,10 +13,11 @@ status:
 
 1. Introduce concept of an Interaction.
 2. Example of using a pre-packaged interaction:
-   ```swift
-   let interaction = DirectlyManipulableInteraction(view: someView)
-   interaction.connect(with: runtime)
-   ```
+
+```swift
+let interaction = DirectlyManipulableInteraction(view: someView)
+interaction.connect(with: runtime)
+```
 
 ### Interaction catalog
 

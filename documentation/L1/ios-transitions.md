@@ -13,9 +13,10 @@ status:
 
 1. Introduce concept of a Director.
 2. Example of using a pre-packaged director:
-   ```swift
-   viewController.transitionController.directorType = SlideInTransitionDirector.self
-   ```
+
+```swift
+viewController.transitionController.directorType = SlideInTransitionDirector.self
+```
 
 ### Context views
 
