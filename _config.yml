@@ -53,10 +53,10 @@ toc:
        children:
         - page:
           title: "iOS custom interactions"
-          url: "/documentation/L1/ios-custom-interactions"
+          url: "/documentation/L2/ios-custom-interactions"
         - page:
           title: "iOS custom transitions"
-          url: "/documentation/L1/ios-custom-transitions"
+          url: "/documentation/L2/ios-custom-transitions"
      - page:
        title: "L3"
        url: "/documentation/L3/"
