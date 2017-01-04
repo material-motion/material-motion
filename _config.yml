@@ -234,6 +234,9 @@ toc:
           title: "$.constant"
           url: "/starmap/specifications/streams/operators/$.constant"
         - page:
+          title: "$.map"
+          url: "/starmap/specifications/streams/operators/$.map"
+        - page:
           title: "$.toggled"
           url: "/starmap/specifications/streams/operators/$.toggled"
         - page:
