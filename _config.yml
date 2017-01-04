@@ -204,6 +204,9 @@ toc:
            - page:
              title: "$.scaled"
              url: "/starmap/specifications/streams/operators/arithmetic/$.scaled"
+           - page:
+             title: "$.subtracted"
+             url: "/starmap/specifications/streams/operators/arithmetic/$.subtracted"
         - page:
           title: "Debugging"
           url: "/starmap/specifications/streams/operators/debugging/"
