@@ -16,7 +16,7 @@ This is the engineering specification for the `springSource` API.
 
 ## Overview
 
-`springSource` connects to a Spring and emits values on the next channel until the spring comes to
+`springSource` connects to a Spring and emits values on the `next` channel until the spring comes to
 rest.
 
 Example usage:
