@@ -58,33 +58,13 @@ starting value of the spring. `initialVelocity` represents the initial velocity 
 ```swift
 class Spring {
   public const var destination: ReactiveProperty<T>
+  public const var tension: ReactiveProperty<Float>
+  public const var friction: ReactiveProperty<Float>
   public const var initialValue: ScopedReadable<T>
   public const var initialVelocity: ScopedReadable<T>
   public const var threshold: ScopedReadable<Float>
 ```
 
-### Expose a configuration API
-
-Expose a configuration API that is initialized with default values.
-
-Default is tension of `342` and friction of `30`.
-
-```swift
-class Spring {
-  public const var configuration: ReactiveProperty<SpringConfiguration>
-```
-
-### Expose a default configuration API
+### Expose defaults for tension and friction
 
 The default tension is 342 and the default friction is 30.
-
-```swift
-class SpringConfiguration {
-  ...
-
-  public static var defaultConfiguration: SpringConfiguration {
-    get {
-      return SpringConfiguration(tension: 342, friction: 30)
-    }
-  }
-```
