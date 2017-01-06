@@ -58,9 +58,9 @@ starting value of the spring. `initialVelocity` represents the initial velocity 
 ```swift
 class Spring {
   public const var destination: ReactiveProperty<T>
-  public const var initialValue: ReactiveProperty<T>
-  public const var initialVelocity: ReactiveProperty<T>
-  public const var threshold: ReactiveProperty<Float>
+  public const var initialValue: ScopedReadable<T>
+  public const var initialVelocity: ScopedReadable<T>
+  public const var threshold: ScopedReadable<Float>
 ```
 
 ### Expose a configuration API
