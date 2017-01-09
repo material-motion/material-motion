@@ -23,7 +23,7 @@ This is the engineering specification for the `MotionRuntime` object.
 
 ## Overview
 
-A `MotionRuntime` can subscribe to streams and write their output to properties. All stream state
+A `MotionRuntime` can subscribe to streams and connect their output to properties. All stream state
 changes will be collected in aggregate and reported as a single aggregate state value.
 
 ## MVP
@@ -35,7 +35,7 @@ public class MotionRuntime {
 }
 ```
 
-### Expose a write API
+### Expose a connect API
 
 This APIs should accept a `MotionObservable<T>`.
 
@@ -43,16 +43,16 @@ The implementation should subscribe to the stream and hold on to its subscriptio
 
 ```swift
 class MotionRuntime {
-  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>)
+  public func connect<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>)
 ```
 
 ### next channel implementation
 
-The stream subscription should write all `next` values to the property.
+The stream subscription should connect all `next` values to the property.
 
 ```swift
 class MotionRuntime {
-  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
+  public func connect<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
     subscriptions.append(stream.subscribe(next: {
       property.write($0)
     } ...
@@ -70,7 +70,7 @@ removed from a pool of "active subscriptions".
 
 ```swift
 class MotionRuntime {
-  public func write<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
+  public func connect<T>(_ stream: MotionObservable<T>, to property: ScopedWritable<T>) {
     subscriptions.append(stream.subscribe(next: {
       ...
 

@@ -3,7 +3,7 @@ layout: page
 title: MotionRuntime recursive aggregation
 status:
   date: December 4, 2016
-  is: Draft
+  is: Experimental
 knowledgelevel: L3
 library: streams
 depends_on:
