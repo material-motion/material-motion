@@ -36,17 +36,6 @@ This class should be generic with a value `T`.
 public final class Spring<T> {
 ```
 
-### Expose a SpringConfiguration API
-
-Expose a class with two properties: tension and friction.
-
-```swift
-public final class SpringConfiguration {
-  public var tension: Float
-  public var friction: Float
-}
-```
-
 ### Expose property APIs
 
 These properties should be provided at initialization time.
