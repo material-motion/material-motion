@@ -303,6 +303,15 @@ toc:
           title: "AttachWithSpring"
           url: "/starmap/specifications/streams/interactions/AttachWithSpring"
         - page:
+          title: "Draggable"
+          url: "/starmap/specifications/streams/interactions/Draggable"
+        - page:
+          title: "Rotatable"
+          url: "/starmap/specifications/streams/interactions/Rotatable"
+        - page:
+          title: "Scalable"
+          url: "/starmap/specifications/streams/interactions/Scalable"
+        - page:
           title: "Tap"
           url: "/starmap/specifications/streams/interactions/Tap"
         - page:
