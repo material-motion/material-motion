@@ -234,11 +234,11 @@ toc:
              title: "$.velocity"
              url: "/starmap/specifications/streams/operators/gesture/$.velocity"
         - page:
-          title: "$.constant"
-          url: "/starmap/specifications/streams/operators/$.constant"
+          title: "$.mapTo"
+          url: "/starmap/specifications/streams/operators/$.mapTo"
         - page:
-          title: "$.map"
-          url: "/starmap/specifications/streams/operators/$.map"
+          title: "$.rewrite"
+          url: "/starmap/specifications/streams/operators/$.rewrite"
         - page:
           title: "$.toggled"
           url: "/starmap/specifications/streams/operators/$.toggled"
