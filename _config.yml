@@ -674,77 +674,74 @@ toc:
          title: "January 5-11, 2017"
          url: "/team/weekly_updates/2017-01-11"
        - page:
-         title: "2016 weekly updates"
-         children:
-          - page:
-            title: "December 15-December 21, 2016"
-            url: "/team/weekly_updates/2016-12-21"
-          - page:
-            title: "December 08-December 14, 2016"
-            url: "/team/weekly_updates/2016-12-14"
-          - page:
-            title: "December 02-December 07, 2016"
-            url: "/team/weekly_updates/2016-12-07"
-          - page:
-            title: "November 24-December 01, 2016"
-            url: "/team/weekly_updates/2016-12-01"
-          - page:
-            title: "November 17-November 23, 2016"
-            url: "/team/weekly_updates/2016-11-23"
-          - page:
-            title: "November 11-November 16, 2016"
-            url: "/team/weekly_updates/2016-11-16"
-          - page:
-            title: "November 03-November 10, 2016"
-            url: "/team/weekly_updates/2016-11-10"
-          - page:
-            title: "October 27-November 02, 2016"
-            url: "/team/weekly_updates/2016-11-02"
-          - page:
-            title: "October 20-26, 2016"
-            url: "/team/weekly_updates/2016-10-26"
-          - page:
-            title: "October 13-19, 2016"
-            url: "/team/weekly_updates/2016-10-19"
-          - page:
-            title: "October 06-12, 2016"
-            url: "/team/weekly_updates/2016-10-12"
-          - page:
-            title: "September 29-October 05, 2016"
-            url: "/team/weekly_updates/2016-10-05"
-          - page:
-            title: "September 22-28, 2016"
-            url: "/team/weekly_updates/2016-09-28"
-          - page:
-            title: "September 15-21, 2016"
-            url: "/team/weekly_updates/2016-09-21"
-          - page:
-            title: "September 8-14, 2016"
-            url: "/team/weekly_updates/2016-09-14"
-          - page:
-            title: "August 18-24, 2016"
-            url: "/team/weekly_updates/2016-08-24"
-          - page:
-            title: "August 11-17, 2016"
-            url: "/team/weekly_updates/2016-08-17"
-          - page:
-            title: "August 4-10, 2016"
-            url: "/team/weekly_updates/2016-08-10"
-          - page:
-            title: "July 28-August 3, 2016"
-            url: "/team/weekly_updates/2016-08-03"
-          - page:
-            title: "July 21-27, 2016"
-            url: "/team/weekly_updates/2016-07-27"
-          - page:
-            title: "July 14-20, 2016"
-            url: "/team/weekly_updates/2016-07-20"
-          - page:
-            title: "July 7-13, 2016"
-            url: "/team/weekly_updates/2016-07-13"
-          - page:
-            title: "June 30-July 6, 2016"
-            url: "/team/weekly_updates/2016-07-06"
+         title: "December 15-December 21, 2016"
+         url: "/team/weekly_updates/2016-12-21"
+       - page:
+         title: "December 08-December 14, 2016"
+         url: "/team/weekly_updates/2016-12-14"
+       - page:
+         title: "December 02-December 07, 2016"
+         url: "/team/weekly_updates/2016-12-07"
+       - page:
+         title: "November 24-December 01, 2016"
+         url: "/team/weekly_updates/2016-12-01"
+       - page:
+         title: "November 17-November 23, 2016"
+         url: "/team/weekly_updates/2016-11-23"
+       - page:
+         title: "November 11-November 16, 2016"
+         url: "/team/weekly_updates/2016-11-16"
+       - page:
+         title: "November 03-November 10, 2016"
+         url: "/team/weekly_updates/2016-11-10"
+       - page:
+         title: "October 27-November 02, 2016"
+         url: "/team/weekly_updates/2016-11-02"
+       - page:
+         title: "October 20-26, 2016"
+         url: "/team/weekly_updates/2016-10-26"
+       - page:
+         title: "October 13-19, 2016"
+         url: "/team/weekly_updates/2016-10-19"
+       - page:
+         title: "October 06-12, 2016"
+         url: "/team/weekly_updates/2016-10-12"
+       - page:
+         title: "September 29-October 05, 2016"
+         url: "/team/weekly_updates/2016-10-05"
+       - page:
+         title: "September 22-28, 2016"
+         url: "/team/weekly_updates/2016-09-28"
+       - page:
+         title: "September 15-21, 2016"
+         url: "/team/weekly_updates/2016-09-21"
+       - page:
+         title: "September 8-14, 2016"
+         url: "/team/weekly_updates/2016-09-14"
+       - page:
+         title: "August 18-24, 2016"
+         url: "/team/weekly_updates/2016-08-24"
+       - page:
+         title: "August 11-17, 2016"
+         url: "/team/weekly_updates/2016-08-17"
+       - page:
+         title: "August 4-10, 2016"
+         url: "/team/weekly_updates/2016-08-10"
+       - page:
+         title: "July 28-August 3, 2016"
+         url: "/team/weekly_updates/2016-08-03"
+       - page:
+         title: "July 21-27, 2016"
+         url: "/team/weekly_updates/2016-07-27"
+       - page:
+         title: "July 14-20, 2016"
+         url: "/team/weekly_updates/2016-07-20"
+       - page:
+         title: "July 7-13, 2016"
+         url: "/team/weekly_updates/2016-07-13"
+       - page:
+         title: "June 30-July 6, 2016"
+         url: "/team/weekly_updates/2016-07-06"
     - page:
       title: "Random"
       url: "/team/random"
