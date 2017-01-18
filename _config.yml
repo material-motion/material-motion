@@ -671,6 +671,9 @@ toc:
          title: "Current sprint"
          url: "/team/weekly_updates/current_focus"
        - page:
+         title: "January 12-18, 2017"
+         url: "/team/weekly_updates/2017-01-18"
+       - page:
          title: "January 5-11, 2017"
          url: "/team/weekly_updates/2017-01-11"
        - page:

@@ -7,7 +7,9 @@ permalink: /team/weekly_updates/
 
 Team is offline til the new year!
 
-<!-- [Current sprint](https://github.com/orgs/material-motion/projects/4) -->
+| 2017 | Week #1 | Week #2 | Week #3 | Week #4 | Week #5 |
+|:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|
+| January   | vacation | [🎉](2017-01-11) | [🎉](2017-01-18) | [Current sprint](https://github.com/orgs/material-motion/projects/4) |  |
 
 | 2016 | Week #1 | Week #2 | Week #3 | Week #4 | Week #5 |
 |:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|
