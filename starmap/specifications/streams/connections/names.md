@@ -21,15 +21,16 @@ the Starmap.
 
 ### Names for element properties
 
-| Starmap                        | Android View         | iOS UIView              | CSS                |
-|--------------------------------|----------------------|-------------------------|--------------------|
-| `backgroundColor`              |                      | `view.backgroundColor`  | `background-color` |
-| `width`                        |                      | `view.bounds.width`     | `width`            |
-| `height`                       |                      | `view.bounds.height`    | `height`           |
-| `opacity`                      |                      | `view.alpha`            | `opacity`          |
-| `position` relative to parent  | (`view.X`, `view.Y`) | `view.layer.position`   | `translate()`      |
-| `positionX` relative to parent | `view.X`             | `view.layer.position.x` | `translateX()`     |
-| `positionY` relative to parent | `view.Y`             | `view.layer.position.y` | `translateY()`     |
-| `rotation`                     |                      |                         | `rotate()`         |
-| `scale`                        |                      |                         | `scale()`          |
-| `translation`                  |                      |                         |                    |
+| Starmap                        | Android View         | iOS UIView                | CSS                |
+|--------------------------------|----------------------|---------------------------|--------------------|
+| `backgroundColor`              |                      | `view.backgroundColor`    | `background-color` |
+| `width`                        |                      | `view.bounds.width`       | `width`            |
+| `height`                       |                      | `view.bounds.height`      | `height`           |
+| `cornerRadius`                 |                      | `view.layer.cornerRadius` | `border-radius`    |
+| `opacity`                      |                      | `view.alpha`              | `opacity`          |
+| `position` relative to parent  | (`view.X`, `view.Y`) | `view.layer.position`     | `translate()`      |
+| `positionX` relative to parent | `view.X`             | `view.layer.position.x`   | `translateX()`     |
+| `positionY` relative to parent | `view.Y`             | `view.layer.position.y`   | `translateY()`     |
+| `rotation`                     |                      |                           | `rotate()`         |
+| `scale`                        |                      |                           | `scale()`          |
+| `translation`                  |                      |                           |                    |
