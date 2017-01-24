@@ -61,9 +61,9 @@ We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to 
 
 View your version:
 
-  gem list | grep psych
+    gem list | grep psych
 
 Update your version:
 
-  xcode-select --install # May need to run this first
-  sudo gem update psych
+    xcode-select --install # May need to run this first
+    sudo gem update psych
