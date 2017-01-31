@@ -36,3 +36,9 @@ void next(MotionObserver<U> observer, T value);
 ```
 
 Transforms the incoming value before passing it **to the observer**, or blocks the value.
+
+## Constraint vs Transformation operators
+
+Constraint operators are operators that map from a stream of `T` into a stream of `T`.
+
+Transformation operators are operators that map from a stream of `T` into a stream of `U`.
