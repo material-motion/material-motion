@@ -10,7 +10,7 @@ To receive announcements by email, subscribe to our announcement mailing list: [
 
 ## Chat
 
-We hang out on Discord. Visit [https://goo.gl/gfJs7w](https://goo.gl/gfJs7w) to join the server.
+We hang out on Discord. Visit [https://discord.gg/ZDZNjar](https://discord.gg/ZDZNjar) to join the server.
 
 ## Code
 
