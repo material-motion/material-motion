@@ -20,7 +20,7 @@ dependency for library authors to build on top of, we intend to keep it that
 way.
 
 Please, use `IndefiniteObservable` to build a library of operators that you
-find useful, publish them to your respective package manager, and [let us know](https://discord.gg/ZJyGXza)
+find useful, publish them to your respective package manager, and [let us know](https://discord.gg/ZDZNjar)
 what you build. If any part of this walkthrough could be more helpful,
 [file an issue](https://github.com/material-motion/material-motion/issues/new?title=IndefiniteObservable%20tutorial:).
 
