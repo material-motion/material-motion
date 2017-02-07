@@ -8,7 +8,7 @@ Prioritization is how we choose what to work on for a given week or day. We make
 
 ## Sprints
 
-We use GitHub's org-wide projects to organize our weekly sprints. You must be a member of the material-motion organization to view the sprint board. [Ask a core team member on Discord for access](https://discord.gg/ZJyGXza).
+We use GitHub's org-wide projects to organize our weekly sprints. You must be a member of the material-motion organization to view the sprint board. [Ask a core team member on Discord for access](https://discord.gg/ZDZNjar).
 
 [View the sprint board](https://github.com/orgs/material-motion/projects/4?fullscreen=true).
 
