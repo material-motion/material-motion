@@ -2,10 +2,10 @@
 layout: page
 title: Timeline
 status:
-  date: November 11, 2016
-  is: Stable
+  date: February 16, 2016
+  is: Draft
 knowledgelevel: L2
-library: runtime
+library: reactive-motion
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016
@@ -15,13 +15,8 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
 availability:
   - platform:
-    name: Android
-    label: Milestone
-    url: https://github.com/material-motion/runtime-android/milestone/13
-  - platform:
     name: iOS
-    label: runtime-objc v6
-    url: https://github.com/material-motion/runtime-objc/releases/tag/v6.0.0
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/Timeline.swift
 ---
 
 # Timeline specification
