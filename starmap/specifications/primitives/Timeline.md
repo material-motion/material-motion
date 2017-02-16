@@ -38,88 +38,39 @@ class Timeline {
 }
 ```
 
-### begin API
+### Paused reactive property
 
-Expose an API for beginning the timeline.
-
-```swift
-class Timeline {
-  func begin()
-```
-
-### beginTime API
-
-Expose a read-only nullable API for the timeline's beginTime.
-
-beginTime is non-null after `begin` has been invoked.
+A timeline has a reactive property named `paused` of type `Bool`. The default value is false.
 
 ```swift
 class Timeline {
-  var beginTime: TimeInterval? { get }
-```
-
-### Scrubber API
-
-Expose an API for setting an optional TimelineScrubber instance.
-
-```swift
-class Timeline {
-  var scrubber: TimelineScrubber?
-```
-
-### Add/remove observer API
-
-Expose APIs for adding and removing observers.
-
-```swift
-class Timeline {
-  func addObserver(TimelineObserver)
-  func removeObserver(TimelineObserver)
-```
-
-### Observer event API
-
-Expose a protocol that observers are expected to conform to.
-
-```swift
-protocol TimelineObserver {
-  func timelineDidAttachScrubber(timeline, scrubber)
-  func timelineDidDetachScrubber(timeline)
-  func timelineScrubberDidScrub(timeline, timeOffset)
+  public const paused = createProperty(withInitialValue: false)
 }
 ```
 
-`timelineDidAttachScrubber` should be invoked when scrubber is assigned a non-null value when it
-was previously null.
+### timeOffset reactive property
 
-`timelineDidDetachScrubber` should be invoked when scrubber is assigned a null value when it
-was previously non-null.
-
-`timelineScrubberDidScrub` should be invoked when the attached scrubber's position changes.
-
-### TimelineScrubber type
-
-A timeline scrubber is an object.
+A timeline has a reactive property named `timeOffset` of type `Float`. The default value is 0.
 
 ```swift
-class TimelineScrubber {
+class Timeline {
+  public const timeOffset = createProperty(withInitialValue: CGFloat(0))
 }
 ```
 
-### TimelineScrubber timeOffset API
+### Timeline/Interaction coordination
 
-Expose an API on TimelineScrubber for setting a time offset.
+Interactions that support being scrubbed by a Timeline are expected to provide an optional
+`timeline` property.
 
 ```swift
-class TimelineScrubber {
-  var timeOffset
+class SomeInteraction {
+  public var timeline: Timeline?
 }
 ```
 
-### TimelineScrubber/Timeline association
+If Timeline is **not** associated with an interaction, then the interaction should start immediately
+upon registration with the runtime.
 
-When a timeline scrubber is attached to a timeline, modifications to the scrubber's timeOffset
-should result in timeline observer `timelineScrubberDidScrub` invocations.
-
-This effect can be achieved by storing a weak association to the timeline within the timeline
-scrubber.
+If a Timeline **is** associated with an interaction, then the interaction should subscribe to the
+`paused` and `timeOffset` properties and react to changes.
