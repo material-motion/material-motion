@@ -1,5 +1,6 @@
 ---
 layout: page
+language_filter: false
 ---
 
 # Month day-Month day, 2017
