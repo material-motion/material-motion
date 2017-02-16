@@ -45,7 +45,6 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 | [family-tween-android](https://github.com/material-motion/family-tween-android/) | passing | 100% | v2.1.0 | 2 open |
 | [gestures-android](https://github.com/material-motion/gestures-android/) | passing | 91% | v1.0.0 | 4 open |
 | [indefinite-observable-android](https://github.com/material-motion/indefinite-observable-android/) | passing | 100% | v2.0.0 | 0 open |
-| [physics-android](https://github.com/material-motion/physics-android/) |  |  |  | 0 open |
 | [runtime-android](https://github.com/material-motion/runtime-android/) | passing | 95% | v6.0.1 | 13 open |
 | [streams-android](https://github.com/material-motion/streams-android/) | passing | 27% | v1.0.0 | 12 open |
 | [transitions-android](https://github.com/material-motion/transitions-android/) |  |  |  | 9 open |
@@ -63,7 +62,7 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 | [pop-swift](https://github.com/material-motion/pop-swift) | passing | 42% |  |  | 21% | 6 open |
 | [pop-transitions-swift](https://github.com/material-motion/pop-transitions-swift) | passing | 71% | v1.0.0 | ios |  | 0 open |
 | [runtime-objc](https://github.com/material-motion/runtime-objc) | passing | 91% | v6.0.1 | ios | 100% | 16 open |
-| [streams-swift](https://github.com/material-motion/streams-swift) | passing | 6% |  |  |  | 15 open |
+| [streams-swift](https://github.com/material-motion/streams-swift) | passing | 6% |  |  |  | 13 open |
 | [transitions-objc](https://github.com/material-motion/transitions-objc) | passing | 48% | v1.1.0 | ios | 90% | 5 open |
 
 ### Web platform support
@@ -71,7 +70,7 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 | Library | Build status | Coverage | Version | Issues |
 |---------|:------------:|:--------:|:-------:|:------:|
 | [indefinite-observable-js](https://github.com/material-motion/indefinite-observable-js) | passing | 100% | v1.0.1 | 3 open |
-| [material-motion-js](https://github.com/material-motion/material-motion-js) | passing |  |  | 43 open |
+| [material-motion-js](https://github.com/material-motion/material-motion-js) | passing |  |  | 41 open |
 | [streams-experiment-js](https://github.com/material-motion/streams-experiment-js) |  |  |  | 1 open |
 
 ### Misc libraries
@@ -83,7 +82,7 @@ Check out [stability](https://material-motion.github.io/material-motion/) to lea
 | [ci-staging-area](https://github.com/material-motion/ci-staging-area/) |  |  |  | 0 open |
 | [direct-web](https://github.com/material-motion/direct-web/) |  |  |  | 0 open |
 | [hubot](https://github.com/material-motion/hubot/) |  |  |  | 0 open |
-| [material-motion](https://github.com/material-motion/material-motion/) |  |  |  | 39 open |
+| [material-motion](https://github.com/material-motion/material-motion/) |  |  |  | 38 open |
 | [milemarker](https://github.com/material-motion/milemarker/) |  |  |  | 18 open |
 | [sprints](https://github.com/material-motion/sprints/) |  |  |  | 32 open |
 | [starmap](https://github.com/material-motion/starmap/) |  |  |  | 48 open |
