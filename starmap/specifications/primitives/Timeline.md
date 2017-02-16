@@ -15,7 +15,7 @@ proposals:
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
 availability:
   - platform:
-    name: iOS
+    name: iOS (Swift)
     url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/Timeline.swift
 ---
 
