@@ -13,6 +13,10 @@ proposals:
     state: Accepted
     discussion: "Timeline spec review"
     discussion_url: https://groups.google.com/forum/#!topic/material-motion/hLMbEEzUV4Y
+  - proposal:
+    initiation_date: Feb 16, 2017
+    state: Draft
+    discussion: "Drafting new reactive API"
 availability:
   - platform:
     name: iOS (Swift)
