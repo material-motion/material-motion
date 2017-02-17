@@ -231,16 +231,6 @@ toc:
           title: "$.y"
           url: "/starmap/specifications/streams/operators/$.y"
      - page:
-       title: "Plans"
-       url: "/starmap/specifications/streams/plans/"
-       children:
-        - page:
-          title: "Spring"
-          url: "/starmap/specifications/streams/plans/Spring"
-        - page:
-          title: "Tween"
-          url: "/starmap/specifications/streams/plans/Tween"
-     - page:
        title: "Sources"
        url: "/starmap/specifications/streams/sources/"
        children:
@@ -294,11 +284,17 @@ toc:
           title: "Scalable"
           url: "/starmap/specifications/streams/interactions/Scalable"
         - page:
+          title: "Spring"
+          url: "/starmap/specifications/streams/interactions/Spring"
+        - page:
           title: "Tap"
           url: "/starmap/specifications/streams/interactions/Tap"
         - page:
           title: "Tossable"
           url: "/starmap/specifications/streams/interactions/Tossable"
+        - page:
+          title: "Tween"
+          url: "/starmap/specifications/streams/interactions/Tween"
      - page:
        title: "Elements"
        url: "/starmap/specifications/streams/elements/"
