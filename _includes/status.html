@@ -133,12 +133,12 @@
 <div class="interaction_table"><div class="content">
   <div class="inputs">
     {% for input in page.interaction.inputs %}
-      <div class="input">{{ input.name }}</div>
+      <div class="input"><span class="name">{{ input.name }}</span> (<span class="type">{{ input.type }}</span>)</div>
     {% endfor %}
   </div>
   <div class="outputs">
     {% for output in page.interaction.outputs %}
-      <div class="output">{{ output.name }}</div>
+      <div class="output">(<span class="type">{{ output.type }}</span>) <span class="name">{{ output.name }}</span></div>
     {% endfor %}
   </div>
   <div class="name">
