@@ -92,8 +92,12 @@ toc:
        title: "Overview"
        url: "/starmap/overview"
      - page:
-       title: "IndefiniteObservable"
-       url: "/starmap/specifications/streams/IndefiniteObservable/"
+       title: "L4 APIs"
+       url: "/starmap/specifications/L4/IndefiniteObservable/"
+       children:
+        - page:
+          title: "IndefiniteObservable"
+          url: "/starmap/specifications/streams/IndefiniteObservable/"
      - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
