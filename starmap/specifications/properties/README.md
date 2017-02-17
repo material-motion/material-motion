@@ -1,14 +1,14 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/connections/
+permalink: /starmap/specifications/properties/
 title: Connecting streams with external systems
 status:
   date: December 6, 2016
   is: Draft
 knowledgelevel: L2
-library: streams
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/streams/MotionObservable
+  - /starmap/specifications/observable/MotionObservable
 ---
 
 # Connecting streams with external systems

@@ -5,9 +5,9 @@ status:
   date: December 4, 2016
   is: Draft
 knowledgelevel: L2
-library: streams
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/streams/connections/ReactiveProperty
+  - /starmap/specifications/properties/ReactiveProperty
 ---
 
 # Property names specification

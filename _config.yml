@@ -134,25 +134,19 @@ toc:
        title: "Timeline"
        url: "/starmap/specifications/Timeline"
      - page:
-       title: "Connecting streams"
-       url: "/starmap/specifications/streams/connections/"
+       title: "Reactive properties"
+       url: "/starmap/specifications/properties/"
        children:
         - page:
-          title: "Readable"
-          url: "/starmap/specifications/streams/connections/Readable"
-        - page:
-          title: "Writable"
-          url: "/starmap/specifications/streams/connections/Writable"
-        - page:
           title: "ReactiveProperty"
-          url: "/starmap/specifications/streams/connections/ReactiveProperty"
+          url: "/starmap/specifications/properties/ReactiveProperty"
           children:
            - page:
              title: "createProperty"
-             url: "/starmap/specifications/streams/connections/ReactiveProperty-createProperty"
+             url: "/starmap/specifications/properties/ReactiveProperty-createProperty"
         - page:
           title: "Property names"
-          url: "/starmap/specifications/streams/connections/names"
+          url: "/starmap/specifications/properties/names"
      - page:
        title: "Operators"
        url: "/starmap/specifications/streams/operators/"

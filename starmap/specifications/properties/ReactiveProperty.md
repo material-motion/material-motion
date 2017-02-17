@@ -5,10 +5,9 @@ status:
   date: December 6, 2016
   is: Draft
 knowledgelevel: L2
-library: streams
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/streams/connections/Readable
-  - /starmap/specifications/streams/connections/Writable
+  - /starmap/specifications/observable/MotionObservable
 availability:
   - platform:
     name: Android
