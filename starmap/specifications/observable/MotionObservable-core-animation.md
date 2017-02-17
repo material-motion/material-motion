@@ -1,12 +1,17 @@
 ---
 layout: page
 status:
-  date: December 27, 2016
-  is: Draft
-knowledgelevel: L2
+  date: December 28, 2016
+  is: Stable
+knowledgelevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
+proposals:
+  - proposal:
+    completion_date: December 28, 2016
+    state: Draft
+    discussion: "Core Animation support landed"
 ---
 
 # MotionObservable Core Animation feature specification
@@ -53,84 +58,15 @@ In the following example we create a point spring stream backed by Core Animatio
 operator applied to it.
 
 ```swift
-let spring = Spring<CGPoint>(...)
-
-let springStream = coreAnimationSpringSource(spring)
-
-let xProperty = propertyOf(layer).positionX()
-runtime.write(springStream.x(), to: xProperty)
+let spring = Spring<CGPoint>(..., system: coreAnimation)
+runtime.write(spring.x(), to: layer.positionX)
 ```
 
-We might similarly write the above code using a POP spring source:
+We might similarly write the above code using a POP spring system:
 
 ```swift
-let spring = Spring<CGPoint>(...)
-
-let springStream = popSpringSource(spring)
-
-let xProperty = propertyOf(layer).positionX()
-runtime.write(springStream.x(), to: xProperty)
+let spring = Spring<CGPoint>(..., system: pop)
+runtime.write(spring.x(), to: layer.positionX)
 ```
 
-Note that the only thing we need to change is which source we're using.
-
-## MVP
-
-### Expose a CoreAnimationChannelEvent enum
-
-```swift
-public enum CoreAnimationChannelEvent
-```
-
-### Define two events: add and remove
-
-Add must accept a property animation, a key, a model value, and an optional initial velocity. Remove
-must accept a key.
-
-```swift
-enum CoreAnimationChannelEvent {
-  case add(CAPropertyAnimation, String, modelValue: Any, initialVelocity: Any?)
-  case remove(String)
-}
-```
-
-### Expose a CoreAnimationChannel type
-
-This channel accepts a core animation channel event and returns nothing.
-
-```swift
-public typealias CoreAnimationChannel = (CoreAnimationChannelEvent) -> Void
-```
-
-### Add a coreAnimation channel to MotionObserver
-
-Also require the channel in the observer initializer.
-
-```swift
-class MotionObserver {
-  public const var coreAnimation: CoreAnimationChannel
-```
-
-### Store an optional core animation channel on ReactiveProperty
-
-Provided via an initializer.
-
-```swift
-class ReactiveProperty {
-  private const var _coreAnimation: CoreAnimationChannel?
-```
-
-### Expose a coreAnimation API on ReactiveProperty
-
-The implementation should throw an assertion if no core animation channel was provided. Otherwise
-it should invoke the provided core animation channel.
-
-```swift
-class ReactiveProperty {
-  public func coreAnimation(_ event: CoreAnimationChannelEvent)
-```
-
-### Implement layer properties that support Core Animation
-
-CALayer property implementations are expected to add animations to and remove animations from a
-specific layer.
+Note that the only thing we need to change is which system we're using.
