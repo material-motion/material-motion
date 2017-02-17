@@ -125,10 +125,6 @@ toc:
      - page:
        title: "MotionRuntime"
        url: "/starmap/specifications/streams/MotionRuntime"
-       children:
-        - page:
-          title: "Recursive aggregation"
-          url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
      - page:
        title: "Gesture recognizers"
        url: "/starmap/specifications/gesture_recognizers/"
