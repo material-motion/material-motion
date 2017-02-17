@@ -12,6 +12,10 @@ proposals:
     completion_date: December 28, 2016
     state: Draft
     discussion: "Core Animation support landed"
+availability:
+  - platform:
+    name: Swift
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/MotionObservable.swift
 ---
 
 # MotionObservable Core Animation feature specification
