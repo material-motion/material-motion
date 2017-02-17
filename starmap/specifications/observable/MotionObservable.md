@@ -14,6 +14,7 @@ proposals:
     state: Stable
     discussion: "Stabilized the MotionObservable API"
   - proposal:
+    initiation_date: February 13, 2017
     completion_date: February 17, 2017
     state: Stable
     discussion: "Removed the state channel"
