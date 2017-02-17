@@ -123,6 +123,13 @@ toc:
           title: "Property names"
           url: "/starmap/specifications/properties/names"
      - page:
+       title: "MotionRuntime"
+       url: "/starmap/specifications/streams/MotionRuntime"
+       children:
+        - page:
+          title: "Recursive aggregation"
+          url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
+     - page:
        title: "Gesture recognizers"
        url: "/starmap/specifications/gesture_recognizers/"
        children:
@@ -147,13 +154,6 @@ toc:
      - page:
        title: "Timeline"
        url: "/starmap/specifications/Timeline"
-     - page:
-       title: "MotionRuntime"
-       url: "/starmap/specifications/streams/MotionRuntime"
-       children:
-        - page:
-          title: "Recursive aggregation"
-          url: "/starmap/specifications/streams/MotionRuntime-recursive-aggregation"
      - page:
        title: "Operators"
        url: "/starmap/specifications/streams/operators/"
