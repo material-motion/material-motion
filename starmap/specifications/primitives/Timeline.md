@@ -101,6 +101,16 @@ The stream is expected to subscribe to all of the input properties and, upon cha
 them, emit an updated Snapshot instance. The implementation should only emit when the value has
 changed.
 
+The snapshot is expected to contain the following information:
+
+```swift
+struct Snapshot {
+  const paused: Bool
+  const beginTime: Float
+  const timeOffset: Float
+}
+```
+
 ### Timeline/Interaction coordination
 
 Interactions that support being scrubbed by a Timeline are expected to provide an optional
@@ -112,9 +122,13 @@ class SomeInteraction {
 }
 ```
 
-If Timeline is **not** associated with an interaction, then the interaction should start immediately
-upon registration with the runtime.
+If a timeline **is not** associated with an interaction, then the interaction should start
+immediately upon registration with the runtime.
 
-If a Timeline **is** associated with an interaction, then the interaction should subscribe to the
-`paused` and `timeOffset` properties and react to changes. The interaction should start relative to
-the timeline's beginTime property.
+If a timeline **is** associated with an interaction, then the interaction should subscribe to the
+timeline's stream and react to snapshots. Interactions should set their `beginTime` to the
+timeline's `beginTime`; this ensures that all interactions are scheduled in relation to the
+timeline.
+
+If the timeline is paused, the interaction should update its own `timeOffset` to match the
+timeline's. If the timeline is not paused, the interaction can ignore the `timeOffset`.
