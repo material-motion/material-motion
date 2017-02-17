@@ -7,7 +7,7 @@ status:
 knowledgelevel: L4
 library: streams
 depends_on:
-  - /starmap/specifications/observable/IndefiniteObservable/
+  - /starmap/specifications/observable/IndefiniteObservable
 availability:
   - platform:
     name: Android
