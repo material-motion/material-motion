@@ -20,6 +20,27 @@ In order provide introspection capabilities, each `MotionObservable` instance is
 small amount of meta information about itself. This information is stored in an object called
 `Metadata`.
 
+The metadata is currently being considered for use in visualizing the graph of connected streams in
+a runtime. Example output:
+
+```
+digraph G {
+  node [shape=rect]
+  {"translated(from:in:)(BF5FE183-A435-4FB2-9CA9-8082C3B97D14)" [label="translated(from:\nReactiveProperty<__C.CGPoint>::0x600000178c00,\nin:\nUIView::0x7f848a410900)", style=filled, fillcolor="#DB4437"]} -> {"CALayer::0x60000002d660.position" [label="CALayer::0x60000002d660.position", style=filled, fillcolor="#FFFFFF"]}
+  {"CALayer::0x60000002d660.position" [label="CALayer::0x60000002d660.position", style=filled, fillcolor="#0F9D58"]} -> {"translated(from:in:)(BF5FE183-A435-4FB2-9CA9-8082C3B97D14)" [label="translated(from:\nReactiveProperty<__C.CGPoint>::0x600000178c00,\nin:\nUIView::0x7f848a410900)(BF5FE183-A435-4FB2-9CA9-8082C3B97D14)", style=filled, fillcolor="#FFFFFF"]}
+  {"Gesture Recognizer(029F6C3D-A254-4CE9-B991-F3905AB262EE)" [label="Gesture Recognizer(:\nUIPanGestureRecognizer::0x7f848a513bc0)", style=filled, fillcolor="#FFFFFF"]} -> {"translated(from:in:)(BF5FE183-A435-4FB2-9CA9-8082C3B97D14)" [label="translated(from:\nReactiveProperty<__C.CGPoint>::0x600000178c00,\nin:\nUIView::0x7f848a410900)", style=filled, fillcolor="#DB4437"]}
+  {"Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D)" [label="Core Animation Path Tween(:\nMotionObservable<CoreGraphics.CGFloat>::0x600000246c00)", style=filled, fillcolor="#FFFFFF"]} -> {"CALayer::0x60000002d5e0.position" [label="CALayer::0x60000002d5e0.position", style=filled, fillcolor="#FFFFFF"]}
+  {"PathTween.duration(72BCFA57-F958-4519-A725-316C63792BC3)" [label="PathTween.duration", style=filled, fillcolor="#0F9D58"]} -> {"Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D)" [label="Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D):\nMotionObservable<CoreGraphics.CGFloat>::0x600000246c00", style=filled, fillcolor="#FFFFFF"]}
+  {"arcMove(from:to:)" [label="arcMove(from:\nMotionObservable<__C.CGPoint>::0x6000002468d0,\nto:\nMotionObservable<__C.CGPoint>::0x6000002468a0)", style=filled, fillcolor="#FFFFFF"]} -> {"Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D)" [label="Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D):\nMotionObservable<CoreGraphics.CGFloat>::0x600000246c00", style=filled, fillcolor="#FFFFFF"]}
+  {"CALayer::0x60000002d660.position" [label="CALayer::0x60000002d660.position", style=filled, fillcolor="#0F9D58"]} -> {"arcMove(from:to:)" [label="arcMove(from:\nMotionObservable<__C.CGPoint>::0x6000002468d0,\nto:\nMotionObservable<__C.CGPoint>::0x6000002468a0)", style=filled, fillcolor="#FFFFFF"]}
+  {"CALayer::0x60000002d380.position" [label="CALayer::0x60000002d380.position", style=filled, fillcolor="#0F9D58"]} -> {"arcMove(from:to:)" [label="arcMove(from:\nMotionObservable<__C.CGPoint>::0x6000002468d0,\nto:\nMotionObservable<__C.CGPoint>::0x6000002468a0)", style=filled, fillcolor="#FFFFFF"]}
+  {"PathTween.enabled(E1F7BB29-2A35-438C-A49A-4458161EA08E)" [label="PathTween.enabled", style=filled, fillcolor="#0F9D58"]} -> {"Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D)" [label="Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D):\nMotionObservable<CoreGraphics.CGFloat>::0x600000246c00", style=filled, fillcolor="#FFFFFF"]}
+  {"PathTween.state(E1F7BB29-2A35-438C-A49A-4458161EA08E)" [label="PathTween.state", style=filled, fillcolor="#0F9D58"]} -> {"Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D)" [label="Core Animation Path Tween(F2DC1810-419F-4077-8642-584439BF9D0D):\nMotionObservable<CoreGraphics.CGFloat>::0x600000246c00", style=filled, fillcolor="#FFFFFF"]}
+}
+````
+
+![]({{ site.url }}/assets/stream-visualization.png)
+
 ## MVP
 
 ### Expose a Metadata type
