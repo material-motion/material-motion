@@ -5,7 +5,7 @@ status:
   date: December 4, 2016
   is: Draft
 knowledgelevel: L4
-library: streams
+library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
 ---

@@ -5,7 +5,7 @@ status:
   date: December 7, 2016
   is: Stable
 knowledgelevel: L4
-library: streams
+library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/IndefiniteObservable
 proposals:
