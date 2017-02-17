@@ -1,6 +1,5 @@
 ---
 layout: page
-permalink: /starmap/specifications/L4/IndefiniteObservable/
 title: IndefiniteObservable
 status:
   date: December 4, 2016

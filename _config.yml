@@ -97,7 +97,7 @@ toc:
        children:
         - page:
           title: "IndefiniteObservable"
-          url: "/starmap/specifications/L4/IndefiniteObservable/"
+          url: "/starmap/specifications/L4/IndefiniteObservable"
      - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
