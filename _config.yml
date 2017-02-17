@@ -109,6 +109,20 @@ toc:
              title: "Core Animation"
              url: "/starmap/specifications/observable/MotionObservable-core-animation"
      - page:
+       title: "Reactive properties"
+       url: "/starmap/specifications/properties/"
+       children:
+        - page:
+          title: "ReactiveProperty"
+          url: "/starmap/specifications/properties/ReactiveProperty"
+          children:
+           - page:
+             title: "createProperty"
+             url: "/starmap/specifications/properties/ReactiveProperty-createProperty"
+        - page:
+          title: "Property names"
+          url: "/starmap/specifications/properties/names"
+     - page:
        title: "Gesture recognizers"
        url: "/starmap/specifications/gesture_recognizers/"
        children:
@@ -133,20 +147,6 @@ toc:
      - page:
        title: "Timeline"
        url: "/starmap/specifications/Timeline"
-     - page:
-       title: "Reactive properties"
-       url: "/starmap/specifications/properties/"
-       children:
-        - page:
-          title: "ReactiveProperty"
-          url: "/starmap/specifications/properties/ReactiveProperty"
-          children:
-           - page:
-             title: "createProperty"
-             url: "/starmap/specifications/properties/ReactiveProperty-createProperty"
-        - page:
-          title: "Property names"
-          url: "/starmap/specifications/properties/names"
      - page:
        title: "Operators"
        url: "/starmap/specifications/streams/operators/"
