@@ -21,13 +21,12 @@ proposals:
 availability:
   - platform:
     name: Android
-    label: "streams-android in develop"
-    url: https://github.com/material-motion/streams-android
+    url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionObservable.java
     tests_url: https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java
   - platform:
     name: JavaScript
-    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/MotionObservable.ts
-    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/__tests__/MotionObservable.test.ts
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/MotionObservable.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/__tests__/motionObservable.test.ts
   - platform:
     name: Swift
     url: https://github.com/material-motion/streams-swift/blob/develop/src/MotionObservable.swift
