@@ -125,6 +125,38 @@ tfoot {
   border: none;
 }
 
+.interaction_table {
+  text-align: center;
+}
+.interaction_table .content {
+  margin-top: 16px;
+  background-color: lightgray;
+  display: inline-block;
+  border-radius: 3px;
+  padding: 8px 4px;
+}
+.interaction_table .inputs {
+  text-align: left;
+}
+.interaction_table .outputs {
+  text-align: right;
+}
+.interaction_table .inputs,
+.interaction_table .outputs {
+  min-width: 150px;
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.interaction_table .input::before {
+  content: "○";
+  margin-right: 4px;
+}
+.interaction_table .output::after {
+  content: "○";
+  margin-left: 4px;
+}
+
 // Global transition
 b,
 i,

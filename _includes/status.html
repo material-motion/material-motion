@@ -128,3 +128,21 @@
 </div>
 </div>
 {% endif %}
+
+{% if page.interaction %}
+<div class="interaction_table"><div class="content">
+  <div class="inputs">
+    {% for input in page.interaction.inputs %}
+      <div class="input">{{ input.name }}</div>
+    {% endfor %}
+  </div>
+  <div class="outputs">
+    {% for output in page.interaction.outputs %}
+      <div class="output">{{ output.name }}</div>
+    {% endfor %}
+  </div>
+  <div class="name">
+    {{ page.title }}
+  </div>
+</div></div>
+{% endif %}

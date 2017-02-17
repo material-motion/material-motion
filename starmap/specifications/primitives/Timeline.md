@@ -21,6 +21,18 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/Timeline.swift
+interaction:
+  inputs:
+    - input:
+      name: paused
+      type: Bool
+    - input:
+      name: timeOffset
+      type: Float
+  outputs:
+    - output:
+      name: default
+      type: Timeline.Snapshot
 ---
 
 # Timeline specification
