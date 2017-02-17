@@ -31,7 +31,7 @@ interaction:
       type: Float
   outputs:
     - output:
-      name: default
+      name: changes
       type: Timeline.Snapshot
 ---
 
