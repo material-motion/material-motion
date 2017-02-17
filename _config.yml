@@ -93,7 +93,7 @@ toc:
        url: "/starmap/overview"
      - page:
        title: "L4 APIs"
-       url: "/starmap/specifications/L4/IndefiniteObservable/"
+       url: "/starmap/specifications/L4/"
        children:
         - page:
           title: "IndefiniteObservable"
