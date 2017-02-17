@@ -2,7 +2,7 @@
 layout: page
 title: Metadata
 status:
-  date: December 4, 2016
+  date: February 17, 2016
   is: Draft
 knowledgelevel: L4
 library: reactive-motion
