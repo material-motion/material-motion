@@ -14,7 +14,7 @@ proposals:
     discussion: "Core Animation support landed"
 availability:
   - platform:
-    name: Swift
+    name: iOS (Swift)
     url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/MotionObservable.swift
 ---
 
