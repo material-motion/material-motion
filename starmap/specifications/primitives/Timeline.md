@@ -6,6 +6,8 @@ status:
   is: Draft
 knowledgelevel: L2
 library: reactive-motion
+depends_on:
+  - /starmap/specifications/streams/MotionObservable
 proposals:
   - proposal:
     initiation_date: Nov 11, 2016
@@ -54,25 +56,50 @@ class Timeline {
 }
 ```
 
-### Paused reactive property
+### Input: Paused reactive property
 
 A timeline has a reactive property named `paused` of type `Bool`. The default value is false.
 
 ```swift
 class Timeline {
-  public const paused = createProperty(withInitialValue: false)
+  public const paused: ReactiveProperty<Bool> = createProperty(withInitialValue: false)
 }
 ```
 
-### timeOffset reactive property
+### Input: timeOffset reactive property
 
 A timeline has a reactive property named `timeOffset` of type `Float`. The default value is 0.
 
 ```swift
 class Timeline {
-  public const timeOffset = createProperty(withInitialValue: CGFloat(0))
+  public const timeOffset: ReactiveProperty<Float> = createProperty(withInitialValue: 0)
 }
 ```
+
+### Constant: beginTime
+
+A timeline has a constant named `beginTime` of type `Float`. The default value is the time at which
+the timeline was created.
+
+```swift
+class Timeline {
+  public const beginTime: Float = Time.Now()
+}
+```
+
+### Output: snapshots
+
+A timeline can be converted to a MotionObservable that emits snapshots of the timeline's state.
+
+```swift
+class Timeline {
+  public func asStream() -> MotionObservable<Timeline.Snapshot>
+}
+```
+
+The stream is expected to subscribe to all of the input properties and, upon changes from any of
+them, emit an updated Snapshot instance. The implementation should only emit when the value has
+changed.
 
 ### Timeline/Interaction coordination
 
@@ -89,4 +116,5 @@ If Timeline is **not** associated with an interaction, then the interaction shou
 upon registration with the runtime.
 
 If a Timeline **is** associated with an interaction, then the interaction should subscribe to the
-`paused` and `timeOffset` properties and react to changes.
+`paused` and `timeOffset` properties and react to changes. The interaction should start relative to
+the timeline's beginTime property.
