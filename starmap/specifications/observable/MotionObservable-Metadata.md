@@ -21,7 +21,23 @@ small amount of meta information about itself. This information is stored in an 
 `Metadata`.
 
 The metadata is currently being considered for use in visualizing the graph of connected streams in
-a runtime. Example output:
+a runtime. Example code:
+
+```swift
+runtime.add(Draggable(), to: square)
+
+timeline.timeOffset.value = CGFloat(slider.value * 0.4)
+timeline.paused.value = true
+
+let arcMove = ArcMove(duration: 0.4,
+                      from: runtime.get(square.layer).position,
+                      to: runtime.get(circle.layer).position,
+                      system: coreAnimation)
+arcMove.timeline = timeline
+runtime.add(arcMove, to: square2)
+```
+
+Example output:
 
 ```
 digraph G {
