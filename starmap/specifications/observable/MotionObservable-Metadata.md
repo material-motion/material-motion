@@ -8,6 +8,11 @@ knowledgelevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
+proposals:
+  - proposal:
+    initiation_date: February 17, 2017
+    state: Draft
+    discussion: "Added example graphviz output"
 ---
 
 # Metadata feature specification for MotionObservable
