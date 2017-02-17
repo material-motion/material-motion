@@ -132,3 +132,5 @@ timeline.
 
 If the timeline is paused, the interaction should update its own `timeOffset` to match the
 timeline's. If the timeline is not paused, the interaction can ignore the `timeOffset`.
+
+![]({{ site.url }}/assets/timeline.svg)
