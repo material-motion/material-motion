@@ -6,7 +6,7 @@ status:
 knowledgelevel: L2
 library: streams
 depends_on:
-  - /starmap/specifications/L4/MotionObservable/
+  - /starmap/specifications/observable/MotionObservable/
 ---
 
 # MotionObservable Core Animation feature specification

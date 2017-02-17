@@ -92,22 +92,22 @@ toc:
        title: "Overview"
        url: "/starmap/overview"
      - page:
-       title: "L4 APIs"
-       url: "/starmap/specifications/L4/"
+       title: "Observable pattern"
+       url: "/starmap/specifications/observable/"
        children:
         - page:
           title: "IndefiniteObservable"
-          url: "/starmap/specifications/L4/IndefiniteObservable"
+          url: "/starmap/specifications/observable/IndefiniteObservable"
         - page:
           title: "MotionObservable"
-          url: "/starmap/specifications/L4/MotionObservable"
+          url: "/starmap/specifications/observable/MotionObservable"
           children:
            - page:
              title: "Metadata"
-             url: "/starmap/specifications/L4/MotionObservable-Metadata"
+             url: "/starmap/specifications/observable/MotionObservable-Metadata"
            - page:
              title: "Core Animation"
-             url: "/starmap/specifications/L4/MotionObservable-core-animation"
+             url: "/starmap/specifications/observable/MotionObservable-core-animation"
      - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
