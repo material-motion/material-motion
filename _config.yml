@@ -98,6 +98,16 @@ toc:
         - page:
           title: "IndefiniteObservable"
           url: "/starmap/specifications/L4/IndefiniteObservable"
+        - page:
+          title: "MotionObservable"
+          url: "/starmap/specifications/L4/MotionObservable"
+          children:
+           - page:
+             title: "Metadata"
+             url: "/starmap/specifications/L4/MotionObservable-Metadata"
+           - page:
+             title: "Core Animation"
+             url: "/starmap/specifications/L4/MotionObservable-core-animation"
      - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
@@ -136,16 +146,6 @@ toc:
          - page:
            title: "Streams"
            url: "/starmap/specifications/primitives/streams/"
-     - page:
-       title: "MotionObservable"
-       url: "/starmap/specifications/streams/MotionObservable"
-       children:
-        - page:
-          title: "Metadata"
-          url: "/starmap/specifications/streams/MotionObservable-Metadata"
-        - page:
-          title: "Core Animation"
-          url: "/starmap/specifications/streams/MotionObservable-core-animation"
      - page:
        title: "Connecting streams"
        url: "/starmap/specifications/streams/connections/"

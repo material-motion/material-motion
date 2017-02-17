@@ -7,7 +7,7 @@ status:
 knowledgelevel: L4
 library: streams
 depends_on:
-  - /starmap/specifications/streams/MotionObservable
+  - /starmap/specifications/L4/MotionObservable
 ---
 
 # Metadata feature specification for MotionObservable
