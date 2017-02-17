@@ -10,11 +10,11 @@ depends_on:
   - /starmap/specifications/observable/IndefiniteObservable
 proposals:
   - proposal:
-    initiation_date: December 7, 2017
+    completion_date: December 7, 2017
     state: Stable
     discussion: "Stabilized the MotionObservable API"
   - proposal:
-    initiation_date: February 17, 2017
+    completion_date: February 17, 2017
     state: Stable
     discussion: "Removed the state channel"
 availability:
