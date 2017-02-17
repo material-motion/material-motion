@@ -109,43 +109,30 @@ toc:
              title: "Core Animation"
              url: "/starmap/specifications/observable/MotionObservable-core-animation"
      - page:
-       title: "Motion primitives"
-       url: "/starmap/specifications/primitives/"
+       title: "Gesture recognizers"
+       url: "/starmap/specifications/primitives/gesture_recognizers/"
        children:
-         - page:
-           title: "Gesture recognizers"
-           url: "/starmap/specifications/primitives/gesture_recognizers/"
-           children:
-             - page:
-               title: "GestureRecognizer"
-               url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
-             - page:
-               title: "RotationGestureRecognizer"
-               url: "/starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer"
-             - page:
-               title: "ScaleGestureRecognizer"
-               url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
-             - page:
-               title: "TranslationGestureRecognizer"
-               url: "/starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer"
-             - page:
-               title: "Simultaneous recognition"
-               url: "/starmap/specifications/primitives/gesture_recognizers/simultaneous_recognition"
-             - page:
-               title: "Dependent gestures"
-               url: "/starmap/specifications/primitives/gesture_recognizers/dependent_gestures"
-         - page:
-           title: "Tweens"
-           url: "/starmap/specifications/primitives/tweens"
-         - page:
-           title: "Applied forces"
-           url: "/starmap/specifications/primitives/applied_forces"
-         - page:
-           title: "Timeline"
-           url: "/starmap/specifications/primitives/Timeline"
-         - page:
-           title: "Streams"
-           url: "/starmap/specifications/primitives/streams/"
+        - page:
+          title: "GestureRecognizer"
+          url: "/starmap/specifications/primitives/gesture_recognizers/GestureRecognizer"
+        - page:
+          title: "RotationGestureRecognizer"
+          url: "/starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer"
+        - page:
+          title: "ScaleGestureRecognizer"
+          url: "/starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer"
+        - page:
+          title: "TranslationGestureRecognizer"
+          url: "/starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer"
+        - page:
+          title: "Simultaneous recognition"
+          url: "/starmap/specifications/primitives/gesture_recognizers/simultaneous_recognition"
+        - page:
+          title: "Dependent gestures"
+          url: "/starmap/specifications/primitives/gesture_recognizers/dependent_gestures"
+     - page:
+       title: "Timeline"
+       url: "/starmap/specifications/primitives/Timeline"
      - page:
        title: "Connecting streams"
        url: "/starmap/specifications/streams/connections/"
