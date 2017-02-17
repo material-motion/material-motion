@@ -31,21 +31,11 @@ This is the engineering specification for the `MotionObservable` object.
 ## Overview
 
 `MotionObservable` is a specialization of [`IndefiniteObservable`](IndefiniteObservable).
-`MotionObservable` includes two channels: `next` and `state`.
+
+The purpose of this specialization is to provide a canonical scope for building motion-related
+operators.
 
 ## MVP
-
-### Expose a State enumeration
-
-Should include two possible states: `atRest` and `active`. If you must give the states numerical
-values then make `atRest = 0` and `active = 1`.
-
-```swift
-public enum MotionState {
-  case atRest
-  case active
-}
-```
 
 ### Expose a MotionObserver API
 
@@ -55,13 +45,11 @@ Provide a class for creating a motion observer using inline functions.
 public final class MotionObserver<T> {
   public typealias Value = T
 
-  public init(_ next: (T) -> Void, state: (MotionState) -> Void) {
+  public init(_ next: (T) -> Void) {
     self.next = next
-    self.state = state
   }
 
   public const var next: (T) -> Void
-  public const var state: (MotionState) -> Void
 }
 ```
 
