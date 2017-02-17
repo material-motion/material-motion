@@ -7,8 +7,6 @@ status:
   is: Draft
 knowledgelevel: L2
 library: reactive-motion
-depends_on:
-  - /starmap/specifications/observable/MotionObservable
 ---
 
 # Connecting streams with external systems
