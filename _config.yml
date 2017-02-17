@@ -92,6 +92,9 @@ toc:
        title: "Overview"
        url: "/starmap/overview"
      - page:
+       title: "IndefiniteObservable"
+       url: "/starmap/specifications/streams/IndefiniteObservable/"
+     - page:
        title: "Motion primitives"
        url: "/starmap/specifications/primitives/"
        children:
@@ -129,9 +132,6 @@ toc:
          - page:
            title: "Streams"
            url: "/starmap/specifications/primitives/streams/"
-     - page:
-       title: "IndefiniteObservable"
-       url: "/starmap/specifications/streams/IndefiniteObservable/"
      - page:
        title: "MotionObservable"
        url: "/starmap/specifications/streams/MotionObservable"
