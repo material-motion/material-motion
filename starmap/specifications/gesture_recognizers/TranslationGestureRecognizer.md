@@ -7,7 +7,7 @@ status:
 knowledgelevel: L2
 library: gestures
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
+  - /starmap/specifications/gesture_recognizers/GestureRecognizer
 availability:
   - platform:
     name: Android
@@ -23,8 +23,8 @@ This is the engineering specification for the `TranslationGestureRecognizer` obj
 
 ## Overview
 
-A drag gesture recognizer listens to input events and generates translation events relative to an
-initial position.
+A translation gesture recognizer listens to input events and generates translation events relative
+to an initial position.
 
 If multiple input events are being received simultaneously — e.g. multiple fingers — then the
 centroid of the events should be used in all calculations.

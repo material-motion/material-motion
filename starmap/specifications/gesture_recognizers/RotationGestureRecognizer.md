@@ -7,7 +7,7 @@ status:
 knowledgelevel: L2
 library: gestures
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
+  - /starmap/specifications/gesture_recognizers/GestureRecognizer
 availability:
   - platform:
     name: Android

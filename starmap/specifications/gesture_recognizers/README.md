@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Gesture recognizer specification
-permalink: /starmap/specifications/primitives/gesture_recognizers/
+knowledgelevel: L2
+library: gestures
+permalink: /starmap/specifications/gesture_recognizers/
 status:
   date: December 20, 2016
   is: Stable
