@@ -12,7 +12,7 @@ proposals:
   - proposal:
     initiation_date: February 17, 2017
     state: Draft
-    discussion: "Added example graphviz output"
+    discussion: "Drafting graphviz output"
 ---
 
 # Metadata feature specification for MotionObservable
