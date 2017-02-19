@@ -31,6 +31,12 @@ This is the engineering specification for the `ReactiveProperty` concrete type.
 
 `ReactiveProperty` defines an interface for reading, writing, and subscribing to updates of a value.
 
+*Writing to a property*
+
+```swift
+spring.destination.value = 100
+```
+
 *Observing changes to a spring's destination reactive property*
 
 ```swift
