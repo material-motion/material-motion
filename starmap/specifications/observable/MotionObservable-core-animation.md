@@ -10,7 +10,7 @@ depends_on:
 proposals:
   - proposal:
     completion_date: December 28, 2016
-    state: Draft
+    state: Stable
     discussion: "Core Animation support landed"
 availability:
   - platform:
