@@ -13,6 +13,10 @@ proposals:
     initiation_date: February 17, 2017
     state: Draft
     discussion: "Drafting graphviz output"
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/Metadata.swift
 ---
 
 # Metadata feature specification for MotionObservable
