@@ -2,8 +2,8 @@
 layout: page
 title: ReactiveProperty
 status:
-  date: December 6, 2016
-  is: Draft
+  date: February 19, 2017
+  is: Stable
 knowledgelevel: L2
 library: reactive-motion
 depends_on:
@@ -11,10 +11,15 @@ depends_on:
 availability:
   - platform:
     name: Android
-    url: https://github.com/material-motion/streams-android
+    url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/ReactiveProperty.java
   - platform:
-    name: Swift
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/properties/ReactiveProperty.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/properties/__tests__/reactiveProperty.test.ts
+  - platform:
+    name: iOS (Swift)
     url: https://github.com/material-motion/streams-swift/blob/develop/src/ReactiveProperty.swift
+    tests_url: https://github.com/material-motion/reactive-motion-swift/blob/develop/tests/unit/ReactivePropertyTests.swift
 ---
 
 # ReactiveProperty specification
