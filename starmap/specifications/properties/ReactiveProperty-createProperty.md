@@ -19,7 +19,8 @@ This is the engineering specification for the `createProperty` API.
 
 ## Overview
 
-`createProperty(withInitialValue:)` creates a new ReactiveProperty with a given initial value.
+`createProperty(withInitialValue:)` creates a **anonymous** ReactiveProperty with a given initial
+value.
 
 ```swift
 const var someProperty = createProperty(withInitialValue: 20)
