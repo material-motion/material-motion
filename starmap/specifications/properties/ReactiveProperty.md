@@ -51,38 +51,47 @@ const var subscription = spring.destination.subscribe { destination in
 ### Expose a concrete ReactiveProperty API
 
 ```swift
-public typealias ScopedRead<T> = () -> T
-public typealias ScopedWrite<T> = (T) -> Void
-
-public class ScopedReactiveProperty<T>: ScopedReadable<T>, ScopedWritable<T> {
-  private const var _read: ScopedRead
-  private const var _write: ScopedWrite
-
-  public init(read: ScopedRead, write: ScopedWrite) {
-    self._read = read
-    self._write = write
-  }
+public class ReactiveProperty<T> {
 }
 ```
 
-### Expose subscribe APIs
+### Expose an initializer for anonymous properties
+
+The initializer should accept an initial value. Such properties are called *anonymous properties*.
+
+```swift
+class ReactiveProperty<T> {
+  public init(initialValue: T)
+}
+```
+
+### Expose an initializer for external properties
+
+The initializer should accept an initial value and an externalWrite.
+
+```swift
+class ReactiveProperty<T> {
+  public init(initialValue: T, externalWrite: (T) -> Void)
+}
+```
+
+### Expose a value API
+
+Any writes to this value should be immediately propagated to all subscribed observers.
+
+```swift
+class ReactiveProperty<T> {
+  public var value: T
+}
+```
+
+### Expose a subscribe APIs
 
 Expose a MotionObserver-shaped subscribe API that accepts a next function.
 
 ```swift
 class ReactiveProperty {
   public func subscribe(next: (T) -> Void) -> Subscription
-```
-
-### Expose a read API
-
-Should invoke the provided read function.
-
-```swift
-class ReactiveProperty {
-  public func read() -> T {
-    return self._read()
-  }
 ```
 
 ### Store a list of MotionObserver instances
@@ -101,42 +110,29 @@ class ReactiveProperty {
     observers.append(observer)
 ```
 
-### Subscribe invokes the observer's next function with the current read value
+### Subscribe invokes the observer's next function with the current value
 
 ```swift
 class ReactiveProperty {
   func subscribe(next: (T) -> Void) -> Subscription {
     ...
 
-    observer.next(read())
+    observer.next(value)
 ```
 
-### Subscribe returns a Subscription instance
-
-The unsubscribe implementation should remove the observer from the list of observers.
-
-```swift
-class ReactiveProperty {
-  func subscribe(next: (T) -> Void) -> Subscription {
-    ...
-
-    return Subscription {
-      <remove the observer>
-    }
-  }
-```
-
-### Expose a write API
+### Changes to value should propagate to all observers
 
 Invokes the provided write function and informs all subscribed observers of the new value.
 
 ```swift
 class ReactiveProperty {
-  public func write(_ value: T) {
-    self._write(value)
+  public var value: T {
+    didSet {
+      _externalWrite?(newValue)
 
-    for observer in self.observers {
-      observer.next(value)
+      for observer in observers {
+        observer.next(newValue)
+      }
     }
   }
 ```
