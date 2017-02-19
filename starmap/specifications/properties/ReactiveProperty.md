@@ -85,7 +85,7 @@ class ReactiveProperty<T> {
 }
 ```
 
-### Expose a subscribe APIs
+### Expose a subscribe API
 
 Expose a MotionObserver-shaped subscribe API that accepts a next function.
 
