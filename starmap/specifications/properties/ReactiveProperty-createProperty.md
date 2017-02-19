@@ -36,22 +36,10 @@ It should be genericized on type T.
 public func createProperty<T>(withInitialValue initialValue: T) -> ReactiveProperty<T>
 ```
 
-### Create a modifiable local variable
-
-This is only necessary if arguments in your language are constant by default.
+### Return a ReactiveProperty instance
 
 ```swift
-func createProperty<T>(withInitialValue initialValue: T) -> ReactiveProperty<T> {
-  var value = initialValue
-  ...
-}
-```
-
-### Return a ReactiveProperty instance backed by the local variable
-
-```swift
-func createProperty<T>(withInitialValue initialValue: T) -> ReactiveProperty<T> {
-  ...
-  return ReactiveProperty(read: { value }, write: { value = $0 })
+func createProperty<T>(withInitialValue value: T) -> ReactiveProperty<T> {
+  return ReactiveProperty(withInitialValue: value)
 }
 ```
