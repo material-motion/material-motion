@@ -45,7 +45,8 @@ Animation-backed animations that work in a platform-expected manner.
 
 ### Why don't we emit the animation object on the next channel?
 
-So that we may maximize interoperability with existing operators and interactions.
+We make use of a separate core animation channel so that we may maximize interoperability with
+existing operators and interactions.
 
 If we emitted a different `T` value for Core Animation-based streams then we'd have to introduce a
 new class of operators, interactions, and properties that support these distinct `T` types. While
@@ -55,8 +56,6 @@ to rewrite all related code to handle the distinct types.
 
 This spec has decided to lean towards improving the quality of life for an L2 engineer at the cost
 of increased complexity in the MotionObservable implementation.
-
-## Examples
 
 In the following example we create a point spring stream backed by Core Animation with a `x()`
 operator applied to it.
@@ -74,3 +73,8 @@ runtime.write(spring.x(), to: layer.positionX)
 ```
 
 Note that the only thing we need to change is which system we're using.
+
+### Operator support
+
+Operators can still be applied to Core Animation streams, making it possible to transform or filter
+Core Animation objects before they're ultimately written to a layer.
