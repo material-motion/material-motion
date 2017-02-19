@@ -14,17 +14,17 @@ This is the engineering specification for connecting streams with external infor
 
 ## Overview
 
-The two primary flows of information that we care about are:
+There are two flows of information in reactive architecture:
 
-- **Inputs**: values that are read into a reactive motion stream.
-- **Outputs**: values that are written from a reactive motion stream.
+- **Inputs**: values that are read into a stream.
+- **Outputs**: values that are written from a stream.
 
 ### Systems generate dynamic values
 
 A **system** is a MotionObservable connect function that generates values and emits them to a
-MotionObservable. Systems can be thought of as entry-points for reactive motion. Systems are
-generally **reactively configurable**, meaning changes to their configuration will be immediately
-reflected in the values they emit.
+MotionObservable. Systems can be thought of as entry-points for streams. Systems are generally
+**reactively configurable**, meaning changes to their configuration will be immediately reflected in
+the values they emit.
 
 Some example systems include:
 
