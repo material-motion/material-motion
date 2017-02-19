@@ -1,39 +1,45 @@
 ---
 layout: page
 permalink: /starmap/specifications/properties/
-title: Connecting streams with external systems
 status:
-  date: December 6, 2016
-  is: Draft
+  date: February 19, 2017
+  is: Stable
 knowledgelevel: L2
 library: reactive-motion
 ---
 
 # Connecting streams with external systems
 
-This is the engineering specification for connecting motion streams with external systems.
+This is the engineering specification for connecting streams with external systems.
 
 ## Overview
 
 There are two primary flows of data we care about:
 
-- **Read**: values that are read into a Material Motion stream.
-- **Write**: values that are written from a Material Motion stream.
+- **In**: values that are read into a reactive motion stream.
+- **Out**: values that are written from a reactive motion stream.
 
-## Connection types
+### Systems: reading data in
 
-There are two primary ways to read or write a value: **Scoped** and **Unscoped**.
+A **system** is a MotionObservable connect function implementation that reads data from some
+external system and writes it to a MotionObservable. Systems can be thought of as entry-points for
+reactive motion.
 
-| Option Number | Name                   | Readable connections             | Writable connections                  |
-|:--------------|:-----------------------|:---------------------------------|:---------------------------------------|
-| 1.            | Scoped Property        | `propertyOf(view).positionX`     | `propertyOf(view).positionX`           |
-| 2.            | Unscoped Property      | `source: view, property: View.X` | `target: view, property: View.X`       |
-| 1. variant    | Inline scoped property | `{ return view.position.x }`     | `{ value in view.position.x = value }` |
+Some example systems include:
 
-The above connection types are guidelines around the shape of connections. A given platform must
-provide at least one mechanism but likely won't need to provide both. Pick the one that makes the
-most sense for your platform and build the stack with that first.
+- Scroll events from a scroll view.
+- Values from a physics simulation.
+- Interpolated values.
+- Gesture recognition events.
 
-A **Scoped Property** is a property instance that writes to a *specific* target.
+### Properties: writing data out
 
-An **Unscoped Property** is a property instance that can write to *any* target.
+A **property** is a target to which a MotionObservable can be written. Properties are often a
+representation of some thing that's external to the reactive motion runtime. Properties can also be
+*anonymous*, meaning they have no external representation.
+
+Some example properties that represent values external to reactive motion:
+
+- A view's position.
+- A view's opacity.
+- Values for some business logic.
