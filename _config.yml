@@ -143,31 +143,6 @@ toc:
              title: "$._filter"
              url: "/starmap/specifications/operators/foundation/$._filter"
         - page:
-          title: "Arithmetic"
-          url: "/starmap/specifications/operators/arithmetic/"
-          children:
-           - page:
-             title: "$.distanceFrom"
-             url: "/starmap/specifications/operators/arithmetic/$.distanceFrom"
-           - page:
-             title: "$.lowerBound"
-             url: "/starmap/specifications/operators/arithmetic/$.lowerBound"
-           - page:
-             title: "$.upperBound"
-             url: "/starmap/specifications/operators/arithmetic/$.upperBound"
-           - page:
-             title: "$.normalized"
-             url: "/starmap/specifications/operators/arithmetic/$.normalized"
-           - page:
-             title: "$.offset"
-             url: "/starmap/specifications/operators/arithmetic/$.offset"
-           - page:
-             title: "$.scaled"
-             url: "/starmap/specifications/operators/arithmetic/$.scaled"
-           - page:
-             title: "$.subtracted"
-             url: "/starmap/specifications/operators/arithmetic/$.subtracted"
-        - page:
           title: "Debugging"
           url: "/starmap/specifications/operators/debugging/"
           children:
@@ -194,14 +169,35 @@ toc:
              title: "$.velocity"
              url: "/starmap/specifications/operators/gesture/$.velocity"
         - page:
+          title: "$.distanceFrom"
+          url: "/starmap/specifications/operators/arithmetic/$.distanceFrom"
+        - page:
+          title: "$.lowerBound"
+          url: "/starmap/specifications/operators/arithmetic/$.lowerBound"
+        - page:
           title: "$.mapTo"
           url: "/starmap/specifications/operators/$.mapTo"
+        - page:
+          title: "$.normalized"
+          url: "/starmap/specifications/operators/arithmetic/$.normalized"
+        - page:
+          title: "$.offset"
+          url: "/starmap/specifications/operators/arithmetic/$.offset"
         - page:
           title: "$.rewrite"
           url: "/starmap/specifications/operators/$.rewrite"
         - page:
+          title: "$.scaled"
+          url: "/starmap/specifications/operators/arithmetic/$.scaled"
+        - page:
+          title: "$.subtracted"
+          url: "/starmap/specifications/operators/arithmetic/$.subtracted"
+        - page:
           title: "$.toggled"
           url: "/starmap/specifications/operators/$.toggled"
+        - page:
+          title: "$.upperBound"
+          url: "/starmap/specifications/operators/arithmetic/$.upperBound"
         - page:
           title: "$.x"
           url: "/starmap/specifications/operators/$.x"
