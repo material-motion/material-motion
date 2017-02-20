@@ -127,87 +127,87 @@ toc:
        url: "/starmap/specifications/runtime/"
      - page:
        title: "Operators"
-       url: "/starmap/specifications/streams/operators/"
+       url: "/starmap/specifications/operators/"
        children:
         - page:
           title: "Foundation"
-          url: "/starmap/specifications/streams/operators/foundation/"
+          url: "/starmap/specifications/operators/foundation/"
           children:
            - page:
              title: "$._nextOperator"
-             url: "/starmap/specifications/streams/operators/foundation/$._nextOperator"
+             url: "/starmap/specifications/operators/foundation/$._nextOperator"
            - page:
              title: "$._map"
-             url: "/starmap/specifications/streams/operators/foundation/$._map"
+             url: "/starmap/specifications/operators/foundation/$._map"
            - page:
              title: "$._filter"
-             url: "/starmap/specifications/streams/operators/foundation/$._filter"
+             url: "/starmap/specifications/operators/foundation/$._filter"
         - page:
           title: "Arithmetic"
-          url: "/starmap/specifications/streams/operators/arithmetic/"
+          url: "/starmap/specifications/operators/arithmetic/"
           children:
            - page:
              title: "$.distance"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.distance"
+             url: "/starmap/specifications/operators/arithmetic/$.distance"
            - page:
              title: "$.min"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.min"
+             url: "/starmap/specifications/operators/arithmetic/$.min"
            - page:
              title: "$.max"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.max"
+             url: "/starmap/specifications/operators/arithmetic/$.max"
            - page:
              title: "$.normalized"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.normalized"
+             url: "/starmap/specifications/operators/arithmetic/$.normalized"
            - page:
              title: "$.offset"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.offset"
+             url: "/starmap/specifications/operators/arithmetic/$.offset"
            - page:
              title: "$.scaled"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.scaled"
+             url: "/starmap/specifications/operators/arithmetic/$.scaled"
            - page:
              title: "$.subtracted"
-             url: "/starmap/specifications/streams/operators/arithmetic/$.subtracted"
+             url: "/starmap/specifications/operators/arithmetic/$.subtracted"
         - page:
           title: "Debugging"
-          url: "/starmap/specifications/streams/operators/debugging/"
+          url: "/starmap/specifications/operators/debugging/"
           children:
            - page:
              title: "$.log"
-             url: "/starmap/specifications/streams/operators/debugging/$.log"
+             url: "/starmap/specifications/operators/debugging/$.log"
         - page:
           title: "Gesture"
-          url: "/starmap/specifications/streams/operators/gesture/"
+          url: "/starmap/specifications/operators/gesture/"
           children:
            - page:
              title: "$.centroid"
-             url: "/starmap/specifications/streams/operators/gesture/$.centroid"
+             url: "/starmap/specifications/operators/gesture/$.centroid"
            - page:
              title: "$.onRecognitionState"
-             url: "/starmap/specifications/streams/operators/gesture/$.onRecognitionState"
+             url: "/starmap/specifications/operators/gesture/$.onRecognitionState"
            - page:
              title: "$.onRecognitionStates"
-             url: "/starmap/specifications/streams/operators/gesture/$.onRecognitionStates"
+             url: "/starmap/specifications/operators/gesture/$.onRecognitionStates"
            - page:
              title: "$.translated"
-             url: "/starmap/specifications/streams/operators/gesture/$.translated"
+             url: "/starmap/specifications/operators/gesture/$.translated"
            - page:
              title: "$.velocity"
-             url: "/starmap/specifications/streams/operators/gesture/$.velocity"
+             url: "/starmap/specifications/operators/gesture/$.velocity"
         - page:
           title: "$.mapTo"
-          url: "/starmap/specifications/streams/operators/$.mapTo"
+          url: "/starmap/specifications/operators/$.mapTo"
         - page:
           title: "$.rewrite"
-          url: "/starmap/specifications/streams/operators/$.rewrite"
+          url: "/starmap/specifications/operators/$.rewrite"
         - page:
           title: "$.toggled"
-          url: "/starmap/specifications/streams/operators/$.toggled"
+          url: "/starmap/specifications/operators/$.toggled"
         - page:
           title: "$.x"
-          url: "/starmap/specifications/streams/operators/$.x"
+          url: "/starmap/specifications/operators/$.x"
         - page:
           title: "$.y"
-          url: "/starmap/specifications/streams/operators/$.y"
+          url: "/starmap/specifications/operators/$.y"
      - page:
        title: "Systems"
        url: "/starmap/specifications/streams/sources/"

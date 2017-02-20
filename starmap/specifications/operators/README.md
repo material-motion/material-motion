@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/operators/
+permalink: /starmap/specifications/operators/
 ---
 
 # Operators
