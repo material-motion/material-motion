@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/operators/debugging/
+permalink: /starmap/specifications/operators/debugging/
 ---
 
 # Debugging operators

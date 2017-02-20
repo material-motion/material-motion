@@ -1,7 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/operators/foundation/
-title: Foundation operators
+permalink: /starmap/specifications/operators/foundation/
 ---
 
 # Foundation operators

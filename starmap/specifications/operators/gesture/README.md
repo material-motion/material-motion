@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/operators/gesture/
+permalink: /starmap/specifications/operators/gesture/
 ---
 
 # Gesture operators

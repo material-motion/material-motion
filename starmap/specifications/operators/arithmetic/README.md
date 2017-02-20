@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/streams/operators/arithmetic/
+permalink: /starmap/specifications/operators/arithmetic/
 ---
 
 # Arithmetic operators
