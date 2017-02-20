@@ -124,7 +124,7 @@ toc:
           url: "/starmap/specifications/properties/names"
      - page:
        title: "MotionRuntime"
-       url: "/starmap/specifications/streams/MotionRuntime"
+       url: "/starmap/specifications/runtime/"
      - page:
        title: "Operators"
        url: "/starmap/specifications/streams/operators/"
