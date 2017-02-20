@@ -1,7 +1,6 @@
 ---
 layout: page
 permalink: /starmap/specifications/
-title: Engineering spec
 ---
 
 # Engineering spec

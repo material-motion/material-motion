@@ -6,7 +6,7 @@ status:
   date: February 20, 2016
   is: Stable
 knowledgelevel: L1
-library: streams
+library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
 availability:

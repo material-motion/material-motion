@@ -37,19 +37,35 @@
 </table>
 {% endif %}
 
-{% if page.status or page.knowledgelevel or page.library %}
+{% if page.status or page.interfacelevel or page.implementationlevel or page.library %}
 <table class="platform_table">
   <thead><tr>
 {% if page.status %}<th>Status</th>{% endif %}
-{% if page.knowledgelevel %}<th><a href="{{ site.url }}/starmap/overview">Knowledge level</a></th>{% endif %}
+{% if page.interfacelevel %}<th><a href="{{ site.url }}/starmap/overview">Interface level</a></th>{% endif %}
+{% if page.implementationlevel %}<th><a href="{{ site.url }}/starmap/overview">Implementation level</a></th>{% endif %}
 {% if page.library %}<th>Library</th>{% endif %}
 </tr></thead>
 <tr>
 {% if page.status %}<td><strong>{{ page.status.is }}</strong> as of {{ page.status.date }}</td>{% endif %}
-{% if page.knowledgelevel %}
+{% if page.interfacelevel %}
 <td>
-{{ page.knowledgelevel }}: 
-{% case page.knowledgelevel %}
+{{ page.interfacelevel }}: 
+{% case page.interfacelevel %}
+  {% when 'L1' %}
+    App creator
+  {% when 'L2' %}
+    Interaction creator
+  {% when 'L3' %}
+    Stream creator
+  {% else %}
+    Runtime engineering
+{% endcase %}
+</td>
+{% endif %}
+{% if page.implementationlevel %}
+<td>
+{{ page.implementationlevel }}: 
+{% case page.implementationlevel %}
   {% when 'L1' %}
     App creator
   {% when 'L2' %}

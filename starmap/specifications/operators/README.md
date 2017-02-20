@@ -1,6 +1,8 @@
 ---
 layout: page
 permalink: /starmap/specifications/operators/
+knowledgelevel: L3
+library: streams
 ---
 
 # Operators

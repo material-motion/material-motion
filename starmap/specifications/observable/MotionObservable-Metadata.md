@@ -4,7 +4,8 @@ title: Metadata
 status:
   date: February 17, 2017
   is: Draft
-knowledgelevel: L4
+interfacelevel: L3
+implementationlevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable

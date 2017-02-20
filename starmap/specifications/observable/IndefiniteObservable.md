@@ -4,7 +4,8 @@ title: IndefiniteObservable
 status:
   date: December 4, 2016
   is: Stable
-knowledgelevel: L4
+interfacelevel: L4
+implementationlevel: L4
 library: indefinite-observable
 availability:
   - platform:
