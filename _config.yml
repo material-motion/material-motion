@@ -189,7 +189,7 @@ toc:
              url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIsAnyOf"
            - page:
              title: "$.translationRelativeTo"
-             url: "/starmap/specifications/operators/gesture/$.translationRelativeTo"
+             url: "/starmap/specifications/operators/gesture/$.translationAddedTo"
            - page:
              title: "$.velocity"
              url: "/starmap/specifications/operators/gesture/$.velocity"
