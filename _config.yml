@@ -150,11 +150,11 @@ toc:
              title: "$.distanceFrom"
              url: "/starmap/specifications/operators/arithmetic/$.distanceFrom"
            - page:
-             title: "$.min"
-             url: "/starmap/specifications/operators/arithmetic/$.min"
+             title: "$.lowerBound"
+             url: "/starmap/specifications/operators/arithmetic/$.lowerBound"
            - page:
-             title: "$.max"
-             url: "/starmap/specifications/operators/arithmetic/$.max"
+             title: "$.upperBound"
+             url: "/starmap/specifications/operators/arithmetic/$.upperBound"
            - page:
              title: "$.normalized"
              url: "/starmap/specifications/operators/arithmetic/$.normalized"
