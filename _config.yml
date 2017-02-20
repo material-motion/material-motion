@@ -147,8 +147,8 @@ toc:
           url: "/starmap/specifications/operators/arithmetic/"
           children:
            - page:
-             title: "$.distance"
-             url: "/starmap/specifications/operators/arithmetic/$.distance"
+             title: "$.distanceFrom"
+             url: "/starmap/specifications/operators/arithmetic/$.distanceFrom"
            - page:
              title: "$.min"
              url: "/starmap/specifications/operators/arithmetic/$.min"
