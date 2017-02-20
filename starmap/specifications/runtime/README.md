@@ -29,7 +29,7 @@ This is the engineering specification for the `MotionRuntime` object.
 
 A `MotionRuntime`'s primary responsibility is to write the output of streams to reactive properties.
 
-We use the terms *motion runtime* and *runtime* interchangeably throughout the starmap.
+> We use the terms *motion runtime* and *runtime* interchangeably throughout the starmap.
 
 Interactions can be added to a runtime. The runtime will ask the interaction to register streams or
 other interactions. This is the mechanism by which the runtime enables composable interactions.
