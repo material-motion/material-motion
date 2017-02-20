@@ -170,34 +170,34 @@ toc:
              url: "/starmap/specifications/operators/gesture/$.velocity"
         - page:
           title: "$.distanceFrom"
-          url: "/starmap/specifications/operators/arithmetic/$.distanceFrom"
+          url: "/starmap/specifications/operators/$.distanceFrom"
         - page:
           title: "$.lowerBound"
-          url: "/starmap/specifications/operators/arithmetic/$.lowerBound"
+          url: "/starmap/specifications/operators/$.lowerBound"
         - page:
           title: "$.mapTo"
           url: "/starmap/specifications/operators/$.mapTo"
         - page:
           title: "$.normalized"
-          url: "/starmap/specifications/operators/arithmetic/$.normalized"
+          url: "/starmap/specifications/operators/$.normalized"
         - page:
           title: "$.offset"
-          url: "/starmap/specifications/operators/arithmetic/$.offset"
+          url: "/starmap/specifications/operators/$.offset"
         - page:
           title: "$.rewrite"
           url: "/starmap/specifications/operators/$.rewrite"
         - page:
           title: "$.scaled"
-          url: "/starmap/specifications/operators/arithmetic/$.scaled"
+          url: "/starmap/specifications/operators/$.scaled"
         - page:
           title: "$.subtracted"
-          url: "/starmap/specifications/operators/arithmetic/$.subtracted"
+          url: "/starmap/specifications/operators/$.subtracted"
         - page:
           title: "$.toggled"
           url: "/starmap/specifications/operators/$.toggled"
         - page:
           title: "$.upperBound"
-          url: "/starmap/specifications/operators/arithmetic/$.upperBound"
+          url: "/starmap/specifications/operators/$.upperBound"
         - page:
           title: "$.x"
           url: "/starmap/specifications/operators/$.x"
