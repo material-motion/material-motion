@@ -209,34 +209,31 @@ toc:
           title: "$.y"
           url: "/starmap/specifications/streams/operators/$.y"
      - page:
-       title: "Gesture recognizers"
-       url: "/starmap/specifications/gesture_recognizers/"
-       children:
-        - page:
-          title: "GestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
-        - page:
-          title: "RotationGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
-        - page:
-          title: "ScaleGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
-        - page:
-          title: "TranslationGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
-        - page:
-          title: "Simultaneous recognition"
-          url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
-        - page:
-          title: "Dependent gestures"
-          url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
-     - page:
-       title: "Timeline"
-       url: "/starmap/specifications/Timeline"
-     - page:
        title: "Systems"
        url: "/starmap/specifications/streams/sources/"
        children:
+        - page:
+          title: "Gesture recognizers"
+          url: "/starmap/specifications/gesture_recognizers/"
+          children:
+           - page:
+             title: "GestureRecognizer"
+             url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
+           - page:
+             title: "RotationGestureRecognizer"
+             url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
+           - page:
+             title: "ScaleGestureRecognizer"
+             url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
+           - page:
+             title: "TranslationGestureRecognizer"
+             url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
+           - page:
+             title: "Simultaneous recognition"
+             url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
+           - page:
+             title: "Dependent gestures"
+             url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
         - page:
           title: "GestureSource"
           url: "/starmap/specifications/streams/sources/GestureSource"
@@ -291,6 +288,9 @@ toc:
         - page:
           title: "Tween"
           url: "/starmap/specifications/streams/interactions/Tween"
+     - page:
+       title: "Timeline"
+       url: "/starmap/specifications/Timeline"
      - page:
        title: "Elements"
        url: "/starmap/specifications/streams/elements/"
