@@ -182,14 +182,14 @@ toc:
              title: "$.centroid"
              url: "/starmap/specifications/operators/gesture/$.centroid"
            - page:
-             title: "$.onRecognitionState"
-             url: "/starmap/specifications/operators/gesture/$.onRecognitionState"
+             title: "$.whenRecognitionStateIs"
+             url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIs"
            - page:
-             title: "$.onRecognitionStates"
-             url: "/starmap/specifications/operators/gesture/$.onRecognitionStates"
+             title: "$.whenRecognitionStateIsAnyOf"
+             url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIsAnyOf"
            - page:
-             title: "$.translated"
-             url: "/starmap/specifications/operators/gesture/$.translated"
+             title: "$.translationRelativeTo"
+             url: "/starmap/specifications/operators/gesture/$.translationRelativeTo"
            - page:
              title: "$.velocity"
              url: "/starmap/specifications/operators/gesture/$.velocity"
