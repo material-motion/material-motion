@@ -5,7 +5,8 @@ permalink: /starmap/specifications/runtime/
 status:
   date: February 20, 2016
   is: Stable
-knowledgelevel: L1
+interfacelevel: L1
+implementationlevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
