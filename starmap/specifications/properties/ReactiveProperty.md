@@ -29,7 +29,7 @@ This is the engineering specification for the `ReactiveProperty` concrete type.
 
 ## Overview
 
-`ReactiveProperty` defines an interface for reading, writing, and subscribing to updates of a value.
+`ReactiveProperty` defines an interface for an observable value.
 
 *Writing to a property*
 
@@ -42,7 +42,6 @@ spring.destination.value = 100
 ```swift
 const var subscription = spring.destination.subscribe { destination in
   animation.toValue = destination
-  animation.isPaused = false
 }
 ```
 
