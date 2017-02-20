@@ -126,31 +126,6 @@ toc:
        title: "MotionRuntime"
        url: "/starmap/specifications/streams/MotionRuntime"
      - page:
-       title: "Gesture recognizers"
-       url: "/starmap/specifications/gesture_recognizers/"
-       children:
-        - page:
-          title: "GestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
-        - page:
-          title: "RotationGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
-        - page:
-          title: "ScaleGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
-        - page:
-          title: "TranslationGestureRecognizer"
-          url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
-        - page:
-          title: "Simultaneous recognition"
-          url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
-        - page:
-          title: "Dependent gestures"
-          url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
-     - page:
-       title: "Timeline"
-       url: "/starmap/specifications/Timeline"
-     - page:
        title: "Operators"
        url: "/starmap/specifications/streams/operators/"
        children:
@@ -234,6 +209,58 @@ toc:
           title: "$.y"
           url: "/starmap/specifications/streams/operators/$.y"
      - page:
+       title: "Gesture recognizers"
+       url: "/starmap/specifications/gesture_recognizers/"
+       children:
+        - page:
+          title: "GestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
+        - page:
+          title: "RotationGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
+        - page:
+          title: "ScaleGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
+        - page:
+          title: "TranslationGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
+        - page:
+          title: "Simultaneous recognition"
+          url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
+        - page:
+          title: "Dependent gestures"
+          url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
+     - page:
+       title: "Timeline"
+       url: "/starmap/specifications/Timeline"
+     - page:
+       title: "Systems"
+       url: "/starmap/specifications/streams/sources/"
+       children:
+        - page:
+          title: "GestureSource"
+          url: "/starmap/specifications/streams/sources/GestureSource"
+          children:
+           - page:
+             title: "Object implementation"
+             url: "/starmap/specifications/streams/sources/GestureSource-object-implementation"
+        - page:
+          title: "ScrollSource"
+          url: "/starmap/specifications/streams/sources/ScrollSource"
+        - page:
+          title: "SpringSource"
+          url: "/starmap/specifications/streams/sources/SpringSource"
+          children:
+           - page:
+             title: "Inline implementation"
+             url: "/starmap/specifications/streams/sources/SpringSource-inline-implementation"
+           - page:
+             title: "Dynamic destination"
+             url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
+        - page:
+          title: "TweenSource"
+          url: "/starmap/specifications/streams/sources/TweenSource"
+     - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"
      - page:
@@ -264,33 +291,6 @@ toc:
         - page:
           title: "Tween"
           url: "/starmap/specifications/streams/interactions/Tween"
-     - page:
-       title: "Systems"
-       url: "/starmap/specifications/streams/sources/"
-       children:
-        - page:
-          title: "GestureSource"
-          url: "/starmap/specifications/streams/sources/GestureSource"
-          children:
-           - page:
-             title: "Object implementation"
-             url: "/starmap/specifications/streams/sources/GestureSource-object-implementation"
-        - page:
-          title: "ScrollSource"
-          url: "/starmap/specifications/streams/sources/ScrollSource"
-        - page:
-          title: "SpringSource"
-          url: "/starmap/specifications/streams/sources/SpringSource"
-          children:
-           - page:
-             title: "Inline implementation"
-             url: "/starmap/specifications/streams/sources/SpringSource-inline-implementation"
-           - page:
-             title: "Dynamic destination"
-             url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
-        - page:
-          title: "TweenSource"
-          url: "/starmap/specifications/streams/sources/TweenSource"
      - page:
        title: "Elements"
        url: "/starmap/specifications/streams/elements/"
