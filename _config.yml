@@ -143,13 +143,6 @@ toc:
              title: "$._filter"
              url: "/starmap/specifications/operators/foundation/$._filter"
         - page:
-          title: "Debugging"
-          url: "/starmap/specifications/operators/debugging/"
-          children:
-           - page:
-             title: "$.log"
-             url: "/starmap/specifications/operators/debugging/$.log"
-        - page:
           title: "Gesture"
           url: "/starmap/specifications/operators/gesture/"
           children:
@@ -171,6 +164,9 @@ toc:
         - page:
           title: "$.distanceFrom"
           url: "/starmap/specifications/operators/$.distanceFrom"
+        - page:
+          title: "$.log"
+          url: "/starmap/specifications/operators/$.log"
         - page:
           title: "$.lowerBound"
           url: "/starmap/specifications/operators/$.lowerBound"
