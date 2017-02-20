@@ -46,6 +46,8 @@ Some example properties that represent values external to reactive motion:
 - A view's opacity.
 - Values for some business logic.
 
-> Once a property has been created, the only way it will change state is if it is written to. This
-> means that if a property represents some external information then it is the responsibility of that
-> information's owner to keep the property synchronized with any external changes.
+### Changes to external state
+
+Once a property has been created, the only way it will change state is if it is written to. This
+means that if a property represents some external information then it is the responsibility of that
+information's owner to keep the property synchronized with any external changes.
