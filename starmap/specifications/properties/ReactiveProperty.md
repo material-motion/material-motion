@@ -4,7 +4,8 @@ title: ReactiveProperty
 status:
   date: February 19, 2017
   is: Stable
-knowledgelevel: L2
+interfacelevel: L2
+implementationlevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
