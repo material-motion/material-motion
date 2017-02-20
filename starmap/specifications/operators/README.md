@@ -30,10 +30,10 @@ All operators are implemented as methods on `MotionObservable`.
 
 ```swift
 class MotionObservable {
-  func someOperator() -> MotionObservable<T> {
+  func noop() -> MotionObservable<T> {
     return MotionObservable<T> { observer in
       let subscription = self.subscribe { value in
-        // Invoke observer.next
+        observer.next(value)
       }
       return {
         subscription.unsubscribe()
