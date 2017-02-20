@@ -53,3 +53,29 @@ New values received from the subscribed stream should be written to the property
 class MotionRuntime {
   public func add<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>)
 ```
+
+### Create storage for subscriptions
+
+Store all subscriptions made via the `add` API in a private storage mechanism.
+
+An array is adequate because we currently have no mechanism for removing subscriptions once they are
+made.
+
+```swift
+class MotionRuntime {
+  private var subscriptions: [Subscription] = []
+```
+
+### Store all subscriptions
+
+Store all subscriptions made via the `add` API in a private storage mechanism.
+
+An array is adequate because we currently have no mechanism for removing subscriptions once they are
+made.
+
+```swift
+class MotionRuntime {
+  func add<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>) {
+    subscriptions.append(stream.subscribe(next: { property.value = $0 }))
+  }
+```
