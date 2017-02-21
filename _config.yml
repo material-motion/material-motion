@@ -186,8 +186,8 @@ toc:
           title: "$.rewrite"
           url: "/starmap/specifications/operators/$.rewrite"
         - page:
-          title: "$.scaled"
-          url: "/starmap/specifications/operators/$.scaled"
+          title: "$.scaledBy"
+          url: "/starmap/specifications/operators/$.scaledBy"
         - page:
           title: "$.subtracted"
           url: "/starmap/specifications/operators/$.subtracted"
