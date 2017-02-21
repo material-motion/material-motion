@@ -180,8 +180,8 @@ toc:
           title: "$.normalizedBy"
           url: "/starmap/specifications/operators/$.normalizedBy"
         - page:
-          title: "$.offset"
-          url: "/starmap/specifications/operators/$.offset"
+          title: "$.offsetBy"
+          url: "/starmap/specifications/operators/$.offsetBy"
         - page:
           title: "$.rewrite"
           url: "/starmap/specifications/operators/$.rewrite"
