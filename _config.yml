@@ -177,8 +177,8 @@ toc:
           title: "$.mapTo"
           url: "/starmap/specifications/operators/$.mapTo"
         - page:
-          title: "$.normalized"
-          url: "/starmap/specifications/operators/$.normalized"
+          title: "$.normalizedBy"
+          url: "/starmap/specifications/operators/$.normalizedBy"
         - page:
           title: "$.offset"
           url: "/starmap/specifications/operators/$.offset"
