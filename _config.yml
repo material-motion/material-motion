@@ -156,7 +156,7 @@ toc:
              title: "$.whenRecognitionStateIsAnyOf"
              url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIsAnyOf"
            - page:
-             title: "$.translationRelativeTo"
+             title: "$.translationAddedTo"
              url: "/starmap/specifications/operators/gesture/$.translationAddedTo"
            - page:
              title: "$.velocity"
