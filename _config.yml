@@ -189,8 +189,8 @@ toc:
           title: "$.scaledBy"
           url: "/starmap/specifications/operators/$.scaledBy"
         - page:
-          title: "$.subtracted"
-          url: "/starmap/specifications/operators/$.subtracted"
+          title: "$.subtractedFrom"
+          url: "/starmap/specifications/operators/$.subtractedFrom"
         - page:
           title: "$.toggled"
           url: "/starmap/specifications/operators/$.toggled"
