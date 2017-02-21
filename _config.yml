@@ -142,6 +142,9 @@ toc:
            - page:
              title: "$._filter"
              url: "/starmap/specifications/operators/foundation/$._filter"
+           - page:
+             title: "$._remember"
+             url: "/starmap/specifications/operators/foundation/$._remember"
         - page:
           title: "Gesture"
           url: "/starmap/specifications/operators/gesture/"
