@@ -192,9 +192,6 @@ toc:
           title: "$.subtractedFrom"
           url: "/starmap/specifications/operators/$.subtractedFrom"
         - page:
-          title: "$.toggled"
-          url: "/starmap/specifications/operators/$.toggled"
-        - page:
           title: "$.upperBound"
           url: "/starmap/specifications/operators/$.upperBound"
         - page:
