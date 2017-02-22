@@ -41,7 +41,7 @@ upstream  value   downstream
 
 ## MVP
 
-### Expose a normalizedBy API
+### Expose a normalizedBy operator API
 
 Use `_map` to implement the operator. Accept a number value. Emit the result of `incoming / value`.
 

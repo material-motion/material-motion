@@ -45,7 +45,7 @@ upstream  values                      downstream
 
 ## MVP
 
-### Expose rewrite API
+### Expose rewrite operator API
 
 Return a new MotionObservable of type U.
 

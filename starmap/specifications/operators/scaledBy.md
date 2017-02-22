@@ -41,7 +41,7 @@ upstream  value  downstream
 
 ## MVP
 
-### Expose a scaledBy API
+### Expose a scaledBy operator API
 
 Use `_map` to implement the operator. Accept a number value. Emit the result of `incoming * value`.
 

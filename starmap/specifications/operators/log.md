@@ -50,7 +50,7 @@ console
 
 ## MVP
 
-### Expose a log API
+### Expose a log operator API
 
 Use `_nextOperator` to implement the operator.
 

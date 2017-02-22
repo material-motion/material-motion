@@ -57,7 +57,7 @@ upstream  minValue   downstream
 
 ## MVP
 
-### Expose a lowerBound API
+### Expose a lowerBound operator API
 
 Use `_map` to implement the operator. Accept a Comparable type. Emit the result of
 `max(upstreamValue, minValue)`.

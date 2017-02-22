@@ -41,7 +41,7 @@ upstream  value  downstream
 
 ## MVP
 
-### Expose a subtractedFrom API
+### Expose a subtractedFrom operator API
 
 Use `_map` to implement the operator. Accept a number value. Emit the result of `value - incoming`.
 

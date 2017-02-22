@@ -43,7 +43,7 @@ upstream        downstream
 
 ## MVP
 
-### Expose x API
+### Expose an x operator API
 
 Use `_map` to implement the operator. Return the x value. Exposed on streams of type Point.
 
