@@ -54,7 +54,7 @@ upstream size  |  downstream
 
 ## MVP
 
-### Define a SlopEvent type
+### Expose a SlopEvent type
 
 ```swift
 public enum SlopEvent {

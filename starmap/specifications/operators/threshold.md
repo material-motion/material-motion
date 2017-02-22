@@ -19,19 +19,10 @@ interaction:
     - input:
       name: threshold
       type: number
-    - input:
-      name: whenBelow
-      type: U?
-    - input:
-      name: whenEqual
-      type: U?
-    - input:
-      name: whenAbove
-      type: U?
   outputs:
     - output:
       name: downstream
-      type: U
+      type: ThresholdEvent
 ---
 
 # threshold specification
@@ -40,36 +31,34 @@ This is the engineering specification for the `MotionObservable` operator: `thre
 
 ## Overview
 
-`threshold` emits a value based on the incoming value's position around a threshold.
+`threshold` emits a ThresholdEvent based on the incoming value's position around a threshold.
 
 ## Example usage
 
 ```swift
-stream.threshold(50, whenBelow: .below, whenEqual: nil, whenAbove: .above)
+stream.threshold(50)
 
-upstream threshold whenBelow whenEqual whenAbove  |  downstream
-20       50        .below    nil       .above     |  .below
-50       50        .below    nil       .above     |  
-60       50        .below    nil       .above     |  .above
+upstream position  |  downstream
+20       50        |  .whenBelow
+50       50        |  .whenWithin
+60       50        |  .whenAbove
 ```
 
 ## MVP
 
+### Expose a ThresholdEvent enum type
+
+public enum ThresholdEvent {
+  case whenBelow
+  case whenWithin
+  case whenAbove
+}
+
 ### Expose a threshold operator API
 
-Use `_nextOperator` to implement the operator. Accept four arguments:
-
-1. a threshold,
-2. an optional value to emit when upstream is **below** the threshold,
-3. an optional value to emit when upstream is **equal to** the threshold, and
-4. an optional value to emit when upstream is **above** the threshold.
+Use `_nextOperator` to implement the operator. Accept a single position value.
 
 ```swift
 class MotionObservable<number> {
-  public func threshold<U>
-      ( _ threshold: number,
-        whenBelow below: U?,
-        whenEqual equal: U?,
-        whenAbove above: U?
-      ) -> MotionObservable<U>
+  public func threshold<U>(_ threshold: number) -> MotionObservable<ThresholdEvent>
 ```

@@ -22,19 +22,10 @@ interaction:
     - input:
       name: max
       type: number
-    - input:
-      name: whenBelow
-      type: U?
-    - input:
-      name: whenWithin
-      type: U?
-    - input:
-      name: whenAbove
-      type: U?
   outputs:
     - output:
       name: downstream
-      type: U
+      type: ThresholdEvent
 ---
 
 # thresholdRange specification
@@ -48,34 +39,22 @@ This is the engineering specification for the `MotionObservable` operator: `thre
 ## Example usage
 
 ```swift
-stream.thresholdRange(min: 50, max: 100, whenBelow: .below, whenEqual: nil, whenAbove: .above)
+stream.thresholdRange(min: 50, max: 100)
 
-upstream min max whenBelow whenEqual whenAbove  |  downstream
-20       50  100 .below    nil       .above     |  .below
-50       50  100 .below    nil       .above     |
-100      50  100 .below    nil       .above     |
-120      50  100 .below    nil       .above     |  .above
+upstream min max  |  downstream
+20       50  100  |  .whenBelow
+50       50  100  |  .whenWithin
+100      50  100  |  .whenWithin
+120      50  100  |  .whenAbove
 ```
 
 ## MVP
 
 ### Expose a thresholdRange operator API
 
-Use `_nextOperator` to implement the operator. Accept five arguments:
-
-1. a threshold min,
-1. a threshold max,
-2. an optional value to emit when upstream is **below** the thresholdRange,
-3. an optional value to emit when upstream is **within** the thresholdRange, and
-4. an optional value to emit when upstream is **above** the thresholdRange.
+Use `_nextOperator` to implement the operator. Accept a threshold minimum and maximum value.
 
 ```swift
 class MotionObservable<number> {
-  public func thresholdRange<U>
-      ( min: T,
-        max: T,
-        whenBelow below: U?,
-        whenWithin within: U?,
-        whenAbove above: U?
-      ) -> MotionObservable<U>
+  public func thresholdRange(min: T, max: T) -> MotionObservable<ThresholdEvent>
 ```
