@@ -207,6 +207,9 @@ toc:
           title: "scaledBy"
           url: "/starmap/specifications/operators/scaledBy"
         - page:
+          title: "slop"
+          url: "/starmap/specifications/operators/slop"
+        - page:
           title: "subtractedFrom"
           url: "/starmap/specifications/operators/subtractedFrom"
         - page:
