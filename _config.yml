@@ -134,72 +134,72 @@ toc:
           url: "/starmap/specifications/operators/foundation/"
           children:
            - page:
-             title: "$._nextOperator"
-             url: "/starmap/specifications/operators/foundation/$._nextOperator"
+             title: "_nextOperator"
+             url: "/starmap/specifications/operators/foundation/_nextOperator"
            - page:
-             title: "$._map"
-             url: "/starmap/specifications/operators/foundation/$._map"
+             title: "_map"
+             url: "/starmap/specifications/operators/foundation/_map"
            - page:
-             title: "$._filter"
-             url: "/starmap/specifications/operators/foundation/$._filter"
+             title: "_filter"
+             url: "/starmap/specifications/operators/foundation/_filter"
            - page:
-             title: "$._remember"
-             url: "/starmap/specifications/operators/foundation/$._remember"
+             title: "_remember"
+             url: "/starmap/specifications/operators/foundation/_remember"
         - page:
           title: "Gesture"
           url: "/starmap/specifications/operators/gesture/"
           children:
            - page:
-             title: "$.centroid"
-             url: "/starmap/specifications/operators/gesture/$.centroid"
+             title: "centroid"
+             url: "/starmap/specifications/operators/gesture/centroid"
            - page:
-             title: "$.whenRecognitionStateIs"
-             url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIs"
+             title: "whenRecognitionStateIs"
+             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIs"
            - page:
-             title: "$.whenRecognitionStateIsAnyOf"
-             url: "/starmap/specifications/operators/gesture/$.whenRecognitionStateIsAnyOf"
+             title: "whenRecognitionStateIsAnyOf"
+             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIsAnyOf"
            - page:
-             title: "$.translationAddedTo"
-             url: "/starmap/specifications/operators/gesture/$.translationAddedTo"
+             title: "translationAddedTo"
+             url: "/starmap/specifications/operators/gesture/translationAddedTo"
            - page:
-             title: "$.velocity"
-             url: "/starmap/specifications/operators/gesture/$.velocity"
+             title: "velocity"
+             url: "/starmap/specifications/operators/gesture/velocity"
         - page:
-          title: "$.distanceFrom"
-          url: "/starmap/specifications/operators/$.distanceFrom"
+          title: "distanceFrom"
+          url: "/starmap/specifications/operators/distanceFrom"
         - page:
-          title: "$.log"
-          url: "/starmap/specifications/operators/$.log"
+          title: "log"
+          url: "/starmap/specifications/operators/log"
         - page:
-          title: "$.lowerBound"
-          url: "/starmap/specifications/operators/$.lowerBound"
+          title: "lowerBound"
+          url: "/starmap/specifications/operators/lowerBound"
         - page:
-          title: "$.mapTo"
-          url: "/starmap/specifications/operators/$.mapTo"
+          title: "mapTo"
+          url: "/starmap/specifications/operators/mapTo"
         - page:
-          title: "$.normalizedBy"
-          url: "/starmap/specifications/operators/$.normalizedBy"
+          title: "normalizedBy"
+          url: "/starmap/specifications/operators/normalizedBy"
         - page:
-          title: "$.offsetBy"
-          url: "/starmap/specifications/operators/$.offsetBy"
+          title: "offsetBy"
+          url: "/starmap/specifications/operators/offsetBy"
         - page:
-          title: "$.rewrite"
-          url: "/starmap/specifications/operators/$.rewrite"
+          title: "rewrite"
+          url: "/starmap/specifications/operators/rewrite"
         - page:
-          title: "$.scaledBy"
-          url: "/starmap/specifications/operators/$.scaledBy"
+          title: "scaledBy"
+          url: "/starmap/specifications/operators/scaledBy"
         - page:
-          title: "$.subtractedFrom"
-          url: "/starmap/specifications/operators/$.subtractedFrom"
+          title: "subtractedFrom"
+          url: "/starmap/specifications/operators/subtractedFrom"
         - page:
-          title: "$.upperBound"
-          url: "/starmap/specifications/operators/$.upperBound"
+          title: "upperBound"
+          url: "/starmap/specifications/operators/upperBound"
         - page:
-          title: "$.x"
-          url: "/starmap/specifications/operators/$.x"
+          title: "x"
+          url: "/starmap/specifications/operators/x"
         - page:
-          title: "$.y"
-          url: "/starmap/specifications/operators/$.y"
+          title: "y"
+          url: "/starmap/specifications/operators/y"
      - page:
        title: "Systems"
        url: "/starmap/specifications/streams/sources/"
