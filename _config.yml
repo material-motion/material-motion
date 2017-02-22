@@ -165,6 +165,9 @@ toc:
              title: "velocity"
              url: "/starmap/specifications/operators/gesture/velocity"
         - page:
+          title: "anchorPointAdjustment"
+          url: "/starmap/specifications/operators/anchorPointAdjustment"
+        - page:
           title: "distanceFrom"
           url: "/starmap/specifications/operators/distanceFrom"
         - page:
