@@ -9,6 +9,10 @@ implementationlevel: L3
 library: reactive-motion
 depends_on:
   - /starmap/specifications/operators/foundation/_map
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/inverted.swift
 interaction:
   inputs:
     - input:
