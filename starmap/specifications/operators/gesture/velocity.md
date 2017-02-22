@@ -10,7 +10,7 @@ depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
-  - /starmap/specifications/streams/operators/foundation/_map
+  - /starmap/specifications/operators/foundation/$._map
 streamtype:
   in: GestureRecognizer
   out: Point|Float

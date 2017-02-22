@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/_map
+  - /starmap/specifications/operators/foundation/$._map
 availability:
   - platform:
     name: iOS (Swift)

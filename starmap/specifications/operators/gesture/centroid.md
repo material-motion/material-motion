@@ -8,7 +8,7 @@ knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
-  - /starmap/specifications/operators/foundation/_map
+  - /starmap/specifications/operators/foundation/$._map
 streamtype:
   in: GestureRecognizer
   out: Point
