@@ -11,7 +11,7 @@ depends_on:
   - /starmap/specifications/gesture_recognizers/GestureRecognizer
   - /starmap/specifications/operators/foundation/$._filter
 related_to:
-  - /starmap/specifications/streams/operators/gesture/whenRecognitionStateIs
+  - /starmap/specifications/operators/gesture/whenRecognitionStateIs
 interaction:
   inputs:
     - input:
