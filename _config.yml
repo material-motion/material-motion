@@ -189,6 +189,9 @@ toc:
           title: "mapTo"
           url: "/starmap/specifications/operators/mapTo"
         - page:
+          title: "merge"
+          url: "/starmap/specifications/operators/merge"
+        - page:
           title: "normalizedBy"
           url: "/starmap/specifications/operators/normalizedBy"
         - page:
