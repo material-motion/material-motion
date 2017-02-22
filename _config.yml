@@ -137,14 +137,17 @@ toc:
              title: "_nextOperator"
              url: "/starmap/specifications/operators/foundation/_nextOperator"
            - page:
-             title: "_map"
-             url: "/starmap/specifications/operators/foundation/_map"
-           - page:
              title: "_filter"
              url: "/starmap/specifications/operators/foundation/_filter"
            - page:
+             title: "_map"
+             url: "/starmap/specifications/operators/foundation/_map"
+           - page:
              title: "_remember"
              url: "/starmap/specifications/operators/foundation/_remember"
+           - page:
+             title: "_read"
+             url: "/starmap/specifications/operators/foundation/_read"
         - page:
           title: "Gesture"
           url: "/starmap/specifications/operators/gesture/"

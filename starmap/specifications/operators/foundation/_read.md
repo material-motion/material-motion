@@ -1,0 +1,48 @@
+---
+layout: page
+title: _read
+status:
+  date: December 13, 2016
+  is: Stable
+interfacelevel: L3
+implementationlevel: L4
+library: reactive-motion
+depends_on:
+  - /starmap/specifications/operators/foundation/MotionObservable
+---
+
+# _read specification
+
+This is the engineering specification for the `MotionObservable` convenience method: `_read`.
+
+## Overview
+
+`_read` subscribes to a stream and synchronously returns the first emitted value, if any.
+
+Note: this API is provided as a **stop-gap solution** for building connected streams. In general
+it's preferred that streams be subscribed to and their last values cached in some manner. The
+`_remember` operator can be a helpful tool for making this easier:
+
+```swift
+let memoryStream = stream._remember()
+let subscription = memoryStream.subscribe { value in
+  // No need to do anything.
+}
+
+// Later, when we need the value:
+let latestValue = memoryStream._read()
+```
+
+## MVP
+
+### Expose _read API
+
+```swift
+class MotionObservable<T> {
+
+  public func _read() -> T? {
+    var value: T?
+    self.subscribe { value = $0 }
+    return value
+  }
+```
