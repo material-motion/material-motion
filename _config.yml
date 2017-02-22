@@ -183,6 +183,9 @@ toc:
           title: "lowerBound"
           url: "/starmap/specifications/operators/lowerBound"
         - page:
+          title: "mapRange"
+          url: "/starmap/specifications/operators/mapRange"
+        - page:
           title: "mapTo"
           url: "/starmap/specifications/operators/mapTo"
         - page:
