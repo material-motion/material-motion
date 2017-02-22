@@ -204,6 +204,9 @@ toc:
           title: "rewrite"
           url: "/starmap/specifications/operators/rewrite"
         - page:
+          title: "rubberBanded"
+          url: "/starmap/specifications/operators/rubberBanded"
+        - page:
           title: "scaledBy"
           url: "/starmap/specifications/operators/scaledBy"
         - page:
