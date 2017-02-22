@@ -9,6 +9,8 @@ implementationlevel: L3
 library: reactive-motion
 depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
+related_to:
+  - /starmap/specifications/operators/threshold
 interaction:
   inputs:
     - input:
