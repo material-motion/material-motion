@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $._nextOperator
+title: _nextOperator
 status:
   date: December 13, 2016
   is: Stable
@@ -33,7 +33,7 @@ interaction:
       type: U
 ---
 
-# $._nextOperator specification
+# _nextOperator specification
 
 This is the engineering specification for the `MotionObservable` operator: `_nextOperator`.
 

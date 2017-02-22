@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $._filter
+title: _filter
 status:
   date: December 13, 2016
   is: Stable
@@ -8,9 +8,9 @@ interfacelevel: L3
 implementationlevel: L4
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/_nextOperator
 related_to:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 availability:
   - platform:
     name: Android
@@ -35,7 +35,7 @@ interaction:
       type: T
 ---
 
-# $._filter specification
+# _filter specification
 
 This is the engineering specification for the `MotionObservable` operator: `_filter`.
 

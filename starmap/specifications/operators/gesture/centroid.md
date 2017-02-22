@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $<GestureRecognizer>.centroid
+title: centroid
 status:
   date: December 13, 2016
   is: Draft
@@ -8,13 +8,13 @@ knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
-  - /starmap/specifications/streams/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 streamtype:
   in: GestureRecognizer
   out: Point
 ---
 
-# $<GestureRecognizer>.centroid specification
+# centroid specification
 
 This is the engineering specification for the `MotionObservable` operator `centroid` that operates
 on GestureRecognizer value types.

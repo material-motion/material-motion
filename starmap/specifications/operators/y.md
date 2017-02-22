@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.y
+title: y
 status:
   date: February 21, 2016
   is: Stable
@@ -8,9 +8,9 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 related_to:
-  - /starmap/specifications/operators/$.x
+  - /starmap/specifications/operators/x
 interaction:
   inputs:
     - input:
@@ -22,13 +22,13 @@ interaction:
       type: number
 ---
 
-# $.y specification
+# y specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.y`.
+This is the engineering specification for the `MotionObservable` operator: `y`.
 
 ## Overview
 
-`$.y` extracts the y value from a Point stream.
+`y` extracts the y value from a Point stream.
 
 Example usage:
 
@@ -43,7 +43,7 @@ upstream        downstream
 
 ## MVP
 
-### Expose $.y API
+### Expose y API
 
 Use `_map` to implement the operator. Return the x value. Exposed on streams of type Point.
 

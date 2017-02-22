@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $._map
+title: _map
 status:
   date: December 13, 2016
   is: Stable
@@ -8,9 +8,9 @@ interfacelevel: L3
 implementationlevel: L4
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/_nextOperator
 related_to:
-  - /starmap/specifications/operators/foundation/$._filter
+  - /starmap/specifications/operators/foundation/_filter
 availability:
   - platform:
     name: Android
@@ -37,7 +37,7 @@ interaction:
       type: U
 ---
 
-# $._map specification
+# _map specification
 
 This is the engineering specification for the `MotionObservable` operator: `_map`.
 

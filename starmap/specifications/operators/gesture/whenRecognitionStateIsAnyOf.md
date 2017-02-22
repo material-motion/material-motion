@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $<GestureRecognizer>.whenRecognitionStateIsAnyOf
+title: whenRecognitionStateIsAnyOf
 status:
   date: December 13, 2016
   is: Draft
@@ -8,15 +8,15 @@ knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
-  - /starmap/specifications/streams/operators/foundation/$._filter
+  - /starmap/specifications/streams/operators/foundation/_filter
 related_to:
-  - /starmap/specifications/streams/operators/gesture/$.whenRecognitionStateIs
+  - /starmap/specifications/streams/operators/gesture/whenRecognitionStateIs
 streamtype:
   in: GestureRecognizer
   out: GestureRecognizer
 ---
 
-# $<GestureRecognizer>.whenRecognitionStateIsAnyOf specification
+# whenRecognitionStateIsAnyOf specification
 
 This is the engineering specification for the `MotionObservable` operator `whenRecognitionStateIsAnyOf` that
 operates on GestureRecognizer value types.

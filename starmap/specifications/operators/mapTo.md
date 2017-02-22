@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.mapTo
+title: mapTo
 status:
   date: February 20, 2016
   is: Stable
@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 availability:
   - platform:
     name: iOS (Swift)
@@ -24,13 +24,13 @@ interaction:
       type: U
 ---
 
-# $.mapTo specification
+# mapTo specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.mapTo`.
+This is the engineering specification for the `MotionObservable` operator: `mapTo`.
 
 ## Overview
 
-`$.mapTo` emits the provided value every time it receives a new upstream value.
+`mapTo` emits the provided value every time it receives a new upstream value.
 
 Example usage:
 
@@ -47,7 +47,7 @@ upstream  value   downstream
 
 ## MVP
 
-### Expose a $.mapTo API
+### Expose a mapTo API
 
 Use `_map` to implement the operator. Accept a constant of type `U`. Emit this value when a
 new upstream value is received.

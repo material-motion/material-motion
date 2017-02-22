@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $<GestureRecognizer>.velocity
+title: velocity
 status:
   date: December 16, 2016
   is: Draft
@@ -10,13 +10,13 @@ depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer
   - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
-  - /starmap/specifications/streams/operators/foundation/$._map
+  - /starmap/specifications/streams/operators/foundation/_map
 streamtype:
   in: GestureRecognizer
   out: Point|Float
 ---
 
-# $<GestureRecognizer>.velocity specification
+# velocity specification
 
 This is the engineering specification for the `MotionObservable` operator `velocity` that operates
 on GestureRecognizer value types.

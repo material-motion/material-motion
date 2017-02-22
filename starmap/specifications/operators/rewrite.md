@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.rewrite
+title: rewrite
 status:
   date: February 21, 2016
   is: Stable
@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/_nextOperator
 availability:
   - platform:
     name: iOS (Swift)
@@ -24,7 +24,7 @@ interaction:
       type: U
 ---
 
-# $.rewrite specification
+# rewrite specification
 
 This is the engineering specification for the `MotionObservable` operator: `rewrite`.
 

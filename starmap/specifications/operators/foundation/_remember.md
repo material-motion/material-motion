@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $._remember
+title: _remember
 status:
   date: February 21, 2016
   is: Stable
@@ -24,7 +24,7 @@ interaction:
       type: T
 ---
 
-# $._remember specification
+# _remember specification
 
 This is the engineering specification for the `MotionObservable` operator: `_remember`.
 

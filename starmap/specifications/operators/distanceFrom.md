@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.distanceFrom
+title: distanceFrom
 status:
   date: February 20, 2016
   is: Stable
@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 availability:
   - platform:
     name: iOS (Swift)
@@ -27,13 +27,13 @@ interaction:
       type: number
 ---
 
-# $.distance specification
+# distance specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.distance`.
+This is the engineering specification for the `MotionObservable` operator: `distance`.
 
 ## Overview
 
-`$.distance` emits the absolute distance from the upstream value and the provided `location`.
+`distance` emits the absolute distance from the upstream value and the provided `location`.
 
 ## Example usage
 
@@ -48,7 +48,7 @@ upstream  location   downstream
 
 ## MVP
 
-### Expose a 1-dimensional $.distance API
+### Expose a 1-dimensional distance API
 
 Use `_map` to implement the operator. Accept a location number. Emit a number which is the
 result of `abs(upstreamValue - location)`.
@@ -58,7 +58,7 @@ class MotionObservable<number> {
   public func distance(from location: number) -> MotionObservable<number>
 ```
 
-### Expose a 2-dimensional $.distance API
+### Expose a 2-dimensional distance API
 
 Use `_map` to implement the operator. Accept a location point. Emit a number which is the
 result of `sqrt((upstreamValue.x - location.x)^2 - (upstreamValue.y - location.y)^2)`.

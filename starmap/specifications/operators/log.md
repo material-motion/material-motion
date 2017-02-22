@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.log
+title: log
 status:
   date: February 20, 2016
   is: Stable
@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/_nextOperator
 availability:
   - platform:
     name: iOS (Swift)
@@ -24,13 +24,13 @@ interaction:
       type: T
 ---
 
-# $.log specification
+# log specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.log`.
+This is the engineering specification for the `MotionObservable` operator: `log`.
 
 ## Overview
 
-`$.log` writes any upstream value to the console and emits the value without modification.
+`log` writes any upstream value to the console and emits the value without modification.
 
 Example usage:
 
@@ -50,7 +50,7 @@ console
 
 ## MVP
 
-### Expose a $.log API
+### Expose a log API
 
 Use `_nextOperator` to implement the operator.
 

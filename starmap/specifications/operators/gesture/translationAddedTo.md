@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $<GestureRecognizer>.translationAddedTo
+title: translationAddedTo
 status:
   date: December 16, 2016
   is: Draft
@@ -8,13 +8,13 @@ knowledgelevel: L2
 library: streams
 depends_on:
   - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
-  - /starmap/specifications/streams/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/_nextOperator
 streamtype:
   in: TranslationGestureRecognizer
   out: Point
 ---
 
-# $<GestureRecognizer>.translationAddedTo specification
+# translationAddedTo specification
 
 This is the engineering specification for the `MotionObservable` operator `translationAddedTo` that operates
 on TranslationGestureRecognizer value types.

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.lowerBound
+title: lowerBound
 status:
   date: February 20, 2016
   is: Stable
@@ -8,9 +8,9 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 related_to:
-  - /starmap/specifications/operators/$.upperBound
+  - /starmap/specifications/operators/upperBound
 proposals:
   - proposal:
     completion_date: February 20, 2017
@@ -34,13 +34,13 @@ interaction:
       type: Comparable
 ---
 
-# $.lowerBound specification
+# lowerBound specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.lowerBound`.
+This is the engineering specification for the `MotionObservable` operator: `lowerBound`.
 
 ## Overview
 
-`$.lowerBound` emits either the incoming value or the provided `minValue`, whichever is larger.
+`lowerBound` emits either the incoming value or the provided `minValue`, whichever is larger.
 
 ## Example usage
 
@@ -57,7 +57,7 @@ upstream  minValue   downstream
 
 ## MVP
 
-### Expose a $.lowerBound API
+### Expose a lowerBound API
 
 Use `_map` to implement the operator. Accept a Comparable type. Emit the result of
 `max(upstreamValue, minValue)`.

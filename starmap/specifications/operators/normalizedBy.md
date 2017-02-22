@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.normalizedBy
+title: normalizedBy
 status:
   date: February 21, 2016
   is: Stable
@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 interaction:
   inputs:
     - input:
@@ -20,13 +20,13 @@ interaction:
       type: number
 ---
 
-# $.normalizedBy specification
+# normalizedBy specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.normalizedBy`.
+This is the engineering specification for the `MotionObservable` operator: `normalizedBy`.
 
 ## Overview
 
-`$.normalizedBy` emits the result of dividing the incoming value by a given value.
+`normalizedBy` emits the result of dividing the incoming value by a given value.
 
 ## Example usage
 
@@ -41,7 +41,7 @@ upstream  value   downstream
 
 ## MVP
 
-### Expose a $.normalizedBy API
+### Expose a normalizedBy API
 
 Use `_map` to implement the operator. Accept a number value. Emit the result of `incoming / value`.
 

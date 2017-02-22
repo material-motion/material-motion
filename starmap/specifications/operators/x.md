@@ -1,6 +1,6 @@
 ---
 layout: page
-title: $.x
+title: x
 status:
   date: February 21, 2016
   is: Stable
@@ -8,9 +8,9 @@ interfacelevel: L2
 implementationlevel: L3
 library: reactive-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._map
+  - /starmap/specifications/operators/foundation/_map
 related_to:
-  - /starmap/specifications/operators/$.y
+  - /starmap/specifications/operators/y
 interaction:
   inputs:
     - input:
@@ -22,13 +22,13 @@ interaction:
       type: number
 ---
 
-# $.x specification
+# x specification
 
-This is the engineering specification for the `MotionObservable` operator: `$.x`.
+This is the engineering specification for the `MotionObservable` operator: `x`.
 
 ## Overview
 
-`$.x` extracts the x value from a Point stream.
+`x` extracts the x value from a Point stream.
 
 Example usage:
 
@@ -43,7 +43,7 @@ upstream        downstream
 
 ## MVP
 
-### Expose $.x API
+### Expose x API
 
 Use `_map` to implement the operator. Return the x value. Exposed on streams of type Point.
 
