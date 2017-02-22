@@ -210,6 +210,9 @@ toc:
           title: "subtractedFrom"
           url: "/starmap/specifications/operators/subtractedFrom"
         - page:
+          title: "threshold"
+          url: "/starmap/specifications/operators/threshold"
+        - page:
           title: "upperBound"
           url: "/starmap/specifications/operators/upperBound"
         - page:
