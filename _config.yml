@@ -168,6 +168,9 @@ toc:
           title: "anchorPointAdjustment"
           url: "/starmap/specifications/operators/anchorPointAdjustment"
         - page:
+          title: "dedupe"
+          url: "/starmap/specifications/operators/dedupe"
+        - page:
           title: "distanceFrom"
           url: "/starmap/specifications/operators/distanceFrom"
         - page:
