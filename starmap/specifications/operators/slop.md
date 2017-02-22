@@ -10,6 +10,7 @@ library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
   - /starmap/specifications/operators/dedupe
+  - /starmap/specifications/operators/rewrite
   - /starmap/specifications/operators/thresholdRange
 interaction:
   inputs:
