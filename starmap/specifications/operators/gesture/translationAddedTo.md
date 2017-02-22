@@ -46,7 +46,7 @@ calculated.
 
 ```swift
 extension MotionObservable where T: TranslationGestureRecognizer {
-  func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Element) -> MotionObservable<Point>
+  func translation(addedTo initialPosition: MotionObservable<Point>, in element: Element) -> MotionObservable<Point>
 }
 ```
 
@@ -55,11 +55,11 @@ extension MotionObservable where T: TranslationGestureRecognizer {
 Update the cache on gesture began or gesture changed if no cache currently exists.
 
 ```swift
-func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Element) -> MotionObservable<Point> {
+func translation(addedTo initialPosition: MotionObservable<Point>, in element: Element) -> MotionObservable<Point> {
   var cachedInitialPosition: Point?
   return _nextOperator { value, next in
     if value.state == .began || (value.state == .changed && cachedInitialPosition == nil)  {
-      cachedInitialPosition = clone(initialPosition.read())
+      cachedInitialPosition = clone(initialPosition._read())
     }
     ...
   }
@@ -69,7 +69,7 @@ func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Ele
 ### Blow away the cache when the gesture recognizer is inactive
 
 ```swift
-func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Element) -> MotionObservable<Point> {
+func translation(addedTo initialPosition: MotionObservable<Point>, in element: Element) -> MotionObservable<Point> {
   ...
   return _nextOperator { value, next in
     if value.state == .began || (value.state == .changed && cachedInitialPosition == nil)  {
@@ -87,7 +87,7 @@ func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Ele
 Emit the sum of the cached initial position and the gesture's translation.
 
 ```swift
-func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Element) -> MotionObservable<Point> {
+func translation(addedTo initialPosition: MotionObservable<Point>, in element: Element) -> MotionObservable<Point> {
   ...
   return _nextOperator { value, next in
     ...
