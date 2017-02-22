@@ -2,18 +2,25 @@
 layout: page
 title: velocity
 status:
-  date: December 16, 2016
-  is: Draft
-knowledgelevel: L2
-library: streams
+  date: February 21, 2016
+  is: Stable
+interfacelevel: L2
+implementationlevel: L3
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
-  - /starmap/specifications/primitives/gesture_recognizers/RotationGestureRecognizer
-  - /starmap/specifications/primitives/gesture_recognizers/ScaleGestureRecognizer
+  - /starmap/specifications/gesture_recognizers/TranslationGestureRecognizer
+  - /starmap/specifications/gesture_recognizers/RotationGestureRecognizer
+  - /starmap/specifications/gesture_recognizers/ScaleGestureRecognizer
   - /starmap/specifications/operators/foundation/$._map
-streamtype:
-  in: GestureRecognizer
-  out: Point|Float
+interaction:
+  inputs:
+    - input:
+      name: upstream
+      type: GestureRecognizer
+  outputs:
+    - output:
+      name: downstream
+      type: "Point|Float"
 ---
 
 # velocity specification

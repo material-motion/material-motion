@@ -2,16 +2,23 @@
 layout: page
 title: centroid
 status:
-  date: December 13, 2016
-  is: Draft
-knowledgelevel: L2
-library: streams
+  date: February 21, 2016
+  is: Stable
+interfacelevel: L2
+implementationlevel: L3
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
+  - /starmap/specifications/gesture_recognizers/GestureRecognizer
   - /starmap/specifications/operators/foundation/$._map
-streamtype:
-  in: GestureRecognizer
-  out: Point
+interaction:
+  inputs:
+    - input:
+      name: upstream
+      type: GestureRecognizer
+  outputs:
+    - output:
+      name: downstream
+      type: Point
 ---
 
 # centroid specification
@@ -26,7 +33,7 @@ Calculate the centroid of touch events in relation to the provided element.
 Example usage:
 
 ```swift
-gestureSource(gesture).centroid(in: element)
+gesture.centroid(in: element)
 ```
 
 ## MVP

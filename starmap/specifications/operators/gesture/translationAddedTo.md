@@ -2,16 +2,23 @@
 layout: page
 title: translationAddedTo
 status:
-  date: December 16, 2016
-  is: Draft
-knowledgelevel: L2
-library: streams
+  date: February 21, 2016
+  is: Stable
+interfacelevel: L2
+implementationlevel: L3
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/TranslationGestureRecognizer
+  - /starmap/specifications/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/operators/foundation/$._nextOperator
-streamtype:
-  in: TranslationGestureRecognizer
-  out: Point
+interaction:
+  inputs:
+    - input:
+      name: upstream
+      type: TranslationGestureRecognizer
+  outputs:
+    - output:
+      name: downstream
+      type: Point
 ---
 
 # translationAddedTo specification
@@ -26,7 +33,7 @@ Adds the current drag gesture translation to the provided initial position and e
 Example usage:
 
 ```swift
-gestureSource(gesture).translation(addedTo: propertyOf(target).center, in: view)
+gesture.translation(addedTo: propertyOf(target).center, in: view)
 ```
 
 ## MVP
