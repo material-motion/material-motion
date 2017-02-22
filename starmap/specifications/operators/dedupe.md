@@ -56,7 +56,7 @@ class MotionObservable<T> {
   public func dedupe() -> MotionObservable<T>
 ```
 
-### Expose a dedupe operator API
+### Create local storage for the operator
 
 Store the last-emitted value and whether or not an emission has occurred.
 
