@@ -37,10 +37,10 @@ Example usage:
 ```swift
 stream.rewrite([.state1: 100, .state2: 0])
 
-upstream  values                      downstream
-.state1   [.state1: 100, .state2: 0]  100
-.state2   [.state1: 100, .state2: 0]  0
-.state3   [.state1: 100, .state2: 0]
+upstream  values                      |  downstream
+.state1   [.state1: 100, .state2: 0]  |  100
+.state2   [.state1: 100, .state2: 0]  |  0
+.state3   [.state1: 100, .state2: 0]  |  
 ```
 
 ## MVP

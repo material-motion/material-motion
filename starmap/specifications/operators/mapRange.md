@@ -49,11 +49,11 @@ This is the engineering specification for the `MotionObservable` operator: `mapR
 ```swift
 stream.mapRange(start: 0, end: 100, destinationStart: 10, destinationEnd: 20)
 
-upstream start end destinationStart destinationEnd   downstream
- 10      0     100 10               20               11
- 50      0     100 10               20               15
-150      0     100 10               20               25
--10      0     100 10               20               9
+upstream start end destinationStart destinationEnd  |  downstream
+ 10      0     100 10               20              |  11
+ 50      0     100 10               20              |  15
+150      0     100 10               20              |  25
+-10      0     100 10               20              |  9
 ```
 
 ## MVP

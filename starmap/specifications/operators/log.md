@@ -37,10 +37,10 @@ Example usage:
 ```swift
 stream.log()
 
-upstream  downstream
-20        20
-40        40
-80        80
+upstream  |  downstream
+20        |  20
+40        |  40
+80        |  80
 
 console
 20

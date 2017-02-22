@@ -37,11 +37,11 @@ This is the engineering specification for the `MotionObservable` operator: `dedu
 ```swift
 stream.dedupe()
 
-upstream  downstream
-20        20
-20        
-80        80
-20        20
+upstream  |  downstream
+20        |  20
+20        |  
+80        |  80
+20        |  20
 ```
 
 ## MVP

@@ -37,12 +37,12 @@ Example usage:
 ```swift
 stream.mapTo(100)
 
-upstream  value   downstream
- 0.50     100     100
- 0.25     100     100
- 0.00     100     100
--0.25     100     100
--0.50     100     100
+upstream  value  |  downstream
+ 0.50     100    |  100
+ 0.25     100    |  100
+ 0.00     100    |  100
+-0.25     100    |  100
+-0.50     100    |  100
 ```
 
 ## MVP

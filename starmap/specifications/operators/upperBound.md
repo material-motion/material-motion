@@ -47,12 +47,12 @@ This is the engineering specification for the `MotionObservable` operator: `uppe
 ```swift
 stream.upperBound(maxValue: 1)
 
-upstream  maxValue   downstream
-0.50      1          0.50
-0.75      1          0.75
-1.00      1          1.00
-1.25      1          1.00
-1.50      1          1.00
+upstream  maxValue  |  downstream
+0.50      1         |  0.50
+0.75      1         |  0.75
+1.00      1         |  1.00
+1.25      1         |  1.00
+1.50      1         |  1.00
 ```
 
 ## MVP

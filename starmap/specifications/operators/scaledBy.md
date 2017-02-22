@@ -33,10 +33,10 @@ Example usage:
 ```swift
 stream.scaled(by: 2)
 
-upstream  value  downstream
-20        2      40
-40        2      80
-80        2      160
+upstream  value  |  downstream
+20        2      |  40
+40        2      |  80
+80        2      |  160
 ```
 
 ## MVP

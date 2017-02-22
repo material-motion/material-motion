@@ -35,10 +35,10 @@ Example usage:
 ```swift
 stream.x()
 
-upstream        downstream
-{x: 20, y: 25}  20
-{x: 40, y: 10}  40
-{x: 70, y: 30}  70
+upstream        |  downstream
+{x: 20, y: 25}  |  20
+{x: 40, y: 10}  |  40
+{x: 70, y: 30}  |  70
 ```
 
 ## MVP

@@ -40,12 +40,12 @@ This is the engineering specification for the `MotionObservable` operator: `merg
 ```swift
 stream.merge(with: otherStream)
 
-upstream  otherStream   downstream
-10                      10
-          20            20
-50                      50
-70                      70
-          15            15
+upstream  otherStream  |  downstream
+10                     |  10
+          20           |  20
+50                     |  50
+70                     |  70
+          15           |  15
 ```
 
 ## MVP

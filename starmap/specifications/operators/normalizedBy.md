@@ -33,10 +33,10 @@ This is the engineering specification for the `MotionObservable` operator: `norm
 ```swift
 stream.normalized(by: 50)
 
-upstream  value   downstream
-20        50      0.4
-40        50      0.8
-80        50      1.6
+upstream  value  |  downstream
+20        50     |  0.4
+40        50     |  0.8
+80        50     |  1.6
 ```
 
 ## MVP

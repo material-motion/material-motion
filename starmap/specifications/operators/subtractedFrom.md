@@ -33,10 +33,10 @@ Example usage:
 ```swift
 stream.subtracted(from: 1)
 
-upstream  value  downstream
-0.2       1      0.8
-0.5       1      0.5
-1.2       1      -0.2
+upstream  value  |  downstream
+0.2       1      |  0.8
+0.5       1      |  0.5
+1.2       1      |  -0.2
 ```
 
 ## MVP

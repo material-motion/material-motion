@@ -47,12 +47,12 @@ This is the engineering specification for the `MotionObservable` operator: `lowe
 ```swift
 stream.lowerBound(minValue: 0)
 
-upstream  minValue   downstream
- 0.50     0          0.50
- 0.25     0          0.25
- 0.00     0          0.00
--0.25     0          0.00
--0.50     0          0.00
+upstream  minValue  |  downstream
+ 0.50     0         |  0.50
+ 0.25     0         |  0.25
+ 0.00     0         |  0.00
+-0.25     0         |  0.00
+-0.50     0         |  0.00
 ```
 
 ## MVP

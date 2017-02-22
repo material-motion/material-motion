@@ -37,10 +37,10 @@ This is the engineering specification for the `MotionObservable` operator: `inve
 ```swift
 stream.inverted()
 
-upstream  downstream
-true      false
-true      false
-false     true
+upstream  |  downstream
+true      |  false
+true      |  false
+false     |  true
 ```
 
 ## MVP

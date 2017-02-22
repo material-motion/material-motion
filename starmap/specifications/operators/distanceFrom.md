@@ -40,10 +40,10 @@ This is the engineering specification for the `MotionObservable` operator: `dist
 ```swift
 stream.distanceFrom(location: 50)
 
-upstream  location   downstream
-20        50         30
-40        50         10
-80        50         30
+upstream  location  |  downstream
+20        50        |  30
+40        50        |  10
+80        50        |  30
 ```
 
 ## MVP

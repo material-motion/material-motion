@@ -33,10 +33,10 @@ Example usage:
 ```swift
 stream.offset(by: -50)
 
-upstream  value   downstream
-20        -50     -30
-40        -50     -10
-80        -50      30
+upstream  value  |  downstream
+20        -50    |  -30
+40        -50    |  -10
+80        -50    |   30
 ```
 
 ## MVP
