@@ -213,6 +213,9 @@ toc:
           title: "upperBound"
           url: "/starmap/specifications/operators/upperBound"
         - page:
+          title: "valve"
+          url: "/starmap/specifications/operators/valve"
+        - page:
           title: "x"
           url: "/starmap/specifications/operators/x"
         - page:
