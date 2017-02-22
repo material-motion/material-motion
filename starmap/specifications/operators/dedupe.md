@@ -17,11 +17,11 @@ interaction:
   inputs:
     - input:
       name: upstream
-      type: T: Equatable
+      type: "T: Equatable"
   outputs:
     - output:
       name: downstream
-      type: T: Equatable
+      type: "T: Equatable"
 ---
 
 # dedupe specification
