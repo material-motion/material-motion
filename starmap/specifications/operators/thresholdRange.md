@@ -11,6 +11,7 @@ depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
 related_to:
   - /starmap/specifications/operators/threshold
+  - /starmap/specifications/operators/rewrite
 interaction:
   inputs:
     - input:
