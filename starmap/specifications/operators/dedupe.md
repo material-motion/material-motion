@@ -62,7 +62,7 @@ Store the last-emitted value and whether or not an emission has occurred.
 
 ```swift
 class MotionObservable<T> {
-  public func dedupe() -> MotionObservable<T> {
+  func dedupe() -> MotionObservable<T> {
     var emitted = false
     var lastValue: T?
 ```
@@ -74,7 +74,7 @@ previously-emitted value. Store the newly-received value.
 
 ```swift
 class MotionObservable<T> {
-  public func dedupe() -> MotionObservable<T> {
+  func dedupe() -> MotionObservable<T> {
     ...
     return _nextOperator { value, next in
       if emitted && lastValue == value {
