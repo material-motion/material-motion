@@ -1,6 +1,6 @@
 ---
 layout: page
-title: mapTo
+title: rewriteTo
 status:
   date: February 20, 2016
   is: Stable
@@ -12,7 +12,7 @@ depends_on:
 availability:
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/mapTo.swift
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/rewriteTo.swift
 interaction:
   inputs:
     - input:
@@ -24,18 +24,18 @@ interaction:
       type: U
 ---
 
-# mapTo specification
+# rewriteTo specification
 
-This is the engineering specification for the `MotionObservable` operator: `mapTo`.
+This is the engineering specification for the `MotionObservable` operator: `rewriteTo`.
 
 ## Overview
 
-`mapTo` emits the provided value every time it receives a new upstream value.
+`rewriteTo` emits the provided value every time it receives a new upstream value.
 
 Example usage:
 
 ```swift
-stream.mapTo(100)
+stream.rewriteTo(100)
 
 upstream  value  |  downstream
  0.50     100    |  100
@@ -47,12 +47,12 @@ upstream  value  |  downstream
 
 ## MVP
 
-### Expose a mapTo operator API
+### Expose a rewriteTo operator API
 
 Use `_map` to implement the operator. Accept a constant of type `U`. Emit this value when a
 new upstream value is received.
 
 ```swift
 class MotionObservable {
-  public func mapTo<U>(_ value: U) -> MotionObservable<U>
+  public func rewriteTo<U>(_ value: U) -> MotionObservable<U>
 ```
