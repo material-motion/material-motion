@@ -9,7 +9,8 @@ Team is offline til the new year!
 
 | 2017 | Week #1 | Week #2 | Week #3 | Week #4 | Week #5 |
 |:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|
-| February  | [🎉](2017-02-01) | [🎉](2017-02-08) | [🎉](2017-02-15) | [Current sprint](https://github.com/orgs/material-motion/projects/4) |
+| March  | [Current sprint](https://github.com/orgs/material-motion/projects/4) | | | |
+| February  | [🎉](2017-02-01) | [🎉](2017-02-08) | [🎉](2017-02-15) | [🎉](2017-02-22) |
 | January   | vacation | [🎉](2017-01-11) | [🎉](2017-01-18) | [🎉](2017-01-25) |
 
 | 2016 | Week #1 | Week #2 | Week #3 | Week #4 | Week #5 |
