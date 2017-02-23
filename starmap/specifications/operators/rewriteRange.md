@@ -1,4 +1,4 @@
-map---
+---
 layout: page
 title: rewriteRange
 status:
