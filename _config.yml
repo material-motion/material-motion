@@ -189,9 +189,6 @@ toc:
           title: "mapRange"
           url: "/starmap/specifications/operators/mapRange"
         - page:
-          title: "mapTo"
-          url: "/starmap/specifications/operators/mapTo"
-        - page:
           title: "merge"
           url: "/starmap/specifications/operators/merge"
         - page:
@@ -203,6 +200,9 @@ toc:
         - page:
           title: "rewrite"
           url: "/starmap/specifications/operators/rewrite"
+        - page:
+          title: "rewriteTo"
+          url: "/starmap/specifications/operators/rewriteTo"
         - page:
           title: "rubberBanded"
           url: "/starmap/specifications/operators/rubberBanded"
