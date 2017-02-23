@@ -1,6 +1,6 @@
----
+map---
 layout: page
-title: mapRange
+title: rewriteRange
 status:
   date: February 21, 2016
   is: Stable
@@ -12,7 +12,7 @@ depends_on:
 availability:
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/mapRange.swift
+    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/rewriteRange.swift
 interaction:
   inputs:
     - input:
@@ -36,18 +36,18 @@ interaction:
       type: number
 ---
 
-# mapRange specification
+# rewriteRange specification
 
-This is the engineering specification for the `MotionObservable` operator: `mapRange`.
+This is the engineering specification for the `MotionObservable` operator: `rewriteRange`.
 
 ## Overview
 
-`mapRange` emits a linearly-interpolated mapping from one range to another.
+`rewriteRange` emits a linearly-interpolated mapping from one range to another.
 
 ## Example usage
 
 ```swift
-stream.mapRange(start: 0, end: 100, destinationStart: 10, destinationEnd: 20)
+stream.rewriteRange(start: 0, end: 100, destinationStart: 10, destinationEnd: 20)
 
 upstream start end destinationStart destinationEnd  |  downstream
  10      0     100 10               20              |  11
@@ -58,14 +58,14 @@ upstream start end destinationStart destinationEnd  |  downstream
 
 ## MVP
 
-### Expose a mapRange operator API
+### Expose a rewriteRange operator API
 
 Use `_map` to implement the operator. Accept four arguments: start, end, destinationStart, and
 destinationEnd.
 
 ```swift
 class MotionObservable<number> {
-  public func mapRange
+  public func rewriteRange
   ( start: number,
     end: number,
     destinationStart: number,
@@ -77,7 +77,7 @@ class MotionObservable<number> {
 
 ```swift
 class MotionObservable<number> {
-  func mapRange
+  func rewriteRange
   ( start: number,
     end: number,
     destinationStart: number,

@@ -186,9 +186,6 @@ toc:
           title: "lowerBound"
           url: "/starmap/specifications/operators/lowerBound"
         - page:
-          title: "mapRange"
-          url: "/starmap/specifications/operators/mapRange"
-        - page:
           title: "merge"
           url: "/starmap/specifications/operators/merge"
         - page:
@@ -200,6 +197,9 @@ toc:
         - page:
           title: "rewrite"
           url: "/starmap/specifications/operators/rewrite"
+        - page:
+          title: "rewriteRange"
+          url: "/starmap/specifications/operators/rewriteRange"
         - page:
           title: "rewriteTo"
           url: "/starmap/specifications/operators/rewriteTo"
