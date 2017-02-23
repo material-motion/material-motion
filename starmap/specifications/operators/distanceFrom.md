@@ -27,7 +27,7 @@ interaction:
       type: number
 ---
 
-# distance specification
+# distanceFrom specification
 
 This is the engineering specification for the `MotionObservable` operator: `distanceFrom`.
 
