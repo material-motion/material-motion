@@ -2,13 +2,13 @@
 layout: page
 title: Draggable
 status:
-  date: December 20, 2016
-  is: Draft
-knowledgelevel: L2
+  date: March 2, 2017
+  is: Stable
+interfacelevel: L1
+implementationlevel: L2
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/streams/connections/Property
-  - /starmap/specifications/streams/Interaction
-library: interactions
+  - /starmap/specifications/interactions/
 ---
 
 # Draggable specification
@@ -17,12 +17,15 @@ This is the engineering specification for the `Draggable` interaction.
 
 ## Overview
 
-Feeds translation starting from an initial position to a given property.
+When the gesture begins, reads and caches the current property value.
+
+As the gesture changes, adds the gesture's translation to the cached property value and writes the
+result to the property.
 
 Example use:
 
 ```swift
-runtime.connect(Draggable(view: view, containerView: containerView))
+runtime.add(Draggable(), to: view)
 ```
 
 ## MVP
@@ -34,8 +37,6 @@ public class Draggable: Interaction
 ```
 
 ### Expose configurable values
-
-All property values should be readonly, all stream values should be settable.
 
 ```swift
 class Draggable {
