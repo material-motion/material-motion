@@ -238,50 +238,33 @@ toc:
        url: "/starmap/specifications/sources/"
        children:
         - page:
-          title: "Gesture recognizers"
-          url: "/starmap/specifications/gesture_recognizers/"
-          children:
-           - page:
-             title: "GestureRecognizer"
-             url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
-           - page:
-             title: "RotationGestureRecognizer"
-             url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
-           - page:
-             title: "ScaleGestureRecognizer"
-             url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
-           - page:
-             title: "TranslationGestureRecognizer"
-             url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
-           - page:
-             title: "Simultaneous recognition"
-             url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
-           - page:
-             title: "Dependent gestures"
-             url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
+          title: "Inline connections"
+          url: "/starmap/specifications/sources/connection-inline"
         - page:
-          title: "GestureSource"
-          url: "/starmap/specifications/sources/GestureSource"
-          children:
-           - page:
-             title: "Object implementation"
-             url: "/starmap/specifications/sources/GestureSource-object-implementation"
+          title: "Object connections"
+          url: "/starmap/specifications/sources/connection-object"
+     - page:
+       title: "Gesture recognizers"
+       url: "/starmap/specifications/gesture_recognizers/"
+       children:
         - page:
-          title: "ScrollSource"
-          url: "/starmap/specifications/sources/ScrollSource"
+          title: "GestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/GestureRecognizer"
         - page:
-          title: "SpringSource"
-          url: "/starmap/specifications/sources/SpringSource"
-          children:
-           - page:
-             title: "Inline implementation"
-             url: "/starmap/specifications/sources/SpringSource-inline-implementation"
-           - page:
-             title: "Dynamic destination"
-             url: "/starmap/specifications/sources/SpringSource-dynamic-destination"
+          title: "RotationGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/RotationGestureRecognizer"
         - page:
-          title: "TweenSource"
-          url: "/starmap/specifications/sources/TweenSource"
+          title: "ScaleGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/ScaleGestureRecognizer"
+        - page:
+          title: "TranslationGestureRecognizer"
+          url: "/starmap/specifications/gesture_recognizers/TranslationGestureRecognizer"
+        - page:
+          title: "Simultaneous recognition"
+          url: "/starmap/specifications/gesture_recognizers/simultaneous_recognition"
+        - page:
+          title: "Dependent gestures"
+          url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
      - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"

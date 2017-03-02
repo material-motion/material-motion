@@ -2,8 +2,8 @@
 layout: page
 permalink: /starmap/specifications/sources/
 status:
-  date: December 7, 2016
-  is: Draft
+  date: March 2, 2017
+  is: Stable
 interfacelevel: L2
 implementationlevel: L4
 library: reactive-motion
@@ -14,6 +14,35 @@ depends_on:
 # Sources
 
 A source turns an Interaction into a MotionObservable stream.
+
+## Types
+
+There are four primary types of sources:
+
+- Gestures
+- Scroll views
+- Springs
+- Tweens
+
+All sources have the same essential API shape. In Swift:
+
+```swift
+func sourceToStream(Source<T>) -> MotionObservable<T>
+```
+
+In Java:
+
+```java
+Source.from(source) // Returns a MotionObservable
+```
+
+## Output types
+
+Gesture recognizers are expected to emit themselves whenever the gesture's state is modified.
+
+Scroll views are expected to emit content offset as a Point type.
+
+Springs and Tweens are expected to support emitting any T value type.
 
 ## Connection shapes
 
