@@ -34,6 +34,7 @@ that may never complete in any permanent way.
 
 Material Motion is designed to be a light-weight solution for building powerful, reactive motion in
 an application. For this reason, any external dependencies must be carefully weighed and justified.
+
 The existing ReactiveX implementations are often multiple **thousands** of lines of code and
 represent **hundreds of kilobytes** of minified source. By comparison, our IndefiniteObservable
 implementations are each under 100 lines of code and, on the web, can be minified to under 140 bytes
