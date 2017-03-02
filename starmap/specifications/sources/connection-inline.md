@@ -6,7 +6,7 @@ status:
   is: Stable
 interfacelevel: L2
 implementationlevel: L4
-library: support
+library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
 ---

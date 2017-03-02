@@ -1,49 +1,39 @@
 ---
 layout: page
-title: Interactions
+title: Interaction
+status:
+  date: March 2, 2017
+  is: Stable
+interfacelevel: L2
+implementationlevel: L4
+library: reactive-motion
 permalink: /starmap/specifications/interactions/
-title: Interactions
 ---
 
-# Interactions
+# Interaction specification
 
-An interaction describes a coherent interactive experience.
+This is the engineering specification for the abstract `Interaction` type.
 
-Interactions can involve any number of plans and targets. The specificity of an interaction is left as an exercise to its creator.
+## Overview
 
-Interactions should prefer composition over subclassing.
+An Interaction is a class that represents one or more streams of values that can be connected to
+properties.
 
-## Interactions or Plans?
+## MVP
 
-To determine whether something is an Interaction or a Plan, consider the number of targets involved. Only one target? It should be a Plan. More than one target? It should be an Interaction.
-
-Consider the following interaction:
+### Expose an abstract type
 
 ```swift
-Interaction FadeIn {
-  func applyTo(target) {
-    const var plan = Tween("opacity", duration: 0.3)
-    plan.from = 0
-    plan.to = 1
-    addPlan(plan, to: target)
-  }
-}
+public protocol Interaction
 ```
 
-There is only one target involved here, so we might be better off creating a Plan instead:
+### Expose an add API
+
+An interaction implements the `add` method to set up the default set of connections one might
+expect from the interaction.
 
 ```swift
-Plan FadeIn {
-  Performer {
-    func addPlan(fadeIn) {
-      const var plan = Tween("opacity", duration: 0.3)
-      plan.from = 0
-      plan.to = 1
-      emitPlan(plan)
-    }
-  }
+protocol Interaction {
+  func add(to property: ReactiveProperty<T>, withRuntime runtime: MotionRuntime)
 }
-
-// We can now write:
-addPlan(FadeIn(), to: target)
 ```
