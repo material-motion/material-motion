@@ -1,7 +1,8 @@
 ---
 layout: page
 permalink: /starmap/specifications/observable/
-knowledgelevel: L4
+interfacelevel: L4
+implementationlevel: L4
 ---
 
 # Observable pattern
