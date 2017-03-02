@@ -16,7 +16,7 @@ depends_on:
 A system is the beginning of a stream that generates events. Systems are generally functions that
 accept some configuration information and return an instance of a MotionObservable.
 
-Systems have two connection shapes: **inline** and **object**.
+Systems return MotionObservables with two connection shapes: **inline** and **object**.
 
 ## Inline connections
 
