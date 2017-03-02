@@ -15,9 +15,11 @@ depends_on:
 
 A source turns an Interaction into a MotionObservable stream.
 
+## Connection shapes
+
 There are at least two distinct MotionObservable connection shapes: **inline** and **object**.
 
-## Inline connections
+### Inline connections
 
 This type of source is able to make use of inline function APIs.
 
@@ -35,7 +37,7 @@ func springToStream(spring: Spring<T>) -> MotionObservable<T> {
 }
 ```
 
-## Object connections
+### Object connections
 
 Consider the following example of a gestureToStream that we might make on iOS:
 
