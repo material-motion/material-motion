@@ -11,7 +11,7 @@ depends_on:
   - /starmap/specifications/observable/MotionObservable
 ---
 
-# SOurces
+# Sources
 
 A source turns an Interaction into a MotionObservable stream.
 
