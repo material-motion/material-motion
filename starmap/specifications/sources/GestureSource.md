@@ -4,16 +4,17 @@ title: GestureSource
 status:
   date: December 12, 2016
   is: Draft
-knowledgelevel: L2
-library: direct-manipulation
+interfacelevel: L2
+implementationlevel: L4
+library: reactive-motion
 depends_on:
-  - /starmap/specifications/primitives/gesture_recognizers/GestureRecognizer
-  - /starmap/specifications/streams/MotionObservable/
+  - /starmap/specifications/gesture_recognizers/GestureRecognizer
+  - /starmap/specifications/observable/MotionObservable
 ---
 
-# GestureSource specification
+# GestureSystem specification
 
-This is the engineering specification for the `GestureSource` type.
+This is the engineering specification for the `GestureSystem` type.
 
 ## Overview
 
@@ -23,11 +24,11 @@ capable of emitting gesture recognizers.
 Example usage:
 
 ```swift
-gestureSource(dragGesture).subscribe(...)
+gestureToStream(dragGesture).subscribe(...)
 ```
 
 ```java
-GestureSource.from(dragGesture).subscribe(...)
+GestureStream.from(dragGesture).subscribe(...)
 ```
 
 ## MVP

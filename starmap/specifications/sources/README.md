@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /starmap/specifications/systems/
+permalink: /starmap/specifications/sources/
 status:
   date: December 7, 2016
   is: Draft
@@ -11,26 +11,25 @@ depends_on:
   - /starmap/specifications/observable/MotionObservable
 ---
 
-# Systems
+# SOurces
 
-A system is the beginning of a stream that generates events. Systems are generally functions that
-accept some configuration information and return an instance of a MotionObservable.
+A source turns an Interaction into a MotionObservable stream.
 
-Systems return MotionObservables with two connection shapes: **inline** and **object**.
+There are at least two distinct MotionObservable connection shapes: **inline** and **object**.
 
 ## Inline connections
 
-This type of system is able to make use of inline function APIs.
+This type of source is able to make use of inline function APIs.
 
 ```swift
 func springToStream(spring: Spring<T>) -> MotionObservable<T> {
   return MotionObservable { observer in
-    ... // Configure the spring system
+    ... // Configure the spring source
 
-    springSystem.start()
+    springSource.start()
 
     return {
-      springSystem.stop()
+      springSource.stop()
     }
   }
 }
