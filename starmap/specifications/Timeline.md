@@ -4,7 +4,8 @@ title: Timeline
 status:
   date: February 16, 2016
   is: Draft
-knowledgelevel: L2
+interfacelevel: L2
+implementationlevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/streams/MotionObservable

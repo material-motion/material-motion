@@ -235,7 +235,7 @@ toc:
           url: "/starmap/specifications/operators/y"
      - page:
        title: "Systems"
-       url: "/starmap/specifications/streams/sources/"
+       url: "/starmap/specifications/systems/"
        children:
         - page:
           title: "Gesture recognizers"
@@ -261,27 +261,27 @@ toc:
              url: "/starmap/specifications/gesture_recognizers/dependent_gestures"
         - page:
           title: "GestureSource"
-          url: "/starmap/specifications/streams/sources/GestureSource"
+          url: "/starmap/specifications/systems/GestureSource"
           children:
            - page:
              title: "Object implementation"
-             url: "/starmap/specifications/streams/sources/GestureSource-object-implementation"
+             url: "/starmap/specifications/systems/GestureSource-object-implementation"
         - page:
           title: "ScrollSource"
-          url: "/starmap/specifications/streams/sources/ScrollSource"
+          url: "/starmap/specifications/systems/ScrollSource"
         - page:
           title: "SpringSource"
-          url: "/starmap/specifications/streams/sources/SpringSource"
+          url: "/starmap/specifications/systems/SpringSource"
           children:
            - page:
              title: "Inline implementation"
-             url: "/starmap/specifications/streams/sources/SpringSource-inline-implementation"
+             url: "/starmap/specifications/systems/SpringSource-inline-implementation"
            - page:
              title: "Dynamic destination"
-             url: "/starmap/specifications/streams/sources/SpringSource-dynamic-destination"
+             url: "/starmap/specifications/systems/SpringSource-dynamic-destination"
         - page:
           title: "TweenSource"
-          url: "/starmap/specifications/streams/sources/TweenSource"
+          url: "/starmap/specifications/systems/TweenSource"
      - page:
        title: "Interaction"
        url: "/starmap/specifications/streams/Interaction"
