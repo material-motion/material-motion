@@ -189,9 +189,6 @@ toc:
           title: "merge"
           url: "/starmap/specifications/operators/merge"
         - page:
-          title: "normalizedBy"
-          url: "/starmap/specifications/operators/normalizedBy"
-        - page:
           title: "offsetBy"
           url: "/starmap/specifications/operators/offsetBy"
         - page:
@@ -212,9 +209,6 @@ toc:
         - page:
           title: "slop"
           url: "/starmap/specifications/operators/slop"
-        - page:
-          title: "subtractedFrom"
-          url: "/starmap/specifications/operators/subtractedFrom"
         - page:
           title: "threshold"
           url: "/starmap/specifications/operators/threshold"
