@@ -30,12 +30,12 @@ on GestureRecognizer value types.
 
 ## Overview
 
-Calculate the velocity of touch events in relation to the provided element.
+Calculate the velocity of pointer events.  If `element` is provided, the output units are relative to that element.
 
 Example usage:
 
 ```swift
-gestureSource(gesture).velocity(in: element)
+gestureSource(gesture).velocity(in: element?)
 ```
 
 ## MVP
