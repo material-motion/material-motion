@@ -28,12 +28,12 @@ on GestureRecognizer value types.
 
 ## Overview
 
-Calculate the centroid of touch events in relation to the provided element.
+Calculate the centroid of touch events in relation to the provided element.  If `element` is not provided, the values should be relative to the top-left corner of the viewport (JavaScript's `pageX` and `pageY`).
 
 Example usage:
 
 ```swift
-gesture.centroid(in: element)
+gesture.centroid(in: element?)
 ```
 
 ## MVP
