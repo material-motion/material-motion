@@ -24,6 +24,10 @@ reactive properties.
 
 ## API guidelines
 
+### Interactions are objects
+
+Many interactions expose one or more configurable properties as reactive properties. Interactions being objects makes it easy to group these properties together.
+
 ### Constant variables only
 
 All variables on an interaction instance must be constant.
