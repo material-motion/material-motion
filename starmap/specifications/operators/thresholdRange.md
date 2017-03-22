@@ -26,7 +26,7 @@ interaction:
   outputs:
     - output:
       name: downstream
-      type: ThresholdEvent
+      type: ThresholdSide
 ---
 
 # thresholdRange specification
@@ -43,10 +43,10 @@ This is the engineering specification for the `MotionObservable` operator: `thre
 stream.thresholdRange(min: 50, max: 100)
 
 upstream min max  |  downstream
-20       50  100  |  .whenBelow
-50       50  100  |  .whenWithin
-100      50  100  |  .whenWithin
-120      50  100  |  .whenAbove
+20       50  100  |  .below
+50       50  100  |  .within
+100      50  100  |  .within
+120      50  100  |  .above
 ```
 
 ## MVP
@@ -57,5 +57,5 @@ Use `_nextOperator` to implement the operator. Accept a threshold minimum and ma
 
 ```swift
 class MotionObservable<number> {
-  public func thresholdRange(min: T, max: T) -> MotionObservable<ThresholdEvent>
+  public func thresholdRange(min: T, max: T) -> MotionObservable<ThresholdSide>
 ```
