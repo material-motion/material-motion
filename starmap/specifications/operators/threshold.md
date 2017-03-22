@@ -2,7 +2,7 @@
 layout: page
 title: threshold
 status:
-  date: February 21, 2016
+  date: February 21, 2017
   is: Stable
 interfacelevel: L2
 implementationlevel: L3
@@ -23,7 +23,7 @@ interaction:
   outputs:
     - output:
       name: downstream
-      type: ThresholdEvent
+      type: ThresholdSide
 ---
 
 # threshold specification
@@ -40,20 +40,20 @@ This is the engineering specification for the `MotionObservable` operator: `thre
 stream.threshold(50)
 
 upstream position  |  downstream
-20       50        |  .whenBelow
-50       50        |  .whenWithin
-60       50        |  .whenAbove
+20       50        |  .below
+50       50        |  .within
+60       50        |  .above
 ```
 
 ## MVP
 
-### Expose a ThresholdEvent enum type
+### Expose a ThresholdSide enum type
 
 ```swift
-public enum ThresholdEvent {
-  case whenBelow
-  case whenWithin
-  case whenAbove
+public enum ThresholdSide {
+  case below
+  case within
+  case above
 }
 ```
 
@@ -63,5 +63,5 @@ Use `_nextOperator` to implement the operator. Accept a single position value.
 
 ```swift
 class MotionObservable<number> {
-  public func threshold<U>(_ threshold: number) -> MotionObservable<ThresholdEvent>
+  public func threshold<U>(_ threshold: number) -> MotionObservable<ThresholdSide>
 ```
