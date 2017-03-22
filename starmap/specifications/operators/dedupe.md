@@ -2,7 +2,7 @@
 layout: page
 title: dedupe
 status:
-  date: February 21, 2016
+  date: February 21, 2017
   is: Stable
 interfacelevel: L2
 implementationlevel: L3
