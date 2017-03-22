@@ -49,11 +49,13 @@ upstream position  |  downstream
 
 ### Expose a ThresholdEvent enum type
 
+```swift
 public enum ThresholdEvent {
   case whenBelow
   case whenWithin
   case whenAbove
 }
+```
 
 ### Expose a threshold operator API
 
