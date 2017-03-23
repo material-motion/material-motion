@@ -44,7 +44,7 @@ public class MotionRuntime {
 }
 ```
 
-### Expose an add API
+### Expose a connect API
 
 The implementation should subscribe to the stream and hold on to its subscription internally.
 
@@ -52,7 +52,8 @@ New values received from the subscribed stream should be written to the property
 
 ```swift
 class MotionRuntime {
-  public func add<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>)
+  public func connect<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>)
+}
 ```
 
 ### Create storage for subscriptions
@@ -65,18 +66,20 @@ made.
 ```swift
 class MotionRuntime {
   private var subscriptions: [Subscription] = []
+}
 ```
 
 ### Store all subscriptions
 
-Store all subscriptions made via the `add` API in a private storage mechanism.
+Store all subscriptions made via the `connect` API.
 
 An array is adequate because we currently have no mechanism for removing subscriptions once they are
 made.
 
 ```swift
 class MotionRuntime {
-  func add<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>) {
+  func connect<T>(stream: MotionObservable<T>, to property: ReactiveProperty<T>) {
     subscriptions.append(stream.subscribe(next: { property.value = $0 }))
   }
+}
 ```
