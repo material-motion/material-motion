@@ -6,7 +6,7 @@ title: Documentation
 
 # Introduction to Material Motion
 
-Material Motion is designed to help you build **interactions**, the building blocks of motion. Interactions are composable, reactive entities that can be associated with user interfaces. One such interaction is `Draggable`, which we'll use in this introduction to make a view move around in reaction to human touch or pointer input.
+Material Motion is designed to help you build **interactions**, the building blocks of motion. Interactions are composable entities that can be associated with elements of a user interface. One such interaction is `Draggable`, which we'll use in this introduction to make a view move around in reaction to human touch or pointer input.
 
 Every interaction must be associated with an instance of `MotionRuntime` and this runtime instance must exist for as long as we want the interaction to be active:
 
