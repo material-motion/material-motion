@@ -19,7 +19,7 @@ availability:
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/MotionRuntime.ts
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/MotionRuntime.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionRuntime.swift
 ---
 
 # MotionRuntime specification

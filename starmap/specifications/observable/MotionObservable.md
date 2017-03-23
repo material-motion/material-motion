@@ -30,8 +30,8 @@ availability:
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/__tests__/motionObservable.test.ts
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/MotionObservable.swift
-    tests_url: https://github.com/material-motion/reactive-motion-swift/blob/develop/tests/unit/MotionObservableTests.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionObservable.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/MotionObservableTests.swift
 ---
 
 # MotionObservable specification

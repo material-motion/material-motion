@@ -20,7 +20,7 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/streams-swift/blob/develop/src/ReactiveProperty.swift
-    tests_url: https://github.com/material-motion/reactive-motion-swift/blob/develop/tests/unit/ReactivePropertyTests.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/ReactivePropertyTests.swift
 ---
 
 # createProperty feature specification

@@ -12,7 +12,7 @@ depends_on:
 availability:
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/reactive-motion-swift/blob/develop/src/operators/rewrite.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/rewrite.swift
 interaction:
   inputs:
     - input:
