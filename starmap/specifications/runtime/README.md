@@ -10,6 +10,11 @@ implementationlevel: L4
 library: reactive-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
+proposals:
+  - proposal:
+    completion_date: March 23, 2017
+    state: Stable
+    discussion: "runtime.add for streams changed to runtime.connect"
 availability:
   - platform:
     name: Android 
