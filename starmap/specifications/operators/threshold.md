@@ -9,6 +9,11 @@ implementationlevel: L3
 library: reactive-motion
 depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
+proposals:
+  - proposal:
+    completion_date: March 22, 2017
+    state: Stable
+    discussion: "ThresholdEvent renamed to ThresholdSide. Dropped when- prefix."
 related_to:
   - /starmap/specifications/operators/thresholdRange
   - /starmap/specifications/operators/rewrite
