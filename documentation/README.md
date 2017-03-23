@@ -50,7 +50,7 @@ runtime.add(spring, to: position)
 
 The position will now move to the spring's `destination`, which defaults to zero. How do we configure the spring's destination?
 
-## Configuration interactions
+## Configuring interactions
 
 Interactions often expose their own reactive properties. This lets us use interactions to control other interactions' behavior. We'd like to change where the position springs to so we'll make use of Spring's `destination` property.
 
