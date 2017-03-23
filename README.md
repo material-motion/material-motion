@@ -11,7 +11,6 @@ Current status: **early development**.
 
 [Chat with us on Discord](https://discord.gg/ZJyGXza).
 
-
 ## Android platform support
 
 | Library | Build status | Coverage | Version | Docs | Issues |

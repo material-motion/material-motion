@@ -4,38 +4,24 @@ permalink: /documentation/
 title: Documentation
 ---
 
-# Documentation
+# Introduction to Material Motion
 
-Welcome to the Material Motion documentation. There's not much here yet.
+Material Motion includes a variety of ready-to-use **interactions**. An interaction is an object that can be associated with a visual element or a property. Interactions take effect immediately upon association.
 
-## Knowledge levels
+In this introduction we'll associate a Draggable interaction with a view to make it respond to drag events.
 
-We categorize the education of Material Motion into the following groups:
+Before we can associate any motion with our view we need to create a **runtime**.
 
-1. App creator
-2. Interaction/Director creator
-3. Stream creator
-4. Runtime engineering
+> A runtime's container view should be the top-most view for your interactions. On iOS this is most commonly a view controller's root view.
 
-Each group in the list above requires more knowledge of the Material Motion ecosystem than the group preceding it.
+```swift
+let runtime = MotionRuntime(containerView: view)
+```
 
-## Expectations
+Let's make the view draggable by adding a `Draggable` interaction to it.
 
-**App creator**: uses Directors and Interactions to create apps.
+```swift
+runtime.add(Draggable(), to: view)
+```
 
-**Interaction creator**: uses Streams to create Directors and Interactions.
-
-**Stream creator**: uses the observable pattern to create Streams.
-
-**Runtime engineer**: uses platform-specific considerations to build the runtime.
-
-> Note that the Starmap is written for runtime engineers.
-
-![]({{ site.url }}/assets/Roles.svg)
-
-## Methods of positioning these expectations
-
-We will provide distinct categories of educational material targeted toward each knowledge level:
-
-- L1: **using** material motion
-- L2-3: **extending** material motion.
+![]({{ site.url }}/assets/interaction-draggable.gif)
