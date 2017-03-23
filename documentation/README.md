@@ -60,4 +60,65 @@ Let's try adding a `SetPositionOnTap` interaction to our spring's destination:
 runtime.add(SetPositionOnTap(), to: spring.destination)
 ```
 
-We can now tap anywhere on the canvas to move the view.
+We can now tap anywhere to move the view.
+
+## How to combine interactions
+
+We can create new interactions by combining interactions in interesting ways. For example, *Tossable* is a combination of `Spring` and `Draggable`. Let's walk through the process by which we might invent a new interaction like `Tossable`.
+
+First we create the interactions we know we'll need: Spring and Draggable.
+
+```swift
+let spring = Spring<CGPoint>(threshold: 1, system: coreAnimation)
+let draggable = Draggable()
+```
+
+Inspecting Draggable's documentation reveals that it will affect the view's layer position, so let's make sure we use the same property for our spring:
+
+```swift
+let position = runtime.get(view.layer).position
+```
+
+If we associate our interactions right now we'll notice something unsurprising: we can drag the view, but when we let go nothing happens. This is because we haven't combined the interactions in any way.
+
+```swift
+runtime.add(spring, to: position)
+runtime.add(draggable, to: view)
+```
+
+---
+
+### Toggling interactions
+
+Many interactions can be **toggled**. Togglable interactions can be disabled and enabled.
+
+When an interaction is **disabled** it will stop any motion associated with it. For example, when a spring is disabled it will stop moving toward its destination.
+
+When an interaction is **enabled** it will start moving again, often by re-initializing the animation with new initial values such as the current value of the property being affected.
+
+---
+
+When we finish dragging we want our spring interaction to start animating, so this is a perfect use of toggling. We can create a toggling association between two interactions using `runtime.toggle`. Try pasting the following example into the playground.
+
+```swift
+runtime.toggle(spring, inReactionTo: draggable)
+
+runtime.add(spring, to: position)
+runtime.add(draggable, to: view)
+```
+
+You can now drag the view and, upon release, the view will snap back to its destination.
+
+You may have noticed that if you release while quickly dragging that the view doesn't appear to respect the final velocity of your gesture. Let's make this interaction more believable by connecting our draggable gesture's final velocity to our spring's **initial velocity**.
+
+```swift
+runtime.add(draggable.finalVelocity, to: spring.initialVelocity)
+
+runtime.toggle(spring, inReactionTo: draggable)
+runtime.add(spring, to: position)
+runtime.add(draggable, to: view)
+```
+
+> Order is important here: we want to ensure that our spring's initial velocity is configured before the spring is toggled by the draggable gesture, otherwise our spring won't have access to the velocity when it's re-enabled.
+
+We've now created the parts necessary for a `Tossable` interaction. We certainly don't want to have to remember to build these pieces every time we want an interaction like this, so on the next page we'll learn how to create new Interaction types.
