@@ -21,4 +21,7 @@ We can now make any view respond to drag event by associating a `Draggable` inte
 runtime.add(Draggable(), to: view)
 ```
 
+The result:
+
 ![]({{ site.url }}/assets/interaction-draggable.gif)
+
