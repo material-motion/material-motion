@@ -5,7 +5,7 @@ status:
   date: December 7, 2016
   is: Draft
 depends_on:
-  - /documentation/L4/IndefiniteObservable/
+  - /documentation/IndefiniteObservable/
 ---
 
 # Part 1: How do I create an Observable?

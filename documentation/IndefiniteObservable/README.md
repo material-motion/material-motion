@@ -1,6 +1,6 @@
 ---
 layout: docs
-permalink: /documentation/L4/IndefiniteObservable/
+permalink: /documentation/IndefiniteObservable/
 status:
   date: December 7, 2016
   is: Draft

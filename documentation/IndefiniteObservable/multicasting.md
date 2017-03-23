@@ -5,7 +5,7 @@ status:
   date: December 7, 2016
   is: Draft
 depends_on:
-  - /documentation/L4/IndefiniteObservable/operators
+  - /documentation/IndefiniteObservable/operators
 ---
 
 # Part 3: Multicasting
