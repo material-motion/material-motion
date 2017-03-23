@@ -38,52 +38,21 @@ toc:
     url: "/documentation/"
     children:
      - page:
-       title: "L1"
-       url: "/documentation/L1/"
+       title: "IndefiniteObservable"
+       url: "/documentation/L4/IndefiniteObservable/"
        children:
         - page:
-          title: "iOS interactions"
-          url: "/documentation/L1/ios-interactions"
+          title: "How do I create an Observable?"
+          url: "/documentation/L4/IndefiniteObservable/creation"
         - page:
-          title: "iOS transitions"
-          url: "/documentation/L1/ios-transitions"
-     - page:
-       title: "L2"
-       url: "/documentation/L2/"
-       children:
+          title: "Operators"
+          url: "/documentation/L4/IndefiniteObservable/operators"
         - page:
-          title: "iOS custom interactions"
-          url: "/documentation/L2/ios-custom-interactions"
+          title: "Multicasting"
+          url: "/documentation/L4/IndefiniteObservable/multicasting"
         - page:
-          title: "iOS custom transitions"
-          url: "/documentation/L2/ios-custom-transitions"
-     - page:
-       title: "L3"
-       url: "/documentation/L3/"
-       children:
-        - page:
-          title: "Custom stream operators"
-          url: "/documentation/L3/custom-stream-operators"
-     - page:
-       title: "L4"
-       url: "/documentation/L4/"
-       children:
-        - page:
-          title: "IndefiniteObservable"
-          url: "/documentation/L4/IndefiniteObservable/"
-          children:
-           - page:
-             title: "How do I create an Observable?"
-             url: "/documentation/L4/IndefiniteObservable/creation"
-           - page:
-             title: "Operators"
-             url: "/documentation/L4/IndefiniteObservable/operators"
-           - page:
-             title: "Multicasting"
-             url: "/documentation/L4/IndefiniteObservable/multicasting"
-           - page:
-             title: "Conclusion"
-             url: "/documentation/L4/IndefiniteObservable/conclusion"
+          title: "Conclusion"
+          url: "/documentation/L4/IndefiniteObservable/conclusion"
   - page:
     title: "Starmap"
     url: "/starmap/"

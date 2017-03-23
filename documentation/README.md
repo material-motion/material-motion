@@ -24,4 +24,3 @@ runtime.add(Draggable(), to: view)
 The result:
 
 ![]({{ site.url }}/assets/interaction-draggable.gif)
-
