@@ -19,7 +19,7 @@ availability:
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/properties/__tests__/reactiveProperty.test.ts
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/streams-swift/blob/develop/src/ReactiveProperty.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/ReactiveProperty.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/ReactivePropertyTests.swift
 ---
 
