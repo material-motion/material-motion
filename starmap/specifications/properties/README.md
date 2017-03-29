@@ -23,7 +23,7 @@ eventually written to **reactive properties**. In practice, the most common type
 - Rectangles.
 - Sizes.
 
-<iframe width="100%" height="440" frameborder="0" src="https://ncase.github.io/loopy/v1/?embed=1&data=[[[1,399,304,1,%22System%22,5],[2,714,310,1,%22Reactive%2520Property%22,4]],[[1,2,89,1,0]],[[558,214,%22Values%22]],2%5D"></iframe>
+<iframe width="100%" height="220" frameborder="0" src="https://ncase.github.io/loopy/v1/?embed=1&data=[[[1,399,304,1,%22System%22,5],[2,714,310,1,%22Reactive%2520Property%22,4]],[[1,2,89,1,0]],[[558,214,%22Values%22]],2%5D"></iframe>
 
 ### Systems generate values
 
