@@ -62,7 +62,7 @@ let subscription = property.subscribe { value in
 ### Expose a concrete ReactiveProperty API
 
 ```swift
-public class ReactiveProperty<T> {
+public final class ReactiveProperty<T> {
 }
 ```
 
