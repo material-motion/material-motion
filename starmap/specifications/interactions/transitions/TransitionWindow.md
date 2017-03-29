@@ -22,8 +22,8 @@ considering the transition's direction.
 Consider the following diagram in which there are two segments:
 
 ```swift
-const var redSegment = TransitionWindowSegment(position: 0, length: 0.5)
-const var greenSegment = TransitionWindowSegment(position: 0, length: 1)
+let redSegment = TransitionWindowSegment(position: 0, length: 0.5)
+let greenSegment = TransitionWindowSegment(position: 0, length: 1)
 ```
 
 ![]({{ site.url }}/assets/TransitionWindow.svg)
@@ -31,15 +31,15 @@ const var greenSegment = TransitionWindowSegment(position: 0, length: 1)
 During a forward transition our segments are mapped to absolute time like so:
 
 ```swift
-const var delay = segment.position * window.duration
-const var duration = segment.length * window.duration
+let delay = segment.position * window.duration
+let duration = segment.length * window.duration
 ```
 
 During a backward transition, our segments are mapped to absolute time like so:
 
 ```swift
-const var delay = (1 - (segment.position + segment.length)) * window.duration
-const var duration = segment.length * window.duration
+let delay = (1 - (segment.position + segment.length)) * window.duration
+let duration = segment.length * window.duration
 ```
 
 In other words, a segment that occurs during the **first half** of a forward transition will occur
@@ -71,5 +71,5 @@ Expose a read-only API for the window's duration.
 
 ```swift
 class TransitionWindow {
-  const var duration: TimeInterval
+  let duration: TimeInterval
 ```

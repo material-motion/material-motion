@@ -37,7 +37,7 @@ Plans must consider how they will handle future changes to their payload format.
 The following example serializes a specific Tween plan:
 
 ```
-const var fadeIn = Tween(keyPath: "opacity")
+let fadeIn = Tween(keyPath: "opacity")
 fadeIn.from = 0
 fadeIn.to = 1
 fadeIn.curve = .easeIn
@@ -58,7 +58,7 @@ data = Serializer.toBinary(fadeIn)
 The following example serializes a more abstract FadeIn compositional plan:
 
 ```
-const var fadeIn = FadeIn()
+let fadeIn = FadeIn()
 
 data = Serializer.toBinary(fadeIn)
 {

@@ -42,7 +42,7 @@ public class Draggable: Interaction
 class Draggable {
 
   /** The property to which the value stream is expected to write. */
-  public const var property: ReactiveProperty<CGPoint>
+  public let property: ReactiveProperty<CGPoint>
 
   /** A stream that emits values to be written to the property. */
   public var valueStream: MotionObservable<CGPoint>
@@ -51,7 +51,7 @@ class Draggable {
   public var velocityStream: MotionObservable<CGPoint>
 
   /** The gesture recognizer that drives this interaction. */
-  public const var gestureRecognizer: DragGestureRecognizer
+  public let gestureRecognizer: DragGestureRecognizer
 ```
 
 ### Expose an initializer

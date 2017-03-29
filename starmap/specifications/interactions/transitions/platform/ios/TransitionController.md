@@ -52,9 +52,9 @@ Example pseudo-code:
 ```swift
 TransitionController {
   function transitionWillStart(initialDirection) {
-    const var runtime = MotionRuntime()
+    let runtime = MotionRuntime()
     runtime.delegate = self
-    const var transition = Transition(...)
+    let transition = Transition(...)
     director = directorClass(transition)
   }
 }

@@ -33,7 +33,7 @@ This is the engineering specification for the `createProperty` API.
 value.
 
 ```swift
-const var someProperty = createProperty(withInitialValue: 20)
+let someProperty = createProperty(withInitialValue: 20)
 ```
 
 ## MVP

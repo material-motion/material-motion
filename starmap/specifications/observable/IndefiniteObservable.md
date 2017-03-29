@@ -39,7 +39,7 @@ public final class ValueObserver<T>: Observer<T> {
     self.next = next
   }
 
-  public const var next: (T) -> Void
+  public let next: (T) -> Void
 }
 
 public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
@@ -48,12 +48,12 @@ public class ValueObservable<T>: IndefiniteObservable<ValueObserver<T>> {
   }
 }
 
-const var observable = ValueObservable<Int> { observer in
+let observable = ValueObservable<Int> { observer in
   observer.next(10)
   return noopDisconnect
 }
 
-const var _ = observable.subscribe { value in
+let _ = observable.subscribe { value in
   print(value)
 }
 
@@ -119,7 +119,7 @@ public typealias Connect<O> = (O) -> Disconnect
 This value can be returned by a connect function to indicate that no disconnection work will occur.
 
 ```swift
-public const var noopDisconnect: Disconnect = { }
+public let noopDisconnect: Disconnect = { }
 ```
 
 ### Expose a Disconnect function type
@@ -177,7 +177,7 @@ class IndefiniteObservable<O> {
     self._connect = connect
   }
 
-  private const var _connect: Connect<O>
+  private let _connect: Connect<O>
 ```
 
 ### Expose a subscribe API on IndefiniteObservable

@@ -73,7 +73,7 @@ Consider the following example of a gestureToStream that we might make on iOS:
 ```swift
 func gestureToStream(_ gesture: UIGestureRecognizer) -> MotionObservable<UIGestureRecognizer> {
   return MotionObservable { observer in
-    const var connection = GestureConnection(subscribedTo: gesture, observer: observer)
+    let connection = GestureConnection(subscribedTo: gesture, observer: observer)
     return {
       connection.disconnect()
     }

@@ -19,10 +19,10 @@ A Spring can pull a value from an initial position to a destination using a phys
 Example usage:
 
 ```swift
-const var view = UIView()
-const var target = UIView()
-const var spring = Spring(to: propertyOf(target).center, initialValue: propertyOf(view).center)
-const var spring$ = springSource(spring)
+let view = UIView()
+let target = UIView()
+let spring = Spring(to: propertyOf(target).center, initialValue: propertyOf(view).center)
+let spring$ = springSource(spring)
 ...
 ```
 
@@ -46,12 +46,12 @@ starting value of the spring. `initialVelocity` represents the initial velocity 
 
 ```swift
 class Spring {
-  public const var destination: ReactiveProperty<T>
-  public const var tension: ReactiveProperty<Float>
-  public const var friction: ReactiveProperty<Float>
-  public const var initialValue: ScopedReadable<T>
-  public const var initialVelocity: ScopedReadable<T>
-  public const var threshold: ScopedReadable<Float>
+  public let destination: ReactiveProperty<T>
+  public let tension: ReactiveProperty<Float>
+  public let friction: ReactiveProperty<Float>
+  public let initialValue: ScopedReadable<T>
+  public let initialVelocity: ScopedReadable<T>
+  public let threshold: ScopedReadable<Float>
 ```
 
 ### Expose defaults for tension and friction

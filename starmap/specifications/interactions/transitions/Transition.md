@@ -33,7 +33,7 @@ Expose a read-only MotionRuntime instance.
 
 ```swift
 class Transition {
-  const var runtime: MotionRuntime
+  let runtime: MotionRuntime
 ```
 
 ### Transition window API
@@ -42,7 +42,7 @@ Expose a read-only value of the transition's window.
 
 ```swift
 class Transition {
-  const var window: TransitionWindow
+  let window: TransitionWindow
 ```
 
 ### Timeline API
@@ -51,7 +51,7 @@ Expose a read-only value of the transition's timeline.
 
 ```swift
 class Transition {
-  const var timeline: Timeline
+  let timeline: Timeline
 ```
 
 ### Direction API
@@ -60,7 +60,7 @@ Expose a read-only value of the transition's direction.
 
 ```swift
 class Transition {
-  const var direction: TransitionDirection
+  let direction: TransitionDirection
 ```
 
 ### back/fore API
@@ -73,8 +73,8 @@ On iOS:
 
 ```swift
 class Transition {
-  const var back: UIViewController
-  const var fore: UIViewController
+  let back: UIViewController
+  let fore: UIViewController
 ```
 
 These values map from the platform's from/to values:

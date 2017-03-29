@@ -52,7 +52,7 @@ property.value = 100
 *Observing changes to a property's value*
 
 ```swift
-const var subscription = property.subscribe { value in
+let subscription = property.subscribe { value in
   print(value)
 }
 ```
@@ -117,7 +117,7 @@ class ReactiveProperty {
 ```swift
 class ReactiveProperty {
   func subscribe(next: (T) -> Void) -> Subscription {
-    const var observer = MotionObserver(next: next)
+    let observer = MotionObserver(next: next)
     observers.append(observer)
 ```
 

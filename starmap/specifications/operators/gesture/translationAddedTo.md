@@ -91,8 +91,8 @@ func translation(addedTo initialPosition: ScopedReadable<Point>, in element: Ele
   ...
   return _nextOperator { value, next in
     ...
-    if const var cachedInitialPosition = cachedInitialPosition {
-      const var translation = value.translation(in: view)
+    if let cachedInitialPosition = cachedInitialPosition {
+      let translation = value.translation(in: view)
       next(Point(x: cachedInitialPosition.x + translation.x,
                  y: cachedInitialPosition.y + translation.y))
     }

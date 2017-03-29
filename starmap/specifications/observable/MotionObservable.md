@@ -59,7 +59,7 @@ public final class MotionObserver<T> {
     self.next = next
   }
 
-  public const var next: (T) -> Void
+  public let next: (T) -> Void
 }
 ```
 

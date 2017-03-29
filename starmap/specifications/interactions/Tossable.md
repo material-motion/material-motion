@@ -24,7 +24,7 @@ The tossable interaction allows an element to be dragged and tossed to a destina
 Example use:
 
 ```swift
-const var tossable = Tossable(position: propertyOf(view).center,
+let tossable = Tossable(position: propertyOf(view).center,
                         to: propertyOf(targetView).center,
                         containerView: view,
                         springSource: popSpringSource)
@@ -67,7 +67,7 @@ class Tossable {
 ```swift
 class Tossable {
   init(...) {
-    const var panGestureRecognizer = panGestureRecognizer ?? UIPanGestureRecognizer()
+    let panGestureRecognizer = panGestureRecognizer ?? UIPanGestureRecognizer()
     if panGestureRecognizer.view == nil {
       containerView.addGestureRecognizer(panGestureRecognizer)
     }
@@ -82,8 +82,8 @@ class Tossable {
   init(...) {
     ...
 
-    const var dragStream = gestureSource(panGestureRecognizer)
-    const var translationStream = dragStream.translated(from: position, in: containerView)
+    let dragStream = gestureSource(panGestureRecognizer)
+    let translationStream = dragStream.translated(from: position, in: containerView)
 
     ...
 ```

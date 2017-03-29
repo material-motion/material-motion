@@ -82,9 +82,9 @@ public class Metadata {
 
 ```swift
 class Metadata {
-  public const var identifier: String
-  public const var label: String
-  public const var args: [Any]?
+  public let identifier: String
+  public let label: String
+  public let args: [Any]?
   private var parent: OperatorMetadata?
 
   init(_ identifier: String, objectIdentifier: String? args: [Any]?, parent: Metadata?) {
@@ -127,6 +127,6 @@ class Metadata {
 
 ```swift
 class MotionObservable {
-  public const var metadata: Metadata
+  public let metadata: Metadata
 }
 ```

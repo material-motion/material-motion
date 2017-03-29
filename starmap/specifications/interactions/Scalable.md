@@ -41,7 +41,7 @@ All property values should be readonly, all stream values should be settable.
 class Scalable {
 
   /** The property to which the value stream is expected to write. */
-  public const var property: ReactiveProperty<CGFloat>
+  public let property: ReactiveProperty<CGFloat>
 
   /** A stream that emits values to be written to the property. */
   public var valueStream: MotionObservable<CGFloat>
@@ -50,7 +50,7 @@ class Scalable {
   public var velocityStream: MotionObservable<CGFloat>
 
   /** The gesture recognizer that drives this interaction. */
-  public const var gestureRecognizer: ScaleGestureRecognizer
+  public let gestureRecognizer: ScaleGestureRecognizer
 ```
 
 ### Expose an initializer

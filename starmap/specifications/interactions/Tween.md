@@ -19,10 +19,10 @@ A Tween animates between a list of values using a pre-defined timing function.
 Example usage:
 
 ```swift
-const var view = UIView()
-const var target = UIView()
-const var tween = Tween(duration: 0.3, values: [0, 1])
-const var tween$ = tweenSource(tween)
+let view = UIView()
+let target = UIView()
+let tween = Tween(duration: 0.3, values: [0, 1])
+let tween$ = tweenSource(tween)
 ...
 ```
 
