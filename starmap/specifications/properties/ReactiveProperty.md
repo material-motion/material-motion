@@ -30,18 +30,29 @@ This is the engineering specification for the `ReactiveProperty` concrete type.
 
 ## Overview
 
-`ReactiveProperty` defines an interface for an observable value.
+`ReactiveProperty` defines an interface for the storage of a generic T value and observation of
+changes made to it.
 
-*Writing to a property*
+Reactive properties can represent existing information. Such properties will write changes to the
+existing information when the property's value changes and before notifying observers.
+
+*How to create a property*
 
 ```swift
-spring.destination.value = 100
+let property = ReactiveProperty(initialValue: 10)
+```
+
+
+*How to change a property*
+
+```swift
+property.value = 100
 ```
 
 *Observing changes to a spring's destination reactive property*
 
 ```swift
-const var subscription = spring.destination.subscribe { destination in
+const var subscription = property.subscribe { destination in
   animation.toValue = destination
 }
 ```
