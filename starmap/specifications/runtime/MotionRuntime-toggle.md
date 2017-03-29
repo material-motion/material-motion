@@ -9,6 +9,7 @@ implementationlevel: L4
 library: material-motion
 depends_on:
   - /starmap/specifications/runtime/
+  - /starmap/specifications/operators/rewrite
 proposals:
   - proposal:
     completion_date: March 29, 2017
@@ -31,6 +32,12 @@ This is the engineering specification for the `MotionRuntime`'s `toggle` API.
 
 Togglable objects can be toggled by Stateful objects whenever the Stateful object's state changes.
 
+When the stateful object is **active**, the togglable object is **disabled**.
+
+When the stateful object is **at rest**, the togglable object is **enabled**.
+
+This relationship is most commonly used with springs and gestures.
+
 ## MVP
 
 ### Expose a toggle API
@@ -47,6 +54,10 @@ class MotionRuntime {
 
 Connect the stateful interaction's `state` property to the togglable interaction's `enabled`
 property.
+
+When the state is `atRest`, set enabled to `true`.
+
+When the state is `active`, set enabled to `false`.
 
 ```swift
 class MotionRuntime {
