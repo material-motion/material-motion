@@ -53,13 +53,16 @@ Some examples:
 
 #### A note on properties representing existing information
 
-Reactive properties that represent existing information - e.g. an element's position - generally
-don't know when the existing information has changed. It is the responsibility of the existing
-information's owner to keep the property synchronized.
-
 Reactive properties that represent existing information are often configured to update the existing
 information when the property changes. This is sometimes referred to as "external writes" within
-the property implementations. For example:
+the property implementations. Consider the following diagram, in which writes made to the reactive
+property are propagated to the external information:
+
+<iframe width="100%" height="220" frameborder="0" src="https://material-motion.github.io/loopy/v1/?embed=1&data=[[[1,399,304,1,%22System%22,5],[2,714,310,1,%22Reactive%2520Property%22,4]],[[1,2,89,1,0]],[[558,214,%22Values%22]],2%5D"></iframe>
+
+Reactive properties that represent existing information don't know when the existing information
+has changed. It is the responsibility of the existing information's owner to keep the property
+synchronized. Consider the following code example:
 
 ```swift
 element.opacity = 0.5
