@@ -6,7 +6,7 @@ status:
   is: Stable
 interfacelevel: L2
 implementationlevel: L4
-library: reactive-motion
+library: material-motion
 ---
 
 # Connecting streams with external systems

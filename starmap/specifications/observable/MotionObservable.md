@@ -6,7 +6,7 @@ status:
   is: Stable
 interfacelevel: L3
 implementationlevel: L4
-library: reactive-motion
+library: material-motion
 depends_on:
   - /starmap/specifications/observable/IndefiniteObservable
 proposals:

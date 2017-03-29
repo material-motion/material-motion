@@ -6,7 +6,7 @@ status:
   is: Draft
 interfacelevel: L2
 implementationlevel: L4
-library: reactive-motion
+library: material-motion
 depends_on:
   - /starmap/specifications/streams/MotionObservable
 proposals:

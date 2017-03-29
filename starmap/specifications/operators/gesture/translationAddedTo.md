@@ -6,7 +6,7 @@ status:
   is: Stable
 interfacelevel: L2
 implementationlevel: L3
-library: reactive-motion
+library: material-motion
 depends_on:
   - /starmap/specifications/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/operators/foundation/$._nextOperator

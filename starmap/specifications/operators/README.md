@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /starmap/specifications/operators/
-library: reactive-motion
+library: material-motion
 ---
 
 # Operators

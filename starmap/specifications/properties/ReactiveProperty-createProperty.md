@@ -5,7 +5,7 @@ status:
   is: Stable
 interfacelevel: L2
 implementationlevel: L4
-library: reactive-motion
+library: material-motion
 depends_on:
   - /starmap/specifications/properties/ReactiveProperty
 availability:

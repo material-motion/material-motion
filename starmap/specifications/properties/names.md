@@ -5,7 +5,7 @@ status:
   date: December 4, 2016
   is: Draft
 knowledgelevel: L2
-library: reactive-motion
+library: material-motion
 depends_on:
   - /starmap/specifications/properties/ReactiveProperty
 ---
