@@ -58,7 +58,7 @@ information when the property changes. This is sometimes referred to as "externa
 the property implementations. Consider the following diagram, in which writes made to the reactive
 property are propagated to the external information:
 
-<iframe width="100%" height="220" frameborder="0" src="https://material-motion.github.io/loopy/v1/?embed=1&data=[[[1,513,461,1,"System",5],[2,759,461,1,"Reactive%2520Property",4],[4,983,462,1,"Existing%2520information",1]],[[1,2,3,1,0],[2,4,3,1,0]],[[626,454,"Values"]],4%5D"></iframe>
+<iframe width="100%" height="220" frameborder="0" src="https://material-motion.github.io/loopy/v1/?embed=1&data=[[[1,513,461,1,%22System%22,5],[2,759,461,1,%22Reactive%2520Property%22,4],[4,983,462,1,%22Existing%2520information%22,1]],[[1,2,3,1,0],[2,4,3,1,0]],[],4%5D"></iframe>
 
 Reactive properties that represent existing information don't know when the existing information
 has changed. It is the responsibility of the existing information's owner to keep the property
