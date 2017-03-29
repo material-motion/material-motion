@@ -17,9 +17,6 @@ proposals:
     discussion: "Introduced spec."
 availability:
   - platform:
-    name: Android 
-    url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/MotionRuntime.java
-  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionRuntime.swift
 ---
