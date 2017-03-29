@@ -153,3 +153,13 @@ class ReactiveProperty {
   }
 }
 ```
+
+### Should be convertible to a MotionObservable
+
+`ReactiveProperties` should be convertible to a MotionObservable type.
+
+```swift
+class ReactiveProperty {
+  public func asStream() -> MotionObservable<T>
+}
+```
