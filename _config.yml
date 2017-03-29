@@ -98,6 +98,9 @@ toc:
         - page:
           title: "addInteraction"
           url: "/starmap/specifications/runtime/MotionRuntime-addInteraction"
+        - page:
+          title: "toggle"
+          url: "/starmap/specifications/runtime/MotionRuntime-toggle"
      - page:
        title: "Operators"
        url: "/starmap/specifications/operators/"
