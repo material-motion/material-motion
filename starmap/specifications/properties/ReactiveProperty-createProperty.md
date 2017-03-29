@@ -35,7 +35,6 @@ value.
 ```swift
 let someProperty = createProperty(withInitialValue: 20)
 ```
-
 ```java
 ReactiveProperty<Float> property = ReactiveProperty.of(100f);
 ```
@@ -49,11 +48,19 @@ It should be genericized on type T.
 ```swift
 public func createProperty<T>(withInitialValue initialValue: T) -> ReactiveProperty<T>
 ```
+```java
+public static <T> ReactiveProperty<T> of(T initialValue)
+```
 
 ### Return a ReactiveProperty instance
 
 ```swift
 func createProperty<T>(withInitialValue value: T) -> ReactiveProperty<T> {
   return ReactiveProperty(withInitialValue: value)
+}
+```
+```java
+public static <T> ReactiveProperty<T> of(T initialValue) {
+  return new ValueReactiveProperty<>(initialValue);
 }
 ```
