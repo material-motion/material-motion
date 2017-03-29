@@ -36,6 +36,10 @@ value.
 let someProperty = createProperty(withInitialValue: 20)
 ```
 
+```java
+ReactiveProperty<Float> property = ReactiveProperty.of(100f);
+```
+
 ## MVP
 
 ### Expose a createProperty API
