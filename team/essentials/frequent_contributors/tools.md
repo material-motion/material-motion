@@ -6,7 +6,7 @@ layout: page
 
 Our team uses a custom tool called `mdm` to manage our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
-```
+```bash
 git clone --recursive git@github.com:material-motion/material-motion-tools.git
 cd material-motion-tools
 echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
