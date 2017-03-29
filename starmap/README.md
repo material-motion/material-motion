@@ -7,7 +7,9 @@ permalink: /starmap/
 
 # Material Motion Starmap
 
-This document describes a system that will empower creators with the language and tools needed to describe and implement rich, interactive motion on any platform. Within, we explore [essential primitives](specifications/primitives), [software design patterns](specifications/pattern), [motion runtimes](specifications/runtime), and more. Initially, we will be supporting Android, iOS, and the web.
+Material Motion's purpose is to empower creators with the language and tools needed to describe and
+implement rich interactive motion on any platform. Initially, we will be supporting Android, iOS,
+and the web.
 
 This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. [Join our Discord channel](https://discord.gg/ZJyGXza) to chat with the team.
 
