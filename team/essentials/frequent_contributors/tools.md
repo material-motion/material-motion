@@ -14,20 +14,20 @@ echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
 
 Add the output path to whichever file your shell uses to configure environment variables. This is often `~/.bash_profile` or `~/.bashrc`.
 
-```
+```bash
 # edit ~/.bash_profile
 source ~/.bash_profile
 ```
 
 You can now run the `mdm` tool installer like so:
 
-```
+```bash
 mdm tools
 ```
 
 Or the automated variant:
 
-```
+```bash
 mdm tools install
 ```
 
@@ -67,13 +67,13 @@ We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to 
 
 View your version:
 
-```
+```bash
 gem list | grep psych
 ```
 
 Update your version:
 
-```
+```bash
 xcode-select --install # May need to run this first
 sudo gem update psych
 ```
