@@ -88,8 +88,6 @@ class ReactiveProperty<T> {
 
 ### Expose a value API
 
-Any writes to this value should be immediately propagated to all subscribed observers.
-
 ```swift
 class ReactiveProperty<T> {
   public var value: T
@@ -103,13 +101,15 @@ Expose a MotionObserver-shaped subscribe API that accepts a next function.
 ```swift
 class ReactiveProperty {
   public func subscribe(next: (T) -> Void) -> Subscription
+}
 ```
 
-### Store a list of MotionObserver instances
+### Store a private list of MotionObserver instances
 
 ```swift
 class ReactiveProperty {
   private var observers: [MotionObserver<T>] = []
+}
 ```
 
 ### Subscribe adds an observer to a list of observers
@@ -119,6 +119,9 @@ class ReactiveProperty {
   func subscribe(next: (T) -> Void) -> Subscription {
     let observer = MotionObserver(next: next)
     observers.append(observer)
+    ...
+  }
+}
 ```
 
 ### Subscribe invokes the observer's next function with the current value
@@ -129,11 +132,13 @@ class ReactiveProperty {
     ...
 
     observer.next(value)
+  }
+}
 ```
 
 ### Changes to value should propagate to all observers
 
-Invokes the provided write function and informs all subscribed observers of the new value.
+First invoke the externalWrite function and then inform observers of the new value.
 
 ```swift
 class ReactiveProperty {
@@ -146,4 +151,5 @@ class ReactiveProperty {
       }
     }
   }
+}
 ```
