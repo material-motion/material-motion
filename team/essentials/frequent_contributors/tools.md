@@ -6,22 +6,30 @@ layout: page
 
 Our team uses a custom tool called `mdm` to manage our team's tooling. We encourage adding this tool to your PATH so that you can access it from anywhere on your computer:
 
-    git clone --recursive git@github.com:material-motion/material-motion-tools.git
-    cd material-motion-tools
-    echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
+```
+git clone --recursive git@github.com:material-motion/material-motion-tools.git
+cd material-motion-tools
+echo "export PATH=$(dirname $(find $(pwd) -regex '.*bin/mdm')):\$PATH"
+```
 
 Add the output path to whichever file your shell uses to configure environment variables. This is often `~/.bash_profile` or `~/.bashrc`.
 
-    # edit ~/.bash_profile
-    source ~/.bash_profile
+```
+# edit ~/.bash_profile
+source ~/.bash_profile
+```
 
 You can now run the `mdm` tool installer like so:
 
-    mdm tools
+```
+mdm tools
+```
 
 Or the automated variant:
 
-    mdm tools install
+```
+mdm tools install
+```
 
 Learn more about each `mdm` command by running `mdm help` or by [reading the docs on GitHub](https://github.com/material-motion/material-motion-tools/tree/develop/contributor_tools).
 
@@ -59,9 +67,13 @@ We use version 2.1.0 of the `psych` gem. This version of `psych` adds quotes to 
 
 View your version:
 
-    gem list | grep psych
+```
+gem list | grep psych
+```
 
 Update your version:
 
-    xcode-select --install # May need to run this first
-    sudo gem update psych
+```
+xcode-select --install # May need to run this first
+sudo gem update psych
+```
