@@ -65,8 +65,10 @@ has changed. It is the responsibility of the existing information's owner to kee
 synchronized. Consider the following code example:
 
 ```swift
+// Some existing information
 element.opacity = 0.5
 
+// Create a property representing the external information
 let opacity = runtime.get(element).opacity
 
 opacity.value // 0.5
