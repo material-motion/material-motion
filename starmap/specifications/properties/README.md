@@ -27,8 +27,7 @@ eventually written to **reactive properties**. In practice, the most common type
 
 ### Systems generate values
 
-A **system** subscribes to a collection of reactive properties and emits values on the observable's
-`next` channel.
+A **system** emits values on an observable's `next` channel.
 
 Some examples:
 
@@ -37,9 +36,9 @@ Some examples:
 - Interpolated values.
 - Gesture recognition events.
 
-Systems are **reactively configurable**, meaning changes to their configuration are expected to be
-immediately reflected in the values they emit. For example, a Spring's *tension* can be changed,
-causing the spring's simulation to immediately be affected.
+Systems are often **reactively configurable**, meaning changes to their configuration are expected
+to be immediately reflected in the values they emit. For example, a Spring's *tension* can be
+changed, causing the spring's simulation to immediately be affected.
 
 ### Reactive properties store values
 
