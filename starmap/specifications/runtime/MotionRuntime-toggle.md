@@ -36,7 +36,8 @@ When the stateful object is **active**, the togglable object is **disabled**.
 
 When the stateful object is **at rest**, the togglable object is **enabled**.
 
-This relationship is most commonly used with springs and gestures.
+This relationship is most commonly used with springs and gestures. When the gesture is active, the
+spring is disabled. When the gesture comes to rest, the spring is enabled.
 
 ## MVP
 
