@@ -16,7 +16,7 @@ proposals:
 availability:
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionObservable.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/reactivetypes/MotionObservable.swift
 ---
 
 # MotionObservable Core Animation feature specification
