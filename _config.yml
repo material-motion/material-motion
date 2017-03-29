@@ -94,6 +94,10 @@ toc:
      - page:
        title: "MotionRuntime"
        url: "/starmap/specifications/runtime/"
+       children:
+        - page:
+          title: "addInteraction"
+          url: "/starmap/specifications/runtime/MotionRuntime-addInteraction"
      - page:
        title: "Operators"
        url: "/starmap/specifications/operators/"

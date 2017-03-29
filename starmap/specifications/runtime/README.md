@@ -3,7 +3,7 @@ layout: page
 title: MotionRuntime
 permalink: /starmap/specifications/runtime/
 status:
-  date: February 20, 2016
+  date: February 20, 2017
   is: Stable
 interfacelevel: L1
 implementationlevel: L4
@@ -58,9 +58,7 @@ class MotionRuntime {
 }
 ```
 
-### Create storage for subscriptions
-
-Store all subscriptions made via the `add` API in a private storage mechanism.
+### Create private storage for subscriptions
 
 An array is adequate because we currently have no mechanism for removing subscriptions once they are
 made.
@@ -72,8 +70,6 @@ class MotionRuntime {
 ```
 
 ### Store all subscriptions
-
-Store all subscriptions made via the `connect` API.
 
 An array is adequate because we currently have no mechanism for removing subscriptions once they are
 made.
