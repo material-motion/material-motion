@@ -43,17 +43,17 @@ let property = ReactiveProperty(initialValue: 10)
 ```
 
 
-*How to change a property*
+*How to change a property's value*
 
 ```swift
 property.value = 100
 ```
 
-*Observing changes to a spring's destination reactive property*
+*Observing changes to a property's value*
 
 ```swift
-const var subscription = property.subscribe { destination in
-  animation.toValue = destination
+const var subscription = property.subscribe { value in
+  print(value)
 }
 ```
 
