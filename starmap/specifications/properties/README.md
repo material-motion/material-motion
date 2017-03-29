@@ -9,9 +9,9 @@ implementationlevel: L4
 library: material-motion
 ---
 
-# Connecting streams with external systems
+# Connecting streams
 
-This is the engineering specification for connecting streams with external information.
+This is the engineering specification for connecting streams with existing information.
 
 ## Overview
 
