@@ -32,6 +32,9 @@ This is the engineering specification for the `createProperty` API.
 `createProperty(withInitialValue:)` creates an **anonymous** ReactiveProperty with a given initial
 value.
 
+> For languages that don't allow top-level functions, `ReactiveProperty.of()` is the preferred API
+> signature.
+
 ```swift
 let someProperty = createProperty(withInitialValue: 20)
 ```
