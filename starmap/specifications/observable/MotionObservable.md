@@ -22,15 +22,15 @@ proposals:
 availability:
   - platform:
     name: Android
-    url: https://github.com/material-motion/streams-android/blob/develop/library/src/main/java/com/google/android/material/motion/streams/MotionObservable.java
-    tests_url: https://github.com/material-motion/streams-android/blob/develop/library/src/test/java/com/google/android/material/motion/streams/MotionObservableTests.java
+    url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/MotionObservable.java
+    tests_url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/test/java/com/google/android/reactive/motion/MotionObservableTests.java
   - platform:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/MotionObservable.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/__tests__/motionObservable.test.ts
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionObservable.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/reactivetypes/MotionObservable.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/MotionObservableTests.swift
 ---
 
