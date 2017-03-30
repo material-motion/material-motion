@@ -41,7 +41,7 @@ and position while maintaining the element's frame in relation to its parent ele
 ## Example usage
 
 ```swift
-stream.anchorPointAdjustment(element: someElement)
+stream.anchorPointAdjustment(in: someElement)
 
 upstream  element      |  downstream
 {1, 0}    someElement  |  {anchorPoint: {1, 0}, position: <adjusted position>}
