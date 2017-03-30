@@ -152,6 +152,9 @@ toc:
           title: "merge"
           url: "/starmap/specifications/operators/merge"
         - page:
+          title: "normalizedBy"
+          url: "/starmap/specifications/operators/normalizedBy"
+        - page:
           title: "offsetBy"
           url: "/starmap/specifications/operators/offsetBy"
         - page:
