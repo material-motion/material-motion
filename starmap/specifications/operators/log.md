@@ -11,6 +11,9 @@ depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
 availability:
   - platform:
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/MotionObservable.ts
+  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/log.swift
 proposals:
