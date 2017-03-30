@@ -61,6 +61,9 @@ toc:
        title: "Overview"
        url: "/starmap/overview"
      - page:
+       title: "Eliminating hand-off"
+       url: "/starmap/handoff"
+     - page:
        title: "Observable pattern"
        url: "/starmap/specifications/observable/"
        children:
