@@ -17,7 +17,8 @@ proposals:
 availability:
   - platform:
     name: iOS (Swift)
-    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/delayBy.swift https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/delayTests.swift
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/delayBy.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/delayTests.swift
 interaction:
   inputs:
     - input:

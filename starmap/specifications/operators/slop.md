@@ -12,6 +12,11 @@ depends_on:
   - /starmap/specifications/operators/dedupe
   - /starmap/specifications/operators/rewrite
   - /starmap/specifications/operators/thresholdRange
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/slop.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/slopTests.swift
 interaction:
   inputs:
     - input:

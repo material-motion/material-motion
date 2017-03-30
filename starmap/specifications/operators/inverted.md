@@ -13,6 +13,7 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/inverted.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/invertedTests.swift
 interaction:
   inputs:
     - input:

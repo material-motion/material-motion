@@ -9,6 +9,11 @@ implementationlevel: L3
 library: material-motion
 depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/thresholdRange.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/thresholdRangeTests.swift
 related_to:
   - /starmap/specifications/operators/threshold
   - /starmap/specifications/operators/rewrite

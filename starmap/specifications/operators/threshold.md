@@ -9,6 +9,11 @@ implementationlevel: L3
 library: material-motion
 depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/threshold.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/thresholdTests.swift
 proposals:
   - proposal:
     completion_date: March 22, 2017

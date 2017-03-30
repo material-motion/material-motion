@@ -9,6 +9,11 @@ implementationlevel: L3
 library: material-motion
 depends_on:
   - /starmap/specifications/operators/foundation/$._map
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/y.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/yTests.swift
 related_to:
   - /starmap/specifications/operators/x
 interaction:

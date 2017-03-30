@@ -20,6 +20,7 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/upperBound.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/upperBoundTests.swift
 interaction:
   inputs:
     - input:
