@@ -194,8 +194,14 @@ toc:
           title: "x"
           url: "/starmap/specifications/operators/x"
         - page:
+          title: "xLockedTo"
+          url: "/starmap/specifications/operators/xLockedTo"
+        - page:
           title: "y"
           url: "/starmap/specifications/operators/y"
+        - page:
+          title: "yLockedTo"
+          url: "/starmap/specifications/operators/yLockedTo"
         - page:
           title: "Gesture"
           url: "/starmap/specifications/operators/gesture/"

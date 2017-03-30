@@ -43,6 +43,7 @@ Use `_map` to implement the operator. Accept a number value. Emit the result of 
 ```swift
 class MotionObservable<number> {
   public func rubberBanded(below: number, above: number, length: number) -> MotionObservable<number>
+}
 ```
 
 ### Implement the rubber-banding math
@@ -86,4 +87,5 @@ class MotionObservable<number> {
       return rubberBand(value: $0, min: below, max: above, bandLength: length)
     }
   }
+}
 ```
