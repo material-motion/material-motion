@@ -109,6 +109,25 @@ toc:
        url: "/starmap/specifications/operators/"
        children:
         - page:
+          title: "Foundation"
+          url: "/starmap/specifications/operators/foundation/"
+          children:
+           - page:
+             title: "_nextOperator"
+             url: "/starmap/specifications/operators/foundation/$._nextOperator"
+           - page:
+             title: "_filter"
+             url: "/starmap/specifications/operators/foundation/$._filter"
+           - page:
+             title: "_map"
+             url: "/starmap/specifications/operators/foundation/$._map"
+           - page:
+             title: "_remember"
+             url: "/starmap/specifications/operators/foundation/$._remember"
+           - page:
+             title: "_read"
+             url: "/starmap/specifications/operators/foundation/$._read"
+        - page:
           title: "anchorPointAdjustment"
           url: "/starmap/specifications/operators/anchorPointAdjustment"
         - page:
@@ -190,25 +209,6 @@ toc:
            - page:
              title: "velocity"
              url: "/starmap/specifications/operators/gesture/velocity"
-        - page:
-          title: "Foundation"
-          url: "/starmap/specifications/operators/foundation/"
-          children:
-           - page:
-             title: "_nextOperator"
-             url: "/starmap/specifications/operators/foundation/$._nextOperator"
-           - page:
-             title: "_filter"
-             url: "/starmap/specifications/operators/foundation/$._filter"
-           - page:
-             title: "_map"
-             url: "/starmap/specifications/operators/foundation/$._map"
-           - page:
-             title: "_remember"
-             url: "/starmap/specifications/operators/foundation/$._remember"
-           - page:
-             title: "_read"
-             url: "/starmap/specifications/operators/foundation/$._read"
      - page:
        title: "Interaction"
        url: "/starmap/specifications/interactions/"
