@@ -9,6 +9,7 @@ implementationlevel: L3
 library: material-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
+  - /starmap/specifications/operators/foundation/$._remember
 proposals:
   - proposal:
     completion_date: March 29, 2017
@@ -60,6 +61,9 @@ class MotionObservable<T> {
 
 ### Create a MotionObservable that emits the initialValue on subscription
 
+The stream should be `_remember`'d so that the last value emitted is cached for subsequent
+subscriptions.
+
 ```swift
 class MotionObservable<T> {
   public func startWith(initialValue: T) -> MotionObservable<T> {
@@ -69,7 +73,7 @@ class MotionObservable<T> {
       return {
         subscription.unsubscribe()
       }
-    }
+    }._remember()
   }
 }
 ```
