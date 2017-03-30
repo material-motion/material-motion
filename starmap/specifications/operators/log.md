@@ -13,6 +13,11 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/log.swift
+proposals:
+  - proposal:
+    completion_date: March 29, 2017
+    state: Stable
+    discussion: "Added optional string prefix arg."
 interaction:
   inputs:
     - input:
@@ -48,13 +53,27 @@ console
 80
 ```
 
+```swift
+stream.log(prefix: "The value is:")
+
+upstream  |  downstream
+20        |  20
+40        |  40
+80        |  80
+
+console
+The value is: 20
+The value is: 40
+The value is: 80
+```
+
 ## MVP
 
 ### Expose a log operator API
 
-Use `_nextOperator` to implement the operator.
+Use `_nextOperator` to implement the operator. Accept an optional prefix string.
 
 ```swift
 class MotionObservable {
-  public func log() -> MotionObservable<T>
+  public func log(prefix: String? = nil) -> MotionObservable<T>
 ```
