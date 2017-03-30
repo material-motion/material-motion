@@ -11,6 +11,13 @@ depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
 availability:
   - platform:
+    name: Android
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/operators/CommonOperators.java
+  - platform:
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/MotionObservable.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/__tests__/motionObservable-dedupe.test.ts
+  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/dedupe.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/dedupeTests.swift
