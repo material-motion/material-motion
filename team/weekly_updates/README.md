@@ -5,8 +5,6 @@ permalink: /team/weekly_updates/
 
 # Weekly updates
 
-Team is offline til the new year!
-
 | 2017 | Week #1 | Week #2 | Week #3 | Week #4 | Week #5 |
 |:-----:|:-------:|:-------:|:-------:|:-------:|:-------:|
 | March  | [Current sprint](https://github.com/orgs/material-motion/projects/4) | | | |
