@@ -62,5 +62,5 @@ Use `_nextOperator` to implement the operator. Accept a threshold minimum and ma
 
 ```swift
 class MotionObservable<number> {
-  public func thresholdRange(min: T, max: T) -> MotionObservable<ThresholdSide>
+  public func thresholdRange(min: number, max: number) -> MotionObservable<ThresholdSide>
 ```
