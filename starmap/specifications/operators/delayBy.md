@@ -48,6 +48,8 @@ time  |  upstream  |  downstream
 0.1   |            |  
 0.2   |  80        |  
 0.3   |            |  20
+0.4   |            |  
+0.5   |            |  80
 ```
 
 ## MVP
