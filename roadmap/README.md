@@ -82,12 +82,6 @@ When viewing long content, scrolling to the top of the content should overshoot 
 
 ![]({{ site.url }}/assets/case-study-bottom-sheet.gif)
 
-#### Sliding drawer
-
-A drawer is dragged/animated out from the edge of the screen and a scrim overlay is optionally shown over the underlying content. Tapping on the scrim will dismiss the drawer. Dragging the drawer will allow you to dismiss it as well. Attempting to drag the drawer beyond the edge of the screen will make it rubber band.
-
-![]({{ site.url }}/assets/case-study-drawer.gif)
-
 #### Picture-in-picture video player
 
 A video player that can be collapsed to the corner of the screen. It's possible to:
@@ -100,3 +94,15 @@ A video player that can be collapsed to the corner of the screen. It's possible 
 It's important that the video, if playing, does not stop or stutter while being animated or moved.
 
 ![]({{ site.url }}/assets/case-study-scroll-away.gif)
+
+#### Sliding drawer
+
+A drawer is dragged/animated out from the edge of the screen and a scrim overlay is optionally shown over the underlying content. Tapping on the scrim will dismiss the drawer. Dragging the drawer will allow you to dismiss it as well. Attempting to drag the drawer beyond the edge of the screen will make it rubber band.
+
+![]({{ site.url }}/assets/case-study-drawer.gif)
+
+#### Sticker editor
+
+Allows the user to directly manipulate a variety of stickers place on the screen using one or two finger gestures. Whichever top-most sticker is at the center of a multi-finger gesture should be the sticker that is manipulated.
+
+![]({{ site.url }}/assets/case-study-sticker-editor.gif)
