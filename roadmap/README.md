@@ -74,6 +74,8 @@ We use case studies to validate the feasibility of various experiences with Mate
 
 A badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
 
+![]({{ site.url }}/assets/case-study-celebration.gif)
+
 #### Bottom sheet
 
 Mobile only. A sheet is animated from the bottom of the screen up to cover the full screen. May be driven by a gesture. Gesture should feed continuously into scrolling of the sheet's content.
