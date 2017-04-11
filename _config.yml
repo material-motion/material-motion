@@ -56,6 +56,13 @@ toc:
   - page:
     title: "Roadmap"
     url: "/roadmap/"
+    children:
+     - page:
+       title: "Core team"
+       url: "/roadmap/core-team"
+     - page:
+       title: "Community"
+       url: "/roadmap/community"
   - page:
     title: "Starmap"
     url: "/starmap/"
