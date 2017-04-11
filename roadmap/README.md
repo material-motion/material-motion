@@ -88,6 +88,12 @@ A slider control that, when selected, expands outward and changes its value acco
 
 ![]({{ site.url }}/assets/case-study-custom-slider-control.gif)
 
+#### Hearts
+
+A swarm of floating hearts appears from the bottom of the screen and floats up and beyond the top of the screen. Individual hearts can be grabbed.
+
+![]({{ site.url }}/assets/case-study-hearts.gif)
+
 #### Picture-in-picture video player
 
 A video player that can be collapsed to the corner of the screen. It's possible to:
