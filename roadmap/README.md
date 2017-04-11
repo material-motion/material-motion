@@ -74,6 +74,14 @@ We use case studies to validate the feasibility of various experiences with Mate
 
 A badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
 
+#### Bottom sheet
+
+Mobile only. A sheet is animated from the bottom of the screen up to cover the full screen. May be driven by a gesture. Gesture should feed continuously into scrolling of the sheet's content.
+
+When viewing long content, scrolling to the top of the content should overshoot with a bounce, showing the underlying content in order to indicate that the sheet can be dismissed if grabbed again and tossed downard.
+
+![]({{ site.url }}/assets/case-study-bottom-sheet.gif)
+
 #### Sliding drawer
 
 A drawer is dragged/animated out from the edge of the screen and a scrim overlay is optionally shown over the underlying content. Tapping on the scrim will dismiss the drawer. Dragging the drawer will allow you to dismiss it as well. Attempting to drag the drawer beyond the edge of the screen will make it rubber band.
