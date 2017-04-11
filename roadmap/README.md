@@ -63,3 +63,25 @@ Open milestones:
 - Swift
   - [Reactive controls](https://github.com/material-motion/material-motion-swift/milestone/2)
   - [Runtime visualization](https://github.com/material-motion/material-motion-swift/milestone/6)
+
+## Community roadmap
+
+### Case studies
+
+We use case studies to validate the feasibility of various experiences with Material Motion.
+
+#### Award/badge animation
+
+In this case study a badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
+
+#### Picture-in-picture video player
+
+A video player that can be collapsed to the corner of the screen. It's possible to:
+
+-  move the video to different corners of the screen,
+- to expand the video fullscreen again,
+- to dismiss the video with a gesture,
+- to dismiss the video by clicking a dismiss button.
+
+![]({{ site.url }}/assets/case-study-scroll-away.gif)
+
