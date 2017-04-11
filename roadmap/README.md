@@ -108,6 +108,12 @@ A swarm of floating hearts appears from the bottom of the screen and floats up a
 
 ![]({{ site.url }}/assets/case-study-hearts.gif)
 
+#### Grid choreography
+
+A grid of items fades in or out in a radial wave pattern.
+
+![]({{ site.url }}/assets/case-study-grid-choreography.gif)
+
 #### Picture-in-picture video player
 
 A video player that can be collapsed to the corner of the screen. It's possible to:
