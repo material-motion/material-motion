@@ -9,7 +9,7 @@ As an open source project we want to ensure that community members have a clear 
 
 The ambition for Material Motion is large, meaning there are many independent initiatives to be taken. **The Core Team will communicate its primary focus via this roadmap**. We'll also define open-ended roads that we hope the community will be interested in exploring as well.
 
-We work on three separate platforms
+We work on three separate platforms.
 
 ## Core team roadmap
 
