@@ -46,7 +46,7 @@ Open milestones:
 
 - [Swift](https://github.com/material-motion/material-motion-swift/milestone/3)
 
-### Powerful motion engineering tooling.
+### Powerful motion engineering tooling
 
 Material Motion is designed to enable the creation of powerful tooling for engineers and designers in order to eliminate the concept of a "design handoff". We see three major areas of tooling potential:
 
@@ -81,6 +81,12 @@ Mobile only. A sheet is animated from the bottom of the screen up to cover the f
 When viewing long content, scrolling to the top of the content should overshoot with a bounce, showing the underlying content in order to indicate that the sheet can be dismissed if grabbed again and tossed downard.
 
 ![]({{ site.url }}/assets/case-study-bottom-sheet.gif)
+
+#### Custom slider control
+
+A slider control that, when selected, expands outward and changes its value according to drags along a given axis.
+
+![]({{ site.url }}/assets/case-study-custom-slider-control.gif)
 
 #### Picture-in-picture video player
 
