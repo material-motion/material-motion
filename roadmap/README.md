@@ -50,9 +50,9 @@ Open milestones:
 
 Material Motion is designed to enable the creation of powerful tooling for engineers and designers in order to eliminate the concept of a "design handoff". We see three major areas of tooling potential:
 
-1. Runtime visualization. Visualizing the runtime as a connected graph of modifiable streams.
-2. Tweaking. Being able to modify any reactive property in the system in real time. Properties should be grouped together and visualized with semantic awareness of their relevance to one another (e.g. all properties on a Spring interaction are grouped together).
-3. Creation. Enabling engineers and designers to prototype new interactions without having to write code. The raw version of this tool might simply be a graph stream tool. A more complex tool might appear more traditional in nature.
+1. **Runtime visualization**. Visualizing the runtime as a connected graph of modifiable streams.
+2. **Tweaking**. Being able to modify any reactive property in the system in real time. Properties should be grouped together and visualized with semantic awareness of their relevance to one another (e.g. all properties on a Spring interaction are grouped together).
+3. **Creation**. Enabling engineers and designers to prototype new interactions without having to write code. The raw version of this tool might simply be a graph stream tool. A more complex tool might appear more traditional in nature.
 
 Who's driving this:
 
