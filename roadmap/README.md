@@ -7,7 +7,7 @@ permalink: /roadmap/
 
 As an open source project we want to ensure that community members have a clear and transparent understanding of the direction of Material Motion's development. This roadmap can be thought of as a short-term companion guide to what the Material Motion team is prioritizing or working on. It also acts as a historical record of major milestones we've passed as a team.
 
-The ambition for Material Motion is large, meaning there are many independent initiatives to be taken. The Core Team will clearly identify what it's primary focus is via this roadmap. We'll also define open-ended roads that we hope the community will be interested in exploring as well.
+The ambition for Material Motion is large, meaning there are many independent initiatives to be taken. **The Core Team will communicate its primary focus via this roadmap**. We'll also define open-ended roads that we hope the community will be interested in exploring as well.
 
 We work on three separate platforms
 
