@@ -112,3 +112,11 @@ A drawer is dragged/animated out from the edge of the screen and a scrim overlay
 Allows the user to directly manipulate a variety of stickers place on the screen using one or two finger gestures. Whichever top-most sticker is at the center of a multi-finger gesture should be the sticker that is manipulated.
 
 ![]({{ site.url }}/assets/case-study-sticker-editor.gif)
+
+#### Push back transition
+
+A transition that pushes the underlying content into the screen while sliding the incoming content up from the bottom of the screen. May be dismissable with gestures like a sliding drawer.
+
+This study could be thought of as a variant of the more abstract sliding drawer case study.
+
+![]({{ site.url }}/assets/case-study-transition-push-back.gif)
