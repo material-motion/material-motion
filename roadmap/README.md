@@ -64,6 +64,8 @@ Open milestones:
 
 ## Community roadmap
 
+The community roadmap defines open-ended projects and ideas that can be explored in parallel and independently of the core team roadmap.
+
 ### Case studies
 
 We use case studies to validate the feasibility of various experiences with Material Motion.
@@ -79,6 +81,18 @@ Mobile only. A sheet is animated from the bottom of the screen up to cover the f
 When viewing long content, scrolling to the top of the content should overshoot with a bounce, showing the underlying content in order to indicate that the sheet can be dismissed if grabbed again and tossed downard.
 
 ![]({{ site.url }}/assets/case-study-bottom-sheet.gif)
+
+#### Bubbles transition
+
+A transition in which a variety of on-screen objects show anticipation and then swoop off-screen while the incoming view fades in.
+
+![]({{ site.url }}/assets/case-study-bubbles-transition.gif)
+
+#### Carousel
+
+A horizontal paginated scroll view that transforms pages as they move to the center of the screen.
+
+![]({{ site.url }}/assets/case-study-carousel.gif)
 
 #### Custom slider control
 
