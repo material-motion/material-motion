@@ -14,6 +14,10 @@ availability:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/rewriteTo.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/rewriteToTests.swift
+  - platform:
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/rewriteTo.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/__tests__/rewriteTo.test.ts
 interaction:
   inputs:
     - input:

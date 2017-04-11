@@ -14,6 +14,10 @@ availability:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/rewriteRange.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/rewriteRangeTests.swift
+  - platform:
+    name: JavaScript
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/rewriteRange.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/__tests__/rewriteRange.test.ts
 interaction:
   inputs:
     - input:

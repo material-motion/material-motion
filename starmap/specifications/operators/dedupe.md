@@ -15,8 +15,8 @@ availability:
     url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/operators/CommonOperators.java
   - platform:
     name: JavaScript
-    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/MotionObservable.ts
-    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/__tests__/motionObservable-dedupe.test.ts
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/dedupe.ts
+    tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/__tests__/dedupe.test.ts
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/dedupe.swift
@@ -47,7 +47,7 @@ stream.dedupe()
 
 upstream  |  downstream
 20        |  20
-20        |  
+20        |
 80        |  80
 20        |  20
 ```
