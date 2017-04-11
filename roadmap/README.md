@@ -72,13 +72,19 @@ We use case studies to validate the feasibility of various experiences with Mate
 
 #### Award/badge animation
 
-In this case study a badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
+A badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
+
+#### Sliding drawer
+
+A drawer is dragged/animated out from the edge of the screen and a scrim overlay is optionally shown over the underlying content. Tapping on the scrim will dismiss the drawer. Dragging the drawer will allow you to dismiss it as well. Attempting to drag the drawer beyond the edge of the screen will make it rubber band.
+
+![]({{ site.url }}/assets/case-study-drawer.gif)
 
 #### Picture-in-picture video player
 
 A video player that can be collapsed to the corner of the screen. It's possible to:
 
--  move the video to different corners of the screen,
+- move the video to different corners of the screen,
 - to expand the video fullscreen again,
 - to dismiss the video with a gesture,
 - to dismiss the video by clicking a dismiss button.
@@ -86,4 +92,3 @@ A video player that can be collapsed to the corner of the screen. It's possible 
 It's important that the video, if playing, does not stop or stutter while being animated or moved.
 
 ![]({{ site.url }}/assets/case-study-scroll-away.gif)
-
