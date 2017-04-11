@@ -83,5 +83,7 @@ A video player that can be collapsed to the corner of the screen. It's possible 
 - to dismiss the video with a gesture,
 - to dismiss the video by clicking a dismiss button.
 
+It's important that the video, if playing, does not stop or stutter while being animated or moved.
+
 ![]({{ site.url }}/assets/case-study-scroll-away.gif)
 
