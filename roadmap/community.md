@@ -10,6 +10,12 @@ The community roadmap defines open-ended projects and ideas that can be explored
 
 We use case studies to validate the feasibility of various experiences with Material Motion.
 
+#### Attractor menu
+
+A radial menu with options that gravitate towards the user's touch.
+
+![]({{ site.url }}/assets/case-study-attractor-menu.gif)
+
 #### Award/badge animation
 
 A badge or award is shown and an animation, likely a particle animation, is initiated. The animation could loop or be a one-off.
