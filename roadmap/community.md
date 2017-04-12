@@ -48,6 +48,12 @@ Photos in a grid can be expanded and collapsed in order to reveal more detailed 
 
 ![]({{ site.url }}/assets/case-study-pesto-contextual-transition.gif)
 
+#### Contextual transitions: Shrine
+
+Photos in a grid can be expanded and collapsed in order to reveal more detailed contents.
+
+![]({{ site.url }}/assets/case-study-shrine-contextual-transition.gif)
+
 #### Custom slider control
 
 A slider control that, when selected, expands outward and changes its value according to drags along a given axis.
