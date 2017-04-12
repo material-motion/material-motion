@@ -10,6 +10,12 @@ The community roadmap defines open-ended projects and ideas that can be explored
 
 We use case studies to validate the feasibility of various experiences with Material Motion.
 
+#### Arc transition
+
+A contextual transition in which the center of the context moves along an arc path.
+
+![]({{ site.url }}/assets/case-study-arc-transition.gif)
+
 #### Attractor menu
 
 A radial menu with options that gravitate towards the user's touch.
