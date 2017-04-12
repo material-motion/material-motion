@@ -91,6 +91,12 @@ It's important that the video, if playing, does not stop or stutter while being 
 
 ![]({{ site.url }}/assets/case-study-scroll-away.gif)
 
+#### Ringing button
+
+A button that attracts attention by expanding, shaking, and generating waves of ink.
+
+![]({{ site.url }}/assets/case-study-ringing-button.gif)
+
 #### Sliding drawer
 
 A drawer is dragged/animated out from the edge of the screen and a scrim overlay is optionally shown over the underlying content. Tapping on the scrim will dismiss the drawer. Dragging the drawer will allow you to dismiss it as well. Attempting to drag the drawer beyond the edge of the screen will make it rubber band.
