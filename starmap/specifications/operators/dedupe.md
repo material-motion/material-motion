@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: material-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$._nextOperator
+  - /starmap/specifications/operators/foundation/$._filter
 availability:
   - platform:
     name: Android
@@ -56,9 +56,6 @@ upstream  |  downstream
 
 ### Expose a dedupe operator API
 
-Use `_nextOperator` to implement the operator. Emit values only if they do not match the
-previously-emitted value.
-
 ```swift
 class MotionObservable<T> {
   public func dedupe() -> MotionObservable<T>
@@ -77,6 +74,7 @@ class MotionObservable<T> {
 
 ### Emit and store the new value
 
+Use `_filter` to implement the operator. 
 Emit upstream values if we haven't emitted a value before or the new value does not match the
 previously-emitted value. Store the newly-received value.
 
@@ -84,15 +82,15 @@ previously-emitted value. Store the newly-received value.
 class MotionObservable<T> {
   func dedupe() -> MotionObservable<T> {
     ...
-    return _nextOperator { value, next in
+    return _filter { value in
       if emitted && lastValue == value {
-        return
+        return false
       }
 
       lastValue = value
       emitted = true
 
-      next(value)
+      return true
     }
   }
 ```
