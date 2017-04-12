@@ -42,6 +42,12 @@ Items in a list can be expanded and collapsed in order to view more detailed con
 
 ![]({{ site.url }}/assets/case-study-inbox-contextual-transition.gif)
 
+#### Contextual transitions: Pesto
+
+Photos in a grid can be expanded and collapsed in order to reveal more detailed contents.
+
+![]({{ site.url }}/assets/case-study-pesto-contextual-transition.gif)
+
 #### Custom slider control
 
 A slider control that, when selected, expands outward and changes its value according to drags along a given axis.
