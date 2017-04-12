@@ -12,6 +12,7 @@ depends_on:
   - /starmap/specifications/operators/dedupe
   - /starmap/specifications/operators/rewrite
   - /starmap/specifications/operators/thresholdRange
+  - /starmap/specifications/operators/ignoreUntil
 availability:
   - platform:
     name: iOS (Swift)
@@ -78,49 +79,14 @@ class MotionObservable<number> {
   public func slop(size: number) -> MotionObservable<SlopEvent>
 ```
 
-### Create a Boolean reactive property
-
-Initialize it with false. This property will track whether the upstream has left the slop region.
+### Calculate and emit the new slop event
 
 ```swift
 class MotionObservable<number> {
   func slop(size: number) -> MotionObservable<SlopEvent> {
-    let didLeaveSlopRegion = createProperty(withInitialValue: false)
-```
-
-### Subscribe upstream and enable didLeaveSlopRegion upon leaving the slop
-
-```swift
-class MotionObservable<number> {
-  func slop(size: number) -> MotionObservable<SlopEvent> {
-    ...
-    
-    return MotionObservable { observer in
-      let upstreamSubscription = self
-        .thresholdRange(min: -size, max: size)
-        .rewrite([.whenBelow: true, .whenAbove: true])
-        .dedupe()
-        .subscribe { didLeaveSlopRegion.value = $0 }
-
-      ...
-```
-
-### Subscribe upstream and valve it based on didLeaveSlopRegion
-
-```swift
-class MotionObservable<number> {
-  func slop(size: number) -> MotionObservable<SlopEvent> {
-    ...
-    
-    return MotionObservable { observer in
-      ...
-
-      let downstreamSubscription = self
-        .valve(openWhenTrue: didLeaveSlopRegion)
-        .thresholdRange(min: -size, max: size)
-        .rewrite([.whenBelow: .onExit, .whenWithin: .onReturn, .whenAbove: .onExit])
-        .dedupe()
-        .subscribe(observer: observer)
-
-      ...
+    return self
+      .thresholdRange(min: -size, max: size)
+      .rewrite([.whenBelow: .onExit, .whenWithin: .onReturn, .whenAbove: .onExit])
+      .dedupe()
+      .ignoreUntil(.onExit)
 ```
