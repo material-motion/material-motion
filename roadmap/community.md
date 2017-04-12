@@ -54,6 +54,12 @@ A grid of items fades in or out in a radial wave pattern.
 
 ![]({{ site.url }}/assets/case-study-grid-choreography.gif)
 
+#### Modal dialog
+
+A modal dialog that can be dismissed with gestures.
+
+![]({{ site.url }}/assets/case-study-modal.gif)
+
 #### Picture-in-picture video player
 
 A video player that can be collapsed to the corner of the screen. It's possible to:
