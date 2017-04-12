@@ -36,6 +36,12 @@ A horizontal paginated scroll view that transforms pages as they move to the cen
 
 ![]({{ site.url }}/assets/case-study-carousel.gif)
 
+#### Contextual transitions: Inbox
+
+Items in a list can be expanded and collapsed in order to view more detailed contents.
+
+![]({{ site.url }}/assets/case-study-inbox-contextual-transition.gif)
+
 #### Custom slider control
 
 A slider control that, when selected, expands outward and changes its value according to drags along a given axis.
