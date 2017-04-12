@@ -48,6 +48,8 @@ Items in a list can be expanded and collapsed in order to view more detailed con
 
 ![]({{ site.url }}/assets/case-study-inbox-contextual-transition.gif)
 
+![]({{ site.url }}/assets/case-study-contextual-expansion.gif)
+
 #### Contextual transitions: Pesto
 
 Photos in a grid can be expanded and collapsed in order to reveal more detailed contents.
