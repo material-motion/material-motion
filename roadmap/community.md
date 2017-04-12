@@ -60,6 +60,12 @@ A slider control that, when selected, expands outward and changes its value acco
 
 ![]({{ site.url }}/assets/case-study-custom-slider-control.gif)
 
+#### Drag resistance
+
+A cell in a list can be dragged offscreen. If the cell can't be dragged offscreen, it shows resistance.
+
+![]({{ site.url }}/assets/case-study-drag-resistance.gif)
+
 #### Hearts
 
 A swarm of floating hearts appears from the bottom of the screen and floats up and beyond the top of the screen. Individual hearts can be grabbed.
