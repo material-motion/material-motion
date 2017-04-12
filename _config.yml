@@ -150,6 +150,9 @@ toc:
           title: "distanceFrom"
           url: "/starmap/specifications/operators/distanceFrom"
         - page:
+          title: "ignoreUntil"
+          url: "/starmap/specifications/operators/ignoreUntil"
+        - page:
           title: "inverted"
           url: "/starmap/specifications/operators/inverted"
         - page:
