@@ -9,6 +9,7 @@ implementationlevel: L3
 library: material-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
+  - /starmap/specifications/operators/foundation/$._filter
 availability:
 interaction:
   inputs:
