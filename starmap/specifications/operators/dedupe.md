@@ -75,7 +75,7 @@ class MotionObservable<T> {
     var lastValue: T?
 ```
 
-### Expose a dedupe operator API
+### Emit and store the new value
 
 Emit upstream values if we haven't emitted a value before or the new value does not match the
 previously-emitted value. Store the newly-received value.
