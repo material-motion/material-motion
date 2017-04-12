@@ -10,6 +10,12 @@ The community roadmap defines open-ended projects and ideas that can be explored
 
 We use case studies to validate the feasibility of various experiences with Material Motion.
 
+#### Arc move
+
+Movement from one location to another following an arc path.
+
+![]({{ site.url }}/assets/case-study-arc-move.gif)
+
 #### Arc transition
 
 A contextual transition in which the center of the context moves along an arc path.
