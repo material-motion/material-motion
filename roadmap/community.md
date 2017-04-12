@@ -90,6 +90,12 @@ A slider control that, when selected, expands outward and changes its value acco
 
 ![]({{ site.url }}/assets/case-study-custom-slider-control.gif)
 
+#### Dialog
+
+A dialog expands from a location and reveals contents that can be dismissed with a tap or a gesture.
+
+![]({{ site.url }}/assets/case-study-dialog.gif)
+
 #### Drag resistance
 
 A cell in a list can be dragged offscreen. If the cell can't be dragged offscreen, it shows resistance.
