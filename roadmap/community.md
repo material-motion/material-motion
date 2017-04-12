@@ -42,7 +42,17 @@ A horizontal paginated scroll view that transforms pages as they move to the cen
 
 ![]({{ site.url }}/assets/case-study-carousel.gif)
 
-#### Contextual transitions: Inbox
+#### Choreographed transition
+
+A transition that coordinates a variety of animations to create a perception of contextual expansion. May include:
+
+- Color flooding
+- Mask expansions
+- Elements fading in/out
+
+![]({{ site.url }}/assets/case-study-choreographed-transition.gif)
+
+#### Contextual transition: Inbox
 
 Items in a list can be expanded and collapsed in order to view more detailed contents.
 
@@ -50,13 +60,13 @@ Items in a list can be expanded and collapsed in order to view more detailed con
 
 ![]({{ site.url }}/assets/case-study-contextual-expansion.gif)
 
-#### Contextual transitions: Pesto
+#### Contextual transition: Pesto
 
 Photos in a grid can be expanded and collapsed in order to reveal more detailed contents.
 
 ![]({{ site.url }}/assets/case-study-pesto-contextual-transition.gif)
 
-#### Contextual transitions: Shrine
+#### Contextual transition: Shrine
 
 Photos in a grid can be expanded and collapsed in order to reveal more detailed contents.
 
