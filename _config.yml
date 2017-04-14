@@ -115,8 +115,8 @@ toc:
           title: "toggle"
           url: "/starmap/specifications/runtime/MotionRuntime-toggle"
         - page:
-          title: "visualize"
-          url: "/starmap/specifications/runtime/MotionRuntime-visualize"
+          title: "visualizationElement"
+          url: "/starmap/specifications/runtime/MotionRuntime-visualizationElement"
      - page:
        title: "Operators"
        url: "/starmap/specifications/operators/"
@@ -209,6 +209,9 @@ toc:
         - page:
           title: "valve"
           url: "/starmap/specifications/operators/valve"
+        - page:
+          title: "visualize"
+          url: "/starmap/specifications/operators/visualize"
         - page:
           title: "x"
           url: "/starmap/specifications/operators/x"
