@@ -82,15 +82,21 @@ Create a new label and subscribe to the upstream, writing emitted values to the 
 ```swift
 class MotionObservable {
   public func visualize(prefix: String? = nil, in: Element) -> MotionObservable<T>
-    write(stream.toString().dedupe(), to: ReactiveProperty(initialValue: "", externalWrite: { value in
-      label.text = (labelText ?? "") + value
+    let visualizationSubscription = self.asStream().toString().dedupe().subscribeToValue { value in
+      label.text = (prefix ?? "") + stringValue
 
-      // Flash the element
       highlight.alpha = 1
       UIView.animate(withDuration: 0.3) {
         highlight.alpha = 0
       }
-    }))
+    }
+
+    let subscription = self.asStream().subscribeAndForward(to: observer)
+
+    return {
+      visualizationSubscription.unsubscribe()
+      subscription.unsubscribe()
+    }
   }
 }
 ```
