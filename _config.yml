@@ -114,6 +114,9 @@ toc:
         - page:
           title: "toggle"
           url: "/starmap/specifications/runtime/MotionRuntime-toggle"
+        - page:
+          title: "visualize"
+          url: "/starmap/specifications/runtime/MotionRuntime-visualize"
      - page:
        title: "Operators"
        url: "/starmap/specifications/operators/"
