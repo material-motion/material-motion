@@ -2,7 +2,7 @@
 layout: page
 title: log
 status:
-  date: February 20, 2016
+  date: February 20, 2017
   is: Stable
 interfacelevel: L2
 implementationlevel: L3

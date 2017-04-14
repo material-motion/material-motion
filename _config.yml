@@ -198,6 +198,9 @@ toc:
           title: "thresholdRange"
           url: "/starmap/specifications/operators/thresholdRange"
         - page:
+          title: "toString"
+          url: "/starmap/specifications/operators/toString"
+        - page:
           title: "upperBound"
           url: "/starmap/specifications/operators/upperBound"
         - page:
