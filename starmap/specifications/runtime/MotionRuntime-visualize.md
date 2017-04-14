@@ -33,6 +33,12 @@ It's often helpful to be able to visualize changes as they're propagated. The `l
 runtime.visualize { position }
 ```
 
+With a prefix label:
+
+```swift
+runtime.visualize("Position: ") { position }
+```
+
 ## MVP
 
 ### Expose a visualize API
