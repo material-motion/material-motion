@@ -9,6 +9,7 @@ implementationlevel: L4
 library: material-motion
 depends_on:
   - /starmap/specifications/runtime/
+  - /starmap/specifications/operators/dedupe
   - /starmap/specifications/operators/toString
 proposals:
   - proposal:
@@ -80,7 +81,7 @@ Create a new label and subscribe to the stream, writing emitted values to the la
 ```swift
 class MotionRuntime {
   func visualize(_ labelText: String? = nil, stream: MotionObservable) {
-    write(stream().asStream().toString().dedupe(), to: ReactiveProperty(initialValue: "", externalWrite: { value in
+    write(stream.toString().dedupe(), to: ReactiveProperty(initialValue: "", externalWrite: { value in
       label.text = (labelText ?? "") + value
 
       // Flash the element
