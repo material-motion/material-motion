@@ -26,7 +26,7 @@ This is the engineering specification for the `MotionRuntime`'s `visualizationEl
 
 ## Overview
 
-It's often helpful to be able to visualize changes as they're propagated. The `log` operator makes it easy to log stream output to the console. The `visualizationElement` API provides an element that can be provided to the `visualize(in: Element)` operator.
+The `visualizationElement` API is a lazily-created element that's registered to the MotionRuntime's container element. This element can be provided to the `visualize(in: Element)` operator, allowing you to add visualization labels to the visualization element.
 
 ## MVP
 
