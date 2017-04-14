@@ -25,7 +25,7 @@ Milestones hit:
 
 - ✓ Swift (March 25, 2017)
 
-### Open source components using Material Motion
+### Components built with Material Motion
 
 Components are a la carte libraries that provide complete experiences using Material Motion. The most classic example of such a library is a transition. Examples of different transitions: fade in, circular reveal, modal dialog, side drawer. Other libraries may exist for things like animated graph visualizations, one-off animations, and immersive experiences.
 
