@@ -141,13 +141,13 @@ class CustomObservable extends IndefiniteObservable {
   // makeOperator applies a function to every item in a
   // sequence and returns the transformed sequence, just
   // like map on an Array. So, let's call it `map`.
-  map(predicate) {
+  map(transform) {
     return new CustomObservable(
       observer => {
         this.subscribe({
           next(value) {
             observer.next(
-              predicate(value)
+              transform(value)
             )
           }
         })
@@ -164,10 +164,10 @@ class CustomObservable extends IndefiniteObservable {
   // tap lets us inspect the pipeline by calling a function
   // on every value without affecting the rest of the
   // pipeline. It's really useful for logging.
-  tap(predicate) {
+  tap(transform) {
     return this.map(
       value => {
-        predicate(value);
+        transform(value);
         return value;
       }
     );
