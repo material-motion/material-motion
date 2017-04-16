@@ -128,5 +128,5 @@ transformedValue$.subscribe(anotherObserver);
 transformedValue$.subscribe(yetAnotherObserver);
 ```
 
-Now, `map`, `tap`, and any other streams in `originalValue$` will only run
+Now, `map`, `tap`, and any other computation in `originalValue$` will only run
 once.
