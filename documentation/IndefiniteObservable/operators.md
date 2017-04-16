@@ -88,15 +88,15 @@ a higher order function that lets us reuse all that boilerplate for other
 operators:
 
 ```javascript
-// source is our input stream; predicate is the function we want
+// source is our input stream; transform is the function we want
 // to apply to all the values on that input stream.
-function makeOperator(source, predicate) {
+function makeOperator(source, transform) {
   return new IndefiniteObservable(
     (observer) => {
       const subscription = source.subscribe({
         next(value) {
           observer.next(
-            predicate(value)
+            transform(value)
           );
         }
       });
@@ -115,8 +115,8 @@ const point$ = makeOperator(
 );
 ```
 
-Great - now we can write just our transformation function, `predicate` and
-let `makeOperator` do all the subscribing work for us.
+Great - now we can write just our transformation function and let
+`makeOperator` do all the subscribing work for us.
 
 But if we wanted to add another transformation function, we'd have to call
 `makeOperator` again. That's hard to read:
