@@ -16,7 +16,7 @@ understand about Observables and how they work:
 - Observables connect listeners to event sources, providing a consistent API
   for any kind of asynchronous messaging.
 
-- Observables can be chained together with [operators](#operators), allowing you
+- Observables can be chained together with [operators](./operators), allowing you
   to define which functions data should flow through before it reaches a
   listener.
 
