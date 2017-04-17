@@ -193,6 +193,9 @@ toc:
           title: "offsetBy"
           url: "/starmap/specifications/operators/offsetBy"
         - page:
+          title: "pluck"
+          url: "/starmap/specifications/operators/pluck"
+        - page:
           title: "rewrite"
           url: "/starmap/specifications/operators/rewrite"
         - page:

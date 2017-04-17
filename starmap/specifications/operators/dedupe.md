@@ -15,7 +15,7 @@ availability:
     url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/Dedupe.java
   - platform:
     name: JavaScript
-    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/dedupe.ts
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/dedupe.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/observables/__tests__/dedupe.test.ts
   - platform:
     name: iOS (Swift)
