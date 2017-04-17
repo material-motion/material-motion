@@ -14,7 +14,6 @@ availability:
   - platform:
     name: Android
     url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/IgnoreUntil.java
-availability:
 interaction:
   inputs:
     - input:
