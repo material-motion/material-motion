@@ -153,6 +153,25 @@ toc:
           title: "distanceFrom"
           url: "/starmap/specifications/operators/distanceFrom"
         - page:
+          title: "Gesture"
+          url: "/starmap/specifications/operators/gesture/"
+          children:
+           - page:
+             title: "centroid"
+             url: "/starmap/specifications/operators/gesture/centroid"
+           - page:
+             title: "whenRecognitionStateIs"
+             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIs"
+           - page:
+             title: "whenRecognitionStateIsAnyOf"
+             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIsAnyOf"
+           - page:
+             title: "translationAddedTo"
+             url: "/starmap/specifications/operators/gesture/translationAddedTo"
+           - page:
+             title: "velocity"
+             url: "/starmap/specifications/operators/gesture/velocity"
+        - page:
           title: "ignoreUntil"
           url: "/starmap/specifications/operators/ignoreUntil"
         - page:
@@ -224,25 +243,6 @@ toc:
         - page:
           title: "yLockedTo"
           url: "/starmap/specifications/operators/yLockedTo"
-        - page:
-          title: "Gesture"
-          url: "/starmap/specifications/operators/gesture/"
-          children:
-           - page:
-             title: "centroid"
-             url: "/starmap/specifications/operators/gesture/centroid"
-           - page:
-             title: "whenRecognitionStateIs"
-             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIs"
-           - page:
-             title: "whenRecognitionStateIsAnyOf"
-             url: "/starmap/specifications/operators/gesture/whenRecognitionStateIsAnyOf"
-           - page:
-             title: "translationAddedTo"
-             url: "/starmap/specifications/operators/gesture/translationAddedTo"
-           - page:
-             title: "velocity"
-             url: "/starmap/specifications/operators/gesture/velocity"
      - page:
        title: "Interaction"
        url: "/starmap/specifications/interactions/"
