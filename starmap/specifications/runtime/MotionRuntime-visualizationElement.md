@@ -36,14 +36,31 @@ This element should be added to the runtime's container element. This element sh
 
 ```swift
 class MotionRuntime {
-  func visualize(_ labelText: String? = nil, stream: MotionObservable) {
-    if !visualizationElement {
-      // Create and add visualizationElement
+  public var visualizationView: UIView {
+    if let visualizationView = _visualizationView {
+      return visualizationView
     }
+
+    let view = UIView(frame: .init(x: 0, y: containerView.bounds.maxY, width: containerView.bounds.width, height: 0))
+    view.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
+    view.isUserInteractionEnabled = false
+    view.backgroundColor = UIColor(white: 0, alpha: 0.1)
+    containerView.addSubview(view)
+    _visualizationView = view
+
+    return view
   }
+  private var _visualizationView: UIView?
 }
 ```
 
 ### Remove the visualization element when the runtime terminates
 
 Ensure that you remove the visualization element when the runtime terminates.
+
+```swift
+class MotionRuntime {
+  deinit {
+    _visualizationView?.removeFromSuperview()
+  }
+```
