@@ -3,7 +3,7 @@ layout: page
 title: MotionRuntime.toggle
 status:
   date: March 29, 2017
-  is: Stable
+  is: Proposed
 interfacelevel: L1
 implementationlevel: L4
 library: material-motion
@@ -14,7 +14,7 @@ proposals:
   - proposal:
     completion_date: March 29, 2017
     state: Stable
-    discussion: "Introduced spec."
+    discussion: "Introduced proposal."
 availability:
   - platform:
     name: iOS (Swift)
