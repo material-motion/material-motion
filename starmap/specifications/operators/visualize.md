@@ -16,6 +16,8 @@ availability:
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/visualize.swift
+related_to:
+  - /starmap/specifications/operators/log
 proposals:
   - proposal:
     initiation_date: April 14, 2017

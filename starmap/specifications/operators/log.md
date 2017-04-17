@@ -17,6 +17,8 @@ availability:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/log.ts
     tests_url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/operators/__tests__/log.test.ts
+related_to:
+  - /starmap/specifications/operators/visualize
 proposals:
   - proposal:
     completion_date: March 29, 2017
