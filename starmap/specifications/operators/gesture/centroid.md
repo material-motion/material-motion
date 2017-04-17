@@ -37,7 +37,7 @@ Calculate the centroid of touch events in relation to the provided element.  If 
 Example usage:
 
 ```swift
-gesture.centroid(in: element?)
+gestureStream.centroid(in: element)
 ```
 
 ## MVP

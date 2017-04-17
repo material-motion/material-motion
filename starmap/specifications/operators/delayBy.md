@@ -65,4 +65,4 @@ class MotionObservable<T> {
 
 ### Cancel the delayed invocation on unsubscription
 
-Unsubscription should cancel any values that have not yet been emitted.
+Unsubscription should cancel any timers that have not yet been fired.
