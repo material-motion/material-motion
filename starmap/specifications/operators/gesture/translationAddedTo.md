@@ -10,6 +10,10 @@ library: material-motion
 depends_on:
   - /starmap/specifications/gesture_recognizers/TranslationGestureRecognizer
   - /starmap/specifications/operators/foundation/$._nextOperator
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/gestures/translationAddedTo.swift
 interaction:
   inputs:
     - input:

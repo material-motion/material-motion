@@ -12,6 +12,10 @@ depends_on:
   - /starmap/specifications/gesture_recognizers/RotationGestureRecognizer
   - /starmap/specifications/gesture_recognizers/ScaleGestureRecognizer
   - /starmap/specifications/operators/foundation/$._map
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/gestures/velocity.swift
 interaction:
   inputs:
     - input:

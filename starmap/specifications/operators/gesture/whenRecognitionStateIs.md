@@ -12,6 +12,10 @@ depends_on:
   - /starmap/specifications/operators/foundation/$._filter
 related_to:
   - /starmap/specifications/operators/gesture/whenRecognitionStateIsAnyOf
+availability:
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/gestures/whenRecognitionStateIs.swift
 interaction:
   inputs:
     - input:
