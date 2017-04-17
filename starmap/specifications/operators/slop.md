@@ -15,6 +15,9 @@ depends_on:
   - /starmap/specifications/operators/ignoreUntil
 availability:
   - platform:
+    name: Android
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/Slop.java
+  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/slop.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/slopTests.swift

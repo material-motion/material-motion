@@ -3,7 +3,7 @@ layout: page
 title: toString
 status:
   date: April 14, 2017
-  is: Stable
+  is: Proposal
 interfacelevel: L2
 implementationlevel: L3
 library: material-motion
@@ -16,8 +16,8 @@ availability:
 proposals:
   - proposal:
     completion_date: April 14, 2017
-    state: Stable
-    discussion: "First introduced."
+    state: Proposal
+    discussion: "First proposed."
 interaction:
   inputs:
     - input:

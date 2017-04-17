@@ -11,6 +11,9 @@ depends_on:
   - /starmap/specifications/operators/foundation/$._nextOperator
 availability:
   - platform:
+    name: Android
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/Rewrite.java
+  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/rewrite.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/rewriteTests.swift

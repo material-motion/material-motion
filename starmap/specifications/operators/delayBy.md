@@ -16,6 +16,9 @@ proposals:
     discussion: "First introduced"
 availability:
   - platform:
+    name: Android
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/DelayBy.java
+  - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/delayBy.swift
     tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/delayTests.swift

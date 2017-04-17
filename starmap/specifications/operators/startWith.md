@@ -10,6 +10,14 @@ library: material-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
   - /starmap/specifications/operators/foundation/$._remember
+availability:
+  - platform:
+    name: Android
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/operators/StartWith.java
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/operators/startWith.swift
+    tests_url: https://github.com/material-motion/material-motion-swift/blob/develop/tests/unit/operator/startWithTests.swift
 proposals:
   - proposal:
     completion_date: March 29, 2017
