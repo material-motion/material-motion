@@ -12,8 +12,8 @@ depends_on:
 availability:
   - platform:
     name: Android
-    url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/ReactiveProperty.java
-    tests_url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/test/java/com/google/android/reactive/motion/PropertyReactivePropertyTests.java
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/ReactiveProperty.java
+    tests_url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/test/java/com/google/android/material/motion/PropertyReactivePropertyTests.java
   - platform:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/properties/ReactiveProperty.ts

@@ -22,8 +22,8 @@ proposals:
 availability:
   - platform:
     name: Android
-    url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/main/java/com/google/android/reactive/motion/MotionObservable.java
-    tests_url: https://github.com/material-motion/reactive-motion-android/blob/develop/library/src/test/java/com/google/android/reactive/motion/MotionObservableTests.java
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/MotionObservable.java
+    tests_url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/test/java/com/google/android/material/motion/MotionObservableTests.java
   - platform:
     name: JavaScript
     url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/observables/MotionObservable.ts

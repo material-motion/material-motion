@@ -31,7 +31,7 @@ This weekly update captures what changed in a given week across the Material Mot
 | [gestures-android](https://github.com/material-motion/gestures-android/) | passing | 91% | v1.0.0 | 4 open |
 | [indefinite-observable-android](https://github.com/material-motion/indefinite-observable-android/) | passing | 100% | v2.0.0 | 0 open |
 | [physics-android](https://github.com/material-motion/physics-android/) |  |  |  | 0 open |
-| [reactive-motion-android](https://github.com/material-motion/reactive-motion-android/) | passing | 26% | v1.0.0 | 12 open |
+| [material-motion-android](https://github.com/material-motion/material-motion-android/) | passing | 26% | v1.0.0 | 12 open |
 | [reactive-motion-rebound-android](https://github.com/material-motion/reactive-motion-rebound-android/) |  |  |  | 0 open |
 
 ### Apple platform support
