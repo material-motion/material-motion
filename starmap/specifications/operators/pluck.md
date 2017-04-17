@@ -71,7 +71,7 @@ Split the path by `.` and iterate through the incoming dictionary with the resul
 ```javascript
 const pathSegments = path.split('.');
 
-return function plucker(value: Dict<any>) {
+return function plucker(value) {
   let result = value;
 
   for (let pathSegment of pathSegments) {
