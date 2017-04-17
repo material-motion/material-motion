@@ -3,7 +3,7 @@ layout: page
 title: yLockedTo
 status:
   date: March 30, 2016
-  is: Stable
+  is: Proposed
 interfacelevel: L2
 implementationlevel: L3
 library: material-motion
@@ -13,7 +13,7 @@ proposals:
   - proposal:
     completion_date: March 30, 2017
     state: Stable
-    discussion: "First introduced"
+    discussion: "First proposed"
 availability:
   - platform:
     name: iOS (Swift)
