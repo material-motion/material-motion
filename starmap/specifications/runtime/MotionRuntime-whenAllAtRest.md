@@ -33,6 +33,14 @@ If the provided list of interactions is empty, then the callback is invoked exac
 
 If all of the interactions are at rest then the callback is invoked before returning.
 
+Example:
+
+```swift
+runtime.whenAllAtRest([directlyManipulable]) {
+  print("Is now at rest")
+}
+```
+
 ## MVP
 
 ### Expose a whenAllAtRest API
