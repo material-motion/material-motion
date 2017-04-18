@@ -41,3 +41,7 @@ represent **hundreds of kilobytes** of minified source. By comparison, our `Inde
 implementations are each under 100 lines of code and, on the web, can be minified to under 140 bytes
 (the entire implementation fits in
 [a tweet](https://twitter.com/material_motion/status/804855074988003328)).
+
+### Avoiding intellectual dependencies
+
+The reactive core of Material Motion not only represents a binary dependency, but also an intellectual dependency. People should be able to use Material Motion without having to first learn reactive programming. It is for this reason that we have higher-order APIs like Interactions and Transitions.
