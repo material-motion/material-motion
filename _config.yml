@@ -115,6 +115,9 @@ toc:
           title: "get"
           url: "/starmap/specifications/runtime/MotionRuntime-get"
         - page:
+          title: "toGraphViz"
+          url: "/starmap/specifications/runtime/MotionRuntime-toGraphViz"
+        - page:
           title: "toggle"
           url: "/starmap/specifications/runtime/MotionRuntime-toggle"
         - page:
