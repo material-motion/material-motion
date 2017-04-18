@@ -13,7 +13,7 @@ depends_on:
 proposals:
   - proposal:
     initiation_date: April 18, 2017
-    state: Stable
+    state: Proposed
     discussion: "Introduced proposal."
 availability:
   - platform:
