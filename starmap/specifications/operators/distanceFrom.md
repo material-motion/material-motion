@@ -62,7 +62,7 @@ class MotionObservable<number> {
 ### Expose a 2-dimensional distanceFrom operator API
 
 Use `_map` to implement the operator. Accept a location point. Emit a number which is the
-result of `sqrt((upstreamValue.x - location.x)^2 - (upstreamValue.y - location.y)^2)`.
+result of `sqrt((upstreamValue.x - location.x)^2 + (upstreamValue.y - location.y)^2)`.
 
 ```swift
 class MotionObservable<Point2D> {
