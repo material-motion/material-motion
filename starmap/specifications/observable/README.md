@@ -18,7 +18,20 @@ Observer pattern, with implementations spanning many platforms and languages. Ma
 use of the Observer pattern to build motion that is **tweakable**, **reactive**, and
 **highly-coordinated**.
 
-## IndefiniteObservable
+## Why not make use of ReactiveX implementations?
+
+Material Motion is designed to be a lightweight solution for building powerful, reactive motion in
+an application. For this reason, any external dependencies must be carefully considered and justified.
+
+### So that we minimize binary dependency size
+
+The existing ReactiveX implementations are often many **thousands** of lines of code and
+represent **hundreds of kilobytes** of minified source. By comparison, our `IndefiniteObservable`
+implementations are each under 100 lines of code and, on the web, can be minified to under 140 bytes
+(the entire implementation fits in
+[a tweet](https://twitter.com/material_motion/status/804855074988003328)).
+
+### So that we only provide features we need
 
 The ReactiveX implementations of the Observer pattern are designed with **transactional** data
 flow in mind. Three actions can occur on a ReactiveX stream: emission, completion, and failure. For
@@ -31,17 +44,6 @@ gesture recognizer might start and stop at any point in time - it doesn't comple
 For this reason we created the `IndefiniteObservable` type. An `IndefiniteObservable` is an `Observable`
 that may never complete in any permanent way.
 
-## Why not make use of ReactiveX implementations?
-
-Material Motion is designed to be a lightweight solution for building powerful, reactive motion in
-an application. For this reason, any external dependencies must be carefully considered and justified.
-
-The existing ReactiveX implementations are often many **thousands** of lines of code and
-represent **hundreds of kilobytes** of minified source. By comparison, our `IndefiniteObservable`
-implementations are each under 100 lines of code and, on the web, can be minified to under 140 bytes
-(the entire implementation fits in
-[a tweet](https://twitter.com/material_motion/status/804855074988003328)).
-
-### Avoiding intellectual dependencies
+### So that we avoid intellectual dependencies
 
 The reactive core of Material Motion not only represents a binary dependency, but also an intellectual dependency. People should be able to use Material Motion without having to first learn reactive programming. It is for this reason that we have higher-order APIs like Interactions and Transitions.
