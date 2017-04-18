@@ -26,6 +26,10 @@ availability:
 
 This is the engineering specification for the `IndefiniteObservable` object.
 
+IndefiniteObservable observers include a single **channel** of information called the **next channel**.
+
+Observers can be extended to include other channels of information, if required by a given platform. This is most commonly necessary when a platform's animation system is opaque to the application, such as [Core Animation on iOS](MotionObservable-core-animation).
+
 ## Overview
 
 IndefiniteObservable is a minimal implementation of [Observable](http://reactivex.io/rxjs/manual/overview.html)
