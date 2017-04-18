@@ -32,14 +32,13 @@ Many interactions expose one or more configurable properties as reactive propert
 
 All variables on an interaction instance must be constant.
 
-### Reactive properties for post-registration changes
+### Reactive properties for post-add changes
 
-If a variable can be changed post-registration, the variable should be a `ReactiveProperty`. E.g.
-the destination of a spring.
+If a variable can be changed post-add, the variable should be a `ReactiveProperty`. E.g. the destination of a spring.
 
 ### Interaction instances can be registered to many targets
 
-For example, a Spring might be added to many views. Each view will move to the same destination.
+For example, a Spring might be added to many views. Each view will move to the same destination. Each target should receive its own independent system.
 
 ## MVP
 

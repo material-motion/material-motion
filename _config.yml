@@ -260,6 +260,9 @@ toc:
        url: "/starmap/specifications/interactions/"
        children:
         - page:
+          title: "Applying constraints"
+          url: "/starmap/specifications/interactions/Interaction-constraints"
+        - page:
           title: "Draggable"
           url: "/starmap/specifications/interactions/Draggable"
         - page:
