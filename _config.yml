@@ -123,6 +123,9 @@ toc:
         - page:
           title: "visualizationElement"
           url: "/starmap/specifications/runtime/MotionRuntime-visualizationElement"
+        - page:
+          title: "whenAllAtRest"
+          url: "/starmap/specifications/runtime/MotionRuntime-whenAllAtRest"
      - page:
        title: "Operators"
        url: "/starmap/specifications/operators/"
