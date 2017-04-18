@@ -11,7 +11,7 @@ Material Motion's purpose is to empower creators with the language and tools nee
 implement rich interactive motion on any platform. Initially, we will be supporting Android, iOS,
 and the web.
 
-This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. [Join our Discord channel](https://discord.gg/ZJyGXza) to chat with the team.
+This is a starmap. It defines high-level goals and identifies patterns. It is not the API documentation for any particular solution. [Join our Discord channel](https://discord.gg/material-motion) to chat with the team.
 
 **The Starmap will evolve over time.**
 
