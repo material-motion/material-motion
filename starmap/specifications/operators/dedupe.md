@@ -58,7 +58,7 @@ upstream  |  downstream
 
 ```swift
 class MotionObservable<T> {
-  public func dedupe() -> MotionObservable<T>
+  public func dedupe(areEqual?: EqualityCheck) -> MotionObservable<T>
 ```
 
 ### Create local storage for the operator
@@ -67,7 +67,7 @@ Store the last-emitted value and whether or not an emission has occurred.
 
 ```swift
 class MotionObservable<T> {
-  func dedupe() -> MotionObservable<T> {
+  func dedupe(areEqual?: EqualityCheck) -> MotionObservable<T> {
     var emitted = false
     var lastValue: T?
 ```
@@ -80,10 +80,10 @@ previously-emitted value. Store the newly-received value.
 
 ```swift
 class MotionObservable<T> {
-  func dedupe() -> MotionObservable<T> {
+  func dedupe(areEqual?: EqualityCheck = deepEquals) -> MotionObservable<T> {
     ...
     return _filter { value in
-      if emitted && lastValue == value {
+      if emitted && areEqual(lastValue, value) {
         return false
       }
 
@@ -94,3 +94,9 @@ class MotionObservable<T> {
     }
   }
 ```
+
+### Check for deep equality by default ###
+
+There are [multiple ways](https://en.wikipedia.org/wiki/Object_copying) to measure equality: referential (e.g. two variables reference the same object), shallow (e.g. the keys and values in two objects are all equivalent) and deep (same as shallow, but recursive if one of the values is an object).  The `==` operator in many languages uses referential equality.
+
+An implementation may provide authors with the ability to choose how to compare values.  If supported, the equality check should default to deep equals.
