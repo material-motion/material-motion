@@ -55,33 +55,33 @@ upstream expected  |  downstream
 
 ### Expose a ignoreUntil operator API
 
-Accept a single argument defining the expected value.
+Require a single argument defining the expected value.
 
 ```swift
 class MotionObservable<T> {
-  public func ignoreUntil(expected: T) -> MotionObservable<T>
+  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck) -> MotionObservable<T>
 ```
 
 ### Create local storage for the operator
 
-Store whether the `expected` value has been received.
+Store whether the `expectedValue` has been received.
 
 ```swift
 class MotionObservable<T> {
-  public func ignoreUntil(expected: T) -> MotionObservable<T>
+  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck) -> MotionObservable<T>
     var received = false
 ```
 
 ### Emit the new value
 
-Use `_filter` to implement the operator. Store if `expected` was received. Only emit upstream values if `received` is true.
+Use `_filter` to implement the operator. Store if `expectedValue` was received. Only emit upstream values if `received` is true.
 
 ```swift
 class MotionObservable<T> {
-  public func ignoreUntil(expected: T) -> MotionObservable<T>
+  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck) -> MotionObservable<T>
     ...
     return _filter { value in
-      if value == expected {
+      if areEqual(value, expectedValue) {
         received = true
       }
       
@@ -89,3 +89,9 @@ class MotionObservable<T> {
     }
   }
 ```
+
+### Check for deep equality by default ###
+
+There are [multiple ways](https://en.wikipedia.org/wiki/Object_copying) to measure equality: referential (e.g. two variables reference the same object), shallow (e.g. the keys and values in two objects are all equivalent) and deep (same as shallow, but recursive if one of the values is an object).  The `==` operator in many languages uses referential equality.
+
+An implementation may provide authors with the ability to choose how to compare values.  If supported, the equality check should default to deep equals.
