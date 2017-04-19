@@ -50,3 +50,15 @@ class MotionRuntime {
   func add<I: Interaction>(_ interaction: I, to target: I.Target, constraints: I.Constraints? = nil)
 }
 ```
+
+### Pass the constraints to the interaction instance on runtime.add
+
+```swift
+class MotionRuntime {
+  func add<I: Interaction>(_ interaction: I, to target: I.Target, constraints: I.Constraints? = nil) {
+    ...
+    interaction.add(to: target, withRuntime: self, constraints: constraints)
+    ...
+  }
+}
+```
