@@ -8,6 +8,8 @@ interfacelevel: L1
 implementationlevel: L2
 library: material-motion
 depends_on:
+  - /starmap/specifications/gesture_recognizers/TranslationGestureRecognizer
+  - /starmap/specifications/operators/gesture/translationAddedTo
   - /starmap/specifications/interactions/
 availability:
   - platform:
@@ -24,10 +26,7 @@ This is the engineering specification for the `Draggable` interaction.
 
 ## Overview
 
-When the gesture begins, reads and caches the current property value.
-
-As the gesture changes, adds the gesture's translation to the cached property value and writes the
-result to the property.
+Allows an element to be moved in reaction to a user's gestural movement.
 
 Example use:
 
@@ -39,83 +38,68 @@ runtime.add(Draggable(), to: view)
 
 ### Expose a Draggable type
 
+It conforms to the Interaction protocol.
+
 ```swift
-public class Draggable: Interaction
+public class Draggable: Interaction {
+}
 ```
 
-### Expose configurable values
+### By default, create a new translation gesture recognizer for each target
+
+When initialized with zero configuration arguments, a Draggable interaction will create a new TranslationGestureRecognizer for each target it's associated with.
 
 ```swift
 class Draggable {
-
-  /** The property to which the value stream is expected to write. */
-  public let property: ReactiveProperty<CGPoint>
-
-  /** A stream that emits values to be written to the property. */
-  public var valueStream: MotionObservable<CGPoint>
-
-  /** A stream that emits velocity when the gesture recognizer ends. */
-  public var velocityStream: MotionObservable<CGPoint>
-
-  /** The gesture recognizer that drives this interaction. */
-  public let gestureRecognizer: DragGestureRecognizer
-```
-
-### Expose an initializer
-
-Allow a gesture recognizer to be optionally provided.
-
-```swift
-class Draggable {
-  public init(property: ReactiveProperty<CGPoint>,
-              containerElement: Element,
-              gestureRecognizer: DragGestureRecognizer? = nil)
-```
-
-### Store the property
-
-```swift
-class Draggable {
-  init(...) {
-    self.property = property
-
+  func add(...) {
     ...
+    let gestureRecognizer = TranslationGestureRecognizer()
+    target.addGestureRecognizer(gestureRecognizer)
+    ...
+  }
+}
 ```
 
-### Create a gesture recognizer if one was not provided
+### Fetch a reactive version of the gesture recognizer using runtime.get
+
+This ensures that we're using the same reactive instance across interactions.
 
 ```swift
 class Draggable {
-  init(...) {
+  func add(...) {
     ...
-
-    self.gestureRecognizer = gestureRecognizer ?? DragGestureRecognizer()
-    if self.gestureRecognizer.element == nil {
-      containerView.addGestureRecognizer(self.gestureRecognizer)
-    }
-
+    let reactiveGesture = runtime.get(gesture)
     ...
+  }
+}
 ```
 
-### Create the value and velocity streams
+### Connect translationAddedTo operator to the target's position
+
+Write a `translationAddedTo` stream to the target's position.
 
 ```swift
 class Draggable {
-  init(...) {
+  func add(...) {
     ...
-
-    let source = gestureSource(self.gestureRecognizer)
-    self.valueStream = source.translated(from: property, in: containerView)
-    self.velocityStream = source.velocity(in: containerView)
+    var stream = reactiveGesture.translation(addedTo: position)
+    runtime.connect(stream, to: runtime.get(target).position)
+  }
+}
 ```
 
-### Expose a convenience initializer
-
-The convenience initializer should extract the necessary property from the provided element.
+### Clearly document which property this interaction writes to
 
 ```swift
+/**
+ ...
+
+ **Affected properties**
+
+ - `view.layer.position`
+
+ ...
+ */
 class Draggable {
-  public init(element: Element,
-              containerElement: Element,
-              gestureRecognizer: DragGestureRecognizer? = nil)
+}
 ```
