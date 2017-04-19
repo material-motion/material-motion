@@ -68,7 +68,7 @@ Store whether the `expectedValue` has been received.
 
 ```swift
 class MotionObservable<T> {
-  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck) -> MotionObservable<T>
+  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck = deepEquals) -> MotionObservable<T>
     var received = false
 ```
 
@@ -78,7 +78,7 @@ Use `_filter` to implement the operator. Store if `expectedValue` was received. 
 
 ```swift
 class MotionObservable<T> {
-  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck) -> MotionObservable<T>
+  public func ignoreUntil(expectedValue: T, areEqual?: EqualityCheck = deepEquals) -> MotionObservable<T>
     ...
     return _filter { value in
       if areEqual(value, expectedValue) {
