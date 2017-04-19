@@ -58,7 +58,7 @@ upstream  |  downstream
 
 ```swift
 class MotionObservable<T> {
-  public func dedupe(areEqual?: EqualityCheck) -> MotionObservable<T>
+  public func dedupe(areEqual?: EqualityCheck = deepEquals) -> MotionObservable<T>
 ```
 
 ### Create local storage for the operator
@@ -67,7 +67,7 @@ Store the last-emitted value and whether or not an emission has occurred.
 
 ```swift
 class MotionObservable<T> {
-  func dedupe(areEqual?: EqualityCheck) -> MotionObservable<T> {
+  func dedupe(areEqual?: EqualityCheck = deepEquals) -> MotionObservable<T> {
     var emitted = false
     var lastValue: T?
 ```
