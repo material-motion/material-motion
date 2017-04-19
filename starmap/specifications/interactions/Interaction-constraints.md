@@ -10,6 +10,18 @@ library: material-motion
 depends_on:
   - /starmap/specifications/observable/MotionObservable
   - /starmap/specifications/interactions/
+proposals:
+  - proposal:
+    completion_date: April 19, 2017
+    state: Stable
+    discussion: "Introduced spec."
+availability:
+  - platform:
+    name: Android 
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/MotionRuntime.java
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionRuntime.swift
 ---
 
 # Applying constraints to interactions
