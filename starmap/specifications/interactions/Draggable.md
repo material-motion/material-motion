@@ -9,6 +9,13 @@ implementationlevel: L2
 library: material-motion
 depends_on:
   - /starmap/specifications/interactions/
+availability:
+  - platform:
+    name: Android 
+    url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/interactions/Draggable.java
+  - platform:
+    name: iOS (Swift)
+    url: https://github.com/material-motion/material-motion-swift/blob/develop/src/interactions/Draggable.swift
 ---
 
 # Draggable specification

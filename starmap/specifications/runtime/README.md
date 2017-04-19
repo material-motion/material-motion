@@ -21,7 +21,7 @@ availability:
     url: https://github.com/material-motion/material-motion-android/blob/develop/library/src/main/java/com/google/android/material/motion/MotionRuntime.java
   - platform:
     name: JavaScript
-    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/streams/src/MotionRuntime.ts
+    url: https://github.com/material-motion/material-motion-js/blob/develop/packages/core/src/MotionRuntime.ts
   - platform:
     name: iOS (Swift)
     url: https://github.com/material-motion/material-motion-swift/blob/develop/src/MotionRuntime.swift
