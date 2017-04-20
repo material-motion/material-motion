@@ -8,7 +8,7 @@ interfacelevel: L2
 implementationlevel: L3
 library: material-motion
 depends_on:
-  - /starmap/specifications/operators/foundation/$.distanceFrom
+  - /starmap/specifications/operators/distanceFrom
 availability:
   - platform:
     name: iOS (Swift)
