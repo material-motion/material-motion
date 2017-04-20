@@ -150,6 +150,9 @@ toc:
              title: "_read"
              url: "/starmap/specifications/operators/foundation/$._read"
         - page:
+          title: "abs"
+          url: "/starmap/specifications/operators/abs"
+        - page:
           title: "anchorPointAdjustment"
           url: "/starmap/specifications/operators/anchorPointAdjustment"
         - page:
