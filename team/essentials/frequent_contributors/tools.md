@@ -51,7 +51,7 @@ Here's a list of tools we currently use as a team:
 
 Versions of software we use:
 
-- Android Studio 2.2 Preview 4
+- Android Studio 2.4 Preview 6
 
 ### appleOS
 
