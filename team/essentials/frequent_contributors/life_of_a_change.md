@@ -20,12 +20,16 @@ Please follow our [Tools](tools) guide to learn how to install the `mdm` command
 
 The arc workflow begins by creating a git branch.
 
-    arc feature somefeature
+```bash
+arc feature somefeature
+```
 
 This is synonymous to
 
-    git checkout -b somefeature
-    git branch --set-upstream-to origin/develop
+```bash
+git checkout -b somefeature
+git branch --set-upstream-to origin/develop
+```
 
 ## Make changes
 
@@ -35,16 +39,22 @@ Commit changes to your feature branch.
 
 We do not push branches to GitHub. We use `arc diff` to send changes out for review via [codereview.cc](http://codereview.cc).
 
-    arc diff
+```bash
+arc diff
+```
 
 ## Make changes
 
 You may be asked to make changes to your diff. Commit changes to your branch as you normally would. Run `arc diff` again when you're ready to review the new changes:
 
-    arc diff
+```bash
+arc diff
+```
 
 ## Land the diff
 
 Once your diff has been approved you may land the diff. Landing squashes your branch into a single commit, updates the commit with the diff description on codereview.cc, and pushes the commit to origin/develop.
 
-    arc land
+```bash
+arc land
+```
