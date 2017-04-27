@@ -7,6 +7,11 @@ status:
 interfacelevel: L4
 implementationlevel: L4
 library: indefinite-observable
+proposals:
+  - proposal:
+    completion_date: April 27, 2017
+    state: Stable
+    discussion: "Removed Subscription's automatic unsubscription on dealloc spec."
 availability:
   - platform:
     name: Android
@@ -57,7 +62,7 @@ let observable = ValueObservable<Int> { observer in
   return noopDisconnect
 }
 
-let _ = observable.subscribe { value in
+observable.subscribe { value in
   print(value)
 }
 
@@ -148,10 +153,6 @@ A representation of a subscription made by invoking `subscribe` on an `Indefinit
 
 ```swift
 public final class Subscription {
-  deinit {
-    unsubscribe()
-  }
-
   init(_ disconnect: () -> Void) {
     self.disconnect = disconnect
   }
@@ -168,8 +169,6 @@ public final class Subscription {
 ```
 
 This class should store a `disconnect` function. The first time `unsubscribe` is called, it should call the `disconnect` function. Thereafter, it should do nothing.  `disconnect` shouldn't be called more than once per connection.
-
-When the `Subscription` is deallocated it should invoke `unsubscribe`.
 
 ### Expose an IndefiniteObservable initializer
 
