@@ -39,27 +39,27 @@ This is the engineering specification for the `MotionObservable` operator: `yLoc
 
 ## Overview
 
-`yLockedTo` sets the upstream point's x value to the provided value and emits the result.
+`yLockedTo` sets the upstream point's y value to the provided value and emits the result.
 
 ## Example usage
 
 ```swift
-stream.xLocked(to: 50)
+stream.yLocked(to: 50)
 
 upstream  yValue  |  downstream
-20, 50    50      |  50, 50
-40, 80    50      |  50, 80
-60, 90    50      |  50, 90
+20, 50    50      |  20, 50
+40, 80    50      |  40, 50
+60, 90    50      |  60, 50
 ```
 
 ## MVP
 
 ### Expose an yLockedTo operator API
 
-Use `_map` to implement the operator. Accept an yValue number. Emit `{yValue, upstream.y}`.
+Use `_map` to implement the operator. Accept an yValue number. Emit `{upstream.x, yValue}`.
 
 ```swift
 class MotionObservable<number> {
-  public func xLocked(to yValue: number) -> MotionObservable<Point>
+  public func yLocked(to yValue: number) -> MotionObservable<Point>
 }
 ```
