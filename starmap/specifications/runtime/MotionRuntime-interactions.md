@@ -33,18 +33,18 @@ This is the engineering specification for the `MotionRuntime`'s `interactions` A
 This API retrieves interactions of a specific type associated with a given target via the `.add` API.
 
 ```swift
-let draggables = runtime.interactions(for: view, ofType: Draggable.self)
+let draggables = runtime.interactions(ofType: Draggable.self, for: view)
 ```
 
 ## MVP
 
 ### Expose an interactions API
 
-The API should be generic on the Interaction type and accept a target and class.
+The API should be generic on the Interaction type and accept a class and target.
 
 ```swift
 class MotionRuntime {
-  public func interactions<I>(for target: I.Target, ofType: I.Type) -> [I] where I: Interaction
+  public func interactions<I>(ofType: I.Type, for target: I.Target) -> [I] where I: Interaction
 }
 ```
 
