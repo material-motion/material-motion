@@ -9,7 +9,8 @@ Welcome to the Material Motion documentation site. Please check out the [Starmap
 
 Current status: **early development**.
 
-[Chat with us on Discord](https://discord.gg/ZJyGXza).
+[![Chat](https://img.shields.io/discord/198544450366996480.svg)](https://discord.gg/material-motion)
+ [Chat with us on Discord](https://discord.gg/material-motion).
 
 ## Android platform support
 
