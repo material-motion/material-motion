@@ -57,6 +57,6 @@ class Tween {
   public var duration: TimeInterval
   public var delay: TimeInterval = 0
   public var values: [T]
-  public var keyPositions: [Double]?
+  public var offsets: [Double]?
   public var timingFunctions: [CAMediaTimingFunction]?
 ```
