@@ -74,6 +74,9 @@ toc:
        title: "Eliminating hand-off"
        url: "/starmap/handoff"
      - page:
+       title: "Interchange"
+       url: "/starmap/specifications/interchange/"
+     - page:
        title: "Observable pattern"
        url: "/starmap/specifications/observable/"
        children:
