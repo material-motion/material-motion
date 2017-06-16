@@ -8,22 +8,22 @@ permalink: /starmap/specifications/interchange/
 The motion interchange defines a concise format for representing motion information. The goals of
 the interchange are to be **compact** and **contextually-flexible**.
 
-## Motion curve
+## Motion acceleration profile
 
-A description of a motion curve includes the following traits:
+A description of a motion acceleration profile includes the following traits:
 
 - Type: instant, bezier, or spring.
 - Four values of type-relevant data.
 
 ```swift
-struct MotionCurveType {
+struct MotionAccelerationProfileType {
   case instant
   case bezier
   case spring
 }
 
-struct MotionCurve {
-  let type: MotionCurveType
+struct MotionAccelerationProfile {
+  let type: MotionAccelerationProfileType
   let data: (Float, Float, Float, Float)
 }
 ```
@@ -62,14 +62,14 @@ struct MotionRepetition {
 
 ## Motion timing
 
-An animation's timing defines its delay, duration, curve, and repetition. This is a composite
-structure of the above types.
+An animation's timing defines its delay, duration, acceleration profile, and repetition. This is a
+composite structure of the above types.
 
 ```swift
 struct MotionTiming {
   let delay: Float
   let duration: Float
-  let curve: MotionCurve
+  let accelerationProfile: MotionAccelerationProfile
   let repetition: MotionRepetition
 }
 ```
