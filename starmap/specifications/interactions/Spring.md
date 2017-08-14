@@ -47,13 +47,13 @@ starting value of the spring. `initialVelocity` represents the initial velocity 
 ```swift
 class Spring {
   public let destination: ReactiveProperty<T>
-  public let tension: ReactiveProperty<Float>
-  public let friction: ReactiveProperty<Float>
+  public let stiffness: ReactiveProperty<Float>
+  public let damping: ReactiveProperty<Float>
   public let initialValue: ScopedReadable<T>
   public let initialVelocity: ScopedReadable<T>
   public let threshold: ScopedReadable<Float>
 ```
 
-### Expose defaults for tension and friction
+### Expose defaults for stiffness and damping
 
-The default tension is 342 and the default friction is 30.
+The default stiffness is 342 and the default damping is 30.
