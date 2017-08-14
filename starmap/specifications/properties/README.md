@@ -37,7 +37,7 @@ Some examples:
 - Gesture recognition events.
 
 Systems are often **reactively configurable**, meaning changes to their configuration are expected
-to be immediately reflected in the values they emit. For example, a Spring's *tension* can be
+to be immediately reflected in the values they emit. For example, a Spring's *stiffness* can be
 changed, causing the spring's simulation to immediately be affected.
 
 ### Reactive properties store values
