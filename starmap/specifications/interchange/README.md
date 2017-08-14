@@ -35,8 +35,8 @@ struct MotionAccelerationProfile {
 **Bezier**: The cubic bezier formula consists of four two-dimensional points `pt0`, `pt1`, `pt2`,
 and `pt3`. The data values correspond to `(pt1.x, pt1.y, pt2.x, pt2.y)`.
 
-**Spring**: A spring simulation consists of three variables: `mass`, `tension`, and `friction`. The
-data values correspond to `(mass, tension, friction, <ignored>)`.
+**Spring**: A spring simulation consists of three variables: `mass`, `stiffness`, and `damping`. The
+data values correspond to `(mass, stiffness, damping, <ignored>)`.
 
 ## Motion repetition
 
