@@ -144,13 +144,15 @@ class CustomObservable extends IndefiniteObservable {
   map(transform) {
     return new CustomObservable(
       observer => {
-        this.subscribe({
+        const subscription = this.subscribe({
           next(value) {
             observer.next(
               transform(value)
             )
           }
-        })
+        });
+        
+        return subscription.unsubscribe;
       }
     );
   }
