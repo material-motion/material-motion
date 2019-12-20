@@ -21,7 +21,7 @@ stream of pointer events and returns a stream of points.
 > stream's name ends in `$`, but its individual values do not. In our case,
 > the stream is called `pointerEvent$`, but each individual value is just
 > `pointerEvent`. This makes it clear to someone reading our code when we're
-> refering to a stream, and when we're referring to a value from that stream.
+> referring to a stream, and when we're referring to a value from that stream.
 
 First, let's write the connect function. The event source that it's going to
 connect the observer to is the pointer event stream. 
